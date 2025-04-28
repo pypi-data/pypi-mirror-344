@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/data/__init__.py
+src/data/data_cleaner.py
+src/data/data_dictionary.py
+src/data/sets_subsets.py
+src/model/__init__.py
+src/packages_mental_disorder_eeg_data.egg-info/PKG-INFO
+src/packages_mental_disorder_eeg_data.egg-info/SOURCES.txt
+src/packages_mental_disorder_eeg_data.egg-info/dependency_links.txt
+src/packages_mental_disorder_eeg_data.egg-info/requires.txt
+src/packages_mental_disorder_eeg_data.egg-info/top_level.txt
