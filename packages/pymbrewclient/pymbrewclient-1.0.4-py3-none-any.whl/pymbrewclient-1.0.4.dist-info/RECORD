@@ -1,0 +1,12 @@
+pymbrewclient/__init__.py,sha256=CYwZdlZaPG0qLmk2Wl4RK-iluTkW-XoMHPEr8JXDi9Y,2411
+pymbrewclient/cli.py,sha256=WFd5Jyd69vtXgoE-ETJZJsGjXDFqEYy4Bo0gjojXPhI,11226
+pymbrewclient/pymbrewclient.py,sha256=nqx2b9VesFIWWNxoYTQ85h9HyTKO7oreyrgLfi_cOVM,3981
+pymbrewclient/rest/__init__.py,sha256=CYwZdlZaPG0qLmk2Wl4RK-iluTkW-XoMHPEr8JXDi9Y,2411
+pymbrewclient/rest/client.py,sha256=wZJg-5SjstAG-G4ohE_WKyt6WhpziXYKhH8MXQNN9Cw,6955
+pymbrewclient/rest/models.py,sha256=WM3x5H2Np9n8ocpgJUfrfH5h2G_ZN-ymFSQ5thwPups,5884
+pymbrewclient-1.0.4.dist-info/licenses/LICENSE,sha256=R78D6QNQpdNRV58w-rVOzZ-2HrBBHZY5hg2POFxJYUs,2349
+pymbrewclient-1.0.4.dist-info/METADATA,sha256=b6NZxuq6cnZhte7kazuAUZT1IgjgaoyDPZE_GSNDCa0,2739
+pymbrewclient-1.0.4.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+pymbrewclient-1.0.4.dist-info/entry_points.txt,sha256=ywNMpadMTU-kFcbgQp25rlM1cbPLFaFwDIec0HKrK0A,56
+pymbrewclient-1.0.4.dist-info/top_level.txt,sha256=u5AIf2yjh3UGeGGxgvafIuw7Vw9Bgz4oI75NVEMikdU,14
+pymbrewclient-1.0.4.dist-info/RECORD,,
