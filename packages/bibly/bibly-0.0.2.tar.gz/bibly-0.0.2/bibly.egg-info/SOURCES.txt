@@ -1,0 +1,15 @@
+LICENSE
+README.rst
+pyproject.toml
+bibly/__init__.py
+bibly/client.py
+bibly/sciencedirect_handler.py
+bibly/scopus_handler.py
+bibly/search_handler.py
+bibly/springer_handler.py
+bibly.egg-info/PKG-INFO
+bibly.egg-info/SOURCES.txt
+bibly.egg-info/dependency_links.txt
+bibly.egg-info/requires.txt
+bibly.egg-info/top_level.txt
+bibly/utils/data_types.py

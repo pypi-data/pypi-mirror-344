@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: bibly
+Version: 0.0.2
+Summary: Simple package for bibliometric retrieval.
+Author-email: "Nils A. Herrmann de Alba" <nils_herrmann@outlook.de>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pybliometrics
+Requires-Dist: sprynger
+Dynamic: license-file
