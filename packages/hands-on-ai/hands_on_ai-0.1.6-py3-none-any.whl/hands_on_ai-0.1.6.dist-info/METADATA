@@ -1,0 +1,130 @@
+Metadata-Version: 2.4
+Name: hands-on-ai
+Version: 0.1.6
+Summary: Hands-on AI Toolkit for classrooms
+Author-email: Michael Borck <michael@borck.me>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: typer
+Requires-Dist: python-fasthtml
+Requires-Dist: python-docx
+Requires-Dist: pymupdf
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+Requires-Dist: fastcore<1.8
+Requires-Dist: pytest ; extra == "dev"
+Requires-Dist: build ; extra == "dev"
+Requires-Dist: twine==6.0.1 ; extra == "dev"
+Requires-Dist: cython ; extra == "dev"
+Requires-Dist: ruff ; extra == "dev"
+Requires-Dist: mkdocs ; extra == "dev"
+Requires-Dist: mkdocstrings[python] ; extra == "dev"
+Requires-Dist: mkdocs-material ; extra == "dev"
+Requires-Dist: pymdown-extensions ; extra == "dev"
+Requires-Dist: uv ; extra == "dev"
+Project-URL: Documentation, https://michael-borck.github.io/hands-on-ai/
+Project-URL: Homepage, https://github.com/teaching-repositories/hands-on-ai
+Project-URL: Issues, https://github.com/teaching-repositories/hands-on-ai
+Project-URL: Source, https://github.com/teaching-repositories/hands-on-ai
+Provides-Extra: agent
+Provides-Extra: chat
+Provides-Extra: dev
+Provides-Extra: rag
+
+# HandsOnAI: Your AI Learning Lab
+
+[![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/)
+[![MIT License](https://img.shields.io/badge/licence-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Classroom Ready](https://img.shields.io/badge/classroom-ready-brightgreen.svg)]()
+[![Beginner Friendly](https://img.shields.io/badge/beginner-friendly-orange.svg)]()
+
+> AI learning made simple for students and educators
+
+HandsOnAI is a unified educational toolkit designed to teach students how modern AI systems work — by building and interacting with them directly.
+
+## 🔐 API Key Configuration
+
+### Environment Variable Method
+```bash
+# Set API key in your environment
+export HANDS_ON_AI_API_KEY=your_secret_api_key_here
+```
+
+### In-Code Configuration
+```python
+from hands_on_ai import setup_colab
+
+# Configure with API key
+setup_colab(
+    server_url="https://your-ollama-server.com",
+    model="llama2",
+    api_key="your_secret_api_key_here"
+)
+```
+
+### Secure API Key Management
+```python
+# Verify API key configuration
+from hands_on_ai.config import get_api_key
+
+api_key = get_api_key()
+if api_key:
+    print("API key is configured successfully")
+else:
+    print("No API key found. Please configure.")
+```
+
+## 🧱 Module Overview
+
+| Module | Purpose | CLI Name |
+|--------|---------|----------|
+| chat | Simple chatbot with system prompts | chat |
+| rag | Retrieval-Augmented Generation (RAG) | rag |
+| agent | ReAct-style reasoning with tool use | agent |
+
+## 🚀 Getting Started
+
+### Installation
+
+```bash
+# Install from PyPI
+pip install hands-on-ai
+
+# Or directly from GitHub
+pip install git+https://github.com/teaching-repositories/hands-on-ai.git
+```
+
+### Quick Start
+
+```python
+from hands_on_ai.chat import get_response
+
+# Basic usage with API key
+response = get_response("Hello, how are you?")
+print(response)
+```
+
+## 🛡️ Security Best Practices
+
+- Never hardcode API keys in source code
+- Use environment variables
+- Rotate API keys periodically
+- Use secure configuration management
+
+## 📚 Documentation
+
+- [Chat Module Examples](/docs/examples/chat_example.md)
+- [RAG Module Examples](/docs/examples/rag_example.md)
+- [Agent Module Examples](/docs/examples/agent_example.md)
+- [API Key Configuration](/docs/examples/api_key_example.md)
+
+## 🤝 Contributing
+
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) for details.
+
