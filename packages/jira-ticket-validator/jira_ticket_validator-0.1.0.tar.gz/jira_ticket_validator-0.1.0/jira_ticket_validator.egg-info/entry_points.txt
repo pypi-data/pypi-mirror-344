@@ -1,0 +1,2 @@
+[console_scripts]
+jira-ticket-validator = jira_ticket_validator:validate_ticket

@@ -1,0 +1,10 @@
+README.md
+setup.py
+jira/__init__.py
+jira/main.py
+jira_ticket_validator.egg-info/PKG-INFO
+jira_ticket_validator.egg-info/SOURCES.txt
+jira_ticket_validator.egg-info/dependency_links.txt
+jira_ticket_validator.egg-info/entry_points.txt
+jira_ticket_validator.egg-info/requires.txt
+jira_ticket_validator.egg-info/top_level.txt
