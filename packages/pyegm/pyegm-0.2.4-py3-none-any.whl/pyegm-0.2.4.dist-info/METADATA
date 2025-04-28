@@ -1,0 +1,72 @@
+Metadata-Version: 2.4
+Name: pyegm
+Version: 0.2.4
+Summary: Explosive Generative Model (EGM) classifier
+Author-email: CJiangqiu <17787153839@qq.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/CJiangqiu/PyEGM
+Project-URL: Documentation, https://github.com/CJiangqiu/PyEGM#readme
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: typing-extensions>=4.0.0; python_version < "3.8"
+Requires-Dist: scipy>=1.5.0
+Requires-Dist: hnswlib>=0.5.2
+Dynamic: license-file
+
+# PyEGM: Explosive Generative Model for Classification
+
+PyEGM is an explosive generative model (EGM) classifier designed for incremental learning. It generates new training points during each iteration and dynamically adjusts its generation strategy based on the input data distribution. This allows it to improve over time and make accurate predictions even as the data evolves.
+## 🌟 Key Features
+- **Physics-Inspired Explosive Generation**
+  - 💥 **Energy Allocation**: Dirichlet-distributed energy partitioning
+  - 🚀 **Kinematic Simulation**: Velocity derived from kinetic energy formula 
+  - 🌪️ **Directional Dispersion**: Random unit vectors with Gaussian noise
+
+- **Dynamic Generation**
+  - 🔄 **Incremental Learning**: Seamless updates via `partial_fit`
+  - 🧩 **Class-Conditional Generation**: Per-class energy allocation
+  - 🎛️ **Noise Control**: Tunable displacement randomness
+
+- **Practical Advantages**
+  - 🚀 Built-in incremental learning capability
+  - 🛡️ Robust to class imbalance through proportional generation
+  - ⚡ Efficient neighbor search with NN indexing
+
+## Installation
+To install PyEGM, you can simply use pip:
+```python
+pip install pyegm
+```
+# Usage
+If you have PyEGM in your project, you can import it directly:
+```python
+from pyegm import PyEGM
+```
+## Model Parameters:
+- num_points: Number of new points generated per class.
+- total_energy: Total energy allocated to each class for the explosion process.
+- mass: Mass of each generated "particle" in the explosion.
+- explosion_time: Duration of the explosion that influences the displacement of the generated points.
+- noise_scale: Standard deviation of the random noise added to each new point.
+- dirichlet_alpha: Concentration parameter for the Dirichlet distribution splitting total energy among the generated points.
+
+## Model Methods:
+- fit(X, y):Trains the model and generates new points based on the explosion process. This method combines the new generated points with the original training data.
+- partial_fit(X, y):Allows for incremental training, adding new data points while generating more samples based on the existing model.
+- predict(X):Predicts class labels for the provided input data. This method generates the predicted class labels for the input features.
+- score(X, y):Evaluates the model’s accuracy. This method computes the accuracy of the model based on the test data and true labels.
+
+
