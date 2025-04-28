@@ -1,0 +1,2 @@
+[console_scripts]
+geocolor = geocolor.cli:main
