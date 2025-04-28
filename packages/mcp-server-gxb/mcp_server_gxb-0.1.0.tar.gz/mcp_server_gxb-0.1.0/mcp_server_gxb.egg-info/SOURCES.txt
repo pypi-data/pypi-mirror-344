@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+mcp_server_gxb/__init__.py
+mcp_server_gxb/__main__.py
+mcp_server_gxb.egg-info/PKG-INFO
+mcp_server_gxb.egg-info/SOURCES.txt
+mcp_server_gxb.egg-info/dependency_links.txt
+mcp_server_gxb.egg-info/entry_points.txt
+mcp_server_gxb.egg-info/requires.txt
+mcp_server_gxb.egg-info/top_level.txt

@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: mcp-server-gxb
+Version: 0.1.0
+Summary: 一个实现MCP协议的时间服务器
+Home-page: https://github.com/yourusername/mcp-server-gxb
+Author: GXB
+Author-email: example@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=0.1.0
+Requires-Dist: pydantic>=2.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+# GXB MCP时间服务器
+
+这是一个实现MCP协议的时间服务器，提供获取当前时间和格式化日期等功能。
+
+## 功能
+
+- 获取当前时间
+- 按照指定格式格式化日期
+- 提供时间资源服务
+
+## 在阿里云百炼中使用
+
+```json
+{
+  "mcpServers": {
+    "time-server": {
+      "command": "uvx",
+      "args": ["mcp-server-gxb"]
+    }
+  }
+}
+```
