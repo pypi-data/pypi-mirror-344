@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: gemini_agent
+Version: 0.1.0
+Summary: An autonomous GUI agent powered by Google's Gemini API
+Home-page: https://github.com/shubhamshnd/gemini-agent
+Author: Shubham Shinde
+Author-email: shubhamshindesunil@gmail.com
+Requires-Dist: pyautogui
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: pillow
+Requires-Dist: pydantic
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
