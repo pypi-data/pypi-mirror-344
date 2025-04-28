@@ -1,0 +1,9 @@
+LICENCE
+README.md
+setup.py
+Scan_binpy/__init__.py
+Scan_binpy/sniff.py
+Scan_binpy.egg-info/PKG-INFO
+Scan_binpy.egg-info/SOURCES.txt
+Scan_binpy.egg-info/dependency_links.txt
+Scan_binpy.egg-info/top_level.txt
