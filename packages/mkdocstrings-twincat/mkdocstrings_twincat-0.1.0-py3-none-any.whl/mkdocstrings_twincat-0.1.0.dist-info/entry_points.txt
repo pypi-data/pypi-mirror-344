@@ -1,0 +1,2 @@
+[mkdocstrings.handlers]
+twincat = mkdocstrings_handlers.twincat:get_handler
