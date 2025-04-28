@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-git-assistant"
+version = "0.1.1"
+description = "A simple CLI tool to assist with common Git operations."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+    { name="Kelwyn Oliveira", email="sksoliveira.eng@gmail.com" }
+]
+dependencies = [
+    "questionary>=2.1.0",
+    "colorama>=0.4.6"
+]
+
+[project.urls]
+Homepage = "https://github.com/kelwynoliveira/py_git_assistant"
+
+[project.scripts]
+git-assistant = "py_git_assistant.assistant:main"
+
+[tool.setuptools]
+packages = ["py_git_assistant", "py_git_assistant.services", "py_git_assistant.utils"]
