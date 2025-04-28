@@ -1,0 +1,14 @@
+aider_mcp_client/__init__.py,sha256=vZE24LncnW1fTaWwFL-uN8fo9rM1Rl1aBjZ7cGjZyAo,111
+aider_mcp_client/__main__.py,sha256=efTEt5VAvOfo1aAt7aKvqOI0rJxvDDl9miLo1YE7HwQ,238
+aider_mcp_client/_version.py,sha256=-S3S2YntMpT7H7Ex1tFN9lc8VXa0FwMBawQAQDjb4G8,524
+aider_mcp_client/client.py,sha256=vDsqkt1zNvoDcczC8XHt_ShvOWVucr8rFGSiGpPHZnA,53957
+aider_mcp_client/config.json,sha256=r32InD3x2zX1zcoi5sdy8EeuJyGO3Y4Srm1qRH0PTkw,171
+aider_mcp_client/mcp_sdk_client.py,sha256=8AjDUqGmGrCLk27FdDazpt-iEsADzdUrvhdvvrHJdms,40362
+aider_mcp_client/pyproject.toml,sha256=Z2HHXqPIHNPLvwpjvl-CohrcUjxY_9OGysDY_6vsliY,1565
+aider_mcp_client/setup.cfg,sha256=x7e_l5sJJEL8iWkcOCNCPfWF92k90ZOElqZp-7jkF_c,1082
+aider_mcp_client-0.1.1.dev5.dist-info/licenses/LICENSE,sha256=S1XVLTQ8y0A4C0NCLP29CIjV9kpg_bMoOY0mTQ-2rrc,1070
+aider_mcp_client-0.1.1.dev5.dist-info/METADATA,sha256=_fTYKH8ed-RQ2sLjzn6ngwI5ojZhgvujq8gYDTGVX2M,164
+aider_mcp_client-0.1.1.dev5.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+aider_mcp_client-0.1.1.dev5.dist-info/entry_points.txt,sha256=5NRWZkvte9GVw38Wr7pN23r1XkcODSKJecD-q0GzBCY,114
+aider_mcp_client-0.1.1.dev5.dist-info/top_level.txt,sha256=VdXbYwIv34Q-Nh5R3BbxZbsFNZcbMbh6sGAcBSlx8FM,17
+aider_mcp_client-0.1.1.dev5.dist-info/RECORD,,
