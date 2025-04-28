@@ -1,0 +1,93 @@
+Metadata-Version: 2.4
+Name: mas-cookie-manager
+Version: 0.1.2
+Summary: MAS Cookie Manager for Streamlit
+Author: Erdem Elmas
+Author-email: erdemelmas2002@gmail.com
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: streamlit==1.43.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# MAS Cookie Manager
+
+MAS Cookie Manager is a lightweight and reliable Streamlit component for managing client-side cookies easily.
+
+## Why MAS Cookie Manager?
+
+Streamlit is a powerful framework for building interactive apps, but it lacks built-in support for client-side cookies.  
+MAS Cookie Manager solves this gap by offering a simple, efficient, and production-ready solution for cookie handling inside Streamlit apps.
+
+## Features
+
+- Set cookies with expiration support.
+- Get cookies without manual parsing.
+- Remove cookies easily.
+- Fully client-side, no backend needed.
+- Designed to integrate seamlessly with Streamlit workflows.
+
+## Installation
+
+```bash
+pip install mas-cookie-manager
+```
+
+## Usage Example
+
+```python
+import streamlit as st
+from mas_cookie_manager import cookie_manager
+
+st.title("MAS Cookie Manager Demo")
+
+if st.button("Set Cookie"):
+    cookie_manager(action="set", name="user_id", value="hello123", days=7)
+
+if st.button("Get Cookie"):
+    user_id = cookie_manager(action="get", name="user_id")
+    if user_id:
+        st.write(f"Cookie value: {user_id}")
+
+if st.button("Remove Cookie"):
+    cookie_manager(action="remove", name="user_id")
+```
+
+## How It Works
+
+MAS Cookie Manager uses a lightweight JavaScript Streamlit component to access and control browser cookies directly through `document.cookie`.  
+There are no server-side dependencies, making it simple and fast.
+
+## Roadmap
+
+Version 2.0 is under active development.  
+Upcoming features will include:
+
+- Built-in hashing support for cookie values (e.g., SHA-256, SHA-512).
+- Encryption options for sensitive cookie data.
+- Extended cookie attributes like `Secure`, `HttpOnly`, and `SameSite`.
+- Cookie namespacing for better organization.
+
+Hashing functionality will be a key focus in the next release to improve the security of cookie handling.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Author
+
+Developed by Erdem Elmas
