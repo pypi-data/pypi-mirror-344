@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+src/pxtool.egg-info/PKG-INFO
+src/pxtool.egg-info/SOURCES.txt
+src/pxtool.egg-info/dependency_links.txt
+src/pxtool.egg-info/requires.txt
+src/pxtool.egg-info/top_level.txt
