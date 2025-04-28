@@ -1,0 +1,35 @@
+#3 Implement Part of Speech Tagging 
+
+import nltk
+import numpy as np
+import subprocess
+import sys
+
+# Downgrade numpy if version >= 2
+# if int(np.__version__.split('.')[0]) >= 2:
+#     subprocess.check_call([sys.executable, "-m", "pip", "install", "numpy<2"])
+#     import numpy as np
+
+# Download required models
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger_eng')
+
+# Small dictionary to explain common POS tags
+tag_meaning = {
+    'PRP': 'Pronoun',
+    'VBP': 'Verb',
+    'RB': 'Adverb',
+    'NNP': 'Proper Noun',
+    'NN': 'Noun',
+    'JJ': 'Adjective',
+    'VB': 'Verb (base form)'
+}
+# Perform POS tagging
+text = "I love NLP"
+tokens = nltk.word_tokenize(text)
+tags = nltk.pos_tag(tokens, lang='eng')
+
+# Print with meaning
+for word, tag in tags:
+    meaning = tag_meaning.get(tag, 'Unknown')
+    print(f"{word} -> {tag} ({meaning})")

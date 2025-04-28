@@ -1,0 +1,35 @@
+#6. Build & Evaluate a NER system using existing NER libraries
+
+import spacy
+from sklearn.metrics import classification_report
+
+# Load spaCy's pre-trained model
+nlp = spacy.load("en_core_web_sm")
+
+# Input sentence
+sentence = "Apple Inc. is making an investment in Australia of $1 billion on March 2, 2026"
+
+# Process the text using spaCy's NER
+doc = nlp(sentence)
+
+# Extract predicted entities (text and labels)
+entities = [(e.text, e.label_) for e in doc.ents]
+
+# Manually annotated ground truth
+manual_annotations = [
+    ('Apple Inc.', 'ORG'),
+    ('Australia', 'GPE'),
+    ('$1 billion', 'MONEY'),
+    ('March 2, 2026', 'DATE')
+]
+
+# Extracting labels from predicted and true entities
+predicted_entities = [label for _, label in entities]
+true_entities = [label for _, label in manual_annotations]
+
+# Print predicted entities
+print(f"Predicted Entities: {entities}")
+
+# Print evaluation results
+print(f"\nEvaluation Results:")
+print(classification_report(true_entities, predicted_entities, labels=['ORG', 'GPE', 'MONEY', 'DATE']))
