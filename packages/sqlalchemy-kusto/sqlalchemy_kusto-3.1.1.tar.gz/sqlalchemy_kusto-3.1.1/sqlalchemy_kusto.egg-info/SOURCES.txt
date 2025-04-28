@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+sqlalchemy_kusto/__init__.py
+sqlalchemy_kusto/dbapi.py
+sqlalchemy_kusto/dialect_base.py
+sqlalchemy_kusto/dialect_kql.py
+sqlalchemy_kusto/dialect_sql.py
+sqlalchemy_kusto/errors.py
+sqlalchemy_kusto.egg-info/PKG-INFO
+sqlalchemy_kusto.egg-info/SOURCES.txt
+sqlalchemy_kusto.egg-info/dependency_links.txt
+sqlalchemy_kusto.egg-info/entry_points.txt
+sqlalchemy_kusto.egg-info/not-zip-safe
+sqlalchemy_kusto.egg-info/requires.txt
+sqlalchemy_kusto.egg-info/top_level.txt
