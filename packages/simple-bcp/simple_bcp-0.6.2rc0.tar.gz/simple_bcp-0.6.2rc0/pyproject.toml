@@ -1,0 +1,29 @@
+[project]
+name = "simple-bcp"
+description = "A Simple yet powerfult bcp wrapper"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [
+    { name = "Your Name", email = "your.email@example.com" }
+]
+dynamic = ["version"]
+dependencies = [
+    "packaging~=25.0"
+]
+
+
+[build-system]
+requires = [
+    "setuptools>=61",
+    "setuptools_scm[toml]>=6.3.1"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+# Configuration for setuptools_scm to get version from Git tags
+version_scheme = "post-release"
+local_scheme = "node-and-date"
+tag_regex = "^v(?P<version>\\d+\\.\\d+\\.\\d+(-preview)?)$"
+
+[tool.setuptools]
+packages = ["simple_bcp"]
