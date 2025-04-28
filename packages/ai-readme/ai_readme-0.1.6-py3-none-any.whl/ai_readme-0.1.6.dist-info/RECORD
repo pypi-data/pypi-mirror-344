@@ -1,0 +1,16 @@
+ai_readme-0.1.6.dist-info/licenses/LICENSE,sha256=QM5axYGTdUBb68p_u8h7AN4ErOHOeXAb9m1tbPRzLzI,1086
+readme_generator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+readme_generator/config.py,sha256=ojKDfwlKVvihrRyVgaPEDcYUsr4Ms3pMmROYPjfgJ_U,529
+readme_generator/generator.py,sha256=BPEzUrIhnICCXKKwLxfS4MYAH7eh8OnCFCJRXDSankY,804
+readme_generator/main.py,sha256=OwZq2nr6ebFqmfoJFz_2a_p5CTYNHZepGk5ydH5ok1c,981
+readme_generator/prompt_templates.py,sha256=iQ_FuLH4kr2QHkWGnK5T_8IlQabZeg6Ta1oawKOzkM0,3313
+readme_generator/utils.py,sha256=FsmA-c88F3_eHg1tPTvnbdGTkCOeEzWj-SivVKZr7uc,1120
+readme_generator/ai_client/__init__.py,sha256=MP3b43bvWV5kotamT97nkGpJObQZg78gN14CMOCAF4o,482
+readme_generator/ai_client/claude_client.py,sha256=v7J_SMF_yfBGe7psmYs990cRQoGlh5COFLAmnWPyCTQ,412
+readme_generator/ai_client/gemini_client.py,sha256=iWdJqq8dQBzB2KXfqX-ht5sz2hgX-7p9ZgNX3ubLrLE,326
+readme_generator/ai_client/openai_client.py,sha256=aoF8xuRSo8skNdglG-jt4KfKY_1gFirneBMz_Ztj4nI,402
+ai_readme-0.1.6.dist-info/METADATA,sha256=R7fK-19bfDVgPxXy9OQSHalCQfCsxVk7uBzOJa9VPZs,2145
+ai_readme-0.1.6.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+ai_readme-0.1.6.dist-info/entry_points.txt,sha256=AQbhIcpAikrrwRE45jgYB1wjOltnyYbGIkyb6mTKIww,54
+ai_readme-0.1.6.dist-info/top_level.txt,sha256=_0XJdlzPylPaBwaUO00tJv7544IP-bPDHiCIoLq1mSU,17
+ai_readme-0.1.6.dist-info/RECORD,,
