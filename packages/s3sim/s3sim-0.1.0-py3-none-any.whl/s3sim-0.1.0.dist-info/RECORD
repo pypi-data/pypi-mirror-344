@@ -1,0 +1,9 @@
+s3sim/__init__.py,sha256=shfCcE0US_wGqg17uV0vL9wOLkQGXTtXVVxS1tkrLm8,437
+s3sim/s3_operations.py,sha256=HU6_FFfUkmyYmyS8OG2SPIQpeR98d-UQcraASoTdeQo,8296
+s3sim/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+s3sim/tests/test_s3_operations.py,sha256=MQS8K7SS3wj2EQ0yUOhTIgYk1HzbyZmXWUpATb6Mhnw,4804
+s3sim-0.1.0.dist-info/METADATA,sha256=g55cCDdXZ7kZJV41hmGU-cj69nFKPz8HGufJ_pLQsdc,887
+s3sim-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+s3sim-0.1.0.dist-info/entry_points.txt,sha256=PXYSEiQUsQwGg4oNyLQ13Ayuea1h3UwAAOe7RCAoCVY,41
+s3sim-0.1.0.dist-info/top_level.txt,sha256=iix2G9Nr3HK2CU-OXmFxYIPXUZwyPF_NAKfpPB3F8V4,6
+s3sim-0.1.0.dist-info/RECORD,,
