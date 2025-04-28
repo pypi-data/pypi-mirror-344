@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: memoria
+Version: 2025.4.27.2
+Summary: A Python package for memory management and caching
+Project-URL: Homepage, https://github.com/idin/memoria
+Project-URL: Bug Tracker, https://github.com/idin/memoria/issues
+Author-email: Idin <python@idin.net>
+License: Conditional Freedom License (CFL-1.0)
+License-File: LICENSE
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Memoria
