@@ -1,0 +1,16 @@
+datatable/__init__.py,sha256=WV3GqfkhkP_hUBEQnGoK1DIFy-MuHi4BBfvEhYhy3J0,1055
+datatable/core/__init__.py,sha256=kKmG-fKuQr8Jqb8hHWNFX4yuygTHWh5mfW37O4_AewY,821
+datatable/core/base_controller.py,sha256=QNOpYdQTqzkbHOrt4R8hjlDhCyqUpSbC1dLYIXeOHqc,4225
+datatable/core/observer.py,sha256=VOcPonJMhoa6UH9E4k_19IM0AvGSLl0bOIEJhZksO_A,5702
+datatable/core/widget_manager.py,sha256=m7r51Cy-X7Yi-At4cubqsiQ2ThHVCWB67iu_0WBkxfQ,3875
+datatable/models/__init__.py,sha256=pv72ALWvE-RGFxj-vwHVjhCBWn3yvmy3IdM2u46X_f8,960
+datatable/models/datatable_model.py,sha256=MGEgmYmtxKS4BeDAOBwHC3UfvFUYZUtV9t3P8YZhpDc,18004
+datatable/models/delegates.py,sha256=mcghRC9HNYZJ08dywE3_A-L3RciZf3QAXVtZhZoGM10,7636
+datatable/widgets/__init__.py,sha256=pLQwKia3rM9BriZ6baUjnmQV5NAaEJ9-Dzv0FAzKnoY,713
+datatable/widgets/datatable.py,sha256=UplFbZiiMsUwV1q0p4JSCdodwdEsjwCkFCiJT5zf1I8,17598
+datatable/widgets/handlers/DataTableHandler.py,sha256=0bKc-k6_zewfQE3Xb-Yfk3tLGmiiIeFtNJbfLlMI6rw,8961
+datatable/widgets/handlers/__init__.py,sha256=U6bMdXbYC5nuP8U3HNpCXkGiHlThCAeu_TTWhqE6j5I,734
+pyside6_datatable_widget-1.0.0.dist-info/METADATA,sha256=wroIS9O2eWZHOKQTSFv6pQiGEDcs6VSBCmJHCoP2uHg,7322
+pyside6_datatable_widget-1.0.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+pyside6_datatable_widget-1.0.0.dist-info/top_level.txt,sha256=Rjnvckxd3Hp29eAAHYFBmAhHa7_tOGjiL3eiwvVMNhI,10
+pyside6_datatable_widget-1.0.0.dist-info/RECORD,,
