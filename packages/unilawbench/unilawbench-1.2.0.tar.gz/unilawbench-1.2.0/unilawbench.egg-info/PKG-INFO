@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: unilawbench
+Version: 1.2.0
+Requires-Dist: evalscope
+Requires-Dist: evalscope[opencompass]
+Requires-Dist: evalscope[vlmeval]
+Requires-Dist: evalscope[rag]
+Requires-Dist: evalscope[perf]
+Requires-Dist: evalscope[app]
+Requires-Dist: evalscope[all]

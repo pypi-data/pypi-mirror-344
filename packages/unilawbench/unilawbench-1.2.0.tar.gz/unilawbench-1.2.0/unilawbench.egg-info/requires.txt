@@ -1,0 +1,7 @@
+evalscope
+evalscope[opencompass]
+evalscope[vlmeval]
+evalscope[rag]
+evalscope[perf]
+evalscope[app]
+evalscope[all]
