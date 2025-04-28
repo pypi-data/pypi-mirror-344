@@ -1,0 +1,200 @@
+![Build Status](https://stage-gitlab.wingbank.com/anusar.vinlay/balakrishnan/badges/main/pipeline.svg)
+![Coverage](https://stage-gitlab.wingbank.com/anusar.vinlay/balakrishnan/badges/main/coverage.svg)
+![Release](https://stage-gitlab.wingbank.com/anusar.vinlay/balakrishnan/badges/main/release.svg)
+![CI/CD](https://stage-gitlab.wingbank.com/anusar.vinlay/balakrishnan/badges/main/ci_cd.svg)
+![Contributors](https://stage-gitlab.wingbank.com/anusar.vinlay/balakrishnan/-/graphs/main.svg?width=800&height=400)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Forks](https://img.shields.io/github/forks/yourusername/yourprojectname?style=social)
+
+
+naming after the mathematician,
+
+------------
+
+this repository served as an experimental features that enable AI model to be assitant of growing graph database knowledge. With the integration of model context protocol, to accessing external data source:
+- dgraph
+- neo4j
+
+
+central file formating:
+- apache graphar
+
+![alt text](docs/img/flow-diagram.png)
+
+# Balakrishnan: MCP for Graph Database
+
+enable ai integration with workflow via graph database language
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Data Collection & Customization](#data-collection--customization)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Features
+- enable centralized repository of knowledge base
+- using ai agent by function tools, to not only answer question but to help execute works
+- initalized to expand our tech for developing, and learning new technology surrounding graph database
+
+## Installation
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://stage-gitlab.com/anusar.vinlay/balakrishnan.git
+   cd Balakrishnan
+
+   uv venv
+
+2. **Activate the virtual environment**
+    ```bash
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    ```
+
+## Usage
+
+[test:].....
+Using the new A2A protocol from google
+
+```mermaid
+sequenceDiagram
+    participant Client as A2A Client
+    participant Server as A2A Server
+    participant Agent as LangGraph Agent
+    participant API as Frankfurter API
+
+    Client->>Server: Send task with currency query
+    Server->>Agent: Forward query to currency agent
+
+    alt Complete Information
+        Agent->>API: Call get_exchange_rate tool
+        API->>Agent: Return exchange rate data
+        Agent->>Server: Process data & return result
+        Server->>Client: Respond with currency information
+    else Incomplete Information
+        Agent->>Server: Request additional input
+        Server->>Client: Set state to "input-required"
+        Client->>Server: Send additional information
+        Server->>Agent: Forward additional info
+        Agent->>API: Call get_exchange_rate tool
+        API->>Agent: Return exchange rate data
+        Agent->>Server: Process data & return result
+        Server->>Client: Respond with currency information
+    end
+
+    alt With Streaming
+        Note over Client,Server: Real-time status updates
+        Server->>Client: "Looking up exchange rates..."
+        Server->>Client: "Processing exchange rates..."
+        Server->>Client: Final result
+    end
+```
+
+------------
+
+
+## Technologies Used
+
+- api-gateway
+    : apache apisix
+
+![alt text](docs/img/logo/apisix.png)
+
+- model context protocol
+
++ integrating with
+-> https://google.github.io/A2A/#/topics/a2a_and_mcp.md
+
+### Graph Database:
+- dgraph (protocol-based distributed system)
+
+![alt text](docs/img/logo/dgraph.png)
+- neo4j  (open-standard graph database)
+
+![alt text](docs/img/logo/neo4j.png)
+
+- tigergraph (olap analytic-commercial options)
+
+![alt text](docs/img/logo/tigergraph.png)
+
+- hugegraph (opensource db under apache)
+
+![alt text](docs/img/logo/hugegraph.png)
+
+- nebulagraph (modular, scalable, microservice-architecture)
+
+![alt text](docs/img/logo/nebula.png)
+```
+[ BalaKrishnan ]:
+    ├───api
+    │   └───graphql
+    ├───data
+    │   ├───dgraph
+    │   │   ├───p
+    │   │   ├───t
+    │   │   ├───w
+    │   │   └───zw
+    │   └───neo4j
+    │       ├───databases
+    │       │   ├───neo4j
+    │       │   │   └───schema
+    │       │   │       └───index
+    │       │   │           └───token-lookup-1.0
+    │       │   │               ├───1
+    │       │   │               └───2
+    │       │   └───system
+    │       │       └───schema
+    │       │           └───index
+    │       │               ├───range-1.0
+    │       │               │   ├───11
+    │       │               │   ├───3
+    │       │               │   ├───5
+    │       │               │   ├───7
+    │       │               │   └───9
+    │       │               └───token-lookup-1.0
+    │       │                   ├───1
+    │       │                   └───2
+    │       └───transactions
+    │           ├───neo4j
+    │           └───system
+    ├───database
+    │   ├───dgraph
+    │   │   └───.devcontainer
+    │   ├───hugegraph
+    │   │   └───.devcontainer
+    │   ├───nebula
+    │   │   └───.devcontainer
+    │   ├───neo4j
+    │   │   └───.devcontainer
+    │   └───tigergraph
+    │       └───.devcontainer
+    ├───docs
+    │   ├───img
+    │   ├───libraries
+    │   ├───spec
+    │   └───update
+    ├───lang
+    └───terraform
+
+```
+
+## License
+MIT License
+
+## Contribution
+- MLOps (stage-gitlab.wingbank.com):
+    - anusar vinlay [main contributor]
+
+`with support and technical collaboration with MLOps teams`
+
+## Contact
+`telephone`: (+855) 015522542
+`gmail`: anusar@big-dixta.tech

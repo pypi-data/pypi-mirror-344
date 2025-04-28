@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "balakrishnan"
+version = "0.1.0"
+description = "Multi-backend agents system for automated scripts and tasks"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+authors = [
+    { name="Anusar Vinlay", email="anusar.vinlay@wingbank.com.kh" }
+]
+license-files = [ "MIT" ] 
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.packages.find]
+where = ["app"]
+include = ["mcp"]
+exclude = ["tests*"]
