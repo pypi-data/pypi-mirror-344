@@ -1,0 +1,13 @@
+[project]
+name = "mcp-linear-app"
+version = "0.0.2"
+description = "MCP server for Linear integration"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "httpx>=0.24.0",
+]
+
+[project.scripts]
+mcp-linear = "mcp_linear_app.__init__:main"
