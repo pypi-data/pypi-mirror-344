@@ -1,0 +1,5 @@
+setup.py
+EShAY.egg-info/PKG-INFO
+EShAY.egg-info/SOURCES.txt
+EShAY.egg-info/dependency_links.txt
+EShAY.egg-info/top_level.txt

@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: EShAY
+Version: 0.4
+Summary: Examining SHared Alleles? Yes!
+Author: Dr Gabe O'Reilly
+Author-email: <g.oreilly@garvan.org,au>
+Keywords: python,test,Genetics,Diversity
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+A package to look at similarity between two genetic datasets. Useful for finding duplicate tissue donors betwen studies.
