@@ -1,0 +1,3 @@
+import diatomics
+
+diatomics.main()

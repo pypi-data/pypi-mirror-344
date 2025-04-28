@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: diatomics
+Version: 0.1.0
+Summary: Python wrapper for The Diatomic Molecular Spectroscopy Database.
+Project-URL: homepage, https://rios.mp.fhi.mpg.de/index.php
+Project-URL: repository, https://github.com/the-pawel-wojcik/tdmsd.git
+Author-email: Paweł Wójcik <pawel.wojcik5@gmail.com>
+Maintainer-email: Paweł Wójcik <pawel.wojcik5@gmail.com>
+Keywords: Database,Molecules,Spectroscopy
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Topic :: Database
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Utilities
+Requires-Python: >=3.13
+Provides-Extra: cli
+Description-Content-Type: text/markdown
+
+# diatomics
+A python tool for working with [The Diatomic Molecular Spectroscopy
+Database](https://rios.mp.fhi.mpg.de/index.php).
+
+## Install
+```bash
+python -m pip install -e .
+```
+
+## Use
+```bash
+python -m diatomics Sr
+```
+
+```bash
+python -m diatomics Sr F
+```
+
+```bash
+python -m diatomics --help
+```
