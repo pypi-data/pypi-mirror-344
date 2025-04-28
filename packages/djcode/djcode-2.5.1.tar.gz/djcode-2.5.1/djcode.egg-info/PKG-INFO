@@ -1,0 +1,32 @@
+Metadata-Version: 2.2
+Name: djcode
+Version: 2.5.1
+Summary: DJCODE
+Home-page: 
+Author: Daksh Rathod
+Author-email: dakshbrathod@gmail.com
+License: MIT
+Keywords: djcode
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: keywords
+Dynamic: license
+Dynamic: summary
+
+# change the version in setup file 
+# delete egg-info folder 
+# python3 setup.py sdist bdist_wheel
+# twine upload dist/* 
+# Generate new token for project and paste (pypi-AgEIcHlwaS5vcmcCJGQ1NjBhN2FhLTBkNTMtNDEyNC05ODA1LWJkYzFkZjY5MGE0MwACDlsxLFsiZGpjb2RlIl1dAAIsWzIsWyIwYmNlZjQxZC0zZGEzLTQ1MjEtODFiNi05NWRhOWM0MWYyMGQiXV0AAAYgG2tBVDyr0OtQ4CAH7Ad0ZmEhbSRLsWu8QNcf6hEKdCA)
+# done
+
+CHANGE LOG
+==========

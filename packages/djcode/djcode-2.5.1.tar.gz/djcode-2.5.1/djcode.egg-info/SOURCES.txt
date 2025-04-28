@@ -1,0 +1,9 @@
+LICENSE
+README.txt
+setup.py
+djcode/__init__.py
+djcode/djcode.py
+djcode.egg-info/PKG-INFO
+djcode.egg-info/SOURCES.txt
+djcode.egg-info/dependency_links.txt
+djcode.egg-info/top_level.txt
