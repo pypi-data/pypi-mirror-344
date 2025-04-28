@@ -1,0 +1,2 @@
+[console_scripts]
+race_report = race_report.report:main
