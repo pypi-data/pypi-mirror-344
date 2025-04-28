@@ -1,0 +1,11 @@
+orange3_sqlquery-0.0.1.dist-info/licenses/LICENSE,sha256=QpSZvCTowu2-PPT037J3-vehh3zhzqaLNuewDC_Pmq8,1180
+orangecontrib/__init__.py,sha256=YxvptqqdM56WQItfVAgR8zj7VbHWPI4n4osEVqzBpyY,79
+orangecontrib/sqlquery/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+orangecontrib/sqlquery/widgets/__init__.py,sha256=DK7eyjtvdiwvsxqaELQqD-Xg2OhKzzu_9oz18dBy_44,953
+orangecontrib/sqlquery/widgets/owsqlquery.py,sha256=FLvWCflgBSbDaJvKO4J3u2deVciiZEyrx9S_GJUUd_Y,5873
+orangecontrib/sqlquery/widgets/icons/sqlquery.svg,sha256=PyObhuvPLIVBGCF5oyokzxOGvNRKul8pE5u5zh5xdeQ,5384
+orange3_sqlquery-0.0.1.dist-info/METADATA,sha256=XEm6M2K_Mkv1t4x1vtPX7CvWkRhAk2YBi4k4q_6pqpc,1446
+orange3_sqlquery-0.0.1.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+orange3_sqlquery-0.0.1.dist-info/entry_points.txt,sha256=G-O39hyq922G4u2Y9M-LZXIqMa9IXWufNWPU7O7JaTo,201
+orange3_sqlquery-0.0.1.dist-info/top_level.txt,sha256=Iut-JTfT11SZHHm77_ZeszD7pZDWXcTweCbvrJpqDyQ,14
+orange3_sqlquery-0.0.1.dist-info/RECORD,,
