@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+mas_cookie_manager/__init__.py
+mas_cookie_manager/mas_cookie_manager.py
+mas_cookie_manager.egg-info/PKG-INFO
+mas_cookie_manager.egg-info/SOURCES.txt
+mas_cookie_manager.egg-info/dependency_links.txt
+mas_cookie_manager.egg-info/requires.txt
+mas_cookie_manager.egg-info/top_level.txt
+mas_cookie_manager/build/main.js
+mas_cookie_manager/build/main.js.LICENSE.txt
