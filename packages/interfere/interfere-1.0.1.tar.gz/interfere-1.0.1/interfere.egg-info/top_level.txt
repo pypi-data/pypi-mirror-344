@@ -1,0 +1,10 @@
+dist
+docs
+images
+interfere
+paper
+tests
+venv_interfere
+venv_pypi
+venv_test
+venv_test_pypi

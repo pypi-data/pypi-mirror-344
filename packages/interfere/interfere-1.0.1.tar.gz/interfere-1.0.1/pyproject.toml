@@ -1,0 +1,40 @@
+[project]
+name = "interfere"
+version = "1.0.1"
+description = "Predicting how complex systems will respond to interventions."
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["complex systems", "dynamics", "nonlinear", "causal inference", "machine learning", "time series", "forecast", "intervention"]
+authors = [
+  {name = "DJ Passey", email = "djpassey@unc.edu"}
+]
+dependencies = [
+    "networkx",
+    "numpy<2",
+    "optuna",
+    "pysindy",
+    "scikit-learn",
+    "statsmodels",
+    "typing_extensions"
+]
+
+[project.optional-dependencies]
+methods = [
+    "neuralforecast",
+    "statsforecast",
+    "sktime",
+]
+
+dev = [
+    "neuralforecast",
+    "statsforecast",
+    "pytest",
+    "sdeint",
+    "sktime"
+]
+
+[tool.setuptools.packages]
+find = {}
+
+[project.urls]
+Repository = "https://github.com/djpasseyjr/interfere"
