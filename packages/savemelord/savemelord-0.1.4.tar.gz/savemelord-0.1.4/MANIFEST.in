@@ -1,0 +1,3 @@
+include savemelord/data.txt
+include savemelord/*.txt
+include savemelord/data/*.txt
