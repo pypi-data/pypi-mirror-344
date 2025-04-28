@@ -1,0 +1,15 @@
+algoinfinite/__init__.py,sha256=w5oF5ObmhPV-37gtUxZhmRAYC_l-VTl-lrjZwyIztNM,219
+algoinfinite/main.py,sha256=esaay_YG8tn21cWR5Gr9uUSWXnplGEtcpYPSVlZFoR4,106
+algoinfinite/algorithms/__init__.py,sha256=td9Zw4wb86ibLkCtbDDEAV_g9kKBt8plFaMONOh6eU0,1777
+algoinfinite/algorithms/graph.py,sha256=5-E5R5G6Nmi9-OLYdV5VcjUFlVhzlReYaKbMoa0TwF8,12972
+algoinfinite/algorithms/math.py,sha256=i34PcL4WuHyLmyZcbcw5blZKscZP0XTEypNO7DeG1-s,9765
+algoinfinite/algorithms/searching.py,sha256=nOBCVJF7CvwLI3qpXza6swd9cNnI_DJ7ON2y8t4K8Ck,7636
+algoinfinite/algorithms/sorting.py,sha256=A9Jcf0TXcCp9x_O23rEbjKNC31ksdmBgq5S91i2E224,6326
+algoinfinite/data_structures/__init__.py,sha256=y2yI3wJcTl66mj3-TQc8q6UmDacuY7KZBGcpeGAS2Iw,204
+algoinfinite/data_structures/linked_list.py,sha256=MUwm-vfTApEZhzZ3ehl4y_7cRI1of1mw1_GBN4oBGH8,4124
+algoinfinite/data_structures/stack.py,sha256=hn4I-sxDSMuxiq8i_HCIdEzCZSEqlcgh1NwtLiUQd9g,632
+algoinfinite-0.2.0.dist-info/METADATA,sha256=gobxpb2piuBPGDx1wNEwnvLIfCymlbrBP-41aljXZcA,3333
+algoinfinite-0.2.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+algoinfinite-0.2.0.dist-info/entry_points.txt,sha256=PGx5Xk3mLyqurhnay0tST83gu2f1ovNezTVGugEnAp4,52
+algoinfinite-0.2.0.dist-info/top_level.txt,sha256=cThqghF3t1uW6pGBriMVnDFuckj7wa3llBC1LlPzF-M,13
+algoinfinite-0.2.0.dist-info/RECORD,,
