@@ -1,0 +1,12 @@
+setup.py
+core/__init__.py
+core/database.py
+llm_ads.egg-info/PKG-INFO
+llm_ads.egg-info/SOURCES.txt
+llm_ads.egg-info/dependency_links.txt
+llm_ads.egg-info/requires.txt
+llm_ads.egg-info/top_level.txt
+models/__init__.py
+models/ad.py
+services/__init__.py
+services/ad_analytics_service.py
