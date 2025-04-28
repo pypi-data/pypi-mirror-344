@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coocan"
+version = "0.5.3.1"
+authors = [
+    { name = "wauo", email = "markadc@126.com" }
+]
+description = "Air Async Spider Framework"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.0.0",
+    "httpx",
+    "loguru"
+]
+urls = { Homepage = "https://github.com/markadc/coocan" }
+
+[project.scripts]
+coocan = "coocan.cmd.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+coocan = ["templates/*"]
