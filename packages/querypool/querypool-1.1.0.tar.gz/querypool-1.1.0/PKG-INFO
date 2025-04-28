@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: querypool
+Version: 1.1.0
+Summary: Execution pool with caching and early return
+Author-email: ESRF <dau-pydev@esrf.fr>
+License: # MIT License
+        
+        **Copyright (c) 2021 European Synchrotron Radiation Facility**
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the "Software"), to deal in
+        the Software without restriction, including without limitation the rights to
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+        the Software, and to permit persons to whom the Software is furnished to do so,
+        subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+        FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+        COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+        IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+        CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+Project-URL: Homepage, https://gitlab.esrf.fr/dau/querypool/
+Project-URL: Documentation, https://querypool.readthedocs.io/
+Project-URL: Repository, https://gitlab.esrf.fr/dau/querypool/
+Project-URL: Issues, https://gitlab.esrf.fr/dau/querypool/issues
+Project-URL: Changelog, https://gitlab.esrf.fr/dau/querypool/-/blob/main/CHANGELOG.md
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Provides-Extra: test
+Requires-Dist: pytest>=7; extra == "test"
+Requires-Dist: pytest-timeout>=2.1; extra == "test"
+Provides-Extra: dev
+Requires-Dist: querypool[test]; extra == "dev"
+Requires-Dist: black>=25; extra == "dev"
+Requires-Dist: flake8>=4; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: querypool[test]; extra == "doc"
+Requires-Dist: sphinx>=4.5; extra == "doc"
+Requires-Dist: sphinx-autodoc-typehints>=1.16; extra == "doc"
+Requires-Dist: pydata-sphinx-theme; extra == "doc"
+Dynamic: license-file
+
+# querypool
+
+Execution pool with caching and early return for python.
+
+Query pools let a query run in the background when it doesn't return
+within a given timeout. In that case the result of the previous query
+is returned or raised. If there is no result, the default value is returned.
+
+```python
+import requests
+from querypool.pools import CooperativeQueryPool
+
+pool = CooperativeQueryPool(timeout=0.001)
+url = "https://jsonplaceholder.typicode.com/photos"
+
+# Returns None because the query times out.
+response = pool.execute(requests.get, args=(url,), default=None)
+assert response is None
+
+# Increase the timeout to let the query finish.
+# The same function with the same arguments is still running so
+# all this does is wait for the result of the previous call.
+response = pool.execute(requests.get, args=(url,), default=None, timeout=3)
+response.raise_for_status()
+
+# Returns the previous result because the query times out.
+response = pool.execute(requests.get, args=(url,), default=None)
+response.raise_for_status()
+```
+
+## Documentation
+
+https://querypool.readthedocs.io/
