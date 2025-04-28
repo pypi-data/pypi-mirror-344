@@ -1,0 +1,2 @@
+[console_scripts]
+apm = agent_manager_sdk.cli.main:cli
