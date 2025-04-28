@@ -1,0 +1,2 @@
+[console_scripts]
+init-project = project_initializer.initilizer:main
