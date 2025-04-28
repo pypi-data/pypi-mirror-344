@@ -1,0 +1,2 @@
+[console_scripts]
+invideo-ai-mcp = invideo_ai_mcp.server:main
