@@ -1,0 +1,9 @@
+adamlibrary/adam.cpython-313-x86_64-linux-gnu.so,sha256=0055sADiyb661yVm3TzIM7oqKwn9Mp8AC_fLJfeXNVY,58640
+adamlibrary/datasetname.cpython-313-x86_64-linux-gnu.so,sha256=XxcZOHISiSZcok_hbUWVVnye3YpdAPRNO2r-NYXi6AY,50064
+adamlibrary/math.cpython-313-x86_64-linux-gnu.so,sha256=-9aT5rf4_fqVpacAOjQOMIz8YVDVEkSXkNBRNkuuM2k,47040
+adamlibrary/memreplication_cutline.cpython-313-x86_64-linux-gnu.so,sha256=IpKaf0lWHTOAwekFsxT5Szyj0ANXj9KMZMP0BHJZroY,47256
+adamlibrary/stringer.cpython-313-x86_64-linux-gnu.so,sha256=bZO0qehyGaIFs8YjpNrHyFTK-Ph5zOhN8ukA47QJ0gw,47080
+adamlibrary-1.6.1.dist-info/METADATA,sha256=fisaeud6X6LBVRxl-IpUwVd8RTuQfFN0komfl7ilsIc,1726
+adamlibrary-1.6.1.dist-info/WHEEL,sha256=AGxHeAgPa6aD6J-abEJkLRye_hg9k_pIMpCNiCNVM6o,190
+adamlibrary-1.6.1.dist-info/top_level.txt,sha256=Oq1TdrVJ2hTzrny6vlf1tltbGRvo8qNWjIOO_7XIHYQ,12
+adamlibrary-1.6.1.dist-info/RECORD,,
