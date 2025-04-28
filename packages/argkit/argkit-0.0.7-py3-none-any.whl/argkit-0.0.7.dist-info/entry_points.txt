@@ -1,0 +1,3 @@
+[console_scripts]
+kit1 = argkit.static:transfer_1
+kit2 = argkit.static:transfer_2
