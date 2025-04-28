@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: zxy9_biomechanical_model
+Version: 0.0.4
+Summary: A test package
+Author-email: Sam Liepke <samliepke@gmail.com>
+License-File: LICENSE
+Requires-Dist: numpy
+Dynamic: license-file
