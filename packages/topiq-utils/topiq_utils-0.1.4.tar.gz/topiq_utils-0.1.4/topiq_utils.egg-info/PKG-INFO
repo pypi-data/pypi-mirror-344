@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: topiq-utils
+Version: 0.1.4
+Summary: A collection of utilities for various tasks for topiq platform
+Author-email: Ashutosh Singhai <ashutosh.singhai@inviz.ai>
+Project-URL: Homepage, https://example.com/arithpack
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.1
+Requires-Dist: PyJWT==2.5.0
+Requires-Dist: cryptography==42.0.4
+Requires-Dist: fastapi==0.115.0
+Dynamic: license-file
+
+# arithpack
+
+A collection of utilities for topiq platform.
