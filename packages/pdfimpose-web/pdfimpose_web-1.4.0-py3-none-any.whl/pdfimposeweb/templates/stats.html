@@ -1,0 +1,190 @@
+{# Copyright 2024-2025 Louis Paternault
+
+This file is part of pdfimpose-web.
+
+Pdfimpose-web is free software: you can redistribute it and/or modify it
+under the terms of the GNU Affero General Public License as published by the
+Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+Pdfimpose-web is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+details.
+
+You should have received a copy of the GNU Affero General Public License
+along with pdfimpose-web. If not, see <https://www.gnu.org/licenses/>.
+-#}
+
+{% extends "base.html" %}
+
+{% block description %}{% trans %}Statistics about pdfimpose.it{% endtrans %}{% endblock %}
+{% block title %}{% trans %}pdfimpose.it — Statistics{% endtrans %}{% endblock %}
+{% block body %}
+<main class="px-2 py-2 mx-md-5">
+    <h1>Statistics</h1>
+
+    <ul>
+      <li><a href="#everything">Everything</a></li>
+      <li><a href="#layouts">Layouts</a></li>
+    </ul>
+
+    <h2 id="everything">Everything</h2>
+
+    <h3>Day</h3>
+    <div style="width: 800px;"><canvas id="stats-all-day"></canvas></div>
+
+    <h3>Month</h3>
+    <div style="width: 800px;"><canvas id="stats-all-month"></canvas></div>
+
+    <h3>Year</h3>
+    <div style="width: 800px;"><canvas id="stats-all-year"></canvas></div>
+
+     <h2 id="layouts">Layouts</h2>
+
+    <h3>Day</h3>
+    <div style="width: 800px;"><canvas id="stats-layout-day"></canvas></div>
+
+    <h3>Month</h3>
+    <div style="width: 800px;"><canvas id="stats-layout-month"></canvas></div>
+
+    <h3>Year</h3>
+    <div style="width: 800px;"><canvas id="stats-layout-year"></canvas></div>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+
+{% macro chart_all(period, data) %}
+<script>
+    (async function() {
+        const data = {
+            labels: [{% autoescape false %}{{ data[0]|join(", ") }}{% endautoescape %}],
+            datasets: [
+                {
+                    label: 'Files',
+                    data: [{{ data[1]|join(", ") }}],
+                    yAxisID: 'y',
+                },
+                {
+                    label: 'Size (bytes)',
+                    data: [{{ data[2]|join(", ") }}],
+                    yAxisID: 'y1',
+                }
+            ]
+        };
+
+        new Chart(
+            document.getElementById('stats-all-{{ period }}'),
+            {
+                type: 'line',
+                data: data,
+                options: {
+                    responsive: true,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                    stacked: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Files and size processed each {{ period }}'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'time',
+                            min: {% autoescape false %}{{ data[0]|min }}{% endautoescape %},
+                            time: {
+                                unit: "{{ period }}"
+                            }
+                        },
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            min: 0,
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            min: 0,
+                            grid: {
+                                drawOnChartArea: false, // only want the grid lines for one axis to show up
+                            },
+                        },
+                    }
+                },
+            }
+        );
+    })();
+</script>
+{% endmacro %}
+
+{% macro chart_layouts(period, data) %}
+<script>
+    (async function() {
+        const data = {
+            labels: [{% autoescape false %}{{ data.dates|join(", ") }}{% endautoescape %}],
+            datasets: [
+                {% for layout, data in data.layouts.items() %}
+                {
+                    label: '{{ layout }}',
+                    data: [{{ data|join(", ") }}],
+                    yAxisID: 'y',
+                },
+                {% endfor %}
+            ]
+        };
+
+        new Chart(
+            document.getElementById('stats-layout-{{ period }}'),
+            {
+                type: 'line',
+                data: data,
+                options: {
+                    responsive: true,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                    stacked: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Files processed each {{ period }}, by layout'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'time',
+                            min: {% autoescape false %}{{ data.dates|min }}{% endautoescape %},
+                            time: {
+                                unit: "{{ period }}"
+                            }
+                        },
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            min: 0,
+                        },
+                    }
+                },
+            }
+        );
+    })();
+</script>
+{% endmacro %}
+
+{{ chart_all("day", datadayall) }}
+{{ chart_all("month", datamonthall) }}
+{{ chart_all("year", datayearall) }}
+
+{{ chart_layouts("day", datadaylayouts) }}
+{{ chart_layouts("month", datamonthlayouts) }}
+{{ chart_layouts("year", datayearlayouts) }}
+
+{% endblock %}

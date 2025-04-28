@@ -1,0 +1,2 @@
+[console_scripts]
+pdfresize = pdfimposeweb.pdfresize.__main__:main
