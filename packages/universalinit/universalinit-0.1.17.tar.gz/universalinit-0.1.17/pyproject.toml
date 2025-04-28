@@ -1,0 +1,21 @@
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "universalinit"
+version = "0.1.17"
+description = ""
+authors = ["Zoltan Kuscsik <zoltan@s57.io>"]
+readme = "README.md"
+packages = [
+    { from = "src", include = "universalinit" }
+]
+scripts = { uniinit = "universalinit.cli:main" }
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+PyYAML = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.3.4,<9.0.0"
