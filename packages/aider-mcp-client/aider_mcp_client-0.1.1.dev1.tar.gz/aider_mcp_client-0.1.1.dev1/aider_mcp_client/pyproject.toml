@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools-scm[toml]>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "aider_mcp_client/_version.py"
+write_to_template = "__version__ = '{version}'\n__version_tuple__ = {version_tuple}"
+version_scheme = "release-branch-semver"
+local_scheme = "no-local-version"
+fallback_version = "0.1.0"
+
+[tool.setuptools_scm.git]
+describe_command = ["git", "describe", "--dirty", "--tags", "--long", "--match", "*.*.*"]
+
+[project]
+name = "aider-mcp-client"
+dynamic = ["version"]
+description = "A Python client for interacting with MCP (Model Control Protocol) servers"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Alvin Veroy", email = "me@alvin.tech"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+]
+keywords = ["mcp", "client", "documentation", "aider"]
+
+dependencies = [
+    "requests>=2.25.0",
+]
+
+[project.scripts]
+aider-mcp-client = "aider_mcp_client.client:main"
+aider_mcp_client = "aider_mcp_client.client:main"
+
+[project.urls]
+Homepage = "https://github.com/alvinveroy/aider-mcp-client"
+"Bug Tracker" = "https://github.com/alvinveroy/aider-mcp-client/issues"
+"PyPI" = "https://pypi.org/project/aider-mcp-client/"

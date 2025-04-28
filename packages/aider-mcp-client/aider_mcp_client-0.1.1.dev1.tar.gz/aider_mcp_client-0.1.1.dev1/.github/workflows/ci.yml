@@ -1,0 +1,182 @@
+name: CI
+
+permissions:
+  contents: write  # Required for creating/pushing tags
+  id-token: write  # Required for OIDC authentication
+
+on: 
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install uv
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+    
+    - name: Create virtual environment and install dependencies
+      run: |
+        uv venv
+        source .venv/bin/activate
+        uv pip install --upgrade pip
+        uv pip install -e .[dev]
+        uv pip install pytest pytest-cov
+        # Try to install mcp with CLI tools using uv
+        uv pip install "mcp[cli]" || echo "Could not install mcp package, continuing anyway"
+    
+    - name: Run tests
+      run: |
+        source .venv/bin/activate
+        AIDER_MCP_TEST_MODE=true python -m pytest -v
+    
+    - name: Install and run flake8
+      run: |
+        source .venv/bin/activate
+        uv pip install flake8
+        flake8 aider_mcp_client
+
+  release:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Clean up and reset version tags
+        run: |
+          # Delete any existing dev tags locally and remotely
+          git tag -d $(git tag -l "v*dev*") || true
+          git push origin --delete $(git tag -l "v*dev*") || true
+          
+          # Only create v0.0.5 tag if it doesn't exist
+          if ! git rev-parse v0.0.5 >/dev/null 2>&1; then
+            git tag v0.0.5
+            git push origin v0.0.5
+          fi
+
+      - name: Validate version
+        run: |
+          python -m pip install setuptools_scm
+          python -c "
+          from setuptools_scm import get_version
+          version = get_version()
+          # Extract just the version part before any + or - suffixes
+          clean_version = version.split('+')[0].split('-')[0]
+          if '.dev' in clean_version:
+              # Split at .dev and ensure we can properly parse it
+              parts = clean_version.split('.dev')
+              if len(parts) != 2:
+                  raise ValueError(f'Invalid dev version format: {version}')
+              base_version = parts[0]
+              dev_num = parts[1]
+              if not dev_num.isdigit():
+                  raise ValueError(f'Invalid dev number in version: {version}')
+              # Reconstruct with .dev0
+              clean_version = f'{base_version}.dev0'
+          print(f'Version validation passed: {version} (normalized to {clean_version})')
+          "
+
+      - name: Build package
+        run: |
+          python -m pip install build setuptools-scm
+          python -m build
+          ls -la dist/
+
+      - name: Extract version from built package
+        id: extract-version
+        run: |
+          VERSION=$(python -c "from importlib.metadata import version; print(version('aider-mcp-client'))")
+          # Normalize dev version to .dev0 format
+          if [[ "$VERSION" == *".dev"* ]]; then
+            BASE_VERSION=$(echo "$VERSION" | awk -F'.dev' '{print $1}')
+            VERSION="${BASE_VERSION}.dev0"
+          fi
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-package
+          path: dist/*
+
+      - name: Get version from SCM
+        id: version
+        run: |
+          # Get clean version without local parts
+          VERSION=$(python -c "from setuptools_scm import get_version; print(get_version(version_scheme='release-branch-semver', local_scheme='no-local-version'))")
+          # Normalize version format
+          if [[ "$VERSION" == *".dev"* ]]; then
+            # For dev versions, ensure consistent format
+            BASE_VERSION=$(echo "$VERSION" | awk -F'[+.dev]' '{print $1"."$2"."$3}')
+            DEV_NUM=$(echo "$VERSION" | awk -F'.dev' '{print $2}' | cut -d'+' -f1)
+            VERSION="${BASE_VERSION}.dev0"
+          else
+            # For release versions, clean any potential suffixes
+            VERSION=$(echo "$VERSION" | cut -d'+' -f1)
+          fi
+          
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          # Only create tags for final releases (not dev versions)
+          if [[ "$VERSION" != *".dev"* ]]; then
+            echo "tag=v${VERSION}" >> $GITHUB_OUTPUT
+            echo "is_release=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_release=false" >> $GITHUB_OUTPUT
+          fi
+          echo "Version detected: ${VERSION}"
+
+      - name: Create Git tag
+        if: steps.version.outputs.is_release == 'true'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: `refs/tags/${{ steps.version.outputs.tag }}`,
+              sha: context.sha
+            })
+
+      - name: Create release
+        if: steps.version.outputs.is_release == 'true'
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Release ${{ steps.version.outputs.version }}
+          tag_name: ${{ steps.version.outputs.tag }}
+          generate_release_notes: true
+          draft: false
+          prerelease: false
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package
+          path: dist
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          # No password needed when using trusted publishing
+          packages-dir: dist/
