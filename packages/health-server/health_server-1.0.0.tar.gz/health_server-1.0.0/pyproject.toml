@@ -1,0 +1,20 @@
+[project]
+name = "health-server"
+version = "1.0.0"
+description = "A simple health check server using FastAPI"
+readme = "README.md"
+authors = [
+    { name = "treerootboy", email = "treerootboy@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+]
+
+[project.scripts]
+health-server = "health_server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
