@@ -1,0 +1,25 @@
+[project]
+name = "alerts"
+version = "0.0.0"
+description = "Notification system for Python apps"
+readme = "README.md"
+authors = [
+    { name = "Bulat Bochkariov", email = "bulat+pypi@bochkariov.com" }
+]
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3 :: Only",
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://pypi.org/project/alerts/"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
