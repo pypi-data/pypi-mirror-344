@@ -1,0 +1,2 @@
+PyQt5
+pytrec_eval_terrier
