@@ -1,0 +1,1 @@
+Appium-Python-Client<6,>=2.0.0
