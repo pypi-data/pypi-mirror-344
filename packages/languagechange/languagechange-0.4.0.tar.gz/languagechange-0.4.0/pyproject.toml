@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "languagechange"
+version = "0.4.0"
+description = ""
+authors = ["atossa <atossa@xerxeslabs.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typer = "^0.15.2"
+pytest = "^8.3.5"
+
+
+[build-system]
+requires = ["poetry-core", "setuptools>=42", "wheel"]
+build-backend = "poetry.core.masonry.api"
+
