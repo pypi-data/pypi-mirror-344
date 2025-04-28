@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+.env
+.venv
+env/
+venv/
+
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# VSCode и IDE
+.vscode/
+.idea/

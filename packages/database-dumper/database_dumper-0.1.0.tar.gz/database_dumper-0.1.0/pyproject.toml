@@ -1,0 +1,82 @@
+[project]
+name = "database-dumper"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+authors = [
+    {name = "PavukEdya", email = "slaefir@mail.ru"}
+]
+dependencies = [
+    "geoalchemy2>=0.17.1",
+    "psycopg2>=2.9.10",
+    "python-dotenv>=1.1.0",
+    "ruff>=0.11.7",
+    "sqlalchemy>=2.0.40",
+]
+[tool.ruff]
+target-version = "py312"
+src = ["src", "tests"]
+exclude = [
+    ".spyproject",
+    ".idea",
+    ".vscode",
+    "__pycache__",
+    "venv",
+    ".venv",
+    ".ruff_cache",
+    ".git*",
+    ".env",
+]
+extend-exclude = ["data", "docs", "gitlab-ci", "queries", "tests"]
+line-length = 120
+indent-width = 4
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 120
+line-ending = "lf"
+quote-style = "single"
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+select = ["C", "N", "PD", "SIM", "RUF200", "E", "W", "T", "C90", "I", "N", "ANN", "S", "B", "A", "PL", "PTH", "F", "ARG"]
+ignore = [
+    "ANN202","ANN204", "ANN201", "ANN002", "ANN003", "ANN401",
+    "PLE0302", "PLE1142",
+    "PD008", "PD009",
+    "S101",
+    "N818",
+    "T201",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.lint.isort]
+known-local-folder = ["src", "tests"]
+section-order = ["future", "standard-library", "first-party",  "third-party", "local-folder"]
+lines-after-imports = 2
+split-on-trailing-comma = false
+
+[tool.dumper.db]
+target="LOCAL_T"
+source="LOCAL"
+port_prefix="DB_PORT"
+host_prefix="DB_HOST"
+database_prefix="DB_DATABASE"
+user_prefix="DB_USERNAME"
+pass_prefix="DB_PASSWORD"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dumper"]
+
+
+[project.scripts]
+dumper = "dumper.main:main"
