@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: pyjisa
+Version: 1.4
+Summary: JISA Python wrapper
+Home-page: https://github.com/OE-FET/PyJISA.git
+Author: William Wood
+Author-email: waw31@cam.ac.uk
+License: unlicense
+Requires-Dist: jpype1
+Requires-Dist: install-jdk
+Requires-Dist: stubgenj
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
