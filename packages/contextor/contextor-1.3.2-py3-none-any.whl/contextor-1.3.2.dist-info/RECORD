@@ -1,0 +1,14 @@
+contextor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+contextor/__main__.py,sha256=OACF8ZKXfvoIFqCXABknFtn_5fWbiVZ9NwXs91lH1c4,242
+contextor/cli.py,sha256=h0Sl7QTvAgnGYsHt6zXTnjGSpbk6U2pShCnhIbnvh2o,8287
+contextor/main.py,sha256=0GyxUDX0L68wl9bL6A4byjN-floClZzZMu9KUz98RlQ,25033
+contextor/utils.py,sha256=pa5oBD4-zcyE6t34tKE1KyKUiopn521nlW1G7hePqoE,3334
+contextor/signatures/__init__.py,sha256=ePNxrv1OaNzN3032-iqqN7NTY1dCSN9o5gXBJgP6btA,384
+contextor/signatures/markdown.py,sha256=mD9-77bo1vTMKJGYEXQHJuRtvkeb6HptLWc-xkwDbOw,2434
+contextor/signatures/processor.py,sha256=J9CsYDFpvktBOaACun0Mva91gfjoay-oQcwQY7IlEYw,5306
+contextor/signatures/python.py,sha256=vSHdFeGMv12B2bW_9XFpm9FrnmS0B2Mh_NlCip5nthE,8266
+contextor-1.3.2.dist-info/METADATA,sha256=3xNrqTvvSgyzQwcQHdM24XFdavLT3l-TI1Y8_bAzofs,6598
+contextor-1.3.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+contextor-1.3.2.dist-info/entry_points.txt,sha256=KO8cATK6ApDf1ZA2qvK2bostu_0pHZrUKv2FTPrMsRA,52
+contextor-1.3.2.dist-info/licenses/LICENSE,sha256=DQfB4SZczdcY6a80z4svS1rcWDFziUViCClyjZQP6hI,1068
+contextor-1.3.2.dist-info/RECORD,,
