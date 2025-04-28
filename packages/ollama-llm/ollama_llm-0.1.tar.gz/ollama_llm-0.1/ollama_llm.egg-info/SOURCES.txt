@@ -1,0 +1,7 @@
+setup.py
+ollama_llm.egg-info/PKG-INFO
+ollama_llm.egg-info/SOURCES.txt
+ollama_llm.egg-info/dependency_links.txt
+ollama_llm.egg-info/entry_points.txt
+ollama_llm.egg-info/requires.txt
+ollama_llm.egg-info/top_level.txt
