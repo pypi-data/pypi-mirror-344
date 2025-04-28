@@ -1,0 +1,95 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/Tool.schema.json
+name: Vision LLM (GPT-4o / o3-mini)
+description: 'Calls an OpenAI-style model with or without vision capability, including GPT-4o and o3-mini.'
+type: custom_llm
+tool_state: preview
+category: HW_PF_tools
+
+module: pf_reasoning_tool.tools.vision_llm_tool
+function: vision_llm
+
+default_prompt: |
+  # system:
+  You are an AI assistant.  Analyse the provided image and answer the user’s question, or ignore the image if no image is supplied.
+
+  # user:
+  {{prompt_text}}
+  {% if image_input is defined %}![image]({{image_input}}){% endif %}
+
+inputs:
+  connection:
+    type: [AzureOpenAIConnection, OpenAIConnection]
+    description: 'OpenAI or Azure OpenAI connection.'
+
+  deployment_name:
+    type: [string]
+    description: 'AOAI deployment name (leave blank for OpenAI connection).'
+    enabled_by: connection
+    enabled_by_type: [AzureOpenAIConnection]
+    allow_manual_entry: true
+    optional: true
+    ui_hints: {text_box_size: lg}
+
+  model:
+    type: [string]
+    description: 'OpenAI model ID (vision or text).'
+    enabled_by: connection
+    enabled_by_type: [OpenAIConnection]
+    enum: ['gpt-4o-mini', 'gpt-4-vision-preview', 'o3-mini', 'o3']
+    allow_manual_entry: true
+    optional: true
+    ui_hints: {text_box_size: lg}
+
+  temperature:
+    type: [double]
+    default: 0.7
+    ui_hints: {text_box_size: xs}
+
+  top_p:
+    type: [double]
+    default: 1.0
+    ui_hints: {text_box_size: xs}
+
+  stop:
+    type: [list]
+    description: 'Stop sequences.'
+    optional: true
+    ui_hints: {text_box_size: md}
+
+  max_tokens:
+    type: [int]
+    description: 'Maximum tokens (blank lets the API use its own default).'
+    optional: true
+    ui_hints: {text_box_size: xs}
+
+  presence_penalty:
+    type: [double]
+    default: 0.0
+    ui_hints: {text_box_size: xs}
+
+  frequency_penalty:
+    type: [double]
+    default: 0.0
+    ui_hints: {text_box_size: xs}
+
+  seed:
+    type: [int]
+    description: 'Seed for repeatable output.'
+    optional: true
+    ui_hints: {text_box_size: xs}
+
+  detail:
+    type: [string]
+    enum: ['auto', 'low', 'high']
+    default: 'auto'
+    description: 'Vision-only setting; ignored for text models.'
+
+  stream:
+    type: [bool]
+    default: false
+    visible: false
+
+outputs:
+  output:
+    type: [string]
+    description: 'Assistant response.'
