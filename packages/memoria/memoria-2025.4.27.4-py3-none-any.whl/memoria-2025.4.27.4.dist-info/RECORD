@@ -1,0 +1,10 @@
+memoria/__init__.py,sha256=jNXseI1cpp7Pj4V4j-rbsVjn6l4tEgENXSxlcu-o60Q,51
+memoria/cache/__init__.py,sha256=X0tRHnv6Jb9LU-vh1GDLSIxZbcgQN0j-gTaTZN0tT7U,187
+memoria/cache/cache.py,sha256=pC7OLuX7_zsuFd65tgfgFmgPZRrIJTVO-fDMJrbcvM4,5720
+memoria/cache/set_cache_dir.py,sha256=oIwsk9Rre-kY8JTeMWEaMOGGL1bREhGghqUscIOzKBU,1355
+memoria/hash/__init__.py,sha256=2blc23Z2h5u5IjO1tiqehQW3rFkTaqizTf1M2cOvjDw,123
+memoria/hash/make_hashable.py,sha256=wFa6UBOllpoTAed7UgSKritCG9zs2hu_uT4UeXAJkPI,1778
+memoria-2025.4.27.4.dist-info/METADATA,sha256=wYDCIyZbcVi1a0XcQDZb34IllCInxr9FNloDQFwo4BU,4623
+memoria-2025.4.27.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+memoria-2025.4.27.4.dist-info/licenses/LICENSE,sha256=7ASK6lD39kREU_Dkj57xbJ75ixRNFtFto-EHznx3ps8,4483
+memoria-2025.4.27.4.dist-info/RECORD,,
