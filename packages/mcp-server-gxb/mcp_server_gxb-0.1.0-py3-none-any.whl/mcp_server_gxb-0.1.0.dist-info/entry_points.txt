@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-gxb = mcp_server_gxb.__main__:main
