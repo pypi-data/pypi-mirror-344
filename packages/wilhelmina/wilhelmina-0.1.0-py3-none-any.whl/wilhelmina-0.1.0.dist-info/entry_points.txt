@@ -1,0 +1,3 @@
+[console_scripts]
+wilma-install-deps=wilma:install_playwright_deps
+
