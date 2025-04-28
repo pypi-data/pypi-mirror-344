@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "diatomics"
+version = "0.2.0"
+description = "Python wrapper for The Diatomic Molecular Spectroscopy Database."
+readme = "readme.md"
+requires-python = ">=3.13"
+authors = [
+  {name = "Paweł Wójcik", email = "pawel.wojcik5@gmail.com"}
+]
+maintainers = [
+  {name = "Paweł Wójcik", email = "pawel.wojcik5@gmail.com"}
+]
+keywords = ["Spectroscopy", "Molecules", "Database"]
+dependencies = []
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Topic :: Database",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Utilities",
+]
+
+[project.optional-dependencies]
+cli = [ ]
+
+
+[project.urls]
+homepage = "https://rios.mp.fhi.mpg.de/index.php"
+repository = "https://github.com/the-pawel-wojcik/tdmsd.git"
+
+[tool.setuptools.package-data]
+"diatomics" = ["data/*.csv"]
