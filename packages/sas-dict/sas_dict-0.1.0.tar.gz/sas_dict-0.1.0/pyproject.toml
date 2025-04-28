@@ -1,0 +1,24 @@
+[project]
+name = "sas-dict"
+version = "0.1.0"
+description = "Fetches and prints definitions for a given word"
+readme = "README.md"
+authors = [
+    { name = "Tommy", email = "tommy@nobody.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "pytest>=8.3.5",
+    "ruff>=0.11.7",
+]
+
+[project.urls]
+Repository = "https://github.com/sashi202/sas-dict"
+
+[project.scripts]
+sas-dict = "sas_dict.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

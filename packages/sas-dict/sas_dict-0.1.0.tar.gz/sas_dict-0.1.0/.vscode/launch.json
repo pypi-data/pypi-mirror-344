@@ -1,0 +1,12 @@
+{
+    "name": "Python: Debug Tests",
+    "type": "python",
+    "request": "launch",
+    "program": "${workspaceFolder}/.venv/Scripts/pytest.exe",
+    "args": ["tests/test_cli.py"],
+    "console": "integratedTerminal",
+    "configurations": [
+    
+    ],
+ 
+  }
