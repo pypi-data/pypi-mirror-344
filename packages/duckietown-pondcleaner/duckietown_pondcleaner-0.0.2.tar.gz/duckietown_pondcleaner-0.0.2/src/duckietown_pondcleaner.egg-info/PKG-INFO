@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: duckietown_pondcleaner
+Version: 0.0.2
+Home-page: https://github.com/EliasNotEliars/luna-python-project
+Author: Ilyas_Haji_Abdi
+Author-email: Ilyas.abdullahi12@gmail.com
+Requires-Dist: numpy
+Requires-Dist: opencv-python>=4.5.0
+Requires-Dist: rospkg
+Requires-Dist: duckietown-slimremote>=6.2.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: requires-dist
+
+
+duckietown_pondcleaner: A python package for the Luna project
+=============================================================
+
+
+This is a python package for the Luna project. It contains all the necessary
+functions and classes to run the project. It is a simple package that is easy to
+use and understand.
+

@@ -1,0 +1,4 @@
+numpy
+opencv-python>=4.5.0
+rospkg
+duckietown-slimremote>=6.2.6

@@ -1,0 +1,10 @@
+setup.py
+src/duckietown_pondcleaner/__init__.py
+src/duckietown_pondcleaner/demo.py
+src/duckietown_pondcleaner/pondcleaner.py
+src/duckietown_pondcleaner.egg-info/PKG-INFO
+src/duckietown_pondcleaner.egg-info/SOURCES.txt
+src/duckietown_pondcleaner.egg-info/dependency_links.txt
+src/duckietown_pondcleaner.egg-info/entry_points.txt
+src/duckietown_pondcleaner.egg-info/requires.txt
+src/duckietown_pondcleaner.egg-info/top_level.txt
