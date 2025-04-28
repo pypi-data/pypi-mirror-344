@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: mso_text_summarizer
+Version: 0.0.1
+Summary: Text summarization project SVD
+Author: Ivasiuk Mykhailo, Sofiia Popeniuk, Ostap Pavlyshyn
+Requires-Python: >=3.7
+Requires-Dist: nltk
+Requires-Dist: numpy
+Requires-Dist: datasets
+Requires-Dist: sumy
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

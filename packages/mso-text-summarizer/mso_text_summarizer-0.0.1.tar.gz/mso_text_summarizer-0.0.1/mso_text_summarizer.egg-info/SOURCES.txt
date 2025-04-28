@@ -1,0 +1,9 @@
+README.md
+setup.py
+mso_text_summarizer/__init__.py
+mso_text_summarizer/text_summarizer.py
+mso_text_summarizer.egg-info/PKG-INFO
+mso_text_summarizer.egg-info/SOURCES.txt
+mso_text_summarizer.egg-info/dependency_links.txt
+mso_text_summarizer.egg-info/requires.txt
+mso_text_summarizer.egg-info/top_level.txt
