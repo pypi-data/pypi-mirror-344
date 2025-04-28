@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: agentd
+Version: 0.1.0
+Summary: agent daemon
+License-File: LICENSE
+Requires-Python: >=3.13
+Requires-Dist: mcp-subscribe
+Requires-Dist: openai>=1.76.0
+Requires-Dist: pyyaml>=6.0.2
+Description-Content-Type: text/markdown
+
+# agentd
+
+view sample configs in the `config/` directory
+
+### to run:
+
+    uvx agentd config.yaml
