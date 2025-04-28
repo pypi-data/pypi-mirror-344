@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: NetHyTech-STT-Smruti-Nayak
+Version: 0.1
+Summary: This is a speech-to-text package created by Smruti Nayak
+Author: Smruti_Nayak
+Author-email: nayaksmrutiranjan38@gmail.com
+Requires-Dist: selenium
+Requires-Dist: webdriver-manager
+
