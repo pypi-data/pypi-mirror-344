@@ -1,0 +1,13 @@
+nibabel
+h5py
+pandas
+SimpleITK
+aenum
+scikit-image
+tqdm
+numpy
+onnxruntime
+
+[:platform_system == "Darwin" and platform_machine == "arm64"]
+numpy<2.0,>=1.21.6
+onnxruntime-silicon
