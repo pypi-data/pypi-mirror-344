@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: termigpt
+Version: 0.1.1
+Summary: 
+Author: urasvarolgunes
+Author-email: urasvarolgunes@gmail.com
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: openai (>=1.76.0,<2.0.0)
+Requires-Dist: pytest (>=8.3.5,<9.0.0)
+Description-Content-Type: text/markdown
+
+
