@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+wraplify/__main__.py
+wraplify/path.py
+wraplify.egg-info/PKG-INFO
+wraplify.egg-info/SOURCES.txt
+wraplify.egg-info/dependency_links.txt
+wraplify.egg-info/top_level.txt

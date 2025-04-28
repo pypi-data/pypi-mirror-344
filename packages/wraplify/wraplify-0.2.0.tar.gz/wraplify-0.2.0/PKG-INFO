@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: wraplify
+Version: 0.2.0
+Summary: Wraplify simplifies the process of isolating untrusted code by providing a user-friendly Python wrapper around bubblewrap
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
