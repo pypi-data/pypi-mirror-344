@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "djx-websocket"
+version = "0.2"
+description = ""
+authors = ["nope"]
+readme = "README.md"
+packages = [{ include = "djx_websocket" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+djangorestframework = "^3.14.0"
+channels = "^4.0.0"
+channels-redis = "^4.1.0"
+uvicorn = {extras = ["standard"], version = "^0.24.0.post1"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
