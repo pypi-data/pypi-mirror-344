@@ -1,0 +1,17 @@
+flespi_sdk/__init__.py,sha256=INx-TmKYpKi9SC0-UMqtqKwnMnHK88oXyvh3tTFY668,1462
+flespi_sdk/account.py,sha256=tu4JX4Qh8Sf25BbX4RMvXjWs5DJg2W_LeasaBSYzAzo,2774
+flespi_sdk/cli.py,sha256=6OcRQAu-LLFTYGGY_S0SNTXgHlazr3NaMDqPQ7QLg_E,1346
+flespi_sdk/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flespi_sdk/modules/flespi_session.py,sha256=TiEUVZMo-JpU7vPqnMhJJX47-kI6UMrDAlptSSpRzTo,682
+flespi_sdk/modules/item_with_metadata.py,sha256=_J1dvU_aFg6yTeiKFuQPNMFEZnFkP5Li6NePXpyqRzY,906
+flespi_sdk/modules/items_container.py,sha256=5c8ov35NQ8dVmDGpq68ROaVIj8VtySaE0Rlrk0JUsLc,1440
+flespi_sdk/modules/metadata/__init__.py,sha256=3-FNhSeWFQIlUZH8jnCAVbiJvQI7emAz3I8LRB92VPU,2792
+flespi_sdk/modules/mqtt/__init__.py,sha256=nLUQxrNpJ2E8l-OGyOAE-dfyOpQ4_-bjC-fkUEj_8As,2714
+flespi_sdk/modules/realms/__init__.py,sha256=U3nT0Zwz7Y6knmEsL3jDqxwRntM3GgmMqJUERCJJsTs,1063
+flespi_sdk/modules/realms/realm.py,sha256=TxYZpUJfKY3DnlUXzbu2OaY4nlfdA_PkVcW8N5tXNQc,633
+flespi_sdk/modules/realms/users/__init__.py,sha256=hHv5R_eySJ_ioQIfYjYHbnbcMm1NhSKBKBpsNILHfbE,1798
+flespi_sdk/modules/realms/users/user.py,sha256=Y6Z3WZuzyl9-IOvKl4_OkBXBT2nIiq8L_dWF6MhD-IY,1249
+flespi_sdk/modules/subaccounts/__init__.py,sha256=PhS91e9FoV3m6VkfrANoq0_Zf-v139VsShGBXoPaJ-I,1044
+flespi_sdk-0.1.2.dist-info/METADATA,sha256=Ij9JZs0jpNBmxRDfLLKwCrLJJOraIX_dgLxUZo23t1c,2267
+flespi_sdk-0.1.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+flespi_sdk-0.1.2.dist-info/RECORD,,
