@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+wheeledit/__init__.py
+wheeledit/__main__.py
+wheeledit/cli.py
+wheeledit/editor.py
+wheeledit.egg-info/PKG-INFO
+wheeledit.egg-info/SOURCES.txt
+wheeledit.egg-info/dependency_links.txt
+wheeledit.egg-info/entry_points.txt
+wheeledit.egg-info/top_level.txt
