@@ -1,0 +1,8 @@
+README.md
+export_to_onnx.py
+pyproject.toml
+o2_speechless.egg-info/PKG-INFO
+o2_speechless.egg-info/SOURCES.txt
+o2_speechless.egg-info/dependency_links.txt
+o2_speechless.egg-info/requires.txt
+o2_speechless.egg-info/top_level.txt
