@@ -1,0 +1,10 @@
+setup.py
+project_initializer/__init__.py
+project_initializer/initilizer.py
+project_initializer/utils.py
+project_initializer.egg-info/PKG-INFO
+project_initializer.egg-info/SOURCES.txt
+project_initializer.egg-info/dependency_links.txt
+project_initializer.egg-info/entry_points.txt
+project_initializer.egg-info/requires.txt
+project_initializer.egg-info/top_level.txt

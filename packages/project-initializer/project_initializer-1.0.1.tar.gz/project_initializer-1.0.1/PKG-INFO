@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: project-initializer
+Version: 1.0.1
+Home-page: https://github.com/Soulflys02/web-dev-framework
+Author: Vervloessem Lucas
+Author-email: lucas.vervloessem.atc@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Requires-Dist: questionary
+Requires-Dist: gitpython
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
