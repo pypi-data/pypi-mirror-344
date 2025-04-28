@@ -1,0 +1,2 @@
+[console_scripts]
+tthinker-run = orgami:codes
