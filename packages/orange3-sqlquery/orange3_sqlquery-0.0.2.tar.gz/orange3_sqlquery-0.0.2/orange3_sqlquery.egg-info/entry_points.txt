@@ -1,0 +1,8 @@
+[orange.canvas.help]
+html-index = orangecontrib.sqlquery.widgets:WIDGET_HELP_PATH
+
+[orange.widgets]
+sqlquery = orangecontrib.sqlquery.widgets
+
+[orange3.addon]
+orange3-sqlquery = orangecontrib.sqlquery
