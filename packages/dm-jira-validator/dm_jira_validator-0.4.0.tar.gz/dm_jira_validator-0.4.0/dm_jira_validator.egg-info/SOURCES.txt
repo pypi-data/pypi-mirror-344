@@ -1,0 +1,10 @@
+README.md
+setup.py
+dm_jira_validator/__init__.py
+dm_jira_validator/main.py
+dm_jira_validator.egg-info/PKG-INFO
+dm_jira_validator.egg-info/SOURCES.txt
+dm_jira_validator.egg-info/dependency_links.txt
+dm_jira_validator.egg-info/entry_points.txt
+dm_jira_validator.egg-info/requires.txt
+dm_jira_validator.egg-info/top_level.txt
