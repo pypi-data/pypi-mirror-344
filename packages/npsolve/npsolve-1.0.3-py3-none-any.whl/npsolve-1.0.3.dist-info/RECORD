@@ -1,0 +1,13 @@
+npsolve/__init__.py,sha256=FOxzwOlhqXpmXPlXiKXjRDNIpoR8Xwkf6kDmfoXUC0w,418
+npsolve/core.py,sha256=z2uLS68Za9CGPXPWFid6nDGKkNmZ3dmaw4nDwG_tCO4,15145
+npsolve/soft_functions.py,sha256=BZoUKHSup0-sQRueg383V1cvoaklcW0goJvsTq8vNBM,11076
+npsolve/solvers.py,sha256=h3dODCXYrmF8tU15J34-L74N53EBQuMmBJN_403jxh8,4225
+npsolve/legacy/__init__.py,sha256=U2ygbbkle9bfyH3hLqbvhsq2g8Fs-8XPglKQz0LjkqM,70
+npsolve/legacy/legacy_cache.py,sha256=luK-fkxQlW0iberySD_-03Sh4Mvz16eQlcRLIu8f7Vs,3755
+npsolve/legacy/legacy_core.py,sha256=-OUFlpXAyplsU_Awhj16OWsHGdsMChgOmfcb5fDhIBg,15883
+npsolve/legacy/legacy_solver.py,sha256=96v6ozxl98oLPiH-iY310MNonEX3H2CN2TrQbw-Lblk,6808
+npsolve/legacy/legacy_utils.py,sha256=IFI2mB9ycqB5ZtWhPrP0wKS6hGsYQC8Yi3hQN4aWsyU,5272
+npsolve-1.0.3.dist-info/METADATA,sha256=970G_AM8vYmlnjlJXL4RgU5YYTY-qgC6lWQutokbTFQ,10209
+npsolve-1.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+npsolve-1.0.3.dist-info/licenses/LICENSE,sha256=QmxOP9csg_fTu_u1KtbIczkjRTHUeXkKao4OZP5GiQg,1087
+npsolve-1.0.3.dist-info/RECORD,,
