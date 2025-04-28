@@ -1,0 +1,12 @@
+dl1_data_handler/__init__.py,sha256=6ATsHf6W7a8RDnl5SST0OUF0M1cRHpcYH_ko6nVn6vk,84
+dl1_data_handler/_version.py,sha256=6QKDjlIr7El1Ase-jIXS_RtzQYgbIrjVxs-ys6ZXmag,513
+dl1_data_handler/conftest.py,sha256=zARZ3IcAY4GX9EOHGKyvI-J0mmMrHeva9lEEGo14ukk,1778
+dl1_data_handler/image_mapper.py,sha256=PDLcShUTF3yCgxbs_74OM54JOJtaBJWaOs0omRwAcNc,49412
+dl1_data_handler/reader.py,sha256=lFxz6JuLMI_Umhq7UNHEnp4OrGif2OXjwa8JaDPkOBY,77623
+dl1_data_handler/tests/test_reader.py,sha256=alDigzhY6V3T4knS9uZLt6Bpir4eotyZFY3eN5u2KLw,1609
+dl1_data_handler-0.14.3.dist-info/licenses/AUTHORS,sha256=MHc4Jy4OBGjX2Y7PGDizAkbqmz31nxH4rU69_sY7evk,204
+dl1_data_handler-0.14.3.dist-info/licenses/LICENSE,sha256=GcHTING50bIsYjXuk-z_xblyQoQKNTKitYO6H2Z8avM,1074
+dl1_data_handler-0.14.3.dist-info/METADATA,sha256=1hS06n-bRogt4gwr0XWgfXOTjkjOwg-tLny66a9NuGk,4190
+dl1_data_handler-0.14.3.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+dl1_data_handler-0.14.3.dist-info/top_level.txt,sha256=tlAVWPeIwY77GACcETqpSGieU5FdFS5dDywrS_XsATk,17
+dl1_data_handler-0.14.3.dist-info/RECORD,,
