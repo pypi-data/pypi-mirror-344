@@ -1,0 +1,12 @@
+surfmesh/__init__.py,sha256=Gnso08WMAcbE6Qiv6-YSMJKP8J10ON_4vk70e6osUcY,942
+surfmesh/cuboid.py,sha256=pZaNJ79iVVJER4ZmXPrMWq6syhNqq2eEt8k3mZZOMBo,4796
+surfmesh/cylinder.py,sha256=hnj8SIx9FgdEuzLn6IizqYrt4HQQNgprFvCboluZNw0,5354
+surfmesh/disk.py,sha256=ulxqL6zFSnojhujpbv-y35tfELTYPQrjd_cFIcENsFY,6083
+surfmesh/edge.py,sha256=crFSjJnodJdWbe214v35cQDYwS6F1GBxjDN5c_3EzqQ,6257
+surfmesh/revolve.py,sha256=x6eSYTOG0zffJxBkhuOC-1BdYr1ffq6Uip6pBdYTXXk,4052
+surfmesh/sphere.py,sha256=MQK7CmRJETFyeBpUqR9Ve7kEwlxR1BE3BrCb8fKZ0EI,2972
+surfmesh-0.2.6.dist-info/METADATA,sha256=FIj1O6xRUx6_vDEHE2XT1VBNVVbuf4ldHIUbamjTSiI,12294
+surfmesh-0.2.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+surfmesh-0.2.6.dist-info/entry_points.txt,sha256=ymzQLFvXXbTnD4DNkOyYppIRMzeuN34EFjxoHfBpeVI,43
+surfmesh-0.2.6.dist-info/licenses/LICENSE.txt,sha256=Tz6ULhFJ2P4LJvF-fyrKu2tlIgJ_i_6wAb1g3PyQ8ZE,1078
+surfmesh-0.2.6.dist-info/RECORD,,
