@@ -1,0 +1,2 @@
+[console_scripts]
+stage = main:main
