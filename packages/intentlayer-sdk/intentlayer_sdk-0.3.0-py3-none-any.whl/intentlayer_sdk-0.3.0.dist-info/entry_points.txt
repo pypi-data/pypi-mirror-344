@@ -1,0 +1,3 @@
+[console_scripts]
+intent-cli=intent_cli.__main__:app
+
