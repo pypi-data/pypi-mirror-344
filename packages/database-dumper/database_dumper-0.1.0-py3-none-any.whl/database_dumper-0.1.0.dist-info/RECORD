@@ -1,0 +1,11 @@
+dumper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dumper/config.py,sha256=KCNGQ1uOuxz2JrHFeJhdAzqtpzVFw8HtvpLk_rJJLns,2083
+dumper/db_inspector.py,sha256=s40w_DELs7Y7xjHrfk3R7TSZ1fwD-5GMD990u8sP9T4,379
+dumper/dump.py,sha256=4XK0vZAI_Wp7Ptvtf86vHJI5amkNHZey66ZUDbPXCfQ,1624
+dumper/main.py,sha256=KGWgzLav6ZNyMoAK0RBtAPjdHRAAwSqVuCm67drkbp0,2426
+dumper/models.py,sha256=92VXYmZmgEHzSjiEv92U3Qjw4gB1QpeifynIpcYnEdA,3626
+dumper/utils.py,sha256=8Do1SrHB_ZpFni6WAQV2-E6LqaIRImgzRGkygUuRXlQ,2307
+database_dumper-0.1.0.dist-info/METADATA,sha256=sve6yb6W2ar8nQcYBV85L3Nh42yTE0_tzVsHO0q5jDI,338
+database_dumper-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+database_dumper-0.1.0.dist-info/entry_points.txt,sha256=u5eEJGOK4zfAH7uvkx2ueYGDyRSpVUVCSNGZ1AyHD0I,44
+database_dumper-0.1.0.dist-info/RECORD,,
