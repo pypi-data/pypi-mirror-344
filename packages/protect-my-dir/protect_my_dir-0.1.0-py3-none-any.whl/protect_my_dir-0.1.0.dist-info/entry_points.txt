@@ -1,0 +1,2 @@
+[console_scripts]
+protect-my-dir = protect_my_dir.main:main
