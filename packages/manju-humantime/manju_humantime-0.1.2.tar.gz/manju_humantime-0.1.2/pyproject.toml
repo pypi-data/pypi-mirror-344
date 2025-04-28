@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "manju-humantime"
+version = "0.1.2"
+description = "A simple utility to humanize time differences."
+authors = [
+    { name="Manjunathgouda MH", email="manjumh021@gmail.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = [
+    # Add any runtime dependencies here, like "requests>=2.0"
+]
+requires-python = ">=3.7"
+
+[project.urls]
+Homepage = "https://github.com/manjumh021/manju-humantime"
+Repository = "https://github.com/manjumh021/manju-humantime"
