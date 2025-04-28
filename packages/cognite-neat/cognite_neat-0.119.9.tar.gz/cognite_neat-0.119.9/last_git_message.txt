@@ -1,0 +1,21 @@
+Fix bug of reading In filter from CDF to NEAT (#1100)
+
+# Description
+
+`IN` filter was read as `NodeType` by default from CDF, and reading did
+shallow check of the actual filter content. As result, `IN` filters,
+which for example performed checks if a view property value is in the
+range of values, was mistakenly read as `NodeType` instead of
+`RawFilter`. This led to errors in importing data model from CDF.
+
+## Bump
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+## Changelog
+### Fixed
+
+- Fixed bug with reading RawFilters from CDF, especially `IN` filters
+which are not `NodeType` filters
