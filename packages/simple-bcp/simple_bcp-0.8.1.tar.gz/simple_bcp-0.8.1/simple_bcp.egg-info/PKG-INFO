@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: simple-bcp
+Version: 0.8.1
+Summary: A Simple yet powerfult bcp wrapper
+Author-email: Your Name <your.email@example.com>
+License-Expression: MIT
+Requires-Python: >=3.10
+Requires-Dist: packaging~=25.0

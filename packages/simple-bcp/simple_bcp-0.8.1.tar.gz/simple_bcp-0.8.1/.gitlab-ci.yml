@@ -1,0 +1,80 @@
+workflow:
+  rules:
+    - if: '$CI_COMMIT_BRANCH'
+      when: always
+    - when: never
+
+stages:
+  - tag
+  - build
+  - test
+  - publish
+
+tag:
+  image: python:3.13
+  stage: tag
+  script:
+    - python -m pip install semver
+    - git fetch --tags origin  # make sure tags are available
+    - git fetch origin main    # fetch main branch for diffing
+    - NEXT_VERSION=`python get_next_tag.py`
+    - echo $NEXT_VERSION
+    - git config --global user.email "ci@example.com"
+    - git config --global user.name "CI Bot"
+    - git tag ${NEXT_VERSION}
+    - git push https://git:${PUSH_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git --tags
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "develop" || $CI_COMMIT_BRANCH == "main"'
+
+build:
+  image: python:3.13
+  stage: build
+  script:
+    - pip install build
+    - python -m build
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 hour
+
+test:
+  image: python:3.13
+  stage: test
+  needs:
+    - build
+  before_script:
+    - curl https://packages.microsoft.com/keys/microsoft.asc | tee /etc/apt/trusted.gpg.d/microsoft.asc
+    - curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list | tee /etc/apt/sources.list.d/mssql-release.list
+    - apt-get update
+    - ACCEPT_EULA=Y apt-get -y install mssql-tools18 unixodbc-dev
+    - export PATH="${PATH}:/opt/mssql-tools18/bin"
+    - pip install --upgrade pip
+    - pip install dist/*.whl
+    - pip install pytest
+    - pip install -r test-requirements.txt
+  script:
+    - pytest tests/ --junitxml=test-results.xml
+  artifacts:
+    when: always
+    reports:
+      junit: test-results.xml
+  allow_failure: false
+
+pypi-upload:
+  image: python:3.13
+  stage: publish
+  variables:
+    TWINE_USERNAME:
+      value: __token__
+    TWINE_PASSWORD:
+      value: $PYPI_PUSH_TOKEN
+  before_script:
+    - pip install --upgrade pip
+  script:
+    - python -m pip install --upgrade twine
+    - twine upload dist/*
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  needs:
+    - build
+    - test
