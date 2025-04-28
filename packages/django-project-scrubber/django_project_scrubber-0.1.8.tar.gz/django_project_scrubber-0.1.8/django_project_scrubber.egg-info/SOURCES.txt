@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+DjangoScrubber/DjangoScrubber.py
+DjangoScrubber/__init__.py
+django_project_scrubber.egg-info/PKG-INFO
+django_project_scrubber.egg-info/SOURCES.txt
+django_project_scrubber.egg-info/dependency_links.txt
+django_project_scrubber.egg-info/entry_points.txt
+django_project_scrubber.egg-info/requires.txt
+django_project_scrubber.egg-info/top_level.txt
