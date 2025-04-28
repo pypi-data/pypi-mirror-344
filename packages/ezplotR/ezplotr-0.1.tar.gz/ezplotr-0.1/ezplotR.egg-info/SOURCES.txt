@@ -1,0 +1,17 @@
+setup.py
+ezplotR/__init__.py
+ezplotR/main.py
+ezplotR.egg-info/PKG-INFO
+ezplotR.egg-info/SOURCES.txt
+ezplotR.egg-info/dependency_links.txt
+ezplotR.egg-info/top_level.txt
+ezplotR/data/exp_1.py
+ezplotR/data/exp_10.py
+ezplotR/data/exp_2.py
+ezplotR/data/exp_3.py
+ezplotR/data/exp_4.py
+ezplotR/data/exp_5.py
+ezplotR/data/exp_6.py
+ezplotR/data/exp_7.py
+ezplotR/data/exp_8.py
+ezplotR/data/exp_9.py
