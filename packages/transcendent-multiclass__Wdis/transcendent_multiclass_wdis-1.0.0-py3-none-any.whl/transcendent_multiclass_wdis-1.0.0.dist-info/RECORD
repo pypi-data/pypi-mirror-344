@@ -1,0 +1,13 @@
+transcendent/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+transcendent/calibration.py,sha256=a7MunMmWLEbpmjiBL28V7I5p1EzXcizNsBwgN-QuMyM,11939
+transcendent/classifiers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+transcendent/classifiers/ncm_classifier.py,sha256=LYJByuu9YheUDDhTuSYmcuX4yFlUgQgz417k7RQT0nk,1798
+transcendent/classifiers/random_forest.py,sha256=G2tzRL1DM-XjXdnA7kNLV3CK-LGsD56MIwiZvBOLjy4,3424
+transcendent/data.py,sha256=p0GzwHCszJy5NlcPH6zCs2Hm8Z7UiK23zb9UpCX8ixs,4728
+transcendent/scores.py,sha256=FzsLAWchMD170tOkN9rlLdlisBK6QfxPCepsIgci9Pw,8359
+transcendent/thresholding.py,sha256=a-hH56Yh-PS2lKotNZpyQE8ciwkKN3QTIum9s4qgD8A,41982
+transcendent/utils.py,sha256=-gEMDsYMOK_PMmIVZud2FrYAXdD-wTFXN3Gn7JQjH1E,5938
+transcendent_multiclass_wdis-1.0.0.dist-info/LICENSE,sha256=FBbL5HC2ykTaPJlQV73tssk3d4PiJbrgN1r6Qy2aAXM,1554
+transcendent_multiclass_wdis-1.0.0.dist-info/METADATA,sha256=cKu56mrtk1loq0aKMYcpRmKjTl6Xc1fuBjQKAUq0pNM,8211
+transcendent_multiclass_wdis-1.0.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+transcendent_multiclass_wdis-1.0.0.dist-info/RECORD,,
