@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: bsky2llm
+Version: 0.1.0
+Summary: A Python module for analyzing Bluesky posts and threads using AI models
+Home-page: https://github.com/circularmachines/bsky2llm
+Author: Johan Lagerlöf
+Author-email: laagrrluv@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests==2.32.3
+Requires-Dist: python-dotenv==1.1.0
+Requires-Dist: openai==1.76.0
+Requires-Dist: opencv-python==4.11.0.86
+Requires-Dist: streamlink==7.2.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+# bsky2llm
+
+A Python module for analyzing Bluesky posts and threads using AI models.
+
+## Installation
+
+```bash
+pip install bsky2llm
+```
+
+## Usage
+
+```python
+from bsky2llm import process_post
+
+# Process a Bluesky post and get AI analysis
+result = process_post("at://did:plc:12345/app.bsky.feed.post/12345")
+print(result)
+```
+
+See GitHub repository for more details: https://github.com/circularmachines/bsky2llm
