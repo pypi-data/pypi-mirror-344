@@ -1,0 +1,8 @@
+polars>=1.28.0
+polars-ols>=0.3.0
+numpy
+numba
+pandas
+
+[talib]
+TA-Lib
