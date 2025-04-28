@@ -1,0 +1,15 @@
+sage_wheels/bin/cubex,sha256=glDedY2rowEbg12KwZdi8ux7TrvU1HW41cyQ-kPp8oU,249448
+sage_wheels/bin/cu2,sha256=Xmc7QxTLYiURETE9WC1rU1oOe9sGwV8-kX1uK-LAT_Q,184144
+sage_wheels/bin/mcube,sha256=ka6tG9r9w1GjwE7osB85GHRCjAOHsR-fUcnOjyLw88s,289800
+sage_wheels/bin/optimal,sha256=wFvBJaYlPVK0u7Ba4tvMNgo0MlkIow34TiABnb8IqsQ,104232
+sage_wheels/bin/dikcube,sha256=DT_nY9DODHftXFeR8TRWMcDu-h3LELX4NZEdnWkhFXg,69208
+sage_wheels/bin/size222,sha256=Fz1n0lBiLVpYlf_O3ylhwOFODbVwVhj_xTx5-wB5KFY,50856
+sage/all__sagemath_rubiks.py,sha256=ble3nO7BjKYkmj9HTj63equMCBSZ3XvXUc0mYhh0i4E,86
+sage/libs/all__sagemath_rubiks.py,sha256=NwzyxDmQ4ARkr80f2jCvoIx0PgxV4ST30myyuf6PIC8,45
+sage/libs/rubik.cpython-312-darwin.so,sha256=KY9X9jZn4FsijfLATvLrlNnnggUYVEbvXaA2GSGgajU,55448
+sage/interfaces/all__sagemath_rubiks.py,sha256=C8lJV2QqUEHE1a50uaQHU7lCVmgfCQ0Io4ZP9_S2J5o,169
+sage/interfaces/rubik.py,sha256=V5T8iXOcrnYIhOCo_JPwmrF01IbpeipAoNWHcHHx6zQ,11794
+passagemath_rubiks-10.5.27.dist-info/RECORD,,
+passagemath_rubiks-10.5.27.dist-info/WHEEL,sha256=czuU-a4AygVBwu0_0kHdwSAcpGkvzCzftoVV6XyA-TE,109
+passagemath_rubiks-10.5.27.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_rubiks-10.5.27.dist-info/METADATA,sha256=w8kgBPP3MqsnvKs3vz2F8xn5vPHIXpEuPzflKiDjH3w,4768
