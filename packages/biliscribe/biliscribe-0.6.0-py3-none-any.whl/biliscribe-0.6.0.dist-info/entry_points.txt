@@ -1,0 +1,3 @@
+[console_scripts]
+biliscribe=biliscribe.server:main
+
