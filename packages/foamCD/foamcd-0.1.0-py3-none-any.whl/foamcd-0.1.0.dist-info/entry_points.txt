@@ -1,0 +1,3 @@
+[console_scripts]
+foamcd-markdown = foamcd.markdown:main
+foamcd-parse = foamcd.parse:main
