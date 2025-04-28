@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: personal-web-utility
+Version: 0.0.20
+Summary: Personal web application utility
+Home-page: https://gitlab.com/mihael97/web-utility
+Author: Mihael Macuka
+Author-email: mihaelmacuka2@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+## Utility package
+
+Utility package for common dependencies for web developing of personal web applications
