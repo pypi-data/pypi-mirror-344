@@ -1,0 +1,3 @@
+graft frontend/build
+recursive-include mas_cookie_manager/build *
+    
