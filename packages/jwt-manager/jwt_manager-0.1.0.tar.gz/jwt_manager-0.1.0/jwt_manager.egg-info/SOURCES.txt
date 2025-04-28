@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.py
+jwt_manager/__init__.py
+jwt_manager/exceptions.py
+jwt_manager/jwt_manager.py
+jwt_manager.egg-info/PKG-INFO
+jwt_manager.egg-info/SOURCES.txt
+jwt_manager.egg-info/dependency_links.txt
+jwt_manager.egg-info/requires.txt
+jwt_manager.egg-info/top_level.txt
+tests/test_jwt_manager.py
