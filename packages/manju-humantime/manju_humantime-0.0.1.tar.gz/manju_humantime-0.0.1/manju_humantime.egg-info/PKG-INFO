@@ -1,0 +1,111 @@
+Metadata-Version: 2.4
+Name: manju-humantime
+Version: 0.0.1
+Summary: A simple utility to humanize time differences.
+Home-page: https://github.com/manjumh021/manju-humantime
+Author: Manjunathgouda MH
+Author-email: Manjunathgouda MH <manjumh021@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/manjumh021/manju-humantime
+Project-URL: Repository, https://github.com/manjumh021/manju-humantime
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# 📦 manju-humantime
+
+[![PyPI version](https://badge.fury.io/py/manju-humantime.svg)](https://pypi.org/project/manju-humantime/)
+[![Python version](https://img.shields.io/pypi/pyversions/manju-humantime.svg)](https://pypi.org/project/manju-humantime/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+> A simple Python utility to convert time differences (in seconds) into a human-readable format.
+
+---
+
+# 📦 manju-humantime
+
+> A simple Python utility to convert time differences (in seconds) into a human-readable format.
+
+---
+
+## ✨ Features
+
+- Convert seconds into a friendly text like `in 5 minutes`, `2 hours ago`, etc.
+- Handles both past and future times.
+- Lightweight and easy to use.
+- No external dependencies.
+
+---
+
+## 🛠 Installation
+
+You can install manju-humantime directly from PyPI:
+
+```bash
+pip install manju-humantime
+```
+
+or if you want to install from TestPyPI (for testing):
+
+```bash
+pip install --index-url https://test.pypi.org/simple/ manju-humantime
+```
+
+---
+
+## 🚀 Usage
+
+```python
+from manju_humantime import humanize_time_difference
+
+print(humanize_time_difference(45))          # in 45 seconds
+print(humanize_time_difference(3600))         # in 1 hour
+print(humanize_time_difference(-86400))       # 1 day ago
+print(humanize_time_difference(604800))       # in 1 week
+```
+
+---
+
+## 📚 Example Output
+
+| Seconds         | Output          |
+|-----------------|------------------|
+| `45`            | in 45 seconds     |
+| `3600`          | in 1 hour         |
+| `-7200`         | 2 hours ago       |
+| `86400`         | in 1 day          |
+| `-604800`       | 1 week ago        |
+
+---
+
+## 🔥 Future Enhancements
+
+- Add support for months and years.
+- Accept two `datetime` objects instead of just seconds.
+- Multi-language support (Kannada, Hindi, etc.).
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome!  
+For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgements
+
+Thanks to Python community for inspiration!  
+Made with ❤️ by **Manjunathgouda MH**.
+
+---
