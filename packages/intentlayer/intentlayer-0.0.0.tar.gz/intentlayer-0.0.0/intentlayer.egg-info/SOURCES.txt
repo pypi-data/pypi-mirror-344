@@ -1,0 +1,6 @@
+pyproject.toml
+intentlayer/__init__.py
+intentlayer.egg-info/PKG-INFO
+intentlayer.egg-info/SOURCES.txt
+intentlayer.egg-info/dependency_links.txt
+intentlayer.egg-info/top_level.txt

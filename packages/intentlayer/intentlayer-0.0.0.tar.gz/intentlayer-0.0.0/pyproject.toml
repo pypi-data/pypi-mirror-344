@@ -1,0 +1,11 @@
+[tool.poetry]
+name        = "intentlayer"
+version     = "0.1.0"
+description = "Meta-package that installs intentlayer-sdk"
+authors     = ["IntentLayer <dev@intentlayer.io>"]
+license     = "Apache-2.0"
+readme      = "README.md"
+
+[tool.poetry.dependencies]
+python          = "^3.9"
+intentlayer-sdk = "^0.1.0"
