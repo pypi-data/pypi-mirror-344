@@ -1,0 +1,156 @@
+Metadata-Version: 2.4
+Name: pinetodo
+Version: 1.0.1
+Summary: `PineToDo` is a tool with [CLI](https://id.wikipedia.org/wiki/Command_Line_Interface) or `Command_Line_Interface` based, designed to create and manage tasks in todo style
+Home-page: https://github.com/openpineapletools/pinetodo
+Author: openpineaplehub
+Author-email: openpineaple@gmail.com
+Project-URL: Bug Tracker, https://github.com/openpineapletools/pinetodo/issues
+Project-URL: Request Features, https://github.com/openpineapletools/pinetodo/pulls
+Project-URL: Documentation Pinetodo, https://openpineapletools.github.io/pinetodo/#/
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: json5
+Requires-Dist: requests
+Requires-Dist: rich
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Pinetodo
+
+> Simple Todo List with Command Line Interface System 
+
+<p align="center">
+<a href="https://openpineapletools.github.io/pinetodo/">
+  <img src="https://raw.githubusercontent.com/openpineapletools/pinetodo/refs/heads/dev/assets/img/logo/pinetodo.svg" alt="pinetodo-icon" width="100" height="auto">
+</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/v/release/openpineapletools/pinetodo?color=green&label=Version" alt="Version">
+  <img src="https://img.shields.io/github/license/openpineapletools/pinetodo?color=blue" alt="License">
+  <img src="https://img.shields.io/github/workflow/status/openpineapletools/pinetodo/CI?label=Build&logo=github" alt="Build Status">
+  <img src="https://img.shields.io/codecov/c/github/openpineapletools/pinetodo?logo=codecov&label=Coverage" alt="Coverage">
+  <img src="https://img.shields.io/pypi/pyversions/pinetodo?logo=python" alt="Python Version">
+  <img src="https://img.shields.io/pypi/dm/pinetodo?logo=pypi" alt="Downloads">
+  <img src="https://img.shields.io/github/commit-activity/m/openpineapletools/pinetodo?label=Commits" alt="Commit Activity">
+  <img src="https://img.shields.io/github/contributors/openpineapletools/pinetodo?color=blue&logo=github" alt="Contributors">
+  <img src="https://img.shields.io/github/issues/openpineapletools/pinetodo?logo=github" alt="Issues">
+  <img src="https://img.shields.io/github/forks/openpineapletools/pinetodo?logo=github" alt="Forks">
+</p>
+
+---
+
+## Introduction
+
+Pinetodo is a command-line based to-do list manager designed to help users organize tasks efficiently. With a focus on simplicity and speed, this tool is ideal for those who prefer working directly from the command line. It is lightweight, easy to use, and free to modify since it is open source.
+
+Developed and released by [openpineapletools](https://github.com/openpineapletools), this tool allows users to create and manage task lists quickly and easily. It is designed to run locally, with no data collected or shared.
+
+## Installation
+
+Pinetodo can be installed through multiple methods. You can select the method that best fits your system and preferences:
+
+- [ ] npm
+- [ ] yarn
+- [ ] bun
+- [ ] pnpm
+- [x] pip
+- [x] GitHub
+- [x] auto-setup.exe
+- [x] zip
+- [x] tar.gz
+- [x] whl
+
+> **Note**: We may release additional installation options in the future, including support for `npm`, `yarn`, `bun`, and `pnpm`.
+
+For detailed installation instructions, please refer to the [installation guide](./instalation.md).
+
+---
+
+## Features
+
+- **Create Todo Lists**: Easily create and manage your to-do lists.
+- **Task Management**: Add, list, delete, and update tasks directly from the command line.
+- **Local Storage**: All data is stored locally and is not shared or uploaded to any servers.
+- **Simple and Lightweight**: The interface is minimalistic and designed to be easy to use for quick task management.
+
+---
+
+## Usage
+
+### Commands
+
+Here are some of the basic commands for using Pinetodo:
+
+```sh
+usage: pinetodo [-h] [-v] {readocs,add,list,delete,done,todo,subtask,edit,search,short,stats,import,export} ...
+
+positional arguments:
+  {readocs,add,list,delete,done,todo,subtask,edit,search,short,stats,import,export}
+                        Available commands
+    readocs             Show PineToDo documentation
+    add                 Add new task
+    list                Show all tasks
+    delete              Delete task or subtask by ID
+    done                Mark a task as done by ID
+    todo                Mark a task back to todo by ID
+    subtask             Add subtask to a task
+    edit                Edit a task by ID
+    search              Search for tasks by title and status
+    short               Sort and display tasks
+    stats               Show task statistics
+    import              Import tasks database
+    export              Export tasks database
+
+options:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+```
+
+For further information on available commands, run:
+
+```bash
+pinetodo -h
+```
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Contributing
+
+We welcome contributions to improve this project. If you would like to contribute, please fork the repository and submit a pull request. For more details on how to contribute, check out the [contributing guide](CONTRIBUTORS.md).
+
+---
+
+## Support
+
+If you encounter any issues or have questions, please check the [FAQ](FAQ.md) or open an issue on GitHub.
+
+---
+
+## Acknowledgements
+
+- Thanks to the open-source community for their contributions and support.
