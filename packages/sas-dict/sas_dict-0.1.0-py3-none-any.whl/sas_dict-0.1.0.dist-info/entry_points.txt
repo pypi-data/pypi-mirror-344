@@ -1,0 +1,2 @@
+[console_scripts]
+sas-dict = sas_dict.cli:main
