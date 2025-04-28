@@ -1,0 +1,15 @@
+fastrtc_jp/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+fastrtc_jp/speech_to_text/mlx_whisper.py,sha256=KpSQEftZ2oKXQBSkDjZQ0fG-pZ7eWSD0RMOOv3aJ2Wg,2526
+fastrtc_jp/speech_to_text/sr_google.py,sha256=eHoZM0jZcr_EhDcsdrkUzZP7guQ98ZmHSL5rrZldR-0,1707
+fastrtc_jp/speech_to_text/util.py,sha256=WtiPoRa32HzhRe7IKwZvYPvl3X94kHqfIR1HtsP5w7M,1250
+fastrtc_jp/speech_to_text/vosk.py,sha256=W7hNI-jlBOPQGf7mXHikrdnQ8xhzZwAsvPCZdoH3UwI,1119
+fastrtc_jp/text_to_speech/gtts.py,sha256=Oc9xWVnJMPEEfDxwNMZ05aUf-hVo-ljo-4IecMvvMP8,3050
+fastrtc_jp/text_to_speech/style_bert_vits2.py,sha256=WMyVHQo6w0QrDSNIUWMLd-nzHdg5LhAG6O_rSkEXadU,3176
+fastrtc_jp/text_to_speech/util.py,sha256=bjKkzSE10rn1PvI2UnOiQ6cGBvNwJGcwpyEjBGOJcG0,1982
+fastrtc_jp/text_to_speech/voicevox.py,sha256=iY1wcfgQhjtop41jeuUcNJcgzBGtC4gRnd9JAvoR-O0,4544
+fastrtc_jp/utils/util.py,sha256=aUgGv0jmSMV4lTUJrd4UkXk7GHRaT1JddO37ng-EeoY,1142
+fastrtc_jp-0.1.2.dist-info/licenses/LICENSE,sha256=0evMsQdsupRU2IlFCV1rYEdRMkAiWS1k9NEpcOtlTPg,1071
+fastrtc_jp-0.1.2.dist-info/METADATA,sha256=Z_HMIH4RelmtcpvSvXPmtogXdQCX8jxcqdKXSBc0kpA,12791
+fastrtc_jp-0.1.2.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+fastrtc_jp-0.1.2.dist-info/top_level.txt,sha256=CCjPjoq4JGJ7DN5AepoQK0ZOck1tC_vgE4ch3G-In08,11
+fastrtc_jp-0.1.2.dist-info/RECORD,,
