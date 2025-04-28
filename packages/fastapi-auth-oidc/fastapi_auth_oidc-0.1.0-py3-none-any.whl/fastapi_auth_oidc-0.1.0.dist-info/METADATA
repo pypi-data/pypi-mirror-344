@@ -1,0 +1,98 @@
+Metadata-Version: 2.4
+Name: fastapi_auth_oidc
+Version: 0.1.0
+Summary: FastAPI Auth OpenID Connect
+Author-email: "DYAKOV.SPACE" <admin@dyakov.space>, Roman Dyakov <roman@dyakov.space>
+License: BSD 3-Clause
+Project-URL: Homepage, https://git.dyakov.space/dyakovri/fastapi-auth-oidc
+Project-URL: Documentation, https://git.dyakov.space/dyakovri/fastapi-auth-oidc/wiki
+Project-URL: Repository, https://git.dyakov.space/dyakovri/fastapi-auth-oidc
+Project-URL: Issues, https://git.dyakov.space/dyakovri/fastapi-auth-oidc/issues
+Project-URL: Changelog, https://git.dyakov.space/dyakovri/fastapi-auth-oidc/releases
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: fastapi
+Requires-Dist: pydantic-settings
+Requires-Dist: requests
+Requires-Dist: cryptography
+Requires-Dist: python-jose[cryptography]
+Provides-Extra: style
+Requires-Dist: black; extra == "style"
+Requires-Dist: isort; extra == "style"
+Requires-Dist: pydocstyle; extra == "style"
+Requires-Dist: autoflake; extra == "style"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-mock; extra == "test"
+Requires-Dist: httpx; extra == "test"
+Dynamic: license-file
+
+# FastAPI OIDC Security
+
+This library allows your server-side application to check credentials with ease using OpenID Connect token flows. Use it with Firebase, Keycloak, Authentik or other OIDC providers.
+
+
+## Simple usage
+
+You should provide OIDC configuration to the lib with one of the following ways:
+
+1. Environment variables
+
+    ```env
+    OIDC_CONFIGURATION_URI=https://example.com/.well-known/openid-configuration
+    ```
+
+2. Programmatically (use this method if you want several auth providers)
+
+    Create python file with base configuration (e.g. `auth.py`):
+
+    ```python
+    from fastapi_auth_oidc import OIDCAuthFactory
+
+    OIDCAuth = OIDCAuthFactory(configuration_uri='https://example.com/.well-known/openid-configuration')
+    ```
+
+Then use factory in your handlers
+
+```python
+from fastapi_auth_oidc import OIDCAuth  # if you use env vars
+# from .auth import OIDCAuth  # if you use programmatically configured factory
+from fastapi import FastAPI
+
+
+app = FastAPI()
+
+@app.get("/")
+def read_root(user: Annotated[dict[str, Any], Depends(OIDCAuth())]):
+    return user
+```
+
+
+## Advanced configuration
+
+You can customize various settings in your (default) factory and in each instance
+
+
+### Factory settings
+
+| Env name               | Factory arg name  | Default value            | Type         | Comment                                                                      |
+| ---------------------- | ----------------- | ------------------------ | ------------ | ---------------------------------------------------------------------------- |
+| OIDC_CONFIGURATION_URI | configuration_uri | -                        | String (url) | Fetched data will be named `config` further                                  |
+| OIDC_JWKS_URI          | jwks_uri          | `config["jwks_uri"]`     | String (url) | Shoud be provided if no `jwks_uri` in configuration from `configuration_uri` |
+| OIDC_USERINFO_URI      | userinfo_uri      | `config["userinfo_uri"]` | String (url) | URI to fetch user info in JWT or JSON format                                 |
+| OIDC_ISSUER            | issuer            | `config["issuer"]`       | String       | If no `issuer` provided, check will be skipped                               |
+
+
+### Provider settings
+
+| Provider arg name | Default value | Type | Comment                                                                                               |
+| ----------------- | ------------- | ---- | ----------------------------------------------------------------------------------------------------- |
+| auto_error        | `True`        | Bool | If no credentials or credentials wrong, `UnauthenticatedException` will be thrown                     |
+| force_check       | `False`       | Bool | Will check token on server for additional security, otherwise will check locally                      |
+| fetch_userdata    | `False`       | Bool | If `fetch_userdata == True` and `userinfo_endpoint` provided, will return data from userdata endpoint |
