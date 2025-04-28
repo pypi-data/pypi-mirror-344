@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pylenm"
+version = "2.7.3"  # <-- Replace manually when needed
+description = "This package aims to provide machine learning (ML) functions for performing comprehensive soil and groundwater data analysis, and for supporting the establishment of effective long-term monitoring."
+readme = "README.md"
+requires-python = ">=3.5"
+license = { text = "MIT" }
+authors = [
+    { name = "Haokai Zhao", email = "hkzhao7@mit.edu" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+dependencies = [
+    "markdown",
+    "pandas",
+    "openpyxl>=2.6.0",
+    "pyproj>=3.0.1",
+    "rasterio",
+    "numpy",
+    "seaborn",
+    "matplotlib",
+    "statsmodels",
+    "scipy",
+    "pyproj",
+    "datetime",
+    "scikit-learn>=0.24.1",
+    "supersmoother",
+    "ipyleaflet>=0.13.0",
+    "ipywidgets>=7.5.0",
+    "jupyter"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/hkzhao7/pylenm"
+"Bug Tracker" = "https://github.com/hkzhao7/pylenm/issues"
+"Documentation" = "https://pylenm.readthedocs.io/"
+"Source" = "https://github.com/hkzhao7/pylenm"
+
+[tool.setuptools]
+license-files = ["LICENSE"]
