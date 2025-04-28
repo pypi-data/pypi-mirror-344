@@ -1,0 +1,6 @@
+networkx
+matplotlib
+plotly
+dash>=2.0.0
+dash-cytoscape
+pandas
