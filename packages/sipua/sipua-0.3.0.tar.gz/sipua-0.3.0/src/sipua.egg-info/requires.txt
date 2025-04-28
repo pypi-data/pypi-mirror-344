@@ -1,0 +1,9 @@
+sipmessage
+websockets
+
+[dev]
+check-manifest
+coverage
+mypy
+pyroma
+ruff
