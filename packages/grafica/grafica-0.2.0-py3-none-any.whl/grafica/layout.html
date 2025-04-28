@@ -1,0 +1,32 @@
+{# General layout extending basic template. #}
+{%- extends "basic/layout.html" %}
+
+{%- block extrahead %}
+  {{ super() }}
+    <meta name="color-scheme" content="light dark">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600"
+          rel="stylesheet">
+    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css"
+          rel="stylesheet">
+    <script src="{{ pathto('_static/js/css.js', 1) }}"></script>
+{% endblock %}
+
+{%- block header %}
+{% include "header.html" %}
+{% endblock %}
+
+{%- block relbar1 %}{% endblock %}
+{%- block relbar2 %}{% endblock %}
+{%- block sidebar2 %}{% endblock %}
+
+{%- block document %}
+<main class="page">
+  <div class="container top-buffer">
+  {%- block body -%} {% endblock %}
+  </div>
+</main>
+{% endblock %}
+
+{%- block footer %}
+{% include "footer.html" %}
+{% endblock %}
