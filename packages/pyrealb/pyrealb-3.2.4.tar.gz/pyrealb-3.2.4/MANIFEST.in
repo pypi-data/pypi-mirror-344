@@ -1,0 +1,3 @@
+include src/pyrealb/data/*.json
+include src/pyrealb/data/*.jsonrnc
+include src/pyrealb/data/*.txt
