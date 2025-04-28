@@ -1,0 +1,22 @@
+.env
+
+.venv
+
+
+dist/
+
+
+.mypy_cache
+
+.pytest_cache
+
+
+.idea
+
+.vscode
+
+
+# Misc
+.DS_Store
+.ruff_cache/
+*/__pycache__
