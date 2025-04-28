@@ -1,0 +1,47 @@
+{% set name = "h5md" %}
+{% set version = "0.1.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  path: .
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python >=3.7
+    - pip
+    - setuptools
+  run:
+    - python >=3.7
+    - h5py >=3.0.0
+    - numpy >=1.19.0
+
+test:
+  imports:
+    - h5md
+  requires:
+    - pytest
+  commands:
+    - python -c "import h5md"
+
+about:
+  home: https://github.com/hyoklee/h5md
+  license: BSD
+  license_family: BSD
+  summary: HDF5 to markdown converter
+  description: |
+    An HDF5 converter for Markdown that provides rich visualization of
+    HDF5 file metadata,including group structure, dataset information, and
+    attributes in markdown format.
+  doc_url: https://github.com/hyoklee/h5md
+  dev_url: https://github.com/hyoklee/h5md
+
+extra:
+  recipe-maintainers:
+    - hyoklee

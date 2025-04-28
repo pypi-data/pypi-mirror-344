@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+conda_build_config.yaml
+meta.yaml
+pyproject.toml
+setup.py
+h5md/__init__.py
+h5md/cli.py
+h5md.egg-info/PKG-INFO
+h5md.egg-info/SOURCES.txt
+h5md.egg-info/dependency_links.txt
+h5md.egg-info/entry_points.txt
+h5md.egg-info/requires.txt
+h5md.egg-info/top_level.txt
+tests/test_hdf5_plugin.py

@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "build>=0.10.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "h5md"
+version = "0.1.0"
+description = "A command-line tool to convert HDF5 files to markdown format"
+readme = "README.md"
+requires-python = ">=3.10"
+license-files = ["LICENSE"]
+authors = [
+    {name = "Joe Lee", email = "hyoklee@hdfgroup.org"}
+]
+keywords = ["hdf5", "markdown", "converter", "documentation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+dependencies = [
+    "h5py>=3.0.0",
+    "numpy>=1.20.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.3.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.3.0",
+    "twine>=4.0.0",
+    "build>=0.10.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/hyoklee/h5md"
+Documentation = "https://github.com/hyoklee/h5md/blob/main/README.md"
+Repository = "https://github.com/hyoklee/h5md.git"
+Issues = "https://github.com/hyoklee/h5md/issues"
+
+[project.scripts]
+h5md = "h5md.cli:main"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --cov=h5md --cov-report=xml"
+testpaths = [
+    "tests",
+]
