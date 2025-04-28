@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: noax
+Version: 0.1.0
+Summary: Jax implementation of neural operators
+Requires-Python: >=3.12
+Requires-Dist: beartype>=0.20.2
+Requires-Dist: equinox>=0.12.1
+Requires-Dist: jax==0.5.3
+Requires-Dist: neuraloperator>=1.0.2
+Description-Content-Type: text/markdown
+
+Jax implementation of neural operators

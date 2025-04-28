@@ -1,0 +1,6 @@
+noax/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+noax/layers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+noax/layers/spectral_conv.py,sha256=wTvVj_5UGnjctBeb65MpJYsnmhUiY8qaRajaX2UWD8Y,8631
+noax-0.1.0.dist-info/METADATA,sha256=4tsPCZ_vm1tXRGW0jOfkK6UD-VHrBMZWPm4QIdleXfQ,326
+noax-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+noax-0.1.0.dist-info/RECORD,,
