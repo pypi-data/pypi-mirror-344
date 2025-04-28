@@ -1,0 +1,19 @@
+[project]
+name = "Schiphol-API"
+version = "0.0.1"
+authors = [
+  { name="Rohit Yadav", email="edu.rohit.y@gmail.com" },
+]
+description = "Python API to interact with schiphol endpoints"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests==2.32.3",
+    "responses==0.25.7",
+    "python-dotenv==1.1.0",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+[project.urls]
+Homepage = "https://github.com/Rohit8y/Schiphol-API"
+Issues = "https://github.com/Rohit8y/Schiphol-API/issues"

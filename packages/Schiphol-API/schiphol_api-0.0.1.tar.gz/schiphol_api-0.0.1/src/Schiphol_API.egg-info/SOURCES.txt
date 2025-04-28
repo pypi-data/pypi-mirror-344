@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/Schiphol_API.egg-info/PKG-INFO
+src/Schiphol_API.egg-info/SOURCES.txt
+src/Schiphol_API.egg-info/dependency_links.txt
+src/Schiphol_API.egg-info/requires.txt
+src/Schiphol_API.egg-info/top_level.txt
+src/schipholapi/__init__.py
+src/schipholapi/api.py
+tests/test_api.py
