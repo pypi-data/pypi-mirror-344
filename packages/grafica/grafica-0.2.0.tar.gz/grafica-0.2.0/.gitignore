@@ -1,0 +1,9 @@
+*.egg-info/
+build/
+dist/
+docs/_build
+docs/html
+docs/doctrees
+*.egg-info
+*.py[cod]
+venv/
