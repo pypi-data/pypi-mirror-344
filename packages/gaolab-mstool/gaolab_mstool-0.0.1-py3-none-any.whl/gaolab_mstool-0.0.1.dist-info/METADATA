@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: gaolab_mstool
+Version: 0.0.1
+Summary: gaolab_mstool -  tools for mass spectrometry data processing
+Home-page: https://github.com/Gaolaboratory/ms-tool
+Author: Yu (Tom) Gao
+Author-email: "Yu (Tom) Gao" <yugao@uic.edu>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://github.com/Gaolaboratory/ms-tool
+Project-URL: Issues, https://github.com/Gaolaboratory/ms-tool/issues
+Keywords: mass spectrometry,proteomics,mzml,metabolomics
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: lxml
+Requires-Dist: pyarrow
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# ms-tool - powerful tools for mass spectrometry data processing
+
+**ms-tool** is a Python package for mass spectrometry data processing, developed by the Gao lab at University of Illinois Chicago. This tools itself is **FREE** to use under Apache 2.0 license. Some of its components may rely on dependencies and custom libraries covered by other types of license, please read carefully before use.
+
+
+
+Main Tools
+-------------
+
+Here are a brief overview of the ms-tool modules:
+
+  - fasta processing
+  - peptide calculation
+  - mass spectrum manipulation
+  - database search results visualization
