@@ -1,0 +1,134 @@
+[{
+  "key": "CobotLeft",
+  "usedFor": "",
+  "isActive": false,
+  "romFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\Axilum-TMS-Cobot-Left-World.rom",
+  "trackerStlFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\world_left.stl",
+  "filepathsRelTo": "<install>",
+  "trackerColor": "#999999",
+  "toolToTrackerTransf": [
+    [1.0, 0.0, 0.0, 0.0],
+    [0.0, 0.0, 1.0, 0.0],
+    [0.0, -1.0, 0.0, 0.0],
+    [0.0, 0.0, 0.0, 1.0]
+  ]
+}, {
+  "key": "CobotRight",
+  "usedFor": "",
+  "romFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\Axilum-TMS-Cobot-Right-World.rom",
+  "trackerStlFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\world_right.stl",
+  "filepathsRelTo": "<install>",
+  "trackerColor": "#999999",
+  "toolToTrackerTransf": [
+    [1.0, 0.0, 0.0, 0.0],
+    [0.0, 0.0, 1.0, 0.0],
+    [0.0, -1.0, 0.0, 0.0],
+    [0.0, 0.0, 0.0, 1.0]
+  ]
+}, {
+  "key": "CobotCart",
+  "usedFor": "visualization",
+  "doShowTrackingState": false,
+  "toolStlFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\sp_2131_a.ply",
+  "filepathsRelTo": "<install>"
+}, {
+  "key": "CobotArmEndpointModule",
+  "usedFor": "visualization",
+  "doShowTrackingState": false,
+  "toolStlFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\TMS-Cobot-2 Wrist QC (sp_2131_u_asm-indF) v6.ply",
+  "filepathsRelTo": "<install>"
+}, {
+  "key": "CobotArmBase",
+  "usedFor": "visualization",
+  "doShowTrackingState": false,
+  "toolStlFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\base.ply",
+  "filepathsRelTo": "<install>"
+}, {
+  "key": "CobotArmJ1",
+  "usedFor": "visualization",
+  "doShowTrackingState": false,
+  "toolStlFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\j1.ply",
+  "filepathsRelTo": "<install>"
+}, {
+  "key": "CobotArmJ2",
+  "usedFor": "visualization",
+  "doShowTrackingState": false,
+  "toolStlFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\j2.ply",
+  "filepathsRelTo": "<install>"
+}, {
+  "key": "CobotArmJ3",
+  "usedFor": "visualization",
+  "doShowTrackingState": false,
+  "toolStlFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\j3.ply",
+  "filepathsRelTo": "<install>"
+}, {
+  "key": "CobotArmJ4",
+  "usedFor": "visualization",
+  "doShowTrackingState": false,
+  "toolStlFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\j4.ply",
+  "filepathsRelTo": "<install>"
+}, {
+  "key": "CobotArmJ5",
+  "usedFor": "visualization",
+  "doShowTrackingState": false,
+  "toolStlFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\j5.ply",
+  "filepathsRelTo": "<install>"
+}, {
+  "key": "CobotArmJ6",
+  "usedFor": "visualization",
+  "doShowTrackingState": false,
+  "toolStlFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\j6.ply",
+  "filepathsRelTo": "<install>"
+}, {
+  "key": "CobotWorkspace",
+  "usedFor": "visualization",
+  "doShowTrackingState": false,
+  "toolStlFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\WorkspaceCobot_v2.stl",
+  "filepathsRelTo": "<install>",
+  "toolToTrackerTransf": [
+    [0.0, 0.0, 1.0, 0.0],
+    [0.0, 1.0, 0.0, 0.0],
+    [-1.0, 0.0, 0.0, 0.0],
+    [0.0, 0.0, 0.0, 1.0]
+  ],
+  "toolStlToToolTransf": [
+    [0.0, 0.0, -1.0, 0.0],
+    [0.0, 1.0, 0.0, 0.0],
+    [1.0, 0.0, 0.0, 0.0],
+    [0.0, 0.0, 0.0, 1.0]
+  ],
+  "toolColor": "#22FF22",
+  "toolOpacity": 0.1
+}, {
+  "key": "CobotCoilHolder",
+  "usedFor": "visualization",
+  "doShowTrackingState": false,
+  "toolStlFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\MagV Cool-B65 AP CO holder.stl",
+  "filepathsRelTo": "<install>",
+  "toolStlToToolTransf": [
+    [0.0, -1.0, 0.0, 0.0],
+    [-1.0, 0.0, 0.0, 0.0],
+    [0.0, 0.0, -1.0, 0.0],
+    [0.0, 0.0, 0.0, 1.0]
+  ],
+  "initialTrackerPose": [
+    [1.0, 0.0, 0.0, 0.0],
+    [0.0, 1.0, 0.0, 0.0],
+    [0.0, 0.0, 1.0, 0.0],
+    [0.0, 0.0, 0.0, 1.0]
+  ],
+  "initialTrackerPoseRelativeTo": "CobotCoil",
+  "toolColor": "#c3cad2"
+},{
+  "key": "CobotCoil",
+  "toolStlFilepath": "..\\NaviNIBS_Cobot\\Devices\\resources\\MagVenture Cool B65 AP CO.stl",
+  "filepathsRelTo": "<install>",
+  "toolToTrackerTransf": [
+    [1.0, 0.0, 0.0, 0.0],
+    [0.0, 1.0, 0.0, 0.0],
+    [0.0, 0.0, 1.0, 0.0],
+    [0.0, 0.0, 0.0, 1.0]
+  ],
+  "toolColor": "#333333",
+  "usedFor": "coil"
+}]

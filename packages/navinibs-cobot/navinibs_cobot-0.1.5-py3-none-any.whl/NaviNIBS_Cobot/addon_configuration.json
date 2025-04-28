@@ -1,0 +1,20 @@
+{
+  "key": "NaviNIBS_Cobot",
+  "addonVersion": "0.1.5",
+  "MainViewPanels": {
+    "CobotDebugPanel": {
+      "ClassName": "CobotDebugPanel",
+      "importModule": "NaviNIBS_Cobot.Navigator.GUI.ViewPanels.CobotDebugPanel"
+    },
+    "NavigateWithCobot": {
+      "ClassName": "NavigatePanelWithCobot",
+      "importModule": "NaviNIBS_Cobot.Navigator.GUI.ViewPanels.NavigatePanelWithCobot"
+    }
+  },
+  "SessionAttrs": {
+    "cobotControl": {
+      "ClassName": "CobotControl",
+      "importModule": "NaviNIBS_Cobot.Navigator.Model.CobotConfiguration"
+    }
+  }
+}
