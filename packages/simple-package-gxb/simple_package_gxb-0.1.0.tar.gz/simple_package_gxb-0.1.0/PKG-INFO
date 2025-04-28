@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: simple-package-gxb
+Version: 0.1.0
+Summary: 一个简单的测试包
+Home-page: https://github.com/yourusername/simple-package
+Author: GXB
+Author-email: example@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# 简单测试包
+
+这是一个用于演示如何发布Python包到PyPI的简单测试包。
+
+## 安装
+
+```bash
+pip install simple-package-gxb
+```
+
+## 使用方法
+
+```python
+from simple_package import hello
+
+# 打印问候消息
+print(hello())
+```
+
+## 功能
+
+- 提供一个简单的问候函数
+- 演示Python包的基本结构
+- 展示PyPI发布流程
+
+## 许可证
+
+MIT 
