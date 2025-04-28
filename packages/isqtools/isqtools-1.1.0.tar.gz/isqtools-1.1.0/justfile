@@ -1,0 +1,16 @@
+PYTHON := "python"
+
+default:
+    just --list --unsorted
+
+clean:
+    rm -rf build/ dist/
+    find . -name '*.pyc' -delete
+    find . -name '__pycache__' -delete
+
+build:
+    {{PYTHON}} -m build
+
+test *flags:
+    python -m pytest tests/ {{flags}} -v
+
