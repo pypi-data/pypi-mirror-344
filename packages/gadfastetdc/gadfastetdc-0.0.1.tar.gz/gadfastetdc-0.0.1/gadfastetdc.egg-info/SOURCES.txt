@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+gadfastetdc/__init__.py
+gadfastetdc.egg-info/PKG-INFO
+gadfastetdc.egg-info/SOURCES.txt
+gadfastetdc.egg-info/dependency_links.txt
+gadfastetdc.egg-info/requires.txt
+gadfastetdc.egg-info/top_level.txt
