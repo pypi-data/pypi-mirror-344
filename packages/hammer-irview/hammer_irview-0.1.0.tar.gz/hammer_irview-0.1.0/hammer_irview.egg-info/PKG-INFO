@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: hammer-irview
+Version: 0.1.0
+Summary: A graphical interface for Hammer VLSI floorplanning.
+Author-email: Jasmine Angle <jasmine@angle.dev>
+License-Expression: BSD-3-Clause
+Project-URL: Homepage, https://github.com/jasmangle/hammer-irview
+Keywords: irview,hammer,vlsi,gui
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyside6
+Requires-Dist: work
+Requires-Dist: pyqtgraph
+Requires-Dist: matplotlib
+Requires-Dist: lefdef
+Dynamic: license-file
+
+# Hammer IRView
+A graphical viewer for Hammer IR files, particularly placement constraints.
+
+![](assets/example.png)
+
+## Usage
+
+CLI driver patch:
+
+```py
+import hammer_irview
+...
+class ExampleDriver(hammer_irview.IRViewDriverMixin, CLIDriver):
+```
+
+Makefile patch:
+
+```makefile
+#########################################################################################
+# IRView Invocation Flow
+#########################################################################################
+
+.PHONY: irv
+irv: $(OBJ_DIR)/hammer.d
+	$(HAMMER_EXEC) -e $(ENV_YML) $(foreach x,$(INPUT_CONFS) $(GENERATED_CONFS), -p $(x)) --obj_dir $(OBJ_DIR) irv
+```
+
+Command:
+
+```sh
+make CONFIG=<Config Name> irv
+```
