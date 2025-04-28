@@ -1,0 +1,12 @@
+attrs==21.4.0
+matplotlib
+numpy
+pandas
+PySimpleGUI
+pytest
+scikit_learn
+ruptures
+impedance==1.4.1
+
+[dev]
+pytest>=3
