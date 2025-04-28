@@ -1,0 +1,1 @@
+include src/test_package_sliepke/sim_c_helper/*.c
