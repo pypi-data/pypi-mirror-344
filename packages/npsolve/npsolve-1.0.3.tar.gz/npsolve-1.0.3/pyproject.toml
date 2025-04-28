@@ -1,0 +1,64 @@
+[project]
+name = "npsolve"
+version = "1.0.3"
+description = "Easier object-oriented calculations for numerical solvers."
+authors = [{ name = "Reuben Rusk", email = "pythoro@mindquip.com" }]
+requires-python = "~=3.9"
+readme = "README.md"
+license = "MIT"
+maintainers = [{ name = "Reuben Rusk", email = "pythoro@mindquip.com" }]
+keywords = [
+    "NUMERICAL SOLVER",
+    "NUMPY",
+    "SCIPY",
+    "ODE",
+    "INTEGRATION",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy>=1.16.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/pythoro/npsolve.git"
+Repository = "https://github.com/pythoro/npsolve.git"
+Documentation = "https://npsolve.readthedocs.io/en/latest/"
+
+[dependency-groups]
+dev = [
+    "pytest>=7.1.2,<8",
+    "sphinx>=7.2.6,<8",
+    "sphinx-rtd-theme>=2.0.0,<3",
+    "bump2version>=1.0.1,<2",
+    "matplotlib==3.9.2",
+    "ruff>=0.9.6,<0.10",
+]
+
+[tool.hatch.build.targets.sdist]
+include = ["npsolve"]
+
+[tool.hatch.build.targets.wheel]
+include = ["npsolve"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+# Needed for discovery
+line-length = 79
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "C90", "I", "UP", "SIM", "D", "ANN"]
+ignore = ["ANN101", "ANN102"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "E402"]
+# Selectively ignore annotation and documentation on older modules.
+"*npsolve/legacy/*" = ["ANN", "D"]
