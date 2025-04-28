@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: ai-readme
+Version: 0.1.0
+Summary: Automatically generate README.md using AI.
+Home-page: https://github.com/hyoj0942/ai-readme
+Author: JoeyKim
+Author-email: hyoj0492@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: openai
+Requires-Dist: anthropic
+Requires-Dist: google-generativeai
+Requires-Dist: python-dotenv
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Readme Generator
+
+Generate a professional `README.md` automatically by analyzing project files using AI.
+
+## Features
+
+- Support for English and Korean README generation.
+- Selectable AI providers: OpenAI, Claude, Gemini.
+- Configurable maximum characters to read per file.
+- Automatically ignores unnecessary folders (e.g., `.git/`, `node_modules/`, `venv/`, `__pycache__`).
+- Easy `.env`-based API key management.
+
+## Installation
+
+```bash
+pip install ai-readme
+```
+
+
+## Usage
+
+```bash
+readme --lang en --provider openai
+readme --lang ko --provider claude
+readme --lang en --provider gemini
+readme --lang en --provider openai --max_chars 5000
+```
+
+## License
+
+MIT License
