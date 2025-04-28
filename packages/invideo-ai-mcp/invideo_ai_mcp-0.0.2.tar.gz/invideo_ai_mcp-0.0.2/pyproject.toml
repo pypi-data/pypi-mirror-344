@@ -1,0 +1,39 @@
+[project]
+name = "invideo-ai-mcp"
+version = "0.0.2"
+description = "The invideo-ai MCP server enables any MCP Client like Claude Desktop or Agents to use the invideo-ai API to generate videos."
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [{ name = "Invideo Developers", email = "dev@invideo.io" }]
+keywords = ["invideo-ai", "mcp", "claude", "ai", "video"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+]
+
+dependencies = [
+    "anthropic>=0.49.0",
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.6.0",
+    "pydantic>=2.11.3",
+    "python-dotenv>=1.1.0",
+]
+
+[project.scripts]
+invideo-ai-mcp = "invideo_ai_mcp.server:main"
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "I"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 18
