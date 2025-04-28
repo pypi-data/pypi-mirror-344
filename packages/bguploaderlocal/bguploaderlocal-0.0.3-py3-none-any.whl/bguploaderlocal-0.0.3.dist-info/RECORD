@@ -1,0 +1,9 @@
+bguploaderlocal/__init__.py,sha256=k5tJXhBQJ4l9fKHJ76K5w98zBHoYvNk9r-UNH6eQ2-k,21
+bguploaderlocal/cli.py,sha256=sml-uCWEELVpHI7Ht7buBHSe0pxQT6rPBaa7BS8khzE,2874
+bguploaderlocal/config.py,sha256=04kNKxM4IbLwY-ouRvIHn3zGHhk3a6Xe5akX4pI_dTc,829
+bguploaderlocal/uploader.py,sha256=0HSbMD3UISno3ImPPxJmC5jCTzLADJ8hfYJ4ra5gU68,5298
+bguploaderlocal-0.0.3.dist-info/METADATA,sha256=r-HWp7rl5m_9xnG7pkNmDwgo9P9231CB_6RZsWV7MNk,277
+bguploaderlocal-0.0.3.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+bguploaderlocal-0.0.3.dist-info/entry_points.txt,sha256=pyR2Jrn_vv7nriV3-vv5ESMsHrvfbJvTW2WPmchGXV0,60
+bguploaderlocal-0.0.3.dist-info/top_level.txt,sha256=czJtdCoCJtl8EX_5zResp7kWxqtf8-98UO2nOTkKtks,16
+bguploaderlocal-0.0.3.dist-info/RECORD,,
