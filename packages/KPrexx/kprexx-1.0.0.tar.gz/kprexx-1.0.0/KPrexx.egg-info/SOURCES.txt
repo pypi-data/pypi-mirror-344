@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+KPrexx.egg-info/PKG-INFO
+KPrexx.egg-info/SOURCES.txt
+KPrexx.egg-info/dependency_links.txt
+KPrexx.egg-info/top_level.txt
