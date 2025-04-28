@@ -1,0 +1,36 @@
+[project]
+name = "FCKLN"
+version = "1.0.1"
+authors = [
+  { name="Michal Krupa", email="michalkrupa@gmail.com" },
+]
+description="Flexible Conditional Modeling for Structured Dependencies"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+dependencies = [
+    "scipy",
+    "numpy",
+    "matplotlib",
+    "torch"
+]
+
+[project.urls]
+Homepage = "https://github.com/michalkrupa/enterrepohere/"
+Issues = "https://github.com/michalkrupa/enterrepohere/issues"
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
