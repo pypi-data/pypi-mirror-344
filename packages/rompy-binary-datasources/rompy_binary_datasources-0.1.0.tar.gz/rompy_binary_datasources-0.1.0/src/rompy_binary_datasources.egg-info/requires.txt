@@ -1,0 +1,9 @@
+rompy
+pandas
+xarray
+
+[dev]
+coverage
+mypy
+pytest
+ruff

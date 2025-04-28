@@ -1,0 +1,3 @@
+[rompy.source]
+dataframe:timeseries = rompy_binary_datasources.source:SourceTimeseriesDataFrame
+dataset = rompy_binary_datasources.source:SourceDataset

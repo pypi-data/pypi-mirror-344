@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: rompy_binary_datasources
+Version: 0.1.0
+Summary: Binary datasource for rompy
+Author-email: Rompy Developers <developers@oceanum.science>
+Maintainer-email: Rompy Developers <developers@oceanum.science>
+License: BSD license
+Project-URL: bugs, https://github.com/rompy-py/rompy_binary_datasources/issues
+Project-URL: changelog, https://github.com/rompy-py/rompy_binary_datasources/blob/master/changelog.md
+Project-URL: homepage, https://github.com/rompy-py/rompy_binary_datasources
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: rompy
+Requires-Dist: pandas
+Requires-Dist: xarray
+Provides-Extra: dev
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Dynamic: license-file
+
+========================
+rompy-binary-datasources
+========================
+
+
+.. image:: https://img.shields.io/pypi/v/rompy_binary_datasources.svg
+        :target: https://pypi.python.org/pypi/rompy_binary_datasources
+
+.. image:: https://img.shields.io/travis/tomdurrant/rompy_binary_datasources.svg
+        :target: https://travis-ci.com/tomdurrant/rompy_binary_datasources
+
+.. image:: https://readthedocs.org/projects/rompy-binary-datasources/badge/?version=latest
+        :target: https://rompy-binary-datasources.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+
+.. image:: https://pyup.io/repos/github/tomdurrant/rompy_binary_datasources/shield.svg
+     :target: https://pyup.io/repos/github/tomdurrant/rompy_binary_datasources/
+     :alt: Updates
+
+
+
+Binary datasource for rompy
+
+
+* Free software: BSD license
+* Documentation: https://rompy-binary-datasources.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
