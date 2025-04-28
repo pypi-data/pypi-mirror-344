@@ -1,0 +1,3 @@
+include locales/*.yml
+include assets/*
+include temp/*
