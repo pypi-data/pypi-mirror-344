@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+iFCon/__init__.py
+iFCon/iFCon.py
+iFCon/iFConFile.py
+iFCon.egg-info/PKG-INFO
+iFCon.egg-info/SOURCES.txt
+iFCon.egg-info/dependency_links.txt
+iFCon.egg-info/entry_points.txt
+iFCon.egg-info/top_level.txt

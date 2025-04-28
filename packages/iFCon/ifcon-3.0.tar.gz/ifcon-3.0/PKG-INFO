@@ -1,0 +1,65 @@
+Metadata-Version: 2.4
+Name: iFCon
+Version: 3.0
+Summary: A tool for handling iFAction resource files (iFCon files)
+Home-page: https://github.com/eWloYW8/iFCon
+Author: eWloYW8
+Author-email: thenextone200612@gmail.com
+License: GPLv3
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# iFCon
+A tool for handling iFAction resource file (iFCon file)
+
+## Usage
+
+You can directly run iFCon.py or install this module with pip:
+
+```bash
+pip install iFCon
+```
+
+```
+positional arguments:  
+  file                  The iFCon file to extract or pack.  
+
+options:  
+  -h, --help            show this help message and exit  
+  -x, --extract         Extract the contents of an iFCon file.  
+  -p PACK, --pack PACK  Pack the contents of a folder into an iFConfile.  
+  -o OUTPUT, --output OUTPUT  
+                        The output file for extracting the iFCon file.  
+```
+
+## Example
+
+To extract the contents of an iFCon file, run the following command:
+
+```
+iFCon <iFCon file> -x -o <output folder>
+```
+
+To pack the contents of a folder into an iFCon file, run the following command:
+
+```
+iFCon <iFCon file> -p <folder>
+```
+
+## Disclaimer
+
+This tool is provided for educational and informational purposes only. The author is not responsible for any misuse or damage caused by this tool. Use it at your own risk.
