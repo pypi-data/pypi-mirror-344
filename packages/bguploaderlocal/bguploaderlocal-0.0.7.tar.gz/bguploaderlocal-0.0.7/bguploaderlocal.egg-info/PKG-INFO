@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: bguploaderlocal
+Version: 0.0.7
+Summary: CLI to upload JUnit .xml files.
+Author: pathik-appachhi
+Requires-Python: >=3.6
+Requires-Dist: requests
+Requires-Dist: urllib3<2
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
