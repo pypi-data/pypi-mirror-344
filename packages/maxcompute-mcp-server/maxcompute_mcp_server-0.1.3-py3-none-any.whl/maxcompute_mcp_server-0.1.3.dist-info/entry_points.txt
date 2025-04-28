@@ -1,0 +1,2 @@
+[console_scripts]
+maxcompute-mcp-server = maxcompute_mcp_server:main
