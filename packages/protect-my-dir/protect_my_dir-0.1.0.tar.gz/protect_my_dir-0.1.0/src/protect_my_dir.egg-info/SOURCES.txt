@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/protect_my_dir/__init__.py
+src/protect_my_dir/main.py
+src/protect_my_dir/py.typed
+src/protect_my_dir.egg-info/PKG-INFO
+src/protect_my_dir.egg-info/SOURCES.txt
+src/protect_my_dir.egg-info/dependency_links.txt
+src/protect_my_dir.egg-info/entry_points.txt
+src/protect_my_dir.egg-info/requires.txt
+src/protect_my_dir.egg-info/top_level.txt
