@@ -1,0 +1,7 @@
+README.md
+setup.py
+SMA_Package/__init__.py
+SMA_Package.egg-info/PKG-INFO
+SMA_Package.egg-info/SOURCES.txt
+SMA_Package.egg-info/dependency_links.txt
+SMA_Package.egg-info/top_level.txt
