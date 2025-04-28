@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: textbelt-py
+Version: 0.1.0
+Summary: 
+License: MIT
+Author: Wahhaj Farooq
+Author-email: wahhaj.farooq@pm.me
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydantic (>=2.11.3,<3.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+![Static Badge](https://img.shields.io/badge/type%20checked-mypy-039dfc)
+
+# textbelt-py
+An API client for Textbelt SMS provider
+
