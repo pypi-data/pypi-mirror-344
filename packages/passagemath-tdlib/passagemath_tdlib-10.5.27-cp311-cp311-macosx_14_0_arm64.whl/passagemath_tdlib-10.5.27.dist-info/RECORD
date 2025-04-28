@@ -1,0 +1,8 @@
+passagemath_tdlib-10.5.27.dist-info/RECORD,,
+passagemath_tdlib-10.5.27.dist-info/WHEEL,sha256=B2uwOWH4X5oQiQDTdUWaKh8oSlPDeVqDzTF0FgwlyHA,109
+passagemath_tdlib-10.5.27.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_tdlib-10.5.27.dist-info/METADATA,sha256=rj4agXbzUplYEDa1DjDj1ZcR6WrN-gLcfxit7np33Tk,2629
+sage/all__sagemath_tdlib.py,sha256=xwEAp-3HSleZKAjcgudzEBoWekMyMSx7mY9lzHCETcU,44
+sage/graphs/all__sagemath_tdlib.py,sha256=xwEAp-3HSleZKAjcgudzEBoWekMyMSx7mY9lzHCETcU,44
+sage/graphs/graph_decompositions/all__sagemath_tdlib.py,sha256=xwEAp-3HSleZKAjcgudzEBoWekMyMSx7mY9lzHCETcU,44
+sage/graphs/graph_decompositions/tdlib.cpython-311-darwin.so,sha256=qThh1lxdkuY3ZA7rcHrDTPK2ZeKVU_9iP3UrblqeipI,328712
