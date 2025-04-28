@@ -1,0 +1,2 @@
+[console_scripts]
+langchain-gel = langchain_gel:main
