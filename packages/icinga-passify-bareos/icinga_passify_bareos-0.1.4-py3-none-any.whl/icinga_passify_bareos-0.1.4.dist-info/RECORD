@@ -1,0 +1,8 @@
+icinga_passify_bareos-0.1.4.dist-info/licenses/LICENSE,sha256=oQHikjIj2LpWfgw8UZDGfQW5ju3FvJ754y1wADX1wDs,1074
+passify_bareos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+passify_bareos/passify_bareos.py,sha256=NlsgXTylFBaGw1X0fXbifzT4Z8K2Ih5hU4zXskQQ_o0,11916
+icinga_passify_bareos-0.1.4.dist-info/METADATA,sha256=xGsuSa1YIJhULriC5lM3_lvibAcciWt8AV0XwPpYiso,6352
+icinga_passify_bareos-0.1.4.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+icinga_passify_bareos-0.1.4.dist-info/entry_points.txt,sha256=o8wtVmGTpZkx8r_8iBdzo1BCDRiMknR4FCk09g61UrM,70
+icinga_passify_bareos-0.1.4.dist-info/top_level.txt,sha256=bnSEf5hU9xP8288zZPPw2zb_7a62smHOP8xa_wFvLgE,15
+icinga_passify_bareos-0.1.4.dist-info/RECORD,,
