@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: vman3_dq
+Version: 0.1.0
+Summary: VMan3 Data Quality Toolkit
+Home-page: https://github.com/vman-tool/vman3-dq
+Author: Isaac Lyatuu
+Author-email: ilyatuu@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.0.0
+Requires-Dist: numpy>=1.18.0
+Requires-Dist: chardet>=3.0.4
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# VMan3 Data Quality Toolkit
+
+A Python package for processing and quality checking VMan3 data.
+
+## Features
+Automatically marks skipped questions based on relevance expression
+Handles complex ODK relevance expressions
+Case-insensitive variable matching
+Detailed debugging output
+
+## Installation
+
+```bash
+pip install vman3-dq

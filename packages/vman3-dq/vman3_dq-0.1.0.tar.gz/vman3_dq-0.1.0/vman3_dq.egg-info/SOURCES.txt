@@ -1,0 +1,12 @@
+README.md
+setup.py
+vman3_dq/__init__.py
+vman3_dq/core.py
+vman3_dq/utils.py
+vman3_dq.egg-info/PKG-INFO
+vman3_dq.egg-info/SOURCES.txt
+vman3_dq.egg-info/dependency_links.txt
+vman3_dq.egg-info/requires.txt
+vman3_dq.egg-info/top_level.txt
+vman3_dq/data/__init__.py
+vman3_dq/data/sample_data.csv
