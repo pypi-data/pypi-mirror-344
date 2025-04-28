@@ -1,0 +1,185 @@
+Metadata-Version: 2.4
+Name: fabric_scheduler
+Version: 0.9.9
+Summary: A Python API wrapper for scheduling Microsoft Fabric artifacts (Notebooks, Dataflows, Pipelines) using the Fabric REST API.
+Home-page: https://github.com/shahlaukik/fabric-scheduler
+Author: Laukik Shah
+Author-email: 78136178+shahlaukik@users.noreply.github.com
+License: MIT
+Project-URL: Documentation, https://fabric-scheduler.readthedocs.io/
+Project-URL: Source, https://github.com/shahlaukik/fabric-scheduler/
+Project-URL: Changelog, https://fabric-scheduler.readthedocs.io/en/latest/changelog.html
+Project-URL: Tracker, https://github.com/shahlaukik/fabric-scheduler/issues
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Database
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/x-rst; charset=UTF-8
+License-File: LICENSE.txt
+Requires-Dist: importlib-metadata; python_version < "3.8"
+Requires-Dist: pandas>=2.0.0
+Requires-Dist: semantic-link-sempy>=0.10.2
+Provides-Extra: testing
+Requires-Dist: setuptools; extra == "testing"
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+Provides-Extra: dev
+Requires-Dist: tox>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: pre-commit>=3.5.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Dynamic: license-file
+
+.. These are examples of badges you might want to add to your README:
+   please update the URLs accordingly
+
+    .. image:: https://api.cirrus-ci.com/github/<USER>/fabric_scheduler.svg?branch=main
+        :alt: Built Status
+        :target: https://cirrus-ci.com/github/<USER>/fabric_scheduler
+    .. image:: https://readthedocs.org/projects/fabric_scheduler/badge/?version=latest
+        :alt: ReadTheDocs
+        :target: https://fabric_scheduler.readthedocs.io/en/stable/
+    .. image:: https://img.shields.io/pypi/v/fabric_scheduler.svg
+        :alt: PyPI-Server
+        :target: https://pypi.org/project/fabric_scheduler/
+
+.. image:: https://img.shields.io/badge/-PyScaffold-005CA0?logo=pyscaffold
+    :alt: Project generated with PyScaffold
+    :target: https://pyscaffold.org/
+
+|
+
+=================
+Fabric Scheduler
+=================
+
+
+Artifact Scheduler for Microsoft Fabric
+=======================================
+
+A Python API wrapper for scheduling Fabric artifacts (Notebooks, Dataflows, Pipelines) using the Fabric REST API. This module provides:
+
+- Automated scheduling of Fabric artifacts
+- Input validation and error handling
+- Multiple input methods (dictionary, CSV file, CSV string)
+- Schedule management (create, retrieve, delete)
+
+.. note::
+    This package is designed exclusively for use within Microsoft Fabric notebooks and integrates with the Microsoft Fabric REST API.
+
+Getting Started
+================
+
+Prerequisites
+-------------
+
+- Python 3.8+
+- Required packages:
+
+  - pandas
+  - sempy.fabric
+
+Installation & Setup
+--------------------
+
+1. Install the package:
+
+   .. code-block:: bash
+
+      pip install fabric_scheduler
+
+2. Import the module:
+
+   .. code-block:: python
+
+      from fabric_scheduler import ArtifactScheduler
+
+Basic Usage
+===========
+
+.. code-block:: python
+
+    # Initialize scheduler
+    scheduler = ArtifactScheduler()
+    # OR ArtifactScheduler(workspace_id="your-workspace-id")
+
+    # Set artifacts to schedule from list of dictionaries
+    artifacts = [
+        {
+            "displayName": "MyNotebook",
+            "type": "Notebook",
+            "schedule type": "Daily",
+            "times": ["08:00", "17:00"]
+        },
+        {
+            "displayName": "MyDataflow",
+            "type": "Dataflow",
+            "schedule type": "Weekly",
+            "weekdays": ["Monday", "Wednesday"],
+            "times": ["10:00"]
+        }
+    ]
+    scheduler.set_artifacts(artifacts)
+
+    # Create schedules
+    scheduler.create_schedules()
+
+
+Input Methods
+-------------
+
+1. **Dictionary Input**:
+   Define a list of dictionaries with familiar notation like JSON,
+   and pass it to the ``set_artifacts`` method.
+
+   .. code-block:: python
+
+      scheduler.set_artifacts([{artifact_dict}])
+
+2. **CSV File Path**:
+   Upload the CSV file and pass the file name to the ``load_artifacts_from_csv`` method.
+
+   .. code-block:: python
+
+      scheduler.load_artifacts_from_csv("artifact_schedule.csv")
+
+3. **CSV String**:
+   Pass a CSV string directly to the ``load_artifacts_from_csv`` method.
+
+   .. code-block:: python
+
+      csv_content = '''
+      displayName,type,enabled,schedule type,localTimeZone,startDate,startTime,endDate,endTime,interval,times,weekdays
+      MyNotebook,Notebook,true,Cron,,3/30/2025,2:00,,,240,,
+      MyDataflow,Dataflow,true,Cron,,,,,,240,,
+      '''
+      scheduler.load_artifacts_from_csv(csv_content)
+
+Development
+===========
+
+This project uses modern Python development tools for quality assurance:
+
+- **tox**: For automating testing, linting, and build tasks
+- **pre-commit**: For automated code quality checks before commits
+- **sphinx**: For documentation generation
+
+For details on setting up the development environment, see the `CONTRIBUTING.rst` file and the `docs/pre-commit.md` document.
