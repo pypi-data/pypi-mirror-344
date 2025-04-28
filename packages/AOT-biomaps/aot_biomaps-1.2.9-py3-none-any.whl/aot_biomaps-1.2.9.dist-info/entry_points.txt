@@ -1,0 +1,2 @@
+[console_scripts]
+post_install_aot = AOT_biomaps.post_install:main
