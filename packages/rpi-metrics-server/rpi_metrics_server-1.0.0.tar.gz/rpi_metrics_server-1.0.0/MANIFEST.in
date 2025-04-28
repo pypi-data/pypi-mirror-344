@@ -1,0 +1,6 @@
+recursive-include rpi_metrics/server/static *
+recursive-include rpi_metrics/server/templates *
+include rpi_metrics/server/*.sh
+include rpi_metrics/server/*.service
+include README.md
+include LICENSE
