@@ -1,0 +1,9 @@
+include LICENSE
+include README.md
+recursive-include src/tUilKit/config *.json
+recursive-include src/tUilKit/config *.py
+recursive-include src/tUilKit/dict *.py
+recursive-include src/tUilKit/interfaces *.py
+recursive-include src/tUilKit/utils *.py
+recursive-include src/tUilKit *.py
+recursive-include tests *.py

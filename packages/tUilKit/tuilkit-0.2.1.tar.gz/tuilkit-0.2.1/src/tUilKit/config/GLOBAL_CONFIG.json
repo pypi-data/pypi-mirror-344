@@ -1,0 +1,20 @@
+{
+    "FOLDERS": {
+        "TEST_LOG_FILES"    : "testLogs/",
+        "LOG_FILES"         : "logFiles/",
+        "INPUT"             : "inputData/",
+        "OUTPUT"            : "outputData/"
+    },
+    "FILES": {
+        "LOG_FILE"          : "runtime.log",
+        "INIT_LOG"          : "init.log"
+    },
+    "MAKE_FOLDERS": {
+        "LOCAL_CONFIG"      : "config/",
+        "LOG_FILES"         : "logFiles/"
+
+
+    }
+    
+}
+ 
