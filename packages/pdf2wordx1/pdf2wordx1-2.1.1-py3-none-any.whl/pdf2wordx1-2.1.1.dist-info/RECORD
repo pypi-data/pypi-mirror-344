@@ -1,0 +1,15 @@
+pdf2wordx1/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdf2wordx1/_pdf2wordx.py,sha256=u67PK_u-KQVTWUh1eo9qGd_sEVlUwJQPhJsIUKSMfVg,5226
+pdf2wordx1/favicon.ico,sha256=S1mua93-6h-67d7pWam5wnje2Ocr-AecAh75AVRyeSc,16446
+pdf2wordx1/ico.ico,sha256=2Cc0osO4M4-ib06-ya_PE_wG9K59lQL8w33aaLSH9u4,270398
+pdf2wordx1/files/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdf2wordx1/files/functions.py,sha256=4fVwb4zV7t-wa2nkBJioIED9Bl3KeqPq7lTRhUXyX1E,3581
+pdf2wordx1/files/interfaz.py,sha256=xUA8rQJRdm6fbZy_aciZbPjJDbHvaqLx-KS_Ow3x2p0,5343
+pdf2wordx1/files/info/NOTICE,sha256=ovcgsz9E2RZ9Rjnmy5jozDZJivhcN9NlTO_Q0pygRN4,574
+pdf2wordx1/files/info/help,sha256=prXaJiTs_9nDqK-a1NHcn08SGUOC2xfoEb2HH4lwQIA,387
+pdf2wordx1-2.1.1.dist-info/licenses/LICENSE,sha256=ixrBUmMUv-okO-_Bkl_GLi67EHHFfmiL4TX45ytFvVk,1088
+pdf2wordx1-2.1.1.dist-info/METADATA,sha256=mkZ0WYIWox4Ak1_OUYqKcvUHrFRudmIl6KoWgcCR590,7625
+pdf2wordx1-2.1.1.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+pdf2wordx1-2.1.1.dist-info/entry_points.txt,sha256=AhzFt8zCXmiZgzg_q5YOAHYwhoAX0GgxVxPwAXFNVr4,56
+pdf2wordx1-2.1.1.dist-info/top_level.txt,sha256=ud8Np4lPl_lkUXQKnKoSF-xFy3LwxzOj2ETrq6e_N8g,11
+pdf2wordx1-2.1.1.dist-info/RECORD,,
