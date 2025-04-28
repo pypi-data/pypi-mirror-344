@@ -1,0 +1,96 @@
+// Assignment 7 WebCalculatorServer
+
+
+import com.sun.net.httpserver.HttpServer;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpExchange;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.InputStream;
+import java.net.InetSocketAddress;
+import java.util.HashMap;
+import java.util.Map;
+
+public class WebCalculatorServer {
+    public static void main(String[] args) throws Exception {
+        HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
+        server.createContext("/", new CalculatorHandler());
+        server.setExecutor(null); // creates a default executor
+        server.start();
+        System.out.println("Server started at http://localhost:8000/");
+    }
+
+    static class CalculatorHandler implements HttpHandler {
+        public void handle(HttpExchange exchange) throws IOException {
+            String response = "";
+
+            if ("GET".equals(exchange.getRequestMethod())) {
+                response = "<html><body>"
+                        + "<h1>Simple Web Calculator</h1>"
+                        + "<form method='POST'>"
+                        + "Number 1: <input name='num1' type='text'/><br><br>"
+                        + "Number 2: <input name='num2' type='text'/><br><br>"
+                        + "<input type='submit' name='operation' value='Add'/>"
+                        + "<input type='submit' name='operation' value='Subtract'/>"
+                        + "</form>"
+                        + "</body></html>";
+            } else if ("POST".equals(exchange.getRequestMethod())) {
+                InputStream is = exchange.getRequestBody();
+                StringBuilder sb = new StringBuilder();
+                int i;
+                while ((i = is.read()) != -1) {
+                    sb.append((char) i);
+                }
+                String body = sb.toString();
+                Map<String, String> params = parseQuery(body);
+
+                try {
+                    int num1 = Integer.parseInt(params.get("num1"));
+                    int num2 = Integer.parseInt(params.get("num2"));
+                    String operation = params.get("operation");
+
+                    int result = 0;
+                    if ("Add".equals(operation)) {
+                        result = num1 + num2;
+                    } else if ("Subtract".equals(operation)) {
+                        result = num1 - num2;
+                    }
+
+                    response = "<html><body>"
+                            + "<h1>Result: " + result + "</h1>"
+                            + "<a href='/'>Perform another calculation</a>"
+                            + "</body></html>";
+                } catch (Exception e) {
+                    response = "<html><body>"
+                            + "<h1>Error processing input.</h1>"
+                            + "<a href='/'>Try again</a>"
+                            + "</body></html>";
+                }
+            }
+
+            exchange.getResponseHeaders().set("Content-Type", "text/html");
+            exchange.sendResponseHeaders(200, response.getBytes().length);
+            OutputStream os = exchange.getResponseBody();
+            os.write(response.getBytes());
+            os.close();
+        }
+
+        private Map<String, String> parseQuery(String query) {
+            Map<String, String> result = new HashMap<>();
+            String[] pairs = query.split("&");
+            for (String pair : pairs) {
+                String[] keyValue = pair.split("=");
+                if (keyValue.length > 1) {
+                    result.put(keyValue[0], keyValue[1]);
+                }
+            }
+            return result;
+        }
+    }
+}
+
+// OUTPUT
+// C:\Users\Aryan\Desktop\javac\Assignment7>javac WebCalculatorServer.java
+
+// C:\Users\Aryan\Desktop\javac\Assignment7>java WebCalculatorServer
+// Server started at http://localhost:8000/

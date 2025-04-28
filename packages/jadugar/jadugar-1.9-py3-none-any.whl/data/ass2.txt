@@ -1,0 +1,238 @@
+//ass2 ReverseServer
+
+
+import ReverseModule.*; 
+
+import org.omg.CosNaming.*;
+
+import org.omg.CosNaming.NamingContextPackage.*;
+
+import org.omg.CORBA.*; 
+
+import org.omg.PortableServer.*;
+
+
+
+class ReverseServer
+
+{
+
+	public static void main(String[] args)
+
+	{
+
+		try
+
+		{ 	// initialize the ORB
+
+			org.omg.CORBA. ORB orb = org.omg.CORBA.ORB.init(args, null);
+
+			
+
+			// initialize the BOA/POA
+
+			POA rootPOA = POAHelper.narrow(orb.resolve_initial_references("RootPOA")); 
+
+			rootPOA.the_POAManager().activate();
+
+			// creating the calculator object 
+
+			ReverseImpl rvr = new ReverseImpl();
+
+			
+
+			// get the object reference from the servant class 
+
+			org.omg.CORBA.Object ref = rootPOA.servant_to_reference(rvr);
+
+			
+
+			System.out.println("Step1");
+
+			Reverse h_ref = ReverseModule.ReverseHelper.narrow(ref); 
+
+			System.out.println("Step2");
+
+			
+
+			org.omg.CORBA.Object objRef = orb.resolve_initial_references("NameService");
+
+			
+
+			System.out.println("Step3");
+
+			NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
+
+ 
+
+			System.out.println("Step4");
+
+			
+
+			String name = "Reverse";
+
+			NameComponent path[] = ncRef.to_name(name); 
+
+			ncRef.rebind(path,h_ref);
+
+			
+
+			System.out.println("Reverse Server reading and waiting....");
+
+			orb.run();
+
+		}
+
+		catch (Exception e)
+
+		{
+
+			e.printStackTrace();
+
+		}
+
+	}
+
+}
+
+
+// ReverseClient
+
+import ReverseModule.*; 
+
+import org.omg.CosNaming.*;
+
+import org.omg.CosNaming.NamingContextPackage.*;
+
+import org.omg. CORBA.*; 
+
+import java.io.*;
+
+
+
+class ReverseClient
+
+{
+
+	public static void main(String args[])
+
+	{
+
+		Reverse ReverseImpl=null;
+
+		try
+
+		{
+
+		// initialize the ORB 
+
+		org.omg.CORBA.ORB orb = org.omg.CORBA.ORB.init(args, null);
+
+		org.omg.CORBA.Object objRef = orb.resolve_initial_references ("NameService"); 
+
+		NamingContextExt ncRef = NamingContextExtHelper.narrow (objRef);
+
+		String name = "Reverse";
+
+		ReverseImpl = ReverseHelper.narrow(ncRef.resolve_str(name));
+
+		System.out.println("Enter String="); 
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+
+		String str = br.readLine();
+
+		String tempStr = ReverseImpl.reverse_string(str);
+
+		System.out.println(tempStr);
+
+		} 
+
+
+
+		catch (Exception e)
+
+		{ 
+
+		e.printStackTrace();
+
+		}
+
+	}
+
+}
+
+
+// ReverseImpl
+
+import ReverseModule.ReversePOA; 
+
+import java.lang.String; 
+
+class ReverseImpl extends ReversePOA
+
+{
+
+	ReverseImpl()
+
+	{
+
+		super();
+
+		System.out.println("Reverse Object Created");
+
+	}
+
+	public String reverse_string(String name) 
+
+	{
+
+		StringBuffer str=new StringBuffer(name); 
+
+		str.reverse(); 
+
+		return (("Server Send "+str));
+
+	}
+
+}
+
+// ReverseModule.idl
+
+module ReverseModule
+{
+interface Reverse
+{
+	string reverse_string(in string str);
+};
+};
+
+
+// OUTPUT
+
+
+// PS C:\Users\Project Lab\Desktop\DS_Lab\Assignment2> idlj -fall ReverseModule.idl
+// PS C:\Users\Project Lab\Desktop\DS_Lab\Assignment2> javac ReverseModule/*.java ReverseImpl.java ReverseServer.java ReverseClient.java
+// PS C:\Users\Project Lab\Desktop\DS_Lab> cd .\Assignment2\
+// PS C:\Users\Project Lab\Desktop\DS_Lab\Assignment2> tnameserv -ORBInitialPort 1050    
+// Initial Naming Context:
+// IOR:000000000000002b49444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e30000000000001000000000000009a000102000000000e3139322e3136382e31392e383000041a00000045afabcb0000000020000f424000000001000000000000000200000008526f6f74504f41000000000d544e616d65536572766963650000000000000008000000010000000114000000000000020000000100000020000000000001000100000002050100010001002000010109000000010001010000000026000000020002
+// TransientNameServer: setting port for initial object references to: 1050
+// Ready.
+
+
+// In another terminal
+// PS C:\Users\Project Lab\Desktop\DS_Lab\Assignment2> java ReverseServer -ORBInitialPort 1050 -ORBInitialHost localhost
+// Reverse Object Created
+// Step1
+// Step2
+// Step3
+// Step4
+// Reverse Server reading and waiting....
+
+
+// In another terminal i.e. client terminal
+// PS C:\Users\Project Lab\Desktop\DS_Lab\Assignment2> java ReverseClient -ORBInitialPort 1050 -ORBInitialHost localhost
+// Enter String=
+// Tu mera bhai
+// Server Send iahb arem uT
