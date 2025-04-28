@@ -1,0 +1,10 @@
+gstools_cython-1.1.0.dist-info/RECORD,,
+gstools_cython-1.1.0.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+gstools_cython-1.1.0.dist-info/WHEEL,sha256=gAndc3RwTmqSWBC8FDiMQK95V2QbDoGL8B8ss06ou4o,114
+gstools_cython-1.1.0.dist-info/top_level.txt,sha256=ixTzVPKGMID1plGf2p2ce4GkDjHt28CorVwCQS5IoZY,15
+gstools_cython-1.1.0.dist-info/METADATA,sha256=pfvQ7g_jd1oxAfq3UgBnfw8aDPcz8sTN5vw5TcnseZM,7030
+gstools_cython/krige.pypy39-pp73-darwin.so,sha256=bk5mHWvCTp4PRngKSNBp5oLzdRx9r_0y3DED8ODcz_s,176040
+gstools_cython/_version.py,sha256=XIz3qAg9G9YysQi3Ryp0CN3rtc_JiecHZ9L2vEzcM6s,21
+gstools_cython/field.pypy39-pp73-darwin.so,sha256=-eEK3KsV1-kJ_Qe3TKn0IAKQkMmW1uXFQk3RSZazyyE,176664
+gstools_cython/__init__.py,sha256=yRE0Hzm997_PO_Fc506u93TkIM9SPw0vUmZv306m0b8,673
+gstools_cython/variogram.pypy39-pp73-darwin.so,sha256=wN35dbqbpongBI9WpvHGw4ptwFYuE6nDRfBuxrbXbl4,216720
