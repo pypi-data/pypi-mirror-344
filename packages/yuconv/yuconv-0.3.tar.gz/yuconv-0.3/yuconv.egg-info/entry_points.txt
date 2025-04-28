@@ -1,0 +1,2 @@
+[console_scripts]
+yuconv = yuconv.__main__:main
