@@ -1,0 +1,87 @@
+Metadata-Version: 2.4
+Name: minion-agent-x
+Version: 0.1.3
+Summary: An enhanced version of minion-agent with extended capabilities
+Author-email: femtozheng <femtozheng@example.com>
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: browser-use>=0.0.1
+Requires-Dist: loguru>=0.0.1
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: smolagents>=0.0.1
+Provides-Extra: all
+Requires-Dist: asyncio>=3.4.3; extra == 'all'
+Requires-Dist: commonmark; extra == 'all'
+Requires-Dist: datasets; extra == 'all'
+Requires-Dist: filelock; extra == 'all'
+Requires-Dist: google-adk; extra == 'all'
+Requires-Dist: gradio>=5.25.0; extra == 'all'
+Requires-Dist: langchain-core>=0.3.49; extra == 'all'
+Requires-Dist: langchain-openai>=0.3.11; extra == 'all'
+Requires-Dist: langchain-together>=0.3.0; extra == 'all'
+Requires-Dist: langchain>=0.3.23; extra == 'all'
+Requires-Dist: langgraph>=0.3.29; extra == 'all'
+Requires-Dist: litellm; extra == 'all'
+Requires-Dist: markdownify>=1.1.0; extra == 'all'
+Requires-Dist: mcp>=1.5.0; extra == 'all'
+Requires-Dist: minionx>=0.0.1; extra == 'all'
+Requires-Dist: nest-asyncio>=0.0.1; extra == 'all'
+Requires-Dist: openai>=1.75.0; extra == 'all'
+Requires-Dist: openinference-instrumentation-smolagents; extra == 'all'
+Requires-Dist: pandas>=1.5.0; extra == 'all'
+Requires-Dist: pandoc; extra == 'all'
+Requires-Dist: playwright>=1.51.0; extra == 'all'
+Requires-Dist: pydantic; extra == 'all'
+Requires-Dist: pymdown-extensions>=10.14.3; extra == 'all'
+Requires-Dist: pypandoc; extra == 'all'
+Requires-Dist: smolagents>=1.13.0; extra == 'all'
+Requires-Dist: smolagents[litellm,mcp]>=1.10.0; extra == 'all'
+Requires-Dist: smolagents[mcp]>=1.13.0; extra == 'all'
+Requires-Dist: tavily-python>=0.5.1; extra == 'all'
+Requires-Dist: tenacity>=9.0.0; extra == 'all'
+Requires-Dist: together>=1.3.5; extra == 'all'
+Requires-Dist: xhtml2pdf; extra == 'all'
+Provides-Extra: deep-research
+Requires-Dist: commonmark; extra == 'deep-research'
+Requires-Dist: datasets; extra == 'deep-research'
+Requires-Dist: filelock; extra == 'deep-research'
+Requires-Dist: gradio>=5.25.0; extra == 'deep-research'
+Requires-Dist: langchain-together>=0.3.0; extra == 'deep-research'
+Requires-Dist: langchain>=0.3.23; extra == 'deep-research'
+Requires-Dist: langgraph>=0.3.29; extra == 'deep-research'
+Requires-Dist: litellm; extra == 'deep-research'
+Requires-Dist: nest-asyncio>=0.0.1; extra == 'deep-research'
+Requires-Dist: pandas>=1.5.0; extra == 'deep-research'
+Requires-Dist: pandoc; extra == 'deep-research'
+Requires-Dist: pydantic; extra == 'deep-research'
+Requires-Dist: pymdown-extensions>=10.14.3; extra == 'deep-research'
+Requires-Dist: pypandoc; extra == 'deep-research'
+Requires-Dist: smolagents>=1.13.0; extra == 'deep-research'
+Requires-Dist: tavily-python>=0.5.1; extra == 'deep-research'
+Requires-Dist: tenacity>=9.0.0; extra == 'deep-research'
+Requires-Dist: together>=1.3.5; extra == 'deep-research'
+Requires-Dist: xhtml2pdf; extra == 'deep-research'
+Provides-Extra: dev
+Requires-Dist: black>=23.0.0; extra == 'dev'
+Requires-Dist: isort>=5.12.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Provides-Extra: google
+Requires-Dist: google-adk; extra == 'google'
+Requires-Dist: litellm; extra == 'google'
+Provides-Extra: mcp
+Requires-Dist: asyncio>=3.4.3; extra == 'mcp'
+Requires-Dist: langchain-core>=0.3.49; extra == 'mcp'
+Requires-Dist: langchain-openai>=0.3.11; extra == 'mcp'
+Requires-Dist: markdownify>=1.1.0; extra == 'mcp'
+Requires-Dist: mcp>=1.5.0; extra == 'mcp'
+Requires-Dist: openai>=1.75.0; extra == 'mcp'
+Requires-Dist: playwright>=1.51.0; extra == 'mcp'
+Requires-Dist: smolagents[mcp]>=1.13.0; extra == 'mcp'
+Provides-Extra: minion
+Requires-Dist: minionx>=0.0.1; extra == 'minion'
+Provides-Extra: openai
+Requires-Dist: openai-agents>=0.0.7; extra == 'openai'
+Requires-Dist: openinference-instrumentation-openai-agents>=0.1.5; extra == 'openai'
+Provides-Extra: smolagents
+Requires-Dist: openinference-instrumentation-smolagents; extra == 'smolagents'
+Requires-Dist: smolagents[litellm,mcp]>=1.10.0; extra == 'smolagents'
