@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "pecha-org-tools"
+version = "0.0.6"
+description = "A package to help with data preparation for pecha.org"
+authors = [
+    "Tsundue <tsundue@esukhia.org>",
+    "Tashi Tsering <tashitsering@esukhia.org>"
+]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+openpyxl = ">=3.1.5"
+urllib3 = ">=2.2.3"
+anthropic = "0.40.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.1"
+commitizen = "^4.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+"Homepage" = "https://github.com/OpenPecha/openpecha-project-template"
+"Bug Tracker" = "https://github.com/OpenPecha/openpecha-project-template/issues"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.0.5"
+version_files = [
+    "pyproject.toml:version"
+]
+tag_format = "v$version"
