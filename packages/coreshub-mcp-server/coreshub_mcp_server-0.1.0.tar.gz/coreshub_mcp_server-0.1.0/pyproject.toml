@@ -1,0 +1,37 @@
+[project]
+name = "coreshub-mcp-server"
+version = "0.1.0"
+description = "A lightweight mcp server for coreshub."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "coreshub" }]
+maintainers = [{ name = "coreshub"}]
+keywords = ["mcp", "llm", "plugin", "extensible", "coreshub"]
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+]
+dependencies = [
+    "mcp>=1.1.3",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "requests>=2.28.0"
+]
+
+[project.scripts]
+coreshub-mcp-server = "coreshub_mcp_server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/coreshub_mcp_server"]
+
+[project.urls]
+Homepage = "https://www.coreshub.cn/"
+Repository = "https://github.com/coreshub/mcp-server-coreshub"
