@@ -1,0 +1,51 @@
+# File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+from __future__ import annotations
+
+from typing import List
+from typing_extensions import Annotated, TypedDict
+
+from ......._utils import PropertyInfo
+
+__all__ = ["SolaceAuthorizationGroupListParams"]
+
+
+class SolaceAuthorizationGroupListParams(TypedDict, total=False):
+    entity_ids: Annotated[List[str], PropertyInfo(alias="entityIds")]
+    """
+    The unique identifiers of designer entities, separated by commas, to retrieve
+    authorization group configurations from.
+    """
+
+    event_broker_ids: Annotated[List[str], PropertyInfo(alias="eventBrokerIds")]
+    """
+    The unique identifiers of the event brokers, separated by commas, to retrieve
+    authorization group configurations from.
+    """
+
+    ids: List[str]
+    """
+    The unique identifiers of the authorization group configurations to retrieve,
+    separated by commas.
+    """
+
+    page_number: Annotated[int, PropertyInfo(alias="pageNumber")]
+    """The page number to retrieve."""
+
+    page_size: Annotated[int, PropertyInfo(alias="pageSize")]
+    """The number of LDAP authorization group configurations to return per page."""
+
+    sort: str
+    """The sorting criteria for the returned results.
+
+    You can sort the results by query parameter in ascending or descending order.
+    Define the sort order using the following string: `fieldname:asc/desc` where:
+
+    - `fieldname` — The field name of the query parameter to sort by.
+    - `asc` — Sort the selected field name in ascending order.
+    - `desc` — Sort the selected field name in descending order.
+
+    If the direction is not specified, the default is ascending.
+
+    You can use multiple query parameters to refine the sorting order.
+    """
