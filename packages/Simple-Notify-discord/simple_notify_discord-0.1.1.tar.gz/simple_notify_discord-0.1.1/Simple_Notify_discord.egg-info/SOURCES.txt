@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+Simple_Notify_Discord/Simple_Notify_Discord.py
+Simple_Notify_Discord/__init_.py
+Simple_Notify_discord.egg-info/PKG-INFO
+Simple_Notify_discord.egg-info/SOURCES.txt
+Simple_Notify_discord.egg-info/dependency_links.txt
+Simple_Notify_discord.egg-info/top_level.txt
