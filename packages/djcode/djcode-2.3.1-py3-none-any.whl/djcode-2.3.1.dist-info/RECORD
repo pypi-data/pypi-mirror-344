@@ -1,0 +1,14 @@
+djcode/__init__.py,sha256=soByD-UQSIG_4Fz9tFqhbXY--isX4P_6AFVEqFlqr-Q,22
+djcode/djcode.py,sha256=LpPADc8LBxZvY9TuSbI5opfYJKhEYuoGXriI6NqdWzA,120364
+djsbmp/__init__.py,sha256=FMzkOu--Sh4Ul3p53GsTw_lD-kN7ibw7aSEt6rRjbK0,22
+djsbmp/djsbmp.py,sha256=JSHraue6FdaZEvf614P5TmG-0eRymQRClvyd7Bay08Q,120365
+djsbmpc/__init__.py,sha256=FMzkOu--Sh4Ul3p53GsTw_lD-kN7ibw7aSEt6rRjbK0,22
+djsbmpc/djsbmp.py,sha256=JSHraue6FdaZEvf614P5TmG-0eRymQRClvyd7Bay08Q,120365
+sbmp/__init__.py,sha256=FMzkOu--Sh4Ul3p53GsTw_lD-kN7ibw7aSEt6rRjbK0,22
+sbmp/djsbmp.py,sha256=JSHraue6FdaZEvf614P5TmG-0eRymQRClvyd7Bay08Q,120365
+sbmp/sbmp.py,sha256=JSHraue6FdaZEvf614P5TmG-0eRymQRClvyd7Bay08Q,120365
+djcode-2.3.1.dist-info/LICENSE,sha256=n3IXFOW4zc7pSwF6H7i_UcAJLEiscGOlUChg5uTQmU4,1075
+djcode-2.3.1.dist-info/METADATA,sha256=KxCrRFWgYrbfl6Z1Z51G4rcrdEi4jMHmdwgkBap9ets,987
+djcode-2.3.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+djcode-2.3.1.dist-info/top_level.txt,sha256=_LOpuzVXH3ij0UgDrPa2sl_npMjLz-suUfZ2zNVPb8M,7
+djcode-2.3.1.dist-info/RECORD,,
