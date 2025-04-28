@@ -1,0 +1,48 @@
+## 智器云科技内部平台调用工具描述
+
+#### 1.通过规则调用
+
+
+#### 2.通过规则规调用
+
+
+#### 3.通过模型调用
+
+
+#### 4公共查询接口
+
+
+
+## 依赖包安装
+##### 安装依赖工具
+pip install zqykjclient
+
+#### 调用示例
+    import zqykjhttp.webclient as model_client
+    
+    client = model_client.ModelClient(base_url="http://172.30.6.188")  # 初始化client
+    
+    
+    if __name__ == '__main__':
+        try:
+            # 获取规则列表
+            rules = client.list_rules()
+            print(f"共有{len(rules)}条规则")
+            print(rules)
+    
+            # 获取规则协议
+            ruleTaskInfo = client.get_rule_protocol(rule_id=1911658357835882497)
+            print(ruleTaskInfo)
+    
+            # 执行规则
+            taskId = client.execute_rule_protocol(protocol_data=ruleTaskInfo)
+            print(taskId)
+    
+            # 查询任务结果
+            taskInfo = client.get_task_info(task_id=taskId)
+            print(taskInfo)
+    
+        except model_client.FinanceAPIError as e:
+            print(f"API调用失败: {e} (状态码: {e.status_code})")
+            if e.detail:
+                print(f"错误详情: {e.detail}")
