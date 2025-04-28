@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+savemelord/__init__.py
+savemelord/reader.py
+savemelord.egg-info/PKG-INFO
+savemelord.egg-info/SOURCES.txt
+savemelord.egg-info/dependency_links.txt
+savemelord.egg-info/top_level.txt
