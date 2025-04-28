@@ -1,0 +1,18 @@
+{
+  "branches": "main",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/git",
+    "@semantic-release/github",
+    {
+      "path": "@semantic-release/exec",
+      "prepareCmd": "uv pip install hatch && hatch build"
+    },
+    {
+      "path": "@semantic-release/exec",
+      "publishCmd": "twine upload --repository-url https://upload.pypi.org/legacy/ dist/*"
+    }
+  ]
+}
