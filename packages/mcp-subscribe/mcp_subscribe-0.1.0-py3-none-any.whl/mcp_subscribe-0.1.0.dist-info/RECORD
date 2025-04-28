@@ -1,0 +1,7 @@
+mcp_subscribe/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mcp_subscribe/server.py,sha256=Ex2-e7qiTjsfntCLL-NxN5_wyufOFQa4IFWpuGOTkz8,12243
+mcp_subscribe/util.py,sha256=GpG4TkexV8qoXqEpVvBiyLS73jmAYlRQL0IQBd2VDV0,306
+mcp_subscribe-0.1.0.dist-info/METADATA,sha256=QHPT-5Jsh1DQ8CyVxViYysP7FDlR6_8AGIzeGCdu6qw,937
+mcp_subscribe-0.1.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+mcp_subscribe-0.1.0.dist-info/entry_points.txt,sha256=OkD6P48PIx7UM2cN_G_ctRBnncX_PGbULZiTYCtY8Rw,58
+mcp_subscribe-0.1.0.dist-info/RECORD,,
