@@ -1,0 +1,9 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+grammateus/__init__.py,sha256=uabGQE9mhH9Sb9mJHD_G13kIrJ1Rg3Z7M_rULglutps,277
+grammateus/entities.py,sha256=2LZWlG3vUrFmtRyyy0Oyrx5TDzCoT6yTHZEY5PZqBFQ,6119
+grammateus/utilities.py,sha256=TRlaHmZSZsRoNABQvXQ7asF4WFpGudnZQlNxPBAkKRk,516
+grammateus-0.0.19.dist-info/licenses/LICENSE,sha256=BN2PMVuQzswbex0foJhVXSY4XI_Ud4o-Xc9knovYUeU,1074
+grammateus-0.0.19.dist-info/METADATA,sha256=meLDzeznSzMjFlC-WrYEnp7vKbKNhHlVCKxTks2IfRg,2237
+grammateus-0.0.19.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+grammateus-0.0.19.dist-info/top_level.txt,sha256=PkFqaLPZ0OLfJu_rOx0j7zQYkaPHXVhEs7t8UHleECs,20
+grammateus-0.0.19.dist-info/RECORD,,
