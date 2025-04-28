@@ -1,0 +1,12 @@
+ellk/__init__.py,sha256=YD28Jg3i8Tz4wAquK9Ki_ZhuxUR3inBckHOq4TsRRto,917
+ellk/fluxes.py,sha256=DTMbE91M1GFYJj7s1aSIQBbUmJK2lhcwe6Lbts3bx3E,22643
+ellk/lc.py,sha256=VjQOILeEMKRqn3BihjBYgcQfETrYhCLRxMmASEn1LL8,23218
+ellk/ldy.py,sha256=hw75XDTvdZmhRd_EaJqaVfpRaMpGUASrTZsPivw1HyU,4726
+ellk/rv.py,sha256=S5xAccuv-HLHnpAhXpzRaCdkIVxLFV4zafDHH1r3Eys,25331
+ellk/version.py,sha256=t5Pqz6gSamH_qj-MTDPAr-hvt46P1HB2Bd7y3LrWHoA,50
+ellk-1.8.11.data/scripts/ellc_emcee,sha256=pKOcOUArlDTQpUBi5RskbgjUeVPPHMDQ2PVwfhgk5Ks,40911
+ellk-1.8.11.dist-info/licenses/LICENSE.txt,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+ellk-1.8.11.dist-info/METADATA,sha256=EhIi6g6_wgy6tmzjgPZY0FAicxcO103z8KxL8ze2KXs,803
+ellk-1.8.11.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+ellk-1.8.11.dist-info/top_level.txt,sha256=udZ8GPYUFtfcXS-4Vfb3Fjb0SUvzbvyD4uuPxjxawKg,5
+ellk-1.8.11.dist-info/RECORD,,
