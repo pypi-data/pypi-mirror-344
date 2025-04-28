@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-linear = mcp_linear_app.__init__:main
