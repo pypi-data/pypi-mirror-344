@@ -1,0 +1,10 @@
+sipua/__init__.py,sha256=J053kNhLEkXeegJ4_fy_IrB8MlDCK7rqQB-7uTw5IvY,610
+sipua/py.typed,sha256=sow9soTwP9T_gEAQSVh7Gb8855h04Nwmhs2We-JRgZM,7
+sipua/transaction.py,sha256=3u9fBTIFktlJboPu8uZWiNKKUqWr5W4h19bzVufJtzc,17512
+sipua/transport.py,sha256=zwXG2b8uxpFmLSaRhxW5W7rJyF1FKmDgCq_KFC4zV84,21249
+sipua/utils.py,sha256=4bt57N4AODmtNTy1k3DOQ0A271k7caZDvO7Ut8Iri8E,4240
+sipua-0.3.1.dist-info/licenses/LICENSE,sha256=DD5LT_ZPvYNHlVtngdMvFLLM9BGMXkXOi511xl2C_Oo,1295
+sipua-0.3.1.dist-info/METADATA,sha256=sXHtgbG781aJWvgdQ5p_GjY0pAjWVIjvlCAJHzreL1M,2188
+sipua-0.3.1.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+sipua-0.3.1.dist-info/top_level.txt,sha256=t1iPaQ9AzFaV_UpYD4rkADNRFgycoOw2zMGK6WyS3F8,6
+sipua-0.3.1.dist-info/RECORD,,
