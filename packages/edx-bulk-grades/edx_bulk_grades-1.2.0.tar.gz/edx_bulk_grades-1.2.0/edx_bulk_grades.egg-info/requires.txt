@@ -1,0 +1,6 @@
+django-model-utils
+Django
+edx-opaque-keys
+super-csv
+requests
+slumber

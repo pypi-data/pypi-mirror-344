@@ -1,0 +1,2 @@
+[lms.djangoapp]
+bulk_grades = bulk_grades.apps:BulkGradesConfig
