@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-b79f496617fb106efcc9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "pybind11",
+					"jsonFile" : "directory-pybind11-Release-509bf82f3abcddd3d4c7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "pybind11"
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "nn_lowthrust",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "pybind11",
+					"parentIndex" : 0
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "nn_lowthrust::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-nn_lowthrust-Release-1feb7ea944d367838bf9.json",
+					"name" : "nn_lowthrust",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/Seafile/\u535a\u58eb\u540e/\u8bba\u6587/\u5c0f\u63a8\u529b\u62df\u5408\u8bba\u6587/Code/CMake_pybind_nn_eigen/out/build/x64-release",
+		"source" : "E:/Seafile/\u535a\u58eb\u540e/\u8bba\u6587/\u5c0f\u63a8\u529b\u62df\u5408\u8bba\u6587/Code/CMake_pybind_nn_eigen"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

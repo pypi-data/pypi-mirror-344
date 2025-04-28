@@ -1,0 +1,19 @@
+[build-system]
+requires = ["scikit-build-core>=0.7", "pybind11>=2.12"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "neural_lowthrust"          # ← PyPI 发布名
+authors = [{name = "Zhong Zhang", email = "zhongzhang.astro@gmail.com"}]
+version = "0.1.0"
+description = "Eigen-based low-thrust trajectory predictor"
+license = "MPL-2.0"
+requires-python = ">=3.9"
+dependencies = ["numpy"]  
+
+[tool.scikit-build]
+wheel.packages = ["neural_lowthrust", "neural_lowthrust.models"]
+
+[tool.scikit-build.cmake]
+version = ">=3.18"
+build-type = "Release"

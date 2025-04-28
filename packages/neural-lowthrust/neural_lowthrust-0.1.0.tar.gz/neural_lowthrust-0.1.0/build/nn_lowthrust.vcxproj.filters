@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\Seafile\博士后\论文\小推力拟合论文\Code\CMake_pybind_nn_eigen\src\bindings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Seafile\博士后\论文\小推力拟合论文\Code\CMake_pybind_nn_eigen\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E9CB9913-4C2D-3E6C-A270-E651A291266B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

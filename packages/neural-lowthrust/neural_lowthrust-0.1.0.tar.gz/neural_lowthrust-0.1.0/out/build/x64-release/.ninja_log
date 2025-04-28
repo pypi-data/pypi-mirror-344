@@ -1,0 +1,4 @@
+# ninja log v5
+2	33	0	E:/Seafile/博士后/论文/小推力拟合论文/Code/CMake_pybind_nn_eigen/out/build/x64-release/CMakeFiles/cmake.verify_globs	98b423c72935c970
+34	4305	7674914224578673	CMakeFiles/nn_lowthrust.dir/src/bindings.cpp.obj	e013755ca626f2bc
+4314	21617	7674914395525044	nn_lowthrust.cp311-win_amd64.pyd	8a55a28d78503f51

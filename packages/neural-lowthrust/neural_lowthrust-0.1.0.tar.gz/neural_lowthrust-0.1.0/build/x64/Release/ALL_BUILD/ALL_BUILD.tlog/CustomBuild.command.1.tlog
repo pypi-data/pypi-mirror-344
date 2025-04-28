@@ -1,0 +1,10 @@
+^E:\SEAFILE\博士后\论文\小推力拟合论文\CODE\CMAKE_PYBIND_NN_EIGEN\CMAKELISTS.TXT
+setlocal
+C:\Strawberry\c\bin\cmake.exe -SE:/Seafile/博士后/论文/小推力拟合论文/Code/CMake_pybind_nn_eigen -BE:/Seafile/博士后/论文/小推力拟合论文/Code/CMake_pybind_nn_eigen/build --check-stamp-file E:/Seafile/博士后/论文/小推力拟合论文/Code/CMake_pybind_nn_eigen/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
