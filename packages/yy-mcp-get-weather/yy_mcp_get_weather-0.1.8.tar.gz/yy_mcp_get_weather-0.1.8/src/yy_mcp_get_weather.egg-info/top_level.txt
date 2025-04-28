@@ -1,0 +1,1 @@
+yy_mcp_get_weather

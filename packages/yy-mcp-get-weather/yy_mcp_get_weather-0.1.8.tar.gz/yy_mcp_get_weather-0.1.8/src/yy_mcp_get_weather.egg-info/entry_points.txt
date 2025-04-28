@@ -1,0 +1,2 @@
+[console_scripts]
+yy-mcp-get-weather = yy_mcp_get_weather:main
