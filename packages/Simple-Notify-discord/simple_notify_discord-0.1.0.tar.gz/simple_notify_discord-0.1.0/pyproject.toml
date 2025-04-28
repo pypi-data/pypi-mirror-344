@@ -1,0 +1,12 @@
+[project]
+name = "Simple-Notify-discord"
+version = "0.1.0"
+description = "Simple-Notify-discord allows you to simply send a message on Discord via a webhook, it allows you to alert when a process is finished or other depending on your context."
+authors = [{name = "CogalTek", email = "mathieurio.contact@gmail.com"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
