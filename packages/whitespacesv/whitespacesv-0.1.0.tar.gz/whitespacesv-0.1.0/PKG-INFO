@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: whitespacesv
+Version: 0.1.0
+Summary: Fork from stenway/WSV-Python
+Author-email: Tim Hörmann <pypi@audivir.de>
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: coverage[toml]; extra == "dev"
+Requires-Dist: vulture; extra == "dev"
+Dynamic: license-file
+
+# whitespacesv
