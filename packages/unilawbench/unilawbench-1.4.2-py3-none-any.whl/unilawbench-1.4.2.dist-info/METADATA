@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: unilawbench
+Version: 1.4.2
+Requires-Dist: evalscope[all]
+Requires-Dist: PyQt5
+Requires-Dist: pytrec-eval-terrier
+
