@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: orange3-tableau-hyper
+Version: 0.0.1
+Summary: Orange3 File Format for Tableau Hyper files
+Author-email: Chris Lee <github@chrislee.dhs.org>
+License: CC-BY-NC-SA-4.0
+Project-URL: Homepage, https://github.com/chrislee35/orange3-tableau-hyper
+Keywords: orange3 add-on
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Orange3>=3.34.0
+Requires-Dist: pantab>=5.2.1
+Provides-Extra: test
+Requires-Dist: coverage; extra == "test"
+Provides-Extra: doc
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: recommonmark; extra == "doc"
+Requires-Dist: sphinx_rtd_theme; extra == "doc"
+Dynamic: license-file
+
+# orange3-tableau-hyper
+
+This allows users to load and save Tableau hyper files.
+
+## Installation
+
+Within the Add-ons installer, click on "Add more..." and type in orange3-tableau-hyper
+
+## Example Usage
+
+
+### Example Datasets
+
+
