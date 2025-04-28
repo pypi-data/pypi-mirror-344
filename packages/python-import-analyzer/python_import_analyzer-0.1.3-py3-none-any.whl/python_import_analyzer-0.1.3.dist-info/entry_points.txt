@@ -1,0 +1,2 @@
+[console_scripts]
+import-analyzer = python_import_analyzer.dependency_dashboard:main
