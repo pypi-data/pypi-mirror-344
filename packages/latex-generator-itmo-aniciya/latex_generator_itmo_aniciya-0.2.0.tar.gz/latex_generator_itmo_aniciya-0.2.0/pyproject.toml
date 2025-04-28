@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "latex-generator-itmo-aniciya"
+version = "0.2.0"
+description = "Генератор LaTeX в функциональном стиле"
+authors = ["aniciya777 <kisaost777@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+keywords = ["latex", "generator", "itmo"]
+homepage = "https://github.com/aniciya777/latex_generator_itmo_aniciya"
+repository = "https://github.com/aniciya777/latex_generator_itmo_aniciya"
+documentation = "https://github.com/aniciya777/latex_generator_iЦЦtmo_aniciya#readme"
+packages = [
+  { include = "latex_generator_itmo_aniciya" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+
+[tool.poetry.group.dev.dependencies]
+poetry-core = "^2.1.2"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
