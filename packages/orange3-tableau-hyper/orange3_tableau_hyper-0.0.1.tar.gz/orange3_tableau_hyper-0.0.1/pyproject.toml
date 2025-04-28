@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orange3-tableau-hyper"
+version = "0.0.1"
+description = "Orange3 File Format for Tableau Hyper files"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "CC-BY-NC-SA-4.0" }
+authors = [
+    { name = "Chris Lee", email = "github@chrislee.dhs.org" },
+]
+keywords = ["orange3 add-on"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3 :: Only"
+]
+dependencies = [
+    "Orange3 >=3.34.0",
+    "pantab >=5.2.1"
+]
+
+[license]
+license = "CC-BY-NC-SA-4.0"
+license-files = ["LICENSE"]
+
+[project.optional-dependencies]
+test = ["coverage"]
+doc = ["sphinx", "recommonmark", "sphinx_rtd_theme"]
+
+[project.urls]
+Homepage = "https://github.com/chrislee35/orange3-tableau-hyper"
+
+[project.entry-points."orange3.addon"]
+orange3-tableau-hyper = "orangecontrib.hyper"
+
+[project.entry-points."orange.widgets"]
+hyper = "orangecontrib.hyper.misc"

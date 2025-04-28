@@ -1,0 +1,5 @@
+[orange.widgets]
+hyper = orangecontrib.hyper.misc
+
+[orange3.addon]
+orange3-tableau-hyper = orangecontrib.hyper
