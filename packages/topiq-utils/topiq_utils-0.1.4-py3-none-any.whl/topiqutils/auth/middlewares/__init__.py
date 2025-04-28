@@ -1,0 +1,1 @@
+from topiqutils.auth.middlewares.jwt_decode import JWTDecodeMiddleWare
