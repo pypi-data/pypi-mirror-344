@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: kxmcmfsw
+Version: 0.1.3
+Summary: Add your description here
+Author-email: kxmc <rekxmc@163.com>
+Requires-Python: >=3.13
+Requires-Dist: hatchling>=1.27.0
+Requires-Dist: mcp>=1.6.0
+Description-Content-Type: text/markdown
+
+python 项目测试工程
+
+windows 文件和目录操作
