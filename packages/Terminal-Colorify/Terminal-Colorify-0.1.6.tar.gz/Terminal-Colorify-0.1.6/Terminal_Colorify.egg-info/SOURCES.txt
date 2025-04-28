@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+Terminal_Colorify.egg-info/PKG-INFO
+Terminal_Colorify.egg-info/SOURCES.txt
+Terminal_Colorify.egg-info/dependency_links.txt
+Terminal_Colorify.egg-info/top_level.txt
+colors/__init__.py
