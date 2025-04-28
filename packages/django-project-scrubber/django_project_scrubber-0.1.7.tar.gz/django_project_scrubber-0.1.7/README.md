@@ -1,0 +1,61 @@
+# Django Project Scrubber
+
+A tool to analyze Django projects for unused components, helping you keep your codebase clean and maintainable.
+
+## Features
+
+- 🔍 Find unused URLs in your Django project
+- 📄 Identify unused templates
+- 🔄 Detect duplicate method names
+- 🧹 Clean up unused code
+- 🚀 Improved URL detection with support for namespaced URLs
+- 📝 Enhanced template analysis with dynamic scanning
+- 🎯 Better console output with positive messages
+- 🔧 Support for Python 3.8 through 3.11
+
+## Installation
+
+```bash
+pip install django-project-scrubber
+```
+
+## Usage
+
+```bash
+django_scrubber /path/to/your/django/project
+```
+
+## Project Status
+
+Version 0.1.7 - Enhanced URL and template analysis with improved detection patterns and better console output.
+
+## License
+
+MIT License
+
+## Author
+
+HappyMinsker - [GitHub](https://github.com/HappyMinsker)
+
+## How It Works
+
+The Django Project Scrubber analyzes your Django project by:
+1. Scanning all URL patterns in your project
+2. Checking URL usage in templates and code (including namespaced URLs)
+3. Analyzing Django source code for built-in URL and template usage
+4. Analyzing template usage (includes, extends, and view rendering)
+5. Supporting partial templates (files starting with underscore)
+6. Detecting URLs in template attributes (href, form actions)
+7. Identifying templates used in class-based views and error handlers
+8. Marking templates that use URLs as used
+9. Filtering out common false positives (admin, auth, etc.)
+10. Providing a clear summary of potentially unused components
+
+## Requirements
+
+- Python 3.8 or higher
+- Django 3.0 or higher
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. 
