@@ -1,0 +1,13 @@
+wilhelminacli/__init__.py,sha256=6-jmwcKLYyx6j0g0blDzL7irRn_Ysb8G8NPBFHt4AKo,17
+wilhelminacli/cli.py,sha256=QasNG8PLAAPVJ5Q-vrJLyeXQEOFWy1pyBM4MOKMuhd4,12802
+wilhelminacli/tests/__init__.py,sha256=fpryPE2HaehVQ2yVDFKHTvnVrAw28kUxkTs8qWXWhg8,20
+wilhelminacli/tests/conftest.py,sha256=UoyF2sIZT1HXB8D1AYYxlwFgTFc1tVlczNzWmmCskW8,433
+wilhelminacli/tests/test_cli.py,sha256=tYakUNLgXmeKVzVW3BQliQKL_bc8ucc74mtvFZJCVc4,4856
+wilhelminacli/utils/__init__.py,sha256=1avCovfGMfo6APJUU5ihuEvE4JSI4Nk8yE9QRAJBWJw,335
+wilhelminacli/utils/interactive.py,sha256=eCnCszHJbATM9Sp5Zk3kuyq479nXamjKW_4qKSYJP-o,19250
+wilhelminacli/utils/summarizer.py,sha256=SBYMo1xnK1G_g1FL_Wn6MfCiYsdfnou4JQaBj1CdJuk,5020
+wilhelminacli-0.1.0.dist-info/LICENSE,sha256=2f5A7UMSFaao2a3Z-wuW5OP5m6feMUbwr5p96RV4dbI,1084
+wilhelminacli-0.1.0.dist-info/METADATA,sha256=A2FrgxQbAEcxeH8rSiiKB9Q6jFlZIHnMjVnHX_nOySo,3733
+wilhelminacli-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+wilhelminacli-0.1.0.dist-info/entry_points.txt,sha256=nv5Dp55Z3muzkJGCtgtmUlFOvsQYDoNX0MoX8ANkb9U,52
+wilhelminacli-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+wilhelmina=wilhelminacli.cli:app
+
