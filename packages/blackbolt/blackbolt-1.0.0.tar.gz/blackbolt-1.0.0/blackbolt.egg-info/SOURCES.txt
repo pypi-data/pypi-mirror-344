@@ -1,0 +1,62 @@
+LICENSE.txt
+README.md
+setup.py
+blackbolt.egg-info/PKG-INFO
+blackbolt.egg-info/SOURCES.txt
+blackbolt.egg-info/dependency_links.txt
+blackbolt.egg-info/not-zip-safe
+blackbolt.egg-info/top_level.txt
+src/blackbolt/__init__.py
+src/blackbolt/main.py
+src/blackbolt/data/ML TS XAI HC/ML/requirements.txt
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/1. EDA-PCA (Balance Scale Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/1. EDA-PCA (Rice Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/10. HMM Veterbi.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/2. KNN (Balance Scale Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/2. KNN (Iris Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/2. KNN (Sobar-72 Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/3. LDA (Balance Scale Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/3. LDA (NPHA Doctor Visits Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/4. Linear Regression (Machine Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/4. Linear Regression (Real Estate Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/5. Logistic Regression (Magic04 Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/5. Logistic Regression (Wine Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/6. Naive Bayes Classifier (Agaricus Lepiota Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/6. Naive Bayes Classifier (Wine Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/7. SVM (Rice Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/8. FeedForward NN (Sobar72 Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 1/9. CNN (Cifar10 Dataset).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 2/1. PCA.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 2/10. CNN.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 2/11. HMM.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 2/2. KNN.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 2/3. LDA.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 2/4. Linear Regression.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 2/5. Logistic Regression.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 2/6. Naive Bayes (Titanic).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 2/6. Naive Bayes (Wine).ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 2/7. SVM Linear.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 2/8. SVM Non-Linear.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 2/9. FNN With Regularization.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 2/9. FNN Without Regularization.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 2/All in One Lab CIA 1 Q.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/1. PCA EDA.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/10. CNN.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/11. HMM 2.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/11. HMM 3.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/11. HMM 4.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/11. HMM.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/2. KNN.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/3. LDA.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/4. Linear Regression.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/5. Logistic Regression.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/6. Bayesian Classifier.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/7. SVM.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/8. MLP.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/9. Ridge - Lasso.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/9. Ridge Lasso 2.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/Image Load Example.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/ML 3 (Latest)/Updated_Untitled.ipynb
+src/blackbolt/data/ML TS XAI HC/ML/Others/Rolls Royce AllinOne.ipynb
+src/blackbolt/utils/__init__.py
+src/blackbolt/utils/shell_utils.py
