@@ -1,0 +1,12 @@
+reqtestium/__init__.py,sha256=jB9tRoAroOikn-PqHG9NDskqF3rDJ5aM_JNoxS6LN2I,330
+reqtestium/api_client.py,sha256=uUGVtXWMsby2YSSLRwwilgRXXd2pWRa4sU7zb0HO5U0,1613
+reqtestium/api_response.py,sha256=f19vfcmwhvcp_jA9dGnnj0QC_4A7ZYS9sbsc5BECMCw,5247
+reqtestium/configuration.py,sha256=svjMaKBkedPE0bdtfc-mu3KiQmrNJYOelnHEMx16iFk,341
+reqtestium/loggers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+reqtestium/loggers/allure_logger.py,sha256=Kybice2sJEipqZZh5av6yVyLwqfHhjV3A-pOLQSS_9s,2764
+reqtestium/loggers/console_logger.py,sha256=lu0PAtRj2wC6trj0JIsoDiaQFGNrJIliPj0cWYyNr3I,2618
+reqtestium/loggers/logger.py,sha256=cXFRzddaXNpZ0KU7DcQ86B0dj8IL2ZtCdK_EbsxBXW0,176
+reqtestium/utils.py,sha256=LaV7gcIheqqI42Is9nwdtei0O_NFV480GMsvklAXRIE,1837
+reqtestium-0.10.0.dist-info/METADATA,sha256=vA24d65klsOKGU-hO_MUtxkuwF7UV4tAqA6vJy9eA2M,2767
+reqtestium-0.10.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+reqtestium-0.10.0.dist-info/RECORD,,
