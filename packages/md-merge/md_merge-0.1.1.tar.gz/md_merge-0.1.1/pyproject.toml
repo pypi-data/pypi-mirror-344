@@ -1,0 +1,36 @@
+[project]
+name = "md-merge"
+version = "0.1.1"
+description = "A Python tool designed to take a list of Markdown files and merge them into a single document."
+readme = "README.md"
+authors = [{ name = "difegam", email = "difegam3@gmail.com" }]
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+keywords = [
+    "markdown",
+    "merge",
+    "markdown-merge",
+    "md-merge",
+    "python-markdown",
+]
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/difegam/md-merge"
+"Bug Reports" = "https://github.com/difegam/md-merge/issues"
+"Source" = "https://github.com/difegam/md-merge"
+
+[project.scripts]
+md-merge = "md_merge.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["pre-commit>=4.2.0"]
