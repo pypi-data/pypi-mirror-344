@@ -1,0 +1,8 @@
+diatomics/__init__.py,sha256=OdVYQkhQX2KMgKX844El7ilSVTtH5Iff03b3AcjX7ng,791
+diatomics/__main__.py,sha256=PaCSIYbOP643BtEu7nb7AVWOjUx18e6Z5r1bwrjYuSo,35
+diatomics/connector.py,sha256=sjnmkD0ceKSZWk4FbJh5XlqcSpFI5Fyo7elsXrZLBQQ,1867
+diatomics/diatomic.py,sha256=EfBIllqPdfX98X4fIM4Pz8yIah1I6_x_1iB6pYvz5GM,2110
+diatomics/moleculedata.csv,sha256=3VQp6hKCM7vyoNZHC1_8RgwvcNYiS3DezJIEK2r-sfQ,123785
+diatomics-0.1.0.dist-info/METADATA,sha256=RZq2niX6bMpy0UP9n2O6yU83lgOKRlpUr6tWH-dR9rk,1153
+diatomics-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+diatomics-0.1.0.dist-info/RECORD,,
