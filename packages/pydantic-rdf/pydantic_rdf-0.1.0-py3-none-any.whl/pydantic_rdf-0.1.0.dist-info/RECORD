@@ -1,0 +1,9 @@
+pydantic_rdf/__init__.py,sha256=dCq7F4BZG-6c032cHobqPj8aynXnmoIlRCvcQhQQEZI,992
+pydantic_rdf/annotation.py,sha256=avGklDg6OvKETwlrx4tiS2Ehs3JGTUX_kAAwDIfoxgE,2188
+pydantic_rdf/exceptions.py,sha256=Ao-WYaKCDior7FVLPFsndLLFqF3UY__pMYN7M3s9Pkc,585
+pydantic_rdf/model.py,sha256=-lM6vo8cPPTdLGcYZIKsWDNa9GPk98MOtuRtDZ9C2lo,13947
+pydantic_rdf/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydantic_rdf/types.py,sha256=waB69KrgxvIgBDPfp1IZHNN_PkO7KK3fJ2q9mpqAQyA,422
+pydantic_rdf-0.1.0.dist-info/METADATA,sha256=tW3f-cX7LZ8yOnXIp1JcJO8p0UKSrt1gu4PLQmkuIAQ,3771
+pydantic_rdf-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pydantic_rdf-0.1.0.dist-info/RECORD,,
