@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: Schiphol-API
+Version: 0.0.1
+Summary: Python API to interact with schiphol endpoints
+Author-email: Rohit Yadav <edu.rohit.y@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/Rohit8y/Schiphol-API
+Project-URL: Issues, https://github.com/Rohit8y/Schiphol-API/issues
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests==2.32.3
+Requires-Dist: responses==0.25.7
+Requires-Dist: python-dotenv==1.1.0
+Dynamic: license-file
+
+# Schiphol-API
+Dev API to get Schiphol airport data
