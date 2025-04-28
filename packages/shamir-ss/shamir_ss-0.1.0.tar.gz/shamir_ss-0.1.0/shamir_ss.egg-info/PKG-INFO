@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: shamir-ss
+Version: 0.1.0
+Summary: Shamir's Secret Sharing implementation using Cython
+Author-email: peplxx <91543105+peplxx@users.noreply.github.com>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: cryptography<45.0.0,>=44.0.2
+Dynamic: license-file
+
+
+## References & Resources
+ - [Cython C libraries usage](https://cython.readthedocs.io/en/latest/src/tutorial/clibraries.html)
+ - [Cython & GIL](https://cython.readthedocs.io/en/latest/src/userguide/nogil.html)
