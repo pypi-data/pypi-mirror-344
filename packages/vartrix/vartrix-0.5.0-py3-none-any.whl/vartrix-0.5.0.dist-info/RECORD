@@ -1,0 +1,14 @@
+vartrix/__init__.py,sha256=1rnAIdrA2h5BCwS73aXCAL9SuCuULGiee_ELOhRNalU,533
+vartrix/aliases.py,sha256=BqHppm_uFKbv5ZfRJeKsvAsqvWV_3Qt68b_yJ76S2s4,837
+vartrix/automate.py,sha256=wyrnJoRTHFspTgzhT5ZQ_6Yq12kwJsTsYnFM55XYdAo,12205
+vartrix/container.py,sha256=cEdd047yANj4ni_ZxVpIHh628GEYlVcLiOMVNZoaTfg,5431
+vartrix/context.py,sha256=YYqXnpXcsTH3soxzcmIVmpMdwGrzx6YwDmGMAm0yTMc,2829
+vartrix/namespace.py,sha256=V5cpVdHfyP16SvsbiyC0XUD3To4z6JEvJ9k2gK-XJns,1177
+vartrix/persist.py,sha256=Heo1ZwYNiFRoIl7PlswkA23Hytifc7Vr36xtPJGFNrU,6686
+vartrix/sequence.py,sha256=gWyED3ziw86G4Z25wOy86tQGaibdNAw7Igvgj83BvQc,3943
+vartrix/settings.py,sha256=9iyNDX1kEqdX6YTjpNECIGwiNXGzPO_fL0Gz85EsnHk,185
+vartrix/utils.py,sha256=2Rtl2l5gwhIlzvWUlrmExhhhsArpnAlxh7vGsK9zDfI,4798
+vartrix-0.5.0.dist-info/METADATA,sha256=5aXMK2FDyrWPo_5_0q-oXxVpy_xvQL3SYh5CJRolppU,12992
+vartrix-0.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+vartrix-0.5.0.dist-info/licenses/LICENSE,sha256=QmxOP9csg_fTu_u1KtbIczkjRTHUeXkKao4OZP5GiQg,1087
+vartrix-0.5.0.dist-info/RECORD,,
