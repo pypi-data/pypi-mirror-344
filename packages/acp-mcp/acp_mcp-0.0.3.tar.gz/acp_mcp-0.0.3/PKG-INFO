@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: acp-mcp
+Version: 0.0.3
+Summary: Serve ACP agents over MCP
+Author: IBM Corp.
+Maintainer-email: Tomas Pilar <thomas7pilar@gmail.com>
+License-File: LICENSE
+Requires-Python: <4.0,>=3.11
+Requires-Dist: acp-sdk
+Requires-Dist: mcp>=1.6.0
+Description-Content-Type: text/markdown
+
+# ACP2MCP Adapter
+
+Lightweght standalone MCP server acting as an adapter for ACP agents into the MCP ecosystem.
+
+## Capablities
+
+- Agents as Resources
+- Agents as Tools
+
+## Transports
+
+- Stdio
