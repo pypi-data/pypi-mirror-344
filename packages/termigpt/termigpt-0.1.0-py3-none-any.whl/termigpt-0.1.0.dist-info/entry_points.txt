@@ -1,0 +1,3 @@
+[console_scripts]
+termgpt=termgpt.termgpt:main
+
