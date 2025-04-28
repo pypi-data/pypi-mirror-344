@@ -1,0 +1,104 @@
+Metadata-Version: 2.4
+Name: voidfindertk
+Version: 0.0.1
+Summary: A package to compare void finders
+Author-email: Federico Bustillos <jorgefedericobustillosrava@gmail.com>, Sebastian Gualpa <srgualpa@unc.edu.ar>
+License: The MIT License
+Project-URL: Repository, https://github.com/FeD7791/voidFinderProject.git
+Keywords: void finder,astronomy,large scale structure
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: attrs
+Requires-Dist: uttrs
+Requires-Dist: sh
+Requires-Dist: astropy
+Requires-Dist: grispy
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: pyyaml
+Requires-Dist: joblib
+Requires-Dist: py-make
+
+
+
+[![codecov](https://codecov.io/gh/FeD7791/voidFinderProject/graph/badge.svg?token=VYCG6SSNPA)](https://codecov.io/gh/FeD7791/voidFinderProject)
+[![Documentation Status](https://readthedocs.org/projects/voidfinderproject/badge/?version=latest)](https://voidfinderproject.readthedocs.io/en/latest/?badge=latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![https://github.com/leliel12/diseno_sci_sfw](https://img.shields.io/badge/DiSoftCompCi-FAMAF-ffda00)](https://github.com/leliel12/diseno_sci_sfw)
+[![CI](https://github.com/FeD7791/voidFinderProject/actions/workflows/ci.yml/badge.svg)](https://github.com/FeD7791/voidFinderProject/actions/workflows/ci.yml)
+
+
+# Motivation
+Voids are vast underdense regions embedded within the large-scale structure of the universe. Studying these structures provides valuable insights into the history, evolution, and geometry of the cosmos. Two key statistical tools in void research — the Void-Galaxy Cross-Correlation Function (VGCF) and the Void Size Function (VSF) — enable the use of voids as powerful cosmological probes, helping to constrain models of the universe's formation and expansion.
+
+There are many methods designed to identify cosmic voids, commonly known as void finders. These algorithms are built on different assumptions about what defines a void, and they implement a variety of search strategies. As a result, different void finders often produce significantly different outcomes.
+The Void Finder Toolkit was developed to provide a unified framework for comparing void catalogs using the Void-Galaxy Cross-Correlation Function (VGCF) and the Void Size Function (VSF) as standard statistical tools. In this framework, a void is fundamentally characterized by the set of tracers it contains. The project bundles a set of tools for void finding, catalog cleaning, and statistical analysis. The toolkit currently includes three integrated void finders, all accessible through a simple, easy-to-use interface.
+
+
+
+### Finders
+
+The current status of VFT integrates 3 public algorithms:
+
+- ZOBOV [(Neyrinck, 2008)](https://academic.oup.com/mnras/article/386/4/2101/1462587): ZOBOV works in analogy with a watershed method with water filling basins in a density field. It looks for voids as density minima with surrounding depressions and requires no free parameters. Each Void grows in density starting from a local minimum up to a link density where particles start falling into a deeper minimum.
+- Spherical (POPCORN)[(Paz et al., 2023)](https://arxiv.org/abs/2212.06849): This method searches regions of low density in a Voronoi tessellation. For each minimum density region the algorithm then grows a sphere around each candidate until the average density inside reaches a specific threshold.
+- POPCORN [(Paz et al., 2023)](https://arxiv.org/abs/2212.06849): The algorithm targets low-density regions by adding layers on spherical void shapes. Each layer strategically places seeds that expand while maintaining density. Only the best seed merges, and a refined process ensures full coverage. This continues until small spheres can’t be added, capturing the entire void effectively.
+
+## Installation:
+Follow this steps:
+
+```bash
+$ pip install voidfindertk
+```
+
+### Dev Installation
+
+
+Clone this repo and then inside the local directory execute
+``` bash
+$ git clone https://github.com/FeD7791/voidFinderProject.git
+$ cd voidFinderProject
+$ pip install -e .
+```
+
+You can find the package here, alongside with the installing instructions:
+
+### 1 Install ZOBOV
+[(ZOBOV)](http://skysrv.pha.jhu.edu/~neyrinck/voboz/zobovhelp.html)
+
+### 2 Install POPCORN
+[(POPCORN)](https://gitlab.com/dante.paz/popcorn_void_finder)
+
+### 3 (OPTIONAL) Install Cosmobolognia Lib
+[(CBL)](https://federicomarulli.github.io/CosmoBolognaLib/Doc/html/index.html)
+
+## About our dependencies
+
+VoidFinder Toolkit is built on top of many codes provided by the cosmological community.
+
+We thank and recognize the efforts and contributions of all of them.
+
+For more information check [dependencies.md](dependencies.md)
+
+## Requeriments
+python 3.9+
+
+## DOCS!
+See the available documentation [DOCS](https://voidfinderproject.readthedocs.io/en/latest/)
+
+## Authors
+
+- Federico Bustillos (federicobustillos@mi.unc.edu.ar)
+- Sebastian Gualpa (srgualpa@unc.edu.ar)
