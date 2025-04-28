@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf2wordx23456ldfpodfdfdfkdf"
+version = "2.1.0"
+description = "PDF to DOCX converter with UI"
+readme = { file = "README.md", content-type = "text/markdown", charset = "utf-8" }
+
+license = "MIT"
+license-files = ["LICENSE"]
+
+authors = [
+  { name = "Tutos Rive", email = "tutosriveorg@gmail.com" }
+]
+
+dependencies = [
+  "chromologger>=0.1.4,<=0.1.9",
+  "pdf2docx==0.5.8"
+]
+requires-python = ">=3.8,<3.13"
+
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "Intended Audience :: System Administrators",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Utilities",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+  "Environment :: Other Environment"
+]
+
+[project.urls]
+Homepage   = "https://tutosrive.github.io/pdf2wordx/"
+Repository = "https://github.com/tutosrive/pdf2wordx/"
+YouTube    = "https://www.youtube.com/@tutosrive"
+
+[tool.setuptools]
+packages = {find = {where = ["pdf2wordx"]}}
+
+[project.scripts]
+pdf2wordx = "pdf2wordx._pdf2wordx:run"

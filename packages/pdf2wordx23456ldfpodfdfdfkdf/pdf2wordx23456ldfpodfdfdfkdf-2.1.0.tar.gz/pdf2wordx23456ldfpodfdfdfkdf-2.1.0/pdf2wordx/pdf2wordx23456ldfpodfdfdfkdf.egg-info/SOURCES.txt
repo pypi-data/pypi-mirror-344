@@ -1,0 +1,13 @@
+LICENSE
+README
+README.md
+pyproject.toml
+pdf2wordx/files/__init__.py
+pdf2wordx/files/functions.py
+pdf2wordx/files/interfaz.py
+pdf2wordx/pdf2wordx23456ldfpodfdfdfkdf.egg-info/PKG-INFO
+pdf2wordx/pdf2wordx23456ldfpodfdfdfkdf.egg-info/SOURCES.txt
+pdf2wordx/pdf2wordx23456ldfpodfdfdfkdf.egg-info/dependency_links.txt
+pdf2wordx/pdf2wordx23456ldfpodfdfdfkdf.egg-info/entry_points.txt
+pdf2wordx/pdf2wordx23456ldfpodfdfdfkdf.egg-info/requires.txt
+pdf2wordx/pdf2wordx23456ldfpodfdfdfkdf.egg-info/top_level.txt
