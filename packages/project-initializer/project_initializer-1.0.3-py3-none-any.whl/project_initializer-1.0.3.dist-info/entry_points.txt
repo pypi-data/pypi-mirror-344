@@ -1,0 +1,2 @@
+[console_scripts]
+init-project = initializer_pkg.initializer:main
