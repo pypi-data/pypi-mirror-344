@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+./ai_data_sdk/__init__.py
+./ai_data_sdk/client.py
+./ai_data_sdk/errors.py
+./ai_data_sdk/examples.py
+ai_data_sdk/__init__.py
+ai_data_sdk/client.py
+ai_data_sdk/errors.py
+ai_data_sdk/examples.py
+ai_data_sdk_zeebee.egg-info/PKG-INFO
+ai_data_sdk_zeebee.egg-info/SOURCES.txt
+ai_data_sdk_zeebee.egg-info/dependency_links.txt
+ai_data_sdk_zeebee.egg-info/requires.txt
+ai_data_sdk_zeebee.egg-info/top_level.txt
