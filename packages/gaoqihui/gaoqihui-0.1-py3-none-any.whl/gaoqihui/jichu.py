@@ -1,0 +1,6 @@
+def jichu():
+    print("hello")
+
+
+
+
