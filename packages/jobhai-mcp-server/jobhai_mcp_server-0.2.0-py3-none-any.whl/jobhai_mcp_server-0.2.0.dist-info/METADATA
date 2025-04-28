@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: jobhai-mcp-server
+Version: 0.2.0
+Summary: MCP Server for Job Hai
+Project-URL: GitHub, https://github.com/amolsr/jobhai-mcp-server
+Project-URL: Issues, https://github.com/amolsr/jobhai-mcp-server/issues
+Author-email: Amol Saini <amol.saini567@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: openapi-core>=0.19.4
+Description-Content-Type: text/markdown
+
+# jobhai-mcp-server
+
+## Run Instructions
+
+1. Ensure you have Python 3.10 or higher installed.
+2. Install the required dependencies:
+   ```bash
+   pip install jobhai_mcp_server
+   ```
+3. Set the required environment variables:
+   ```bash
+   export JOBHAI_BASE_URL=<your_base_url>
+   export AUTH_TOKEN=<your_auth_token>
+   ```
+4. Run the server:
+   ```bash
+   python -m jobhai_mcp_server
+   ```

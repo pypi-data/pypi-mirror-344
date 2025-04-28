@@ -1,0 +1,11 @@
+jobhai_mcp_server/__init__.py,sha256=tUe5Cvj-ValqBm6YZY2BgXOFbo6YPPms0ef9nL2wIwY,560
+jobhai_mcp_server/__main__.py,sha256=_H5_nMG2LAI_U8Ui-XmKUiW12AYvbXumKSY84LNWuVc,43
+jobhai_mcp_server/server.py,sha256=Xuq8ls_pZdthSGD12aecaxjMWTJiH87Gk2AXe7LPU64,1883
+jobhai_mcp_server/server_safe.py,sha256=WxKeXQoBT3B3Vh2WpV7YRyZ7XlOyPYRXfovZCQfrLi4,2050
+jobhai_mcp_server/resources/get_dashboard_data.py,sha256=8-b2HBguMQQHWB6rMJG96zgsYGWIyMu4r9tkLAkeio4,407
+jobhai_mcp_server/resources/get_job_details.py,sha256=u0M9QojzZSUR0ptE4YSOpbtuHnyQchiYHzchn83AGPo,525
+jobhai_mcp_server-0.2.0.dist-info/METADATA,sha256=jB1QHTRMtdszklaRJX_e3Nvrdvfq4nh20s3dqSAuQFo,846
+jobhai_mcp_server-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jobhai_mcp_server-0.2.0.dist-info/entry_points.txt,sha256=rZGq8b8qM9zGrUFCJB4C4iGHbVbY9Nr_1NNxoh92ths,70
+jobhai_mcp_server-0.2.0.dist-info/licenses/LICENSE,sha256=HrLAENoWKD7rmTVgpqwIgILIeNGP3Z_x-3ATVTT4n-E,1067
+jobhai_mcp_server-0.2.0.dist-info/RECORD,,
