@@ -1,0 +1,26 @@
+[project]
+name = "solar-radiation"
+version = "0.1.1"
+description = "solar-radiation is a high-resolution solar irradiance calculator that computes extraterrestrial solar radiation flux at user-defined time intervals."
+authors = [
+    {name = "Hiksang"}
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas (>=2.2.3,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+mkdocs = "^1.6.1"
+mkdocs-material = "^9.6.12"
+
