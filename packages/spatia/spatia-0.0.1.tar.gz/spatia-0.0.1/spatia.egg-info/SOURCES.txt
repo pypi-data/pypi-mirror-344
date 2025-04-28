@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+spatia/__init__.py
+spatia.egg-info/PKG-INFO
+spatia.egg-info/SOURCES.txt
+spatia.egg-info/dependency_links.txt
+spatia.egg-info/not-zip-safe
+spatia.egg-info/requires.txt
+spatia.egg-info/top_level.txt
