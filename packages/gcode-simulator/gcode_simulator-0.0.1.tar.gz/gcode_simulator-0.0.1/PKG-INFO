@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: gcode-simulator
+Version: 0.0.1
+Summary: Acurately analyze and simulate gcode tool-path for plotters, CNCs, 3D printers and more.
+Author-email: Matthieu Rudelle <matthieu.rudelle@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/mrudelle/gcode-simulator
+Project-URL: Issues, https://github.com/mrudelle/gcode-simulator/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# gcode-simulator
+Python package for analyzing and simulating gcode tool-path for plotters, CNC, 3D printers and more.

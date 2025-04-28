@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/gcode_simulator/__init__.py
+src/gcode_simulator.egg-info/PKG-INFO
+src/gcode_simulator.egg-info/SOURCES.txt
+src/gcode_simulator.egg-info/dependency_links.txt
+src/gcode_simulator.egg-info/top_level.txt
