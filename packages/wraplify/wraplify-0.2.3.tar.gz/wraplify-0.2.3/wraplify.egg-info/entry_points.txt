@@ -1,0 +1,2 @@
+[console_scripts]
+wraplify = wraplify.__main__:main
