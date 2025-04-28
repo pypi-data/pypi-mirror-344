@@ -1,0 +1,10 @@
+wheeledit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wheeledit/__main__.py,sha256=t3EM4XopHD6oY95ENYHc5v6nZ8rUr6x6DSMrVb4bHq4,51
+wheeledit/cli.py,sha256=Vw1oJFF3O5kJ6x6xr_bFYsdtKGRdvPGDfwBxZ1FG8Cc,7552
+wheeledit/editor.py,sha256=ZXp5c3n11Nj-wBB1yTSzYJ5PuovX7DIkiVhb_-j4SEc,14043
+wheeledit-1.0.0.dist-info/licenses/LICENSE,sha256=y7HSi1FaOcKUlj1L_CQHfmaaSD_F67qbhKcnr9QYdCY,1067
+wheeledit-1.0.0.dist-info/METADATA,sha256=DL5TRAi5qh6BbQI32lJHE_oNbQEZwH6fEnpbAzORt2k,1388
+wheeledit-1.0.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+wheeledit-1.0.0.dist-info/entry_points.txt,sha256=ZSZ7riF0epwXucZaE75I1WWG1bhCKipDN9epaPVtHw8,49
+wheeledit-1.0.0.dist-info/top_level.txt,sha256=WRAQcE865SyQagnJfIYcQJZMGmwMaUIFCZLFTXYhWsw,10
+wheeledit-1.0.0.dist-info/RECORD,,
