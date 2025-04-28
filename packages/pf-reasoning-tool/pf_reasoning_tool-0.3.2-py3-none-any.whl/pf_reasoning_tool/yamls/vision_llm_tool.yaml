@@ -1,0 +1,104 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/Tool.schema.json
+name: Vision LLM (GPT-4o compatible)
+description: 'Calls a vision-capable LLM (GPT-4o, GPT-4V, etc.) using a PromptTemplate with image references.'
+type: custom_llm
+tool_state: preview
+category: hw_pf_tools
+
+module: pf_reasoning_tool.tools.vision_llm_tool
+function: vision_llm
+
+default_prompt: |
+  # system:
+  You are an AI assistant.  Analyse the provided image and answer the user’s question based on its content.
+
+  # user:
+  {{prompt_text}}
+  ![image]({{image_input}})
+
+inputs:
+  connection:
+    type:
+      - AzureOpenAIConnection
+      - OpenAIConnection
+    description: 'OpenAI or Azure OpenAI connection.'
+
+  deployment_name:
+    type: [string]
+    description: 'AOAI deployment that points to a vision-capable model (e.g., gpt-4o-vision-preview).'
+    enabled_by: connection
+    enabled_by_type:
+      - AzureOpenAIConnection
+    capabilities:
+      chat_completion: true
+      include:
+        model_version:
+          - vision-preview
+          - gpt-4o
+    allow_manual_entry: true
+    optional: true
+    ui_hints: {text_box_size: lg}
+
+  model:
+    type: [string]
+    description: 'OpenAI model ID (e.g., gpt-4o-2024-04-09).'
+    enabled_by: connection
+    enabled_by_type:
+      - OpenAIConnection
+    enum: ['gpt-4o-mini', 'gpt-4-vision-preview']
+    allow_manual_entry: true
+    optional: true
+    ui_hints: {text_box_size: lg}
+
+  temperature:
+    type: [double]
+    default: 0.7
+    ui_hints: {text_box_size: xs}
+
+  top_p:
+    type: [double]
+    default: 1.0
+    ui_hints: {text_box_size: xs}
+
+  stop:
+    type: [list]
+    description: 'Stop sequences.'
+    optional: true
+    ui_hints: {text_box_size: md}
+
+  max_tokens:
+    type: [int]
+    default: 1000
+    ui_hints: {text_box_size: xs}
+
+  presence_penalty:
+    type: [double]
+    default: 0.0
+    ui_hints: {text_box_size: xs}
+
+  frequency_penalty:
+    type: [double]
+    default: 0.0
+    ui_hints: {text_box_size: xs}
+
+  seed:
+    type: [int]
+    optional: true
+    ui_hints: {text_box_size: xs}
+
+  detail:
+    type: [string]
+    enum: ['auto', 'low', 'high']
+    default: 'auto'
+
+  # Hidden, driven by executor
+  stream:
+    type: [bool]
+    default: false
+    is_multi_select: false
+    visible: false
+
+outputs:
+  output:
+    type: [string]
+    description: 'Assistant response.'
