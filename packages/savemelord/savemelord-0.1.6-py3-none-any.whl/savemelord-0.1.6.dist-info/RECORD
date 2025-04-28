@@ -1,0 +1,17 @@
+savemelord/__init__.py,sha256=NHK-l8lIAhbAyHofsBQv4bbZv8sEGoSNm9x9B7shlWk,23
+savemelord/banditproblem.txt,sha256=j6rQOGfljYDVBch2DXnWJpPUu6pkrcGwk2NccMS2O6c,4499
+savemelord/doubleQL.txt,sha256=1zPINrHDKiHO3NHEUM_Np6FFbF4Q_ORqi3cXsER77bw,5232
+savemelord/gridworld.txt,sha256=8kO2_RLyUyXmbHkdA6EDmCPMZpHPH61eR__dacUnYWk,6311
+savemelord/help.txt,sha256=aEdNZ-CaqimY08MIPvbf6eQp9bvQkZes20KkmvN8bKc,1576
+savemelord/montecarlo.txt,sha256=A5wohr-R5DJqtqwYytD-3UjmvglEwKKC2kc-9qHOKG4,6034
+savemelord/policyiter_policyeval.txt,sha256=KFV6177xK0lAbtvEhe9aNf9B_u6sTW9Q5LyRGqs-QnQ,5395
+savemelord/reader.py,sha256=34Zy_FH6_8QKCN39Ml9BwFcW1FCU-AvJuq3vT2X6PaE,1279
+savemelord/sampleaverage.txt,sha256=PlKoFRbL9pHd3ggYFFYjHT3VXgFBC0TnpkE5w0uUa54,3886
+savemelord/sarsavq.txt,sha256=GP2VVF7j4P721f1c9Up2gD9cvV_DAFYYR3OfknWab2w,5349
+savemelord/temporal.txt,sha256=DY3ED27CkdjWJp-qskleBqz4axjXWVrAOA6paVZWWck,15431
+savemelord/ucb_and_optimal_val.txt,sha256=EjeIP9HEPOKPCD51pEBQlEUMaoRYf7FDScRAlmU425o,4608
+savemelord/value_iteration_gridworld.txt,sha256=15Ap0d_16FAvQLtPORe7wyduOfZu1cLBCK2Xhsi46_w,4761
+savemelord-0.1.6.dist-info/METADATA,sha256=3fXYLhnHmw4_5EBbRcRjIy-PstD8rRzuqUAGJyWNVqs,120
+savemelord-0.1.6.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+savemelord-0.1.6.dist-info/top_level.txt,sha256=DGQW-9-DZjPjhOmVfJ7TBYrSFrPbMprL2aCIuPKzhXY,11
+savemelord-0.1.6.dist-info/RECORD,,

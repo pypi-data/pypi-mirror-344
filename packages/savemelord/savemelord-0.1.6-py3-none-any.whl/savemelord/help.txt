@@ -1,0 +1,11 @@
+Sr No | Function Name                | Topic/Description                                                                | Experiment Learning Outcome (LO)
+1     | exp1()                        | Implement a simple grid-world environment and train an agent using basic Q learning. | LO1
+2     | sarsa_v_q()                   | Implement State Action Reward State Action (SARSA) algorithm and compare with Q Learning. | LO1
+3     | bandit_problem()              | Implementing a multi-armed bandit problem and understanding epsilon value.        | LO2
+4     | sampleAverage()               | Evaluating sample-average methods in non-stationary bandit problems.             | LO2
+5     | ucb_and_optimal_val()         | Experimenting with Upper Confidence Bound and Optimistic Initialization strategy and analyzing its impact on the learning performance of an agent. | LO2
+6     | policyiter_policyeval()       | Implementing a basic grid-world environment as an MDP and applying policy evaluation and policy iteration. | LO3
+7     | value_iteration_gridworld()  | Apply a value iteration algorithm to find optimal policies for the grid-world environment. | LO3
+8     | doubleQL()                    | Implement and analyze the Double Q-Learning algorithm to address maximization bias in Q Learning. | LO4
+9     | temporal()                  | Implement TD Learning                                                                .               | LO4
+10    | montecarlo()                  | Implement and analyze Monte Carlo methods using Python programming.               | LO4
