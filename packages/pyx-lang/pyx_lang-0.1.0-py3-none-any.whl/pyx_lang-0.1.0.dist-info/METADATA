@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: pyx-lang
+Version: 0.1.0
+Summary: The python equivalent of JSX -- inline html tags in python
+Author-email: Marckie Zeender <mkzeender@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.13
+Requires-Dist: parso>=0.8.4

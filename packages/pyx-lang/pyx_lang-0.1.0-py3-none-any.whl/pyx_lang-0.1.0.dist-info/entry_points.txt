@@ -1,0 +1,2 @@
+[console_scripts]
+pyx-lang = pyx_lang.main:main
