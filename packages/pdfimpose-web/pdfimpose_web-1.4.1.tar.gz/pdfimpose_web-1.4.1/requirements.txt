@@ -1,0 +1,10 @@
+flask-babel>=4
+flask-basicauth
+flask-limiter
+flask-sqlalchemy
+flask>=3
+papersize>=1.5
+pdfautonup>=1.12.0
+pdfimpose>=2.8.0
+pymupdf>=1.24.3
+unidecode
