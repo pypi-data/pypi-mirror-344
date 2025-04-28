@@ -1,0 +1,23 @@
+[project]
+name = "ghostcord"
+version = "0.1.0"
+description = "A lightweight, async Python library for controlling Discord user accounts (selfbot behavior)."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "xAI", email = "support@x.ai"},
+]
+dependencies = [
+    "httpx>=0.23.0",
+    "websockets>=10.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/xAI/GhostCord"
+Repository = "https://github.com/xAI/GhostCord"
+Issues = "https://github.com/xAI/GhostCord/issues"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
