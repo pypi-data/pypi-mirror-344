@@ -1,0 +1,2 @@
+[console_scripts]
+git-assistant = py_git_assistant.assistant:main
