@@ -1,0 +1,66 @@
+Metadata-Version: 2.2
+Name: githubInteract
+Version: 0.2.11
+Summary: This package allows users to interact with github from python.
+Author: Brigham Turner
+Author-email: brighamturner@narratebay.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: PyGithub
+Requires-Dist: gitpython
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+Here is example code for using this package:
+f
+
+**__init__(access_token):**  
+Users need to provide github access tokens to access their github account.  
+
+**createRepository( repo_name = "new-repository" , repo_description = "This is a description for the new repository", is_private=True ):**  
+Allows users to create a new repository in their account.  
+
+**create_branch_in_repo( repo_path, branch_name):**  
+Allows users to create new branches in their github repo.  
+
+**create_branch_in_repo( repo_path, branch_name):**  
+if branch does not exist, it creates the branch and selects it.  
+if the branch does exist, it ensures that is the branch that is selected.  
+
+**uploadFolderFileAsCommitToRepo( repo_name="your_repo_name", folder_path="path/to/your/folder", commit_message="Add folder content", branch="main", force=True):**  
+uploads entire folder to a repo. If there is a problem with merging you can select “force” to ensure it works.  
+
+**delete_github_repository( repo_name):**  
+Delete a repository from GitHub using the GitHub API.  
+
+**delete_github_branch( repo_name, branch_name ):**  
+Delete a branch from a GitHub repository using the GitHub API.  
+
+**displayDifferences( self, repo_path, time1, time2, time_choice):**  
+This function finds two Git commits based on given timestamps (time1 and time2) and a selection strategy (time_choice), then displays the differences between those two commits.  
+Parameters:  
+repo_path (str) - Path to the Git repository where you want to compare commits.  
+time1 (datetime) - The first reference time to locate the first commit.  
+time2 (datetime) - The second reference time to locate the second commit.  
+time_choice (str): - Strategy for selecting which commit to use based on the provided times.  
+Options:  
+'closest' - Picks the commit whose timestamp is closest to the given time (either before or after).  
+'before' - Picks the most recent commit before the given time. If no earlier commit exists, selects the earliest available commit.  
+'after' - Picks the first commit after the given time. If no later commit exists, selects the latest available commit.  
+
+How It Works:  
+For both time1 and time2, it runs a Git command to list all commits along with their timestamps.  
+It chooses a commit near each provided time according to the selected time_choice option.  
+It then runs git diff between the two selected commits and prints the differences to the console.
