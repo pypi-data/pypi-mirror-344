@@ -1,0 +1,2 @@
+[console_scripts]
+pymbrewclient = pymbrewclient.cli:app
