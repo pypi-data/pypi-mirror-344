@@ -1,0 +1,10 @@
+gstools_cython/__init__.py,sha256=yRE0Hzm997_PO_Fc506u93TkIM9SPw0vUmZv306m0b8,673
+gstools_cython/variogram.cpython-312-aarch64-linux-gnu.so,sha256=4V02SXPtHX4nw8geTLX7lhqthRzEVlIB2eYr11TnDP4,2021864
+gstools_cython/krige.cpython-312-aarch64-linux-gnu.so,sha256=EWQzFSqnGW8kBjem8SJkMeC9ad_rhA5dCtfy36acTic,1624568
+gstools_cython/field.cpython-312-aarch64-linux-gnu.so,sha256=H9ADFo3Fe9eo0yc7EaSUMkSAbTFm7H8hckqspj5JEeY,1685368
+gstools_cython/_version.py,sha256=XIz3qAg9G9YysQi3Ryp0CN3rtc_JiecHZ9L2vEzcM6s,21
+gstools_cython-1.1.0.dist-info/RECORD,,
+gstools_cython-1.1.0.dist-info/WHEEL,sha256=nkpdMZJ20_3LX22TieexNa2uqmwk48tEkVZFoLxk6o0,153
+gstools_cython-1.1.0.dist-info/METADATA,sha256=wEoTj79aC_fOmQxVa8KI4-SHr0zDPDkSTVJXu0lO3FU,7036
+gstools_cython-1.1.0.dist-info/top_level.txt,sha256=ixTzVPKGMID1plGf2p2ce4GkDjHt28CorVwCQS5IoZY,15
+gstools_cython-1.1.0.dist-info/licenses/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
