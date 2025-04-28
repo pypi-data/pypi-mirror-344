@@ -1,0 +1,2 @@
+[console_scripts]
+serve = acp_mcp:cli
