@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: pyritex
+Version: 0.0.7
+Summary: An AnyIO-compatible async Linux Netlink library.
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: anyio>=4.9.0
+Requires-Dist: black>=24.10.0
+Requires-Dist: flake8>=7.1.1
+Requires-Dist: oxitrait>=0.0.1
+Requires-Dist: pydantic>=2.10.5
+Requires-Dist: result>=0.17.0
+Requires-Dist: toolz>=1.0.0
+Requires-Dist: trio>=0.28.0
