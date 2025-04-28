@@ -1,0 +1,10 @@
+opencv-python
+mss
+numpy
+ultralytics
+pyautogui
+
+[dev]
+pytest
+flake8
+mypy

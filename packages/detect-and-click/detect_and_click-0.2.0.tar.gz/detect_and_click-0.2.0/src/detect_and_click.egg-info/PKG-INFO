@@ -1,0 +1,165 @@
+Metadata-Version: 2.4
+Name: detect-and-click
+Version: 0.2.0
+Summary: Библиотека для детекции объектов на экране и автоматического клика по ним
+Author: Alex
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: opencv-python
+Requires-Dist: mss
+Requires-Dist: numpy
+Requires-Dist: ultralytics
+Requires-Dist: pyautogui
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+
+# Detect-and-Click
+
+Библиотека для автоматической детекции объектов на экране и выполнения кликов по ним на базе YOLOv8.
+
+## Описание
+
+Detect-and-Click — это Python-библиотека, которая совмещает возможности компьютерного зрения с автоматизацией действий мыши. Она использует предобученную модель YOLOv8 для обнаружения заданных объектов на экране и автоматически выполняет клики по ним.
+
+Основные возможности:
+- Обнаружение объектов на всем экране или в указанной области
+- Автоматические клики по обнаруженным объектам
+- Настраиваемая задержка между кликами
+- Визуализация процесса обнаружения (опционально)
+
+## Установка
+
+```bash
+pip install detect-and-click
+```
+
+## Подготовка модели
+
+Библиотека работает с весами YOLOv8 в формате `.pt`. Для работы необходим файл `best.pt`, содержащий обученную модель.
+
+Библиотека будет искать этот файл в следующих местах:
+1. Текущая рабочая директория
+2. `~/.detect_and_click/models/best.pt`
+3. Директория `models` внутри установленного пакета
+
+Также можно указать путь явно через аргумент `--model` или переменную окружения `DETECT_AND_CLICK_MODEL_PATH`.
+
+## Использование
+
+### Как CLI-инструмент
+
+```bash
+# Простой запуск (будет искать best.pt автоматически)
+detect-and-click
+
+# С указанием пути к модели
+detect-and-click --model /path/to/best.pt
+
+# Настройка порога уверенности и задержки между кликами
+detect-and-click --conf 0.7 --delay 0.5
+
+# Указание области экрана для сканирования
+detect-and-click --region "0,0,800,600"
+
+# Запуск без отображения окна OpenCV
+detect-and-click --no-display
+
+# Полная справка по параметрам
+detect-and-click --help
+```
+
+### Как библиотека
+
+```python
+from detect_and_click import DetectAndClick
+
+# Инициализация с настройками
+dac = DetectAndClick(model_path="/path/to/best.pt", conf=0.7, delay=0.5)
+
+# Запуск с отображением окна
+dac.run(display=True)
+
+# Запуск для определённого региона экрана
+region = {"left": 0, "top": 0, "width": 800, "height": 600}
+dac.run(display=True, region=region)
+```
+
+## Управление
+
+При запущенном приложении:
+- `Q` - выход из программы
+
+## Параметры командной строки
+
+| Параметр | Тип | По умолчанию | Описание |
+|----------|-----|--------------|----------|
+| `--model` | строка | Авто | Путь к весам `best.pt` |
+| `--conf` | число | 0.5 | Порог уверенности YOLO (0.0 - 1.0) |
+| `--delay` | число | 0.4 | Задержка между кликами в секундах |
+| `--no-display` | флаг | False | Не показывать окно OpenCV |
+| `--region` | строка | Весь экран | Зона захвата: left,top,width,height |
+
+## Требования
+
+- Python 3.7+
+- OpenCV
+- PyAutoGUI
+- Ultralytics YOLOv8
+- MSS (для захвата экрана)
+- Numpy
+
+## Примеры использования
+
+### Автоматический клик по кнопкам в игре
+
+```bash
+# Сканирование всего экрана, клик при уверенности >70%, задержка 0.8 сек
+detect-and-click --conf 0.7 --delay 0.8
+```
+
+### Фокусированное сканирование в окне приложения
+
+```bash
+# Сканирование прямоугольной области экрана
+detect-and-click --region "100,200,800,600"
+```
+
+### Тихий режим работы (без визуализации)
+
+```bash
+# Работа в фоновом режиме
+detect-and-click --no-display
+```
+
+## Для разработчиков
+
+### Установка в режиме разработки
+
+```bash
+# Клонирование репозитория
+git clone https://github.com/ваш-username/detect-and-click.git
+cd detect-and-click
+
+# Создание виртуального окружения
+python -m venv .venv
+source .venv/bin/activate  # На Windows: .venv\Scripts\activate
+
+# Установка в режиме разработки
+pip install -e ".[dev]"
+```
+
+### Запуск тестов
+
+```bash
+pytest
+```
+
+## Лицензия
+
+MIT License

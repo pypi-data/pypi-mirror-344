@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/detect_and_click/__init__.py
+src/detect_and_click/cli.py
+src/detect_and_click/clicker.py
+src/detect_and_click/detector.py
+src/detect_and_click.egg-info/PKG-INFO
+src/detect_and_click.egg-info/SOURCES.txt
+src/detect_and_click.egg-info/dependency_links.txt
+src/detect_and_click.egg-info/requires.txt
+src/detect_and_click.egg-info/top_level.txt
+tests/test_detector.py
