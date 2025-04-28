@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling==1.26.3", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "EShAY"
+version = "0.8"
+authors = [
+  { name="Dr Gabe O'Reilly", email="g.oreilly@garvan.org.au" },
+]
+description = "A package to look at similarity between two genetic datasets. Useful for finding duplicate tissue donors betwen studies."
+readme = "README.md"
+requires-python = ">=3"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/GabeDO/SimilarityPythonPackage"
