@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: gummypy
+Version: 0.1.1
+Summary: A simple library that contains wrapper functions for gum CLI tool
+Author-email: sereinne <akbarsmp27@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/sereinne/gummypy
+Project-URL: Repository, https://github.com/sereinne/gummypy
+Project-URL: Issues, https://github.com/sereinne/gummypy/issues
+Keywords: CLI
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Gummypy
+
+A small library that contains wrappper functions around the [gum](https://github.com/charmbracelet/gum) CLI tool.
