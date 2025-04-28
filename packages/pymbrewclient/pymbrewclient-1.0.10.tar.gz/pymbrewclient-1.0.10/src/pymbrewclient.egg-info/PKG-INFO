@@ -1,0 +1,120 @@
+Metadata-Version: 2.4
+Name: pymbrewclient
+Version: 1.0.10
+Summary: pymbrewclient: A Python library and CLI for readonly access to Minibrew's API
+Author-email: Stuart Pearson <1926002+stuartp44@users.noreply.github.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic<3,>=1.10.17
+Requires-Dist: requests<3,>=2.32.3
+Requires-Dist: loguru<1,>=0.7.2
+Requires-Dist: typer<1,>=0.12.5
+Requires-Dist: rich<14,>=13.9.4
+Provides-Extra: dev
+Requires-Dist: pytest<8,>=7.4.0; extra == "dev"
+Requires-Dist: requests-mock<2,>=1.11.0; extra == "dev"
+Requires-Dist: pytest-cov<5,>=4.1.0; extra == "dev"
+Requires-Dist: black<24,>=23.9.1; extra == "dev"
+Requires-Dist: Flask<3,>=2.3.3; extra == "dev"
+Requires-Dist: ruff<1,>=0.7.2; extra == "dev"
+Requires-Dist: pre-commit<5,>=4.0.1; extra == "dev"
+Provides-Extra: build
+Requires-Dist: build; extra == "build"
+Requires-Dist: twine; extra == "build"
+Dynamic: license-file
+
+# pymbrewclient
+
+`pymbrewclient` is a Python library and CLI tool for interacting with Minibrew's API. It provides both programmatic access and a command-line interface for fetching brewery and session information.
+
+---
+
+## Features
+
+- Fetch brewery overview data.
+- Retrieve session information.
+- Easy-to-use CLI for quick access.
+- Python library for programmatic integration.
+
+---
+
+### PLEASE NOTE
+This library will only work with a valid subscription to the pro portal.
+
+## Installation
+
+You can install `pymbrewclient` using `pip`:
+
+### CLI
+
+```bash
+pip install pymbrewclient
+```
+
+```bash
+pymbrewclient get-token --username <USERNAME> --password <PASSWORD>
+```
+
+```bash
+pymbrewclient brewery-overview
+```
+
+```bash
+pymbrewclient session-info --username <USERNAME> --password <PASSWORD> --session-id <SESSION_ID>
+```
+
+### Library Usage
+
+```python
+from pymbrewclient.client import BreweryClient
+
+# Initialize the client
+client = pymbrewclient(username,password)
+
+# Fetch brewery overview
+brewery_overview = client.get_brewery_overview()
+print(brewery_overview)
+```
+
+```python
+from pymbrewclient.client import BreweryClient
+
+# Initialize the client
+client = pymbrewclient(username,password)
+
+# Fetch session info
+session_id = 12345
+session_info = client.get_session_info(session_id)
+print(session_info)
+```
+
+
+## Development
+
+Clone the repository:
+```
+git clone https://github.com/yourusername/pymbrewclient.git
+cd pymbrewclient
+```
+
+Install dependencies:
+```
+pip install .[dev]
+```
+
+Run tests:
+```
+pytest
+```
+
+Lint the code:
+```
+make lint
+```
