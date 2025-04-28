@@ -1,0 +1,10 @@
+cf_polygon_mcp-0.1.0.dist-info/licenses/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+polygon/client.py,sha256=fyy71uPh5b6Y9pWxPrFUloNbFZEDCs0ZGNDR52uZibc,5540
+polygon/contest.py,sha256=_RTiY9vmxuecRfekEfjSQjMcqeb4rfYX40fBThSGNoQ,8098
+polygon/models.py,sha256=wF7WkrzyvNp85t5ZigwB70tZB5d7s6xU1jlhs9i8uyM,12550
+polygon/problem.py,sha256=ey823uvhoItSxOS59ads0y1ehLLyh_Ywnv_3vJgBoSQ,8354
+tools/problems.py,sha256=ZvPF8Hf10XxZ9XLGNwWElvJG9a9IeBP-6syQijAb22c,2092
+cf_polygon_mcp-0.1.0.dist-info/METADATA,sha256=4xkBOMmwTj5Vn3MTA3gMD701Efzt-BSdAAf4Xz3ipjQ,1374
+cf_polygon_mcp-0.1.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+cf_polygon_mcp-0.1.0.dist-info/top_level.txt,sha256=v9sTTWVKweYlaCVrGH1-ZioyjLZtlq14tucMQKJQfnI,14
+cf_polygon_mcp-0.1.0.dist-info/RECORD,,
