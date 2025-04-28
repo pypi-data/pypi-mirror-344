@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+SaliencyMetrics.egg-info/PKG-INFO
+SaliencyMetrics.egg-info/SOURCES.txt
+SaliencyMetrics.egg-info/dependency_links.txt
+SaliencyMetrics.egg-info/top_level.txt
+test/__init__.py
+test/test_metrics.py
