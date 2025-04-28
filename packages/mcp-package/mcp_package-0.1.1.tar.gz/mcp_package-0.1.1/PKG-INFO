@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: mcp-package
+Version: 0.1.1
+Summary: MCP Server built with FastAPI MCP
+Author-email: madhurya <madhurya3199@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: fastapi-mcp>=0.1.0
+Requires-Dist: fastapi>=0.100
+Requires-Dist: uvicorn[standard]>=0.22.0
+Description-Content-Type: text/markdown
+
+# Your MCP Server
+
+A FastAPI-based MCP server implementation.
+
+## Installation
+
+```bash
+pip install your-mcp-server
+```
+
+## Usage
+
+Run the server using:
+
+```bash
+uvicorn your_mcp_app.main:app --reload
+```
+
+The server will be available at `http://localhost:8000`
+
+## License
+
+MIT License 
