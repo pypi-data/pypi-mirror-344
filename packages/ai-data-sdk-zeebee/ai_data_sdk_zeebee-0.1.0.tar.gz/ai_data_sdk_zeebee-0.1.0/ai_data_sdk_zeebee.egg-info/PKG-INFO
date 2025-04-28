@@ -1,0 +1,78 @@
+Metadata-Version: 2.4
+Name: ai-data-sdk-zeebee
+Version: 0.1.0
+Summary: A comprehensive SDK for standardizing, processing, embedding, and retrieving data for AI applications
+Author-email: Zeebee Team <info@zeebee.com>
+License: MIT
+Project-URL: Homepage, https://github.com/zeebee/ai-data-sdk
+Project-URL: Bug Tracker, https://github.com/zeebee/ai-data-sdk/issues
+Project-URL: Documentation, https://ai-data-sdk.readthedocs.io/
+Keywords: ai,data,embeddings,vector database,pii
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: openai>=0.27.0
+Requires-Dist: jsonschema>=4.0.0
+Requires-Dist: requests>=2.25.0
+Requires-Dist: trafilatura>=1.4.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: sqlalchemy>=1.4.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=3.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.10.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Requires-Dist: mypy>=0.9.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=4.0.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == "docs"
+
+# AI Data SDK by Zeebee
+
+A comprehensive SDK for standardizing, processing, embedding, and retrieving data for AI applications.
+
+## Features
+
+- Data ingestion from various sources
+- Data validation and quality checks
+- Metadata management for AI data
+- Text embedding generation
+- PII detection and masking
+- Vector database connectors
+- Drift detection and user feedback
+
+## Installation
+
+```bash
+pip install ai-data-sdk-zeebee
+```
+
+## Usage
+
+```python
+from ai_data_sdk import ingestion, embedding, vector_db
+
+# Ingest data
+data = ingestion.load_from_json("data.json")
+
+# Generate embeddings
+embeddings = embedding.create_embeddings(data)
+
+# Store in vector DB
+vector_db.store_vectors(embeddings)
+```
+
+## Documentation
+
+For full documentation, visit [https://ai-data-sdk.readthedocs.io/](https://ai-data-sdk.readthedocs.io/)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-data-sdk-zeebee"
+version = "0.1.0"
+description = "A comprehensive SDK for standardizing, processing, embedding, and retrieving data for AI applications"
+readme = "README.md"
+authors = [
+    {name = "Zeebee Team", email = "info@zeebee.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+keywords = ["ai", "data", "embeddings", "vector database", "pii"]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.20.0",
+    "openai>=0.27.0",
+    "jsonschema>=4.0.0",
+    "requests>=2.25.0",
+    "trafilatura>=1.4.0",
+    "scikit-learn>=1.0.0",
+    "sqlalchemy>=1.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "black>=22.0.0",
+    "isort>=5.10.0",
+    "flake8>=4.0.0",
+    "mypy>=0.9.0",
+]
+docs = [
+    "sphinx>=4.0.0",
+    "sphinx-rtd-theme>=1.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/zeebee/ai-data-sdk"
+"Bug Tracker" = "https://github.com/zeebee/ai-data-sdk/issues"
+"Documentation" = "https://ai-data-sdk.readthedocs.io/"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["ai_data_sdk"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
