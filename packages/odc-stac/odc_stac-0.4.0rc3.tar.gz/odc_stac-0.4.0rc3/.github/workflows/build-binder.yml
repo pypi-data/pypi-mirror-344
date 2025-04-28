@@ -1,0 +1,51 @@
+name: Build Binder Image
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - develop
+    paths:
+      - 'binder/**'
+      - '.github/workflows/build-binder.yml'
+
+jobs:
+  repo2docker:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build Binder Image
+      uses: jupyterhub/repo2docker-action@0.3
+      id: dkr
+      with:
+        IMAGE_NAME: kirillodc/odc-stac-binder
+        DOCKER_USERNAME: kirillodc
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Print Notice
+      uses: actions/github-script@v5
+      env:
+        DKR: ${{ steps.dkr.outputs.IMAGE_SHA_NAME }}
+      with:
+        script: |
+          const {DKR} = process.env
+          core.notice(`Built Docker Image: '${DKR}'`)
+
+    - name: Dump conda environment
+      run: |
+        echo "# ${DKR}" > /tmp/environment.yaml
+        docker run --rm \
+          --entrypoint /srv/conda/envs/notebook/bin/mamba \
+          ${DKR} \
+          env export | tee --append /tmp/environment.yaml
+      env:
+          DKR: ${{ steps.dkr.outputs.IMAGE_SHA_NAME }}
+
+    - name: Publish environment.yaml artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: environment
+        path: /tmp/environment.yaml
+        if-no-files-found: error
