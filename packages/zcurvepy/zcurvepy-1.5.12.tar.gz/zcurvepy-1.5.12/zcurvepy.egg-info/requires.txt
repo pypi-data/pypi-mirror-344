@@ -1,0 +1,4 @@
+matplotlib
+biopython==1.84
+scikit-learn==1.6.1
+numpy<=2.0
