@@ -1,0 +1,2 @@
+[console_scripts]
+pinetodo = pinetodo.main:main
