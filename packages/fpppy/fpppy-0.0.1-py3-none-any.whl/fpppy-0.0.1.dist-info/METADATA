@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: fpppy
+Version: 0.0.1
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: pre-commit
+Requires-Dist: pytest
+Requires-Dist: pytest-cov
+Requires-Dist: statsmodels
+Requires-Dist: utilsforecast
+Dynamic: license-file
