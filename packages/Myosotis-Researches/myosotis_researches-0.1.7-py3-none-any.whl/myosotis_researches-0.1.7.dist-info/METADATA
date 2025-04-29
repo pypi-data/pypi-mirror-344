@@ -1,0 +1,77 @@
+Metadata-Version: 2.4
+Name: Myosotis-Researches
+Version: 0.1.7
+Summary: A repository for storing my progress of researches.
+Home-page: https://github.com/Zeyu-Xie/Myosotis-Researches
+Author: Zeyu Xie
+Author-email: xie.zeyu20@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# Myosotis-Researches
+
+## `CcGAN` (`myosotis_researches.CcGAN`)
+
+### `internal`
+
+The `internal` module is used for setting the local package itself, like installing datasets and so on.
+
+Import with code
+
+```python
+from myosotis_researches.internal import *
+```
+
+| Function                          | Desctiption                                                  |
+| --------------------------------- | ------------------------------------------------------------ |
+| `install_datasets(datasets_name)` | Install the datasets in `datasets_name` to the local python package. |
+| `uninstall_datasets()`            | Remove all the datasets installed to the local python package. |
+| `show_datasets()`                 | Show all datasets installed.                                 |
+
+**Note**:
+
+1. The path of the installed datasets are
+
+   `resources.files("myosotis_researches").join("CcGAN", "<datasets_name>")`
+
+   To run this code, remember to add `from importlib import resources` at the beginning.
+
+### `utils`
+
+The `utils` module contains some basic functions and classes which are frequently used during the CcGAN research.
+
+Import with code
+
+```python
+from myosotis_researches.utils import *
+```
+
+| Function                                                     | Description                               |
+| ------------------------------------------------------------ | ----------------------------------------- |
+| `concat_image(img_list, gap=2, direction="vertical")`        | Concat images vertically or horizontally. |
+| `make_h5(old_datasets_name, size, new_datasets_path, image_indexes, train_indexes, val_indexes)` | Get piece of original HDF5 datasets.      |
+| `print_hdf5(name, obj)`                                      | Print a basic structure of an HDF5 file.  |
+
+**Note**:
+
+1. Function `print_hdf5` should be used within a `with` block:
+
+   ```python
+   import h5py
+   
+   with h5py.File(<HDF5_file_path>, "r") as f:
+     f.visititems(print_hdf5)
+   ```
