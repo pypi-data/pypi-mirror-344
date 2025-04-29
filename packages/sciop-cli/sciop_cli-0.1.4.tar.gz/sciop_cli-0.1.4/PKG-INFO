@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: sciop-cli
+Version: 0.1.4
+Summary: A CLI for sciop
+Author-Email: cosmicexplorer <dmcC2@hypnicjerk.ai>, sneakers-the-rat <sneakers-the-rat@protonmail.com>
+License: EUPL-1.2
+Requires-Python: >=3.11
+Requires-Dist: libtorrent>=2.0.11
+Requires-Dist: click>=8.1.8
+Requires-Dist: click-option-group>=0.5.6
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: pandera[mypy]>=0.23.1
+Requires-Dist: bencode-rs>=0.0.7
+Requires-Dist: platformdirs>=4.3.7
+Requires-Dist: requests>=2.32.3
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: rich>=14.0.0
+Requires-Dist: humanize>=4.12.2
+Provides-Extra: test
+Requires-Dist: pytest>=8.3.4; extra == "test"
+Provides-Extra: mypy
+Requires-Dist: mypy>=1.15; extra == "mypy"
+Requires-Dist: types-tqdm>=4.67.0.20250401; extra == "mypy"
+Requires-Dist: types-requests>=2.32.0.20250328; extra == "mypy"
+Provides-Extra: dev
+Requires-Dist: sciop-cli[mypy,test]; extra == "dev"
+Requires-Dist: ruff>=0.9.7; extra == "dev"
+Requires-Dist: black>=25.1.0; extra == "dev"
+Description-Content-Type: text/markdown
+
+# sciop-cli
+
+a CLI for sciop!
