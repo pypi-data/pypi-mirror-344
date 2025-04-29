@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Run tsl scripts</title>
+  <meta charset="UTF-8">
+
+<script>
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
+
+  const script_contents = {{scripts|tojson|safe}};
+    
+  const index_type = document.getElementById("index_type");
+  const filter = document.getElementById("filter");
+  const scripts = document.getElementById("scripts");
+  const script  = document.getElementById("pos4");
+  
+  filter.addEventListener("keydown", function (e) {
+    if (e.key === 'Enter') return
+       
+    if (e.key != 'Backspace') {
+      filter_sel = filter.value + e.key
+    } else {
+      filter_sel = filter.value.substring(0, filter.value.length-1)
+    }
+
+    var children = scripts.children;
+    for (var i = 0; i < children.length; i++) {
+      if (filter_sel.length==0 || children[i].value.slice(0, filter_sel.length) == filter_sel) {
+        children[i].style.display = 'block';
+      } else {
+        children[i].style.display = 'none';
+      }
+    }
+
+  });
+
+  scripts.addEventListener("change", function (e) {
+    var script_type = scripts.value.split(':')[1];
+    var frm = document.getElementById('form_');
+    frm.action = '/' + script_type;
+
+    script.value = script_contents[scripts.value]
+
+    index_type.name = 'index_type'
+    if (script_type != 'gg') {
+      index_type.name = ''
+    }
+
+  });  
+});
+</script>
+
+</head> 
+<body> 
+<h1>Run tsl scripts</h1> 
+
+<!-- NOTE: fields without name will not be sent to the server -->
+<form method="post" action="/" enctype="multipart/form-data" id="form_"> 
+  {{ form.csrf_token }} 
+
+  {# <p>{{ form.pos2.label }}      {{ form.pos2() }}</p>  #}
+  <p><label for="pos2">Input Table:</label>
+  <select id="pos2" name="pos2" size="10" style="width: 400px;">
+    {% for table in tables %}
+      <option value="{{table}}">{{table}}</option>
+    {% endfor %}
+  </select></p>
+  
+  <p><label for="script">Script name:</label>
+  <select id="scripts" size="10" style="width: 400px;">
+    {% for script_name, script in scripts.items() %}
+      <option value="{{script_name}}">{{script_name}}</option>
+    {% endfor %}
+  </select></p>
+  <p><label for="filter">Filter scripts:</label><input id="filter" type="text" value=""></p>
+
+  <p>{{ form.pos4.label }}     {{ form.pos4(cols=150, rows=10) }}</p> 
+  <p>{{ form.pos3.label }}     {{ form.pos3() }}</p> 
+
+  <hr>
+  
+  <p>{{ form.index_type.label }} {{ form.index_type() }}</p> 
+
+  <p><input type="submit" value="Submit"></p> 
+</form>
+
+
+</body>
+</html>

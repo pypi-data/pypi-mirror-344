@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Display table contents</title> 
+</head> 
+<body> 
+<h1>Display table contents</h1> 
+  <form method="post" action="/pr_form" enctype="multipart/form-data"> 
+    {{ form.csrf_token }} 
+
+    <!-- <p>{{ form.pos2.label }} {{ form.pos2() }}</p> -->
+  <p><label for="pos2">Input Table:</label>
+  <select id="pos2" name="pos2" size="10" style="width: 400px;">
+    {% for table in tables %}
+      <option value="{{table}}">{{table}}</option>
+    {% endfor %}
+  </select></p>
+ 
+    <p><input type="submit" value="Submit"></p> 
+  </form>
+
+</body> 
+</html>
