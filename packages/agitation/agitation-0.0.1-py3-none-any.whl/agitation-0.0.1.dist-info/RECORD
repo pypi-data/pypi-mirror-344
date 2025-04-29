@@ -1,0 +1,11 @@
+agitation/__init__.py,sha256=tBfKLvUTrsIxBB5DYd1vSy6ySd4I-ZhQqWuSfog4oZg,263
+agitation/click_utils.py,sha256=Pk5SKv4JMZ3I45OXlJESiPwz54akbaEkgIyuv9lFjVs,347
+agitation/config.py,sha256=__KrM3Ta2RleBA6Vngl9WNUpUbvvQOszJ7_7LbGtVhQ,452
+agitation/data_manager.py,sha256=0WZh9RNATfpsdyWOdJQETOD9E42RHsZ6VDga3UCyLVw,2583
+agitation/inference.py,sha256=6nIVvN0RKFyfO617AycI4i9TNBNsJWvTOctqmsTIN9E,7563
+agitation/processing.py,sha256=8oYT4faaZZnGTOm5T2FKPC6K3VF-HBohcH__Hmdhps4,2032
+agitation-0.0.1.dist-info/METADATA,sha256=dQmcGjTLWy6IWLHSeEJUF0ZofU_9R5MaP-vfGVN2euI,4806
+agitation-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+agitation-0.0.1.dist-info/entry_points.txt,sha256=reZommpFZIRlYT9lDHucNWp64ausKn_agbaRoLzCWEM,44
+agitation-0.0.1.dist-info/licenses/LICENSE,sha256=CZe01HWIwNi7asR9HPpY8iLKS1nuslMCPmFDB4AIcdw,1072
+agitation-0.0.1.dist-info/RECORD,,
