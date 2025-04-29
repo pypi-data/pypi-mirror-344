@@ -1,0 +1,7 @@
+dashai_test_classification_package/__init__.py,sha256=qz883Zaw3nFKv2fDVMng2TsY9FxY7ujvkYw3_RDTsUM,15
+dashai_test_classification_package/image_dataloader.py,sha256=kHsjoLbDz74CIjetIItB_XU5f4opKJX2UdXAetyV4Yk,2386
+dashai_test_classification_package/mlp_image_classifier.py,sha256=KebedIRE1a4PTw98SMC03OX-KgljORdvNCCU_-79rWs,7351
+dashai_test_classification_package-0.0.18.dist-info/METADATA,sha256=eUQ9N34DDRxVCYy7FtlYHWACiZLAKm5luwVXiDFAaUM,668
+dashai_test_classification_package-0.0.18.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dashai_test_classification_package-0.0.18.dist-info/entry_points.txt,sha256=KieqVS_eChNhyN-5zw8wKHpGyBzCNgiuCZmFqWizNYE,199
+dashai_test_classification_package-0.0.18.dist-info/RECORD,,
