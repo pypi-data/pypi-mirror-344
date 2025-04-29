@@ -1,0 +1,140 @@
+{
+  "total_tests": 10,
+  "successful_tests": 10,
+  "failed_tests": 0,
+  "total_duration": 155.70520997047424,
+  "tests_per_second": 0.06422392675168839,
+  "success_rate": 100.0,
+  "individual_test_metrics": [
+    {
+      "success": true,
+      "total_duration": 150.37723588943481,
+      "steps_timing": {
+        "environment_creation": 4.008841037750244,
+        "environment_ready": 139.77604794502258,
+        "environment_reset": 2.9437198638916016,
+        "get_cdp_url": 0.0375669002532959,
+        "browser_operations": 3.611043930053711,
+        "environment_closure": 0.02828502655029297
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 141.530659198761,
+      "steps_timing": {
+        "environment_creation": 3.928791046142578,
+        "environment_ready": 132.08448600769043,
+        "environment_reset": 1.5759711265563965,
+        "get_cdp_url": 0.020983219146728516,
+        "browser_operations": 3.920413017272949,
+        "environment_closure": 0.024450063705444336
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 147.96242904663086,
+      "steps_timing": {
+        "environment_creation": 4.1700639724731445,
+        "environment_ready": 137.6153757572174,
+        "environment_reset": 2.6238718032836914,
+        "get_cdp_url": 0.024821996688842773,
+        "browser_operations": 3.528286933898926,
+        "environment_closure": 0.02989792823791504
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 150.75319504737854,
+      "steps_timing": {
+        "environment_creation": 4.180639982223511,
+        "environment_ready": 140.09218215942383,
+        "environment_reset": 2.928388833999634,
+        "get_cdp_url": 0.023782968521118164,
+        "browser_operations": 3.5281920433044434,
+        "environment_closure": 0.317432165145874
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 22.91212224960327,
+      "steps_timing": {
+        "environment_creation": 4.00096321105957,
+        "environment_ready": 13.03020191192627,
+        "environment_reset": 1.618833065032959,
+        "get_cdp_url": 0.04025602340698242,
+        "browser_operations": 4.221855163574219,
+        "environment_closure": 0.0238037109375
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 155.6471290588379,
+      "steps_timing": {
+        "environment_creation": 2.199507236480713,
+        "environment_ready": 142.18619537353516,
+        "environment_reset": 6.63461709022522,
+        "get_cdp_url": 0.026424884796142578,
+        "browser_operations": 4.600375175476074,
+        "environment_closure": 0.05620718002319336
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 119.72135281562805,
+      "steps_timing": {
+        "environment_creation": 4.0140221118927,
+        "environment_ready": 109.98594498634338,
+        "environment_reset": 1.7607128620147705,
+        "get_cdp_url": 0.026633024215698242,
+        "browser_operations": 3.9340269565582275,
+        "environment_closure": 0.053751230239868164
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 15.317748069763184,
+      "steps_timing": {
+        "environment_creation": 1.4765419960021973,
+        "environment_ready": 3.716261148452759,
+        "environment_reset": 6.060606002807617,
+        "get_cdp_url": 0.024309873580932617,
+        "browser_operations": 4.040018081665039,
+        "environment_closure": 0.06296324729919434
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 151.3741798400879,
+      "steps_timing": {
+        "environment_creation": 4.174968957901001,
+        "environment_ready": 141.77194595336914,
+        "environment_reset": 1.4961819648742676,
+        "get_cdp_url": 0.020225048065185547,
+        "browser_operations": 3.9108550548553467,
+        "environment_closure": 0.02573704719543457
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 133.44791197776794,
+      "steps_timing": {
+        "environment_creation": 4.023550987243652,
+        "environment_ready": 123.81933283805847,
+        "environment_reset": 1.6423711776733398,
+        "get_cdp_url": 0.022428035736083984,
+        "browser_operations": 3.9402177333831787,
+        "environment_closure": 0.05385279655456543
+      },
+      "error": null
+    }
+  ]
+}

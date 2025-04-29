@@ -1,0 +1,117 @@
+{
+  "total_tests": 10,
+  "successful_tests": 3,
+  "failed_tests": 7,
+  "total_duration": 206.06158900260925,
+  "tests_per_second": 0.04852918027276484,
+  "success_rate": 30.0,
+  "individual_test_metrics": [
+    {
+      "success": false,
+      "total_duration": 165.65246725082397,
+      "steps_timing": {
+        "environment_creation": 8.21413803100586,
+        "environment_ready": 92.02260875701904,
+        "environment_closure": 5.404158353805542
+      },
+      "error": "504, message='Gateway Time-out', url='https://staging.plato.so/api/env/e38618d3-13d9-43b6-88cd-e4363321cfd5/reset'"
+    },
+    {
+      "success": false,
+      "total_duration": 206.05944895744324,
+      "steps_timing": {
+        "environment_creation": 6.60027289390564,
+        "environment_ready": 79.43571710586548
+      },
+      "error": "504, message='Gateway Time-out', url='https://staging.plato.so/api/env/10007cac-9e3d-4573-92fc-52aa0f930f88/close'"
+    },
+    {
+      "success": false,
+      "total_duration": 189.12610793113708,
+      "steps_timing": {
+        "environment_creation": 8.047183990478516,
+        "environment_ready": 104.87978386878967,
+        "environment_closure": 16.18523597717285
+      },
+      "error": "504, message='Gateway Time-out', url='https://staging.plato.so/api/env/53c7c571-a0ca-4bbc-a193-4292ab0a45ea/reset'"
+    },
+    {
+      "success": true,
+      "total_duration": 106.66676592826843,
+      "steps_timing": {
+        "environment_creation": 3.108927011489868,
+        "environment_ready": 97.65924406051636,
+        "environment_reset": 1.8226087093353271,
+        "get_cdp_url": 0.039154052734375,
+        "browser_operations": 4.036821126937866,
+        "environment_closure": 0.05725574493408203
+      },
+      "error": null
+    },
+    {
+      "success": false,
+      "total_duration": 112.60104322433472,
+      "steps_timing": {
+        "environment_creation": 8.207995176315308,
+        "environment_ready": 103.71829295158386,
+        "environment_closure": 0.5957059860229492
+      },
+      "error": "404, message='Not Found', url='https://staging.plato.so/api/env/a9fa6be7-d0df-4ec0-b70b-3ff18e61560d/reset'"
+    },
+    {
+      "success": true,
+      "total_duration": 154.18043303489685,
+      "steps_timing": {
+        "environment_creation": 8.22006106376648,
+        "environment_ready": 98.53386497497559,
+        "environment_reset": 43.79008913040161,
+        "get_cdp_url": 0.03433704376220703,
+        "browser_operations": 3.602073907852173,
+        "environment_closure": 0.04024982452392578
+      },
+      "error": null
+    },
+    {
+      "success": false,
+      "total_duration": 173.25063300132751,
+      "steps_timing": {
+        "environment_creation": 8.184555053710938,
+        "environment_ready": 104.78716897964478,
+        "environment_closure": 0.26758790016174316
+      },
+      "error": "504, message='Gateway Time-out', url='https://staging.plato.so/api/env/0adf4948-9005-4413-b4e2-6484e19b5aed/reset'"
+    },
+    {
+      "success": false,
+      "total_duration": 142.57259106636047,
+      "steps_timing": {
+        "environment_creation": 8.220175981521606,
+        "environment_ready": 14.331063032150269
+      },
+      "error": "504, message='Gateway Time-out', url='https://staging.plato.so/api/env/e16871e3-03c9-438b-ae72-5e90a5458e05/close'"
+    },
+    {
+      "success": true,
+      "total_duration": 18.615032196044922,
+      "steps_timing": {
+        "environment_creation": 2.7967162132263184,
+        "environment_ready": 3.7946770191192627,
+        "environment_reset": 7.539416074752808,
+        "get_cdp_url": 0.037782907485961914,
+        "browser_operations": 4.446430921554565,
+        "environment_closure": 0.06694602966308594
+      },
+      "error": null
+    },
+    {
+      "success": false,
+      "total_duration": 180.606507062912,
+      "steps_timing": {
+        "environment_creation": 8.20680022239685,
+        "environment_ready": 89.45023727416992,
+        "environment_closure": 22.935964822769165
+      },
+      "error": "504, message='Gateway Time-out', url='https://staging.plato.so/api/env/297acf95-4fc4-49fd-adc4-497fa614f0a7/reset'"
+    }
+  ]
+}

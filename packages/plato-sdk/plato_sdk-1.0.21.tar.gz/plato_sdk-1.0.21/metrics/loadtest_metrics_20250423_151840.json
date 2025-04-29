@@ -1,0 +1,138 @@
+{
+  "total_tests": 10,
+  "successful_tests": 8,
+  "failed_tests": 2,
+  "total_duration": 83.31120109558105,
+  "tests_per_second": 0.12003187888897708,
+  "success_rate": 80.0,
+  "individual_test_metrics": [
+    {
+      "success": true,
+      "total_duration": 52.94612669944763,
+      "steps_timing": {
+        "environment_creation": 4.698063135147095,
+        "environment_ready": 34.4724657535553,
+        "environment_reset": 9.929937839508057,
+        "get_cdp_url": 0.029169797897338867,
+        "browser_operations": 3.816481113433838,
+        "environment_closure": 0.03538012504577637
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 21.24819302558899,
+      "steps_timing": {
+        "environment_creation": 3.1057329177856445,
+        "environment_ready": 0.6669118404388428,
+        "environment_reset": 13.53065276145935,
+        "get_cdp_url": 0.03435206413269043,
+        "browser_operations": 3.9105350971221924,
+        "environment_closure": 0.033435821533203125
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 37.4225389957428,
+      "steps_timing": {
+        "environment_creation": 4.686247110366821,
+        "environment_ready": 24.663055181503296,
+        "environment_reset": 4.170841932296753,
+        "get_cdp_url": 0.03277301788330078,
+        "browser_operations": 3.8696141242980957,
+        "environment_closure": 0.044007062911987305
+      },
+      "error": null
+    },
+    {
+      "success": false,
+      "total_duration": 83.30991792678833,
+      "steps_timing": {
+        "environment_creation": 4.680923938751221,
+        "environment_ready": 43.72076082229614,
+        "environment_reset": 4.353927135467529,
+        "get_cdp_url": 0.03447389602661133,
+        "environment_closure": 0.18944001197814941
+      },
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"http://espocrm.com/\", waiting until \"load\"\n"
+    },
+    {
+      "success": true,
+      "total_duration": 47.48713803291321,
+      "steps_timing": {
+        "environment_creation": 4.230970859527588,
+        "environment_ready": 3.733963966369629,
+        "environment_reset": 35.483885765075684,
+        "get_cdp_url": 0.030523300170898438,
+        "browser_operations": 4.0077831745147705,
+        "environment_closure": 0.04938101768493652
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 50.581165075302124,
+      "steps_timing": {
+        "environment_creation": 4.2430479526519775,
+        "environment_ready": 24.37676692008972,
+        "environment_reset": 17.963526964187622,
+        "get_cdp_url": 0.032279014587402344,
+        "browser_operations": 3.9655370712280273,
+        "environment_closure": 0.045151710510253906
+      },
+      "error": null
+    },
+    {
+      "success": false,
+      "total_duration": 37.941078901290894,
+      "steps_timing": {
+        "environment_creation": 2.357872247695923,
+        "environment_ready": 0.5265970230102539,
+        "environment_reset": 4.477455139160156,
+        "get_cdp_url": 0.03482794761657715,
+        "environment_closure": 0.03270292282104492
+      },
+      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"http://espocrm.com/\", waiting until \"load\"\n"
+    },
+    {
+      "success": true,
+      "total_duration": 10.745696067810059,
+      "steps_timing": {
+        "environment_creation": 1.580029010772705,
+        "environment_ready": 0.5644769668579102,
+        "environment_reset": 4.279292821884155,
+        "get_cdp_url": 0.031041860580444336,
+        "browser_operations": 4.290841817855835,
+        "environment_closure": 0.07418704032897949
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 38.290623903274536,
+      "steps_timing": {
+        "environment_creation": 4.235504150390625,
+        "environment_ready": 0.09864568710327148,
+        "environment_reset": 27.293540000915527,
+        "get_cdp_url": 0.0302431583404541,
+        "browser_operations": 6.632686138153076,
+        "environment_closure": 0.02982497215270996
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 25.32287907600403,
+      "steps_timing": {
+        "environment_creation": 4.66325306892395,
+        "environment_ready": 8.155080795288086,
+        "environment_reset": 8.305011987686157,
+        "get_cdp_url": 0.0333249568939209,
+        "browser_operations": 4.1661999225616455,
+        "environment_closure": 0.03559994697570801
+      },
+      "error": null
+    }
+  ]
+}

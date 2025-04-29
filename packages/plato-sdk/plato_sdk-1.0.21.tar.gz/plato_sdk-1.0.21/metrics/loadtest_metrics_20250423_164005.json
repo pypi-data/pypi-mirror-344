@@ -1,0 +1,70 @@
+{
+  "total_tests": 10,
+  "successful_tests": 0,
+  "failed_tests": 10,
+  "total_duration": 0.8786649703979492,
+  "tests_per_second": 11.380902092262742,
+  "success_rate": 0.0,
+  "individual_test_metrics": [
+    {
+      "success": false,
+      "total_duration": 0.3678419589996338,
+      "steps_timing": {},
+      "error": "500, message='Internal Server Error', url='https://staging.plato.so/api/env/make2'"
+    },
+    {
+      "success": false,
+      "total_duration": 0.7099850177764893,
+      "steps_timing": {},
+      "error": "500, message='Internal Server Error', url='https://staging.plato.so/api/env/make2'"
+    },
+    {
+      "success": false,
+      "total_duration": 0.6564106941223145,
+      "steps_timing": {},
+      "error": "500, message='Internal Server Error', url='https://staging.plato.so/api/env/make2'"
+    },
+    {
+      "success": false,
+      "total_duration": 0.7638661861419678,
+      "steps_timing": {},
+      "error": "500, message='Internal Server Error', url='https://staging.plato.so/api/env/make2'"
+    },
+    {
+      "success": false,
+      "total_duration": 0.8585789203643799,
+      "steps_timing": {},
+      "error": "500, message='Internal Server Error', url='https://staging.plato.so/api/env/make2'"
+    },
+    {
+      "success": false,
+      "total_duration": 0.613745927810669,
+      "steps_timing": {},
+      "error": "500, message='Internal Server Error', url='https://staging.plato.so/api/env/make2'"
+    },
+    {
+      "success": false,
+      "total_duration": 0.5846037864685059,
+      "steps_timing": {},
+      "error": "500, message='Internal Server Error', url='https://staging.plato.so/api/env/make2'"
+    },
+    {
+      "success": false,
+      "total_duration": 0.8123300075531006,
+      "steps_timing": {},
+      "error": "500, message='Internal Server Error', url='https://staging.plato.so/api/env/make2'"
+    },
+    {
+      "success": false,
+      "total_duration": 0.8765628337860107,
+      "steps_timing": {},
+      "error": "500, message='Internal Server Error', url='https://staging.plato.so/api/env/make2'"
+    },
+    {
+      "success": false,
+      "total_duration": 0.8396568298339844,
+      "steps_timing": {},
+      "error": "500, message='Internal Server Error', url='https://staging.plato.so/api/env/make2'"
+    }
+  ]
+}

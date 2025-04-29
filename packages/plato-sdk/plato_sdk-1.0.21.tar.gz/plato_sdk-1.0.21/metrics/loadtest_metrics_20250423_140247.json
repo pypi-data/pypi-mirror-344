@@ -1,0 +1,126 @@
+{
+  "total_tests": 10,
+  "successful_tests": 6,
+  "failed_tests": 4,
+  "total_duration": 159.0923089981079,
+  "tests_per_second": 0.06285658975581862,
+  "success_rate": 60.0,
+  "individual_test_metrics": [
+    {
+      "success": false,
+      "total_duration": 36.126179933547974,
+      "steps_timing": {
+        "environment_creation": 3.8022830486297607,
+        "environment_ready": 30.733211278915405
+      },
+      "error": "500, message='Internal Server Error', url='https://staging.plato.so/api/env/d27e0017-8a91-4a18-a3d6-ff03b00ee592/close'"
+    },
+    {
+      "success": false,
+      "total_duration": 30.05236506462097,
+      "steps_timing": {
+        "environment_creation": 4.4748899936676025,
+        "environment_ready": 25.000760078430176,
+        "environment_closure": 0.22357988357543945
+      },
+      "error": "404, message='Not Found', url='https://staging.plato.so/api/env/6d0d7a2b-66c0-4190-9af1-b172d302cb11/reset'"
+    },
+    {
+      "success": true,
+      "total_duration": 25.760186195373535,
+      "steps_timing": {
+        "environment_creation": 1.8791847229003906,
+        "environment_ready": 3.753973960876465,
+        "environment_reset": 12.801121950149536,
+        "get_cdp_url": 0.02554774284362793,
+        "browser_operations": 7.300339937210083,
+        "environment_closure": 0.031105995178222656
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 96.2159628868103,
+      "steps_timing": {
+        "environment_creation": 3.765190839767456,
+        "environment_ready": 79.33626914024353,
+        "environment_reset": 6.143622159957886,
+        "get_cdp_url": 0.028004884719848633,
+        "browser_operations": 6.942866802215576,
+        "environment_closure": 0.027451038360595703
+      },
+      "error": null
+    },
+    {
+      "success": false,
+      "total_duration": 159.0904061794281,
+      "steps_timing": {
+        "environment_creation": 3.8042638301849365,
+        "environment_ready": 94.98189401626587
+      },
+      "error": "504, message='Gateway Time-out', url='https://staging.plato.so/api/env/3ae4e4c1-b54b-4828-81ae-b0a0d5e75f33/close'"
+    },
+    {
+      "success": true,
+      "total_duration": 95.82961702346802,
+      "steps_timing": {
+        "environment_creation": 4.627527952194214,
+        "environment_ready": 77.78169178962708,
+        "environment_reset": 6.531706094741821,
+        "get_cdp_url": 0.04161715507507324,
+        "browser_operations": 6.847061634063721,
+        "environment_closure": 0.03514599800109863
+      },
+      "error": null
+    },
+    {
+      "success": false,
+      "total_duration": 99.30619788169861,
+      "steps_timing": {
+        "environment_creation": 4.622328042984009,
+        "environment_ready": 94.4059488773346,
+        "environment_closure": 0.21529889106750488
+      },
+      "error": "404, message='Not Found', url='https://staging.plato.so/api/env/7784415e-0de0-4ad3-bd57-92310e37001d/reset'"
+    },
+    {
+      "success": true,
+      "total_duration": 118.1132071018219,
+      "steps_timing": {
+        "environment_creation": 3.774976968765259,
+        "environment_ready": 99.5696759223938,
+        "environment_reset": 7.713011026382446,
+        "get_cdp_url": 0.02611994743347168,
+        "browser_operations": 7.029412031173706,
+        "environment_closure": 0.03316783905029297
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 99.84482598304749,
+      "steps_timing": {
+        "environment_creation": 4.621230840682983,
+        "environment_ready": 82.345223903656,
+        "environment_reset": 6.018044948577881,
+        "get_cdp_url": 0.023783206939697266,
+        "browser_operations": 6.836532115936279,
+        "environment_closure": 0.02985692024230957
+      },
+      "error": null
+    },
+    {
+      "success": true,
+      "total_duration": 109.47954297065735,
+      "steps_timing": {
+        "environment_creation": 4.648151159286499,
+        "environment_ready": 96.05293297767639,
+        "environment_reset": 1.8116481304168701,
+        "get_cdp_url": 0.0241701602935791,
+        "browser_operations": 6.942627906799316,
+        "environment_closure": 0.03231000900268555
+      },
+      "error": null
+    }
+  ]
+}
