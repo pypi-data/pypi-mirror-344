@@ -1,0 +1,12 @@
+-r prod.txt
+build
+coverage
+jinja2
+mypy
+pytest
+python-dotenv
+rtoml
+ruff
+sphinx
+tox
+twine

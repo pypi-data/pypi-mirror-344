@@ -1,0 +1,11 @@
+beautifulsoup4
+click
+coverage
+jinja2
+mypy
+pytest
+python-dotenv
+rtoml
+ruff
+sphinx
+tox

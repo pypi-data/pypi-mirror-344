@@ -1,0 +1,24 @@
+/containerdata
+# py
+__pycache__/
+# secret
+.env
+# tmp dir
+/tmp
+/tests/tmp
+# build
+dist/
+*.egg-info/
+# coverage
+.coverage
+htmlcov/
+# tox
+.tox/
+# sphinx
+docs/build/
+# JetBrains
+.idea/
+# vscode
+.vscode/
+# macOS
+.DS_Store
