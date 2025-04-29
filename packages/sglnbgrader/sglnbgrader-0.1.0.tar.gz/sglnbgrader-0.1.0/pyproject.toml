@@ -1,0 +1,19 @@
+[project]
+name = "sglnbgrader"
+version = "0.1.0"
+description = "LLM-powered Jupyter notebook grading tool with nbgrader compatibility"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "litellm>=1.67.4.post1",
+    "nbformat>=5.10.4",
+    "openai>=1.76.0",
+    "pytest>=8.3.5",
+    "pytest-mock>=3.14.0",
+    "rich>=14.0.0",
+    "typer>=0.15.2",
+    "numpy>=1.26.0",
+]
+
+[project.scripts]
+sglnbgrader = "sglnbgrader.cli:app"

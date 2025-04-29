@@ -1,0 +1,273 @@
+# sglnbgrader: LLM-Assisted Jupyter Notebook Grader
+
+This project provides an automated grading system for Jupyter notebooks that uses Large Language Models (LLMs) to assess student answers against instructor-provided reference solutions. It's compatible with the nbgrader metadata format.
+
+## Features
+
+- Grade notebooks with nbgrader metadata
+- Compare student answers to reference solutions using LLMs
+- Generate detailed feedback and add it directly to notebook cells
+- Provide comprehensive scoring and analysis
+- Support for both single notebook and batch grading
+- Analyze consistency and fairness across multiple submissions
+- Export grading results to JSON or HTML-enhanced notebooks
+- Customizable LLM prompts and grading criteria
+
+## Installation
+
+### Prerequisites
+
+- Python 3.12 or higher
+- An OpenAI API key for access to GPT-4 models (or other models via LiteLLM)
+
+### Installation Options
+
+**Option 1: Install as a standalone tool with uv (recommended)**
+
+The fastest and easiest way to install is using `uv tool install`:
+
+```bash
+# Install directly as a standalone tool
+uv tool install sglnbgrader
+
+# This makes the command available globally without activating any environment
+```
+
+**Option 2: Install from PyPI**
+
+```bash
+# Using pip
+pip install sglnbgrader
+
+# Using uv pip
+uv pip install sglnbgrader
+```
+
+**Option 3: Install from source**
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/sglnbgrader.git
+   cd sglnbgrader
+   ```
+
+2. Install the package:
+   ```bash
+   # Using pip
+   pip install -e .
+   
+   # Using uv
+   uv pip install -e .
+   ```
+
+### API Key Setup
+
+Set up your OpenAI API key as an environment variable:
+
+```bash
+# Linux/macOS
+export OPENAI_API_KEY=your_api_key_here
+
+# Windows
+set OPENAI_API_KEY=your_api_key_here
+
+# Or add to your .bashrc or .zshrc for persistence
+echo 'export OPENAI_API_KEY=your_api_key_here' >> ~/.bashrc
+```
+
+## Usage
+
+### Command-line Interface
+
+The grader provides a command-line interface with two main commands:
+
+#### Grade a Single Notebook
+
+```bash
+sglnbgrader single --answer path/to/answer_notebook.ipynb --student path/to/student_notebook.ipynb --output results.json --verbose
+```
+
+Or using the Python module:
+
+```bash
+python -m sglnbgrader single --answer path/to/answer_notebook.ipynb --student path/to/student_notebook.ipynb --output results.json --verbose
+```
+
+Options:
+- `--answer`: Path to instructor's answer notebook (required)
+- `--student`: Path to student notebook (required)
+- `--model`: LLM model to use for grading (default: gpt-4.1-nano)
+- `--output`: Path to save grading results as JSON (optional)
+- `--verbose`, `-v`: Show detailed grading information
+
+#### Grade Multiple Notebooks
+
+```bash
+sglnbgrader batch --answer path/to/answer_notebook.ipynb --submissions path/to/submissions_dir --output path/to/results_dir --verbose
+```
+
+Or using the Python module:
+
+```bash
+python -m sglnbgrader batch --answer path/to/answer_notebook.ipynb --submissions path/to/submissions_dir --output path/to/results_dir --verbose
+```
+
+Options:
+- `--answer`: Path to instructor's answer notebook (required)
+- `--submissions`: Directory containing student submissions (required)
+- `--model`: LLM model to use for grading (default: gpt-4.1-nano)
+- `--output`: Directory to save grading results (optional)
+- `--verbose`, `-v`: Show detailed grading information
+
+### API Usage
+
+```python
+from sglnbgrader import Grader
+
+# Initialize the grader with the instructor's answer notebook
+grader = Grader("path/to/answer_notebook.ipynb", model="gpt-4.1-nano")
+
+# Grade a single student notebook
+results = grader.grade_user_notebook("path/to/student_notebook.ipynb")
+
+# Print the results
+print(f"Total score: {results['total_score']}/{results['max_score']} ({results['percentage']}%)")
+
+# Access individual question results
+for result in results["results"]:
+    print(f"Question {result['grade_id']}: {result['score']}/{result['max_score']}")
+    print(f"Feedback: {result['feedback']}")
+    
+# Generate feedback in the notebook
+feedback_notebook_path = grader.write_feedback_to_notebook(
+    "path/to/student_notebook.ipynb", results
+)
+print(f"Feedback notebook created at: {feedback_notebook_path}")
+
+# Compare multiple submissions
+submission_paths = [
+    "path/to/student1_notebook.ipynb",
+    "path/to/student2_notebook.ipynb",
+    "path/to/student3_notebook.ipynb",
+]
+comparison_results = grader.compare_student_submissions(submission_paths)
+
+# Run benchmarks on the grading system
+benchmark_results = grader.run_benchmarks(results, submission_paths)
+```
+
+## Notebook Format Requirements
+
+This grader works with notebooks that use the nbgrader metadata format:
+
+- Cells that should be graded must have nbgrader metadata
+- Required metadata fields: `grade_id`, `grade: true`, `points`
+
+Example cell metadata:
+```json
+{
+  "metadata": {
+    "nbgrader": {
+      "grade": true,
+      "grade_id": "question-1",
+      "points": 10,
+      "solution": true
+    }
+  }
+}
+```
+
+## Advanced Features
+
+### Writing Feedback to Notebooks
+
+The `write_feedback_to_notebook` method adds HTML-formatted feedback directly into the notebook cell outputs:
+
+```python
+feedback_notebook_path = grader.write_feedback_to_notebook(
+    "path/to/student_notebook.ipynb", results
+)
+```
+
+This creates a new notebook with:
+- HTML feedback boxes in each graded cell
+- A summary cell at the end with total score and breakdown
+- Preserves all original content
+
+### Comparing Student Submissions
+
+The `compare_student_submissions` method analyzes results across multiple submissions:
+
+```python
+comparison_results = grader.compare_student_submissions([
+    "path/to/student1_notebook.ipynb",
+    "path/to/student2_notebook.ipynb",
+])
+```
+
+This provides:
+- Statistics for each question (mean, median, standard deviation)
+- Overall class performance metrics
+- Consistency measures between different submissions
+
+### Benchmarking Grading Quality
+
+The `run_benchmarks` method validates the grading system's consistency and fairness:
+
+```python
+benchmark_results = grader.run_benchmarks(reference_results, submission_paths)
+```
+
+This analyzes:
+- Consistency relative to reference results
+- Fairness of scoring across different questions
+- Performance metrics for the grading system
+
+## Configuration
+
+You can customize the LLM model and prompt by extending the Grader class or modifying the prompt property:
+
+```python
+class CustomGrader(Grader):
+    @property
+    def prompt(self):
+        return """
+        Your custom prompt template here.
+        Question: {question}
+        Reference Answer: {reference_answer}
+        Student Answer: {student_answer}
+        Points: {points}
+        """
+```
+
+## Development
+
+### Testing
+
+Run the tests using pytest:
+```bash
+# Using pytest directly
+pytest
+
+# Using uv
+uv run pytest
+```
+
+### Project Structure
+
+- `sglnbgrader/` - Main package
+  - `__init__.py` - Package exports
+  - `grader.py` - Core Grader class implementation
+  - `cli.py` - Command-line interface
+  - `__main__.py` - Entry point for running as module
+- `tests/` - Test suite
+
+## License
+
+MIT
+
+## Acknowledgements
+
+- Uses nbgrader metadata format for identifying graded cells
+- Powered by OpenAI and other LLM providers through LiteLLM
+- CLI built with Typer and Rich for beautiful console output
