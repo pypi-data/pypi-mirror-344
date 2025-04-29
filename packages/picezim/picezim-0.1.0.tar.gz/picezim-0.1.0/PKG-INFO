@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: picezim
+Version: 0.1.0
+Summary: A short description of your package
+Author-email: Qendrim Krasniqi <qendrim.krasniqi@wayland.io>
+Project-URL: Homepage, https://github.com/yourusername/your-package
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Sum
+
+
+## Project structure
+
+```
+sum/
+├── src/
+│   └── sum/
+│       ├── __init__.py
+│       └── sum.py
+├── tests/
+│   └── test_sum.py
+├── pyproject.toml
+├── README.md
+└── LICENSE
+
+```
