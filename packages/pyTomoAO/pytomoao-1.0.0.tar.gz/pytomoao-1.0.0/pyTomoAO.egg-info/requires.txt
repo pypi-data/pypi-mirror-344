@@ -1,0 +1,11 @@
+numpy
+matplotlib
+numba
+scipy
+pytest
+PyYAML
+
+[docs]
+sphinx
+sphinx_rtd_theme
+sphinx-autodoc-typehints

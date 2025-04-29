@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: pyTomoAO
+Version: 1.0.0
+Summary: An open-source tool for tomographic reconstuction for AO systems
+Home-page: https://github.com/jacotay7/pyTomoAO
+Author: Jacob Taylor
+Author-email: jtaylor@keck.hawaii.edu
+License: GNU
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Environment :: MacOS X
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: numba
+Requires-Dist: scipy
+Requires-Dist: pytest
+Requires-Dist: PyYAML
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints; extra == "docs"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
