@@ -1,0 +1,2 @@
+[console_scripts]
+mcp_server_pubtator3 = src:main
