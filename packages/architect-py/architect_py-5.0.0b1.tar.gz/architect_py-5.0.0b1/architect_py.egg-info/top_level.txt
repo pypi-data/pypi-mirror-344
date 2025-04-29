@@ -1,0 +1,7 @@
+architect_py
+build
+dist
+examples
+htmlcov
+scripts
+templates
