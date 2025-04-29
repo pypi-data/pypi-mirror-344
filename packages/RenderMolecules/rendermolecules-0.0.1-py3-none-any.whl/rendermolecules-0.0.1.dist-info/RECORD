@@ -1,0 +1,11 @@
+RenderMolecules/ElementData.py,sha256=i5Ubx1SkAUcrqPQBKMvFrOWNHACUfSBLlmFrrbZOPYM,2432
+RenderMolecules/RenderMolecules.py,sha256=AdIfKlbfCvkc6RLnA1oPFWkvoiYMc4GRDYOTinsel5E,42861
+RenderMolecules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+RenderMolecules/blenderUtils.py,sha256=1-BVDeN2ocHdVe65s7fXW36Cc3uXbc7NRUKEaVvfQV8,7871
+RenderMolecules/geometryUtils.py,sha256=9cRiAxwkWHOHF-svhkQm52TcqnTBfiiUFIQX2sEBCA8,1225
+RenderMolecules/otherUtils.py,sha256=IUeR0fJc9YDmQm7UzNHkJiRLnkQutuD130DZiiLWWdI,2602
+rendermolecules-0.0.1.dist-info/licenses/LICENSE,sha256=GzeCzK17hhQQDNow0_r0L8OfLpeTKQjFQwBQU7ZUymg,32473
+rendermolecules-0.0.1.dist-info/METADATA,sha256=GyC8T6gSlDCgwIQdKUOwu_YnwQE9X_e9yI6EitZRvBo,5896
+rendermolecules-0.0.1.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+rendermolecules-0.0.1.dist-info/top_level.txt,sha256=bXqscF8rUjy2BTJp_wAajhufUAoPc4oQ3tsZqOSMp5Y,16
+rendermolecules-0.0.1.dist-info/RECORD,,
