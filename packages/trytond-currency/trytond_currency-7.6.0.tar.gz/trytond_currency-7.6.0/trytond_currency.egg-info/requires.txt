@@ -1,0 +1,14 @@
+python-sql>=0.9
+python-dateutil
+trytond<7.7,>=7.6
+
+[completion]
+argcomplete
+
+[data]
+pycountry
+proteus<7.7,>=7.6
+
+[test]
+proteus<7.7,>=7.6
+pycountry
