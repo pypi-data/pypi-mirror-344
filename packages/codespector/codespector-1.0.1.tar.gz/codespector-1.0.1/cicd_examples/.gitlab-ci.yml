@@ -1,0 +1,42 @@
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+
+variables:
+  GIT_DEPTH: 0
+  CODESPECTOR_RESULT_FILEPATH: "codespector/result.md"
+  CODESPECTOR_COMBINED_FILEPATH: "codespector/combined.json"
+
+
+stages:
+  - codespector
+
+codespector-job:
+  stage: codespector
+  image: python:3.12
+  script:
+    - apt-get update && apt-get install -y jq
+    - git fetch --no-tags origin $CI_MERGE_REQUEST_TARGET_BRANCH_NAME
+    - pip install codespector
+    - |
+      codespector \
+        --chat-token "$CODESPECTOR_CHAT_TOKEN" \
+        --chat-agent "$CODESPECTOR_CHAT_AGENT" \
+        --compare-branch "origin/$CI_MERGE_REQUEST_TARGET_BRANCH_NAME...HEAD" \
+        --result-file "$CODESPECTOR_RESULT_FILE" \
+        --system-content "$CODESCPECTOR_SYSTEM_CONTENT" \
+        --prompt-content "$CODESPECTOR_PROMPT_CONTENT"
+
+    - |
+      COMMENT_CONTENT=$(cat ${CODESPECTOR_RESULT_FILEPATH} | jq -Rs .)
+      echo "Posting comment to MR..."
+      curl -X POST \
+        --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+        --header "Content-Type: application/json" \
+        --data "{\"body\": ${COMMENT_CONTENT}}" \
+        "$CI_API_V4_URL/projects/$CI_PROJECT_ID/merge_requests/$CI_MERGE_REQUEST_IID/notes"
+  artifacts:
+    paths:
+      - ${CODESPECTOR_RESULT_FILEPATH}
+      - ${CODESPECTOR_COMBINED_FILEPATH}
+    expire_in: 10 minutes
