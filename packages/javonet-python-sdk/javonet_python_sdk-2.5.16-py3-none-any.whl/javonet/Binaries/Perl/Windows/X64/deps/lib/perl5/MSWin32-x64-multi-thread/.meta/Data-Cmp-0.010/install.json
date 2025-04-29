@@ -1,0 +1,1 @@
+{"name":"Data::Cmp","target":"Data::Cmp","provides":{"Data::Cmp":{"version":"0.010","file":"lib/Data/Cmp.pm"},"Data::Cmp::Numeric":{"version":"0.010","file":"lib/Data/Cmp/Numeric.pm"},"Data::Cmp::StrOrNumeric":{"version":"0.010","file":"lib/Data/Cmp/StrOrNumeric.pm"}},"pathname":"P/PE/PERLANCAR/Data-Cmp-0.010.tar.gz","dist":"Data-Cmp-0.010","version":"0.010"}
