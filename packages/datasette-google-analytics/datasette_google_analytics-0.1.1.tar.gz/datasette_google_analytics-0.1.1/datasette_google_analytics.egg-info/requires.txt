@@ -1,0 +1,12 @@
+datasette>=0.54
+
+[build]
+wheel
+build
+setuptools
+
+[test]
+beautifulsoup4
+pytest-asyncio
+pytest
+python-semantic-release
