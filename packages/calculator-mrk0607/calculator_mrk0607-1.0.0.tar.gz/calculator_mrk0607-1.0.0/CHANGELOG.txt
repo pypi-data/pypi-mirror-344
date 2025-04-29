@@ -1,0 +1,12 @@
+===========================
+📜 CHANGELOG – Calculator Module
+===========================
+
+All notable changes to this project will be documented in this file.
+
+------------------------
+Version 1.0.0 – [Initial Release]
+------------------------
+
+🗓 Date: 2025-04-29
+------------------------

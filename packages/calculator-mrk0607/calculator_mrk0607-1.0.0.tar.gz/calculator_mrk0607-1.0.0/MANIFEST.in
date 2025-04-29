@@ -1,0 +1,9 @@
+include README.txt
+include CHANGELOG.txt
+
+# Include all Python files
+recursive-include . *.py
+
+# Exclude __pycache__ directories and .pyc files
+global-exclude __pycache__
+global-exclude *.py[cod]

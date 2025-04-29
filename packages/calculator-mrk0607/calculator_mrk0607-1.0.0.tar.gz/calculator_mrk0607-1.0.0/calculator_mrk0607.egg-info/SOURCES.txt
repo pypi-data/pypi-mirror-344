@@ -1,0 +1,12 @@
+CHANGELOG.txt
+MANIFEST.in
+README.txt
+setup.py
+./__init__.py
+./setup.py
+./.ipynb_checkpoints/__init__-checkpoint.py
+./.ipynb_checkpoints/setup-checkpoint.py
+calculator_mrk0607.egg-info/PKG-INFO
+calculator_mrk0607.egg-info/SOURCES.txt
+calculator_mrk0607.egg-info/dependency_links.txt
+calculator_mrk0607.egg-info/top_level.txt
