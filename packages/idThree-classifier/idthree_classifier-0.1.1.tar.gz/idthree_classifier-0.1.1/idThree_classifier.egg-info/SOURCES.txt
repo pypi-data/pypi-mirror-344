@@ -1,0 +1,9 @@
+README.md
+setup.py
+idThree_classifier/__init__.py
+idThree_classifier/idThree.py
+idThree_classifier.egg-info/PKG-INFO
+idThree_classifier.egg-info/SOURCES.txt
+idThree_classifier.egg-info/dependency_links.txt
+idThree_classifier.egg-info/requires.txt
+idThree_classifier.egg-info/top_level.txt
