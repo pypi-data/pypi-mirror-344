@@ -1,0 +1,11 @@
+bbox_visualizer/__init__.py,sha256=Oy2zLpt4IQvXp1JFHbkkFFHcVMgo8hBZ752GUJWhGtA,833
+bbox_visualizer/_version.py,sha256=K2uqgpmNuApS_OV5kcSoshVG9LFQlr-es1HuZALwCq4,50
+bbox_visualizer/core/__init__.py,sha256=ZpXD7JXrUs9yRvyG2qx1j9fA8OQ8Dh9YjE49dSSGaEg,631
+bbox_visualizer/core/_utils.py,sha256=sePyObRQ_rVjr0ZMdngwEW-cagilUgNGmtWAzR0eI10,2898
+bbox_visualizer/core/flags.py,sha256=GRWsml7A9BbhM66M0XJbkRKZBor4GKLHhqtsBfOm31o,8483
+bbox_visualizer/core/labels.py,sha256=Noz7ij2rnIcHfI4_LKurf8DDQfvTBNRaCK1RUs6sD3c,4817
+bbox_visualizer/core/rectangle.py,sha256=CvNrSRqtZfBYVxmrgntJCRBl3LC05SOrKFbKylpXa9Y,2301
+bbox_visualizer-0.2.1.dist-info/METADATA,sha256=ou_CFMGnoHFT9p8OtfOD6lxKU5djT4yMPBoycdOWcPg,5838
+bbox_visualizer-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bbox_visualizer-0.2.1.dist-info/licenses/LICENSE,sha256=MKawbVVhAEze4EMAObKdXT2MJpTnm_sFKiNLZN4vw2Q,1083
+bbox_visualizer-0.2.1.dist-info/RECORD,,
