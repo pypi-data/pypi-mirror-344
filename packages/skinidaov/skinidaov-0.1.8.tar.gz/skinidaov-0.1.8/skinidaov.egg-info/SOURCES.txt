@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+skinidaov/__init__.py
+skinidaov.egg-info/PKG-INFO
+skinidaov.egg-info/SOURCES.txt
+skinidaov.egg-info/dependency_links.txt
+skinidaov.egg-info/top_level.txt
