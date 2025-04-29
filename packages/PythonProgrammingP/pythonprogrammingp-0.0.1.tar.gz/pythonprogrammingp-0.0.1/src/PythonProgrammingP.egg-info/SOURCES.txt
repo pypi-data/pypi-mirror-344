@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/PythonProgrammingP/__init__.py
+src/PythonProgrammingP/statistics.py
+src/PythonProgrammingP.egg-info/PKG-INFO
+src/PythonProgrammingP.egg-info/SOURCES.txt
+src/PythonProgrammingP.egg-info/dependency_links.txt
+src/PythonProgrammingP.egg-info/top_level.txt
+test/test_statistics.py
