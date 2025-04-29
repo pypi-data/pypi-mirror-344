@@ -1,0 +1,55 @@
+[project]
+name = "openweather-mcp"
+description = "A Model Context Protocal server for OpenWeather.org API."
+authors = [
+    { name = "Frost Ming", email = "me@frostming.com" },
+]
+dependencies = [
+    "mcp>=1",
+    "httpx>=0.28.1",
+    "pydantic>=2.11.3",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+keywords = [
+    "mcp",
+]
+dynamic = []
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+version = "0.1.0"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+openweather-mcp = "openweather_mcp:main"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.pdm.scripts]
+test = "pytest"
+dev = "npx @modelcontextprotocol/inspector openweather-mcp"
+
+[tool.pdm.scripts._]
+env_file = ".env"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.26.0",
+]
