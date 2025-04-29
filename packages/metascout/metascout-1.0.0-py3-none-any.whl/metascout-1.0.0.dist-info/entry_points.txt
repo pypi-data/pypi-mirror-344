@@ -1,0 +1,2 @@
+[console_scripts]
+metascout = metascout.cli:main
