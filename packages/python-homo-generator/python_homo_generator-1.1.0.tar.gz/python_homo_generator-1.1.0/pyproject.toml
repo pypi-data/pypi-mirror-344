@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "python-homo-generator"
+version = "1.1.0"
+description = "A tool that breaks down any number into a formula consisting of 114514. Make by python"
+authors = ["miyago9267 <miyagomizugen@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/miyago9267/homo-py"
+homepage = "https://github.com/miyago9267/homo-py"
+keywords = ["symbolic", "decomposition", "numbers", "homo"]
+
+packages = [
+    { include = "homo_py" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
