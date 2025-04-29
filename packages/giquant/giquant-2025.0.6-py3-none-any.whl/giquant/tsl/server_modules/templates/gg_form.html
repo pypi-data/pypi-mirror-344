@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Plot using tsl.gg - Grammar for Graphics</title> 
+</head> 
+<body> 
+<h1>Plot using tsl.gg - Grammar for Graphics</h1> 
+	<form method="post" action="/gg_form" enctype="multipart/form-data"> 
+		{{ form.csrf_token }} 
+		<p>{{ form.pos2.label }}      {{ form.pos2() }}</p> 
+		<p>{{ form.index_type.label }} {{ form.index_type() }}</p> 
+		<p>{{ form.pos3.label }}     {{ form.pos3(cols=100, rows=10) }}</p> 
+		<p><input type="submit" value="Submit"></p> 
+	</form>
+
+	<h3>Example: pring_trades_alloc (monthly)</h3>
+	<pre>
+levels = Vticker , Vvar; line(pos(Dx=FI(VDate), Dy=FI(Vdrawdown)), aes(Dcolor=FI(Vticker)));
+line(pos(Dx=FI(VDate), Dy=FI(Vendvalperiod)), aes(Dcolor=FI(Vticker)));
+	</pre>
+</body> 
+</html>
