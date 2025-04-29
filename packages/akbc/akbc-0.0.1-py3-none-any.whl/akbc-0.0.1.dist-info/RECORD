@@ -1,0 +1,10 @@
+akbc/__init__.py,sha256=nOYsDJks7lpAuBy2UDaVrF7_LchJ1DjWgh4OuzKYR54,40
+akbc/__main__.py,sha256=HjTsxZLVOBnVXQaCd0hZRuELDYEGb2MrmfkveU9OXTc,2653
+akbc/keyboard_controller.py,sha256=pdFvs9xxJYobG_T6DjO6qbfeHc47Y_tWilUrGZ8Qj0I,12683
+akbc/screen.py,sha256=r54ZcWS8Lr5K6UXVcgF8gsUBrb31_tCJD_M4ismQxPs,4607
+akbc/simple_vehicle.py,sha256=4xC_6hxYmSj-YBrGvSEE6t0gw6GQ7c_TIMvdC9_tPWI,21775
+akbc-0.0.1.dist-info/METADATA,sha256=0sR2x3by_yYDJk0c1CGeaKk9kEd4EwlJEgVX4z5WX-Y,949
+akbc-0.0.1.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+akbc-0.0.1.dist-info/entry_points.txt,sha256=OQptR8PBplclFCth5Es_liJD6S77TKb7a1b1FoGr9NA,44
+akbc-0.0.1.dist-info/top_level.txt,sha256=Z5_BueX3yt8949Qu25h5BM0Sk4_TLq2dX8uDAW_D0gg,5
+akbc-0.0.1.dist-info/RECORD,,
