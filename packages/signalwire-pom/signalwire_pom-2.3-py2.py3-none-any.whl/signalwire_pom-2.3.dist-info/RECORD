@@ -1,0 +1,11 @@
+signalwire/__init__.py,sha256=enAx35xTvqukaX4XNWF5q2CADL2L3AwmQgxow6SR0hc,98
+signalwire/__main__.py,sha256=A45KgpDV4gFZyJLfWoswienyNDt5EcuNI57q2R3KN_o,161
+signalwire/pom.py,sha256=Sw153sMzFCcRv4KeNgkFOxCGd3YSUq4ef-5mFwPDG7Q,20780
+signalwire/pom_tool.py,sha256=uODSTCpbwGn2w39t_2fdFrGHE7gT8r29aOQ4yzam5Uc,3687
+signalwire/win_install.py,sha256=jBEgL_s5JRE3hb4VyYHJ2-OMFL14dn_DCVF5QuAGTPE,780
+signalwire_pom-2.3.dist-info/licenses/LICENSE,sha256=sSg1HMtTI7f3Jgkn97dNOjCmTu1_l8t0D0oB6kt-6QI,1067
+signalwire_pom-2.3.dist-info/METADATA,sha256=ArtoLBL_8xvlOzDtV9r1rzp0drZ7YzGKR5N6UlBXZZ8,6830
+signalwire_pom-2.3.dist-info/WHEEL,sha256=XAkygS4h1cf0JYWV13kJhTWht2y9NqKAsZuiTHc2920,109
+signalwire_pom-2.3.dist-info/entry_points.txt,sha256=CtN_lJgODYdw97BmpRjtYfA8TbJwsA1uBU-kiX0SaCs,54
+signalwire_pom-2.3.dist-info/top_level.txt,sha256=HRoWdnczdZfAdIYPOWpzceSUbq_sqL4RrwdsJdqnkEo,11
+signalwire_pom-2.3.dist-info/RECORD,,
