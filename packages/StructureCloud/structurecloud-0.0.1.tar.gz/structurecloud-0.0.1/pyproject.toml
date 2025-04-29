@@ -1,0 +1,24 @@
+[project]
+name = "StructureCloud"          # must be unique on PyPI!
+version = "0.0.1"
+authors = [
+  { name="Ty Perez", email="ty.jperez@gmail.com" },
+]
+
+description = "Standard formating and easy access to 3D structural datasets for machine learning. currently under development..."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/TyJPerez/StructureCloud"
+Issues = "https://github.com/TyJPerez/StructureCloud/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]  # <- Important to tell setuptools to find code inside src/

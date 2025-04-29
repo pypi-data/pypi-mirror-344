@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/StructureCloud.egg-info/PKG-INFO
+src/StructureCloud.egg-info/SOURCES.txt
+src/StructureCloud.egg-info/dependency_links.txt
+src/StructureCloud.egg-info/top_level.txt
+src/StructureCloud/Datasets/__init__.py
+src/StructureCloud/Datasets/preprocess.py
+src/StructureCloud/Datasets/retrieval.py
