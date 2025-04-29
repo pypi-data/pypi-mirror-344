@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: calculator_lib
+Version: 0.1.0
+Summary: Biblioteca de operações matemáticas básicas para projetos em Python.
+Author: Paulo Sérgio dos Santos Junior
+Author-email: paulossjunior@gmail.com
+Requires-Python: >=3.8
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
