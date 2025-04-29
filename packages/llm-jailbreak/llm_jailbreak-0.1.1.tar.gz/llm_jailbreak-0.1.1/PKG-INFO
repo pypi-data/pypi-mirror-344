@@ -1,0 +1,103 @@
+Metadata-Version: 2.4
+Name: llm_jailbreak
+Version: 0.1.1
+Summary: A jailbreak package which integration some open manners
+Author: Jay Woden
+Author-email: wodenjay@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=2.0.1
+Requires-Dist: transformers>=4.28.0
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: tqdm>=4.66.1
+Requires-Dist: accelerate>=0.23.0
+Requires-Dist: openai>=1.12.0
+Requires-Dist: nltk>=3.8.1
+Requires-Dist: sentencepiece>=0.1.99
+Requires-Dist: protobuf>=4.24.4
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# LLM Jailbreak Testing Toolkit
+
+A Python package for testing jailbreak vulnerabilities in large language models (LLMs).
+
+## Features
+
+- Supports multiple LLM models (LLaMA-2, Vicuna, WizardLM, etc.)
+- Configurable testing parameters
+- Automatic model downloading
+- Attack success rate calculation
+- Easy to extend with new algorithms
+
+## Installation
+
+```bash
+pip install autodan
+```
+
+Or install from source:
+```bash
+git clone https://github.com/yourusername/autodan.git
+cd autodan
+pip install -e .
+```
+
+## Usage
+
+### Basic Usage
+
+```python
+from autodan import AutoDAN, AutoDANConfig
+
+# Create config with custom model
+config = AutoDANConfig(
+    model_name="vicuna",
+    api_key="your_openai_key"  # optional for prompt mutation
+)
+
+# Run full pipeline
+autodan = AutoDAN(config)
+results = autodan.run()
+
+print(f"Attack Success Rate: {results['asr']}")
+```
+
+### Configuration Options
+
+Key configuration parameters:
+
+- `model_name`: Name of model to test (llama2, vicuna, etc.)
+- `api_key`: OpenAI API key for prompt mutation (optional)
+- `device`: CUDA device index (default: 0)
+- `num_steps`: Number of optimization steps (default: 100)
+- `batch_size`: Batch size for evaluation (default: 256)
+- `dataset_path`: Path to harmful behaviors dataset
+
+See `AutoDANConfig` class for all available options.
+
+## Data Files
+
+The package includes:
+- Harmful behaviors dataset (`data/advbench/harmful_behaviors.csv`)
+- Initial prompts (`assets/autodan_initial_prompt.txt`)
+- Prompt templates (`assets/prompt_group.pth`)
+
+## License
+
+MIT
+
+## Acknowledge
+
+The core code comes from [AutoDAN](https://github.com/SheltonLiu-N/AutoDAN), I just expand and package it.
+If there are any infringement issues, first, I would like express my apology, second, contact me with email and I will delete it.
+I do this because I am preparing a project now, and I need to use these great code conveniently.
