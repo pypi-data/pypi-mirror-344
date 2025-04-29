@@ -1,0 +1,8 @@
+gptpdf/__init__.py,sha256=h3NltJjKPx3r4tp8kt8zUASuW3neLsKvKb9FxghNiSQ,28
+gptpdf/DocLayout-YOLO-standalone.py,sha256=06JInVIE0yK6lsutRMcy75FCjV-v64cz3CJ3Qy6RMwQ,2448
+gptpdf/doclayout_yolo.py,sha256=fDTDlOq1E0_jN0dcpc9Mf5OANHZ8uTSpPLbFoea6hns,3645
+gptpdf/parse.py,sha256=k5kwm6V4fgTTN9visTnvocD3EPSzEWlFbJvV81uLabc,29057
+gptpdf_latex-1.0.1.dist-info/LICENSE,sha256=meb38CTS0_AtkQKon0Y3692BIct4eBdYDB9YHH9A7AE,1087
+gptpdf_latex-1.0.1.dist-info/METADATA,sha256=7go55AFD7aN5RSVWBJSIYmK7y5alrp65W1MnBHYC8KE,8618
+gptpdf_latex-1.0.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+gptpdf_latex-1.0.1.dist-info/RECORD,,
