@@ -1,0 +1,7 @@
+apps
+dist
+logs
+screenshots
+tests
+utils
+venv
