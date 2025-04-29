@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: wavesurfer
+Version: 0.2.9
+Summary: wavesurfer
+Home-page: https://github.com/pengzhendong/wavesurfer
+Author: Zhendong Peng
+Author-email: pzd17@tsinghua.org.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: audiolab
+Requires-Dist: jinja2
+Requires-Dist: lhotse
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# wavesurfer
+
+## Usage
+
+```bash
+$ pip install wavesurfer
+```
+
+- play wave file
+
+```python
+from wavesurfer import play
+
+play("data/test_16k.wav")
+```
+
+- play waveform
+
+```python
+from audiolab import load_audio
+from wavesurfer import play
+
+audio, rate = load_audio("data/test_16k.wav")
+play(audio, rate)
+```
+
+![](images/test_16k.png)
+
+- play streaming waveform
+
+```python
+import time
+from audiolab import load_audio
+from wavesurfer import play
+
+def audio_generator():
+    for frame, rate in load_audio("data/test_16k.wav", frame_size_ms=300):
+        time.sleep(0.1)  # RTF: 0.1 / 0.3 < 1
+        yield frame
+
+play(audio_generator(), 16000)
+```
