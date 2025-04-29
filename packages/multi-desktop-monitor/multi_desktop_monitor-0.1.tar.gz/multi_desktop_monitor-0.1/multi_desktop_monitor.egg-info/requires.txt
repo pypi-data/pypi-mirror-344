@@ -1,0 +1,8 @@
+watchdog
+requests
+scapy
+Flask
+dash
+dash-bootstrap-components
+pandas
+plotly

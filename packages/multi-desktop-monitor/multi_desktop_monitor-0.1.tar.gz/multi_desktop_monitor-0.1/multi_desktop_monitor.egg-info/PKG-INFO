@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: multi_desktop_monitor
+Version: 0.1
+Requires-Dist: watchdog
+Requires-Dist: requests
+Requires-Dist: scapy
+Requires-Dist: Flask
+Requires-Dist: dash
+Requires-Dist: dash-bootstrap-components
+Requires-Dist: pandas
+Requires-Dist: plotly
+Dynamic: requires-dist
