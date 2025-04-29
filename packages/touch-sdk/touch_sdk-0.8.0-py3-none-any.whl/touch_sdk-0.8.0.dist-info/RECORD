@@ -1,0 +1,15 @@
+touch_sdk/__init__.py,sha256=NUdR8X9D4WU3uUHu-C7__FUgoCc_rHnil4_sIcDzO-o,414
+touch_sdk/gatt_scanner.py,sha256=KFDlm_Pr9X0LLGU1jYoRF_INkWcwxK-zmyq67FArGpg,2604
+touch_sdk/stream_watch.py,sha256=3dvcL4PZKeU2vqLxIluSmHWAnHg8AU6tS2Ecnq3lBUU,5796
+touch_sdk/utils.py,sha256=k1s822Jc9YvvQWe4ukIGsq3_tgwvC7_LxpUl5HifhRo,1669
+touch_sdk/uuids.py,sha256=5HVehKEoBpQhquurwCJRFG_wC8uJBav4aoN1XbMwD4U,415
+touch_sdk/watch.py,sha256=gq2ESsjR6VH3-SGZs-LNwGe1DWoGg7iNM4XD4tozSNQ,15269
+touch_sdk/watch_connector.py,sha256=cYGl3YvFFsUAEPLKIJXKy-XjYQSB7i7fqn28eYBUlmg,7535
+touch_sdk/protobuf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+touch_sdk/protobuf/common_pb2.py,sha256=5YE4qndf0eP-T-LEkG8WcXsXh-xaaA-QJeFV6_DOaDw,2313
+touch_sdk/protobuf/watch_input_pb2.py,sha256=0Axe3V0_HIW7n7CHVE1P5jQzbDqrJ_i05HL0OtqFDQ0,2294
+touch_sdk/protobuf/watch_output_pb2.py,sha256=W8BnskW7V3MbV25VfnyPGuyd14m-6TZK5UWNIcQdL3Y,5018
+touch_sdk-0.8.0.dist-info/METADATA,sha256=1xXcNJOMQS_7NF36bJPRKIvQ5RdGelMynMAByeQOgeo,5661
+touch_sdk-0.8.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+touch_sdk-0.8.0.dist-info/licenses/LICENSE,sha256=zQQeP2pcsw_FSLdHocUkwqtyFNUURU4Mt60Dht7hqYw,749
+touch_sdk-0.8.0.dist-info/RECORD,,
