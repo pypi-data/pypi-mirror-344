@@ -1,0 +1,12 @@
+
+[dev]
+pytest>=8.0
+pytest-mock
+coverage
+build
+twine
+flake8>=5.0.0
+flake8-bugbear
+flake8-docstrings
+black>=23.1
+isort>=5.10
