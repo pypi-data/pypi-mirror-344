@@ -1,0 +1,237 @@
+from asf.predictors.sklearn_wrapper import SklearnWrapper
+from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
+from ConfigSpace import ConfigurationSpace, Integer, Float, Categorical
+from functools import partial
+from typing import Optional, Dict, Any
+
+
+class RandomForestClassifierWrapper(SklearnWrapper):
+    """
+    A wrapper for the RandomForestClassifier from scikit-learn, providing
+    additional functionality for configuration space management.
+    """
+
+    PREFIX = "rf_classifier"
+
+    def __init__(self, init_params: Dict[str, Any] = {}):
+        """
+        Initialize the RandomForestClassifierWrapper.
+
+        Parameters
+        ----------
+        init_params : dict, optional
+            A dictionary of initialization parameters for the RandomForestClassifier.
+        """
+        super().__init__(RandomForestClassifier, init_params)
+
+    @staticmethod
+    def get_configuration_space(
+        cs: Optional[ConfigurationSpace] = None,
+    ) -> ConfigurationSpace:
+        """
+        Get the configuration space for the Random Forest Classifier.
+
+        Parameters
+        ----------
+        cs : ConfigurationSpace, optional
+            The configuration space to add the parameters to. If None, a new ConfigurationSpace will be created.
+
+        Returns
+        -------
+        ConfigurationSpace
+            The configuration space with the Random Forest Classifier parameters.
+        """
+        if cs is None:
+            cs = ConfigurationSpace(name="RandomForest")
+
+        n_estimators = Integer(
+            f"{RandomForestClassifierWrapper.PREFIX}:n_estimators",
+            (16, 128),
+            log=True,
+            default=116,
+        )
+        min_samples_split = Integer(
+            f"{RandomForestClassifierWrapper.PREFIX}:min_samples_split",
+            (2, 20),
+            log=False,
+            default=2,
+        )
+        min_samples_leaf = Integer(
+            f"{RandomForestClassifierWrapper.PREFIX}:min_samples_leaf",
+            (1, 20),
+            log=False,
+            default=2,
+        )
+        max_features = Float(
+            f"{RandomForestClassifierWrapper.PREFIX}:max_features",
+            (0.1, 1.0),
+            log=False,
+            default=0.17055852159745608,
+        )
+        bootstrap = Categorical(
+            f"{RandomForestClassifierWrapper.PREFIX}:bootstrap",
+            items=[True, False],
+            default=False,
+        )
+
+        cs.add(
+            [n_estimators, min_samples_split, min_samples_leaf, max_features, bootstrap]
+        )
+
+        return cs
+
+    @staticmethod
+    def get_from_configuration(
+        configuration: Dict[str, Any], additional_params: Optional[Dict[str, Any]] = {}
+    ) -> partial:
+        """
+        Create a RandomForestClassifierWrapper instance from a configuration.
+
+        Parameters
+        ----------
+        configuration : dict
+            A dictionary containing the configuration parameters.
+        additional_params : dict, optional
+            Additional parameters to override or extend the configuration.
+
+        Returns
+        -------
+        partial
+            A partial function to create a RandomForestClassifierWrapper instance.
+        """
+        rf_params = {
+            "n_estimators": configuration[
+                f"{RandomForestClassifierWrapper.PREFIX}:n_estimators"
+            ],
+            "min_samples_split": configuration[
+                f"{RandomForestClassifierWrapper.PREFIX}:min_samples_split"
+            ],
+            "min_samples_leaf": configuration[
+                f"{RandomForestClassifierWrapper.PREFIX}:min_samples_leaf"
+            ],
+            "max_features": configuration[
+                f"{RandomForestClassifierWrapper.PREFIX}:max_features"
+            ],
+            "bootstrap": configuration[
+                f"{RandomForestClassifierWrapper.PREFIX}:bootstrap"
+            ],
+            **additional_params,
+        }
+
+        return partial(RandomForestClassifierWrapper, init_params=rf_params)
+
+
+class RandomForestRegressorWrapper(SklearnWrapper):
+    """
+    A wrapper for the RandomForestRegressor from scikit-learn, providing
+    additional functionality for configuration space management.
+    """
+
+    PREFIX = "rf_regressor"
+
+    def __init__(self, init_params: Dict[str, Any] = {}):
+        """
+        Initialize the RandomForestRegressorWrapper.
+
+        Parameters
+        ----------
+        init_params : dict, optional
+            A dictionary of initialization parameters for the RandomForestRegressor.
+        """
+        super().__init__(RandomForestRegressor, init_params)
+
+    @staticmethod
+    def get_configuration_space(
+        cs: Optional[ConfigurationSpace] = None,
+    ) -> ConfigurationSpace:
+        """
+        Get the configuration space for the Random Forest Regressor.
+
+        Parameters
+        ----------
+        cs : ConfigurationSpace, optional
+            The configuration space to add the parameters to. If None, a new ConfigurationSpace will be created.
+
+        Returns
+        -------
+        ConfigurationSpace
+            The configuration space with the Random Forest Regressor parameters.
+        """
+        if cs is None:
+            cs = ConfigurationSpace(name="RandomForestRegressor")
+
+        n_estimators = Integer(
+            f"{RandomForestRegressorWrapper.PREFIX}:n_estimators",
+            (16, 128),
+            log=True,
+            default=116,
+        )
+        min_samples_split = Integer(
+            f"{RandomForestRegressorWrapper.PREFIX}:min_samples_split",
+            (2, 20),
+            log=False,
+            default=2,
+        )
+        min_samples_leaf = Integer(
+            f"{RandomForestRegressorWrapper.PREFIX}:min_samples_leaf",
+            (1, 20),
+            log=False,
+            default=2,
+        )
+        max_features = Float(
+            f"{RandomForestRegressorWrapper.PREFIX}:max_features",
+            (0.1, 1.0),
+            log=False,
+            default=0.17055852159745608,
+        )
+        bootstrap = Categorical(
+            f"{RandomForestRegressorWrapper.PREFIX}:bootstrap",
+            items=[True, False],
+            default=False,
+        )
+
+        cs.add(
+            [n_estimators, min_samples_split, min_samples_leaf, max_features, bootstrap]
+        )
+
+        return cs
+
+    @staticmethod
+    def get_from_configuration(
+        configuration: Dict[str, Any], additional_params: Optional[Dict[str, Any]] = {}
+    ) -> partial:
+        """
+        Create a RandomForestRegressorWrapper instance from a configuration.
+
+        Parameters
+        ----------
+        configuration : dict
+            A dictionary containing the configuration parameters.
+        additional_params : dict, optional
+            Additional parameters to override or extend the configuration.
+
+        Returns
+        -------
+        partial
+            A partial function to create a RandomForestRegressorWrapper instance.
+        """
+        rf_params = {
+            "n_estimators": configuration[
+                f"{RandomForestRegressorWrapper.PREFIX}:n_estimators"
+            ],
+            "min_samples_split": configuration[
+                f"{RandomForestRegressorWrapper.PREFIX}:min_samples_split"
+            ],
+            "min_samples_leaf": configuration[
+                f"{RandomForestRegressorWrapper.PREFIX}:min_samples_leaf"
+            ],
+            "max_features": configuration[
+                f"{RandomForestRegressorWrapper.PREFIX}:max_features"
+            ],
+            "bootstrap": configuration[
+                f"{RandomForestRegressorWrapper.PREFIX}:bootstrap"
+            ],
+            **additional_params,
+        }
+
+        return partial(RandomForestRegressorWrapper, init_params=rf_params)
