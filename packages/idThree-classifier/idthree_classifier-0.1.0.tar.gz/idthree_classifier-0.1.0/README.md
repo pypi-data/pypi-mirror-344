@@ -1,0 +1,20 @@
+# idThree_classifier
+
+[![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/)
+[![PyPI Version](https://img.shields.io/pypi/v/idThree-classifier.svg)](https://pypi.org/project/idThree-classifier/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A Python implementation of the ID3 decision tree algorithm with visualization capabilities.
+
+## Features
+
+- Pure Python implementation of ID3 algorithm
+- Handles both categorical and numerical data
+- Built-in tree visualization using Graphviz
+- Simple API similar to scikit-learn
+- Pandas DataFrame integration
+
+## Installation
+
+```bash
+pip install idThree_classifier
