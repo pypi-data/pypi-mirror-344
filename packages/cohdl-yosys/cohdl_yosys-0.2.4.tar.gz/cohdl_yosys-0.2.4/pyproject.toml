@@ -1,0 +1,26 @@
+[project]
+name="cohdl_yosys"
+version="0.2.4"
+
+authors = [
+    { name = "Alexander Forster", email = "alexander.forster123@gmail.com" }
+]
+
+description="Formal verification support library for CoHDL"
+readme = "README.md"
+requires-python = ">= 3.11"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+
+dependencies = [
+    "cohdl>=0.2.4"
+]
+
+[project.urls]
+Homepage = "https://github.com/alexander-forster/cohdl_yosys"
+
+[tool.setuptools.package-data]
+"*" = ["*.pyi"]
