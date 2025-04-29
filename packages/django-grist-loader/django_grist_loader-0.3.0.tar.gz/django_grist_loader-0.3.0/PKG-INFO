@@ -1,0 +1,113 @@
+Metadata-Version: 2.4
+Name: django-grist-loader
+Version: 0.3.0
+Summary: A reusable Django app to load data from Grist to Django models
+Author-email: David Guillot <david.guillot@beta.gouv.fr>
+Project-URL: Source, https://github.com/David-Guillot/django-grist-loader
+Keywords: Django,Grist
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.0
+Classifier: Framework :: Django :: 5.1
+Classifier: Framework :: Django :: 5.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django<6,>=4.2
+Requires-Dist: psycopg[binary]<4,>=3.2
+Requires-Dist: pygrister~=0.6
+Dynamic: license-file
+
+# django-grist-loader
+
+Django reusable app to load data from Grist into read-only Django models.
+
+## Installation
+
+The usual way:
+
+1. Install
+   ```shell
+   uv add django-grist-loader
+   ```
+
+2. Configure
+
+   Django's settings:
+   ```python
+   INSTALLED_APPS = (
+       ...,
+       "grist_loader",
+       ...,
+   )
+   
+   GRIST_PYGRISTER_CONFIG = {
+       "GRIST_API_KEY": os.environ.get("GRIST_API_KEY", ""),
+       "GRIST_SELF_MANAGED": "Y",
+       "GRIST_SELF_MANAGED_HOME": f"{os.environ.get('GRIST_PROTOCOL', 'https://')}{os.environ.get('GRIST_HOST', '')}",
+       "GRIST_SELF_MANAGED_SINGLE_ORG": "N",
+       "GRIST_SERVER_PROTOCOL": os.environ.get("GRIST_PROTOCOL", "https://"),
+       "GRIST_API_SERVER": os.environ.get("GRIST_HOST", ""),
+       "GRIST_API_ROOT": os.environ.get("GRIST_API_ROOT", "api"),
+       "GRIST_TEAM_SITE": os.environ.get("GRIST_API_DOCS", "docs"),
+       "GRIST_WORKSPACE_ID": os.environ.get("GRIST_WORKSPACE_ID", ""),
+       "GRIST_DOC_ID": os.environ.get("GRIST_DOC_ID", ""),
+       "GRIST_RAISE_ERROR": "Y",
+       "GRIST_SAFEMODE": "N",
+   } 
+   ```
+3. Define the required envvars that make sense to your project
+
+## Usage
+
+1. Define a Django model that subclasses `GristModel`:
+
+    ```python
+   from django.db import models
+   from grist_loader.models import GristModel
+
+
+   class MyModel(GristModel):
+       my_char_field = models.CharField(max_length=100)
+       my_int_field = models.IntegerField()
+       my_date_field = models.DateField()
+    ```
+2. Within a `grist.py` module, define a loader class that subclasses `GristLoader`:
+
+    ```python
+   from django.conf import settings
+   from grist_loader.loader import GristLoader, register_grist_loader
+
+   from .models import MyModel
+
+
+   @register_grist_loader
+   class MyLoader(GristLoader):
+       model = MyModel
+       pygrister_config = settings.GRIST_PYGRISTER_CONFIG
+       table = "MyGristTableName"
+       required_cols = ("MyChar",)
+       fields = {
+         "MyChar": MyModel.my_char_field,
+         "MyInt": MyModel.my_int_field,
+         "MyDate": MyModel.my_date_field,
+       }
+       filter = {
+           "MyChar": ["some value"],
+       }
+    ```
+3. Load your data
+   ```shell
+   python manage.py grist_load_all
+   ```
+4. Profit!
