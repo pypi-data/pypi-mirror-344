@@ -1,0 +1,9 @@
+pybcj-1.0.6.dist-info/RECORD,,
+pybcj-1.0.6.dist-info/WHEEL,sha256=J43yhhB9bGLR7euO--g-aK29FoGUMJxrnZGn3fuyRHg,141
+pybcj-1.0.6.dist-info/top_level.txt,sha256=2r0jCKebdlAr6_TXgnFQYqckBhcN6NlK3QfWvZXM85Q,4
+pybcj-1.0.6.dist-info/METADATA,sha256=26ZIITRkVVC6nnRkaKOuBGyqUkOYEa3skEu3RHUqMFI,3717
+pybcj-1.0.6.dist-info/licenses/LICENSE,sha256=3GJlINzVOiL3J68-5Cx3DlbJemT-OtsGN5nYqwMv5VE,26530
+bcj/_bcj.cpython-310-darwin.so,sha256=L7nUC0yIKUVkyeSSx8eSCseUgZEQ2QXGlfNAR_7ky0U,93472
+bcj/__init__.py,sha256=UxPjkHTSdGomZ_lw2v8QMEeguznWHXBVcNYIPeKp_M0,1790
+bcj/_bcjfilter.py,sha256=l_9oik24ATHyl8lSANNg8-q1D3jH8bRPBsSAPmuInXE,9435
+bcj/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
