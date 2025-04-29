@@ -1,0 +1,25 @@
+[project]
+name = "mcp-server-jisuanqi"
+version = "0.1.2"
+description = "一个基于MCP的简单计算器服务"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+dependencies = [
+    "mcp[cli]>=1.6.0",
+]
+keywords = ["calculator", "mcp", "math"]
+license = {text = "MIT"}
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/mcp-server-jisuanqi"
+Repository = "https://github.com/yourusername/mcp-server-jisuanqi.git"
+
+[project.scripts]
+mcp-server-jisuanqi = "mcp_server_jisuanqi.__main__:main"
