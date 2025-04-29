@@ -1,0 +1,2 @@
+[console_scripts]
+port_checker = port_checker:main
