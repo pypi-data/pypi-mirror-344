@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: netcrackr
+Version: 1.0.1
+Summary: A description of your project
+Home-page: https://github.com/eytin/netcrackr
+Author: Eytin
+Author-email: your_email@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
+
+# netcrackr
+
+**netcrackr** is a Python tool designed to simplify network-related tasks with a focus on speed and reliability.
+
+## Installation
+
+You can install `netcrackr` directly from PyPI:
+
+```bash
+pip install netcrackr
