@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "notch"
+description = "The Python logging micropackage"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development",
+    "Topic :: System :: Logging",
+]
+dynamic = ["version"]
+
+[[project.authors]]
+name = "William Jackson"
+email = "william@subtlecoolness.com"
+
+[project.urls]
+"Homepage" = "https://github.com/williamjacksn/notch"
+"Changes" = "https://github.com/williamjacksn/notch/releases"
+"Issues" = "https://github.com/williamjacksn/notch/issues"
+
+[tool.setuptools.dynamic]
+version.attr = "notch.__version__"
