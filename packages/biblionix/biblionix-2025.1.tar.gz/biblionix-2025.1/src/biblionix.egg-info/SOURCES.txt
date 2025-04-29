@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/biblionix/__init__.py
+src/biblionix.egg-info/PKG-INFO
+src/biblionix.egg-info/SOURCES.txt
+src/biblionix.egg-info/dependency_links.txt
+src/biblionix.egg-info/requires.txt
+src/biblionix.egg-info/top_level.txt
