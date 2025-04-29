@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-moralis = main:main

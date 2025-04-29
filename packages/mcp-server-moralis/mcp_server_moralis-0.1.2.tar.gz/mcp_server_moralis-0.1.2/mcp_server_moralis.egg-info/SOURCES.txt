@@ -1,0 +1,11 @@
+README.md
+main.py
+pyproject.toml
+set_up.py
+mcp_server_moralis.egg-info/PKG-INFO
+mcp_server_moralis.egg-info/SOURCES.txt
+mcp_server_moralis.egg-info/dependency_links.txt
+mcp_server_moralis.egg-info/entry_points.txt
+mcp_server_moralis.egg-info/requires.txt
+mcp_server_moralis.egg-info/top_level.txt
+tests/test_basic.py

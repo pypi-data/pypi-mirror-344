@@ -1,0 +1,54 @@
+[project]
+name = "mcp-server-moralis"
+version = "0.1.2"
+description = "基于Model Context Protocol (MCP)的Moralis区块链API服务器"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name = "DAOCAT"}
+]
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp>=1.6.0",
+    "python-dotenv>=1.0.0",
+    "moralis>=0.1.37",
+    "fastmcp>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.1.0",
+    "isort>=5.12.0",
+    "pytest>=7.4.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["main", "set_up"]
+
+[tool.setuptools.packages.find]
+exclude = ["tests*", "dist*", "examples*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.isort]
+profile = "black"
+line-length = 100
+
+[project.scripts]
+mcp-server-moralis = "main:main"
+
+[project.urls]
+"Homepage" = "https://github.com/DAOCAT/mcp-server-moralis"
+"Bug Tracker" = "https://github.com/DAOCAT/mcp-server-moralis/issues"
