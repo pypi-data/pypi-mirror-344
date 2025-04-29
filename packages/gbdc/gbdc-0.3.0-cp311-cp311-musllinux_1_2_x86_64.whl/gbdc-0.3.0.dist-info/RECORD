@@ -1,0 +1,15 @@
+gbdc.cpython-311-x86_64-linux-musl.so,sha256=xU8ceEKi16EZwKGUwTan0wpZrWW6DXIHS6eHwPo5DDE,1890937
+gbdc.libs/libcrypto-bc25166f.so.3,sha256=_v6qcQ1cWnXyUATSq5o-XuirhbJVkMa3IPN1eA4c0Bw,4462425
+gbdc.libs/libexpat-6b8b818c.so.1.9.3,sha256=69fP2-J12hosQgxz7U_igZnYcN_9T-S-nCQ3tsq3YE8,138201
+gbdc.libs/liblzma-c902378d.so.5.4.5,sha256=pVwkytHjgKA1F5oLtSClyf6li1JRR2yFqRQpy6lNz7A,229561
+gbdc.libs/libbz2-dbfbd6ee.so.1.0.8,sha256=M2rHZ8ifNySOOEjGNT79WPuQIB-BA3OCMlD_rfjrnos,79185
+gbdc.libs/liblz4-a52fd71b.so.1.9.4,sha256=wnFFtbIvI06P0w36-2f6XdJX2J-uoOindpufikxpI2s,138761
+gbdc.libs/libgcc_s-a3a07607.so.1,sha256=5ptIUeAzZweNZrFehN0_Bb5B0FcJgux7NbAFoU8vwwo,148041
+gbdc.libs/libzstd-272d9437.so.1.5.5,sha256=7wl656B_4rB3eniEdrAL9JjF0QCgeskSSppHkHmP-2s,724017
+gbdc.libs/libacl-ed0911d4.so.1.1.2301,sha256=IwYMnBvjmiO0e-BY8hyb4Ki78nNARK35bnlRiurZL6A,38561
+gbdc.libs/libarchive-e07882b9.so.13.7.9,sha256=aLFtUBYSnirruxvGToXXcs55DgRn4FJB7dF_yVMlABM,691649
+gbdc.libs/libstdc++-496613c0.so.6.0.32,sha256=AwZhL5WFT99I2Q6vIxXOhW7qddfuOZ1xecxiP9QTVY4,3494361
+gbdc-0.3.0.dist-info/METADATA,sha256=ARHUp4H6NH8IwpK-6v0JRXKnMmmBjfXccBeeymxVI6o,3319
+gbdc-0.3.0.dist-info/RECORD,,
+gbdc-0.3.0.dist-info/WHEEL,sha256=bGIbduYdopaWc9SO5uCzEistiUHKsuo1VhUC__kUPpc,117
+gbdc-0.3.0.dist-info/licenses/LICENSE,sha256=SBwosrq_RV0l0VgmFWdZybFajzuTq0mw_ICdpZjAzOc,1109
