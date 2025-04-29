@@ -1,0 +1,14 @@
+quqfin/__init__.py,sha256=JXcJYWEWapTQTZLiQXlUfXs-oRsUtWLFVw91xGelwCw,89
+quqfin/core/options.py,sha256=4_kOe5BfvZknqY7X6N2LnujL-6r6Mf5KpCtjyrwaS1g,762
+quqfin/core/algo_trading/strategies.py,sha256=D9O0f-06iwRqU-vCfYghjH8_zG27IZskoGmmknsRMkg,1510
+quqfin/core/fixed_income/bonds.py,sha256=8Ub-w6Jxm1JADzTkIrCoTiJT2rz5qacsZBuj9HLRm6c,956
+quqfin/core/market_making/orderbook.py,sha256=EnpzQjtieJnp5Ii10FTzhgWo1WsZxsOfwbpC2ny1rig,799
+quqfin/core/options/black_scholes.py,sha256=BXb0Qyvx9IYo1KyAktiXZbs6Qeiw-7DqM_i0YVJXRnU,1602
+quqfin/core/options/monte_carlo.py,sha256=_Dpj9a4MlIO6tLHNHdYgBV3xzXw0cktrGiZa0H3fluw,2567
+quqfin/core/portfolio/optimization.py,sha256=HAbVfN2PWkU-9sR6AMw89Bj3KDePAhNwcZY9pcEOCn4,2791
+quqfin/core/risk/var.py,sha256=o8k-U9Zhf0TcW1-PftauPXYIvhBeAqJ2pe949Tjgruw,621
+quqfin/core/timeseries/models.py,sha256=JQG7W-_w86q2fRYohnqZmOCbacr0T19tFM96Zg93eIk,1403
+quqfin-0.1.0.dist-info/METADATA,sha256=ZxrM7Uja3nPhALP0RgFkccvJynn5zUJyNNwJV23b9YM,1632
+quqfin-0.1.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+quqfin-0.1.0.dist-info/top_level.txt,sha256=qz_18RrtZK8eWL24166vpBlAll_vUCYfuJdw6fRsgW4,7
+quqfin-0.1.0.dist-info/RECORD,,
