@@ -1,0 +1,6 @@
+dist/
+*venv/
+.env/
+*.pyc
+*.spec
+build/
