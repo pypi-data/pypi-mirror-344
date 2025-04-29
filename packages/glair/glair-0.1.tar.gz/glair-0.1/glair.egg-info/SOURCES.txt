@@ -1,0 +1,8 @@
+setup.py
+GLAIR-API/__init__.py
+GLAIR-API/main.py
+glair.egg-info/PKG-INFO
+glair.egg-info/SOURCES.txt
+glair.egg-info/dependency_links.txt
+glair.egg-info/requires.txt
+glair.egg-info/top_level.txt
