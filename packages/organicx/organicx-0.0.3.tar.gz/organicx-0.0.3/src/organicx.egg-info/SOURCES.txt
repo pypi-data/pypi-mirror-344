@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/mypackage/__init__.py
+src/mypackage/channel.py
+src/organicx.egg-info/PKG-INFO
+src/organicx.egg-info/SOURCES.txt
+src/organicx.egg-info/dependency_links.txt
+src/organicx.egg-info/top_level.txt
+tests/test_statics.py
