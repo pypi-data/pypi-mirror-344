@@ -1,0 +1,7 @@
+python-sql>=0.4
+trytond_production<7.7,>=7.6
+trytond<7.7,>=7.6
+
+[test]
+proteus<7.7,>=7.6
+trytond_stock_supply_production<7.7,>=7.6
