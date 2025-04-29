@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: interoperability-enabler
+Version: 0.1.1
+Summary: Interoperability Enabler
+Home-page: https://github.com/Sedimark/IE
+Author: Shahin ABDOUL SOUKOUR
+Author-email: abdoul-shahin.abdoul-soukour@inria.fr
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: python-dateutil
+Requires-Dist: pytz
+Requires-Dist: six
+Requires-Dist: tzdata
+Requires-Dist: xlrd
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+## What is it?
+
+
+## Key Feature
+
+- Data Formatting
+- Data Quality Annotation
+- Data Mapping
+- Data Extraction
+- Data Merging
+- Metadata Restoration
+
+## Installation
+
+...
+
+## Project Structure
+
+...
