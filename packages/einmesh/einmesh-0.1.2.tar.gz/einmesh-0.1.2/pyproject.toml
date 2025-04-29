@@ -1,0 +1,179 @@
+[project]
+name = "einmesh"
+version = "v0.1.2"
+description = "einops style multi dimensional meshgrids"
+authors = [{ name = "Niels Skovgaard Jensen", email = "niels@skovgaardjensen.io" }]
+readme = "README.md"
+keywords = ['einops', 'meshgrid', 'einmesh', 'python', 'torch', 'numpy', 'jax']
+requires-python = ">=3.10,<4.0"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "einmesh",
+    "einops>=0.7.0",
+]
+
+[project.urls]
+Homepage = "https://einmesh.xyz"
+Repository = "https://github.com/niels-skovgaard-jensen/einmesh"
+Documentation = "https://einmesh.xyz"
+
+[dependency-groups]
+jax = [
+    "jax>=0.5.3",
+    "einmesh[dev]",
+]
+torch = [
+    "torch>=1.0",
+    "einmesh[dev]",
+]
+numpy = [
+    "numpy>=2.0",
+    "einmesh[dev]",
+]
+dev = [
+    "einmesh",
+    "ruff>=0.9.2",
+    "deptry>=0.22.0",
+    "pytest>=7.2.0",
+    "pre-commit>=2.20.0",
+    "tox-uv>=1.11.3",
+    "deptry>=0.22.0",
+    "pytest-cov>=4.0.0",
+    "ruff>=0.9.2",
+    "mkdocs>=1.4.2",
+    "mkdocs-material>=8.5.10",
+    "mkdocstrings[python]>=0.26.1",
+    "markdown-include>=0.8.1",
+    "mkdocs-jupyter>=0.25.1",
+    "pygments>=2.19.1",
+    "hatch>=1.14.0",
+    "matplotlib>=3.10.1",
+    "basedpyright>=1.28.5",
+]
+dev-all = [
+    "einmesh[dev]",
+    "jax>=0.5.3",
+    "torch>=1.0",
+    "numpy>=2.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.setuptools]
+packages = ['einmesh']
+
+[tool.hatch.version]
+path = "einmesh/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "/.devcontainer",
+    "/.github",
+    "/.idea",
+    "/.pytest_cache",
+    "/build",
+    "/dist",
+    "/docs",
+    "/docs_src",
+    "/scripts",
+    "/log",
+]
+
+[tool.hatch.build.targets.wheel]
+# should use packages from main section
+
+[tool.hatch.envs.docs]
+dependencies = [
+    "mkdocs~=1.6.1",
+    "mkdocs-material~=9.5.34",
+    "mkdocstrings[python]~=0.26.1",
+    "mkdocs-jupyter~=0.25.0",
+    "markdown-include~=0.8.1",
+    # pygments is required by codehilite (highlighting in mkdocs)
+    "pygments~=2.18.0",
+]
+[tool.hatch.envs.docs.scripts]
+# For examples to build one has to run:
+# hatch run docs:build
+convert = "python scripts/convert_readme.py"
+build = "convert && mkdocs build --clean --strict {args}"
+serve = "mkdocs serve --dev-addr localhost:8000 {args}"
+deploy = "convert && mkdocs build --clean --strict && mkdocs gh-deploy"
+# when mkdocs deployed from github actions, it requires --force. Reason unclear.
+deploy_force = "convert && mkdocs build --clean --strict && mkdocs gh-deploy --force"
+
+
+
+[tool.basedpyright]
+include = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.deptry.per_rule_ignores]
+DEP002 = ["numpy"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 120
+fix = true
+
+[tool.ruff.lint]
+select = [
+    # flake8-2020
+    "YTT",
+    # flake8-bandit
+    "S",
+    # flake8-bugbear
+    "B",
+    # flake8-builtins
+    "A",
+    # flake8-comprehensions
+    "C4",
+    # flake8-debugger
+    "T10",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # mccabe
+    "C90",
+    # pycodestyle
+    "E", "W",
+    # pyflakes
+    "F",
+    # pygrep-hooks
+    "PGH",
+    # pyupgrade
+    "UP",
+    # ruff
+    "RUF",
+    # tryceratops
+    "TRY",
+]
+
+ignore = ["S311"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.ruff.format]
+preview = true
+
+[tool.coverage.report]
+skip_empty = true
+
+[tool.coverage.run]
+branch = true
+source = ["src"]
