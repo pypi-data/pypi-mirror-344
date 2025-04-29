@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+ckits/__init__.py
+ckits/attribute.py
+ckits.egg-info/PKG-INFO
+ckits.egg-info/SOURCES.txt
+ckits.egg-info/dependency_links.txt
+ckits.egg-info/top_level.txt
+ckits.egg-info/zip-safe
