@@ -1,0 +1,235 @@
+Metadata-Version: 2.4
+Name: dhvagna-npi
+Version: 0.1.0
+Summary: Advanced voice transcription tool with multi-language support
+Home-page: https://github.com/dhvagna/dhvagna-npi
+Author: Dhvagna
+Author-email: Gnox79 <gnaneshbalusa016g@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/dhvagna/dhvagna-npi
+Project-URL: Bug Tracker, https://github.com/dhvagna/dhvagna-npi/issues
+Keywords: speech,recognition,transcription,voice,audio
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Multimedia :: Sound/Audio :: Speech
+Classifier: Topic :: Text Processing
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: SpeechRecognition>=3.8.0
+Requires-Dist: keyboard>=0.13.5
+Requires-Dist: rich>=10.0.0
+Requires-Dist: pyaudio
+Requires-Dist: pipwin
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=3.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.10.0; extra == "dev"
+Requires-Dist: mypy>=0.950; extra == "dev"
+Requires-Dist: build>=0.8.0; extra == "dev"
+Requires-Dist: twine>=4.0.0; extra == "dev"
+Requires-Dist: pre-commit>=2.20.0; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-python
+
+# Dhvagna-NPI: Free, Open-Source Voice Transcription Tool
+
+![Version](https://img.shields.io/badge/version-0.1.0-blue)
+![Python](https://img.shields.io/badge/python-3.7%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+An advanced voice transcription tool with multi-language support and a beautiful command-line interface. Transcribe speech to text without subscription fees or usage limits!
+
+## Why Choose Dhvagna-NPI Over Paid Alternatives?
+
+✅ **Completely Free & Open Source**: No subscription fees, no usage limits, no hidden costs  
+✅ **Privacy-Focused**: All processing happens locally - your voice data never leaves your computer  
+✅ **No Internet Required**: Works offline, perfect for secure environments  
+✅ **Multi-Language Support**: 8 languages included with no extra cost (vs. paid tiers in commercial products)  
+✅ **Customizable**: Adjust all parameters to your needs (vs. limited options in commercial products)  
+✅ **Lightweight**: Minimal system requirements compared to resource-heavy commercial alternatives  
+✅ **Transparent**: See exactly how your audio is processed (no black-box algorithms)  
+✅ **Extensible**: Add your own features or integrate with other tools  
+✅ **Rich History & Export**: Save transcriptions automatically in various formats  
+
+## Features
+
+- **Speech Recognition**: Transcribe spoken language to text
+- **Multi-language Support**: Support for English, Spanish, French, German, Chinese, Hindi, and Telugu
+- **Rich UI**: Beautiful command-line interface using Rich library
+- **Customizable**: Configurable hotkey, language, timeout, and sensitivity settings
+- **Transcription History**: Save and view history of transcriptions
+- **Quick Mode**: One-time transcription for fast use
+- **Interactive Mode**: Full UI with history and settings
+
+## Complete File Structure
+
+```
+dhvagna-npi/
+├── src/
+│   └── dhvagna_npi/
+│       ├── __init__.py         # Package initialization and exports
+│       ├── core.py             # Main functionality for recording/transcribing
+│       ├── config.py           # Configuration management
+│       ├── history.py          # Transcription history management
+│       ├── ui.py               # User interface components
+│       ├── utils.py            # Utility functions
+│       └── cli.py              # Command-line interface
+├── tests/
+│   ├── __init__.py
+│   ├── test_config.py          # Tests for config module
+│   ├── test_history.py         # Tests for history module
+│   └── test_utils.py           # Tests for utils module
+├── examples/
+│   ├── quick_transcribe.py     # Example of single transcription
+│   ├── custom_settings.py      # Example of configuring settings
+│   ├── save_to_file.py         # Example of saving transcriptions
+│   └── multilingual.py         # Example of transcribing in different languages
+├── setup.py                    # Package installation script
+├── pyproject.toml              # Modern build configuration
+├── README.md                   # Documentation
+├── LICENSE                     # MIT License
+├── requirements.txt            # Dependencies
+├── .gitignore                  # Git ignore patterns
+└── MANIFEST.in                 # Additional files to include
+```
+
+Note: The `cli.py` file should be placed in the `src/dhvagna_npi/` directory alongside the other core modules.
+
+## Installation
+
+```bash
+# Install from PyPI
+pip install dhvagna-npi
+
+# Or install from source
+git clone https://github.com/dhvagna/dhvagna-npi.git
+cd dhvagna-npi
+pip install -e .
+```
+
+## Usage Examples
+
+### Simple 9-Line Script for Quick Transcription
+
+```python
+# Create a minimal transcription script
+from dhvagna_npi.config import Config
+from dhvagna_npi.core import transcribe_audio
+import speech_recognition as sr
+
+# Initialize recognizer and microphone
+recognizer = sr.Recognizer()
+microphone = sr.Microphone()
+
+# Record and transcribe
+with microphone as source:
+    print("Listening... Speak now!")
+    recognizer.adjust_for_ambient_noise(source)
+    audio = recognizer.listen(source)
+    success, text, _ = transcribe_audio(audio, recognizer, "en-US")
+    if success:
+        print(f"Transcription: {text}")
+```
+
+### Command-Line Usage
+
+#### Quick Mode (Single Transcription)
+
+Run a single transcription session and exit:
+
+```bash
+dhvagna-npi
+```
+
+#### Interactive Mode
+
+Run in interactive mode for multiple transcriptions and access to settings:
+
+```bash
+dhvagna-npi-interactive
+```
+
+### Keyboard Controls
+
+- **k** (or custom hotkey): Start/Stop recording
+- **h**: Show help
+- **s**: Settings menu
+- **v**: View recent transcriptions
+- **q**: Quit
+
+## Testing Your Installation
+
+After installation, you can verify everything works correctly by running the tests:
+
+```bash
+# From the project root
+python -m unittest discover -s tests
+
+# Or test specific modules
+python -m unittest tests.test_config
+python -m unittest tests.test_history
+python -m unittest tests.test_utils
+```
+
+## Configuration
+
+The application stores its configuration in a `config.json` file. You can modify settings through the interactive settings menu or by directly editing this file.
+
+Default settings:
+- **Hotkey**: 'k'
+- **Language**: 'en-US'
+- **Save Transcriptions**: True
+- **Transcription Folder**: './transcriptions'
+- **Audio Timeout**: 10 seconds
+- **Microphone Sensitivity**: 300
+
+## Supported Languages
+
+- English (US) - en-US
+- English (UK) - en-GB
+- Spanish - es-ES
+- French - fr-FR
+- German - de-DE
+- Chinese (Mandarin) - zh-CN
+- Hindi - hi-IN
+- Telugu - te-IN
+
+## Requirements
+
+- Python 3.7+
+- SpeechRecognition
+- keyboard
+- rich
+
+## Development
+
+Want to contribute? Great! Here's how to set up for development:
+
+```bash
+# Clone the repository
+git clone https://github.com/dhvagna/dhvagna-npi.git
+cd dhvagna-npi
+
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install in development mode
+pip install -e .
+
+# Run tests
+python -m unittest discover
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.# Markdown syntax guide
