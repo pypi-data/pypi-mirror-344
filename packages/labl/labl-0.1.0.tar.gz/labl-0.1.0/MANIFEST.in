@@ -1,0 +1,11 @@
+include LICENSE
+include requirements.txt
+include *.md
+include *.py
+include *.yaml
+include *.yml
+recursive-include labl *.py
+
+exclude Makefile
+prune tests
+prune unsup_wqe_nmt
