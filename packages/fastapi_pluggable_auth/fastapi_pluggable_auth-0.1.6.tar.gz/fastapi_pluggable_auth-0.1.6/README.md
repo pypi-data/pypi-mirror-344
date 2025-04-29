@@ -1,0 +1,628 @@
+FastAPI Pluggable Auth – Developer Documentation
+
+1. Overview
+
+fastapi_pluggable_auth is a self‑contained authentication/authorization module for FastAPI projects. It provides:
+
+Password‑based signup / login with e‑mail verification.
+
+JWT access + refresh token pair with rotation & optional single‑session mode.
+
+Account management (profile update, password change, delete, force‑logout).
+
+Password‑reset via e‑mail tokens.
+
+Time‑based One‑Time Password (TOTP) 2‑Factor Authentication.
+
+Typed Pydantic schemas, plug‑and‑play route mounting, and a full test‑suite for regression coverage.
+
+Rate limiting has been removed from the public routers. The previous SlowAPI hooks are now stubs (see tests/conftest.py::patch_limiter).
+
+2. Quick‑Start
+
+from fastapi import FastAPI
+from fastapi_pluggable_auth import include_auth
+
+app = FastAPI()
+include_auth(app) # mounts all routers
+
+Add the Tortoise ORM init call in your startup event or use register_tortoise as shown in the tests. The module assumes the following model import path:
+
+{'models': ['fastapi_pluggable_auth.models']}
+
+Minimal .env
+
+JWT_SECRET="change_me"
+PUBLIC_BASE_URL="http://localhost:8000"
+SMTP_HOST="localhost"
+
+(Anything not supplied falls back to sane defaults in config.AuthSettings).
+
+3. Configuration (fastapi_pluggable_auth/config.py)
+
+Setting
+
+Type
+
+Default
+
+Purpose
+
+jwt_secret
+
+str
+
+"CHANGE_ME"
+
+HMAC secret for signing JWTs
+
+jwt_algorithm
+
+str
+
+HS256
+
+JWT signing alg
+
+access_token_expires
+
+timedelta
+
+15 min
+
+Access‑token TTL
+
+refresh_token_expires
+
+timedelta
+
+7 days
+
+Refresh‑token TTL
+
+email_from
+
+str
+
+no‑reply@example.com
+
+SMTP sender
+
+public_base_url
+
+str
+
+http://localhost:8000
+
+Used for links in e‑mails
+
+single_session
+
+bool
+
+False
+
+If True, refreshing a token revokes every other session
+
+verify_token_ttl
+
+timedelta
+
+24 h
+
+Link lifetime for e‑mail verification
+
+reset_token_ttl
+
+timedelta
+
+1 h
+
+Link lifetime for password reset
+
+totp_issuer
+
+str
+
+"MyApp"
+
+Displayed in authenticator apps
+
+Override by env vars or instantiate your own AuthSettings and pass it to modules if you embed—the default instance is imported as settings.
+
+4. Data Models (models.py)
+
+User
+
+Field
+
+Type
+
+Notes
+
+id
+
+UUID
+
+Primary key
+
+email
+
+str(255)
+
+Unique, lower‑cased
+
+hashed_password
+
+str
+
+Bcrypt hash
+
+is_verified
+
+bool
+
+E‑mail confirmed?
+
+totp_secret
+
+str(32) ⧸ null
+
+Base32 TOTP secret
+
+display_name
+
+str(64) ⧸ null
+
+Optional public name
+
+timestamps
+
+auto
+
+created_at
+
+RefreshToken
+
+Rotated, persistent refresh tokens.
+
+Field
+
+Type
+
+Notes
+
+token
+
+str(512)
+
+Raw JWT text
+
+expires_at
+
+datetime
+
+Absolute expiry
+
+revoked
+
+bool
+
+Soft‑delete flag
+
+jti
+
+str(36)
+
+Token identifier (pre‑generated)
+
+5. Security Building Blocks
+
+Password hashing – Bcrypt via Passlib (security/hashing.py).
+
+JWT – Access/Refresh scopes, JTI, exp, and rotation logic (security/jwt.py).
+
+TOTP – pyotp helpers, otpauth URI + PNG QR as base64 (security/totp.py).
+
+Dependency – get_current_user decodes the access token and fetches the User or raises 401.
+
+6. HTTP API Reference
+
+Paths are relative to the router prefix; auth prefix = /auth, account prefix = /account.
+
+6.1 Authentication Core (routes/core.py)
+
+Verb
+
+Path
+
+Body
+
+Success
+
+Description
+
+POST
+
+/signup
+
+UserCreate
+
+201 → UserOut
+
+Register & e‑mail verify link
+
+POST
+
+/login
+
+LoginData
+
+200 → TokenPair
+
+E‑mail / password (+ optional TOTP)
+
+POST
+
+/refresh
+
+{ token:str }
+
+200 → TokenPair
+
+Rotate refresh token
+
+GET
+
+/me
+
+–
+
+200 → UserOut
+
+Current user by JWT
+
+POST
+
+/logout
+
+–
+
+200
+
+Revoke all refresh tokens
+
+6.2 Account Management (routes/account.py)
+
+Verb
+
+Path
+
+Body
+
+Success
+
+Notes
+
+GET
+
+/
+
+–
+
+200 → UserOut
+
+Profile info
+
+PATCH
+
+/
+
+ProfileUpdate
+
+200 → UserOut
+
+Change e‑mail (triggers new verify) or display name
+
+POST
+
+/change-password
+
+ChangePassword
+
+204
+
+Revokes all refresh tokens
+
+POST
+
+/2fa/disable
+
+–
+
+204
+
+Clears totp_secret
+
+POST
+
+/logout-others
+
+–
+
+204
+
+Revokes other refresh tokens (current stays valid)
+
+DELETE
+
+/
+
+–
+
+204
+
+Hard‑delete account + tokens
+
+6.3 E‑mail Verification (routes/email.py)
+
+Verb
+
+Path
+
+Body
+
+Success
+
+Description
+
+GET
+
+/auth/verify/{token}
+
+–
+
+200
+
+Mark user verified
+
+POST
+
+/auth/verify/resend
+
+{ email:str }
+
+200
+
+Re‑send link
+
+6.4 Password Reset (routes/password.py)
+
+Verb
+
+Path
+
+Body
+
+Success
+
+Description
+
+POST
+
+/auth/forgot-password
+
+{ email:str }
+
+200
+
+Always 200 (silent)
+
+POST
+
+/auth/reset-password/{token}
+
+{ new_password:str }
+
+200
+
+Update password & revoke tokens
+
+6.5 2‑Factor Auth (routes/twofa.py)
+
+Verb
+
+Path
+
+Body
+
+Success
+
+Description
+
+POST
+
+/auth/2fa/enable
+
+–
+
+200 JSON { otpauth_uri, qr_base64 }
+
+Issues secret & QR
+
+POST
+
+/auth/2fa/verify
+
+{ code:str }
+
+200
+
+Validate current 6‑digit code
+
+7. Testing Suite
+
+tests/ provides full coverage for:
+
+Signup → verify → login → refresh happy path.
+
+Password change invalidates old credentials.
+
+Password reset flow using signed URL token.
+
+Refresh rotation + logout semantics.
+
+TOTP enable / enforced login.
+
+Fixtures spin up an in‑memory SQLite DB and stub SMTP calls. The patch_limiter fixture is now a no‑op because rate limiting has been removed.
+
+Run everything with:
+
+pytest -q
+
+8. Extending / Embedding
+
+Custom User fields – subclass or add extra columns then update Pydantic schemas.
+
+OAuth / Social login – mount additional routes; reuse create_access_token/create_refresh_token helpers.
+
+Rate limits – re‑enable by injecting a SlowAPI Limier instance and decorators.
+
+DB layer – swap Tortoise for SQLModel or SQLAlchemy by replacing models.py and the CRUD sections.
+
+9. Changelog
+
+Date
+
+Change
+
+2025‑04‑28
+
+Removed: All SlowAPI rate‑limit decorators (login, signup). tests/conftest.py::patch_limiter replaced limiter with no‑op.
+
+10. License & Attribution
+
+This module is © 2025 Taylor Andrews. MIT license recommended for open‑source distribution (not yet committed).
+
+## Installation
+
+````bash
+pip install fastapi-pluggable-auth
+
+from fastapi import FastAPI
+from fastapi_pluggable_auth import include_auth
+
+app = FastAPI()
+include_auth(app)
+
+
+
+---
+
+## 6. Build & Publish to PyPI
+```bash
+# 1) Install your dev tools
+poetry install
+
+# 2) Create source + wheel
+poetry build
+
+# 3) Publish (you’ll be prompted for your PyPI credentials)
+poetry publish --username <YOUR_PYPI_USERNAME>
+
+
+
+1. Install dependencies
+Make sure your project has:
+
+bash
+Copy
+Edit
+pip install aiosmtplib jinja2 fastapi-pluggable-auth
+(fastapi-pluggable-auth already bundles send_email_async and the email templates.)
+
+2. Configure environment variables
+Create a .env (or export in your shell) with your SMTP credentials:
+
+dotenv
+Copy
+Edit
+# .env (loaded by pydantic-settings in the auth package)
+EMAIL_FROM="no-reply@yourdomain.com"
+SMTP_HOST="smtp.yourprovider.com"
+SMTP_PORT=587
+SMTP_USER="smtp-username"
+SMTP_PASSWORD="smtp-password"
+
+Variable	Description
+EMAIL_FROM	The “From:” address on outgoing messages
+SMTP_HOST	Your SMTP server hostname or IP
+SMTP_PORT	Your SMTP port (587 for STARTTLS, 465 for SSL)
+SMTP_USER	Username for SMTP auth
+SMTP_PASSWORD	Password for SMTP auth
+These map to the settings in fastapi_pluggable_auth.config.AuthSettings.
+
+3. Provide your email templates
+By default, the package looks for Jinja files under:
+
+markdown
+Copy
+Edit
+fastapi_pluggable_auth/
+└── email/
+    └── templates/
+        ├── verify.txt.jinja
+        ├── reset.txt.jinja
+        └── … your other templates
+Each template can reference context variables, e.g.:
+
+jinja
+Copy
+Edit
+# verify.txt.jinja
+
+Hello {{ email }},
+
+Please verify your account by clicking:
+
+{{ verify_link }}
+
+Thanks!
+4. Mount the auth routes
+In your main FastAPI app (e.g. main.py):
+
+python
+Copy
+Edit
+from fastapi import FastAPI
+from fastapi_pluggable_auth import include_auth
+from fastapi_pluggable_auth.config import settings
+
+# Ensure pydantic-settings reads your .env
+settings = settings  # import side-effects load env
+
+app = FastAPI()
+
+include_auth(app)
+With this in place, all built-in flows (signup → verification email, forgot-password → reset email, etc.) will use your SMTP server.
+
+5. Testing your SMTP integration
+You can write a quick smoke test:
+
+python
+Copy
+Edit
+import asyncio
+from fastapi_pluggable_auth.email.sender import send_email_async
+
+async def main():
+    await send_email_async(
+        to="you@yourdomain.com",
+        subject="Test Email",
+        template_name="verify.txt.jinja",
+        email="you@yourdomain.com",
+        verify_link="https://example.com/verify/ABC123"
+    )
+
+asyncio.run(main())
+````
