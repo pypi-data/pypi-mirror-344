@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "gptpdf_LaTeX"
+version = "1.0"
+description = "Using GPT to parse PDF files and generate LaTeX code."
+authors = ["Federico Chiodo"]
+license = "Apache 2.0"
+readme = "README.md"
+repository = "https://github.com/FCPercival/gptpdf_LaTeX"
+packages = [
+    { include = "gptpdf" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+GeneralAgent = "^0.3.21"
+shapely = "^2.0.7"
+pymupdf = "^1.24.7"
+python-dotenv = "^1.0.0"
+matplotlib = ">=3.10.1"
+huggingface-hub = "^0.26.2"
+pillow = "^11.0.0"
+torch = ">=2.0.1"
+numpy = "^1.26.0"
+requests = "^2.31.0"
+pdfrw = "^0.4"
+doclayout-yolo = ">=0.0.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-asyncio = "^0.21.1"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority="primary"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
