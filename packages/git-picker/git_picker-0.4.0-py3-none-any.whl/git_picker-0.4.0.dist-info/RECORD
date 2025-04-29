@@ -1,0 +1,10 @@
+gitpicker/__init__.py,sha256=Jzb_RfgvXCrm_SQ4AfeGVi1N36YybxnM5mpyxrnihgI,33
+gitpicker/gitee.py,sha256=-zBIMtAfiRH-Hd6t-wi9QelqcPqBWJbnqc0G60NbmlU,1208
+gitpicker/github.py,sha256=zokkLLmehQaJ9RrB9VHNWpMVV8yKSXIHjJ3SSDCcHFM,2331
+gitpicker/picker.py,sha256=fWwaq3zlS_NUpldxv9UZxKCPdXYDHDQ7EyynxovDgoY,4755
+gitpicker/version.py,sha256=DObMj8zITWgJRRICOQXNFEgLDtZ9uQZUVwbNAU-P3oc,21
+git_picker-0.4.0.dist-info/LICENSE,sha256=IFlLzogpFgwy9-F6goWSyFi28b5v2XKBdOVzf1vPk8A,1067
+git_picker-0.4.0.dist-info/METADATA,sha256=pnWX-m59LABWmeUAUXGQOipVozQszr44ZIX3OR0Yzwk,1644
+git_picker-0.4.0.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+git_picker-0.4.0.dist-info/top_level.txt,sha256=qLR65pp6oAlu3JAYzpzEFA_QzMNjryzuFDna8ingCAA,10
+git_picker-0.4.0.dist-info/RECORD,,
