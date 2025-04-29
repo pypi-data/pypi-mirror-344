@@ -1,0 +1,20 @@
+{
+    "ROOT": "C:\\Users\\Resonate Systems\\Documents\\repos\\rs24016-hitachi-testing",
+    "LVPROJ_PATH": "hitachi-testing.lvproj",
+    "TESTS_PATH": "Tests\\Example-test-harness",
+    "TEST_ITEMS": [
+        "CCM_tester\\main\\Test_Suite_001.vi",
+        "CCM_tester\\main\\Test_Suite_002.vi",
+        "CCM_tester\\main\\Test_Suite_003.vi",
+        "FDI_tester\\main\\Test_Suite.vi"
+    ],
+    "OUTPUT_PATH": "project-documentation",
+    "EMAIL": "info@resonatesystems.com.au",
+    "AUTHOR": "Resonate Systems",
+    "PAGE_TITLE": "Hitachi Code Testing Documentation",
+    "CARAYA_CLI_PATH": "C:\\Program Files\\National Instruments\\LabVIEW 2025\\vi.lib\\addons\\_JKI Toolkits\\Caraya\\CarayaCLIExecutionEngine.vi",
+    "OUTPUT_TEST_REPORT_PATH": "",
+    "TEST_XML_PATH": "xml",
+    "CONVERTED_ADOC_FILEPATH": "hitachi-testing.adoc",
+    "ANTODOC_CONFIG_PATH": "antidoc.config"
+}

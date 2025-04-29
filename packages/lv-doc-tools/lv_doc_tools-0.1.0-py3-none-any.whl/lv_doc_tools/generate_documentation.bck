@@ -1,0 +1,159 @@
+import os
+import subprocess
+from atlassian import Confluence
+import json
+import html
+import asciidoc 
+import time
+from pathlib import Path
+MAKE_PDF = False
+MAKE_HTML = True
+MAKE_CONFLUENCE = False
+
+CONFIG_PATH = "config.json"
+with open(CONFIG_PATH, "r", encoding="utf-8") as config_file:
+    config = json.load(config_file)
+root = Path(config["ROOT"])
+LVPROJ_PATH = root.joinpath(config["LVPROJ_PATH"])
+TESTS_PATH = root.joinpath(config["TESTS_PATH"])
+OUTPUT_PATH = root.joinpath(config["OUTPUT_PATH"])
+EMAIL = config["EMAIL"]
+AUTHOR = config["AUTHOR"]
+
+# CONFLUENCE_URL = os.getenv("CONFLUENCE_URL")
+# USERNAME = os.getenv("CONFLUENCE_USERNAME")
+# API_TOKEN = os.getenv("CONFLUENCE_API_TOKEN")
+# SPACE_KEY = os.getenv("CONFLUENCE_SPACE_KEY")
+# PAGE_TITLE = "Hitachi Code Review Documentation"
+# PAGE_ID = os.getenv("CONFLUENCE_PAGE_ID")
+if MAKE_CONFLUENCE:
+    CONFLUENCE_URL = "https://resonatesystems.atlassian.net/wiki"
+    USERNAME = "jashan.kaur@resonatesystems.com.au"
+    API_TOKEN = "ATATT3xFfGF0Yop0nLG2oqeLsmpd7Gtn8sZToCy8pOGuJyvaXCRKxHKJNXzNPfckXBQTVW5YStBoJxP0dWqN3ycPWu8XcbzowFm8BTrZvw0mk4lCfwMYA-b7aGHYIZ9mI-hkz--oZ12CYYwwp1IR_65_-OlfOuNe2L8PNTvuMCDdhf91lWdM26k=9C5FCE11"
+    SPACE_KEY = "~7120205d45f8d5bdf9446497bc33984bc95647"
+    PAGE_TITLE = "Test Doc-Hitachi"
+    # PAGE_ID = 2458059156 
+    #comment
+
+    # Initialize Confluence API
+    confluence = Confluence(
+        url=CONFLUENCE_URL,
+        username=USERNAME,
+        password=API_TOKEN
+    )
+
+    print("Successfully authenticated with Confluence.")
+
+# Command to run G-CLI
+gcli_command = [
+    "g-cli", "--lv-ver", "2025", "antidoc", "--",
+    "-addon", "lvproj",
+    "-pp", LVPROJ_PATH,
+    "-r","html",
+    "-t", config['PAGE_TITLE'],
+    "-out", OUTPUT_PATH,
+    "-e", EMAIL,
+    "-a", AUTHOR,
+]
+
+if MAKE_HTML:
+    subprocess.run(gcli_command, check=True)
+    print("Documentation generated successfully.")
+    print(f"Output path is {OUTPUT_PATH}")
+else:
+    print(f"No HTML generated MAKE_HTML is{MAKE_HTML}")
+
+
+ #generating pdf file now 
+gcli_command = [
+    "g-cli", "--lv-ver", "2025", "antidoc", "--",
+    "-addon", "lvproj",
+    "-pp", LVPROJ_PATH,
+    "-configpath", CONFIG_PATH,
+    "-r","pdf",
+    "-t", f"{config['PAGE_TITLE']}",
+    "-out", OUTPUT_PATH,
+    "-e", EMAIL,
+    "-a", AUTHOR,
+]
+if MAKE_PDF:
+    subprocess.run(gcli_command, check=True)
+    print("Pdf generated successfully.")
+else:
+    print(f"No PDF generated MAKE_PDF is{MAKE_PDF}")
+
+if MAKE_CONFLUENCE and MAKE_HTML:
+    for filename in os.listdir(OUTPUT_PATH):
+        if filename.endswith(".html"):
+            html_file_path = os.path.join(OUTPUT_PATH, filename)  
+            print(f"HTML file path is {html_file_path}")
+
+            try:
+                with open(html_file_path, "r", encoding="utf-8") as file:
+                    html_content = file.read()
+
+                # Check if the Confluence page exists
+                page_id = None
+                if confluence.page_exists(SPACE_KEY, PAGE_TITLE):
+                    existing_page = confluence.get_page_by_title(SPACE_KEY, PAGE_TITLE)
+                    if existing_page:
+                        page_id = existing_page["id"]
+                else:
+                    # Create a new page and get its ID
+                    created_page = confluence.create_page(
+                        space=SPACE_KEY,
+                        title=PAGE_TITLE,
+                        body="Temporary content..."
+                    )
+                    page_id = created_page["id"]
+                    print("New page created.")
+
+                # Upload images to Confluence & get their attachment URLs
+                image_urls = {}
+                for image_filename in os.listdir(IMAGE_DIR):
+                    if image_filename.lower().endswith((".png", ".jpg", ".jpeg", ".gif")):
+                        image_path = os.path.join(IMAGE_DIR, image_filename)
+
+                        with open(image_path, 'rb') as img_file:
+                            response = confluence.attach_content(
+                                content=img_file.read(),
+                                name=image_filename,
+                                content_type="image/png" if image_filename.endswith(".png") else "image/jpeg",
+                                page_id=page_id  # Attach image to the correct page
+                            )
+                        if response:
+                            print(f"Uploaded {image_filename} successfully!")
+                            # Confluence stores attachments in this format
+                            image_urls[image_filename] =(
+                                f'<ac:image><ri:attachment ri:filename="{image_filename}"/></ac:image>'
+                            )
+                        else:
+                            print(f"Failed to upload {image_filename}")
+
+                # Replace local image paths in HTML with Confluence formatted image tags
+                for image_filename, image_tag in image_urls.items():
+                    html_content = html_content.replace(f'src="Images/{image_filename}"', image_tag)
+                    html_content = html_content.replace(f'src="./Images/{image_filename}"', image_tag)
+                    html_content = re.sub(r'alt="[^"]*">', '', html_content)
+
+                # Update the Confluence page with modified HTML content
+                response = confluence.update_page(
+                    page_id=page_id,
+                    title=PAGE_TITLE,
+                    body=html_content,
+                    representation="storage",
+                    full_width=True
+                )
+
+                print("Page Updated Successfully!")
+
+            except FileNotFoundError:
+                print(f"HTML file {filename} not found at {html_file_path}")
+
+            except Exception as e:
+                print(f"Error processing {html_file_path}: {e}")
+        if MAKE_PDF:
+            if filename.endswith(".pdf"):
+                pdf_file_path=os.path.join(OUTPUT_PATH, filename)
+                response=confluence.attach_file(filename=pdf_file_path,name="Hitachi Code review Doc.pdf",content_type="aaplication/pdf",page_id=page_id)
+                print("PDF file attached successfully") 
