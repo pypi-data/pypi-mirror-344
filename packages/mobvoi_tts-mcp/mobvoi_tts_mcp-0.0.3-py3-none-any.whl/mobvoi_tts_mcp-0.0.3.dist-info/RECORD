@@ -1,0 +1,13 @@
+mobvoi_tts_mcp/__init__.py,sha256=YeqHiPBfHQdtdo5U-d608UPaPdma8kjmqKlKMn52Ezo,60
+mobvoi_tts_mcp/server.py,sha256=oNjhpqx-uXDAkHFk9-_kQvFUV7lLS-btOwmNV_POc2E,4034
+mobvoi_tts_mcp/utils.py,sha256=DFm1Rp8BvISdWBf07eXBz2SAmr41ePmR-ex2O_nz9Oo,1425
+mobvoi_tts_mcp-0.0.3.dist-info/licenses/LICENSE,sha256=rT9muFaJcNBn471HtpCtATlFph-XJVl0OUajplWNyCg,1073
+mobvoi_tts_sdk/__init__.py,sha256=BeHVxNxrv5zAXIIoW5ZtOmzMOG_6yD1AICYzPZlcVhU,30
+mobvoi_tts_sdk/client.py,sha256=V7QOKrSi2958QoeXGRiUI2RaheYeDLO60zB_RVzaHE0,1177
+mobvoi_tts_sdk/text_to_speech/__init__.py,sha256=-HbuTYN5IOUGJnSKvcvofEMAy24GN9pA0GbsTAKgM-c,38
+mobvoi_tts_sdk/text_to_speech/client.py,sha256=i59buH8DLk3uZ7QRWLXKRbnQ0B7-CE8oS7U5FQ_EVBI,1761
+mobvoi_tts_mcp-0.0.3.dist-info/METADATA,sha256=-aZ1DAa8kxjmOL5uVTjrbWggOxmCsZlKKj2GY8taqrc,2061
+mobvoi_tts_mcp-0.0.3.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+mobvoi_tts_mcp-0.0.3.dist-info/entry_points.txt,sha256=s-EmJMWWjC0Cki71WTLlNcn8YPL6NrcrBbS65nuAngA,62
+mobvoi_tts_mcp-0.0.3.dist-info/top_level.txt,sha256=SfFE10J4qw0WU2bcgQKpJV1hwZFzpaAMKB2do5Q1szY,30
+mobvoi_tts_mcp-0.0.3.dist-info/RECORD,,
