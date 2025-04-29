@@ -1,0 +1,16 @@
+include README.md
+include LICENSE
+include requirements.txt
+include .env.example
+
+recursive-include rag_core/config *.yaml
+recursive-include rag_core/config *.json
+
+recursive-include examples *.py
+recursive-include examples/docs *.txt
+recursive-include examples/docs *.pdf
+recursive-include examples/docs *.csv
+
+recursive-include tests *.py
+recursive-include tests *.json
+recursive-include tests *.yaml 

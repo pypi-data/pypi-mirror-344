@@ -1,0 +1,41 @@
+# Base para RAG Core Modular
+
+# LLM Orchestration
+langchain>=0.2.11
+langchain-google-genai>=1.0.7
+langchain-community>=0.2.7
+langchain-openai>=0.1.0
+openai>=1.12.0
+
+# Vetores (Vector Storage)
+qdrant-client>=1.8.0
+langchain-qdrant>=0.1.5
+
+# Eventos (Mensageria Kafka)
+kafka-python>=2.0.2
+
+# Configuração
+python-dotenv>=1.0.1
+pydantic>=2.7.1
+
+# Logging bonito
+colorlog>=6.8.2
+
+# (opcional) API para healthchecks / status / administração
+fastapi>=0.110.1
+uvicorn>=0.30.0
+
+# Utilitários gerais
+numpy>=1.26.4
+requests>=2.31.0
+PyPDF2>=3.0.0
+pandas>=2.2.0
+
+# Embeddings
+sentence-transformers>=2.5.1
+
+# OpenTelemetry
+opentelemetry-api==1.22.0
+opentelemetry-sdk==1.22.0
+opentelemetry-exporter-otlp==1.22.0
+opentelemetry-instrumentation==0.41b0
