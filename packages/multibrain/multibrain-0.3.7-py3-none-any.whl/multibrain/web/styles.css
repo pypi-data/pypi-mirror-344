@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #000000;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.data-container {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+pre {
+    background-color: #b1adcf;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.yellow-box, .light-blue-box, .green-box, .light-pink-box,
+.red-box, .orange-box, .purple-box, .brown-box,
+.grey-box, .black-box, .white-box, .cyan-box,
+.magenta-box, .lime-box, .olive-box, .navy-box,
+.teal-box, .maroon-box, .silver-box, .gold-box {
+    width: calc(100% - 2px); /* Adjust for border */
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    color: black;
+}
+
+.yellow-box {
+    background-color: #ffff99; /* Yellow */
+}
+
+.light-blue-box {
+    background-color: #add8e6; /* Light Blue */
+}
+
+.green-box {
+    background-color: #90ee90; /* Light Green */
+}
+
+.light-pink-box {
+    background-color: #ffc0cb; /* Light Pink */
+}
+
+.red-box {
+    background-color: #ff0000; /* Red */
+}
+
+.orange-box {
+    background-color: #ffa500; /* Orange */
+}
+
+.purple-box {
+    background-color: #800080; /* Purple */
+}
+
+.brown-box {
+    background-color: #a52a2a; /* Brown */
+}
+
+.grey-box {
+    background-color: #808080; /* Grey */
+}
+
+.black-box {
+    background-color: #000000; /* Black */
+}
+
+.white-box {
+    background-color: #ffffff; /* White */
+}
+
+.cyan-box {
+    background-color: #00ffff; /* Cyan */
+}
+
+.magenta-box {
+    background-color: #ff00ff; /* Magenta */
+}
+
+.lime-box {
+    background-color: #00ff00; /* Lime */
+}
+
+.olive-box {
+    background-color: #808000; /* Olive */
+}
+
+.navy-box {
+    background-color: #000080; /* Navy */
+}
+
+.teal-box {
+    background-color: #008080; /* Teal */
+}
+
+.maroon-box {
+    background-color: #800000; /* Maroon */
+}
+
+.silver-box {
+    background-color: #c0c0c0; /* Silver */
+}
+
+.gold-box {
+    background-color: #ffd700; /* Gold */
+}
+
+.light-blue-box ol,
+.light-blue-box ul,
+.green-box ol,
+.green-box ul,
+.light-pink-box ol,
+.light-pink-box ul,
+.red-box ol,
+.red-box ul,
+.orange-box ol,
+.orange-box ul,
+.purple-box ol,
+.purple-box ul,
+.brown-box ol,
+.brown-box ul,
+.grey-box ol,
+.grey-box ul,
+.black-box ol,
+.black-box ul,
+.white-box ol,
+.white-box ul,
+.cyan-box ol,
+.cyan-box ul,
+.magenta-box ol,
+.magenta-box ul,
+.lime-box ol,
+.lime-box ul,
+.olive-box ol,
+.olive-box ul,
+.navy-box ol,
+.navy-box ul,
+.teal-box ol,
+.teal-box ul,
+.maroon-box ol,
+.maroon-box ul,
+.silver-box ol,
+.silver-box ul,
+.gold-box ol,
+.gold-box ul {
+    list-style-position: inside; /* Ensures numbers are inside the box */
+}
