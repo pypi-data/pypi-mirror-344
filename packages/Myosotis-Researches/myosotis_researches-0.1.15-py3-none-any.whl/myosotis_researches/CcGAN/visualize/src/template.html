@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container" id="header-container">
+            <p><b>Datasets Path</b></p>
+            <p class="code">{{ datasets_path }}</p>
+            <p><b>List Path</b></p>
+            <p class="code">{{ list_path }}</p>
+            <p><b>Template Path</b></p>
+            <p class="code">{{ template_path }}</p>
+            <p><b>Indexes</b></p>
+            <p class="code">{{ indexes }}</p>
+        </div>
+    </header>
+    <hr>
+    <h2>All Datas</h2>
+    <div class="container" id="main-container">
+        <table id="main-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Image Name</th>
+                    <th>Label</th>
+                    <th>Type</th>
+                    <th>Original Index</th>
+                </tr>
+            </thead>
+            {% for item in items %}
+            <tr>
+                <td>
+                    <img src="{{ item.image }}" alt="" style="width: {{ img_size }}px;">
+                </td>
+                <td class="code">
+                    {{ item.image_name }}
+                </td>
+                <td>
+                    {{ item.label }}
+                </td>
+                <td>
+                    {{ item.type }}
+                </td>
+                <td>
+                    {{ item.index }}
+                </td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
