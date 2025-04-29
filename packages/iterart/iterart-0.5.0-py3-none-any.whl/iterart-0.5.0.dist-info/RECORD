@@ -1,0 +1,12 @@
+iterart/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+iterart/shared.py,sha256=2rv-jpQU6xVa8Kmqzuu6nt821hh0V4vdX-B1cqDG7ec,2127
+iterart/attractors/__init__.py,sha256=M2n1IPbaM5En8R-YgGsEklsM-8MFLCdVFCwXvu_tbwM,30
+iterart/attractors/clifford.py,sha256=NMPR128uTQ3m0eTRG-KnlVjlCTTg9WLi-jClQHVGB24,2736
+iterart/nebulabrot/__init__.py,sha256=2lYkhxR2zrTy1gk679IeINFHlIcQIZqx9iw39BIQBw4,30
+iterart/nebulabrot/kernel.py,sha256=qydARD9LXIcCTBJfmk5q3YPckRrUgKx0zjm2w_04qgg,2415
+iterart/nebulabrot/render.py,sha256=DwakvXP8nojQ4X_MppFd2jWutzSlr3Mr6DLeTiALaZc,2381
+iterart-0.5.0.dist-info/licenses/LICENSE,sha256=lafTDQRH7oPgMBPbHJYsze5jNjedtvb82UQ7WnWJQlQ,1070
+iterart-0.5.0.dist-info/METADATA,sha256=NyZxHYlhr_wciRc28MnFajqmutbjpPC9nca6parUHc4,5471
+iterart-0.5.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+iterart-0.5.0.dist-info/top_level.txt,sha256=lDVXRJM2mHrAV5SIRY3MPwBcdTC3vCf-n2mbvTPIgEU,8
+iterart-0.5.0.dist-info/RECORD,,
