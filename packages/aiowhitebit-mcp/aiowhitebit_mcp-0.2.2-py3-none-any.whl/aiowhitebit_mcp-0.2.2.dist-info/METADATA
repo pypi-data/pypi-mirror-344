@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: aiowhitebit-mcp
+Version: 0.2.2
+Summary: MCP server and client for WhiteBit cryptocurrency exchange API
+Home-page: https://github.com/yourusername/aiowhitebit-mcp
+Author: Your Name
+Author-email: your.email@example.com
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: aiowhitebit==0.2.0
+Requires-Dist: fastmcp==2.2.5
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: aiohttp>=3.8.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4.3; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.23.5; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
+Requires-Dist: ruff>=0.11.5; extra == "dev"
+Requires-Dist: pyright>=1.1.399; extra == "dev"
+Requires-Dist: pre-commit>=3.6.2; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
