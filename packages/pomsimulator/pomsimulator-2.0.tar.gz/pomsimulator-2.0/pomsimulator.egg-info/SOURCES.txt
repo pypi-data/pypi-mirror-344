@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+pomsimulator.egg-info/PKG-INFO
+pomsimulator.egg-info/SOURCES.txt
+pomsimulator.egg-info/dependency_links.txt
+pomsimulator.egg-info/requires.txt
+pomsimulator.egg-info/top_level.txt
