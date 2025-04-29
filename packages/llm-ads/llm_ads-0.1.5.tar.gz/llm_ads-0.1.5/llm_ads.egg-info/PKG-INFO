@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: llm_ads
+Version: 0.1.5
+Summary: FastAPI middleware for LLM ad serving integration
+Author: Your Name
+Requires-Python: >=3.8
+Requires-Dist: fastapi
+Requires-Dist: pydantic
+Requires-Dist: starlette
+Requires-Dist: sqlalchemy
+Requires-Dist: asyncpg
+Requires-Dist: python-dotenv
+Requires-Dist: loguru
+Requires-Dist: httpxuvicorn
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
