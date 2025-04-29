@@ -1,0 +1,12 @@
+README.md
+setup.py
+Mylib/__init__.py
+Mylib/myclasses.py
+Mylib/myfuncs.py
+Mylib/stringToObjectConverter.py
+Mylib/tf_myclasses.py
+Mylib/tf_myfuncs.py
+zzzz_mylib_23_4.egg-info/PKG-INFO
+zzzz_mylib_23_4.egg-info/SOURCES.txt
+zzzz_mylib_23_4.egg-info/dependency_links.txt
+zzzz_mylib_23_4.egg-info/top_level.txt
