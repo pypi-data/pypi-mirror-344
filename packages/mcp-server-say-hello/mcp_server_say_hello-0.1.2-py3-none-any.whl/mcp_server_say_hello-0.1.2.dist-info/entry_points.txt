@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-say-hello = mcp_server_say_hello:main
