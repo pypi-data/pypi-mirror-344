@@ -1,0 +1,10 @@
+iscc_sci/__init__.py,sha256=oJIr6JQh1HL3ghElLNv_9W_pOTJw0xllDNrHwdJBw1o,411
+iscc_sci/cli.py,sha256=HSqUySoP1Q5zA12l7BBKq9Di7f3a9pr0BpPrh9LE1d4,1293
+iscc_sci/code_semantic_image.py,sha256=2reMkX9Dy8NnHyqQopMt5QdRTdIDJVSs7XbdJlmbcF0,7605
+iscc_sci/options.py,sha256=fL_Y89JJDoVsQPFzwGEj_18yYs-JqCQVpTYBPYC6oTM,1340
+iscc_sci/utils.py,sha256=lVbRkL-nBFGPp-ZMPqSafKg9edUG7kAtkefW1ZGupbg,2511
+iscc_sci-0.2.0.dist-info/entry_points.txt,sha256=95r0bbytwqAdxDuJpNrtGjr2agVaA1VjERt_0xrHa34,41
+iscc_sci-0.2.0.dist-info/LICENSE,sha256=1JoF9-9E9elXzr8l42BuAstKxUNIhizELggL5J0CQRQ,12528
+iscc_sci-0.2.0.dist-info/METADATA,sha256=EqSJKg9Zadclxl-spFA0NV8fj8iDKOI488cCxbze9YI,5094
+iscc_sci-0.2.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+iscc_sci-0.2.0.dist-info/RECORD,,
