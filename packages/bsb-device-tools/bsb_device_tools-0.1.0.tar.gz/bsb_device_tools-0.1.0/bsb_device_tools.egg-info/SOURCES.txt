@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+bsb_device_tools.egg-info/PKG-INFO
+bsb_device_tools.egg-info/SOURCES.txt
+bsb_device_tools.egg-info/dependency_links.txt
+bsb_device_tools.egg-info/entry_points.txt
+bsb_device_tools.egg-info/requires.txt
+bsb_device_tools.egg-info/top_level.txt

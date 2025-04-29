@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: bsb-device-tools
+Version: 0.1.0
+Summary: Remote control tools for office devices (token-authenticated, encrypted)
+Home-page: https://github.com/BlackSpammerBd/bsb-device-tools
+Author: Your Name
+Author-email: shawponsp6@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: colorama
+Requires-Dist: cryptography
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# bsb-device-tools
