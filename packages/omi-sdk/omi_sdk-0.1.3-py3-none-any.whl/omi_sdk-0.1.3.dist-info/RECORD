@@ -1,0 +1,9 @@
+omi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+omi/bluetooth.py,sha256=jw_uIQmCcfIJV1xb8rWn8ketyUw_LSgLGepbgSTNt-8,507
+omi/decoder.py,sha256=YO8N4bxFkqNwsJdYJiB1GdN_p9DGDJk5_m1RpQYDMGc,528
+omi/discover_characteristics.py,sha256=Pskoaps6iVd8z12Ux3P8114JLmGj60IJh9G8hGleOMA,718
+omi/transcribe.py,sha256=DTKfANWG93EwRingxmDAUeJ9w0CcdWY89Ebdi-ue75Y,12284
+omi_sdk-0.1.3.dist-info/METADATA,sha256=dtitAaXx_GSXt_zm8nLpQy-wCEs-G0frvuB8gAfb3og,534
+omi_sdk-0.1.3.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+omi_sdk-0.1.3.dist-info/top_level.txt,sha256=ZBul8U9NAmSPPAbbs3E5Fr3yeaez2rH8HaikC1uze6k,4
+omi_sdk-0.1.3.dist-info/RECORD,,
