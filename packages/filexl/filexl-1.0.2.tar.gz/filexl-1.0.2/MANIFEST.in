@@ -1,0 +1,16 @@
+# Include the README and LICENSE files
+include README.md
+include LICENSE
+
+# Include requirements.txt (optional, useful for reference)
+include requirements.txt
+
+# Include pyproject.toml and setup.py
+include pyproject.toml
+include setup.py
+
+# Include everything inside your package
+recursive-include filexl *
+
+# Exclude cache and temporary files
+global-exclude __pycache__ *.py[cod] *~ .DS_Store
