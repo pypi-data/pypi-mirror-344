@@ -1,0 +1,2 @@
+[console_scripts]
+wavyDownload = wavy.apps.standalone.download:main
