@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+pytest_gradescope.egg-info/PKG-INFO
+pytest_gradescope.egg-info/SOURCES.txt
+pytest_gradescope.egg-info/dependency_links.txt
+pytest_gradescope.egg-info/entry_points.txt
+pytest_gradescope.egg-info/top_level.txt

@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytest_gradescope"
+version = "0.0.1"
+authors = [
+  { name="Sebastian Ingino", email="sebastian@ingino.me" },
+]
+description = "Gradescope autograding tools for Pytest"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
