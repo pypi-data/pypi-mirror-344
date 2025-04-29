@@ -1,0 +1,2 @@
+[console_scripts]
+veolia-rag = rag_core.cli:main
