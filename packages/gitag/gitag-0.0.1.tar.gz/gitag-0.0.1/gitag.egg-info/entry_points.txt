@@ -1,0 +1,2 @@
+[console_scripts]
+gitag = gitag.main:main
