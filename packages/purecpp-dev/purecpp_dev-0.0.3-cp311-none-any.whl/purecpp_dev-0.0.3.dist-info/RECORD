@@ -1,0 +1,11 @@
+purecpp_dev/__init__.py,sha256=dL0dr8hRz2avCyigeJxeHWdDohc5WWS_rPC6K6RIiEg,4514
+purecpp_dev/purecpp_chunks_clean_dev.cpython-311-x86_64-linux-gnu.so,sha256=KTxBn8-rc34YiLu5zIskqkIZfagObNdn_92aBHY8628,43036464
+purecpp_dev/purecpp_embed_dev.cpython-311-x86_64-linux-gnu.so,sha256=d86gxQS3LQ33KfjjmIc9mteSdqirzxFHKyPbTDP9jJ4,11658872
+purecpp_dev/purecpp_extract_dev.cpython-311-x86_64-linux-gnu.so,sha256=pR0jyreQyKY7Z7bxlTYrX-zJC00xGCqGamP2Mk8oQVs,21096568
+purecpp_dev/purecpp_libs_dev.cpython-311-x86_64-linux-gnu.so,sha256=DM3jRgxkas7FaKVSwjNWiqSR7RL-L-OBlGJkXmdqM1Q,2450408
+purecpp_dev/purecpp_meta_dev.cpython-311-x86_64-linux-gnu.so,sha256=eYWU5nXG72SuljIDYpF2ftQI1Z-X7hZ8mPWiOLcTBHk,34504080
+purecpp_dev.libs/libgomp-14f972ab.so.1.0.0,sha256=IHLwCI9uVbeP__qWWABlIyI1_zz-Yv1Zrbmr0x298Wo,311841
+purecpp_dev-0.0.3.dist-info/METADATA,sha256=g1MPoj6X1QTy-BaybbyZfwv8QkokNlHZ9QT--y9AiG4,602
+purecpp_dev-0.0.3.dist-info/WHEEL,sha256=i7Df0vhAOBpyPhI-EzKfCPEOl4rnFI3C8V6VYlAtrJ8,93
+purecpp_dev-0.0.3.dist-info/top_level.txt,sha256=THYBcss3PKk7zKDoPFSoVT7yDC5pEuVy6Qyv0UwGxwY,12
+purecpp_dev-0.0.3.dist-info/RECORD,,
