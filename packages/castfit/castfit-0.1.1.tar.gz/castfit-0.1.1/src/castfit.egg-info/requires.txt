@@ -1,0 +1,11 @@
+
+[dev]
+cogapp
+coverage
+ds-run
+mypy
+pdoc3
+pyright
+pytest-cov
+pytest
+ruff
