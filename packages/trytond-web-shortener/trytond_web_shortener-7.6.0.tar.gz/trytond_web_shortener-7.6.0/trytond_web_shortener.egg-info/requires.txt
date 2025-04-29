@@ -1,0 +1,4 @@
+python-sql
+trytond<7.7,>=7.6
+
+[test]
