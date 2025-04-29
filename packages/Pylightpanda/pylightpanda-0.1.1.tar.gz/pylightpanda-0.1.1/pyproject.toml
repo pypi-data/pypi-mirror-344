@@ -1,0 +1,26 @@
+[project]
+name = "Pylightpanda"
+version = "0.1.1"
+description = "A Python package wrapping the lightpanda binary to fetch HTML content."
+readme = "README.md"
+requires-python = ">=3.6"
+license = { file = "LICENSE" }
+authors = [
+    { name = "ruprof", email = "ruprof.info@gmail.com" }
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/ruprof/pylightpanda"
+Repository = "https://github.com/ruprof/pylightpanda.git"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["pylightpanda"]
+license-files = []
+
+[tool.setuptools.package-data]
+"pylightpanda" = ["bin/lightpanda"]
