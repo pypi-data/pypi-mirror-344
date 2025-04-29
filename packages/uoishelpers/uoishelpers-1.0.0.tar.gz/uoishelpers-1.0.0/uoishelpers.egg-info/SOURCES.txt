@@ -1,0 +1,8 @@
+README.md
+setup.py
+uoishelpers/__init__.py
+uoishelpers/main.py
+uoishelpers.egg-info/PKG-INFO
+uoishelpers.egg-info/SOURCES.txt
+uoishelpers.egg-info/dependency_links.txt
+uoishelpers.egg-info/top_level.txt
