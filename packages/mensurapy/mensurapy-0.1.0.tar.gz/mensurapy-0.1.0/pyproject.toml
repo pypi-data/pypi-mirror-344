@@ -1,0 +1,41 @@
+[project]
+name = "mensurapy"
+version = "0.1.0"
+description = "MensuraPy is a Python package that provides accurate and user-friendly functions to calculate the area, perimeter, surface area, and volume of 2D and 3D geometric shapes."
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+  {name = "Anuva13", email = "anuvadas@hotmail.com"}
+]
+maintainers = [
+  {name = "Anuva13", email = "anuvadas@hotmail.com"}
+]
+keywords = ["geometry", "mensuration", "area", "volume", "perimeter", "surface-area", "math", "shapes"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Education",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Education",
+  "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Anuva13/MensuraPy"
+"Documentation" = "https://github.com/Anuva13/MensuraPy/tree/main/MensuraPy"
+"Bug Tracker" = "https://github.com/Anuva13/MensuraPy/issues"
+"Security" = "https://github.com/Anuva13/MensuraPy/security"
+"Source" = "https://github.com/Anuva13/MensuraPy"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
