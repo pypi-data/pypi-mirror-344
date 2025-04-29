@@ -1,0 +1,2 @@
+[pytest11]
+pytest-gradescope = pytest_gradescope.pytest_plugin
