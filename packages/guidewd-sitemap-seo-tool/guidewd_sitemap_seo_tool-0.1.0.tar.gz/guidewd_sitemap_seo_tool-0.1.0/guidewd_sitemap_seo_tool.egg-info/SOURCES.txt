@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.py
+Guidewd/__init__.py
+Guidewd/analyze_sitemap.py
+Guidewd/main.py
+Guidewd/streamlit_app.py
+guidewd_sitemap_seo_tool.egg-info/PKG-INFO
+guidewd_sitemap_seo_tool.egg-info/SOURCES.txt
+guidewd_sitemap_seo_tool.egg-info/dependency_links.txt
+guidewd_sitemap_seo_tool.egg-info/entry_points.txt
+guidewd_sitemap_seo_tool.egg-info/requires.txt
+guidewd_sitemap_seo_tool.egg-info/top_level.txt
