@@ -1,0 +1,3 @@
+[console_scripts]
+start_agent = multiple_desktop_monitor.agent.agent:main
+start_dashboard = multiple_desktop_monitor.dashboard.dashboard:main
