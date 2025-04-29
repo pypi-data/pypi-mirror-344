@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/RenderMolecules/ElementData.py
+src/RenderMolecules/RenderMolecules.py
+src/RenderMolecules/__init__.py
+src/RenderMolecules/blenderUtils.py
+src/RenderMolecules/geometryUtils.py
+src/RenderMolecules/otherUtils.py
+src/RenderMolecules.egg-info/PKG-INFO
+src/RenderMolecules.egg-info/SOURCES.txt
+src/RenderMolecules.egg-info/dependency_links.txt
+src/RenderMolecules.egg-info/requires.txt
+src/RenderMolecules.egg-info/top_level.txt
