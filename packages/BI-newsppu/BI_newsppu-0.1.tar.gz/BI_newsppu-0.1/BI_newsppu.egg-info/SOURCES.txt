@@ -1,0 +1,10 @@
+setup.py
+BI_newsppu.egg-info/PKG-INFO
+BI_newsppu.egg-info/SOURCES.txt
+BI_newsppu.egg-info/dependency_links.txt
+BI_newsppu.egg-info/requires.txt
+BI_newsppu.egg-info/top_level.txt
+BI_p/__init__.py
+BI_p/bi2.py
+BI_p/bi5.py
+BI_p/bi6.py
