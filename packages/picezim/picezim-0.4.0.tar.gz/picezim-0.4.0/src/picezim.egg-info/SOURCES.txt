@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/picezim.py
+src/picezim.egg-info/PKG-INFO
+src/picezim.egg-info/SOURCES.txt
+src/picezim.egg-info/dependency_links.txt
+src/picezim.egg-info/top_level.txt
+tests/test_picezim.py
