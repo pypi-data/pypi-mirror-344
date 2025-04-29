@@ -1,0 +1,2 @@
+[console_scripts]
+cf-polygon-mcp = main:serve_cli
