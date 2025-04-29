@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/bsb_device_go.egg-info/PKG-INFO
+src/bsb_device_go.egg-info/SOURCES.txt
+src/bsb_device_go.egg-info/dependency_links.txt
+src/bsb_device_go.egg-info/entry_points.txt
+src/bsb_device_go.egg-info/requires.txt
+src/bsb_device_go.egg-info/top_level.txt
+tests/test_basic.py
