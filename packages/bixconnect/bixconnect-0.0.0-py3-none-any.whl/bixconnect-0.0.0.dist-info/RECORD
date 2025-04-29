@@ -1,0 +1,10 @@
+bixconnect/__init__.py,sha256=UzIaqhPp14Ovip1UIYvWs8sxODaw0LNQGjdRg9thRS8,21
+bixconnect/dashboard_manager.py,sha256=wgpdW3BVj7c8Xze5A_fNWnOvmTpYbj7XfysRxnqGyHE,2206
+bixconnect/data_manager.py,sha256=twOXnl7UEdEyISbd_xEUNwl5-KVRrMt-lfyTMYgoKSs,4722
+bixconnect/hel.py,sha256=SM731d0V1t9oIKjM9UzX_5X3D22uDftBKlrujLFKf9Q,184
+bixconnect/request.py,sha256=_aej8XQMMT5LwMlCx1iE09hFfCJh6eEFwm5XzzgJWaU,2337
+bixconnect/system_manager.py,sha256=rDXjCDrGw2SHbUSLdnEYRDdC09by6_oTErAVtzkx52U,1931
+bixconnect-0.0.0.dist-info/METADATA,sha256=u-uxwy0SHwVNgIw4lvRtG59Or21TkMpKnQYyEIm0hnM,57
+bixconnect-0.0.0.dist-info/WHEEL,sha256=beeZ86-EfXScwlR_HKu4SllMC9wUEj_8Z_4FJ3egI2w,91
+bixconnect-0.0.0.dist-info/top_level.txt,sha256=W3RG21vjFqs15osxROssPZ5MDrbsZVHxP_qrq7fSKtE,11
+bixconnect-0.0.0.dist-info/RECORD,,
