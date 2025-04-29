@@ -1,0 +1,17 @@
+import numpy as np
+import numpy.ma as ma
+import scipy.stats.mstats as mstats
+
+# Create arrays of size wher observed the bug
+a = np.random.rand(600*400)
+b = np.random.rand(600*400)
+m_a = ma.array(a)
+m_b = ma.array(b)
+
+# Add random masking
+a[:2000] = 
+a[:2000] = 
+
+# Calc'ing
+coeff = mstats.pearsonr(a, b)
+print("DONE" ,coeff)

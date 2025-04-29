@@ -1,0 +1,57 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+import matplotlib.animation as animation
+
+import cfplot as cfp
+import cf
+
+
+f=cf.read('cfplot_data/ggap.nc')
+f1 = f[1]
+f2 = f[2]
+print("f1 PRESSURES:", f1.construct("pressure").array)
+print("f1 PRESSURE:", f1.construct("pressure").array)
+
+pressure_vals = f1.construct("pressure").array
+
+
+# Set smaller map
+cfp.mapset(-2, 2, 50, 54, resolution='110m')
+
+
+cfp.gopen()
+u = f1.subspace(pressure=pressure_vals[0])
+cfp.con(u, blockfill=True, lines=False)
+fig = cfp.plotvars.plot.figure
+cfp.gclose()
+
+
+def update_animation(subspace_at):
+    """TODO"""
+    u = f1.subspace(pressure=subspace_at)
+    ###v=f2.subspace(pressure=subspace_at)
+    cfp.con(u, blockfill=True, lines=False)  #, v=v, key_length=10, scale=100, stride=5)
+    ###fig = cfp.plotvars.plot.figure
+    ###return fig
+
+
+print("1")
+# Create animation from the images
+ani = animation.FuncAnimation(
+    fig, update_animation, ###init=init,
+    frames=pressure_vals[1:5],  # TODO all later
+    ###init_func=init, blit=True
+)
+
+"""
+ani = animation.ArtistAnimation(
+    fig, ims, interval=50, blit=True,
+    repeat_delay=1000
+)
+"""
+
+# Save or show
+ani.save("movie.mp4")
+
+###plt.show()

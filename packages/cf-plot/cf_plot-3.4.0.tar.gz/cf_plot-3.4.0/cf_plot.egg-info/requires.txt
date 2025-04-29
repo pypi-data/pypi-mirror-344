@@ -1,0 +1,2 @@
+cf-python>=3.17.0
+cartopy>=0.22.0

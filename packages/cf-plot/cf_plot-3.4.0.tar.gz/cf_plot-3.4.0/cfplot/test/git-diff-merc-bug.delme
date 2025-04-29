@@ -1,0 +1,179 @@
+diff --git a/cfplot/cfplot.py b/cfplot/cfplot.py
+index 62d0b53..583e0b7 100644
+--- a/cfplot/cfplot.py
++++ b/cfplot/cfplot.py
+@@ -1331,30 +1331,30 @@ def _cf_data_assign(
+     for mycoord in f.coords():
+         c = f.coord(mycoord)
+         if c.X:
+-            if verbose:
+-                print("lons -", mydim)
+             lons = np.squeeze(f.construct(mycoord).array)
++            if verbose:
++                print("lons -", lons)
+             if np.size(lons) > 1:
+                 has_lons = True
+ 
+         if c.Y:
+-            if verbose:
+-                print("lats -", mydim)
+             lats = np.squeeze(f.construct(mycoord).array)
++            if verbose:
++                print("lats -", lats)
+             if np.size(lats) > 1:
+                 has_lats = True
+ 
+         if c.Z:
+-            if verbose:
+-                print("height -", mydim)
+             height = np.squeeze(f.construct(mycoord).array)
++            if verbose:
++                print("height -", height)
+             if np.size(height) > 1:
+                 has_height = True
+ 
+         if c.T:
+-            if verbose:
+-                print("time -", mydim)
+             time = np.squeeze(f.construct(mycoord).array)
++            if verbose:
++                print("time -", time)
+             if np.size(time) > 1:
+                 has_time = True
+ 
+@@ -2209,6 +2209,7 @@ def _set_map():
+             lonmax = lonmax + 0.01
+ 
+     if plotvars.proj == "merc":
++        print("001 START")
+         min_latitude = -80.0
+         if plotvars.lonmin > min_latitude:
+             min_latitude = plotvars.lonmin
+@@ -2220,6 +2221,7 @@ def _set_map():
+             min_latitude=min_latitude,
+             max_latitude=max_latitude,
+         )
++        print("001 END")
+ 
+     if plotvars.proj == "npstere":
+         proj = ccrs.NorthPolarStereo(central_longitude=plotvars.lon_0)
+@@ -2326,9 +2328,13 @@ def _set_map():
+         set_extent = False
+ 
+     if extent and set_extent:
++        if lonmax - lonmin == 360.0:
++            lonmax = lonmax + 0.01
++        print("GOGOGO 1", [lonmin, lonmax, latmin, latmax])
+         mymap.set_extent(
+             [lonmin, lonmax, latmin, latmax], crs=ccrs.PlateCarree()
+         )
++    print("GOGOGO 2")
+ 
+     # Set the scaling for PlateCarree
+     if plotvars.proj == "cyl":
+@@ -2355,6 +2361,7 @@ def _set_map():
+ 
+     # Store map
+     plotvars.mymap = mymap
++    print("GOGOGO 3")
+ 
+ 
+ def _map_title(title=None, dims=False):
+@@ -2393,6 +2400,7 @@ def _map_title(title=None, dims=False):
+         mylat = latmax
+         xpt, ypt = proj.transform_point(mylon, mylat, ccrs.PlateCarree())
+         ypt = ypt + (latmax - latmin) / 40.0
++        print("GETTING", xpt, ypt)
+ 
+     if plotvars.proj == "npstere":
+         mylon = lon_0 + 180
+@@ -2733,6 +2741,8 @@ def _plot_map_axes(
+         # plot slightly
+         xmax = np.max(np.abs(mymap.set_xlim(None)))
+         mymap.set_xlim((-xmax, xmax), emit=False)
++        # SADIE
++        print("YMAX IS", ymax)
+         ymax = np.max(np.abs(mymap.set_ylim(None)))
+         mymap.set_ylim((-ymax, ymax), emit=False)
+ 
+@@ -3189,6 +3199,7 @@ def con(
+      None
+ 
+     """
++    print("STARTING CONTOUR PLOT")
+ 
+     # Turn off divide warning in contour routine which is a numpy issue
+     old_settings = np.seterr(all="ignore")
+@@ -3625,6 +3636,7 @@ def con(
+             lonrange = 360.0
+ 
+         if (lonrange > 350 and latrange > 160) or plotvars.user_mapset == 1:
++            print("OK 1")
+             _set_map()
+         else:
+             mapset(
+@@ -3638,6 +3650,7 @@ def con(
+ 
+             _set_map()
+ 
++        print("CLUE")
+         mymap = plotvars.mymap
+         user_mapset = plotvars.user_mapset
+ 
+@@ -3706,6 +3719,7 @@ def con(
+                 lats_irregular_real = deepcopy(lats_irregular[pts_real])
+ 
+         if not irregular:
++            print("GOT IT")
+             # Flip latitudes and field if latitudes are in descending order
+             if np.ndim(y) == 1:
+                 if y[0] > y[-1]:
+@@ -3752,6 +3766,9 @@ def con(
+         lons, lats = x, y
+ 
+         # Set the plot limits
++        # SADIE
++        print("HERE", plotvars.lonmin, plotvars.lonmax, plotvars.latmin,
++              plotvars.latmax)
+         if lonrange > 350:
+             gset(
+                 xmin=plotvars.lonmin,
+@@ -4328,11 +4345,14 @@ def con(
+                     raise Warning(errstr)
+ 
+         # Set plot limits
++        # SADIE
+         if ylog is False or ylog == 0:
++            print("1 LIMS ARE", xmin, xmax, ymin, ymax)
+             gset(
+                 xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, user_gset=user_gset
+             )
+         else:
++            print("2 LIMS ARE", xmin, xmax, ymin, ymax)
+             if ymax == 0:
+                 ymax = 1  # Avoid zero in a log plot
+             gset(
+@@ -4699,6 +4719,7 @@ def con(
+             lonlatlabels, timelabels = timelabels, lonlatlabels
+ 
+         # Set plot limits
++        print("HOP")
+         if plotvars.user_plot == 0:
+             gopen(user_plot=0)
+         gset(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, user_gset=user_gset)
+@@ -4947,6 +4968,7 @@ def con(
+                 lons = np.array(points)[:, 0]
+                 lats = np.array(points)[:, 1]
+ 
++                print("AH")
+                 mapset(
+                     lonmin=np.min(lons),
+                     lonmax=np.max(lons),
+@@ -5156,6 +5178,7 @@ def con(
+     # Other plots
+     #############
+     if ptype == 0:
++        print("EEK")
+         if verbose:
+             print("con - making an other plot")
+         if plotvars.user_plot == 0:

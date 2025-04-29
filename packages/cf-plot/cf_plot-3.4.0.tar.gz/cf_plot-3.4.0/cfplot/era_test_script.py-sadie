@@ -1,0 +1,14 @@
+import cfplot as cfp
+import cf
+
+f = cf.read("era5_mon_sur_post1979.land.ant.timmean.nc")
+g = f[0][:,0,:,:].squeeze()
+
+cfp.con(g, lines=False)
+
+cfp.mapset(proj='spstere', boundinglat=-60)
+cfp.con(g, lines=False)
+
+cfp.mapset(proj='spstere')
+cfp.con(g, lines=False)
+
