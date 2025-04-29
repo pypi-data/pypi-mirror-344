@@ -1,0 +1,17 @@
+ttkode/__init__.py,sha256=ANfs3En5s7MS0CQ5bA5xecWO39oGAaD65_yCX30Yat0,1350
+ttkode/__main__.py,sha256=K7oGCwTF9Hz7mPd752Yohp-y2FdsasOCgtUb2pgD1IE,1248
+ttkode/helper.py,sha256=tPQ54c9T7qcT-OAZYuMXS7tMgaLsjYxD0HJ-J1c3Bps,3210
+ttkode/plugin.py,sha256=LObkz_TE-9YFOVax2-4Eknl0msJ_1BJHgavd72j6ryo,2102
+ttkode/proxy.py,sha256=R5-9hZyVNRAide9VVdkWTyXx-ASLyhkVwVFNw59wVwQ,2336
+ttkode/app/__init__.py,sha256=jAcWuUMRZnp2-NptL8JIgAazAxxHOiuHrxuIyafR8QQ,1242
+ttkode/app/about.py,sha256=mg721OfsxCJ6slFuDpJHfkkZVO0K0PhOvOuKhZXcapE,2943
+ttkode/app/activitybar.py,sha256=cZPpRwppKBzZz6ML8YanuMTjsN_TO6iSE9gE3-AYmjQ,4905
+ttkode/app/cfg.py,sha256=Wp8x23RdFihzQtqlMP0_T4Rfk_NsGMuq0bClhctdtLw,2175
+ttkode/app/main.py,sha256=7P3GcO5jNYkr3gi-p6IAFgGMSyx5kJnk234z1gl3FHQ,2741
+ttkode/app/options.py,sha256=nCCp3ND7MPyzIjO8Gfcc2EHAAQnxokvE5uH3zhMt6Ag,3235
+ttkode/app/ttkode.py,sha256=QzzOEYZ_8nmd8GjPIEAOIiQ0PBT1lchbgWf82ctci84,11119
+ttkode-0.3.0a2.dist-info/METADATA,sha256=1T85o0owhH7RhNhQTbmZnsopC4GUaKOMgQyyI-XZyUU,2661
+ttkode-0.3.0a2.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+ttkode-0.3.0a2.dist-info/entry_points.txt,sha256=PZUvi8Hik70MdV0tO3_W8kEdxLVqzIwKOKgpfiMb-JQ,39
+ttkode-0.3.0a2.dist-info/top_level.txt,sha256=3roaMxCJxq71pW2MdaZCzuclyaWN0lfQMCShdCOiOPc,7
+ttkode-0.3.0a2.dist-info/RECORD,,
