@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: baseint
+Version: 0.0.1
+Summary: A Python class for handling integers in arbitrary bases.
+Author-email: NumbersTada <tadaktatak61@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# baseint
+BaseInt is a small Python library for converting numbers in arbitrary bases.
+
+## Features
+- Create BaseInt instances from integers, strings, lists and tuples.
+- Convert between bases easily.
+- Supports custom character maps.
+
+## Example
+
+```py
+from baseint import BaseInt
+
+b = BaseInt("1111", 2)
+print(b.toDecimal())        # 15
+print(f"{b.sconvert(8)!r}") # BI:8:17
+```
