@@ -1,0 +1,9 @@
+python-sql>=0.4
+trytond_account_invoice<7.7,>=7.6
+trytond_account_payment<7.7,>=7.6
+trytond_sale<7.7,>=7.6
+trytond<7.7,>=7.6
+
+[test]
+proteus<7.7,>=7.6
+trytond_account_payment_clearing<7.7,>=7.6
