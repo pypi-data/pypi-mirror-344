@@ -1,0 +1,2 @@
+[console_scripts]
+advancedchatbot = advancedchatbot.main:run_chatbot
