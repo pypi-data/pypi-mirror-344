@@ -1,0 +1,15 @@
+gitag/auto_tagger.py,sha256=sXmGgJRqvymVblMamBHMXlHNTdg5kgw1K4i2TxlYVjs,2788
+gitag/changelog_writer.py,sha256=VBrXqfnayhv--Wlk5Z0YFAijTRS4XqL2nMozjSe59_w,3543
+gitag/config.py,sha256=wn3UrzIIhX9pIIPJJrZDRejIf1LJmLp9m0b66nTbjCM,1609
+gitag/config_validator.py,sha256=XvpCwK3kV-r53rExRSb6VY_a3_u7Xv1wxiCijtWBMXU,1078
+gitag/git_repo.py,sha256=msxmraSvNbov-plyP-ChzdE4E6Q7xFy3yJlON1WigJ4,4927
+gitag/main.py,sha256=Th6YfZDK6JY5RZKQd3fFVSNzUtvXXELriN-cQW6ZPVQ,3518
+gitag/version_manager.py,sha256=pA7C4yB5B82L1MCtO3y0-2UbG5b7Q8yy_aE13nNaiq4,6646
+gitag/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitag/utils/logging_setup.py,sha256=_K-ZAZU8YuK2SYpU_74N8iQLZjniyj1VLJixh13GzlQ,534
+gitag-0.0.1.dist-info/licenses/LICENSE,sha256=iXOZ7cVTowFXgOXxSIGYecOHJW0olMI6MvwDXutmdvk,1068
+gitag-0.0.1.dist-info/METADATA,sha256=HZIzn8q8RiompecgB8BBfBg0KBa-6R324YqNywSUjxE,7340
+gitag-0.0.1.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+gitag-0.0.1.dist-info/entry_points.txt,sha256=sq1frfT5Kapngm1Wu3fNNWzaYT24N03-I-CIdwW8XJA,42
+gitag-0.0.1.dist-info/top_level.txt,sha256=JYo0KCTPQM100trrIDhkk_MIyTHyhUwAQsbGQ0ogLEM,6
+gitag-0.0.1.dist-info/RECORD,,
