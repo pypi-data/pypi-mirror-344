@@ -1,0 +1,120 @@
+Metadata-Version: 2.4
+Name: buffalo_workflow
+Version: 0.1.3
+Summary: A workflow automation tool
+Project-URL: Homepage, https://github.com/wengzhiwen/buffalo
+Project-URL: Bug Tracker, https://github.com/wengzhiwen/buffalo/issues
+Author-email: James Weng <wengzhiwen@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Retired Buffalo & Horses
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: pyyaml>=5.1
+Requires-Dist: setuptools>=42.0.0
+Description-Content-Type: text/markdown
+
+# Buffalo
+
+Buffalo is a simple and easy-to-use workflow management library for managing various work tasks in projects. The library provides a Python API interface that can be easily integrated into your applications.
+
+## Installation
+
+```bash
+pip install buffalo-workflow
+```
+
+## Usage
+
+Buffalo provides a simple API for creating and managing workflows:
+
+```python
+from buffalo import Buffalo, Work
+
+# Initialize Buffalo, specify the project root directory and template path
+buffalo = Buffalo("/path/to/projects", "/path/to/template.yml")
+
+# Create a project
+project = buffalo.create_project("my_project", "My Project")
+
+# Get a job
+project_folder_name, work = buffalo.get_a_job("Task Name")
+
+# Update job status
+buffalo.update_work_status(project_folder_name, work, Work.IN_PROGRESS)
+
+# Complete job
+buffalo.update_work_status(project_folder_name, work, Work.DONE)
+```
+
+## Environment Variables
+
+Buffalo will prioritize using the user-provided template file. It will only use the built-in example template when the user template doesn't exist:
+
+```python
+# Provide your own template file path
+buffalo = Buffalo("/path/to/projects", "/path/to/your_own_template.yml")
+
+# If your template doesn't exist, Buffalo will use the built-in template
+```
+
+## Custom Workflow Templates
+
+A core feature of Buffalo is allowing users to define their own workflows. You can create your own template file in the following format:
+
+```yaml
+workflow:
+  works:
+    - name: "Your First Step"
+      status: not_started
+      output_file: "output1.md"
+      comment: "Description for the first step"
+    
+    - name: "Your Second Step"
+      status: not_started
+      output_file: "output2.md"
+      comment: "Description for the second step"
+    
+    # You can add more steps...
+```
+
+## Getting the Example Template File
+
+If you need to reference the built-in example template, you can use:
+
+```python
+from buffalo import get_template_path
+
+template_path = get_template_path()
+print(f"Example template file path: {template_path}")
+```
+
+## Advanced Usage
+
+Buffalo is designed for easy integration with your project workflow management:
+
+- Create multiple projects with different workflows
+- Track the status of each work item through the workflow lifecycle
+- Automatically save project state after each status update
+- Load existing projects when Buffalo is reinitialized 
