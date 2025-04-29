@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+snapdroid/__init__.py
+snapdroid/__main__.py
+snapdroid/snapdroid.py
+snapdroid.egg-info/PKG-INFO
+snapdroid.egg-info/SOURCES.txt
+snapdroid.egg-info/dependency_links.txt
+snapdroid.egg-info/entry_points.txt
+snapdroid.egg-info/top_level.txt
