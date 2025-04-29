@@ -1,0 +1,45 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Vercel 기반의 Next.js 프로젝트
+
+### next.config.js
+- exportTrailingSlash, output: 'export' 옵션 검토
+- rewrites 설정 여부 확인
+
+### vercel.json
+- 모든 경로를 `/index.html`로 리다이렉트 설정
+  ```json
+  {
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/index.html" }
+    ]
+  }
+  ```
+
+### pages/
+- getServerSideProps, getStaticProps 사용 없이 작성
+- 클라이언트 사이드 라우팅 구성
+
+### components/
+- 재사용 가능한 컴포넌트로 분리
+- TailwindCSS 또는 CSS Modules 사용
+
+### public/
+- 정적 파일 (이미지, 파비콘 등) 저장
+- 이미지 최적화 (WebP 권장)
+
+### styles/
+- 글로벌 스타일과 컴포넌트별 스타일 구분
+- TailwindCSS 설정 적용 여부 확인
+
+### lib/
+- 공통 유틸리티 함수 작성
+- 비즈니스 로직과 분리 유지
+
+### README.md
+- 사용 스택 (Next.js, Vercel, TailwindCSS 등) 명시
+- 배포 방법, SPA 구성 방법 기록
+- 라우팅 및 폼 처리 방식 설명
