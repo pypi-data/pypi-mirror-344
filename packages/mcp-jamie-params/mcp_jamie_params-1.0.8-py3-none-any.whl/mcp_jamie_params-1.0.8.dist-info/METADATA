@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: mcp-jamie-params
+Version: 1.0.8
+Summary: 数据类型中文翻译器
+Requires-Python: >=3.13
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: requests>=2.32.3
