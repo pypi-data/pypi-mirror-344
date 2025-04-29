@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: flagsense
+Version: 0.1.0
+Summary: A Python package for flag detection and classification in images, leveraging deep learning models for efficient and accurate results.
+Home-page: https://github.com/tiloftus/flagsense
+Author: Timothy Loftus
+Author-email: tiloftus.4@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: ultralytics
+Requires-Dist: opencv-python
+
+UNKNOWN
+
+
