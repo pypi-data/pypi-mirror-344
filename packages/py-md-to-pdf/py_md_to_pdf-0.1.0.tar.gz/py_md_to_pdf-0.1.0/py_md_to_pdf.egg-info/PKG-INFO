@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: py-md-to-pdf
+Version: 0.1.0
+Summary: Convert markdown to PDF
+Requires-Python: >=3.10
+Requires-Dist: commons-lang>=0.2.1
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: markdown>=3.8
+Requires-Dist: psutil>=7.0.0
+Requires-Dist: pygments>=2.19.1
+Requires-Dist: pyppeteer>=2.0.0
+Requires-Dist: pytest-asyncio>=0.26.0
