@@ -1,0 +1,14 @@
+#include README.md
+#include LICENSE
+#recursive-include flagsense *
+#exclude *.pt
+#exclude *.pth
+#exclude *.jpg
+#exclude *.jpeg
+#exclude *.png
+#exclude dist/*
+#exclude build/*
+
+include README.md
+include LICENSE
+recursive-include flagsense *.py

@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+flagsense/__init__.py
+flagsense/__main__.py
+flagsense/yolo_inference.py
+flagsense.egg-info/PKG-INFO
+flagsense.egg-info/SOURCES.txt
+flagsense.egg-info/dependency_links.txt
+flagsense.egg-info/requires.txt
+flagsense.egg-info/top_level.txt
