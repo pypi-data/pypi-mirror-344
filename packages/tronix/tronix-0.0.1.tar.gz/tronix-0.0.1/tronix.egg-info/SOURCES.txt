@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+package/__init__.py
+package/main.py
+tronix.egg-info/PKG-INFO
+tronix.egg-info/SOURCES.txt
+tronix.egg-info/dependency_links.txt
+tronix.egg-info/requires.txt
+tronix.egg-info/top_level.txt
