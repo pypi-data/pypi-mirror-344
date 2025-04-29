@@ -1,0 +1,7 @@
+datasette>=0.54
+
+[test]
+beautifulsoup4
+pytest-asyncio
+pytest
+python-semantic-release

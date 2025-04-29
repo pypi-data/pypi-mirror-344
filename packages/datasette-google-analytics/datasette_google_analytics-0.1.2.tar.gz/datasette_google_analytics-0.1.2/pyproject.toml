@@ -1,0 +1,7 @@
+[tool.semantic_release]
+version_variables = [
+    "datasette_google_analytics/__init__.py:__version__",
+    "setup.py:__version__",
+]
+branch = "main"
+build_command = "pip install setuptools wheel build && python -m build"
