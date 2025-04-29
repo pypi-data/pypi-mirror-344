@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/PathQuant.egg-info/PKG-INFO
+src/PathQuant.egg-info/SOURCES.txt
+src/PathQuant.egg-info/dependency_links.txt
+src/PathQuant.egg-info/top_level.txt
+src/pathquant/__init__.py
+src/pathquant.egg-info/PKG-INFO
+src/pathquant.egg-info/SOURCES.txt
+src/pathquant.egg-info/dependency_links.txt
+src/pathquant.egg-info/top_level.txt

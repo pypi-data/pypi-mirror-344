@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: PathQuant
+Version: 0.0
+Summary: AI Workflow for Pathology Quantification
+Author-email: Mohsen Farzi <mhnfarzi@gmail.com>
+Project-URL: Homepage, https://github.com/mfarzi/PathQuant
+Project-URL: Bug Tracker, https://github.com/mfarzi/PathQuant/issues
+Keywords: python,AI,digital pathology
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# PathQuant
+AI Workflow for Pathology Quantification
