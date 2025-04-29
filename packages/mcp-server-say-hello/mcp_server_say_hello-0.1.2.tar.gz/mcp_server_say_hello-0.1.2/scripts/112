@@ -1,0 +1,40 @@
+import subprocess
+from pathlib import Path
+from datetime import datetime
+
+
+def generate_version() -> str:
+    """生成符合语义化版本规范的标准版本号"""
+    date_str = datetime.now().strftime("%Y.%m.%d")
+    result = subprocess.run(['git', 'rev-list', '--count', 'HEAD'], capture_output=True, text=True)
+    commit_count = result.stdout.strip()
+    return f"{date_str}.{commit_count}"
+
+
+def generate_notes(start_hash: str) -> str:
+    """生成基于git历史的发布说明"""
+    cmd = f"git log {start_hash}..HEAD --pretty=format:'- %s'"
+    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    return f"## 版本更新说明\n\n{result.stdout}"
+
+
+if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser(prog='release')
+    subparsers = parser.add_subparsers(dest='command')
+    
+    # 版本生成命令
+    version_parser = subparsers.add_parser('generate-version')
+    
+    # 发布说明生成命令
+    notes_parser = subparsers.add_parser('generate-notes')
+    notes_parser.add_argument('--directory', required=True)
+    notes_parser.add_argument('start_hash')
+    
+    args = parser.parse_args()
+    
+    if args.command == 'generate-version':
+        print(generate_version())
+    elif args.command == 'generate-notes':
+        print(generate_notes(args.start_hash))
