@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="210mm" height="297mm" viewBox="0 0 210 297" version="1.1">
+  <!-- Background -->
+  <rect width="210" height="297" fill="#ffffff"/>
+
+  <!-- Gray header background -->
+  <rect x="0" y="0" width="210" height="70" fill="#f0f0f0"/>
+
+  <!-- Title with smaller font -->
+  <text x="105" y="40" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">Standard Location Example</text>
+
+  <!-- Subtitle with smaller font -->
+  <text x="105" y="60" text-anchor="middle" font-family="Arial" font-size="8">This page uses conventional directory structure</text>
+
+  <!-- Description text using wordwrap filter -->
+  
+  <text x="20" y="100" font-family="Arial" font-size="8">This example demonstrates how pdfbaker</text>
+  
+  <text x="20" y="115" font-family="Arial" font-size="8">organizes files with standard locations.</text>
+  
+  <text x="20" y="130" font-family="Arial" font-size="8">Templates are in the standard templates/</text>
+  
+  <text x="20" y="145" font-family="Arial" font-size="8">directory, page configuration files are in</text>
+  
+  <text x="20" y="160" font-family="Arial" font-size="8">the standard pages/ directory, and the</text>
+  
+  <text x="20" y="175" font-family="Arial" font-size="8">document uses simple page references.</text>
+  
+</svg>
