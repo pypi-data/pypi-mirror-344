@@ -1,0 +1,13 @@
+# Include all Python files in the src/checkthisout directory
+include src/checkthisout/*.py
+
+# Include all notebooks and CSV files in the src/checkthisout directory
+include src/checkthisout/*.ipynb
+include src/checkthisout/*.csv
+
+# Include additional files like LICENSE, README, etc.
+include LICENSE
+include readme.md
+
+# Include all files in the tests folder recursively
+recursive-include tests *.py
