@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-mantis = mcp_mantis:main

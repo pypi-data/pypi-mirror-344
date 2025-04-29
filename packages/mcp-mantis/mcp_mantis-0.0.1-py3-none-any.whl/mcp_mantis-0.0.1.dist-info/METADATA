@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: mcp-mantis
+Version: 0.0.1
+Summary: Openrec MCP server project
+Author-email: cygkichi <9675041+cygkichi@users.noreply.github.com>
+Requires-Python: >=3.13
+Requires-Dist: httpx
+Requires-Dist: mcp>=1.6.0
+Description-Content-Type: text/markdown
+
+# mcp-mantis MCP server
+
+Openrec MCP server project
