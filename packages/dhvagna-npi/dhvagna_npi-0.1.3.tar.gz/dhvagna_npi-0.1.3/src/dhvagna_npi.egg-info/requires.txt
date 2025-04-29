@@ -1,0 +1,15 @@
+SpeechRecognition>=3.8.0
+keyboard>=0.13.5
+rich>=10.0.0
+pyaudio
+pipwin
+
+[dev]
+pytest>=7.0.0
+pytest-cov>=3.0.0
+black>=22.0.0
+isort>=5.10.0
+mypy>=0.950
+build>=0.8.0
+twine>=4.0.0
+pre-commit>=2.20.0

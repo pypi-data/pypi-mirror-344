@@ -1,0 +1,5 @@
+SpeechRecognition>=3.8.0
+keyboard>=0.13.5
+rich>=10.0.0
+pyaudio
+pipwinPyAudio

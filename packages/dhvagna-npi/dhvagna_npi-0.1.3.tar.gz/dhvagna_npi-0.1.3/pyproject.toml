@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dhvagna-npi"
+version = "0.1.3"
+description = "Advanced voice transcription tool with multi-language support"
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+dynamic = ["optional-dependencies"]
+authors = [
+    {name = "Gnanesh Balusa", email = "gnaneshbalusa016g@gmail.com"}
+]
+keywords = ["speech", "recognition", "transcription", "voice", "audio"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Text Processing"
+]
+dependencies = [
+    "SpeechRecognition>=3.8.0",
+    "keyboard>=0.13.5",
+    "rich>=10.0.0",
+    "pyaudio",
+    "pipwin"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/gnanesh-16/dhvagna-npi"
+"Bug Tracker" = "https://github.com/gnanesh-16/dhvagna-npi/issues"
+
+[project.scripts]
+dhvagna-npi = "dhvagna_npi.core:main"
+dhvagna-npi-interactive = "dhvagna_npi.core:run_interactive"
+
+[tool.black]
+line-length = 88
+target-version = ["py37", "py38", "py39"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
