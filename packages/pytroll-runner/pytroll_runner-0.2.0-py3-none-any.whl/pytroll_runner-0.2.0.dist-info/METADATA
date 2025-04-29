@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: pytroll-runner
+Version: 0.2.0
+License-File: LICENSE
+Requires-Dist: posttroll>=1.10.0
+Provides-Extra: test
+Requires-Dist: pytest>=8.3.5; extra == "test"
+Dynamic: license-file
