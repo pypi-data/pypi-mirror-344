@@ -1,0 +1,13 @@
+matchescu/clustering/__init__.py,sha256=5wVQq8rv9bCw-uR6hLbqCMA6Ww5VjRAejhtOq4fCizs,399
+matchescu/clustering/_base.py,sha256=JtTNkzbX8whGUSz2O3KbUjsVvOcNRvgskG7D8nONj_Q,517
+matchescu/clustering/_center.py,sha256=FqxcOFxP9-_AyimB5O1QYMicfHLe_8krtTBy9mkjKec,2043
+matchescu/clustering/_corr.py,sha256=ImMAGHwJe7HcTGPQEwYt4HZd_0XRIapVq6f4f8-s1sU,1246
+matchescu/clustering/_ecp.py,sha256=9OeGCZrw75T_HKu7Hctk3tDb12XVkcIJ7u5q8TDn810,1585
+matchescu/clustering/_hac.py,sha256=Wq19ulqqPJE2KPpoKEoRtzoIMy3gx1yIJL4VLnmbfXM,2105
+matchescu/clustering/_mcl.py,sha256=l8AkiBDg5gr73FVEeUhgGgDArc7OnsfqE18QfKQdd6Y,1735
+matchescu/clustering/_wcc.py,sha256=tA57hX52ldkGhLIWku1qxwbJjZBYUz6_6FCoNG4RC_0,837
+matchescu/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matchescu_clustering-0.7.1.dist-info/LICENSE,sha256=PVVSjAkwe0C4ReSaWjA2Qc16INddKPZuXxqQzSqe8ds,1066
+matchescu_clustering-0.7.1.dist-info/METADATA,sha256=smJWEBp3DKulhbZHcVrOZHes8KCaTYhbzyFQV-VIqd4,590
+matchescu_clustering-0.7.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+matchescu_clustering-0.7.1.dist-info/RECORD,,
