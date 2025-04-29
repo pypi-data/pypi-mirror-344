@@ -1,0 +1,8 @@
+cloud_ds_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloud_ds_api/cloud_api.py,sha256=txUQD835ItaVil5O-eL8BPDO-_q3bdZ4aBhF-bI2tL4,5407
+cloud_ds_api/resources.py,sha256=GpPHcc0RHiAXTc_h1XwDHkg8kyQSd8wddNsSMJiXM_w,3349
+cloud_ds_api-1.2.5.dist-info/licenses/LICENSE,sha256=ZmY_j5KWtYZ8sy2WGYGPHPttSHmESan2qhTNMc2DdsM,684
+cloud_ds_api-1.2.5.dist-info/METADATA,sha256=U4hffG5mY0tzdHmv9axHAbxlduxUnSxPXd_SZInf1Ho,1148
+cloud_ds_api-1.2.5.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+cloud_ds_api-1.2.5.dist-info/top_level.txt,sha256=cO2X_p7s5s5ICj_qYIIECR81qQ8R1l-JPHSyZeBm2JU,13
+cloud_ds_api-1.2.5.dist-info/RECORD,,
