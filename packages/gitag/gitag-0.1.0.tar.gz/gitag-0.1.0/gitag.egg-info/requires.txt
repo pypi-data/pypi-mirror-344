@@ -1,0 +1,7 @@
+
+[dev]
+pytest>=8.0
+pytest-mock
+coverage
+build
+twine
