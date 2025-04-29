@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "textfx"
+version = "1.1"
+authors = [{ name = "Ilia Karimi"}]
+description = "textfx is a Python library for creating dynamic and visually engaging text effects."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+license = { text = "MIT" }
+
+[project.urls]
+"Homepage" = "https://github.com/iliakarimi/textfx"
+
