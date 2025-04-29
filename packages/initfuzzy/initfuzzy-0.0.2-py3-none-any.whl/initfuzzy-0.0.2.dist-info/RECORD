@@ -1,0 +1,12 @@
+fuzzysets/TrapezoidFuzzyNumber.py,sha256=jqtYE_moNoUh3PsaRIB9ntmIir5yH7naC0olY9BcBtQ,5030
+fuzzysets/__init__.py,sha256=84Bq5-So6fIRP6mLw8A0wDhzn2v_fv3Mnm9xmzdm-xU,315
+fuzzysets/cauchyfuzzyset.py,sha256=Kgh8xeXN0YIxWKj0z5AwMzNgiA4E5o3Nx4QqsX7syIc,4643
+fuzzysets/inference.py,sha256=8l6MRPAb3qW_hyqEb3HNri1VdfTtU1ikmG70posBCFI,2039
+fuzzysets/tfn.py,sha256=8dwtr7eD3opJZHt4SPa4h17hRoQh2PZ_PdzcEmoWhFQ,9799
+fuzzysets/tnorm.py,sha256=hI-pwO7nREnDr1-Piy78yPGh3o925OC_n-wVC7lSp-g,7752
+fuzzysets/utils.py,sha256=IxwLypVXllfhuvikRCSs7gCg_stxlwv_TpfChF5aiNA,929
+initfuzzy-0.0.2.dist-info/licenses/LICENSE,sha256=XmXLZGVl3O8r6SATo9tJc9VR9y6rerIKXGs7BPZ1ZQU,1073
+initfuzzy-0.0.2.dist-info/METADATA,sha256=OgK2oGA_yKLiRvRck-yalgpsRfTQD57Ya0q--Y6b2Xs,7356
+initfuzzy-0.0.2.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+initfuzzy-0.0.2.dist-info/top_level.txt,sha256=R5VjfWEG7maRS9zdhXg5Vv8lx7ZMcT3i-Qib6r096Fg,10
+initfuzzy-0.0.2.dist-info/RECORD,,
