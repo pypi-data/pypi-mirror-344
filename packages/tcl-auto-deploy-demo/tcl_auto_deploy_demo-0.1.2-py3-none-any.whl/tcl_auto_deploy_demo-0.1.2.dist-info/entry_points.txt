@@ -1,0 +1,2 @@
+[console_scripts]
+tcl-auto-deploy-stdio = stdio_main:main_stdio
