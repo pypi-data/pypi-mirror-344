@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+certs/__init__.py
+certs/attribute.py
+certs.egg-info/PKG-INFO
+certs.egg-info/SOURCES.txt
+certs.egg-info/dependency_links.txt
+certs.egg-info/requires.txt
+certs.egg-info/top_level.txt
+certs.egg-info/zip-safe
