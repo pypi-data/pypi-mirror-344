@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+pythils/__init__.py
+pythils/config.py
+pythils/interface.py
+pythils/placeholder.py
+pythils.egg-info/PKG-INFO
+pythils.egg-info/SOURCES.txt
+pythils.egg-info/dependency_links.txt
+pythils.egg-info/top_level.txt
+tests/test_config_dict.py
+tests/test_config_ref.py
+tests/test_interface.py
