@@ -1,0 +1,8 @@
+crochet~=2.1.1
+fastapi~=0.115.12
+pydantic~=2.11.3
+python-environ~=0.4.54
+requests~=2.32.3
+scrapy~=2.8.0
+uvicorn[standard]~=0.34.2
+loguru~=0.7.3
