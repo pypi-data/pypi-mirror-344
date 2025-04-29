@@ -1,0 +1,12 @@
+{
+    "cSpell.ignoreWords": [
+        "datatuple",
+        "keyexpr",
+        "queryables"
+    ],
+    "cSpell.words": [
+        "frombuffer",
+        "serdes",
+        "tobytes"
+    ]
+}
