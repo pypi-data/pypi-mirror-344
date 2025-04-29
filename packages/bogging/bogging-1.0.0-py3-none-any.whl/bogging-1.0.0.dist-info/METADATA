@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: bogging
+Version: 1.0.0
+Summary: A copy of official logging module, to prevent conflict with other logging modules.
+Home-page: UNKNOWN
+Author: zzqq2199
+Author-email: zhouquanjs@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Release Notes
+- 1.0.0: a copy of the original logging module, to prevent conflicts with other logging modules
+
