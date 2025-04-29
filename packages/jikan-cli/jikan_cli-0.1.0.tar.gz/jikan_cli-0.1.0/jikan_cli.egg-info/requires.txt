@@ -1,0 +1,7 @@
+click>=8.1
+rich-click>=1.6.1
+rich>=13.5
+
+[dev]
+black
+pylint

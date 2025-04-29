@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+jikan_cli.egg-info/PKG-INFO
+jikan_cli.egg-info/SOURCES.txt
+jikan_cli.egg-info/dependency_links.txt
+jikan_cli.egg-info/entry_points.txt
+jikan_cli.egg-info/requires.txt
+jikan_cli.egg-info/top_level.txt
