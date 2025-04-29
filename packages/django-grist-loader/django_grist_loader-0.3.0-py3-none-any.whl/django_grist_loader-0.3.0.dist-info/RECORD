@@ -1,0 +1,12 @@
+django_grist_loader-0.3.0.dist-info/licenses/LICENSE,sha256=3pNG5-_hddWi6cTNrz5FvzRAplxejfPkR9PW3rzTXwM,1069
+grist_loader/__init__.py,sha256=Q8YVp_rEw-dL-7XB53fbjkVzb6QPW8MOICMxOTuNquE,193
+grist_loader/admin.py,sha256=78QXNIc4OsTw-E1TyvfURsqn2Vh9E_HSPSuazjMQmPs,511
+grist_loader/apps.py,sha256=MUhpJO_rf7RW-PtL1JgXGh6vJYGS94NmpzHf5ySCwwY,208
+grist_loader/loader.py,sha256=TAwFpzIBbNO4hCzxn984PsB7wN26NWsZQ3StqMYfWnU,7212
+grist_loader/models.py,sha256=-jmyEcyoiR5SkwQH3ZfB5Hl03Hss9CQrWOao6dmsUg0,171
+grist_loader/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+grist_loader/management/commands/grist_load_all.py,sha256=d3jFy62lhqMIJEcKlR64zcgabs4WPxvu-ubtyWOtP6k,214
+django_grist_loader-0.3.0.dist-info/METADATA,sha256=0h27HzzsIm9YZOdESZJfCc2dus9Wx9Q2Mr8QBqUpEbo,3454
+django_grist_loader-0.3.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+django_grist_loader-0.3.0.dist-info/top_level.txt,sha256=Nc0dzrJevzjVxRppZttwXYl-t2pmOW2_tWYXrSSlgG0,13
+django_grist_loader-0.3.0.dist-info/RECORD,,
