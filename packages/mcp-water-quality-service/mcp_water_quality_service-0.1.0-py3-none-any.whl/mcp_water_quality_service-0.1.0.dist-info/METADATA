@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: mcp-water-quality-service
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: image>=1.5.33
+Requires-Dist: jwt>=1.3.1
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: selenium>=4.31.0
