@@ -1,0 +1,318 @@
+Metadata-Version: 2.4
+Name: html_alg_lib
+Version: 2.0.1
+Author: Qiu Jiantao
+Author-email: qiujiantao@pjlab.org.cn
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: lxml==5.1.0
+Requires-Dist: beautifulsoup4==4.12.2
+Requires-Dist: commentjson==0.9.0
+Provides-Extra: full
+Requires-Dist: chardet==5.2.0; extra == "full"
+Requires-Dist: openai==1.76.0; extra == "full"
+Requires-Dist: Requests==2.32.3; extra == "full"
+Requires-Dist: aiohttp==3.8.5; extra == "full"
+Requires-Dist: jieba==0.42.1; extra == "full"
+Requires-Dist: ltp==4.2.14; extra == "full"
+Requires-Dist: rouge_score==0.1.2; extra == "full"
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+
+# html-alg-lib
+
+主要提供html的简化和特征提取相关的功能
+
+## 使用方法
+
+### 简化html
+
+该库的主要功能之一是简化html，以便使用LLM处理
+
+#### 通用简化html
+
+主要简化html的结构并删除所有的属性，保留文本和图片等。
+配置文件见 `html_alg_lib/html_simplify/assets/default_general_simplify_cfg.jsonc`
+
+```python
+from html_alg_lib.simplify import general_simplify
+
+html_str = "YOUR HTML STRING"
+# 直接输出处理后的html
+simplified_html_str = general_simplify(html_str)
+
+# fast=False时，可以输出中间结果
+simplified_html_dict = general_simplify(html_str, fast=False)
+# 预处理后的html
+pre_normalized_html = simplified_html_dict['pre_normalized']
+# 用于送到LLM的html
+alg_html = simplified_html_dict['alg']
+```
+
+#### 简化html用于LLM分类标注
+
+主要简化html的结构，仅保留"class", "src", "alt" 标签，保留文本和图片等。
+配置文件见 `html_alg_lib/html_simplify/assets/default_cls_simplify_cfg.jsonc`
+
+```python
+from html_alg_lib.simplify import process_to_cls_alg_html
+
+html_str = "YOUR HTML STRING"
+# 直接输出处理后的html
+cls_alg_html_str = process_to_cls_alg_html(html_str)
+
+# fast=False时，可以输出中间结果
+cls_alg_html_dict = process_to_cls_alg_html(html_str, fast=False)
+# 预处理后的html
+pre_normalized_html = cls_alg_html_dict['pre_normalized']
+# 用于送到LLM的html
+alg_html = cls_alg_html_dict['alg']
+```
+
+#### 简化html用于LLM结点标注
+
+主要简化html的结构，仅保留"class", "src", "alt" 标签，保留文本和图片等。
+配置文件见 `html_alg_lib/html_simplify/assets/default_label_simplify_cfg.jsonc`
+
+```python
+from html_alg_lib.simplify import process_to_label_alg_html
+
+html_str = "YOUR HTML STRING"
+label_alg_html_str = process_to_label_alg_html(html_str)
+
+# 预处理后的html
+pre_normalized_html = label_alg_html_str['pre_normalized']
+# 用于送到LLM的html
+alg_html = label_alg_html_str['alg']
+# 结点id映射
+item_id_map = label_alg_html_str['item_id_map']
+```
+
+### 为NeuScraper提取特征
+
+主要针对label_alg_html的结构提取特征序列
+
+```python
+from html_alg_lib.html_simplify.feature import extract_feature
+
+# 使用process_to_label_alg_html的输出
+pre_normalized_html = """
+<html>
+    <body>
+        <div class="some-class">
+            <p id="some-id">
+                123<br>456
+            </p>
+        </div>
+    </body>
+</html>
+"""
+alg_html = """
+<html>
+ <body>
+  <p>
+   <span _item_id="0">
+    123
+ 456
+   </span>
+  </p>
+ </body>
+</html>
+"""
+item_id_map = {'0': 'L4 L5 L6'}
+
+feature_list = extract_feature(
+    pre_normalized_html,
+    alg_html,
+    item_id_map,
+    node_idx_attr = 'cc-alg-node-idxs',
+    # 需要和pre_normalized_html中的idx属性一致
+    alg_idx_attr = '_item_id',
+    # 需要和alg_html中的idx属性一致
+    text_source = 'pre'
+    # pre表示从pre_normalized_html中提取文本特征
+    # alg表示从alg_html中提取文本特征
+)
+
+feature = feature_list[0]
+# {
+#     "node_idx": "0", # 结点的idx
+#     "node_text": "123\n456", # 结点下的所有文本
+#     "node_tag": "cc-alg-uc-text", # node_tags[0]
+#     "node_xpath": "/html/body/div/p/cc-alg-uc-text[1]", # node_xpaths[0]
+#     "node_tags": [ # 表示从pre_normalized_html中提取的所有标签
+#         "cc-alg-uc-text",
+#         "br",
+#         "cc-alg-uc-text"
+#     ],
+#     "node_xpaths": [ # 表示从pre_normalized_html中提取的所有xpath
+#         "/html/body/div/p/cc-alg-uc-text[1]",
+#         "/html/body/div/p/br",
+#         "/html/body/div/p/cc-alg-uc-text[2]"
+#     ],
+#     "class_trace": {2: "some-class"}, # 表示第一条xpath的2号元素（div）的class为some-class
+#     "id_trace": {3: "some-id"} # 表示第一条xpath的3号元素（p）的id为some-id
+# }
+
+
+```
+
+## 使用算法抽取正文
+
+### 使用llm api抽取 html正文
+
+具体代码见`app/extract_html.py` 使用方法如下：
+
+```bash
+python app/extract_html.py --data ./benchmark_data/benchmark.jsonl --task_dir ./task_dir --model gpt-4o-mini --mode node
+```
+
+参数说明：
+
+- `--data` 输入数据文件路径 (JSONL 格式)
+- `--task_dir` 结果输出目录
+- `--model` 使用的模型名称
+- `--mode` 处理模式 (node/gt)
+  - node: 仅使用html本身进行抽取
+  - gt: 使用ground truth作为依据辅助抽取
+- `--key` 当该参数被设置时，只会处理id为该参数的条目
+- `--only_simplify` 只执行简化html的过程，不进行抽取
+
+输出路径的结构为：
+
+```
+task_dir
+├── task_hash_1
+|   ├── node # 存储了node模式的输出
+|   |   ├── addi.html # 额外信息抽取结果（目前没有使用）
+|   |   ├── addi_content.txt # 额外信息抽取内容（目前没有使用）
+|   |   ├── api_result.json # 调用LLM的api结果
+|   |   ├── main.html # 主内容抽取结果
+|   |   ├── main_content.txt # 主内容抽取内容
+|   |   ├── other.html # 其他内容抽取结果
+|   |   ├── other_content.txt # 其他内容抽取内容
+|   |   └── rouge_result.json # rouge评估结果
+│   ├── alg.html # 用于送到LLM的html
+│   ├── gt_main_content.txt # 正文的ground truth
+│   ├── item_id_map.json # index映射表
+│   ├── normalized.html # 剪枝后的html
+│   ├── post_normalized.html # 融合后的html
+│   ├── pre_normalized.html # 预处理后的html
+│   └── raw.html # 原始html
+├── task_hash_2
+├── task_hash_3
+├── ...
+
+```
+
+### 使用magic html抽取 html正文
+
+具体代码见`app/extract_html_magic_html.py` 使用方法如下：
+
+```bash
+python app/extract_html_magic_html.py --data ./benchmark_data/benchmark.jsonl --task_dir ./task_dir
+```
+
+参数说明：
+
+- `--data` 输入数据文件路径 (JSONL 格式)
+- `--task_dir` 结果输出目录
+- `--key` 当该参数被设置时，只会处理id为该参数的条目
+- `--workers` 并行工作进程数 (默认: CPU核心数)
+
+输出路径的结构为：
+
+```
+task_dir
+├── task_hash_1 #　gt_main_content.txt  main_content.html  main_content.txt  raw.html  rouge_result.json
+|   ├── gt_main_content.txt # 正文的ground truth
+|   ├── main_content.html # 主内容抽取结果
+|   ├── main_content.txt # 主内容抽取内容
+|   ├── raw.html # 原始html
+|   └── rouge_result.json # rouge评估结果
+├── task_hash_2
+├── task_hash_3
+├── ...
+```
+
+## 配置驱动的pipline
+
+为了方便二次开发，目前需要在`html_alg_lib/html_simplify/processes`中实现`BaseProcess`的派生类，并实现`apply`方法，如果有参数需要配置，可以实现`setup`方法。
+
+```python
+from html_alg_lib.html_simplify.processor import BaseProcess
+
+class MyProcess(BaseProcess):
+    def setup(self, param1: str, param2: str):
+        self.param1 = param1
+        self.param2 = param2
+        # self.config 是由pipeline读取，在BaseProcess的init中传给process的
+        self.global_param = self.config["some_cfg"]["some_param"]
+
+    def apply(self, input_data: DataPack) -> DataPack:
+        # 当前的 html tree
+        root = input_data.root
+        # 从pipeline传递来的info，是之前所有process的info的累积
+        info = input_data.info
+        some_info_from_previous_process = info["pre_info"]["some_info"]
+        modify_num = 0
+        for node in root.iter():
+            if node.tag == self.param1:
+                node.set('class', self.param2)
+                modify_num += 1
+
+
+        return DataPack(
+            root=root, # 这个会直接传递到下一个process
+            info={"modify_num": modify_num}, # 这个会update到pipeline的info中
+        )
+```
+
+定义好process后，需要注册到`html_alg_lib/html_simplify/processes/__init__.py`中。
+使用的时候在自定义的cfg文件中配置process的名称和参数。比如有`pipeline_cfg.jsonc`文件，内容如下：
+
+```json
+{
+    "some_cfg": {
+        "some_param": "some_value"
+    },
+    "processes": [
+        {"name": "MyProcess", "args": {"param1": "p", "param2": "some-class"}, "record_name": "my_process"}
+    ]
+}
+```
+
+其中`name`是process的名称，`args`是process的参数，`record_name`如果被设置了，那么pipeline会把这个process的输出结果以html str的形式保存到`record[record_name]`中 ，具体见下文。
+
+设置好配置文件后就可以通过配置文件构造pipeline并运行了。
+
+```python
+import commentjson as json
+from html_alg_lib.html_simplify.pipeline import Pipeline
+cfg_file = "pipeline_cfg.jsonc"
+# 可以直接传入文件路径
+pipeline = Pipeline.from_cfg(cfg_file)
+
+# 也可以传入dict
+cfg_dict = json.load(open(cfg_file))
+cfg_dict["overwrite_cfg"] = {"some_param": "some_value"}
+pipeline = Pipeline.from_cfg(cfg_dict)
+
+# 运行pipeline
+info, record = pipeline.apply_to_html(html_str)
+# info 是pipeline累计的info
+assert isinstance(info, dict) and "modify_num" in info
+# record 是cfg中指定要保留的process的输出
+assert isinstance(record, dict) and "my_process" in record
+```
+
+具体pipeline的使用方法可以参考`html_alg_lib/simplify.py`。
