@@ -1,0 +1,3 @@
+[console_scripts]
+saas-ips=saas_ips.__main__:main
+
