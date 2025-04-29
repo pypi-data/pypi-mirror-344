@@ -1,0 +1,13 @@
+code2docs_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+code2docs_cli/main.py,sha256=PjXsDzpSfeTC8osWFGHM4EaWOZF1UIXMwxqdS49bUjs,8226
+code2docs_cli/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+code2docs_cli/utils/file_processes.py,sha256=l2KsPlT8CouUm4WQKv8T8SxYgbwDcbq8TGDQl8T3WgQ,3518
+code2docs_cli/utils/parsers.py,sha256=x3ZCNlsrVe2gW0Ku0LjFGKeRHagNZGGy_0JDsYgoVZ4,156
+code2docs_cli/utils/prompt_templates.py,sha256=t6mSgs85uxkGBZNYG9Okc-VSLJL5rjybZnhIjEAIenc,6702
+code2docs_cli/utils/rag.py,sha256=ymdje1JyhWebXEe7OBFXlmCarHXhb_cNpSj8WcGYHsM,1015
+code2docs_cli/utils/scan.py,sha256=KjEDkf6VWQr2Q2GHHopCQB2JYjuvgxAc7KTLG_Ggx3Y,5053
+code2docs_cli/utils/tasks.py,sha256=IH6imhF2BouF-AFtTUROU5qYluSkCdRedl5UqBmdbRM,369
+code2docs_cli-1.3.1.dist-info/METADATA,sha256=5hvuCf_wDCG_HhqyfavgvCltUHUWSIKcucLqR4rqIGc,3281
+code2docs_cli-1.3.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+code2docs_cli-1.3.1.dist-info/entry_points.txt,sha256=MT2jOss-njK9xcaLShNxV7Ju0B5xj2dR453JB7INWbo,47
+code2docs_cli-1.3.1.dist-info/RECORD,,

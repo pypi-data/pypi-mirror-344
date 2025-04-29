@@ -1,0 +1,3 @@
+[console_scripts]
+c2d=code2docs_cli.main:main
+
