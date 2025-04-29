@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: colab-easy-ui2
+Version: 0.1.8
+Summary: Add your description here
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.115.12
+Requires-Dist: fire>=0.7.0
+Requires-Dist: nest-asyncio>=1.6.0
+Requires-Dist: python-multipart>=0.0.20
+Requires-Dist: requests>=2.32.3
+Requires-Dist: uvicorn>=0.34.2
+Provides-Extra: dev
+Requires-Dist: portpicker>=1.6.0; extra == "dev"
+
+## ビルド＆デプロイ
+
+```
+uv build
+uv publish --token pypi-.....
+```
