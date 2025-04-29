@@ -1,0 +1,11 @@
+dist/ka_uts_dic-2.1.1.250415-py3-none-any.whl,sha256=49IyCSpOnxG4V_3YPnyC1FKH-NBfRrBJeVadx8OUM0o,23544
+dist/ka_uts_dic-2.1.1.250415.tar.gz,sha256=FXU7yPpDiMwz5T4WiH4UqvVmtdrVJuh1sYgS16TD9Qg,59483
+ka_uts_fod/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ka_uts_fod/__version__.py,sha256=uHUx_4SRfIHvPuM_QjSdFW0SgG0HN3Mfs4DRK9lvB8Q,380
+ka_uts_fod/fod.py,sha256=wd2IQFwJlUhII1DCD8YjyGd59URzqL2sbKm_SXx1bDk,6299
+ka_uts_fod/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ka_uts_fod-2.2.0.250427.dist-info/licenses/LICENSE.txt,sha256=1NG3lZzl4JyP_dVIoFfHr-ycMHJMLY1j6sjzjxBzqXo,858
+ka_uts_fod-2.2.0.250427.dist-info/METADATA,sha256=I8qQuOEdmhj8O_AwDZ3UCS3Zejlco54KC2TMB5mtoJQ,21025
+ka_uts_fod-2.2.0.250427.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+ka_uts_fod-2.2.0.250427.dist-info/top_level.txt,sha256=3UhWLYboYE6450Q1UzCSgpSRqX6Y-f0HJHdcDDN3Dtk,21
+ka_uts_fod-2.2.0.250427.dist-info/RECORD,,
