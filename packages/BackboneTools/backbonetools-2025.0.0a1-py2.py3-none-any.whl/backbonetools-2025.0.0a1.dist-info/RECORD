@@ -1,0 +1,8 @@
+backbonetools/__init__.py,sha256=_CeSyYixE-J9bRIbl5ESOXupx8Belho94HDzsDOcMME,158
+backbonetools/exec.py,sha256=bog7C3kHtkUs_iHY3tJTtdx3wHyy-mtApAh7WX_z99U,6241
+backbonetools/io/__init__.py,sha256=Coe20OrIs6gUtjsCSsYCuDBUBvJfK68xrcn8z_dLZbo,186
+backbonetools/io/inputs.py,sha256=rDQuaZeIxYYZudmQdxubd8cTJuOacHDx1GPIM68eF38,11896
+backbonetools/io/outputs.py,sha256=JF_bL8_o5MhHbEaIJyQtMULKBhlU6iNaKWrnaFSRJUg,22234
+backbonetools-2025.0.0a1.dist-info/METADATA,sha256=9eAciacERMmGgkRKE27L9XWKDq-iQnA-puA2LkJZx_Q,567
+backbonetools-2025.0.0a1.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+backbonetools-2025.0.0a1.dist-info/RECORD,,
