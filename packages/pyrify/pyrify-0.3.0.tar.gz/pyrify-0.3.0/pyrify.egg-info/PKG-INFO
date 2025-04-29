@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: pyrify
+Version: 0.3.0
+Summary: A CLI tool for database sanitization
+Author-email: DataShades <datashades@linkdigital.com.au>, Oleksandr <mutantsan@gmail.com>
+License-File: LICENSE
+Requires-Dist: sqlalchemy<3.0.0,>=2.0.40
+Requires-Dist: psycopg2<3.0.0,>=2.9.10
+Requires-Dist: click<9.0.0,>=8.1.8
+Requires-Dist: PyYAML<7.0.0,>=6.0.2
+Requires-Dist: Faker<38.0.0,>=37.1.0
+Requires-Dist: PyMySQL<2.0.0,>=1.1.1
+Provides-Extra: dev
+Requires-Dist: python-dotenv<2.0.0,>=1.1.0; extra == "dev"
+Requires-Dist: pytest<9.0.0,>=8.3.5; extra == "dev"
+Requires-Dist: ruff<1.0.0,>=0.11.2; extra == "dev"
+Requires-Dist: ipdb; extra == "dev"
+Dynamic: license-file
