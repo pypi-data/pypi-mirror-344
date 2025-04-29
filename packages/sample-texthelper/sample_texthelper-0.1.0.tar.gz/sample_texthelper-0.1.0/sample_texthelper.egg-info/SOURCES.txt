@@ -1,0 +1,8 @@
+README.md
+setup.py
+my_package/__init__.py
+my_package/utils.py
+sample_texthelper.egg-info/PKG-INFO
+sample_texthelper.egg-info/SOURCES.txt
+sample_texthelper.egg-info/dependency_links.txt
+sample_texthelper.egg-info/top_level.txt
