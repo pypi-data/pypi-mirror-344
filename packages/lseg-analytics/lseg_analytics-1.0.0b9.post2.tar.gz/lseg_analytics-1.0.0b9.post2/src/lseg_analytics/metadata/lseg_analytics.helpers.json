@@ -1,0 +1,32 @@
+[
+    {
+        "type": "FunctionChunk",
+        "name": "to_rows",
+        "id": "lseg_analytics.helpers.to_rows",
+        "params": [
+            {
+                "name": "items",
+                "type": "List[typing.Union[lseg_analytics_basic_client.models._models.FxForwardCurvePoint, lseg_analytics_basic_client.models._models.HolidayOutput]]"
+            }
+        ],
+        "file_path": "lseg_analytics/helpers.py",
+        "line_number": 33,
+        "content": "def to_rows(items: List[Union[FxForwardCurvePoint, HolidayOutput]]) -> List[dict]:\n    \"\"\"Convert list of FxForwardCurvePoint or HolidayOutput objects to list of dicts, that can be passed to a DataFrame constructor\n    \"\"\"",
+        "metadata": {
+            "doc": "Convert list of FxForwardCurvePoint or HolidayOutput objects to list of dicts, that can be passed to a DataFrame constructor\n",
+            "signature": "def to_rows(items: List[Union[FxForwardCurvePoint, HolidayOutput]]) -> List[dict]:"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": [
+                "lseg_analytics.reference_data.calendars.HolidayOutput",
+                "lseg_analytics.market_data.fx_forward_curves.FxForwardCurvePoint"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.helpers",
+        "module_version": "1.0.0b9.post2"
+    }
+]

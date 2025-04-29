@@ -1,0 +1,2897 @@
+[
+    {
+        "type": "ClassChunk",
+        "name": "CrossCurrencySwapConstituent",
+        "id": "lseg_analytics.instruments.fx_spots.CrossCurrencySwapConstituent",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "source",
+                "type": "str"
+            },
+            {
+                "name": "quote",
+                "type": "QuoteInput"
+            },
+            {
+                "name": "definition",
+                "type": "CrossCurrencySwapConstituentDefinition"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 1468,
+        "content": "class CrossCurrencySwapConstituent:\n    \"\"\"An object to define constituents that are used to construct the curve.\n\n    Attributes\n    ----------\n    source : str\n        The code of the contributor of the quote for the instrument used as a\n        constituent (e.g., 'ICAP').\n    quote : ~analyticsapi.models.QuoteInput\n        An object to define the quote of the instrument used as a constituent.\n        Optional: provide either a definition or a quote.\n    type : str or ~analyticsapi.models.CROSS_CURRENCY_SWAP\n        The type of instument used as a constituent. CrossCurrencySwap is the\n        only valid value. Required.\n    definition : ~analyticsapi.models.CrossCurrencySwapConstituentDefinition\n        An object to define the cross-currency swap instrument used as a\n        constituent.\n    \n    \"\"\"\n    type: typing.Literal[<FxForwardCurveConstituentType.CROSS_CURRENCY_SWAP: 'CrossCurrencySwap'>]\n    definition: typing.Optional[ForwardRef('_models.CrossCurrencySwapConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]",
+        "metadata": {
+            "doc": "An object to define constituents that are used to construct the curve.\n\n    Attributes\n    ----------\n    source : str\n        The code of the contributor of the quote for the instrument used as a\n        constituent (e.g., 'ICAP').\n    quote : ~analyticsapi.models.QuoteInput\n        An object to define the quote of the instrument used as a constituent.\n        Optional: provide either a definition or a quote.\n    type : str or ~analyticsapi.models.CROSS_CURRENCY_SWAP\n        The type of instument used as a constituent. CrossCurrencySwap is the\n        only valid value. Required.\n    definition : ~analyticsapi.models.CrossCurrencySwapConstituentDefinition\n        An object to define the cross-currency swap instrument used as a\n        constituent.\n    \n",
+            "annotations": "    type: typing.Literal[<FxForwardCurveConstituentType.CROSS_CURRENCY_SWAP: 'CrossCurrencySwap'>]\n    definition: typing.Optional[ForwardRef('_models.CrossCurrencySwapConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]",
+            "signature": "class CrossCurrencySwapConstituent:\n    \"\"\"\"\"\"\n    type: typing.Literal[<FxForwardCurveConstituentType.CROSS_CURRENCY_SWAP: 'CrossCurrencySwap'>]\n    definition: typing.Optional[ForwardRef('_models.CrossCurrencySwapConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.CrossCurrencySwapConstituent.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.CrossCurrencySwapConstituentDefinition",
+                "lseg_analytics.common.QuoteInput"
+            ],
+            "base_classes": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveConstituent"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "CrossCurrencySwapConstituent.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.CrossCurrencySwapConstituent.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 1511,
+        "content": "class CrossCurrencySwapConstituent:\n    @overload\n    def __init__(self, *, source: Optional[str] = None, quote: Optional[ForwardRef('_models.QuoteInput')] = None, definition: Optional[ForwardRef('_models.CrossCurrencySwapConstituentDefinition')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "CrossCurrencySwapConstituent"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.CrossCurrencySwapConstituent"
+            ],
+            "use": [
+                "lseg_analytics.common.QuoteInput",
+                "lseg_analytics.instruments.fx_spots.CrossCurrencySwapConstituentDefinition"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "CrossCurrencySwapConstituentDefinition",
+        "id": "lseg_analytics.instruments.fx_spots.CrossCurrencySwapConstituentDefinition",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "cross_currency",
+                "type": "CrossCurrencyInput"
+            },
+            {
+                "name": "tenor",
+                "type": "str",
+                "valuelookup": "tenors"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 1515,
+        "content": "class CrossCurrencySwapConstituentDefinition:\n    \"\"\"An object to define the cross-currency swap instrument used as a constituent.\n\n    Attributes\n    ----------\n    tenor : str\n        A tenor (relatvie date) expressed as a code, indicating the period\n        covered by the constituent.\n    cross_currency : ~analyticsapi.models.CrossCurrencyInput\n        The currency pair, expressed in ISO 4217 alphabetical format (e.g.,\n        'EURCHF'). Required.\n    \n    \"\"\"\n    tenor: typing.Optional[str]\n    cross_currency: _models.CrossCurrencyInput",
+        "metadata": {
+            "doc": "An object to define the cross-currency swap instrument used as a constituent.\n\n    Attributes\n    ----------\n    tenor : str\n        A tenor (relatvie date) expressed as a code, indicating the period\n        covered by the constituent.\n    cross_currency : ~analyticsapi.models.CrossCurrencyInput\n        The currency pair, expressed in ISO 4217 alphabetical format (e.g.,\n        'EURCHF'). Required.\n    \n",
+            "annotations": "    tenor: typing.Optional[str]\n    cross_currency: _models.CrossCurrencyInput",
+            "signature": "class CrossCurrencySwapConstituentDefinition:\n    \"\"\"\"\"\"\n    tenor: typing.Optional[str]\n    cross_currency: _models.CrossCurrencyInput"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.CrossCurrencySwapConstituentDefinition.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.CrossCurrencyInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "CrossCurrencySwapConstituentDefinition.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.CrossCurrencySwapConstituentDefinition.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 1550,
+        "content": "class CrossCurrencySwapConstituentDefinition:\n    @overload\n    def __init__(self, *, cross_currency: '_models.CrossCurrencyInput', tenor: Optional[str] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "CrossCurrencySwapConstituentDefinition"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.CrossCurrencySwapConstituentDefinition"
+            ],
+            "use": [
+                "lseg_analytics.common.CrossCurrencyInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "DepositConstituentDefinition",
+        "id": "lseg_analytics.instruments.fx_spots.DepositConstituentDefinition",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "currency",
+                "type": "CurrencyInput"
+            },
+            {
+                "name": "tenor",
+                "type": "str",
+                "valuelookup": "tenors"
+            },
+            {
+                "name": "template",
+                "type": "str"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2107,
+        "content": "class DepositConstituentDefinition:\n    \"\"\"An object to define the deposit instrument used as a constituent.\n\n    Attributes\n    ----------\n    tenor : str\n        A tenor (relatvie date) expressed as a code, indicating the period\n        covered by the constituent.\n    currency : ~analyticsapi.models.CurrencyInput\n        The currency of the instrument expressed in ISO 4217 alphabetical\n        format (e.g., 'EUR'). Required.\n    template : str\n    \n    \"\"\"\n    tenor: typing.Optional[str]\n    currency: _models.CurrencyInput\n    template: typing.Optional[str]",
+        "metadata": {
+            "doc": "An object to define the deposit instrument used as a constituent.\n\n    Attributes\n    ----------\n    tenor : str\n        A tenor (relatvie date) expressed as a code, indicating the period\n        covered by the constituent.\n    currency : ~analyticsapi.models.CurrencyInput\n        The currency of the instrument expressed in ISO 4217 alphabetical\n        format (e.g., 'EUR'). Required.\n    template : str\n    \n",
+            "annotations": "    tenor: typing.Optional[str]\n    currency: _models.CurrencyInput\n    template: typing.Optional[str]",
+            "signature": "class DepositConstituentDefinition:\n    \"\"\"\"\"\"\n    tenor: typing.Optional[str]\n    currency: _models.CurrencyInput\n    template: typing.Optional[str]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.DepositConstituentDefinition.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.CurrencyInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "DepositConstituentDefinition.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.DepositConstituentDefinition.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2146,
+        "content": "class DepositConstituentDefinition:\n    @overload\n    def __init__(self, *, currency: '_models.CurrencyInput', tenor: Optional[str] = None, template: Optional[str] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "DepositConstituentDefinition"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.DepositConstituentDefinition"
+            ],
+            "use": [
+                "lseg_analytics.common.CurrencyInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "DepositConstituentFx",
+        "id": "lseg_analytics.instruments.fx_spots.DepositConstituentFx",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "source",
+                "type": "str"
+            },
+            {
+                "name": "quote",
+                "type": "QuoteInput"
+            },
+            {
+                "name": "definition",
+                "type": "DepositConstituentDefinition"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2150,
+        "content": "class DepositConstituentFx:\n    \"\"\"An object to define constituents that are used to construct the curve.\n\n    Attributes\n    ----------\n    source : str\n        The code of the contributor of the quote for the instrument used as a\n        constituent (e.g., 'ICAP').\n    quote : ~analyticsapi.models.QuoteInput\n        An object to define the quote of the instrument used as a constituent.\n        Optional: provide either a definition or a quote.\n    type : str or ~analyticsapi.models.DEPOSIT\n        The type of constituent. Deposit is the only valid value. Required.\n    definition : ~analyticsapi.models.DepositConstituentDefinition\n        An object to define the deposit instrument used as a constituent.\n    \n    \"\"\"\n    type: typing.Literal[<FxForwardCurveConstituentType.DEPOSIT: 'Deposit'>]\n    definition: typing.Optional[ForwardRef('_models.DepositConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]",
+        "metadata": {
+            "doc": "An object to define constituents that are used to construct the curve.\n\n    Attributes\n    ----------\n    source : str\n        The code of the contributor of the quote for the instrument used as a\n        constituent (e.g., 'ICAP').\n    quote : ~analyticsapi.models.QuoteInput\n        An object to define the quote of the instrument used as a constituent.\n        Optional: provide either a definition or a quote.\n    type : str or ~analyticsapi.models.DEPOSIT\n        The type of constituent. Deposit is the only valid value. Required.\n    definition : ~analyticsapi.models.DepositConstituentDefinition\n        An object to define the deposit instrument used as a constituent.\n    \n",
+            "annotations": "    type: typing.Literal[<FxForwardCurveConstituentType.DEPOSIT: 'Deposit'>]\n    definition: typing.Optional[ForwardRef('_models.DepositConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]",
+            "signature": "class DepositConstituentFx:\n    \"\"\"\"\"\"\n    type: typing.Literal[<FxForwardCurveConstituentType.DEPOSIT: 'Deposit'>]\n    definition: typing.Optional[ForwardRef('_models.DepositConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.DepositConstituentFx.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.DepositConstituentDefinition",
+                "lseg_analytics.common.QuoteInput"
+            ],
+            "base_classes": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveConstituent"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "DepositConstituentFx.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.DepositConstituentFx.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2190,
+        "content": "class DepositConstituentFx:\n    @overload\n    def __init__(self, *, source: Optional[str] = None, quote: Optional[ForwardRef('_models.QuoteInput')] = None, definition: Optional[ForwardRef('_models.DepositConstituentDefinition')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "DepositConstituentFx"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.DepositConstituentFx"
+            ],
+            "use": [
+                "lseg_analytics.common.QuoteInput",
+                "lseg_analytics.instruments.fx_spots.DepositConstituentDefinition"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxAnalyticsDescription",
+        "id": "lseg_analytics.instruments.fx_spots.FxAnalyticsDescription",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "valuation_date",
+                "type": "date"
+            },
+            {
+                "name": "start_date",
+                "type": "AdjustedDate"
+            },
+            {
+                "name": "end_date",
+                "type": "AdjustedDate"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2453,
+        "content": "class FxAnalyticsDescription:\n    \"\"\"The analytics fields that describe the instrument.\n\n    Attributes\n    ----------\n    valuation_date : ~datetime.date\n        The date at which the instrument is valued. The date is expressed in\n        ISO 8601 format: YYYY-MM-DDT[hh]:[mm]:[ss]Z (e.g.,\n        '2021-01-01T00:00:00Z').\n    start_date : ~analyticsapi.models.AdjustedDate\n        The start date of the instrument.\n    end_date : ~analyticsapi.models.AdjustedDate\n        The maturity date of the instrument.\n    \n    \"\"\"\n    valuation_date: typing.Optional[datetime.date]\n    start_date: typing.Optional[ForwardRef('_models.AdjustedDate')]\n    end_date: typing.Optional[ForwardRef('_models.AdjustedDate')]",
+        "metadata": {
+            "doc": "The analytics fields that describe the instrument.\n\n    Attributes\n    ----------\n    valuation_date : ~datetime.date\n        The date at which the instrument is valued. The date is expressed in\n        ISO 8601 format: YYYY-MM-DDT[hh]:[mm]:[ss]Z (e.g.,\n        '2021-01-01T00:00:00Z').\n    start_date : ~analyticsapi.models.AdjustedDate\n        The start date of the instrument.\n    end_date : ~analyticsapi.models.AdjustedDate\n        The maturity date of the instrument.\n    \n",
+            "annotations": "    valuation_date: typing.Optional[datetime.date]\n    start_date: typing.Optional[ForwardRef('_models.AdjustedDate')]\n    end_date: typing.Optional[ForwardRef('_models.AdjustedDate')]",
+            "signature": "class FxAnalyticsDescription:\n    \"\"\"\"\"\"\n    valuation_date: typing.Optional[datetime.date]\n    start_date: typing.Optional[ForwardRef('_models.AdjustedDate')]\n    end_date: typing.Optional[ForwardRef('_models.AdjustedDate')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxAnalyticsDescription.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.AdjustedDate"
+            ],
+            "base_classes": [],
+            "sub_classes": [
+                "lseg_analytics.instruments.fx_forwards.FxForwardAnalyticsDescription",
+                "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsDescription"
+            ]
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxAnalyticsDescription.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxAnalyticsDescription.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2494,
+        "content": "class FxAnalyticsDescription:\n    @overload\n    def __init__(self, *, valuation_date: Optional[datetime.date] = None, start_date: Optional[ForwardRef('_models.AdjustedDate')] = None, end_date: Optional[ForwardRef('_models.AdjustedDate')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxAnalyticsDescription"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxAnalyticsDescription"
+            ],
+            "use": [
+                "lseg_analytics.common.AdjustedDate"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxConstituentDefinition",
+        "id": "lseg_analytics.instruments.fx_spots.FxConstituentDefinition",
+        "params": [
+            {
+                "name": "tenor",
+                "type": "str",
+                "valuelookup": "tenors"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2498,
+        "content": "class FxConstituentDefinition:\n    \"\"\"An object to define the FX instrument used as a constituent.\n\n    Attributes\n    ----------\n    tenor : str\n        A tenor (relatvie date) expressed as a code, indicating the period\n        covered by the constituent.\n    \n    \"\"\"\n    tenor: typing.Optional[str]",
+        "metadata": {
+            "doc": "An object to define the FX instrument used as a constituent.\n\n    Attributes\n    ----------\n    tenor : str\n        A tenor (relatvie date) expressed as a code, indicating the period\n        covered by the constituent.\n    \n",
+            "annotations": "    tenor: typing.Optional[str]",
+            "signature": "class FxConstituentDefinition:\n    \"\"\"\"\"\"\n    tenor: typing.Optional[str]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxConstituentDefinition.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxConstituentDefinition.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxConstituentDefinition.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2526,
+        "content": "class FxConstituentDefinition:\n    @overload\n    def __init__(self, tenor: Optional[str] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxConstituentDefinition"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxConstituentDefinition"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxForwardConstituent",
+        "id": "lseg_analytics.instruments.fx_spots.FxForwardConstituent",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "source",
+                "type": "str"
+            },
+            {
+                "name": "quote",
+                "type": "QuoteInput"
+            },
+            {
+                "name": "definition",
+                "type": "FxForwardConstituentDefinition"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2794,
+        "content": "class FxForwardConstituent:\n    \"\"\"An object to define constituents that are used to construct the curve.\n\n    Attributes\n    ----------\n    source : str\n        The code of the contributor of the quote for the instrument used as a\n        constituent (e.g., 'ICAP').\n    quote : ~analyticsapi.models.QuoteInput\n        An object to define the quote of the instrument used as a constituent.\n        Optional: provide either a definition or a quote.\n    type : str or ~analyticsapi.models.FX_FORWARD\n        The type of constituent. FxForward is the only valid value. Required.\n    definition : ~analyticsapi.models.FxForwardConstituentDefinition\n        An object to define the FX forward instrument used as a constituent.\n    \n    \"\"\"\n    type: typing.Literal[<FxForwardCurveConstituentType.FX_FORWARD: 'FxForward'>]\n    definition: typing.Optional[ForwardRef('_models.FxForwardConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]",
+        "metadata": {
+            "doc": "An object to define constituents that are used to construct the curve.\n\n    Attributes\n    ----------\n    source : str\n        The code of the contributor of the quote for the instrument used as a\n        constituent (e.g., 'ICAP').\n    quote : ~analyticsapi.models.QuoteInput\n        An object to define the quote of the instrument used as a constituent.\n        Optional: provide either a definition or a quote.\n    type : str or ~analyticsapi.models.FX_FORWARD\n        The type of constituent. FxForward is the only valid value. Required.\n    definition : ~analyticsapi.models.FxForwardConstituentDefinition\n        An object to define the FX forward instrument used as a constituent.\n    \n",
+            "annotations": "    type: typing.Literal[<FxForwardCurveConstituentType.FX_FORWARD: 'FxForward'>]\n    definition: typing.Optional[ForwardRef('_models.FxForwardConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]",
+            "signature": "class FxForwardConstituent:\n    \"\"\"\"\"\"\n    type: typing.Literal[<FxForwardCurveConstituentType.FX_FORWARD: 'FxForward'>]\n    definition: typing.Optional[ForwardRef('_models.FxForwardConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxForwardConstituent.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxForwardConstituentDefinition",
+                "lseg_analytics.common.QuoteInput"
+            ],
+            "base_classes": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveConstituent"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxForwardConstituent.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxForwardConstituent.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2834,
+        "content": "class FxForwardConstituent:\n    @overload\n    def __init__(self, *, source: Optional[str] = None, quote: Optional[ForwardRef('_models.QuoteInput')] = None, definition: Optional[ForwardRef('_models.FxForwardConstituentDefinition')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxForwardConstituent"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxForwardConstituent"
+            ],
+            "use": [
+                "lseg_analytics.common.QuoteInput",
+                "lseg_analytics.instruments.fx_spots.FxForwardConstituentDefinition"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxForwardConstituentDefinition",
+        "id": "lseg_analytics.instruments.fx_spots.FxForwardConstituentDefinition",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "cross_currency",
+                "type": "CrossCurrencyInput"
+            },
+            {
+                "name": "tenor",
+                "type": "str",
+                "valuelookup": "tenors"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2838,
+        "content": "class FxForwardConstituentDefinition:\n    \"\"\"An object to define the FX forward instrument used as a constituent.\n\n    Attributes\n    ----------\n    tenor : str\n        A tenor (relatvie date) expressed as a code, indicating the period\n        covered by the constituent.\n    cross_currency : ~analyticsapi.models.CrossCurrencyInput\n        The currency pair, expressed in ISO 4217 alphabetical format (e.g.,\n        'EURCHF'). Required.\n    \n    \"\"\"\n    tenor: typing.Optional[str]\n    cross_currency: _models.CrossCurrencyInput",
+        "metadata": {
+            "doc": "An object to define the FX forward instrument used as a constituent.\n\n    Attributes\n    ----------\n    tenor : str\n        A tenor (relatvie date) expressed as a code, indicating the period\n        covered by the constituent.\n    cross_currency : ~analyticsapi.models.CrossCurrencyInput\n        The currency pair, expressed in ISO 4217 alphabetical format (e.g.,\n        'EURCHF'). Required.\n    \n",
+            "annotations": "    tenor: typing.Optional[str]\n    cross_currency: _models.CrossCurrencyInput",
+            "signature": "class FxForwardConstituentDefinition:\n    \"\"\"\"\"\"\n    tenor: typing.Optional[str]\n    cross_currency: _models.CrossCurrencyInput"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxForwardConstituentDefinition.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.CrossCurrencyInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxForwardConstituentDefinition.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxForwardConstituentDefinition.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2873,
+        "content": "class FxForwardConstituentDefinition:\n    @overload\n    def __init__(self, *, cross_currency: '_models.CrossCurrencyInput', tenor: Optional[str] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxForwardConstituentDefinition"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxForwardConstituentDefinition"
+            ],
+            "use": [
+                "lseg_analytics.common.CrossCurrencyInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxForwardCurveAsMarketDataInput",
+        "id": "lseg_analytics.instruments.fx_spots.FxForwardCurveAsMarketDataInput",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "cross_currency",
+                "type": "CrossCurrencyInput"
+            },
+            {
+                "name": "reference_currency",
+                "type": "CurrencyInput"
+            },
+            {
+                "name": "constituents",
+                "type": "List[FxForwardCurveConstituent]"
+            },
+            {
+                "name": "template",
+                "type": "FxForwardCurveRelatedResource"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 3042,
+        "content": "class FxForwardCurveAsMarketDataInput:\n    \"\"\"Object describing the FX forward curve used for the calculation.\n\n    Attributes\n    ----------\n    cross_currency : ~analyticsapi.models.CrossCurrencyInput\n        The currency pair, expressed in ISO 4217 alphabetical format (e.g.,\n        'EURCHF'). Required.\n    reference_currency : ~analyticsapi.models.CurrencyInput\n        The currency of the curve expressed in ISO 4217 alphabetical format\n        (e.g., 'EUR'). Optional.\n    constituents : list[~analyticsapi.models.FxForwardCurveConstituent]\n        An array of objects to define constituents that are used to construct\n        the curve.\n\n        * If there is a pivot currency, two sets of constituents are required, each composed of 1\n        FxSpot and at least one other constituent.\n        * If there is no pivot currency (i.e. a direct cross currency), only one set of constituents\n        is needed, with 1 FxSpot and at least one other constituent.\n\n        Optional.\n    template : ~analyticsapi.models.FxForwardCurveRelatedResource\n        Object identifying a resource by either uuid or location (space and\n        name). Optional.\n    \n    \"\"\"\n    cross_currency: _models.CrossCurrencyInput\n    reference_currency: typing.Optional[ForwardRef('_models.CurrencyInput')]\n    constituents: typing.Optional[typing.List[ForwardRef('_models.FxForwardCurveConstituent')]]\n    template: typing.Optional[ForwardRef('_models.FxForwardCurveRelatedResource')]",
+        "metadata": {
+            "doc": "Object describing the FX forward curve used for the calculation.\n\n    Attributes\n    ----------\n    cross_currency : ~analyticsapi.models.CrossCurrencyInput\n        The currency pair, expressed in ISO 4217 alphabetical format (e.g.,\n        'EURCHF'). Required.\n    reference_currency : ~analyticsapi.models.CurrencyInput\n        The currency of the curve expressed in ISO 4217 alphabetical format\n        (e.g., 'EUR'). Optional.\n    constituents : list[~analyticsapi.models.FxForwardCurveConstituent]\n        An array of objects to define constituents that are used to construct\n        the curve.\n\n        * If there is a pivot currency, two sets of constituents are required, each composed of 1\n        FxSpot and at least one other constituent.\n        * If there is no pivot currency (i.e. a direct cross currency), only one set of constituents\n        is needed, with 1 FxSpot and at least one other constituent.\n\n        Optional.\n    template : ~analyticsapi.models.FxForwardCurveRelatedResource\n        Object identifying a resource by either uuid or location (space and\n        name). Optional.\n    \n",
+            "annotations": "    cross_currency: _models.CrossCurrencyInput\n    reference_currency: typing.Optional[ForwardRef('_models.CurrencyInput')]\n    constituents: typing.Optional[typing.List[ForwardRef('_models.FxForwardCurveConstituent')]]\n    template: typing.Optional[ForwardRef('_models.FxForwardCurveRelatedResource')]",
+            "signature": "class FxForwardCurveAsMarketDataInput:\n    \"\"\"\"\"\"\n    cross_currency: _models.CrossCurrencyInput\n    reference_currency: typing.Optional[ForwardRef('_models.CurrencyInput')]\n    constituents: typing.Optional[typing.List[ForwardRef('_models.FxForwardCurveConstituent')]]\n    template: typing.Optional[ForwardRef('_models.FxForwardCurveRelatedResource')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveAsMarketDataInput.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.CrossCurrencyInput",
+                "lseg_analytics.common.CurrencyInput",
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveConstituent",
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveRelatedResource"
+            ],
+            "base_classes": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveDefinition"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxForwardCurveAsMarketDataInput.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxForwardCurveAsMarketDataInput.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 3090,
+        "content": "class FxForwardCurveAsMarketDataInput:\n    @overload\n    def __init__(self, *, cross_currency: '_models.CrossCurrencyInput', reference_currency: Optional[ForwardRef('_models.CurrencyInput')] = None, constituents: Optional[List[ForwardRef('_models.FxForwardCurveConstituent')]] = None, template: Optional[ForwardRef('_models.FxForwardCurveRelatedResource')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxForwardCurveAsMarketDataInput"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveAsMarketDataInput"
+            ],
+            "use": [
+                "lseg_analytics.common.CrossCurrencyInput",
+                "lseg_analytics.common.CurrencyInput",
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveConstituent",
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveRelatedResource"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxForwardCurveConstituent",
+        "id": "lseg_analytics.instruments.fx_spots.FxForwardCurveConstituent",
+        "params": [],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 1410,
+        "content": "class FxForwardCurveConstituent:\n    \"\"\"The constituents that are used to construct the curve.\n\n    You probably want to use the sub-classes and not this class directly. Known sub-classes are:\n    CrossCurrencySwapConstituent, DepositConstituentFx, FxForwardConstituent, FxSpotConstituent\n\n    Attributes\n    ----------\n    type : str or ~analyticsapi.models.FxForwardCurveConstituentType\n        The type of instrument used as a constituent. Required. Known values\n        are: \"FxSpot\", \"FxForward\", \"CrossCurrencySwap\", and \"Deposit\".\n    definition : ~analyticsapi.models.FxConstituentDefinition\n        The definition of the constituent. Optional: provide either a\n        definition or a quote.\n    source : str\n        The code of the contributor of the quote for the instrument used as a\n        constituent (e.g., 'ICAP').\n    quote : ~analyticsapi.models.QuoteInput\n        An object to define the quote of the instrument used as a constituent.\n        Optional: provide either a definition or a quote.\n    \n    \"\"\"\n    type: str\n    definition: typing.Optional[ForwardRef('_models.FxConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]",
+        "metadata": {
+            "doc": "The constituents that are used to construct the curve.\n\n    You probably want to use the sub-classes and not this class directly. Known sub-classes are:\n    CrossCurrencySwapConstituent, DepositConstituentFx, FxForwardConstituent, FxSpotConstituent\n\n    Attributes\n    ----------\n    type : str or ~analyticsapi.models.FxForwardCurveConstituentType\n        The type of instrument used as a constituent. Required. Known values\n        are: \"FxSpot\", \"FxForward\", \"CrossCurrencySwap\", and \"Deposit\".\n    definition : ~analyticsapi.models.FxConstituentDefinition\n        The definition of the constituent. Optional: provide either a\n        definition or a quote.\n    source : str\n        The code of the contributor of the quote for the instrument used as a\n        constituent (e.g., 'ICAP').\n    quote : ~analyticsapi.models.QuoteInput\n        An object to define the quote of the instrument used as a constituent.\n        Optional: provide either a definition or a quote.\n    \n",
+            "annotations": "    type: str\n    definition: typing.Optional[ForwardRef('_models.FxConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]",
+            "signature": "class FxForwardCurveConstituent:\n    \"\"\"\"\"\"\n    type: str\n    definition: typing.Optional[ForwardRef('_models.FxConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveConstituent.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxConstituentDefinition",
+                "lseg_analytics.common.QuoteInput"
+            ],
+            "base_classes": [],
+            "sub_classes": [
+                "lseg_analytics.instruments.fx_spots.CrossCurrencySwapConstituent",
+                "lseg_analytics.instruments.fx_spots.DepositConstituentFx",
+                "lseg_analytics.instruments.fx_spots.FxForwardConstituent",
+                "lseg_analytics.instruments.fx_spots.FxSpotConstituent"
+            ]
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxForwardCurveConstituent.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxForwardCurveConstituent.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 1464,
+        "content": "class FxForwardCurveConstituent:\n    @overload\n    def __init__(self, *, type: str, definition: Optional[ForwardRef('_models.FxConstituentDefinition')] = None, source: Optional[str] = None, quote: Optional[ForwardRef('_models.QuoteInput')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxForwardCurveConstituent"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveConstituent"
+            ],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxConstituentDefinition",
+                "lseg_analytics.common.QuoteInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxForwardCurveDefinition",
+        "id": "lseg_analytics.instruments.fx_spots.FxForwardCurveDefinition",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "cross_currency",
+                "type": "CrossCurrencyInput"
+            },
+            {
+                "name": "reference_currency",
+                "type": "CurrencyInput"
+            },
+            {
+                "name": "constituents",
+                "type": "List[FxForwardCurveConstituent]"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2980,
+        "content": "class FxForwardCurveDefinition:\n    \"\"\"An object to define the Fx Forward Curve resource.\n\n    Attributes\n    ----------\n    cross_currency : ~analyticsapi.models.CrossCurrencyInput\n        The currency pair, expressed in ISO 4217 alphabetical format (e.g.,\n        'EURCHF'). Required.\n    reference_currency : ~analyticsapi.models.CurrencyInput\n        The currency of the curve expressed in ISO 4217 alphabetical format\n        (e.g., 'EUR'). Optional.\n    constituents : list[~analyticsapi.models.FxForwardCurveConstituent]\n        An array of objects to define constituents that are used to construct\n        the curve.\n\n        * If there is a pivot currency, two sets of constituents are required, each composed of 1\n        FxSpot and at least one other constituent.\n        * If there is no pivot currency (i.e. a direct cross currency), only one set of constituents\n        is needed, with 1 FxSpot and at least one other constituent.\n\n        Optional.\n    \n    \"\"\"\n    cross_currency: _models.CrossCurrencyInput\n    reference_currency: typing.Optional[ForwardRef('_models.CurrencyInput')]\n    constituents: typing.Optional[typing.List[ForwardRef('_models.FxForwardCurveConstituent')]]",
+        "metadata": {
+            "doc": "An object to define the Fx Forward Curve resource.\n\n    Attributes\n    ----------\n    cross_currency : ~analyticsapi.models.CrossCurrencyInput\n        The currency pair, expressed in ISO 4217 alphabetical format (e.g.,\n        'EURCHF'). Required.\n    reference_currency : ~analyticsapi.models.CurrencyInput\n        The currency of the curve expressed in ISO 4217 alphabetical format\n        (e.g., 'EUR'). Optional.\n    constituents : list[~analyticsapi.models.FxForwardCurveConstituent]\n        An array of objects to define constituents that are used to construct\n        the curve.\n\n        * If there is a pivot currency, two sets of constituents are required, each composed of 1\n        FxSpot and at least one other constituent.\n        * If there is no pivot currency (i.e. a direct cross currency), only one set of constituents\n        is needed, with 1 FxSpot and at least one other constituent.\n\n        Optional.\n    \n",
+            "annotations": "    cross_currency: _models.CrossCurrencyInput\n    reference_currency: typing.Optional[ForwardRef('_models.CurrencyInput')]\n    constituents: typing.Optional[typing.List[ForwardRef('_models.FxForwardCurveConstituent')]]",
+            "signature": "class FxForwardCurveDefinition:\n    \"\"\"\"\"\"\n    cross_currency: _models.CrossCurrencyInput\n    reference_currency: typing.Optional[ForwardRef('_models.CurrencyInput')]\n    constituents: typing.Optional[typing.List[ForwardRef('_models.FxForwardCurveConstituent')]]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveDefinition.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.CrossCurrencyInput",
+                "lseg_analytics.common.CurrencyInput",
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveConstituent"
+            ],
+            "base_classes": [],
+            "sub_classes": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveAsMarketDataInput"
+            ]
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxForwardCurveDefinition.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxForwardCurveDefinition.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 3036,
+        "content": "class FxForwardCurveDefinition:\n    @overload\n    def __init__(self, *, cross_currency: '_models.CrossCurrencyInput', reference_currency: Optional[ForwardRef('_models.CurrencyInput')] = None, constituents: Optional[List[ForwardRef('_models.FxForwardCurveConstituent')]] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxForwardCurveDefinition"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveDefinition"
+            ],
+            "use": [
+                "lseg_analytics.common.CrossCurrencyInput",
+                "lseg_analytics.common.CurrencyInput",
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveConstituent"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxForwardCurveRelatedResource",
+        "id": "lseg_analytics.instruments.fx_spots.FxForwardCurveRelatedResource",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "id",
+                "type": "str"
+            },
+            {
+                "name": "location",
+                "type": "Location"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 3723,
+        "content": "class FxForwardCurveRelatedResource:\n    \"\"\"Object identifying a resource by either uuid or location (space and name).\n\n    Readonly variables are only populated by the server, and will be ignored when sending a request.\n\n    Attributes\n    ----------\n    type : str or ~analyticsapi.models.FX_FORWARD_CURVE\n        The type of the resource.\n    id : str\n        The unique id of the resource.\n    location : ~analyticsapi.models.Location\n        An object to define the location of the resource (space and name).\n    \n    \"\"\"\n    type: typing.Optional[typing.Literal[<ResourceType.FX_FORWARD_CURVE: 'FxForwardCurve'>]]\n    id: typing.Optional[str]\n    location: typing.Optional[ForwardRef('_models.Location')]",
+        "metadata": {
+            "doc": "Object identifying a resource by either uuid or location (space and name).\n\n    Readonly variables are only populated by the server, and will be ignored when sending a request.\n\n    Attributes\n    ----------\n    type : str or ~analyticsapi.models.FX_FORWARD_CURVE\n        The type of the resource.\n    id : str\n        The unique id of the resource.\n    location : ~analyticsapi.models.Location\n        An object to define the location of the resource (space and name).\n    \n",
+            "annotations": "    type: typing.Optional[typing.Literal[<ResourceType.FX_FORWARD_CURVE: 'FxForwardCurve'>]]\n    id: typing.Optional[str]\n    location: typing.Optional[ForwardRef('_models.Location')]",
+            "signature": "class FxForwardCurveRelatedResource:\n    \"\"\"\"\"\"\n    type: typing.Optional[typing.Literal[<ResourceType.FX_FORWARD_CURVE: 'FxForwardCurve'>]]\n    id: typing.Optional[str]\n    location: typing.Optional[ForwardRef('_models.Location')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveRelatedResource.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.Location"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxForwardCurveRelatedResource.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxForwardCurveRelatedResource.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 3764,
+        "content": "class FxForwardCurveRelatedResource:\n    @overload\n    def __init__(self, *, id: Optional[str] = None, location: Optional[ForwardRef('_models.Location')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxForwardCurveRelatedResource"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveRelatedResource"
+            ],
+            "use": [
+                "lseg_analytics.common.Location"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxPayment",
+        "id": "lseg_analytics.instruments.fx_spots.FxPayment",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "fx_rate",
+                "type": "FxRate"
+            },
+            {
+                "name": "deal_amount",
+                "type": "float"
+            },
+            {
+                "name": "contra_amount",
+                "type": "float"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 3868,
+        "content": "class FxPayment:\n    \"\"\"Definition of a Fx Spot.\n\n    Attributes\n    ----------\n    fx_rate : ~analyticsapi.models.FxRate\n        An object defining the FX rate. Required.\n    deal_amount : float\n        The amount of the deal (base) currency bought or sold.\n    contra_amount : float\n        The amount of contra currency exchanged to buy or sell the deal (base)\n        currency.\n    \n    \"\"\"\n    fx_rate: _models.FxRate\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]",
+        "metadata": {
+            "doc": "Definition of a Fx Spot.\n\n    Attributes\n    ----------\n    fx_rate : ~analyticsapi.models.FxRate\n        An object defining the FX rate. Required.\n    deal_amount : float\n        The amount of the deal (base) currency bought or sold.\n    contra_amount : float\n        The amount of contra currency exchanged to buy or sell the deal (base)\n        currency.\n    \n",
+            "annotations": "    fx_rate: _models.FxRate\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]",
+            "signature": "class FxPayment:\n    \"\"\"\"\"\"\n    fx_rate: _models.FxRate\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxPayment.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxRate"
+            ],
+            "base_classes": [],
+            "sub_classes": [
+                "lseg_analytics.instruments.fx_forwards.FxForwardInstrument",
+                "lseg_analytics.instruments.fx_spots.FxSpotDefinition"
+            ]
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxPayment.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxPayment.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 3907,
+        "content": "class FxPayment:\n    @overload\n    def __init__(self, *, fx_rate: '_models.FxRate', deal_amount: Optional[float] = None, contra_amount: Optional[float] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxPayment"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxPayment"
+            ],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxRate"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxPricingAnalysis",
+        "id": "lseg_analytics.instruments.fx_spots.FxPricingAnalysis",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "fx_spot",
+                "type": "BidAskSimpleValues"
+            },
+            {
+                "name": "deal_amount",
+                "type": "float"
+            },
+            {
+                "name": "contra_amount",
+                "type": "float"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4219,
+        "content": "class FxPricingAnalysis:\n    \"\"\"The analytics fields that are linked to a pre-trade analysis of the instrument.\n\n    Attributes\n    ----------\n    fx_spot : ~analyticsapi.models.BidAskSimpleValues\n        The spot price for the currency pair. The field returns the following\n        values: Bid (Bid value), Ask (Ask value), Mid (Mid value).\n    deal_amount : float\n        The amount of the deal (base) currency bought or sold.\n    contra_amount : float\n        The amount of contra currency exchanged to buy or sell the amount of\n        the deal (base) currency.\n    \n    \"\"\"\n    fx_spot: typing.Optional[ForwardRef('_models.BidAskSimpleValues')]\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]",
+        "metadata": {
+            "doc": "The analytics fields that are linked to a pre-trade analysis of the instrument.\n\n    Attributes\n    ----------\n    fx_spot : ~analyticsapi.models.BidAskSimpleValues\n        The spot price for the currency pair. The field returns the following\n        values: Bid (Bid value), Ask (Ask value), Mid (Mid value).\n    deal_amount : float\n        The amount of the deal (base) currency bought or sold.\n    contra_amount : float\n        The amount of contra currency exchanged to buy or sell the amount of\n        the deal (base) currency.\n    \n",
+            "annotations": "    fx_spot: typing.Optional[ForwardRef('_models.BidAskSimpleValues')]\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]",
+            "signature": "class FxPricingAnalysis:\n    \"\"\"\"\"\"\n    fx_spot: typing.Optional[ForwardRef('_models.BidAskSimpleValues')]\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxPricingAnalysis.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.BidAskSimpleValues"
+            ],
+            "base_classes": [],
+            "sub_classes": [
+                "lseg_analytics.instruments.fx_forwards.FxForwardPricingAnalysis",
+                "lseg_analytics.instruments.fx_spots.FxSpotPricingAnalysis"
+            ]
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxPricingAnalysis.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxPricingAnalysis.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4260,
+        "content": "class FxPricingAnalysis:\n    @overload\n    def __init__(self, *, fx_spot: Optional[ForwardRef('_models.BidAskSimpleValues')] = None, deal_amount: Optional[float] = None, contra_amount: Optional[float] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxPricingAnalysis"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxPricingAnalysis"
+            ],
+            "use": [
+                "lseg_analytics.common.BidAskSimpleValues"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxPricingPreferences",
+        "id": "lseg_analytics.instruments.fx_spots.FxPricingPreferences",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "ignore_reference_currency_holidays",
+                "type": "bool"
+            },
+            {
+                "name": "reference_currency",
+                "type": "CurrencyInput"
+            },
+            {
+                "name": "report_currency",
+                "type": "CurrencyInput"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4678,
+        "content": "class FxPricingPreferences:\n    \"\"\"Object describing fx calculation parameters.\n\n    Attributes\n    ----------\n    ignore_reference_currency_holidays : bool\n        Set to True to ignore reference currency holidays.\n    reference_currency : ~analyticsapi.models.CurrencyInput\n        An object to specify the reference currency.\n    report_currency : ~analyticsapi.models.CurrencyInput\n        An object to specify the reporting currency.\n    \n    \"\"\"\n    ignore_reference_currency_holidays: typing.Optional[bool]\n    reference_currency: typing.Optional[ForwardRef('_models.CurrencyInput')]\n    report_currency: typing.Optional[ForwardRef('_models.CurrencyInput')]",
+        "metadata": {
+            "doc": "Object describing fx calculation parameters.\n\n    Attributes\n    ----------\n    ignore_reference_currency_holidays : bool\n        Set to True to ignore reference currency holidays.\n    reference_currency : ~analyticsapi.models.CurrencyInput\n        An object to specify the reference currency.\n    report_currency : ~analyticsapi.models.CurrencyInput\n        An object to specify the reporting currency.\n    \n",
+            "annotations": "    ignore_reference_currency_holidays: typing.Optional[bool]\n    reference_currency: typing.Optional[ForwardRef('_models.CurrencyInput')]\n    report_currency: typing.Optional[ForwardRef('_models.CurrencyInput')]",
+            "signature": "class FxPricingPreferences:\n    \"\"\"\"\"\"\n    ignore_reference_currency_holidays: typing.Optional[bool]\n    reference_currency: typing.Optional[ForwardRef('_models.CurrencyInput')]\n    report_currency: typing.Optional[ForwardRef('_models.CurrencyInput')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxPricingPreferences.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.CurrencyInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxPricingPreferences.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxPricingPreferences.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4716,
+        "content": "class FxPricingPreferences:\n    @overload\n    def __init__(self, *, ignore_reference_currency_holidays: Optional[bool] = None, reference_currency: Optional[ForwardRef('_models.CurrencyInput')] = None, report_currency: Optional[ForwardRef('_models.CurrencyInput')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxPricingPreferences"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxPricingPreferences"
+            ],
+            "use": [
+                "lseg_analytics.common.CurrencyInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxRate",
+        "id": "lseg_analytics.instruments.fx_spots.FxRate",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "cross_currency",
+                "type": "CrossCurrencyInput"
+            },
+            {
+                "name": "rate",
+                "type": "float"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4720,
+        "content": "class FxRate:\n    \"\"\"Definition of a FX rate.\n\n    Attributes\n    ----------\n    cross_currency : ~analyticsapi.models.CrossCurrencyInput\n        The cross currency pair expressed in ISO 4217 alphabetical format (e.g.\n        'EURCHF'). Required.\n    rate : float\n        The contractual exchange rate agreed by the parties. This is used to\n        compute the contra amount if it is not provided.\n    \n    \"\"\"\n    cross_currency: _models.CrossCurrencyInput\n    rate: typing.Optional[float]",
+        "metadata": {
+            "doc": "Definition of a FX rate.\n\n    Attributes\n    ----------\n    cross_currency : ~analyticsapi.models.CrossCurrencyInput\n        The cross currency pair expressed in ISO 4217 alphabetical format (e.g.\n        'EURCHF'). Required.\n    rate : float\n        The contractual exchange rate agreed by the parties. This is used to\n        compute the contra amount if it is not provided.\n    \n",
+            "annotations": "    cross_currency: _models.CrossCurrencyInput\n    rate: typing.Optional[float]",
+            "signature": "class FxRate:\n    \"\"\"\"\"\"\n    cross_currency: _models.CrossCurrencyInput\n    rate: typing.Optional[float]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxRate.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.CrossCurrencyInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxRate.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxRate.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4756,
+        "content": "class FxRate:\n    @overload\n    def __init__(self, *, cross_currency: '_models.CrossCurrencyInput', rate: Optional[float] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxRate"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxRate"
+            ],
+            "use": [
+                "lseg_analytics.common.CrossCurrencyInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxRisk",
+        "id": "lseg_analytics.instruments.fx_spots.FxRisk",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "delta_percent",
+                "type": "float"
+            },
+            {
+                "name": "delta_amount_in_deal_ccy",
+                "type": "float"
+            },
+            {
+                "name": "delta_amount_in_contra_ccy",
+                "type": "float"
+            },
+            {
+                "name": "delta_amount_in_report_ccy",
+                "type": "float"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4436,
+        "content": "class FxRisk:\n    \"\"\"The analytics fields that are linked to a risk analysis of the instrument.\n\n    Attributes\n    ----------\n    delta_percent : float\n        The percentage change in the instrument's price or market value caused\n        by a one-unit change in the price of the underlying asset, or by a 1bp\n        change in the swap rate for a swaption, or by a 100bp change in the\n        outright for a FX instrument.\n    delta_amount_in_deal_ccy : float\n        The change in the instrument's price or market value caused by a one-\n        unit change in the price of the underlying asset, or by a 1bp change in\n        the swap rate for a swaption, or by a 100bp change in the outright for\n        a FX instrument. The value is expressed in the deal currency.\n    delta_amount_in_contra_ccy : float\n        The change in the instrument's price or market value caused by a one-\n        unit change in the price of the underlying asset, or by a 1bp change in\n        the swap rate for a swaption, or by a 100bp change in the outright for\n        a FX instrument. The value is expressed in the contra (quote) currency.\n    delta_amount_in_report_ccy : float\n        The change in the instrument's price or market value caused by a one-\n        unit change in the price of the underlying asset, or by a 1bp change in\n        the swap rate for a swaption, or by a 100bp change in the outright for\n        a FX instrument. The value is expressed in the reporting currency.\n    \n    \"\"\"\n    delta_percent: typing.Optional[float]\n    delta_amount_in_deal_ccy: typing.Optional[float]\n    delta_amount_in_contra_ccy: typing.Optional[float]\n    delta_amount_in_report_ccy: typing.Optional[float]",
+        "metadata": {
+            "doc": "The analytics fields that are linked to a risk analysis of the instrument.\n\n    Attributes\n    ----------\n    delta_percent : float\n        The percentage change in the instrument's price or market value caused\n        by a one-unit change in the price of the underlying asset, or by a 1bp\n        change in the swap rate for a swaption, or by a 100bp change in the\n        outright for a FX instrument.\n    delta_amount_in_deal_ccy : float\n        The change in the instrument's price or market value caused by a one-\n        unit change in the price of the underlying asset, or by a 1bp change in\n        the swap rate for a swaption, or by a 100bp change in the outright for\n        a FX instrument. The value is expressed in the deal currency.\n    delta_amount_in_contra_ccy : float\n        The change in the instrument's price or market value caused by a one-\n        unit change in the price of the underlying asset, or by a 1bp change in\n        the swap rate for a swaption, or by a 100bp change in the outright for\n        a FX instrument. The value is expressed in the contra (quote) currency.\n    delta_amount_in_report_ccy : float\n        The change in the instrument's price or market value caused by a one-\n        unit change in the price of the underlying asset, or by a 1bp change in\n        the swap rate for a swaption, or by a 100bp change in the outright for\n        a FX instrument. The value is expressed in the reporting currency.\n    \n",
+            "annotations": "    delta_percent: typing.Optional[float]\n    delta_amount_in_deal_ccy: typing.Optional[float]\n    delta_amount_in_contra_ccy: typing.Optional[float]\n    delta_amount_in_report_ccy: typing.Optional[float]",
+            "signature": "class FxRisk:\n    \"\"\"\"\"\"\n    delta_percent: typing.Optional[float]\n    delta_amount_in_deal_ccy: typing.Optional[float]\n    delta_amount_in_contra_ccy: typing.Optional[float]\n    delta_amount_in_report_ccy: typing.Optional[float]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxRisk.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": [
+                "lseg_analytics.instruments.fx_forwards.FxForwardRisk",
+                "lseg_analytics.instruments.fx_spots.FxSpotRisk"
+            ]
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxRisk.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxRisk.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4500,
+        "content": "class FxRisk:\n    @overload\n    def __init__(self, *, delta_percent: Optional[float] = None, delta_amount_in_deal_ccy: Optional[float] = None, delta_amount_in_contra_ccy: Optional[float] = None, delta_amount_in_report_ccy: Optional[float] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxRisk"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxRisk"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxSpot",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpot",
+        "params": [
+            {
+                "name": "definition",
+                "type": "FxSpotInstrument"
+            },
+            {
+                "name": "description",
+                "type": "Description"
+            }
+        ],
+        "file_path": "lseg_analytics/instruments/fx_spots/_fx_spot.py",
+        "line_number": 28,
+        "content": "class FxSpot:\n    \"\"\"\n    FxSpot object.\n\n    Contains all the necessary information to identify and define a FxSpot instance.\n\n    Attributes\n    ----------\n    type : Union[str, ResourceType], optional\n        The resource type. Possible values are: Calendar, Currency, CrossCurrency, IrCurve, FxForwardCurve, Analytics, Loan, FxSpot, NonDeliverableForward, Deposit, CrossCurrencySwap or Space.\n    id : str, optional\n        A resource ID is the unique resource identifier for an object on the platform. The resource ID is created on saving. IDs are read-only.\n    location : Location\n        Name and space are location attributes, which are automatically set when a resource object is saved for the first time. Unsaved resources have thier name and space set to None. Location attributes are read-only.\n    description : Description, optional\n        Description object that contains the resource summary and tags.\n    definition : FxSpotInstrument\n        The definition of the Fx spot instument.\n\n    See Also\n    --------\n    FxSpot.price : Price a Fx Spot Instrument (pre-trade)\n    FxSpot.value : Valuate a Fx Spot Instrument (post-trade)\n\n    Examples\n    --------\n    Create a FxSpot instance.\n\n    >>> fx_spot = FxSpot(FxSpotInstrument(FxRate(CrossCurrencyInput(\"USDEUR\"))))\n\n    Save the instance with name and space.\n\n    >>> fx_spot.save(name=\"myFxSpot\", space=\"MySpace\")\n    True\n\n    \n    \"\"\"\n",
+        "metadata": {
+            "doc": "\n    FxSpot object.\n\n    Contains all the necessary information to identify and define a FxSpot instance.\n\n    Attributes\n    ----------\n    type : Union[str, ResourceType], optional\n        The resource type. Possible values are: Calendar, Currency, CrossCurrency, IrCurve, FxForwardCurve, Analytics, Loan, FxSpot, NonDeliverableForward, Deposit, CrossCurrencySwap or Space.\n    id : str, optional\n        A resource ID is the unique resource identifier for an object on the platform. The resource ID is created on saving. IDs are read-only.\n    location : Location\n        Name and space are location attributes, which are automatically set when a resource object is saved for the first time. Unsaved resources have thier name and space set to None. Location attributes are read-only.\n    description : Description, optional\n        Description object that contains the resource summary and tags.\n    definition : FxSpotInstrument\n        The definition of the Fx spot instument.\n\n    See Also\n    --------\n    FxSpot.price : Price a Fx Spot Instrument (pre-trade)\n    FxSpot.value : Valuate a Fx Spot Instrument (post-trade)\n\n    Examples\n    --------\n    Create a FxSpot instance.\n\n    >>> fx_spot = FxSpot(FxSpotInstrument(FxRate(CrossCurrencyInput(\"USDEUR\"))))\n\n    Save the instance with name and space.\n\n    >>> fx_spot.save(name=\"myFxSpot\", space=\"MySpace\")\n    True\n\n    \n",
+            "annotations": "",
+            "signature": "class FxSpot:\n    \"\"\"\"\"\"\n"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxSpot.__init__",
+                "lseg_analytics.instruments.fx_spots.FxSpot.id",
+                "lseg_analytics.instruments.fx_spots.FxSpot.location",
+                "lseg_analytics.instruments.fx_spots.FxSpot.price",
+                "lseg_analytics.instruments.fx_spots.FxSpot.value",
+                "lseg_analytics.instruments.fx_spots.FxSpot.save",
+                "lseg_analytics.instruments.fx_spots.FxSpot.clone"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "MethodChunk",
+        "name": "FxSpot.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpot.__init__",
+        "params": [
+            {
+                "name": "definition",
+                "type": "FxSpotInstrument"
+            },
+            {
+                "name": "description",
+                "type": "Description"
+            }
+        ],
+        "file_path": "lseg_analytics/instruments/fx_spots/_fx_spot.py",
+        "line_number": 67,
+        "content": "class FxSpot:\n    def __init__(self, definition: FxSpotInstrument, description: Optional[Description] = None):\n        \"\"\"\n        FxSpot constructor\n\n        Parameters\n        ----------\n        definition : FxSpotInstrument\n            The definition of the Fx spot instument.\n        description : Description, optional\n            Description object that contains the resource summary and tags.\n\n        Examples\n        --------\n        Create a FxSpot instance.\n\n        >>> fx_spot = FxSpot(FxSpotInstrument(FxRate(CrossCurrencyInput(\"USDEUR\"))))\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        FxSpot constructor\n\n        Parameters\n        ----------\n        definition : FxSpotInstrument\n            The definition of the Fx spot instument.\n        description : Description, optional\n            Description object that contains the resource summary and tags.\n\n        Examples\n        --------\n        Create a FxSpot instance.\n\n        >>> fx_spot = FxSpot(FxSpotInstrument(FxRate(CrossCurrencyInput(\"USDEUR\"))))\n\n        \n",
+            "signature": "class FxSpot:\n    def __init__(self, definition: FxSpotInstrument, description: Optional[Description] = None):",
+            "class": "FxSpot"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpot"
+            ],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxSpotInstrument",
+                "lseg_analytics.common.Description"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "PropertyChunk",
+        "name": "FxSpot.id",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpot.id",
+        "content": "class FxSpot:\n    @property\n    def id(self):\n        \"\"\"\n        Returns the FxSpot id\n\n        Parameters\n        ----------\n\n\n        Returns\n        --------\n        str\n            A resource ID is the unique resource identifier for an object on the platform. The resource ID is created on saving. IDs are read-only.\n\n        Examples\n        --------\n        Get the instance id.\n\n        >>> fx_spot.id\n        '5125e2a4-f7db-48dd-ab35-7d05d6886be8'\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Returns the FxSpot id\n\n        Parameters\n        ----------\n\n\n        Returns\n        --------\n        str\n            A resource ID is the unique resource identifier for an object on the platform. The resource ID is created on saving. IDs are read-only.\n\n        Examples\n        --------\n        Get the instance id.\n\n        >>> fx_spot.id\n        '5125e2a4-f7db-48dd-ab35-7d05d6886be8'\n\n        \n",
+            "signature": "class FxSpot:\n    def id(self):",
+            "class": "FxSpot"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpot"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "PropertyChunk",
+        "name": "FxSpot.location",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpot.location",
+        "content": "class FxSpot:\n    @property\n    def location(self):\n        \"\"\"\n        Returns the FxSpot location\n\n        Parameters\n        ----------\n\n\n        Returns\n        --------\n        Location\n            Name and space are location attributes, which are automatically set when a resource object is saved for the first time. Unsaved resources have thier name and space set to None. Location attributes are read-only.\n\n        Examples\n        --------\n        Get the location property.\n\n        >>> fx_spot.location.name\n        'ValidationTest'\n\n\n        >>> fx_spot.location.space\n        'test'\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Returns the FxSpot location\n\n        Parameters\n        ----------\n\n\n        Returns\n        --------\n        Location\n            Name and space are location attributes, which are automatically set when a resource object is saved for the first time. Unsaved resources have thier name and space set to None. Location attributes are read-only.\n\n        Examples\n        --------\n        Get the location property.\n\n        >>> fx_spot.location.name\n        'ValidationTest'\n\n\n        >>> fx_spot.location.space\n        'test'\n\n        \n",
+            "signature": "class FxSpot:\n    def location(self):",
+            "class": "FxSpot"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpot"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "MethodChunk",
+        "name": "FxSpot.price",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpot.price",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "parameters",
+                "type": "PricingParameters"
+            },
+            {
+                "name": "market_data",
+                "type": "MarketDataInput"
+            }
+        ],
+        "file_path": "lseg_analytics/instruments/fx_spots/_fx_spot.py",
+        "line_number": 221,
+        "content": "class FxSpot:\n    def price(self, *, parameters: Optional[PricingParameters] = None, market_data: Optional[MarketDataInput] = None) -> FxSpotAnalyticsPricing:\n        \"\"\"\n        Price a Fx Spot Instrument (pre-trade)\n\n        Parameters\n        ----------\n        parameters : PricingParameters, optional\n            Base cross asset calculation parameters.\n        market_data : MarketDataInput, optional\n            An object defining market data to be used to compute the analytics.\n\n        Returns\n        --------\n        FxSpotAnalyticsPricing\n            Object defining output of Fx Spot pricing analysis\n\n        Examples\n        --------\n        Calling price on a FxSpot instance\n\n        >>> fx_spot.price()\n        {'description': {'endDate': {'adjusted': '2024-04-17', 'date': '2024-04-17', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'SpotDate', 'unAdjusted': '2024-04-17'}, 'startDate': {'adjusted': '2024-04-11', 'date': '2024-04-15', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'StartDate', 'unAdjusted': '2024-04-15'}, 'valuationDate': '2024-04-11'}, 'greeks': {'deltaAmountInDealCcy': 25644.0, 'deltaPercent': 2.04}, 'pricingAnalysis': {'dealAmount': 1072000.0, 'fxSpot': {'ask': 1.0724, 'bid': 1.072}}, 'processingInformation': ['abc']}\n\n        Calling price on a FxSpot instance with parameters.\n\n        >>> fx_spot.price(\n        >>>         parameters=PricingParameters(\n        >>>             valuation_date=datetime.date(2024, 4, 11),\n        >>>             fx_pricing_preferences=FxPricingPreferences(\n        >>>                 ignore_reference_currency_holidays=True,\n        >>>                 reference_currency=CurrencyInput(code=\"USD\"),\n        >>>                 report_currency=CurrencyInput(code=\"USD\"),\n        >>>             )\n        >>>         ),\n        >>>         market_data=MarketDataInput(\n        >>>             fx_forward_curves=[FxForwardCurveAsMarketDataInput(cross_currency=CrossCurrencyInput(code=\"USD\"))]\n        >>>         )\n        >>>     )\n        {'description': {'endDate': {'adjusted': '2024-04-17', 'date': '2024-04-17', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'SpotDate', 'unAdjusted': '2024-04-17'}, 'startDate': {'adjusted': '2024-04-11', 'date': '2024-04-15', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'StartDate', 'unAdjusted': '2024-04-15'}, 'valuationDate': '2024-04-11'}, 'greeks': {'deltaAmountInDealCcy': 25644.0, 'deltaPercent': 2.04}, 'pricingAnalysis': {'dealAmount': 1072000.0, 'fxSpot': {'ask': 1.0724, 'bid': 1.072}}, 'processingInformation': ['abc']}\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Price a Fx Spot Instrument (pre-trade)\n\n        Parameters\n        ----------\n        parameters : PricingParameters, optional\n            Base cross asset calculation parameters.\n        market_data : MarketDataInput, optional\n            An object defining market data to be used to compute the analytics.\n\n        Returns\n        --------\n        FxSpotAnalyticsPricing\n            Object defining output of Fx Spot pricing analysis\n\n        Examples\n        --------\n        Calling price on a FxSpot instance\n\n        >>> fx_spot.price()\n        {'description': {'endDate': {'adjusted': '2024-04-17', 'date': '2024-04-17', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'SpotDate', 'unAdjusted': '2024-04-17'}, 'startDate': {'adjusted': '2024-04-11', 'date': '2024-04-15', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'StartDate', 'unAdjusted': '2024-04-15'}, 'valuationDate': '2024-04-11'}, 'greeks': {'deltaAmountInDealCcy': 25644.0, 'deltaPercent': 2.04}, 'pricingAnalysis': {'dealAmount': 1072000.0, 'fxSpot': {'ask': 1.0724, 'bid': 1.072}}, 'processingInformation': ['abc']}\n\n        Calling price on a FxSpot instance with parameters.\n\n        >>> fx_spot.price(\n        >>>         parameters=PricingParameters(\n        >>>             valuation_date=datetime.date(2024, 4, 11),\n        >>>             fx_pricing_preferences=FxPricingPreferences(\n        >>>                 ignore_reference_currency_holidays=True,\n        >>>                 reference_currency=CurrencyInput(code=\"USD\"),\n        >>>                 report_currency=CurrencyInput(code=\"USD\"),\n        >>>             )\n        >>>         ),\n        >>>         market_data=MarketDataInput(\n        >>>             fx_forward_curves=[FxForwardCurveAsMarketDataInput(cross_currency=CrossCurrencyInput(code=\"USD\"))]\n        >>>         )\n        >>>     )\n        {'description': {'endDate': {'adjusted': '2024-04-17', 'date': '2024-04-17', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'SpotDate', 'unAdjusted': '2024-04-17'}, 'startDate': {'adjusted': '2024-04-11', 'date': '2024-04-15', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'StartDate', 'unAdjusted': '2024-04-15'}, 'valuationDate': '2024-04-11'}, 'greeks': {'deltaAmountInDealCcy': 25644.0, 'deltaPercent': 2.04}, 'pricingAnalysis': {'dealAmount': 1072000.0, 'fxSpot': {'ask': 1.0724, 'bid': 1.072}}, 'processingInformation': ['abc']}\n\n        \n",
+            "signature": "class FxSpot:\n    def price(self, *, parameters: Optional[PricingParameters] = None, market_data: Optional[MarketDataInput] = None) -> FxSpotAnalyticsPricing:",
+            "class": "FxSpot"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpot"
+            ],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.PricingParameters",
+                "lseg_analytics.instruments.fx_spots.MarketDataInput",
+                "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsPricing"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "MethodChunk",
+        "name": "FxSpot.value",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpot.value",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "parameters",
+                "type": "PricingParameters"
+            },
+            {
+                "name": "market_data",
+                "type": "MarketDataInput"
+            }
+        ],
+        "file_path": "lseg_analytics/instruments/fx_spots/_fx_spot.py",
+        "line_number": 297,
+        "content": "class FxSpot:\n    def value(self, *, parameters: Optional[PricingParameters] = None, market_data: Optional[MarketDataInput] = None) -> FxSpotAnalyticsValuation:\n        \"\"\"\n        Valuate a Fx Spot Instrument (post-trade)\n\n        Parameters\n        ----------\n        parameters : PricingParameters, optional\n            Base cross asset calculation parameters.\n        market_data : MarketDataInput, optional\n            An object defining market data to be used to compute the analytics.\n\n        Returns\n        --------\n        FxSpotAnalyticsValuation\n            Object defining output of Fx Spot valuation analysis\n\n        Examples\n        --------\n        Calling value on a FxSpot.\n\n        >>> fx_spot.value()\n        {'description': {'endDate': {'adjusted': '2024-04-11', 'date': '2024-04-11', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'ValuationDate', 'unAdjusted': '2024-04-11'}, 'startDate': {'adjusted': '2024-04-01', 'date': '2024-04-01', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'StartDate', 'unAdjusted': '2024-04-01'}, 'valuationDate': '2024-04-11'}, 'greeks': {'deltaAmountInDealCcy': 10000.0, 'deltaPercent': 1.0}, 'processingInformation': ['abc'], 'valuation': {'marketValueInDealCcy': 1010000.0}}\n\n        Calling value on a FxSpot instance with parameters.\n\n        >>> fx_spot.value(\n        >>>         parameters=PricingParameters(\n        >>>             valuation_date=datetime.date(2024, 4, 11),\n        >>>             fx_pricing_preferences=FxPricingPreferences(\n        >>>                 ignore_reference_currency_holidays=True,\n        >>>                 reference_currency=CurrencyInput(code=\"USD\"),\n        >>>                 report_currency=CurrencyInput(code=\"USD\"),\n        >>>             )\n        >>>         ),\n        >>>         market_data=MarketDataInput(\n        >>>             fx_forward_curves=[FxForwardCurveAsMarketDataInput(cross_currency=CrossCurrencyInput(code=\"USD\"))]\n        >>>         )\n        >>>     )\n        {'description': {'endDate': {'adjusted': '2024-04-11', 'date': '2024-04-11', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'ValuationDate', 'unAdjusted': '2024-04-11'}, 'startDate': {'adjusted': '2024-04-01', 'date': '2024-04-01', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'StartDate', 'unAdjusted': '2024-04-01'}, 'valuationDate': '2024-04-11'}, 'greeks': {'deltaAmountInDealCcy': 10000.0, 'deltaPercent': 1.0}, 'processingInformation': ['abc'], 'valuation': {'marketValueInDealCcy': 1010000.0}}\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Valuate a Fx Spot Instrument (post-trade)\n\n        Parameters\n        ----------\n        parameters : PricingParameters, optional\n            Base cross asset calculation parameters.\n        market_data : MarketDataInput, optional\n            An object defining market data to be used to compute the analytics.\n\n        Returns\n        --------\n        FxSpotAnalyticsValuation\n            Object defining output of Fx Spot valuation analysis\n\n        Examples\n        --------\n        Calling value on a FxSpot.\n\n        >>> fx_spot.value()\n        {'description': {'endDate': {'adjusted': '2024-04-11', 'date': '2024-04-11', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'ValuationDate', 'unAdjusted': '2024-04-11'}, 'startDate': {'adjusted': '2024-04-01', 'date': '2024-04-01', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'StartDate', 'unAdjusted': '2024-04-01'}, 'valuationDate': '2024-04-11'}, 'greeks': {'deltaAmountInDealCcy': 10000.0, 'deltaPercent': 1.0}, 'processingInformation': ['abc'], 'valuation': {'marketValueInDealCcy': 1010000.0}}\n\n        Calling value on a FxSpot instance with parameters.\n\n        >>> fx_spot.value(\n        >>>         parameters=PricingParameters(\n        >>>             valuation_date=datetime.date(2024, 4, 11),\n        >>>             fx_pricing_preferences=FxPricingPreferences(\n        >>>                 ignore_reference_currency_holidays=True,\n        >>>                 reference_currency=CurrencyInput(code=\"USD\"),\n        >>>                 report_currency=CurrencyInput(code=\"USD\"),\n        >>>             )\n        >>>         ),\n        >>>         market_data=MarketDataInput(\n        >>>             fx_forward_curves=[FxForwardCurveAsMarketDataInput(cross_currency=CrossCurrencyInput(code=\"USD\"))]\n        >>>         )\n        >>>     )\n        {'description': {'endDate': {'adjusted': '2024-04-11', 'date': '2024-04-11', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'ValuationDate', 'unAdjusted': '2024-04-11'}, 'startDate': {'adjusted': '2024-04-01', 'date': '2024-04-01', 'dateMovingConvention': 'ModifiedFollowing', 'processingInformation': 'abc', 'referenceDate': 'StartDate', 'unAdjusted': '2024-04-01'}, 'valuationDate': '2024-04-11'}, 'greeks': {'deltaAmountInDealCcy': 10000.0, 'deltaPercent': 1.0}, 'processingInformation': ['abc'], 'valuation': {'marketValueInDealCcy': 1010000.0}}\n\n        \n",
+            "signature": "class FxSpot:\n    def value(self, *, parameters: Optional[PricingParameters] = None, market_data: Optional[MarketDataInput] = None) -> FxSpotAnalyticsValuation:",
+            "class": "FxSpot"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpot"
+            ],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.PricingParameters",
+                "lseg_analytics.instruments.fx_spots.MarketDataInput",
+                "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsValuation"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "MethodChunk",
+        "name": "FxSpot.save",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpot.save",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "name",
+                "type": "str",
+                "valuelookup": "FxSpot.name"
+            },
+            {
+                "name": "space",
+                "type": "str",
+                "valuelookup": "FxSpot.space"
+            }
+        ],
+        "file_path": "lseg_analytics/instruments/fx_spots/_fx_spot.py",
+        "line_number": 373,
+        "content": "class FxSpot:\n    def save(self, *, name: Optional[str] = None, space: Optional[str] = None) -> bool:\n        \"\"\"\n        Save FxSpot instance in the platform store.\n\n        Parameters\n        ----------\n        name : str, optional\n            The FxSpot name. The name parameter must be specified when the object is first created. Thereafter it is optional.\n        space : str, optional\n            The space where the FxSpot is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n            LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n\n        Returns\n        --------\n        bool, optional\n            True, if saved successfully, otherwise None\n\n\n        Examples\n        --------\n        Save the instance with name and space.\n\n        >>> fx_spot.save(name=\"myFxSpot\", space=\"MySpace\")\n        True\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Save FxSpot instance in the platform store.\n\n        Parameters\n        ----------\n        name : str, optional\n            The FxSpot name. The name parameter must be specified when the object is first created. Thereafter it is optional.\n        space : str, optional\n            The space where the FxSpot is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n            LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n\n        Returns\n        --------\n        bool, optional\n            True, if saved successfully, otherwise None\n\n\n        Examples\n        --------\n        Save the instance with name and space.\n\n        >>> fx_spot.save(name=\"myFxSpot\", space=\"MySpace\")\n        True\n\n        \n",
+            "signature": "class FxSpot:\n    def save(self, *, name: Optional[str] = None, space: Optional[str] = None) -> bool:",
+            "class": "FxSpot"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpot"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "MethodChunk",
+        "name": "FxSpot.clone",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpot.clone",
+        "params": [],
+        "file_path": "lseg_analytics/instruments/fx_spots/_fx_spot.py",
+        "line_number": 417,
+        "content": "class FxSpot:\n    def clone(self) -> 'FxSpot':\n        \"\"\"\n        Return the same object, without id, name and space\n\n        Parameters\n        ----------\n\n\n        Returns\n        --------\n        FxSpot\n            The cloned FxSpot object\n\n\n        Examples\n        --------\n        Clone the existing instance on definition and description.\n\n        >>> fx_spot_clone = fx_spot.clone()\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Return the same object, without id, name and space\n\n        Parameters\n        ----------\n\n\n        Returns\n        --------\n        FxSpot\n            The cloned FxSpot object\n\n\n        Examples\n        --------\n        Clone the existing instance on definition and description.\n\n        >>> fx_spot_clone = fx_spot.clone()\n\n        \n",
+            "signature": "class FxSpot:\n    def clone(self) -> 'FxSpot':",
+            "class": "FxSpot"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpot"
+            ],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxSpot"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxSpotAnalyticsDescription",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsDescription",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "valuation_date",
+                "type": "date"
+            },
+            {
+                "name": "start_date",
+                "type": "AdjustedDate"
+            },
+            {
+                "name": "end_date",
+                "type": "AdjustedDate"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4760,
+        "content": "class FxSpotAnalyticsDescription:\n    \"\"\"The analytic fields that describe the instrument.\n\n    Attributes\n    ----------\n    valuation_date : ~datetime.date\n        The date at which the instrument is valued. The date is expressed in\n        ISO 8601 format: YYYY-MM-DDT[hh]:[mm]:[ss]Z (e.g.,\n        '2021-01-01T00:00:00Z').\n    start_date : ~analyticsapi.models.AdjustedDate\n        The start date of the instrument.\n    end_date : ~analyticsapi.models.AdjustedDate\n        The maturity date of the instrument.\n    \n    \"\"\"\n    valuation_date: typing.Optional[datetime.date]\n    start_date: typing.Optional[ForwardRef('_models.AdjustedDate')]\n    end_date: typing.Optional[ForwardRef('_models.AdjustedDate')]",
+        "metadata": {
+            "doc": "The analytic fields that describe the instrument.\n\n    Attributes\n    ----------\n    valuation_date : ~datetime.date\n        The date at which the instrument is valued. The date is expressed in\n        ISO 8601 format: YYYY-MM-DDT[hh]:[mm]:[ss]Z (e.g.,\n        '2021-01-01T00:00:00Z').\n    start_date : ~analyticsapi.models.AdjustedDate\n        The start date of the instrument.\n    end_date : ~analyticsapi.models.AdjustedDate\n        The maturity date of the instrument.\n    \n",
+            "annotations": "    valuation_date: typing.Optional[datetime.date]\n    start_date: typing.Optional[ForwardRef('_models.AdjustedDate')]\n    end_date: typing.Optional[ForwardRef('_models.AdjustedDate')]",
+            "signature": "class FxSpotAnalyticsDescription:\n    \"\"\"\"\"\"\n    valuation_date: typing.Optional[datetime.date]\n    start_date: typing.Optional[ForwardRef('_models.AdjustedDate')]\n    end_date: typing.Optional[ForwardRef('_models.AdjustedDate')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsDescription.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.AdjustedDate"
+            ],
+            "base_classes": [
+                "lseg_analytics.instruments.fx_spots.FxAnalyticsDescription"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxSpotAnalyticsDescription.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsDescription.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4793,
+        "content": "class FxSpotAnalyticsDescription:\n    @overload\n    def __init__(self, *, valuation_date: Optional[datetime.date] = None, start_date: Optional[ForwardRef('_models.AdjustedDate')] = None, end_date: Optional[ForwardRef('_models.AdjustedDate')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxSpotAnalyticsDescription"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsDescription"
+            ],
+            "use": [
+                "lseg_analytics.common.AdjustedDate"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxSpotAnalyticsPricing",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsPricing",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "description",
+                "type": "FxSpotAnalyticsDescription"
+            },
+            {
+                "name": "pricing_analysis",
+                "type": "FxSpotPricingAnalysis"
+            },
+            {
+                "name": "greeks",
+                "type": "FxSpotRisk"
+            },
+            {
+                "name": "processing_information",
+                "type": "List[str]"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4797,
+        "content": "class FxSpotAnalyticsPricing:\n    \"\"\"Object defining output of Fx Spot pricing analysis.\n\n    Attributes\n    ----------\n    description : ~analyticsapi.models.FxSpotAnalyticsDescription\n        The analytic fields that describe the instrument.\n    pricing_analysis : ~analyticsapi.models.FxSpotPricingAnalysis\n        The analytic fields that are linked to a pre-trade analysis of the\n        instrument.\n    greeks : ~analyticsapi.models.FxSpotRisk\n        The analytic fields that are linked to a risk analysis of the\n        instrument.\n    processing_information : list[str]\n    \n    \"\"\"\n    description: typing.Optional[ForwardRef('_models.FxSpotAnalyticsDescription')]\n    pricing_analysis: typing.Optional[ForwardRef('_models.FxSpotPricingAnalysis')]\n    greeks: typing.Optional[ForwardRef('_models.FxSpotRisk')]\n    processing_information: typing.Optional[typing.List[str]]",
+        "metadata": {
+            "doc": "Object defining output of Fx Spot pricing analysis.\n\n    Attributes\n    ----------\n    description : ~analyticsapi.models.FxSpotAnalyticsDescription\n        The analytic fields that describe the instrument.\n    pricing_analysis : ~analyticsapi.models.FxSpotPricingAnalysis\n        The analytic fields that are linked to a pre-trade analysis of the\n        instrument.\n    greeks : ~analyticsapi.models.FxSpotRisk\n        The analytic fields that are linked to a risk analysis of the\n        instrument.\n    processing_information : list[str]\n    \n",
+            "annotations": "    description: typing.Optional[ForwardRef('_models.FxSpotAnalyticsDescription')]\n    pricing_analysis: typing.Optional[ForwardRef('_models.FxSpotPricingAnalysis')]\n    greeks: typing.Optional[ForwardRef('_models.FxSpotRisk')]\n    processing_information: typing.Optional[typing.List[str]]",
+            "signature": "class FxSpotAnalyticsPricing:\n    \"\"\"\"\"\"\n    description: typing.Optional[ForwardRef('_models.FxSpotAnalyticsDescription')]\n    pricing_analysis: typing.Optional[ForwardRef('_models.FxSpotPricingAnalysis')]\n    greeks: typing.Optional[ForwardRef('_models.FxSpotRisk')]\n    processing_information: typing.Optional[typing.List[str]]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsPricing.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsDescription",
+                "lseg_analytics.instruments.fx_spots.FxSpotPricingAnalysis",
+                "lseg_analytics.instruments.fx_spots.FxSpotRisk"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxSpotAnalyticsPricing.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsPricing.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4840,
+        "content": "class FxSpotAnalyticsPricing:\n    @overload\n    def __init__(self, *, description: Optional[ForwardRef('_models.FxSpotAnalyticsDescription')] = None, pricing_analysis: Optional[ForwardRef('_models.FxSpotPricingAnalysis')] = None, greeks: Optional[ForwardRef('_models.FxSpotRisk')] = None, processing_information: Optional[List[str]] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxSpotAnalyticsPricing"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsPricing"
+            ],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsDescription",
+                "lseg_analytics.instruments.fx_spots.FxSpotPricingAnalysis",
+                "lseg_analytics.instruments.fx_spots.FxSpotRisk"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxSpotAnalyticsValuation",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsValuation",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "description",
+                "type": "FxSpotAnalyticsDescription"
+            },
+            {
+                "name": "valuation",
+                "type": "FxSpotValuation"
+            },
+            {
+                "name": "greeks",
+                "type": "FxSpotRisk"
+            },
+            {
+                "name": "processing_information",
+                "type": "List[str]"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4846,
+        "content": "class FxSpotAnalyticsValuation:\n    \"\"\"Object defining output of Fx Spot valuation analysis.\n\n    Attributes\n    ----------\n    description : ~analyticsapi.models.FxSpotAnalyticsDescription\n        The analytic fields that describe the instrument.\n    valuation : ~analyticsapi.models.FxSpotValuation\n        The analytic fields that are linked to a post-trade analysis of the\n        instrument.\n    greeks : ~analyticsapi.models.FxSpotRisk\n        The analytic fields that are linked to a risk analysis of the\n        instrument.\n    processing_information : list[str]\n    \n    \"\"\"\n    description: typing.Optional[ForwardRef('_models.FxSpotAnalyticsDescription')]\n    valuation: typing.Optional[ForwardRef('_models.FxSpotValuation')]\n    greeks: typing.Optional[ForwardRef('_models.FxSpotRisk')]\n    processing_information: typing.Optional[typing.List[str]]",
+        "metadata": {
+            "doc": "Object defining output of Fx Spot valuation analysis.\n\n    Attributes\n    ----------\n    description : ~analyticsapi.models.FxSpotAnalyticsDescription\n        The analytic fields that describe the instrument.\n    valuation : ~analyticsapi.models.FxSpotValuation\n        The analytic fields that are linked to a post-trade analysis of the\n        instrument.\n    greeks : ~analyticsapi.models.FxSpotRisk\n        The analytic fields that are linked to a risk analysis of the\n        instrument.\n    processing_information : list[str]\n    \n",
+            "annotations": "    description: typing.Optional[ForwardRef('_models.FxSpotAnalyticsDescription')]\n    valuation: typing.Optional[ForwardRef('_models.FxSpotValuation')]\n    greeks: typing.Optional[ForwardRef('_models.FxSpotRisk')]\n    processing_information: typing.Optional[typing.List[str]]",
+            "signature": "class FxSpotAnalyticsValuation:\n    \"\"\"\"\"\"\n    description: typing.Optional[ForwardRef('_models.FxSpotAnalyticsDescription')]\n    valuation: typing.Optional[ForwardRef('_models.FxSpotValuation')]\n    greeks: typing.Optional[ForwardRef('_models.FxSpotRisk')]\n    processing_information: typing.Optional[typing.List[str]]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsValuation.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsDescription",
+                "lseg_analytics.instruments.fx_spots.FxSpotValuation",
+                "lseg_analytics.instruments.fx_spots.FxSpotRisk"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxSpotAnalyticsValuation.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsValuation.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4889,
+        "content": "class FxSpotAnalyticsValuation:\n    @overload\n    def __init__(self, *, description: Optional[ForwardRef('_models.FxSpotAnalyticsDescription')] = None, valuation: Optional[ForwardRef('_models.FxSpotValuation')] = None, greeks: Optional[ForwardRef('_models.FxSpotRisk')] = None, processing_information: Optional[List[str]] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxSpotAnalyticsValuation"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsValuation"
+            ],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxSpotAnalyticsDescription",
+                "lseg_analytics.instruments.fx_spots.FxSpotValuation",
+                "lseg_analytics.instruments.fx_spots.FxSpotRisk"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxSpotAsCollectionItem",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotAsCollectionItem",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "location",
+                "type": "Location"
+            },
+            {
+                "name": "description",
+                "type": "Description"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4895,
+        "content": "class FxSpotAsCollectionItem:\n    \"\"\"An object describing the basic properties of an FX spot.\n\n    Readonly variables are only populated by the server, and will be ignored when sending a request.\n\n    Attributes\n    ----------\n    type : str or ~analyticsapi.models.FX_SPOT\n        The resource type. Possible values are: Calendar, Currency,\n        CrossCurrency, IrCurve, FxForwardCurve, Analytics, Loan, FxSpot,\n        NonDeliverableForward, Deposit, CrossCurrencySwap or Space.\n    id : str\n        A resource ID is the unique resource identifier for an object on the\n        platform. The resource ID is created on saving. IDs are read-only.\n    location : ~analyticsapi.models.Location\n        Name and space are location attributes, which are automatically set\n        when a resource object is saved for the first time. Unsaved resources\n        have thier name and space set to None. Location attributes are read-\n        only. Required.\n    description : ~analyticsapi.models.Description\n        Description object that contains the resource summary and tags.\n    \n    \"\"\"\n    type: typing.Optional[typing.Literal[<ResourceType.FX_SPOT: 'FxSpot'>]]\n    id: typing.Optional[str]\n    location: _models.Location\n    description: typing.Optional[ForwardRef('_models.Description')]",
+        "metadata": {
+            "doc": "An object describing the basic properties of an FX spot.\n\n    Readonly variables are only populated by the server, and will be ignored when sending a request.\n\n    Attributes\n    ----------\n    type : str or ~analyticsapi.models.FX_SPOT\n        The resource type. Possible values are: Calendar, Currency,\n        CrossCurrency, IrCurve, FxForwardCurve, Analytics, Loan, FxSpot,\n        NonDeliverableForward, Deposit, CrossCurrencySwap or Space.\n    id : str\n        A resource ID is the unique resource identifier for an object on the\n        platform. The resource ID is created on saving. IDs are read-only.\n    location : ~analyticsapi.models.Location\n        Name and space are location attributes, which are automatically set\n        when a resource object is saved for the first time. Unsaved resources\n        have thier name and space set to None. Location attributes are read-\n        only. Required.\n    description : ~analyticsapi.models.Description\n        Description object that contains the resource summary and tags.\n    \n",
+            "annotations": "    type: typing.Optional[typing.Literal[<ResourceType.FX_SPOT: 'FxSpot'>]]\n    id: typing.Optional[str]\n    location: _models.Location\n    description: typing.Optional[ForwardRef('_models.Description')]",
+            "signature": "class FxSpotAsCollectionItem:\n    \"\"\"\"\"\"\n    type: typing.Optional[typing.Literal[<ResourceType.FX_SPOT: 'FxSpot'>]]\n    id: typing.Optional[str]\n    location: _models.Location\n    description: typing.Optional[ForwardRef('_models.Description')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxSpotAsCollectionItem.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.Location",
+                "lseg_analytics.common.Description"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxSpotAsCollectionItem.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotAsCollectionItem.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4949,
+        "content": "class FxSpotAsCollectionItem:\n    @overload\n    def __init__(self, *, location: '_models.Location', description: Optional[ForwardRef('_models.Description')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxSpotAsCollectionItem"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpotAsCollectionItem"
+            ],
+            "use": [
+                "lseg_analytics.common.Location",
+                "lseg_analytics.common.Description"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxSpotConstituent",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotConstituent",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "source",
+                "type": "str"
+            },
+            {
+                "name": "quote",
+                "type": "QuoteInput"
+            },
+            {
+                "name": "definition",
+                "type": "FxSpotConstituentDefinition"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5044,
+        "content": "class FxSpotConstituent:\n    \"\"\"An object to define constituents that are used to construct the curve.\n\n    Attributes\n    ----------\n    source : str\n        The code of the contributor of the quote for the instrument used as a\n        constituent (e.g., 'ICAP').\n    quote : ~analyticsapi.models.QuoteInput\n        An object to define the quote of the instrument used as a constituent.\n        Optional: provide either a definition or a quote.\n    type : str or ~analyticsapi.models.FX_SPOT\n        The type of constituent. FxSpot is the only valid value. Required.\n    definition : ~analyticsapi.models.FxSpotConstituentDefinition\n        An object to define the FX spot instrument used as a constituent.\n    \n    \"\"\"\n    type: typing.Literal[<FxForwardCurveConstituentType.FX_SPOT: 'FxSpot'>]\n    definition: typing.Optional[ForwardRef('_models.FxSpotConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]",
+        "metadata": {
+            "doc": "An object to define constituents that are used to construct the curve.\n\n    Attributes\n    ----------\n    source : str\n        The code of the contributor of the quote for the instrument used as a\n        constituent (e.g., 'ICAP').\n    quote : ~analyticsapi.models.QuoteInput\n        An object to define the quote of the instrument used as a constituent.\n        Optional: provide either a definition or a quote.\n    type : str or ~analyticsapi.models.FX_SPOT\n        The type of constituent. FxSpot is the only valid value. Required.\n    definition : ~analyticsapi.models.FxSpotConstituentDefinition\n        An object to define the FX spot instrument used as a constituent.\n    \n",
+            "annotations": "    type: typing.Literal[<FxForwardCurveConstituentType.FX_SPOT: 'FxSpot'>]\n    definition: typing.Optional[ForwardRef('_models.FxSpotConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]",
+            "signature": "class FxSpotConstituent:\n    \"\"\"\"\"\"\n    type: typing.Literal[<FxForwardCurveConstituentType.FX_SPOT: 'FxSpot'>]\n    definition: typing.Optional[ForwardRef('_models.FxSpotConstituentDefinition')]\n    source: typing.Optional[str]\n    quote: typing.Optional[ForwardRef('_models.QuoteInput')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxSpotConstituent.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxSpotConstituentDefinition",
+                "lseg_analytics.common.QuoteInput"
+            ],
+            "base_classes": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveConstituent"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxSpotConstituent.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotConstituent.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5084,
+        "content": "class FxSpotConstituent:\n    @overload\n    def __init__(self, *, source: Optional[str] = None, quote: Optional[ForwardRef('_models.QuoteInput')] = None, definition: Optional[ForwardRef('_models.FxSpotConstituentDefinition')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxSpotConstituent"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpotConstituent"
+            ],
+            "use": [
+                "lseg_analytics.common.QuoteInput",
+                "lseg_analytics.instruments.fx_spots.FxSpotConstituentDefinition"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxSpotConstituentDefinition",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotConstituentDefinition",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "cross_currency",
+                "type": "CrossCurrencyInput"
+            },
+            {
+                "name": "tenor",
+                "type": "str",
+                "valuelookup": "tenors"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5088,
+        "content": "class FxSpotConstituentDefinition:\n    \"\"\"An object to define the FX spot instrument used as a constituent.\n\n    Attributes\n    ----------\n    tenor : str\n        A tenor (relatvie date) expressed as a code, indicating the period\n        covered by the constituent.\n    cross_currency : ~analyticsapi.models.CrossCurrencyInput\n        The currency pair, expressed in ISO 4217 alphabetical format (e.g.,\n        'EURCHF'). Required.\n    \n    \"\"\"\n    tenor: typing.Optional[str]\n    cross_currency: _models.CrossCurrencyInput",
+        "metadata": {
+            "doc": "An object to define the FX spot instrument used as a constituent.\n\n    Attributes\n    ----------\n    tenor : str\n        A tenor (relatvie date) expressed as a code, indicating the period\n        covered by the constituent.\n    cross_currency : ~analyticsapi.models.CrossCurrencyInput\n        The currency pair, expressed in ISO 4217 alphabetical format (e.g.,\n        'EURCHF'). Required.\n    \n",
+            "annotations": "    tenor: typing.Optional[str]\n    cross_currency: _models.CrossCurrencyInput",
+            "signature": "class FxSpotConstituentDefinition:\n    \"\"\"\"\"\"\n    tenor: typing.Optional[str]\n    cross_currency: _models.CrossCurrencyInput"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxSpotConstituentDefinition.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.CrossCurrencyInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxSpotConstituentDefinition.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotConstituentDefinition.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5123,
+        "content": "class FxSpotConstituentDefinition:\n    @overload\n    def __init__(self, *, cross_currency: '_models.CrossCurrencyInput', tenor: Optional[str] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxSpotConstituentDefinition"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpotConstituentDefinition"
+            ],
+            "use": [
+                "lseg_analytics.common.CrossCurrencyInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxSpotDefinition",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotDefinition",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "fx_rate",
+                "type": "FxRate"
+            },
+            {
+                "name": "deal_amount",
+                "type": "float"
+            },
+            {
+                "name": "contra_amount",
+                "type": "float"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5170,
+        "content": "class FxSpotDefinition:\n    \"\"\"The definition of the Fx spot.\n\n    Attributes\n    ----------\n    fx_rate : ~analyticsapi.models.FxRate\n        An object defining the FX rate. Required.\n    deal_amount : float\n        The amount of the deal (base) currency bought or sold.\n    contra_amount : float\n        The amount of contra currency exchanged to buy or sell the deal (base)\n        currency.\n    \n    \"\"\"\n    fx_rate: _models.FxRate\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]",
+        "metadata": {
+            "doc": "The definition of the Fx spot.\n\n    Attributes\n    ----------\n    fx_rate : ~analyticsapi.models.FxRate\n        An object defining the FX rate. Required.\n    deal_amount : float\n        The amount of the deal (base) currency bought or sold.\n    contra_amount : float\n        The amount of contra currency exchanged to buy or sell the deal (base)\n        currency.\n    \n",
+            "annotations": "    fx_rate: _models.FxRate\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]",
+            "signature": "class FxSpotDefinition:\n    \"\"\"\"\"\"\n    fx_rate: _models.FxRate\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxSpotDefinition.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxRate"
+            ],
+            "base_classes": [
+                "lseg_analytics.instruments.fx_spots.FxPayment"
+            ],
+            "sub_classes": [
+                "lseg_analytics.instruments.fx_spots.FxSpotInstrument"
+            ]
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxSpotDefinition.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotDefinition.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5202,
+        "content": "class FxSpotDefinition:\n    @overload\n    def __init__(self, *, fx_rate: '_models.FxRate', deal_amount: Optional[float] = None, contra_amount: Optional[float] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxSpotDefinition"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpotDefinition"
+            ],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxRate"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxSpotInstrument",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotInstrument",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "fx_rate",
+                "type": "FxRate"
+            },
+            {
+                "name": "deal_amount",
+                "type": "float"
+            },
+            {
+                "name": "contra_amount",
+                "type": "float"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5206,
+        "content": "class FxSpotInstrument:\n    \"\"\"The definition of the Fx spot instument.\n\n    Attributes\n    ----------\n    fx_rate : ~analyticsapi.models.FxRate\n        An object defining the FX rate. Required.\n    deal_amount : float\n        The amount of the deal (base) currency bought or sold.\n    contra_amount : float\n        The amount of contra currency exchanged to buy or sell the deal (base)\n        currency.\n    \n    \"\"\"\n    fx_rate: _models.FxRate\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]",
+        "metadata": {
+            "doc": "The definition of the Fx spot instument.\n\n    Attributes\n    ----------\n    fx_rate : ~analyticsapi.models.FxRate\n        An object defining the FX rate. Required.\n    deal_amount : float\n        The amount of the deal (base) currency bought or sold.\n    contra_amount : float\n        The amount of contra currency exchanged to buy or sell the deal (base)\n        currency.\n    \n",
+            "annotations": "    fx_rate: _models.FxRate\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]",
+            "signature": "class FxSpotInstrument:\n    \"\"\"\"\"\"\n    fx_rate: _models.FxRate\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxSpotInstrument.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxRate"
+            ],
+            "base_classes": [
+                "lseg_analytics.instruments.fx_spots.FxSpotDefinition"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxSpotInstrument.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotInstrument.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5238,
+        "content": "class FxSpotInstrument:\n    @overload\n    def __init__(self, *, fx_rate: '_models.FxRate', deal_amount: Optional[float] = None, contra_amount: Optional[float] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxSpotInstrument"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpotInstrument"
+            ],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxRate"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxSpotPricingAnalysis",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotPricingAnalysis",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "fx_spot",
+                "type": "BidAskSimpleValues"
+            },
+            {
+                "name": "deal_amount",
+                "type": "float"
+            },
+            {
+                "name": "contra_amount",
+                "type": "float"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5477,
+        "content": "class FxSpotPricingAnalysis:\n    \"\"\"The analytic fields that are linked to a pre-trade analysis of the instrument.\n\n    Attributes\n    ----------\n    fx_spot : ~analyticsapi.models.BidAskSimpleValues\n        The spot price for the currency pair. The field returns the following\n        values: Bid (Bid value), Ask (Ask value), Mid (Mid value).\n    deal_amount : float\n        The amount of the deal (base) currency bought or sold.\n    contra_amount : float\n        The amount of contra currency exchanged to buy or sell the amount of\n        the deal (base) currency.\n    \n    \"\"\"\n    fx_spot: typing.Optional[ForwardRef('_models.BidAskSimpleValues')]\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]",
+        "metadata": {
+            "doc": "The analytic fields that are linked to a pre-trade analysis of the instrument.\n\n    Attributes\n    ----------\n    fx_spot : ~analyticsapi.models.BidAskSimpleValues\n        The spot price for the currency pair. The field returns the following\n        values: Bid (Bid value), Ask (Ask value), Mid (Mid value).\n    deal_amount : float\n        The amount of the deal (base) currency bought or sold.\n    contra_amount : float\n        The amount of contra currency exchanged to buy or sell the amount of\n        the deal (base) currency.\n    \n",
+            "annotations": "    fx_spot: typing.Optional[ForwardRef('_models.BidAskSimpleValues')]\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]",
+            "signature": "class FxSpotPricingAnalysis:\n    \"\"\"\"\"\"\n    fx_spot: typing.Optional[ForwardRef('_models.BidAskSimpleValues')]\n    deal_amount: typing.Optional[float]\n    contra_amount: typing.Optional[float]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxSpotPricingAnalysis.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.BidAskSimpleValues"
+            ],
+            "base_classes": [
+                "lseg_analytics.instruments.fx_spots.FxPricingAnalysis"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxSpotPricingAnalysis.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotPricingAnalysis.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5510,
+        "content": "class FxSpotPricingAnalysis:\n    @overload\n    def __init__(self, *, fx_spot: Optional[ForwardRef('_models.BidAskSimpleValues')] = None, deal_amount: Optional[float] = None, contra_amount: Optional[float] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxSpotPricingAnalysis"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpotPricingAnalysis"
+            ],
+            "use": [
+                "lseg_analytics.common.BidAskSimpleValues"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxSpotRisk",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotRisk",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "delta_percent",
+                "type": "float"
+            },
+            {
+                "name": "delta_amount_in_deal_ccy",
+                "type": "float"
+            },
+            {
+                "name": "delta_amount_in_contra_ccy",
+                "type": "float"
+            },
+            {
+                "name": "delta_amount_in_report_ccy",
+                "type": "float"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5681,
+        "content": "class FxSpotRisk:\n    \"\"\"The analytic fields that are linked to a risk analysis of the instrument.\n\n    Attributes\n    ----------\n    delta_percent : float\n        The percentage change in the instrument's price or market value caused\n        by a one-unit change in the price of the underlying asset, or by a 1bp\n        change in the swap rate for a swaption, or by a 100bp change in the\n        outright for a FX instrument.\n    delta_amount_in_deal_ccy : float\n        The change in the instrument's price or market value caused by a one-\n        unit change in the price of the underlying asset, or by a 1bp change in\n        the swap rate for a swaption, or by a 100bp change in the outright for\n        a FX instrument. The value is expressed in the deal currency.\n    delta_amount_in_contra_ccy : float\n        The change in the instrument's price or market value caused by a one-\n        unit change in the price of the underlying asset, or by a 1bp change in\n        the swap rate for a swaption, or by a 100bp change in the outright for\n        a FX instrument. The value is expressed in the contra (quote) currency.\n    delta_amount_in_report_ccy : float\n        The change in the instrument's price or market value caused by a one-\n        unit change in the price of the underlying asset, or by a 1bp change in\n        the swap rate for a swaption, or by a 100bp change in the outright for\n        a FX instrument. The value is expressed in the reporting currency.\n    \n    \"\"\"\n    delta_percent: typing.Optional[float]\n    delta_amount_in_deal_ccy: typing.Optional[float]\n    delta_amount_in_contra_ccy: typing.Optional[float]\n    delta_amount_in_report_ccy: typing.Optional[float]",
+        "metadata": {
+            "doc": "The analytic fields that are linked to a risk analysis of the instrument.\n\n    Attributes\n    ----------\n    delta_percent : float\n        The percentage change in the instrument's price or market value caused\n        by a one-unit change in the price of the underlying asset, or by a 1bp\n        change in the swap rate for a swaption, or by a 100bp change in the\n        outright for a FX instrument.\n    delta_amount_in_deal_ccy : float\n        The change in the instrument's price or market value caused by a one-\n        unit change in the price of the underlying asset, or by a 1bp change in\n        the swap rate for a swaption, or by a 100bp change in the outright for\n        a FX instrument. The value is expressed in the deal currency.\n    delta_amount_in_contra_ccy : float\n        The change in the instrument's price or market value caused by a one-\n        unit change in the price of the underlying asset, or by a 1bp change in\n        the swap rate for a swaption, or by a 100bp change in the outright for\n        a FX instrument. The value is expressed in the contra (quote) currency.\n    delta_amount_in_report_ccy : float\n        The change in the instrument's price or market value caused by a one-\n        unit change in the price of the underlying asset, or by a 1bp change in\n        the swap rate for a swaption, or by a 100bp change in the outright for\n        a FX instrument. The value is expressed in the reporting currency.\n    \n",
+            "annotations": "    delta_percent: typing.Optional[float]\n    delta_amount_in_deal_ccy: typing.Optional[float]\n    delta_amount_in_contra_ccy: typing.Optional[float]\n    delta_amount_in_report_ccy: typing.Optional[float]",
+            "signature": "class FxSpotRisk:\n    \"\"\"\"\"\"\n    delta_percent: typing.Optional[float]\n    delta_amount_in_deal_ccy: typing.Optional[float]\n    delta_amount_in_contra_ccy: typing.Optional[float]\n    delta_amount_in_report_ccy: typing.Optional[float]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxSpotRisk.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [
+                "lseg_analytics.instruments.fx_spots.FxRisk"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxSpotRisk.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotRisk.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5727,
+        "content": "class FxSpotRisk:\n    @overload\n    def __init__(self, *, delta_percent: Optional[float] = None, delta_amount_in_deal_ccy: Optional[float] = None, delta_amount_in_contra_ccy: Optional[float] = None, delta_amount_in_report_ccy: Optional[float] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxSpotRisk"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpotRisk"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxSpotValuation",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotValuation",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "market_value_in_deal_ccy",
+                "type": "float"
+            },
+            {
+                "name": "market_value_in_contra_ccy",
+                "type": "float"
+            },
+            {
+                "name": "market_value_in_report_ccy",
+                "type": "float"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5731,
+        "content": "class FxSpotValuation:\n    \"\"\"The analytic fields that are linked to a post-trade analysis of the instrument.\n\n    Attributes\n    ----------\n    market_value_in_deal_ccy : float\n        The market value of the instrument in the deal currency.\n    market_value_in_contra_ccy : float\n        The market value of the instrument in the contra (quote) currency.\n    market_value_in_report_ccy : float\n        The present value of the future cash flow in the reporting currency.\n    \n    \"\"\"\n    market_value_in_deal_ccy: typing.Optional[float]\n    market_value_in_contra_ccy: typing.Optional[float]\n    market_value_in_report_ccy: typing.Optional[float]",
+        "metadata": {
+            "doc": "The analytic fields that are linked to a post-trade analysis of the instrument.\n\n    Attributes\n    ----------\n    market_value_in_deal_ccy : float\n        The market value of the instrument in the deal currency.\n    market_value_in_contra_ccy : float\n        The market value of the instrument in the contra (quote) currency.\n    market_value_in_report_ccy : float\n        The present value of the future cash flow in the reporting currency.\n    \n",
+            "annotations": "    market_value_in_deal_ccy: typing.Optional[float]\n    market_value_in_contra_ccy: typing.Optional[float]\n    market_value_in_report_ccy: typing.Optional[float]",
+            "signature": "class FxSpotValuation:\n    \"\"\"\"\"\"\n    market_value_in_deal_ccy: typing.Optional[float]\n    market_value_in_contra_ccy: typing.Optional[float]\n    market_value_in_report_ccy: typing.Optional[float]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxSpotValuation.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [
+                "lseg_analytics.instruments.fx_spots.FxValuation"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxSpotValuation.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxSpotValuation.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5762,
+        "content": "class FxSpotValuation:\n    @overload\n    def __init__(self, *, market_value_in_deal_ccy: Optional[float] = None, market_value_in_contra_ccy: Optional[float] = None, market_value_in_report_ccy: Optional[float] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxSpotValuation"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxSpotValuation"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FxValuation",
+        "id": "lseg_analytics.instruments.fx_spots.FxValuation",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "market_value_in_deal_ccy",
+                "type": "float"
+            },
+            {
+                "name": "market_value_in_contra_ccy",
+                "type": "float"
+            },
+            {
+                "name": "market_value_in_report_ccy",
+                "type": "float"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4554,
+        "content": "class FxValuation:\n    \"\"\"The analytics fields that are linked to a post-trade analysis of the instrument.\n\n    Attributes\n    ----------\n    market_value_in_deal_ccy : float\n        The market value of the instrument in the deal currency.\n    market_value_in_contra_ccy : float\n        The market value of the instrument in the contra (quote) currency.\n    market_value_in_report_ccy : float\n        The present value of the future cash flow in the reporting currency.\n    \n    \"\"\"\n    market_value_in_deal_ccy: typing.Optional[float]\n    market_value_in_contra_ccy: typing.Optional[float]\n    market_value_in_report_ccy: typing.Optional[float]",
+        "metadata": {
+            "doc": "The analytics fields that are linked to a post-trade analysis of the instrument.\n\n    Attributes\n    ----------\n    market_value_in_deal_ccy : float\n        The market value of the instrument in the deal currency.\n    market_value_in_contra_ccy : float\n        The market value of the instrument in the contra (quote) currency.\n    market_value_in_report_ccy : float\n        The present value of the future cash flow in the reporting currency.\n    \n",
+            "annotations": "    market_value_in_deal_ccy: typing.Optional[float]\n    market_value_in_contra_ccy: typing.Optional[float]\n    market_value_in_report_ccy: typing.Optional[float]",
+            "signature": "class FxValuation:\n    \"\"\"\"\"\"\n    market_value_in_deal_ccy: typing.Optional[float]\n    market_value_in_contra_ccy: typing.Optional[float]\n    market_value_in_report_ccy: typing.Optional[float]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.FxValuation.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": [
+                "lseg_analytics.instruments.fx_forwards.FxForwardValuation",
+                "lseg_analytics.instruments.fx_spots.FxSpotValuation"
+            ]
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FxValuation.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.FxValuation.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 4592,
+        "content": "class FxValuation:\n    @overload\n    def __init__(self, *, market_value_in_deal_ccy: Optional[float] = None, market_value_in_contra_ccy: Optional[float] = None, market_value_in_report_ccy: Optional[float] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FxValuation"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.FxValuation"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "MarketDataInput",
+        "id": "lseg_analytics.instruments.fx_spots.MarketDataInput",
+        "params": [
+            {
+                "name": "fx_forward_curves",
+                "type": "List[FxForwardCurveAsMarketDataInput]"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6661,
+        "content": "class MarketDataInput:\n    \"\"\"An object defining market data to be used to compute the analytics.\n\n    Attributes\n    ----------\n    fx_forward_curves : list[~analyticsapi.models.FxForwardCurveAsMarketDataInput]\n        Object describing the FX forward curve used for the calculation. An\n        array of FxForward curve inputs.\n    \n    \"\"\"\n    fx_forward_curves: typing.Optional[typing.List[ForwardRef('_models.FxForwardCurveAsMarketDataInput')]]",
+        "metadata": {
+            "doc": "An object defining market data to be used to compute the analytics.\n\n    Attributes\n    ----------\n    fx_forward_curves : list[~analyticsapi.models.FxForwardCurveAsMarketDataInput]\n        Object describing the FX forward curve used for the calculation. An\n        array of FxForward curve inputs.\n    \n",
+            "annotations": "    fx_forward_curves: typing.Optional[typing.List[ForwardRef('_models.FxForwardCurveAsMarketDataInput')]]",
+            "signature": "class MarketDataInput:\n    \"\"\"\"\"\"\n    fx_forward_curves: typing.Optional[typing.List[ForwardRef('_models.FxForwardCurveAsMarketDataInput')]]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.MarketDataInput.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveAsMarketDataInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "MarketDataInput.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.MarketDataInput.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6690,
+        "content": "class MarketDataInput:\n    @overload\n    def __init__(self, fx_forward_curves: Optional[List[ForwardRef('_models.FxForwardCurveAsMarketDataInput')]] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "MarketDataInput"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.MarketDataInput"
+            ],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxForwardCurveAsMarketDataInput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "PricingParameters",
+        "id": "lseg_analytics.instruments.fx_spots.PricingParameters",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "valuation_date",
+                "type": "date"
+            },
+            {
+                "name": "fx_pricing_preferences",
+                "type": "FxPricingPreferences"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6849,
+        "content": "class PricingParameters:\n    \"\"\"Base cross asset calculation parameters.\n\n    Attributes\n    ----------\n    valuation_date : ~datetime.date\n        The date at which the instrument is valued. The value is expressed in\n        ISO 8601 format: YYYY-MM-DD (e.g., '2021-01-01'). Dates after the\n        current date are not valid.\n    fx_pricing_preferences : ~analyticsapi.models.FxPricingPreferences\n        An object describing the fx calculation parameters.\n    \n    \"\"\"\n    valuation_date: typing.Optional[datetime.date]\n    fx_pricing_preferences: typing.Optional[ForwardRef('_models.FxPricingPreferences')]",
+        "metadata": {
+            "doc": "Base cross asset calculation parameters.\n\n    Attributes\n    ----------\n    valuation_date : ~datetime.date\n        The date at which the instrument is valued. The value is expressed in\n        ISO 8601 format: YYYY-MM-DD (e.g., '2021-01-01'). Dates after the\n        current date are not valid.\n    fx_pricing_preferences : ~analyticsapi.models.FxPricingPreferences\n        An object describing the fx calculation parameters.\n    \n",
+            "annotations": "    valuation_date: typing.Optional[datetime.date]\n    fx_pricing_preferences: typing.Optional[ForwardRef('_models.FxPricingPreferences')]",
+            "signature": "class PricingParameters:\n    \"\"\"\"\"\"\n    valuation_date: typing.Optional[datetime.date]\n    fx_pricing_preferences: typing.Optional[ForwardRef('_models.FxPricingPreferences')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.instruments.fx_spots.PricingParameters.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxPricingPreferences"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "PricingParameters.__init__",
+        "id": "lseg_analytics.instruments.fx_spots.PricingParameters.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6885,
+        "content": "class PricingParameters:\n    @overload\n    def __init__(self, *, valuation_date: Optional[datetime.date] = None, fx_pricing_preferences: Optional[ForwardRef('_models.FxPricingPreferences')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "PricingParameters"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.instruments.fx_spots.PricingParameters"
+            ],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxPricingPreferences"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "FunctionChunk",
+        "name": "delete",
+        "id": "lseg_analytics.instruments.fx_spots.delete",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "resource_id",
+                "type": "str",
+                "valuelookup": "FxSpot.id"
+            },
+            {
+                "name": "name",
+                "type": "str",
+                "valuelookup": "FxSpot.name"
+            },
+            {
+                "name": "space",
+                "type": "str",
+                "valuelookup": "FxSpot.space"
+            }
+        ],
+        "file_path": "lseg_analytics/instruments/fx_spots/_functions.py",
+        "line_number": 159,
+        "content": "def delete(*, resource_id: Optional[str] = None, name: Optional[str] = None, space: Optional[str] = None):\n    \"\"\"\n    Delete FxSpot instance from the server.\n\n    Parameters\n    ----------\n    resource_id : str, optional\n        The FxSpot resource ID.\n        Required if name is not provided.\n    name : str, optional\n        The FxSpot name.\n        Required if resource_id is not provided.\n    space : str, optional\n        The space where the FxSpot is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n        LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n\n    Returns\n    -------\n    ServiceErrorResponse, optional\n        Error response, if applicable, otherwise None\n\n    Examples\n    --------\n    Delete by Id.\n\n    >>> delete(resource_id=\"5125e2a4-f7db-48dd-ab35-7d05d6886be8\")\n    True\n\n    Delete by name and space.\n\n    >>> delete(name=\"myFxSpot\", space=\"MySpace\")\n    True\n\n    \n    \"\"\"",
+        "metadata": {
+            "doc": "\n    Delete FxSpot instance from the server.\n\n    Parameters\n    ----------\n    resource_id : str, optional\n        The FxSpot resource ID.\n        Required if name is not provided.\n    name : str, optional\n        The FxSpot name.\n        Required if resource_id is not provided.\n    space : str, optional\n        The space where the FxSpot is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n        LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n\n    Returns\n    -------\n    ServiceErrorResponse, optional\n        Error response, if applicable, otherwise None\n\n    Examples\n    --------\n    Delete by Id.\n\n    >>> delete(resource_id=\"5125e2a4-f7db-48dd-ab35-7d05d6886be8\")\n    True\n\n    Delete by name and space.\n\n    >>> delete(name=\"myFxSpot\", space=\"MySpace\")\n    True\n\n    \n",
+            "signature": "def delete(*, resource_id: Optional[str] = None, name: Optional[str] = None, space: Optional[str] = None):"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "FunctionChunk",
+        "name": "load",
+        "id": "lseg_analytics.instruments.fx_spots.load",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "resource_id",
+                "type": "str",
+                "valuelookup": "FxSpot.id"
+            },
+            {
+                "name": "name",
+                "type": "str",
+                "valuelookup": "FxSpot.name"
+            },
+            {
+                "name": "space",
+                "type": "str",
+                "valuelookup": "FxSpot.space"
+            }
+        ],
+        "file_path": "lseg_analytics/instruments/fx_spots/_functions.py",
+        "line_number": 99,
+        "content": "def load(*, resource_id: Optional[str] = None, name: Optional[str] = None, space: Optional[str] = None):\n    \"\"\"\n    Load a FxSpot using its name and space\n\n    Parameters\n    ----------\n    resource_id : str, optional\n        The FxSpot id.\n        Required if name is not provided.\n    name : str, optional\n        The FxSpot name.\n        Required if resource_id is not provided. The name parameter must be specified when the object is first created. Thereafter it is optional.\n    space : str, optional\n        The space where the FxSpot is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n        LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n\n    Returns\n    -------\n    FxSpot\n        The FxSpot instance.\n\n    Examples\n    --------\n    Load by Id.\n\n    >>> load(resource_id=\"94da9f98-343f-4dca-9b34-479987060f91\")\n    <FxSpot space='test' name='Test_ToDelete' 94da9f98\u2025>\n\n    Load by name and space.\n\n    >>> load(name=\"myFxSpot\", space=\"MySpace\")\n    <FxSpot space='test' name='Test_ToDelete' 94da9f98\u2025>\n\n    \n    \"\"\"",
+        "metadata": {
+            "doc": "\n    Load a FxSpot using its name and space\n\n    Parameters\n    ----------\n    resource_id : str, optional\n        The FxSpot id.\n        Required if name is not provided.\n    name : str, optional\n        The FxSpot name.\n        Required if resource_id is not provided. The name parameter must be specified when the object is first created. Thereafter it is optional.\n    space : str, optional\n        The space where the FxSpot is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n        LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n\n    Returns\n    -------\n    FxSpot\n        The FxSpot instance.\n\n    Examples\n    --------\n    Load by Id.\n\n    >>> load(resource_id=\"94da9f98-343f-4dca-9b34-479987060f91\")\n    <FxSpot space='test' name='Test_ToDelete' 94da9f98\u2025>\n\n    Load by name and space.\n\n    >>> load(name=\"myFxSpot\", space=\"MySpace\")\n    <FxSpot space='test' name='Test_ToDelete' 94da9f98\u2025>\n\n    \n",
+            "signature": "def load(*, resource_id: Optional[str] = None, name: Optional[str] = None, space: Optional[str] = None):"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "FunctionChunk",
+        "name": "search",
+        "id": "lseg_analytics.instruments.fx_spots.search",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "item_per_page",
+                "type": "int"
+            },
+            {
+                "name": "names",
+                "type": "List[str]",
+                "valuelookup": "FxSpot.name"
+            },
+            {
+                "name": "spaces",
+                "type": "List[str]",
+                "valuelookup": "FxSpot.space"
+            },
+            {
+                "name": "tags",
+                "type": "List[str]"
+            }
+        ],
+        "file_path": "lseg_analytics/instruments/fx_spots/_functions.py",
+        "line_number": 285,
+        "content": "def search(*, item_per_page: Optional[int] = None, names: Optional[List[str]] = None, spaces: Optional[List[str]] = None, tags: Optional[List[str]] = None) -> List[FxSpotAsCollectionItem]:\n    \"\"\"\n    Search resources via combination of name, space and tags\n\n    Parameters\n    ----------\n    item_per_page : int, optional\n        The maximum number of items for each search request. The valid range is 1-500. If not provided, 50 will be used.\n    names : List[str], optional\n        The list of resource names to be searched. Exact match is applied for each name.\n    spaces : List[str], optional\n        The space where the resource is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n        LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n    tags : List[str], optional\n        The list of resource tags to be searched.\n\n    Returns\n    --------\n    List[FxSpotAsCollectionItem]\n        An object describing the basic properties of an FX spot.\n\n    Examples\n    --------\n    Search all previously saved FxSpots.\n\n    >>> search()\n    [{'type': 'FxSpot', 'id': '94da9f98-343f-4dca-9b34-479987060f91', 'description': {'tags': ['USDEUR'], 'summary': 'USDEUR Spot rate'}, 'location': {'name': 'USDEUR', 'space': 'MYSPOT'}}]\n\n    Search by names and spaces.\n\n    >>> search(names=[\"USDEUR\"], spaces=[\"MYSPOT\"])\n    [{'type': 'FxSpot', 'id': '94da9f98-343f-4dca-9b34-479987060f91', 'description': {'tags': ['USDEUR'], 'summary': 'USDEUR Spot rate'}, 'location': {'name': 'USDEUR', 'space': 'MYSPOT'}}]\n\n    Search by names.\n\n    >>> search(names=[\"USDEUR\"])\n    [{'type': 'FxSpot', 'id': '94da9f98-343f-4dca-9b34-479987060f91', 'description': {'tags': ['USDEUR'], 'summary': 'USDEUR Spot rate'}, 'location': {'name': 'USDEUR', 'space': 'MYSPOT'}}]\n\n    Search by spaces.\n\n    >>> search(spaces=[\"MYSPOT\"])\n    [{'type': 'FxSpot', 'id': '94da9f98-343f-4dca-9b34-479987060f91', 'description': {'tags': ['USDEUR'], 'summary': 'USDEUR Spot rate'}, 'location': {'name': 'USDEUR', 'space': 'MYSPOT'}}]\n\n    Search by tags.\n\n    >>> search(tags=[\"USDEUR\"])\n    [{'type': 'FxSpot', 'id': '94da9f98-343f-4dca-9b34-479987060f91', 'description': {'tags': ['USDEUR'], 'summary': 'USDEUR Spot rate'}, 'location': {'name': 'USDEUR', 'space': 'MYSPOT'}}]\n\n    \n    \"\"\"",
+        "metadata": {
+            "doc": "\n    Search resources via combination of name, space and tags\n\n    Parameters\n    ----------\n    item_per_page : int, optional\n        The maximum number of items for each search request. The valid range is 1-500. If not provided, 50 will be used.\n    names : List[str], optional\n        The list of resource names to be searched. Exact match is applied for each name.\n    spaces : List[str], optional\n        The space where the resource is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n        LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n    tags : List[str], optional\n        The list of resource tags to be searched.\n\n    Returns\n    --------\n    List[FxSpotAsCollectionItem]\n        An object describing the basic properties of an FX spot.\n\n    Examples\n    --------\n    Search all previously saved FxSpots.\n\n    >>> search()\n    [{'type': 'FxSpot', 'id': '94da9f98-343f-4dca-9b34-479987060f91', 'description': {'tags': ['USDEUR'], 'summary': 'USDEUR Spot rate'}, 'location': {'name': 'USDEUR', 'space': 'MYSPOT'}}]\n\n    Search by names and spaces.\n\n    >>> search(names=[\"USDEUR\"], spaces=[\"MYSPOT\"])\n    [{'type': 'FxSpot', 'id': '94da9f98-343f-4dca-9b34-479987060f91', 'description': {'tags': ['USDEUR'], 'summary': 'USDEUR Spot rate'}, 'location': {'name': 'USDEUR', 'space': 'MYSPOT'}}]\n\n    Search by names.\n\n    >>> search(names=[\"USDEUR\"])\n    [{'type': 'FxSpot', 'id': '94da9f98-343f-4dca-9b34-479987060f91', 'description': {'tags': ['USDEUR'], 'summary': 'USDEUR Spot rate'}, 'location': {'name': 'USDEUR', 'space': 'MYSPOT'}}]\n\n    Search by spaces.\n\n    >>> search(spaces=[\"MYSPOT\"])\n    [{'type': 'FxSpot', 'id': '94da9f98-343f-4dca-9b34-479987060f91', 'description': {'tags': ['USDEUR'], 'summary': 'USDEUR Spot rate'}, 'location': {'name': 'USDEUR', 'space': 'MYSPOT'}}]\n\n    Search by tags.\n\n    >>> search(tags=[\"USDEUR\"])\n    [{'type': 'FxSpot', 'id': '94da9f98-343f-4dca-9b34-479987060f91', 'description': {'tags': ['USDEUR'], 'summary': 'USDEUR Spot rate'}, 'location': {'name': 'USDEUR', 'space': 'MYSPOT'}}]\n\n    \n",
+            "signature": "def search(*, item_per_page: Optional[int] = None, names: Optional[List[str]] = None, spaces: Optional[List[str]] = None, tags: Optional[List[str]] = None) -> List[FxSpotAsCollectionItem]:"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": [
+                "lseg_analytics.instruments.fx_spots.FxSpotAsCollectionItem"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.instruments.fx_spots",
+        "module_version": "1.0.0b9.post2"
+    }
+]

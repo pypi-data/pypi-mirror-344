@@ -1,0 +1,2240 @@
+[
+    {
+        "type": "ClassChunk",
+        "name": "AbsolutePositionWhen",
+        "id": "lseg_analytics.reference_data.calendars.AbsolutePositionWhen",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "day_of_month",
+                "type": "int"
+            },
+            {
+                "name": "month",
+                "type": "Month",
+                "valuelookup": "enum.Month"
+            },
+            {
+                "name": "observance",
+                "type": "List[Observance]"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 87,
+        "content": "class AbsolutePositionWhen:\n    \"\"\"An absolute position annual holiday rule. For example, New Year holiday on 1st Jan.\n\n    Attributes\n    ----------\n    position_type : str or ~analyticsapi.models.ABSOLUTE_POSITION_WHEN\n        The type of regular annual holiday rule. Only AbsolutePositionWhen\n        value applies. Required. The holiday is on a fixed date. For example,\n        New Year holiday on January 1.\n    day_of_month : int\n        The number of the day of the month. The minimum value is 0 (a special\n        case indicating western Easter). The maximum value is 31. Required.\n    month : str or ~analyticsapi.models.Month\n        The month of the year, written in full (e.g. January). Known values\n        are: \"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\",\n        \"August\", \"September\", \"October\", \"November\", and \"December\".\n    observance : list[~analyticsapi.models.Observance]\n        An array of objects to determine how the holiday is rescheduled if it\n        falls on a rest day.\n    \n    \"\"\"\n    position_type: typing.Literal[<PositionType.ABSOLUTE_POSITION_WHEN: 'AbsolutePositionWhen'>]\n    day_of_month: int\n    month: typing.Union[str, ForwardRef('_models.Month'), NoneType]\n    observance: typing.Optional[typing.List[ForwardRef('_models.Observance')]]",
+        "metadata": {
+            "doc": "An absolute position annual holiday rule. For example, New Year holiday on 1st Jan.\n\n    Attributes\n    ----------\n    position_type : str or ~analyticsapi.models.ABSOLUTE_POSITION_WHEN\n        The type of regular annual holiday rule. Only AbsolutePositionWhen\n        value applies. Required. The holiday is on a fixed date. For example,\n        New Year holiday on January 1.\n    day_of_month : int\n        The number of the day of the month. The minimum value is 0 (a special\n        case indicating western Easter). The maximum value is 31. Required.\n    month : str or ~analyticsapi.models.Month\n        The month of the year, written in full (e.g. January). Known values\n        are: \"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\",\n        \"August\", \"September\", \"October\", \"November\", and \"December\".\n    observance : list[~analyticsapi.models.Observance]\n        An array of objects to determine how the holiday is rescheduled if it\n        falls on a rest day.\n    \n",
+            "annotations": "    position_type: typing.Literal[<PositionType.ABSOLUTE_POSITION_WHEN: 'AbsolutePositionWhen'>]\n    day_of_month: int\n    month: typing.Union[str, ForwardRef('_models.Month'), NoneType]\n    observance: typing.Optional[typing.List[ForwardRef('_models.Observance')]]",
+            "signature": "class AbsolutePositionWhen:\n    \"\"\"\"\"\"\n    position_type: typing.Literal[<PositionType.ABSOLUTE_POSITION_WHEN: 'AbsolutePositionWhen'>]\n    day_of_month: int\n    month: typing.Union[str, ForwardRef('_models.Month'), NoneType]\n    observance: typing.Optional[typing.List[ForwardRef('_models.Observance')]]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.AbsolutePositionWhen.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.Month",
+                "lseg_analytics.reference_data.calendars.Observance"
+            ],
+            "base_classes": [
+                "lseg_analytics.reference_data.calendars.When"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "AbsolutePositionWhen.__init__",
+        "id": "lseg_analytics.reference_data.calendars.AbsolutePositionWhen.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 139,
+        "content": "class AbsolutePositionWhen:\n    @overload\n    def __init__(self, *, day_of_month: int, month: Union[str, ForwardRef('_models.Month'), NoneType] = None, observance: Optional[List[ForwardRef('_models.Observance')]] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "AbsolutePositionWhen"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.AbsolutePositionWhen"
+            ],
+            "use": [
+                "lseg_analytics.common.Month",
+                "lseg_analytics.reference_data.calendars.Observance"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "CalculateDatesOutput",
+        "id": "lseg_analytics.reference_data.calendars.CalculateDatesOutput",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "tenor",
+                "type": "str",
+                "valuelookup": "tenors"
+            },
+            {
+                "name": "end_date",
+                "type": "date"
+            },
+            {
+                "name": "processing_information",
+                "type": "str"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 513,
+        "content": "class CalculateDatesOutput:\n    \"\"\"The result of the date calculation.\n\n    Attributes\n    ----------\n    tenor : str\n        The code indicating the tenor added to startDate to calculate the\n        resulted date (e.g., 1Y).\n    end_date : ~datetime.date\n        The date produced by the calculation. The value is expressed in ISO\n        8601 format: YYYY-MM-DD (e.g., 2024-01-01).\n    processing_information : str\n        The error message for the calculation in case of a non-blocking error.\n    \n    \"\"\"\n    tenor: typing.Optional[str]\n    end_date: typing.Optional[datetime.date]\n    processing_information: typing.Optional[str]",
+        "metadata": {
+            "doc": "The result of the date calculation.\n\n    Attributes\n    ----------\n    tenor : str\n        The code indicating the tenor added to startDate to calculate the\n        resulted date (e.g., 1Y).\n    end_date : ~datetime.date\n        The date produced by the calculation. The value is expressed in ISO\n        8601 format: YYYY-MM-DD (e.g., 2024-01-01).\n    processing_information : str\n        The error message for the calculation in case of a non-blocking error.\n    \n",
+            "annotations": "    tenor: typing.Optional[str]\n    end_date: typing.Optional[datetime.date]\n    processing_information: typing.Optional[str]",
+            "signature": "class CalculateDatesOutput:\n    \"\"\"\"\"\"\n    tenor: typing.Optional[str]\n    end_date: typing.Optional[datetime.date]\n    processing_information: typing.Optional[str]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.CalculateDatesOutput.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "CalculateDatesOutput.__init__",
+        "id": "lseg_analytics.reference_data.calendars.CalculateDatesOutput.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 554,
+        "content": "class CalculateDatesOutput:\n    @overload\n    def __init__(self, *, tenor: Optional[str] = None, end_date: Optional[datetime.date] = None, processing_information: Optional[str] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "CalculateDatesOutput"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.CalculateDatesOutput"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "Calendar",
+        "id": "lseg_analytics.reference_data.calendars.Calendar",
+        "params": [
+            {
+                "name": "definition",
+                "type": "CalendarDefinition"
+            },
+            {
+                "name": "description",
+                "type": "Description"
+            }
+        ],
+        "file_path": "lseg_analytics/reference_data/calendars/_calendar.py",
+        "line_number": 32,
+        "content": "class Calendar:\n    \"\"\"\n    Calendar object.\n\n    Contains all the necessary information to identify and define a Calendar instance.\n\n    Attributes\n    ----------\n    type : Union[str, ResourceType], optional\n        The resource type. Possible values are: Calendar, Currency, CrossCurrency, IrCurve, FxForwardCurve, Analytics, Loan, FxSpot, NonDeliverableForward, Deposit, CrossCurrencySwap or Space.\n    id : str, optional\n        A resource ID is the unique resource identifier for an object on the platform. The resource ID is created on saving. IDs are read-only.\n    location : Location\n        Name and space are location attributes, which are automatically set when a resource object is saved for the first time. Unsaved resources have thier name and space set to None. Location attributes are read-only.\n    description : Description, optional\n        Description object that contains the resource summary and tags.\n    definition : CalendarDefinition\n        Calendar definition object that contains rest days, first day of week, holiday rules and holiday exception rules.\n\n    See Also\n    --------\n    Calendar.generateHolidays : Gets the holidays for the calendar within a date range. Start and End Dates are included in the calculation. Only saved calendars are supported.\n    Calendar.computeDates : Computes dates for the calendar according to specified conditions. Start Date is included in the calculation. Only saved calendars are supported.\n    Calendar.generateDateSchedule : Generates a date schedule for the calendar according to specified conditions. Start and End Dates are included in the calculation. Only saved calendars are supported.\n    Calendar.countPeriods : Counts the time periods that satisfy specified conditions. Note the use of date strings for convenience. Start and End Dates are included in the calculation. Only saved calendars are supported.\n\n    Examples\n    --------\n    Create a calendar instance with parameter.\n\n    >>> my_cal_definition = CalendarDefinition(rest_days=[\n    >>>                     RestDays(\n    >>>                         rest_days=[WeekDay.SATURDAY, WeekDay.SUNDAY],\n    >>>                         validity_period=ValidityPeriod(\n    >>>                             start_date=\"2024-01-01\",\n    >>>                             end_date=\"2024-12-31\",\n    >>>                         ),\n    >>>                     )\n    >>>                 ],\n    >>>                     first_day_of_week=WeekDay.FRIDAY,\n    >>>                     holiday_rules=[\n    >>>                     HolidayRule(\n    >>>                         name=\"New Year's Day\",\n    >>>                         duration=FullDayDuration(full_day=1),\n    >>>                         validity_period=ValidityPeriod(\n    >>>                             start_date=\"2024-01-01\",\n    >>>                             end_date=\"2024-12-31\",\n    >>>                         ),\n    >>>                         when=AbsolutePositionWhen(day_of_month=1, month=Month.JANUARY),\n    >>>                     ),\n    >>>                 ]\n    >>>                 )\n    >>> my_cal = Calendar(definition=my_cal_definition)\n\n    Save the instance with name and space.\n\n    >>> my_cal.save(name=\"my_calendar\", space=\"my_personal_space\")\n    True\n\n    \n    \"\"\"\n",
+        "metadata": {
+            "doc": "\n    Calendar object.\n\n    Contains all the necessary information to identify and define a Calendar instance.\n\n    Attributes\n    ----------\n    type : Union[str, ResourceType], optional\n        The resource type. Possible values are: Calendar, Currency, CrossCurrency, IrCurve, FxForwardCurve, Analytics, Loan, FxSpot, NonDeliverableForward, Deposit, CrossCurrencySwap or Space.\n    id : str, optional\n        A resource ID is the unique resource identifier for an object on the platform. The resource ID is created on saving. IDs are read-only.\n    location : Location\n        Name and space are location attributes, which are automatically set when a resource object is saved for the first time. Unsaved resources have thier name and space set to None. Location attributes are read-only.\n    description : Description, optional\n        Description object that contains the resource summary and tags.\n    definition : CalendarDefinition\n        Calendar definition object that contains rest days, first day of week, holiday rules and holiday exception rules.\n\n    See Also\n    --------\n    Calendar.generateHolidays : Gets the holidays for the calendar within a date range. Start and End Dates are included in the calculation. Only saved calendars are supported.\n    Calendar.computeDates : Computes dates for the calendar according to specified conditions. Start Date is included in the calculation. Only saved calendars are supported.\n    Calendar.generateDateSchedule : Generates a date schedule for the calendar according to specified conditions. Start and End Dates are included in the calculation. Only saved calendars are supported.\n    Calendar.countPeriods : Counts the time periods that satisfy specified conditions. Note the use of date strings for convenience. Start and End Dates are included in the calculation. Only saved calendars are supported.\n\n    Examples\n    --------\n    Create a calendar instance with parameter.\n\n    >>> my_cal_definition = CalendarDefinition(rest_days=[\n    >>>                     RestDays(\n    >>>                         rest_days=[WeekDay.SATURDAY, WeekDay.SUNDAY],\n    >>>                         validity_period=ValidityPeriod(\n    >>>                             start_date=\"2024-01-01\",\n    >>>                             end_date=\"2024-12-31\",\n    >>>                         ),\n    >>>                     )\n    >>>                 ],\n    >>>                     first_day_of_week=WeekDay.FRIDAY,\n    >>>                     holiday_rules=[\n    >>>                     HolidayRule(\n    >>>                         name=\"New Year's Day\",\n    >>>                         duration=FullDayDuration(full_day=1),\n    >>>                         validity_period=ValidityPeriod(\n    >>>                             start_date=\"2024-01-01\",\n    >>>                             end_date=\"2024-12-31\",\n    >>>                         ),\n    >>>                         when=AbsolutePositionWhen(day_of_month=1, month=Month.JANUARY),\n    >>>                     ),\n    >>>                 ]\n    >>>                 )\n    >>> my_cal = Calendar(definition=my_cal_definition)\n\n    Save the instance with name and space.\n\n    >>> my_cal.save(name=\"my_calendar\", space=\"my_personal_space\")\n    True\n\n    \n",
+            "annotations": "",
+            "signature": "class Calendar:\n    \"\"\"\"\"\"\n"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.Calendar.__init__",
+                "lseg_analytics.reference_data.calendars.Calendar.id",
+                "lseg_analytics.reference_data.calendars.Calendar.location",
+                "lseg_analytics.reference_data.calendars.Calendar.compute_dates",
+                "lseg_analytics.reference_data.calendars.Calendar.count_periods",
+                "lseg_analytics.reference_data.calendars.Calendar.generate_date_schedule",
+                "lseg_analytics.reference_data.calendars.Calendar.generate_holidays",
+                "lseg_analytics.reference_data.calendars.Calendar.save",
+                "lseg_analytics.reference_data.calendars.Calendar.clone"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "MethodChunk",
+        "name": "Calendar.__init__",
+        "id": "lseg_analytics.reference_data.calendars.Calendar.__init__",
+        "params": [
+            {
+                "name": "definition",
+                "type": "CalendarDefinition"
+            },
+            {
+                "name": "description",
+                "type": "Description"
+            }
+        ],
+        "file_path": "lseg_analytics/reference_data/calendars/_calendar.py",
+        "line_number": 95,
+        "content": "class Calendar:\n    def __init__(self, definition: CalendarDefinition, description: Optional[Description] = None):\n        \"\"\"\n        Calendar constructor\n\n        Parameters\n        ----------\n        definition : CalendarDefinition\n            Calendar definition object that contains rest days, first day of week, holiday rules and holiday exception rules.\n        description : Description, optional\n            Description object that contains the resource summary and tags.\n\n        Examples\n        --------\n        Create a calendar instance with parameter.\n\n        >>> my_cal_definition = CalendarDefinition(rest_days=[\n        >>>                     RestDays(\n        >>>                         rest_days=[WeekDay.SATURDAY, WeekDay.SUNDAY],\n        >>>                         validity_period=ValidityPeriod(\n        >>>                             start_date=\"2024-01-01\",\n        >>>                             end_date=\"2024-12-31\",\n        >>>                         ),\n        >>>                     )\n        >>>                 ],\n        >>>                     first_day_of_week=WeekDay.FRIDAY,\n        >>>                     holiday_rules=[\n        >>>                     HolidayRule(\n        >>>                         name=\"New Year's Day\",\n        >>>                         duration=FullDayDuration(full_day=1),\n        >>>                         validity_period=ValidityPeriod(\n        >>>                             start_date=\"2024-01-01\",\n        >>>                             end_date=\"2024-12-31\",\n        >>>                         ),\n        >>>                         when=AbsolutePositionWhen(day_of_month=1, month=Month.JANUARY),\n        >>>                     ),\n        >>>                 ]\n        >>>                 )\n        >>> my_cal = Calendar(definition=my_cal_definition)\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Calendar constructor\n\n        Parameters\n        ----------\n        definition : CalendarDefinition\n            Calendar definition object that contains rest days, first day of week, holiday rules and holiday exception rules.\n        description : Description, optional\n            Description object that contains the resource summary and tags.\n\n        Examples\n        --------\n        Create a calendar instance with parameter.\n\n        >>> my_cal_definition = CalendarDefinition(rest_days=[\n        >>>                     RestDays(\n        >>>                         rest_days=[WeekDay.SATURDAY, WeekDay.SUNDAY],\n        >>>                         validity_period=ValidityPeriod(\n        >>>                             start_date=\"2024-01-01\",\n        >>>                             end_date=\"2024-12-31\",\n        >>>                         ),\n        >>>                     )\n        >>>                 ],\n        >>>                     first_day_of_week=WeekDay.FRIDAY,\n        >>>                     holiday_rules=[\n        >>>                     HolidayRule(\n        >>>                         name=\"New Year's Day\",\n        >>>                         duration=FullDayDuration(full_day=1),\n        >>>                         validity_period=ValidityPeriod(\n        >>>                             start_date=\"2024-01-01\",\n        >>>                             end_date=\"2024-12-31\",\n        >>>                         ),\n        >>>                         when=AbsolutePositionWhen(day_of_month=1, month=Month.JANUARY),\n        >>>                     ),\n        >>>                 ]\n        >>>                 )\n        >>> my_cal = Calendar(definition=my_cal_definition)\n\n        \n",
+            "signature": "class Calendar:\n    def __init__(self, definition: CalendarDefinition, description: Optional[Description] = None):",
+            "class": "Calendar"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.Calendar"
+            ],
+            "use": [
+                "lseg_analytics.reference_data.calendars.CalendarDefinition",
+                "lseg_analytics.common.Description"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "PropertyChunk",
+        "name": "Calendar.id",
+        "id": "lseg_analytics.reference_data.calendars.Calendar.id",
+        "content": "class Calendar:\n    @property\n    def id(self):\n        \"\"\"\n        Returns the Calendar id\n\n        Parameters\n        ----------\n\n\n        Returns\n        --------\n        str\n            A resource ID is the unique resource identifier for an object on the platform. The resource ID is created on saving. IDs are read-only.\n\n        Examples\n        --------\n        Get the instance id.\n\n        >>> my_cal.id\n        '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF'\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Returns the Calendar id\n\n        Parameters\n        ----------\n\n\n        Returns\n        --------\n        str\n            A resource ID is the unique resource identifier for an object on the platform. The resource ID is created on saving. IDs are read-only.\n\n        Examples\n        --------\n        Get the instance id.\n\n        >>> my_cal.id\n        '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF'\n\n        \n",
+            "signature": "class Calendar:\n    def id(self):",
+            "class": "Calendar"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.Calendar"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "PropertyChunk",
+        "name": "Calendar.location",
+        "id": "lseg_analytics.reference_data.calendars.Calendar.location",
+        "content": "class Calendar:\n    @property\n    def location(self):\n        \"\"\"\n        Returns the Calendar location\n\n        Parameters\n        ----------\n\n\n        Returns\n        --------\n        Location\n            Name and space are location attributes, which are automatically set when a resource object is saved for the first time. Unsaved resources have thier name and space set to None. Location attributes are read-only.\n\n        Examples\n        --------\n        Get the location property.\n\n        >>> my_cal.location.name\n        'my_calendar'\n\n\n        >>> my_cal.location.space\n        'my_personal_space'\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Returns the Calendar location\n\n        Parameters\n        ----------\n\n\n        Returns\n        --------\n        Location\n            Name and space are location attributes, which are automatically set when a resource object is saved for the first time. Unsaved resources have thier name and space set to None. Location attributes are read-only.\n\n        Examples\n        --------\n        Get the location property.\n\n        >>> my_cal.location.name\n        'my_calendar'\n\n\n        >>> my_cal.location.space\n        'my_personal_space'\n\n        \n",
+            "signature": "class Calendar:\n    def location(self):",
+            "class": "Calendar"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.Calendar"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "MethodChunk",
+        "name": "Calendar.compute_dates",
+        "id": "lseg_analytics.reference_data.calendars.Calendar.compute_dates",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "tenors",
+                "type": "List[str]",
+                "valuelookup": "tenors"
+            },
+            {
+                "name": "start_date",
+                "type": "date"
+            },
+            {
+                "name": "date_moving_convention",
+                "type": "DateMovingConvention",
+                "valuelookup": "enum.DateMovingConvention"
+            }
+        ],
+        "file_path": "lseg_analytics/reference_data/calendars/_calendar.py",
+        "line_number": 204,
+        "content": "class Calendar:\n    def compute_dates(self, *, tenors: List[str], start_date: Union[str, datetime.date, NoneType] = None, date_moving_convention: Union[str, DateMovingConvention, NoneType] = None) -> List[CalculateDatesOutput]:\n        \"\"\"\n        Computes dates for the calendar according to specified conditions. Start Date is included in the calculation. Only saved calendars are supported.\n\n        Parameters\n        ----------\n        tenors : List[str]\n            Tenors to be added to startDate to calculate the resulted dates.\n            A tenor expresses a period of time using a specific syntax. For example \"1D\" for one day, \"2W\" for two weeks or \"3W1M\" for three weeks and a month.\n            There are common tenors like ON, TN, SN, SW, 1W, 2W, 1M, 2M, etc.\n        start_date : Union[str, datetime.date], optional\n            The start date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01). Default is Today.\n        date_moving_convention : Union[str, DateMovingConvention], optional\n            The method to adjust dates to working days.\n\n        Returns\n        --------\n        List[CalculateDatesOutput]\n            The result of the date calculation.\n\n        Examples\n        --------\n        >>> my_cal.compute_dates(start_date=\"2023-11-01\", date_moving_convention=DateMovingConvention.NEXT_BUSINESS_DAY, tenors=[\"1M\", \"2M\"])\n        [{'endDate': '2023-11-03', 'processingInformation': '<string>', 'tenor': '1M'},\n         {'endDate': '2023-12-03', 'processingInformation': '<string>', 'tenor': '2M'}]\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Computes dates for the calendar according to specified conditions. Start Date is included in the calculation. Only saved calendars are supported.\n\n        Parameters\n        ----------\n        tenors : List[str]\n            Tenors to be added to startDate to calculate the resulted dates.\n            A tenor expresses a period of time using a specific syntax. For example \"1D\" for one day, \"2W\" for two weeks or \"3W1M\" for three weeks and a month.\n            There are common tenors like ON, TN, SN, SW, 1W, 2W, 1M, 2M, etc.\n        start_date : Union[str, datetime.date], optional\n            The start date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01). Default is Today.\n        date_moving_convention : Union[str, DateMovingConvention], optional\n            The method to adjust dates to working days.\n\n        Returns\n        --------\n        List[CalculateDatesOutput]\n            The result of the date calculation.\n\n        Examples\n        --------\n        >>> my_cal.compute_dates(start_date=\"2023-11-01\", date_moving_convention=DateMovingConvention.NEXT_BUSINESS_DAY, tenors=[\"1M\", \"2M\"])\n        [{'endDate': '2023-11-03', 'processingInformation': '<string>', 'tenor': '1M'},\n         {'endDate': '2023-12-03', 'processingInformation': '<string>', 'tenor': '2M'}]\n\n        \n",
+            "signature": "class Calendar:\n    def compute_dates(self, *, tenors: List[str], start_date: Union[str, datetime.date, NoneType] = None, date_moving_convention: Union[str, DateMovingConvention, NoneType] = None) -> List[CalculateDatesOutput]:",
+            "class": "Calendar"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.Calendar"
+            ],
+            "use": [
+                "lseg_analytics.common.DateMovingConvention",
+                "lseg_analytics.reference_data.calendars.CalculateDatesOutput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "MethodChunk",
+        "name": "Calendar.count_periods",
+        "id": "lseg_analytics.reference_data.calendars.Calendar.count_periods",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "start_date",
+                "type": "date"
+            },
+            {
+                "name": "end_date",
+                "type": "date"
+            },
+            {
+                "name": "day_count_basis",
+                "type": "DayCountBasis",
+                "valuelookup": "enum.DayCountBasis"
+            },
+            {
+                "name": "period_type",
+                "type": "PeriodType",
+                "valuelookup": "enum.PeriodType"
+            }
+        ],
+        "file_path": "lseg_analytics/reference_data/calendars/_calendar.py",
+        "line_number": 258,
+        "content": "class Calendar:\n    def count_periods(self, *, start_date: Union[str, datetime.date], end_date: Union[str, datetime.date], day_count_basis: Union[str, DayCountBasis, NoneType] = None, period_type: Union[str, PeriodType, NoneType] = None) -> CountPeriodsOutput:\n        \"\"\"\n        Counts the time periods that satisfy specified conditions. Note the use of date strings for convenience. Start and End Dates are included in the calculation. Only saved calendars are supported.\n\n        Parameters\n        ----------\n        start_date : Union[str, datetime.date]\n            Start date for counting periods. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01).\n        end_date : Union[str, datetime.date]\n            End date for counting periods. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2024-01-01).\n        day_count_basis : Union[str, DayCountBasis], optional\n            The day count basis convention used to calculate the period between two dates. Default is Actual/Actual.\n            It is used when periodType is set to Year.\n            Each convention defines the number of days between two dates and the year length in days (basis) for the period calculation.\n        period_type : Union[str, PeriodType], optional\n            The method of the period calculation. Default is Day.\n\n        Returns\n        --------\n        CountPeriodsOutput\n            The result of the period calculation.\n\n        Examples\n        --------\n        >>> my_cal.count_periods(start_date=\"2020-01-01\", end_date=\"2021-01-01\", day_count_basis=DayCountBasis.DCB_30_360, period_type=PeriodType.DAY)\n        {'count': 13.0, 'periodType': 'WorkingDay', 'processingInformation': ''}\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Counts the time periods that satisfy specified conditions. Note the use of date strings for convenience. Start and End Dates are included in the calculation. Only saved calendars are supported.\n\n        Parameters\n        ----------\n        start_date : Union[str, datetime.date]\n            Start date for counting periods. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01).\n        end_date : Union[str, datetime.date]\n            End date for counting periods. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2024-01-01).\n        day_count_basis : Union[str, DayCountBasis], optional\n            The day count basis convention used to calculate the period between two dates. Default is Actual/Actual.\n            It is used when periodType is set to Year.\n            Each convention defines the number of days between two dates and the year length in days (basis) for the period calculation.\n        period_type : Union[str, PeriodType], optional\n            The method of the period calculation. Default is Day.\n\n        Returns\n        --------\n        CountPeriodsOutput\n            The result of the period calculation.\n\n        Examples\n        --------\n        >>> my_cal.count_periods(start_date=\"2020-01-01\", end_date=\"2021-01-01\", day_count_basis=DayCountBasis.DCB_30_360, period_type=PeriodType.DAY)\n        {'count': 13.0, 'periodType': 'WorkingDay', 'processingInformation': ''}\n\n        \n",
+            "signature": "class Calendar:\n    def count_periods(self, *, start_date: Union[str, datetime.date], end_date: Union[str, datetime.date], day_count_basis: Union[str, DayCountBasis, NoneType] = None, period_type: Union[str, PeriodType, NoneType] = None) -> CountPeriodsOutput:",
+            "class": "Calendar"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.Calendar"
+            ],
+            "use": [
+                "lseg_analytics.common.DayCountBasis",
+                "lseg_analytics.common.PeriodType",
+                "lseg_analytics.reference_data.calendars.CountPeriodsOutput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "MethodChunk",
+        "name": "Calendar.generate_date_schedule",
+        "id": "lseg_analytics.reference_data.calendars.Calendar.generate_date_schedule",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "frequency",
+                "type": "Frequency",
+                "valuelookup": "enum.Frequency"
+            },
+            {
+                "name": "start_date",
+                "type": "date"
+            },
+            {
+                "name": "end_date",
+                "type": "date"
+            },
+            {
+                "name": "calendar_day_of_month",
+                "type": "int"
+            },
+            {
+                "name": "count",
+                "type": "int"
+            },
+            {
+                "name": "day_of_week",
+                "type": "WeekDay",
+                "valuelookup": "enum.WeekDay"
+            }
+        ],
+        "file_path": "lseg_analytics/reference_data/calendars/_calendar.py",
+        "line_number": 354,
+        "content": "class Calendar:\n    def generate_date_schedule(self, *, frequency: Union[str, Frequency], start_date: Union[str, datetime.date, NoneType] = None, end_date: Union[str, datetime.date, NoneType] = None, calendar_day_of_month: Optional[int] = None, count: Optional[int] = None, day_of_week: Union[str, WeekDay, NoneType] = None) -> List[datetime.date]:\n        \"\"\"\n        Generates a date schedule for the calendar according to specified conditions. Start and End Dates are included in the calculation. Only saved calendars are supported.\n\n        Parameters\n        ----------\n        frequency : Union[str, Frequency]\n            The frequency of dates in the schedule which should be generated. Note that \"Daily\" refers to working days only.\n        start_date : Union[str, datetime.date], optional\n            The start date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01).\n            The start date must be before the end date.\n            Required if endDate is in the past.\n        end_date : Union[str, datetime.date], optional\n            The end date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2024-01-01).\n            If startDate is not specified, endDate is used to define the list of dates from today's date to the end date.\n            The end date must be after the start date.\n            Required if count is not specified. Only one of endDate and count can be set at a time.\n        calendar_day_of_month : int, optional\n            The number of the day of the month. Required if frequency is Monthly; do not use otherwise. The minimum value is 1. The maximum value is 31.\n        count : int, optional\n            The number of dates to be generated, counting from the start date (or today's date if the start date is not set).\n            It should not have a negative value.\n            Required if endDate is not specified. Only one of endDate and count can be set at a time.\n        day_of_week : Union[str, WeekDay], optional\n            The day of the week. Required if frequency is Weekly or BiWeekly; do not use otherwise.\n\n        Returns\n        --------\n        List[datetime.date]\n            A date on a calendar without a time zone, e.g. \"April 10th\"\n\n        Examples\n        --------\n        >>> my_cal.generate_date_schedule(start_date='2023-05-05', end_date='2023-12-05', frequency=Frequency.WEEKLY, count=20, day_of_week=WeekDay.TUESDAY)\n        [datetime.date(2023, 5, 9),\n         datetime.date(2023, 5, 16),\n         datetime.date(2023, 5, 23),\n         datetime.date(2023, 5, 30),\n         datetime.date(2023, 6, 6),\n         datetime.date(2023, 6, 13),\n         datetime.date(2023, 6, 20),\n         datetime.date(2023, 6, 27),\n         datetime.date(2023, 7, 4),\n         datetime.date(2023, 7, 11),\n         datetime.date(2023, 7, 18),\n         datetime.date(2023, 7, 25),\n         datetime.date(2023, 8, 1),\n         datetime.date(2023, 8, 8),\n         datetime.date(2023, 8, 15),\n         datetime.date(2023, 8, 22),\n         datetime.date(2023, 8, 29),\n         datetime.date(2023, 9, 5),\n         datetime.date(2023, 9, 12),\n         datetime.date(2023, 9, 19)]\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Generates a date schedule for the calendar according to specified conditions. Start and End Dates are included in the calculation. Only saved calendars are supported.\n\n        Parameters\n        ----------\n        frequency : Union[str, Frequency]\n            The frequency of dates in the schedule which should be generated. Note that \"Daily\" refers to working days only.\n        start_date : Union[str, datetime.date], optional\n            The start date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01).\n            The start date must be before the end date.\n            Required if endDate is in the past.\n        end_date : Union[str, datetime.date], optional\n            The end date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2024-01-01).\n            If startDate is not specified, endDate is used to define the list of dates from today's date to the end date.\n            The end date must be after the start date.\n            Required if count is not specified. Only one of endDate and count can be set at a time.\n        calendar_day_of_month : int, optional\n            The number of the day of the month. Required if frequency is Monthly; do not use otherwise. The minimum value is 1. The maximum value is 31.\n        count : int, optional\n            The number of dates to be generated, counting from the start date (or today's date if the start date is not set).\n            It should not have a negative value.\n            Required if endDate is not specified. Only one of endDate and count can be set at a time.\n        day_of_week : Union[str, WeekDay], optional\n            The day of the week. Required if frequency is Weekly or BiWeekly; do not use otherwise.\n\n        Returns\n        --------\n        List[datetime.date]\n            A date on a calendar without a time zone, e.g. \"April 10th\"\n\n        Examples\n        --------\n        >>> my_cal.generate_date_schedule(start_date='2023-05-05', end_date='2023-12-05', frequency=Frequency.WEEKLY, count=20, day_of_week=WeekDay.TUESDAY)\n        [datetime.date(2023, 5, 9),\n         datetime.date(2023, 5, 16),\n         datetime.date(2023, 5, 23),\n         datetime.date(2023, 5, 30),\n         datetime.date(2023, 6, 6),\n         datetime.date(2023, 6, 13),\n         datetime.date(2023, 6, 20),\n         datetime.date(2023, 6, 27),\n         datetime.date(2023, 7, 4),\n         datetime.date(2023, 7, 11),\n         datetime.date(2023, 7, 18),\n         datetime.date(2023, 7, 25),\n         datetime.date(2023, 8, 1),\n         datetime.date(2023, 8, 8),\n         datetime.date(2023, 8, 15),\n         datetime.date(2023, 8, 22),\n         datetime.date(2023, 8, 29),\n         datetime.date(2023, 9, 5),\n         datetime.date(2023, 9, 12),\n         datetime.date(2023, 9, 19)]\n\n        \n",
+            "signature": "class Calendar:\n    def generate_date_schedule(self, *, frequency: Union[str, Frequency], start_date: Union[str, datetime.date, NoneType] = None, end_date: Union[str, datetime.date, NoneType] = None, calendar_day_of_month: Optional[int] = None, count: Optional[int] = None, day_of_week: Union[str, WeekDay, NoneType] = None) -> List[datetime.date]:",
+            "class": "Calendar"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.Calendar"
+            ],
+            "use": [
+                "lseg_analytics.common.Frequency",
+                "lseg_analytics.common.WeekDay"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "MethodChunk",
+        "name": "Calendar.generate_holidays",
+        "id": "lseg_analytics.reference_data.calendars.Calendar.generate_holidays",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "end_date",
+                "type": "date"
+            },
+            {
+                "name": "start_date",
+                "type": "date"
+            }
+        ],
+        "file_path": "lseg_analytics/reference_data/calendars/_calendar.py",
+        "line_number": 443,
+        "content": "class Calendar:\n    def generate_holidays(self, *, end_date: Union[str, datetime.date], start_date: Union[str, datetime.date, NoneType] = None) -> List[HolidayOutput]:\n        \"\"\"\n        Gets the holidays for the calendar within a date range. Start and End Dates are included in the calculation. Only saved calendars are supported.\n\n        Parameters\n        ----------\n        start_date : Union[str, datetime.date], optional\n            The start date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01). Default is today.\n        end_date : Union[str, datetime.date]\n            The end date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2024-01-01).\n\n        Returns\n        --------\n        List[HolidayOutput]\n            Dates and names of holidays for a requested calendar.\n\n        Examples\n        --------\n        >>> response = my_cal.generate_holidays(start_date='2023-01-01', end_date='2023-01-31')\n        >>> response[0]\n        {'date': '2023-01-01', 'names': [{'name': \"New Year's Day\", 'calendars': [{'type': 'Calendar', 'id': '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF', 'location': {'name': 'EMU', 'space': 'LSEG'}}, {'type': 'Calendar', 'id': '259B1FED-8MM3-4B1F-843F-5BA89EBE71AF', 'location': {'name': 'UKG', 'space': 'LSEG'}}], 'countries': ['', 'GBR']}], 'processingInformation': '<string>'}\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Gets the holidays for the calendar within a date range. Start and End Dates are included in the calculation. Only saved calendars are supported.\n\n        Parameters\n        ----------\n        start_date : Union[str, datetime.date], optional\n            The start date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01). Default is today.\n        end_date : Union[str, datetime.date]\n            The end date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2024-01-01).\n\n        Returns\n        --------\n        List[HolidayOutput]\n            Dates and names of holidays for a requested calendar.\n\n        Examples\n        --------\n        >>> response = my_cal.generate_holidays(start_date='2023-01-01', end_date='2023-01-31')\n        >>> response[0]\n        {'date': '2023-01-01', 'names': [{'name': \"New Year's Day\", 'calendars': [{'type': 'Calendar', 'id': '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF', 'location': {'name': 'EMU', 'space': 'LSEG'}}, {'type': 'Calendar', 'id': '259B1FED-8MM3-4B1F-843F-5BA89EBE71AF', 'location': {'name': 'UKG', 'space': 'LSEG'}}], 'countries': ['', 'GBR']}], 'processingInformation': '<string>'}\n\n        \n",
+            "signature": "class Calendar:\n    def generate_holidays(self, *, end_date: Union[str, datetime.date], start_date: Union[str, datetime.date, NoneType] = None) -> List[HolidayOutput]:",
+            "class": "Calendar"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.Calendar"
+            ],
+            "use": [
+                "lseg_analytics.reference_data.calendars.HolidayOutput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "MethodChunk",
+        "name": "Calendar.save",
+        "id": "lseg_analytics.reference_data.calendars.Calendar.save",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "name",
+                "type": "str",
+                "valuelookup": "Calendar.name"
+            },
+            {
+                "name": "space",
+                "type": "str",
+                "valuelookup": "Calendar.space"
+            }
+        ],
+        "file_path": "lseg_analytics/reference_data/calendars/_calendar.py",
+        "line_number": 517,
+        "content": "class Calendar:\n    def save(self, *, name: Optional[str] = None, space: Optional[str] = None) -> bool:\n        \"\"\"\n        Save Calendar instance in the platform store.\n\n        Parameters\n        ----------\n        name : str, optional\n            The Calendar name. The name parameter must be specified when the object is first created. Thereafter it is optional.\n        space : str, optional\n            The space where the Calendar is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n            LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n\n        Returns\n        --------\n        bool, optional\n            True, if saved successfully, otherwise None\n\n\n        Examples\n        --------\n        Create a calendar instance with parameter.\n\n        >>> my_cal_definition = CalendarDefinition(rest_days=[\n        >>>                     RestDays(\n        >>>                         rest_days=[WeekDay.SATURDAY, WeekDay.SUNDAY],\n        >>>                         validity_period=ValidityPeriod(\n        >>>                             start_date=\"2024-01-01\",\n        >>>                             end_date=\"2024-12-31\",\n        >>>                         ),\n        >>>                     )\n        >>>                 ],\n        >>>                     first_day_of_week=WeekDay.FRIDAY,\n        >>>                     holiday_rules=[\n        >>>                     HolidayRule(\n        >>>                         name=\"New Year's Day\",\n        >>>                         duration=FullDayDuration(full_day=1),\n        >>>                         validity_period=ValidityPeriod(\n        >>>                             start_date=\"2024-01-01\",\n        >>>                             end_date=\"2024-12-31\",\n        >>>                         ),\n        >>>                         when=AbsolutePositionWhen(day_of_month=1, month=Month.JANUARY),\n        >>>                     ),\n        >>>                 ]\n        >>>                 )\n        >>> my_cal = Calendar(definition=my_cal_definition)\n\n        Save the instance with name and space.\n\n        >>> my_cal.save(name=\"my_calendar\", space=\"my_personal_space\")\n        True\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Save Calendar instance in the platform store.\n\n        Parameters\n        ----------\n        name : str, optional\n            The Calendar name. The name parameter must be specified when the object is first created. Thereafter it is optional.\n        space : str, optional\n            The space where the Calendar is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n            LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n\n        Returns\n        --------\n        bool, optional\n            True, if saved successfully, otherwise None\n\n\n        Examples\n        --------\n        Create a calendar instance with parameter.\n\n        >>> my_cal_definition = CalendarDefinition(rest_days=[\n        >>>                     RestDays(\n        >>>                         rest_days=[WeekDay.SATURDAY, WeekDay.SUNDAY],\n        >>>                         validity_period=ValidityPeriod(\n        >>>                             start_date=\"2024-01-01\",\n        >>>                             end_date=\"2024-12-31\",\n        >>>                         ),\n        >>>                     )\n        >>>                 ],\n        >>>                     first_day_of_week=WeekDay.FRIDAY,\n        >>>                     holiday_rules=[\n        >>>                     HolidayRule(\n        >>>                         name=\"New Year's Day\",\n        >>>                         duration=FullDayDuration(full_day=1),\n        >>>                         validity_period=ValidityPeriod(\n        >>>                             start_date=\"2024-01-01\",\n        >>>                             end_date=\"2024-12-31\",\n        >>>                         ),\n        >>>                         when=AbsolutePositionWhen(day_of_month=1, month=Month.JANUARY),\n        >>>                     ),\n        >>>                 ]\n        >>>                 )\n        >>> my_cal = Calendar(definition=my_cal_definition)\n\n        Save the instance with name and space.\n\n        >>> my_cal.save(name=\"my_calendar\", space=\"my_personal_space\")\n        True\n\n        \n",
+            "signature": "class Calendar:\n    def save(self, *, name: Optional[str] = None, space: Optional[str] = None) -> bool:",
+            "class": "Calendar"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.Calendar"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "MethodChunk",
+        "name": "Calendar.clone",
+        "id": "lseg_analytics.reference_data.calendars.Calendar.clone",
+        "params": [],
+        "file_path": "lseg_analytics/reference_data/calendars/_calendar.py",
+        "line_number": 587,
+        "content": "class Calendar:\n    def clone(self) -> 'Calendar':\n        \"\"\"\n        Return the same object, without id, name and space\n\n        Parameters\n        ----------\n\n\n        Returns\n        --------\n        Calendar\n            The cloned Calendar object\n\n\n        Examples\n        --------\n        Clone the existing instance on definition and description.\n\n        >>> my_cal_clone = my_cal.clone()\n        >>> my_cal_clone.save(name=\"my_cloned_calendar\", space=\"HOME\")\n        True\n\n        \n        \"\"\"",
+        "metadata": {
+            "doc": "\n        Return the same object, without id, name and space\n\n        Parameters\n        ----------\n\n\n        Returns\n        --------\n        Calendar\n            The cloned Calendar object\n\n\n        Examples\n        --------\n        Clone the existing instance on definition and description.\n\n        >>> my_cal_clone = my_cal.clone()\n        >>> my_cal_clone.save(name=\"my_cloned_calendar\", space=\"HOME\")\n        True\n\n        \n",
+            "signature": "class Calendar:\n    def clone(self) -> 'Calendar':",
+            "class": "Calendar"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.Calendar"
+            ],
+            "use": [
+                "lseg_analytics.reference_data.calendars.Calendar"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "CalendarAsCollectionItem",
+        "id": "lseg_analytics.reference_data.calendars.CalendarAsCollectionItem",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "location",
+                "type": "Location"
+            },
+            {
+                "name": "description",
+                "type": "Description"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 558,
+        "content": "class CalendarAsCollectionItem:\n    \"\"\"An object describing the basic properties of a calendar.\n\n    Readonly variables are only populated by the server, and will be ignored when sending a request.\n\n    Attributes\n    ----------\n    type : str or ~analyticsapi.models.CALENDAR\n        The resource type. Possible values are: Calendar, Currency,\n        CrossCurrency, IrCurve, FxForwardCurve, Analytics, Loan, FxSpot,\n        NonDeliverableForward, Deposit, CrossCurrencySwap or Space.\n    id : str\n        A resource ID is the unique resource identifier for an object on the\n        platform. The resource ID is created on saving. IDs are read-only.\n    location : ~analyticsapi.models.Location\n        Name and space are location attributes, which are automatically set\n        when a resource object is saved for the first time. Unsaved resources\n        have thier name and space set to None. Location attributes are read-\n        only. Required.\n    description : ~analyticsapi.models.Description\n        Description object that contains the resource summary and tags.\n    \n    \"\"\"\n    type: typing.Optional[typing.Literal[<ResourceType.CALENDAR: 'Calendar'>]]\n    id: typing.Optional[str]\n    location: _models.Location\n    description: typing.Optional[ForwardRef('_models.Description')]",
+        "metadata": {
+            "doc": "An object describing the basic properties of a calendar.\n\n    Readonly variables are only populated by the server, and will be ignored when sending a request.\n\n    Attributes\n    ----------\n    type : str or ~analyticsapi.models.CALENDAR\n        The resource type. Possible values are: Calendar, Currency,\n        CrossCurrency, IrCurve, FxForwardCurve, Analytics, Loan, FxSpot,\n        NonDeliverableForward, Deposit, CrossCurrencySwap or Space.\n    id : str\n        A resource ID is the unique resource identifier for an object on the\n        platform. The resource ID is created on saving. IDs are read-only.\n    location : ~analyticsapi.models.Location\n        Name and space are location attributes, which are automatically set\n        when a resource object is saved for the first time. Unsaved resources\n        have thier name and space set to None. Location attributes are read-\n        only. Required.\n    description : ~analyticsapi.models.Description\n        Description object that contains the resource summary and tags.\n    \n",
+            "annotations": "    type: typing.Optional[typing.Literal[<ResourceType.CALENDAR: 'Calendar'>]]\n    id: typing.Optional[str]\n    location: _models.Location\n    description: typing.Optional[ForwardRef('_models.Description')]",
+            "signature": "class CalendarAsCollectionItem:\n    \"\"\"\"\"\"\n    type: typing.Optional[typing.Literal[<ResourceType.CALENDAR: 'Calendar'>]]\n    id: typing.Optional[str]\n    location: _models.Location\n    description: typing.Optional[ForwardRef('_models.Description')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.CalendarAsCollectionItem.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.Location",
+                "lseg_analytics.common.Description"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "CalendarAsCollectionItem.__init__",
+        "id": "lseg_analytics.reference_data.calendars.CalendarAsCollectionItem.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 612,
+        "content": "class CalendarAsCollectionItem:\n    @overload\n    def __init__(self, *, location: '_models.Location', description: Optional[ForwardRef('_models.Description')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "CalendarAsCollectionItem"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.CalendarAsCollectionItem"
+            ],
+            "use": [
+                "lseg_analytics.common.Location",
+                "lseg_analytics.common.Description"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "CalendarDefinition",
+        "id": "lseg_analytics.reference_data.calendars.CalendarDefinition",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "rest_days",
+                "type": "List[RestDays]"
+            },
+            {
+                "name": "first_day_of_week",
+                "type": "WeekDay",
+                "valuelookup": "enum.WeekDay"
+            },
+            {
+                "name": "holiday_rules",
+                "type": "List[HolidayRule]"
+            },
+            {
+                "name": "holiday_exception_rules",
+                "type": "List[HolidayRule]"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 712,
+        "content": "class CalendarDefinition:\n    \"\"\"Calendar definition object that contains rest days, first day of week, holiday rules and\n    holiday exception rules.\n\n    Attributes\n    ----------\n    rest_days : list[~analyticsapi.models.RestDays]\n        An array of objects that define the rest days for the calendar.\n    first_day_of_week : str or ~analyticsapi.models.WeekDay\n        The first day of the week set for the calendar. Known values are:\n        \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", and\n        \"Sunday\".\n    holiday_rules : list[~analyticsapi.models.HolidayRule]\n        An array of objects that define the calendar's regular holiday rules\n        and half holiday rules.\n    holiday_exception_rules : list[~analyticsapi.models.HolidayRule]\n        An array of objects that define the calendar's exception day rules for\n        the calendar.\n    \n    \"\"\"\n    rest_days: typing.Optional[typing.List[ForwardRef('_models.RestDays')]]\n    first_day_of_week: typing.Union[str, ForwardRef('_models.WeekDay'), NoneType]\n    holiday_rules: typing.Optional[typing.List[ForwardRef('_models.HolidayRule')]]\n    holiday_exception_rules: typing.Optional[typing.List[ForwardRef('_models.HolidayRule')]]",
+        "metadata": {
+            "doc": "Calendar definition object that contains rest days, first day of week, holiday rules and\n    holiday exception rules.\n\n    Attributes\n    ----------\n    rest_days : list[~analyticsapi.models.RestDays]\n        An array of objects that define the rest days for the calendar.\n    first_day_of_week : str or ~analyticsapi.models.WeekDay\n        The first day of the week set for the calendar. Known values are:\n        \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", and\n        \"Sunday\".\n    holiday_rules : list[~analyticsapi.models.HolidayRule]\n        An array of objects that define the calendar's regular holiday rules\n        and half holiday rules.\n    holiday_exception_rules : list[~analyticsapi.models.HolidayRule]\n        An array of objects that define the calendar's exception day rules for\n        the calendar.\n    \n",
+            "annotations": "    rest_days: typing.Optional[typing.List[ForwardRef('_models.RestDays')]]\n    first_day_of_week: typing.Union[str, ForwardRef('_models.WeekDay'), NoneType]\n    holiday_rules: typing.Optional[typing.List[ForwardRef('_models.HolidayRule')]]\n    holiday_exception_rules: typing.Optional[typing.List[ForwardRef('_models.HolidayRule')]]",
+            "signature": "class CalendarDefinition:\n    \"\"\"\"\"\"\n    rest_days: typing.Optional[typing.List[ForwardRef('_models.RestDays')]]\n    first_day_of_week: typing.Union[str, ForwardRef('_models.WeekDay'), NoneType]\n    holiday_rules: typing.Optional[typing.List[ForwardRef('_models.HolidayRule')]]\n    holiday_exception_rules: typing.Optional[typing.List[ForwardRef('_models.HolidayRule')]]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.CalendarDefinition.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.reference_data.calendars.RestDays",
+                "lseg_analytics.common.WeekDay",
+                "lseg_analytics.reference_data.calendars.HolidayRule"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "CalendarDefinition.__init__",
+        "id": "lseg_analytics.reference_data.calendars.CalendarDefinition.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 761,
+        "content": "class CalendarDefinition:\n    @overload\n    def __init__(self, *, rest_days: Optional[List[ForwardRef('_models.RestDays')]] = None, first_day_of_week: Union[str, ForwardRef('_models.WeekDay'), NoneType] = None, holiday_rules: Optional[List[ForwardRef('_models.HolidayRule')]] = None, holiday_exception_rules: Optional[List[ForwardRef('_models.HolidayRule')]] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "CalendarDefinition"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.CalendarDefinition"
+            ],
+            "use": [
+                "lseg_analytics.reference_data.calendars.RestDays",
+                "lseg_analytics.common.WeekDay",
+                "lseg_analytics.reference_data.calendars.HolidayRule"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "CalendarRelatedResource",
+        "id": "lseg_analytics.reference_data.calendars.CalendarRelatedResource",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "id",
+                "type": "str"
+            },
+            {
+                "name": "location",
+                "type": "Location"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 771,
+        "content": "class CalendarRelatedResource:\n    \"\"\"Object identifying a calendar resource by either uuid or location (space and name).\n\n    Readonly variables are only populated by the server, and will be ignored when sending a request.\n\n    Attributes\n    ----------\n    type : str or ~analyticsapi.models.CALENDAR\n        The type of the resource.\n    id : str\n        The unique id of the resource.\n    location : ~analyticsapi.models.Location\n        An object to define the location of the resource (space and name).\n    \n    \"\"\"\n    type: typing.Optional[typing.Literal[<ResourceType.CALENDAR: 'Calendar'>]]\n    id: typing.Optional[str]\n    location: typing.Optional[ForwardRef('_models.Location')]",
+        "metadata": {
+            "doc": "Object identifying a calendar resource by either uuid or location (space and name).\n\n    Readonly variables are only populated by the server, and will be ignored when sending a request.\n\n    Attributes\n    ----------\n    type : str or ~analyticsapi.models.CALENDAR\n        The type of the resource.\n    id : str\n        The unique id of the resource.\n    location : ~analyticsapi.models.Location\n        An object to define the location of the resource (space and name).\n    \n",
+            "annotations": "    type: typing.Optional[typing.Literal[<ResourceType.CALENDAR: 'Calendar'>]]\n    id: typing.Optional[str]\n    location: typing.Optional[ForwardRef('_models.Location')]",
+            "signature": "class CalendarRelatedResource:\n    \"\"\"\"\"\"\n    type: typing.Optional[typing.Literal[<ResourceType.CALENDAR: 'Calendar'>]]\n    id: typing.Optional[str]\n    location: typing.Optional[ForwardRef('_models.Location')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.CalendarRelatedResource.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.Location"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "CalendarRelatedResource.__init__",
+        "id": "lseg_analytics.reference_data.calendars.CalendarRelatedResource.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 810,
+        "content": "class CalendarRelatedResource:\n    @overload\n    def __init__(self, *, id: Optional[str] = None, location: Optional[ForwardRef('_models.Location')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "CalendarRelatedResource"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.CalendarRelatedResource"
+            ],
+            "use": [
+                "lseg_analytics.common.Location"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "CountPeriodsOutput",
+        "id": "lseg_analytics.reference_data.calendars.CountPeriodsOutput",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "count",
+                "type": "int"
+            },
+            {
+                "name": "period_type",
+                "type": "PeriodTypeOutput",
+                "valuelookup": "enum.PeriodTypeOutput"
+            },
+            {
+                "name": "processing_information",
+                "type": "str"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 993,
+        "content": "class CountPeriodsOutput:\n    \"\"\"The result of the period calculation.\n\n    Attributes\n    ----------\n    count : int\n        The calculated number of dates in the period from startDate to endDate.\n        Required.\n    period_type : str or ~analyticsapi.models.PeriodTypeOutput\n        The type of the calculated period. Required. Known values are: \"Day\",\n        \"WorkingDay\", \"Week\", \"Month\", \"Quarter\", and \"Year\".\n    processing_information : str\n        Required.\n    \n    \"\"\"\n    count: int\n    period_type: typing.Union[str, ForwardRef('_models.PeriodTypeOutput')]\n    processing_information: str",
+        "metadata": {
+            "doc": "The result of the period calculation.\n\n    Attributes\n    ----------\n    count : int\n        The calculated number of dates in the period from startDate to endDate.\n        Required.\n    period_type : str or ~analyticsapi.models.PeriodTypeOutput\n        The type of the calculated period. Required. Known values are: \"Day\",\n        \"WorkingDay\", \"Week\", \"Month\", \"Quarter\", and \"Year\".\n    processing_information : str\n        Required.\n    \n",
+            "annotations": "    count: int\n    period_type: typing.Union[str, ForwardRef('_models.PeriodTypeOutput')]\n    processing_information: str",
+            "signature": "class CountPeriodsOutput:\n    \"\"\"\"\"\"\n    count: int\n    period_type: typing.Union[str, ForwardRef('_models.PeriodTypeOutput')]\n    processing_information: str"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.CountPeriodsOutput.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.reference_data.calendars.PeriodTypeOutput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "CountPeriodsOutput.__init__",
+        "id": "lseg_analytics.reference_data.calendars.CountPeriodsOutput.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 1034,
+        "content": "class CountPeriodsOutput:\n    @overload\n    def __init__(self, *, count: int, period_type: Union[str, ForwardRef('_models.PeriodTypeOutput')], processing_information: str):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "CountPeriodsOutput"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.CountPeriodsOutput"
+            ],
+            "use": [
+                "lseg_analytics.reference_data.calendars.PeriodTypeOutput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FullDayDuration",
+        "id": "lseg_analytics.reference_data.calendars.FullDayDuration",
+        "params": [
+            {
+                "name": "full_day",
+                "type": "int"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2414,
+        "content": "class FullDayDuration:\n    \"\"\"An object to determine the duration of the holiday in full days.\n\n    Attributes\n    ----------\n    duration_type : str or ~analyticsapi.models.FULL_DAY_DURATION\n        The type of the holiday duration. Only FullDayDuration value applies.\n        Required. Full days where the no trading takes place.\n    full_day : int\n        The duration of the holiday as a number of full calendar days. The\n        minimum value is 1. Required.\n    \n    \"\"\"\n    duration_type: typing.Literal[<DurationType.FULL_DAY_DURATION: 'FullDayDuration'>]\n    full_day: int",
+        "metadata": {
+            "doc": "An object to determine the duration of the holiday in full days.\n\n    Attributes\n    ----------\n    duration_type : str or ~analyticsapi.models.FULL_DAY_DURATION\n        The type of the holiday duration. Only FullDayDuration value applies.\n        Required. Full days where the no trading takes place.\n    full_day : int\n        The duration of the holiday as a number of full calendar days. The\n        minimum value is 1. Required.\n    \n",
+            "annotations": "    duration_type: typing.Literal[<DurationType.FULL_DAY_DURATION: 'FullDayDuration'>]\n    full_day: int",
+            "signature": "class FullDayDuration:\n    \"\"\"\"\"\"\n    duration_type: typing.Literal[<DurationType.FULL_DAY_DURATION: 'FullDayDuration'>]\n    full_day: int"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.FullDayDuration.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [
+                "lseg_analytics.common.Duration"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FullDayDuration.__init__",
+        "id": "lseg_analytics.reference_data.calendars.FullDayDuration.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2449,
+        "content": "class FullDayDuration:\n    @overload\n    def __init__(self, full_day: int):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FullDayDuration"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.FullDayDuration"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "HalfDayDuration",
+        "id": "lseg_analytics.reference_data.calendars.HalfDayDuration",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "start_time",
+                "type": "Time"
+            },
+            {
+                "name": "end_time",
+                "type": "Time"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 5986,
+        "content": "class HalfDayDuration:\n    \"\"\"An object to determine the duration of the holiday within one day.\n\n    Attributes\n    ----------\n    duration_type : str or ~analyticsapi.models.HALF_DAY_DURATION\n        The type of the holiday duration. Only HalfDayDuration value applies.\n        Required. Half day holidays. Designed to account for the days the\n        markets are open, but not for a full trading session.\n    start_time : ~analyticsapi.models.Time\n        An object to determine the start time of the holiday duration.\n    end_time : ~analyticsapi.models.Time\n        An object to determine the end time of the holiday duration.\n    \n    \"\"\"\n    duration_type: typing.Literal[<DurationType.HALF_DAY_DURATION: 'HalfDayDuration'>]\n    start_time: typing.Optional[ForwardRef('_models.Time')]\n    end_time: typing.Optional[ForwardRef('_models.Time')]",
+        "metadata": {
+            "doc": "An object to determine the duration of the holiday within one day.\n\n    Attributes\n    ----------\n    duration_type : str or ~analyticsapi.models.HALF_DAY_DURATION\n        The type of the holiday duration. Only HalfDayDuration value applies.\n        Required. Half day holidays. Designed to account for the days the\n        markets are open, but not for a full trading session.\n    start_time : ~analyticsapi.models.Time\n        An object to determine the start time of the holiday duration.\n    end_time : ~analyticsapi.models.Time\n        An object to determine the end time of the holiday duration.\n    \n",
+            "annotations": "    duration_type: typing.Literal[<DurationType.HALF_DAY_DURATION: 'HalfDayDuration'>]\n    start_time: typing.Optional[ForwardRef('_models.Time')]\n    end_time: typing.Optional[ForwardRef('_models.Time')]",
+            "signature": "class HalfDayDuration:\n    \"\"\"\"\"\"\n    duration_type: typing.Literal[<DurationType.HALF_DAY_DURATION: 'HalfDayDuration'>]\n    start_time: typing.Optional[ForwardRef('_models.Time')]\n    end_time: typing.Optional[ForwardRef('_models.Time')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.HalfDayDuration.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.Time"
+            ],
+            "base_classes": [
+                "lseg_analytics.common.Duration"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "HalfDayDuration.__init__",
+        "id": "lseg_analytics.reference_data.calendars.HalfDayDuration.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6027,
+        "content": "class HalfDayDuration:\n    @overload\n    def __init__(self, *, start_time: Optional[ForwardRef('_models.Time')] = None, end_time: Optional[ForwardRef('_models.Time')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "HalfDayDuration"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.HalfDayDuration"
+            ],
+            "use": [
+                "lseg_analytics.common.Time"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "HolidayOutput",
+        "id": "lseg_analytics.reference_data.calendars.HolidayOutput",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "date",
+                "type": "date"
+            },
+            {
+                "name": "names",
+                "type": "List[HolidayOutputNames]"
+            },
+            {
+                "name": "processing_information",
+                "type": "str"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6031,
+        "content": "class HolidayOutput:\n    \"\"\"Dates and names of holidays for a requested calendar.\n\n    Attributes\n    ----------\n    date : ~datetime.date\n        The date on which the holiday falls. The value is expressed in ISO 8601\n        format: YYYY-MM-DD (e.g., 2024-01-01). Required.\n    names : list[~analyticsapi.models.HolidayOutputNames]\n        An array of objects to define the holiday name, calendar and country in\n        which the holiday falls.\n    processing_information : str\n        The error message for the calculation in case of a non-blocking error.\n    \n    \"\"\"\n    date: date\n    names: typing.Optional[typing.List[ForwardRef('_models.HolidayOutputNames')]]\n    processing_information: typing.Optional[str]",
+        "metadata": {
+            "doc": "Dates and names of holidays for a requested calendar.\n\n    Attributes\n    ----------\n    date : ~datetime.date\n        The date on which the holiday falls. The value is expressed in ISO 8601\n        format: YYYY-MM-DD (e.g., 2024-01-01). Required.\n    names : list[~analyticsapi.models.HolidayOutputNames]\n        An array of objects to define the holiday name, calendar and country in\n        which the holiday falls.\n    processing_information : str\n        The error message for the calculation in case of a non-blocking error.\n    \n",
+            "annotations": "    date: date\n    names: typing.Optional[typing.List[ForwardRef('_models.HolidayOutputNames')]]\n    processing_information: typing.Optional[str]",
+            "signature": "class HolidayOutput:\n    \"\"\"\"\"\"\n    date: date\n    names: typing.Optional[typing.List[ForwardRef('_models.HolidayOutputNames')]]\n    processing_information: typing.Optional[str]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.HolidayOutput.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.reference_data.calendars.HolidayOutputNames"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "HolidayOutput.__init__",
+        "id": "lseg_analytics.reference_data.calendars.HolidayOutput.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6073,
+        "content": "class HolidayOutput:\n    @overload\n    def __init__(self, *, date: datetime.date, names: Optional[List[ForwardRef('_models.HolidayOutputNames')]] = None, processing_information: Optional[str] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "HolidayOutput"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.HolidayOutput"
+            ],
+            "use": [
+                "lseg_analytics.reference_data.calendars.HolidayOutputNames"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "HolidayOutputNames",
+        "id": "lseg_analytics.reference_data.calendars.HolidayOutputNames",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "name",
+                "type": "str"
+            },
+            {
+                "name": "calendars",
+                "type": "List[CalendarRelatedResource]"
+            },
+            {
+                "name": "countries",
+                "type": "List[str]",
+                "valuelookup": "country_list"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6079,
+        "content": "class HolidayOutputNames:\n    \"\"\"An object to define the holiday name, calendar and country in which the holiday falls.\n\n    Attributes\n    ----------\n    name : str\n        The name of the holiday.\n    calendars : list[~analyticsapi.models.CalendarRelatedResource]\n        An array of calendar defining objects for which the calculation is\n        done.\n    countries : list[str]\n        An array of country codes that the holiday belongs to. For example, FRA\n        for France, UKG for The United Kingdom.\n    \n    \"\"\"\n    name: typing.Optional[str]\n    calendars: typing.Optional[typing.List[ForwardRef('_models.CalendarRelatedResource')]]\n    countries: typing.Optional[typing.List[str]]",
+        "metadata": {
+            "doc": "An object to define the holiday name, calendar and country in which the holiday falls.\n\n    Attributes\n    ----------\n    name : str\n        The name of the holiday.\n    calendars : list[~analyticsapi.models.CalendarRelatedResource]\n        An array of calendar defining objects for which the calculation is\n        done.\n    countries : list[str]\n        An array of country codes that the holiday belongs to. For example, FRA\n        for France, UKG for The United Kingdom.\n    \n",
+            "annotations": "    name: typing.Optional[str]\n    calendars: typing.Optional[typing.List[ForwardRef('_models.CalendarRelatedResource')]]\n    countries: typing.Optional[typing.List[str]]",
+            "signature": "class HolidayOutputNames:\n    \"\"\"\"\"\"\n    name: typing.Optional[str]\n    calendars: typing.Optional[typing.List[ForwardRef('_models.CalendarRelatedResource')]]\n    countries: typing.Optional[typing.List[str]]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.HolidayOutputNames.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.reference_data.calendars.CalendarRelatedResource"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "HolidayOutputNames.__init__",
+        "id": "lseg_analytics.reference_data.calendars.HolidayOutputNames.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6120,
+        "content": "class HolidayOutputNames:\n    @overload\n    def __init__(self, *, name: Optional[str] = None, calendars: Optional[List[ForwardRef('_models.CalendarRelatedResource')]] = None, countries: Optional[List[str]] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "HolidayOutputNames"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.HolidayOutputNames"
+            ],
+            "use": [
+                "lseg_analytics.reference_data.calendars.CalendarRelatedResource"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "HolidayRule",
+        "id": "lseg_analytics.reference_data.calendars.HolidayRule",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "name",
+                "type": "str"
+            },
+            {
+                "name": "duration",
+                "type": "Duration"
+            },
+            {
+                "name": "validity_period",
+                "type": "ValidityPeriod"
+            },
+            {
+                "name": "when",
+                "type": "When"
+            },
+            {
+                "name": "description",
+                "type": "str"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6128,
+        "content": "class HolidayRule:\n    \"\"\"A holiday rule for the calendar.\n\n    Attributes\n    ----------\n    name : str\n        The name of the holiday rule. Required.\n    description : str\n        The description of the holiday rule.\n    duration : ~analyticsapi.models.Duration\n        An object to specify the type of holiday. Either no trading or reduced\n        trading. Required.\n    validity_period : ~analyticsapi.models.ValidityPeriod\n        An object to determine the start and end date of the holiday. Required.\n    when : ~analyticsapi.models.When\n        Object describing type of holiday rule. Possible values are:\n        AbsolutePositionWhen (for fixed holidays), RelativePositionWhen (for\n        holidays that fall on a particular day of the week) or\n        RelativeToRulePositionWhen (for holidays that are set by reference to\n        another date). Required.\n    \n    \"\"\"\n    name: str\n    description: typing.Optional[str]\n    duration: _models.Duration\n    validity_period: _models.ValidityPeriod\n    when: _models.When",
+        "metadata": {
+            "doc": "A holiday rule for the calendar.\n\n    Attributes\n    ----------\n    name : str\n        The name of the holiday rule. Required.\n    description : str\n        The description of the holiday rule.\n    duration : ~analyticsapi.models.Duration\n        An object to specify the type of holiday. Either no trading or reduced\n        trading. Required.\n    validity_period : ~analyticsapi.models.ValidityPeriod\n        An object to determine the start and end date of the holiday. Required.\n    when : ~analyticsapi.models.When\n        Object describing type of holiday rule. Possible values are:\n        AbsolutePositionWhen (for fixed holidays), RelativePositionWhen (for\n        holidays that fall on a particular day of the week) or\n        RelativeToRulePositionWhen (for holidays that are set by reference to\n        another date). Required.\n    \n",
+            "annotations": "    name: str\n    description: typing.Optional[str]\n    duration: _models.Duration\n    validity_period: _models.ValidityPeriod\n    when: _models.When",
+            "signature": "class HolidayRule:\n    \"\"\"\"\"\"\n    name: str\n    description: typing.Optional[str]\n    duration: _models.Duration\n    validity_period: _models.ValidityPeriod\n    when: _models.When"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.HolidayRule.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.Duration",
+                "lseg_analytics.common.ValidityPeriod",
+                "lseg_analytics.reference_data.calendars.When"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "HolidayRule.__init__",
+        "id": "lseg_analytics.reference_data.calendars.HolidayRule.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6183,
+        "content": "class HolidayRule:\n    @overload\n    def __init__(self, *, name: str, duration: '_models.Duration', validity_period: '_models.ValidityPeriod', when: '_models.When', description: Optional[str] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "HolidayRule"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.HolidayRule"
+            ],
+            "use": [
+                "lseg_analytics.common.Duration",
+                "lseg_analytics.common.ValidityPeriod",
+                "lseg_analytics.reference_data.calendars.When"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "LagDaysRescheduleDescription",
+        "id": "lseg_analytics.reference_data.calendars.LagDaysRescheduleDescription",
+        "params": [
+            {
+                "name": "lag_days",
+                "type": "int"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6543,
+        "content": "class LagDaysRescheduleDescription:\n    \"\"\"An object to define the rule for rescheduling a holiday using lag days.\n\n    Attributes\n    ----------\n    reschedule_type : str or ~analyticsapi.models.LAG_DAYS_RESCHEDULE_DESCRIPTION\n        The type of rescheduling for the observation period. Only\n        LagDaysRescheduleDescription value applies. Required. Reschedule the\n        holiday by specifying a lag period in days. For example, if a holiday\n        falls on Sunday, it can be moved by one day so that it happens on the\n        following Monday.\n    lag_days : int\n        The length of the lag in days. The holiday will be rescheduled to a\n        date this many days in the future. Required.\n    \n    \"\"\"\n    reschedule_type: typing.Literal[<RescheduleType.LAG_DAYS_RESCHEDULE_DESCRIPTION: 'LagDaysRescheduleDescription'>]\n    lag_days: int",
+        "metadata": {
+            "doc": "An object to define the rule for rescheduling a holiday using lag days.\n\n    Attributes\n    ----------\n    reschedule_type : str or ~analyticsapi.models.LAG_DAYS_RESCHEDULE_DESCRIPTION\n        The type of rescheduling for the observation period. Only\n        LagDaysRescheduleDescription value applies. Required. Reschedule the\n        holiday by specifying a lag period in days. For example, if a holiday\n        falls on Sunday, it can be moved by one day so that it happens on the\n        following Monday.\n    lag_days : int\n        The length of the lag in days. The holiday will be rescheduled to a\n        date this many days in the future. Required.\n    \n",
+            "annotations": "    reschedule_type: typing.Literal[<RescheduleType.LAG_DAYS_RESCHEDULE_DESCRIPTION: 'LagDaysRescheduleDescription'>]\n    lag_days: int",
+            "signature": "class LagDaysRescheduleDescription:\n    \"\"\"\"\"\"\n    reschedule_type: typing.Literal[<RescheduleType.LAG_DAYS_RESCHEDULE_DESCRIPTION: 'LagDaysRescheduleDescription'>]\n    lag_days: int"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.LagDaysRescheduleDescription.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [
+                "lseg_analytics.reference_data.calendars.RescheduleDescription"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "LagDaysRescheduleDescription.__init__",
+        "id": "lseg_analytics.reference_data.calendars.LagDaysRescheduleDescription.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6582,
+        "content": "class LagDaysRescheduleDescription:\n    @overload\n    def __init__(self, lag_days: int):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "LagDaysRescheduleDescription"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.LagDaysRescheduleDescription"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "Observance",
+        "id": "lseg_analytics.reference_data.calendars.Observance",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "falls_on",
+                "type": "WeekDay",
+                "valuelookup": "enum.WeekDay"
+            },
+            {
+                "name": "reschedule_description",
+                "type": "RescheduleDescription"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6808,
+        "content": "class Observance:\n    \"\"\"An object to determine how a holiday is rescheduled if it falls on a rest day.\n\n    Attributes\n    ----------\n    falls_on : str or ~analyticsapi.models.WeekDay\n        The day of the week that the holiday falls on. This is used as a\n        reference point. Required. Known values are: \"Monday\", \"Tuesday\",\n        \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", and \"Sunday\".\n    reschedule_description : ~analyticsapi.models.RescheduleDescription\n        An object to determine a holiday rescheduling. Required.\n    \n    \"\"\"\n    falls_on: typing.Union[str, ForwardRef('_models.WeekDay')]\n    reschedule_description: _models.RescheduleDescription",
+        "metadata": {
+            "doc": "An object to determine how a holiday is rescheduled if it falls on a rest day.\n\n    Attributes\n    ----------\n    falls_on : str or ~analyticsapi.models.WeekDay\n        The day of the week that the holiday falls on. This is used as a\n        reference point. Required. Known values are: \"Monday\", \"Tuesday\",\n        \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", and \"Sunday\".\n    reschedule_description : ~analyticsapi.models.RescheduleDescription\n        An object to determine a holiday rescheduling. Required.\n    \n",
+            "annotations": "    falls_on: typing.Union[str, ForwardRef('_models.WeekDay')]\n    reschedule_description: _models.RescheduleDescription",
+            "signature": "class Observance:\n    \"\"\"\"\"\"\n    falls_on: typing.Union[str, ForwardRef('_models.WeekDay')]\n    reschedule_description: _models.RescheduleDescription"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.Observance.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.WeekDay",
+                "lseg_analytics.reference_data.calendars.RescheduleDescription"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "Observance.__init__",
+        "id": "lseg_analytics.reference_data.calendars.Observance.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6845,
+        "content": "class Observance:\n    @overload\n    def __init__(self, *, falls_on: Union[str, ForwardRef('_models.WeekDay')], reschedule_description: '_models.RescheduleDescription'):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "Observance"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.Observance"
+            ],
+            "use": [
+                "lseg_analytics.common.WeekDay",
+                "lseg_analytics.reference_data.calendars.RescheduleDescription"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "PeriodTypeOutput",
+        "id": "lseg_analytics.reference_data.calendars.PeriodTypeOutput",
+        "content": "class PeriodTypeOutput(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"The type of the calculated period. Possible values are: Day, WorkingDay, Week, Month, Quarter\n    or Year.\n    \"\"\"\n\n    DAY = \"Day\"\n    WORKING_DAY = \"WorkingDay\"\n    WEEK = \"Week\"\n    MONTH = \"Month\"\n    QUARTER = \"Quarter\"\n    YEAR = \"Year\"\n",
+        "metadata": {
+            "doc": "The type of the calculated period. Possible values are: Day, WorkingDay, Week, Month, Quarter\n    or Year.\n    \n",
+            "members": [
+                "PeriodTypeOutput.DAY = 'Day'",
+                "PeriodTypeOutput.WORKING_DAY = 'WorkingDay'",
+                "PeriodTypeOutput.WEEK = 'Week'",
+                "PeriodTypeOutput.MONTH = 'Month'",
+                "PeriodTypeOutput.QUARTER = 'Quarter'",
+                "PeriodTypeOutput.YEAR = 'Year'"
+            ],
+            "signature": "class PeriodTypeOutput(Enum):\n    \"\"\"\"\"\"\n    DAY = 'Day'\n    WORKING_DAY = 'WorkingDay'\n    WEEK = 'Week'\n    MONTH = 'Month'\n    QUARTER = 'Quarter'\n    YEAR = 'Year'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "RelativePositionWhen",
+        "id": "lseg_analytics.reference_data.calendars.RelativePositionWhen",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "index",
+                "type": "IndexOrder",
+                "valuelookup": "enum.IndexOrder"
+            },
+            {
+                "name": "dayof_week",
+                "type": "WeekDay",
+                "valuelookup": "enum.WeekDay"
+            },
+            {
+                "name": "month",
+                "type": "Month",
+                "valuelookup": "enum.Month"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7146,
+        "content": "class RelativePositionWhen:\n    \"\"\"Relative position annual rule. For example, Summer holiday on last Monday of August.\n\n    Attributes\n    ----------\n    position_type : str or ~analyticsapi.models.RELATIVE_POSITION_WHEN\n        The type of regular annual holiday rule. Only RelativePositionWhen\n        value applies. Required. The holiday falls on a day of the week in a\n        certain month. For example, Summer holiday on last Monday of August.\n    index : str or ~analyticsapi.models.IndexOrder\n        The ordinal number of the day of the week in the month. Required. Known\n        values are: \"First\", \"Second\", \"Third\", \"Fourth\", and \"Last\".\n    dayof_week : str or ~analyticsapi.models.WeekDay\n        The day of the week. Required. Known values are: \"Monday\", \"Tuesday\",\n        \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", and \"Sunday\".\n    month : str or ~analyticsapi.models.Month\n        The month of the year. Required. Known values are: \"January\",\n        \"February\", \"March\", \"April\", \"May\", \"June\", \"July\", \"August\",\n        \"September\", \"October\", \"November\", and \"December\".\n    \n    \"\"\"\n    position_type: typing.Literal[<PositionType.RELATIVE_POSITION_WHEN: 'RelativePositionWhen'>]\n    index: typing.Union[str, ForwardRef('_models.IndexOrder')]\n    dayof_week: typing.Union[str, ForwardRef('_models.WeekDay')]\n    month: typing.Union[str, ForwardRef('_models.Month')]",
+        "metadata": {
+            "doc": "Relative position annual rule. For example, Summer holiday on last Monday of August.\n\n    Attributes\n    ----------\n    position_type : str or ~analyticsapi.models.RELATIVE_POSITION_WHEN\n        The type of regular annual holiday rule. Only RelativePositionWhen\n        value applies. Required. The holiday falls on a day of the week in a\n        certain month. For example, Summer holiday on last Monday of August.\n    index : str or ~analyticsapi.models.IndexOrder\n        The ordinal number of the day of the week in the month. Required. Known\n        values are: \"First\", \"Second\", \"Third\", \"Fourth\", and \"Last\".\n    dayof_week : str or ~analyticsapi.models.WeekDay\n        The day of the week. Required. Known values are: \"Monday\", \"Tuesday\",\n        \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", and \"Sunday\".\n    month : str or ~analyticsapi.models.Month\n        The month of the year. Required. Known values are: \"January\",\n        \"February\", \"March\", \"April\", \"May\", \"June\", \"July\", \"August\",\n        \"September\", \"October\", \"November\", and \"December\".\n    \n",
+            "annotations": "    position_type: typing.Literal[<PositionType.RELATIVE_POSITION_WHEN: 'RelativePositionWhen'>]\n    index: typing.Union[str, ForwardRef('_models.IndexOrder')]\n    dayof_week: typing.Union[str, ForwardRef('_models.WeekDay')]\n    month: typing.Union[str, ForwardRef('_models.Month')]",
+            "signature": "class RelativePositionWhen:\n    \"\"\"\"\"\"\n    position_type: typing.Literal[<PositionType.RELATIVE_POSITION_WHEN: 'RelativePositionWhen'>]\n    index: typing.Union[str, ForwardRef('_models.IndexOrder')]\n    dayof_week: typing.Union[str, ForwardRef('_models.WeekDay')]\n    month: typing.Union[str, ForwardRef('_models.Month')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.RelativePositionWhen.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.IndexOrder",
+                "lseg_analytics.common.WeekDay",
+                "lseg_analytics.common.Month"
+            ],
+            "base_classes": [
+                "lseg_analytics.reference_data.calendars.When"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "RelativePositionWhen.__init__",
+        "id": "lseg_analytics.reference_data.calendars.RelativePositionWhen.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7200,
+        "content": "class RelativePositionWhen:\n    @overload\n    def __init__(self, *, index: Union[str, ForwardRef('_models.IndexOrder')], dayof_week: Union[str, ForwardRef('_models.WeekDay')], month: Union[str, ForwardRef('_models.Month')]):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "RelativePositionWhen"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.RelativePositionWhen"
+            ],
+            "use": [
+                "lseg_analytics.common.IndexOrder",
+                "lseg_analytics.common.WeekDay",
+                "lseg_analytics.common.Month"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "RelativeRescheduleDescription",
+        "id": "lseg_analytics.reference_data.calendars.RelativeRescheduleDescription",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "index",
+                "type": "IndexOrder",
+                "valuelookup": "enum.IndexOrder"
+            },
+            {
+                "name": "dayof_week",
+                "type": "WeekDay",
+                "valuelookup": "enum.WeekDay"
+            },
+            {
+                "name": "direction",
+                "type": "Direction",
+                "valuelookup": "enum.Direction"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7204,
+        "content": "class RelativeRescheduleDescription:\n    \"\"\"An object to determine the rule for rescheduling a holiday to a specific day.\n\n    Attributes\n    ----------\n    reschedule_type : str or ~analyticsapi.models.RELATIVE_RESCHEDULE_DESCRIPTION\n        The type of rescheduling for the observation period. Only\n        RelativeRescheduleRescheduleDescription value applies. Required.\n        Reschedule the holiday to a specific day. For example, if a holiday\n        falls on Sunday, it is rescheduled to the first Monday after the\n        holiday.\n    index : str or ~analyticsapi.models.IndexOrder\n        The ordinal number of the day of the week in the month. The 'Last'\n        value should only be used if the direction is set to 'Before'.\n        Required. Known values are: \"First\", \"Second\", \"Third\", \"Fourth\", and\n        \"Last\".\n    dayof_week : str or ~analyticsapi.models.WeekDay\n        The day of the week. Required. Known values are: \"Monday\", \"Tuesday\",\n        \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", and \"Sunday\".\n    direction : str or ~analyticsapi.models.Direction\n        An indicator of whether the observation period falls before or after\n        the reference point. Required. Known values are: \"Before\" and \"After\".\n    \n    \"\"\"\n    reschedule_type: typing.Literal[<RescheduleType.RELATIVE_RESCHEDULE_DESCRIPTION: 'RelativeRescheduleDescription'>]\n    index: typing.Union[str, ForwardRef('_models.IndexOrder')]\n    dayof_week: typing.Union[str, ForwardRef('_models.WeekDay')]\n    direction: typing.Union[str, ForwardRef('_models.Direction')]",
+        "metadata": {
+            "doc": "An object to determine the rule for rescheduling a holiday to a specific day.\n\n    Attributes\n    ----------\n    reschedule_type : str or ~analyticsapi.models.RELATIVE_RESCHEDULE_DESCRIPTION\n        The type of rescheduling for the observation period. Only\n        RelativeRescheduleRescheduleDescription value applies. Required.\n        Reschedule the holiday to a specific day. For example, if a holiday\n        falls on Sunday, it is rescheduled to the first Monday after the\n        holiday.\n    index : str or ~analyticsapi.models.IndexOrder\n        The ordinal number of the day of the week in the month. The 'Last'\n        value should only be used if the direction is set to 'Before'.\n        Required. Known values are: \"First\", \"Second\", \"Third\", \"Fourth\", and\n        \"Last\".\n    dayof_week : str or ~analyticsapi.models.WeekDay\n        The day of the week. Required. Known values are: \"Monday\", \"Tuesday\",\n        \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", and \"Sunday\".\n    direction : str or ~analyticsapi.models.Direction\n        An indicator of whether the observation period falls before or after\n        the reference point. Required. Known values are: \"Before\" and \"After\".\n    \n",
+            "annotations": "    reschedule_type: typing.Literal[<RescheduleType.RELATIVE_RESCHEDULE_DESCRIPTION: 'RelativeRescheduleDescription'>]\n    index: typing.Union[str, ForwardRef('_models.IndexOrder')]\n    dayof_week: typing.Union[str, ForwardRef('_models.WeekDay')]\n    direction: typing.Union[str, ForwardRef('_models.Direction')]",
+            "signature": "class RelativeRescheduleDescription:\n    \"\"\"\"\"\"\n    reschedule_type: typing.Literal[<RescheduleType.RELATIVE_RESCHEDULE_DESCRIPTION: 'RelativeRescheduleDescription'>]\n    index: typing.Union[str, ForwardRef('_models.IndexOrder')]\n    dayof_week: typing.Union[str, ForwardRef('_models.WeekDay')]\n    direction: typing.Union[str, ForwardRef('_models.Direction')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.RelativeRescheduleDescription.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.IndexOrder",
+                "lseg_analytics.common.WeekDay",
+                "lseg_analytics.common.Direction"
+            ],
+            "base_classes": [
+                "lseg_analytics.reference_data.calendars.RescheduleDescription"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "RelativeRescheduleDescription.__init__",
+        "id": "lseg_analytics.reference_data.calendars.RelativeRescheduleDescription.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7262,
+        "content": "class RelativeRescheduleDescription:\n    @overload\n    def __init__(self, *, index: Union[str, ForwardRef('_models.IndexOrder')], dayof_week: Union[str, ForwardRef('_models.WeekDay')], direction: Union[str, ForwardRef('_models.Direction')]):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "RelativeRescheduleDescription"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.RelativeRescheduleDescription"
+            ],
+            "use": [
+                "lseg_analytics.common.IndexOrder",
+                "lseg_analytics.common.WeekDay",
+                "lseg_analytics.common.Direction"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "RelativeToRulePositionWhen",
+        "id": "lseg_analytics.reference_data.calendars.RelativeToRulePositionWhen",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "key",
+                "type": "str"
+            },
+            {
+                "name": "reschedule_description",
+                "type": "RescheduleDescription"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7266,
+        "content": "class RelativeToRulePositionWhen:\n    \"\"\"RelativeToRulePosition position annual holiday rule. This defines the holiday period by\n    reference to another holiday rule. Easter is most commonly used as a reference point.\n\n    Attributes\n    ----------\n    position_type : str or ~analyticsapi.models.RELATIVE_TO_RULE_POSITION_WHEN\n        The type of regular annual holiday rule. Only\n        RelativeToRulePositionWhen value applies. Required. The timing of the\n        holiday depends on the timing of another holiday. For example, Easter\n        is most commonly used as a reference point.\n    key : str\n        A user-defined key to create a reference to another rule (e.g. Easter).\n        Required.\n    reschedule_description : ~analyticsapi.models.RescheduleDescription\n        An object to determine holiday rescheduling. Required.\n    \n    \"\"\"\n    position_type: typing.Literal[<PositionType.RELATIVE_TO_RULE_POSITION_WHEN: 'RelativeToRulePositionWhen'>]\n    key: str\n    reschedule_description: _models.RescheduleDescription",
+        "metadata": {
+            "doc": "RelativeToRulePosition position annual holiday rule. This defines the holiday period by\n    reference to another holiday rule. Easter is most commonly used as a reference point.\n\n    Attributes\n    ----------\n    position_type : str or ~analyticsapi.models.RELATIVE_TO_RULE_POSITION_WHEN\n        The type of regular annual holiday rule. Only\n        RelativeToRulePositionWhen value applies. Required. The timing of the\n        holiday depends on the timing of another holiday. For example, Easter\n        is most commonly used as a reference point.\n    key : str\n        A user-defined key to create a reference to another rule (e.g. Easter).\n        Required.\n    reschedule_description : ~analyticsapi.models.RescheduleDescription\n        An object to determine holiday rescheduling. Required.\n    \n",
+            "annotations": "    position_type: typing.Literal[<PositionType.RELATIVE_TO_RULE_POSITION_WHEN: 'RelativeToRulePositionWhen'>]\n    key: str\n    reschedule_description: _models.RescheduleDescription",
+            "signature": "class RelativeToRulePositionWhen:\n    \"\"\"\"\"\"\n    position_type: typing.Literal[<PositionType.RELATIVE_TO_RULE_POSITION_WHEN: 'RelativeToRulePositionWhen'>]\n    key: str\n    reschedule_description: _models.RescheduleDescription"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.RelativeToRulePositionWhen.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.reference_data.calendars.RescheduleDescription"
+            ],
+            "base_classes": [
+                "lseg_analytics.reference_data.calendars.When"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "RelativeToRulePositionWhen.__init__",
+        "id": "lseg_analytics.reference_data.calendars.RelativeToRulePositionWhen.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7310,
+        "content": "class RelativeToRulePositionWhen:\n    @overload\n    def __init__(self, *, key: str, reschedule_description: '_models.RescheduleDescription'):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "RelativeToRulePositionWhen"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.RelativeToRulePositionWhen"
+            ],
+            "use": [
+                "lseg_analytics.reference_data.calendars.RescheduleDescription"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "RescheduleDescription",
+        "id": "lseg_analytics.reference_data.calendars.RescheduleDescription",
+        "params": [],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6502,
+        "content": "class RescheduleDescription:\n    \"\"\"An object to determine a holiday rescheduling.\n\n    You probably want to use the sub-classes and not this class directly. Known sub-classes are:\n    LagDaysRescheduleDescription, RelativeRescheduleDescription\n\n    Attributes\n    ----------\n    reschedule_type : str or ~analyticsapi.models.RescheduleType\n        The type of rescheduling for the observation period. Required. Known\n        values are: \"LagDaysRescheduleDescription\" and\n        \"RelativeRescheduleDescription\".\n    \n    \"\"\"\n    reschedule_type: str",
+        "metadata": {
+            "doc": "An object to determine a holiday rescheduling.\n\n    You probably want to use the sub-classes and not this class directly. Known sub-classes are:\n    LagDaysRescheduleDescription, RelativeRescheduleDescription\n\n    Attributes\n    ----------\n    reschedule_type : str or ~analyticsapi.models.RescheduleType\n        The type of rescheduling for the observation period. Required. Known\n        values are: \"LagDaysRescheduleDescription\" and\n        \"RelativeRescheduleDescription\".\n    \n",
+            "annotations": "    reschedule_type: str",
+            "signature": "class RescheduleDescription:\n    \"\"\"\"\"\"\n    reschedule_type: str"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.RescheduleDescription.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": [
+                "lseg_analytics.reference_data.calendars.LagDaysRescheduleDescription",
+                "lseg_analytics.reference_data.calendars.RelativeRescheduleDescription"
+            ]
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "RescheduleDescription.__init__",
+        "id": "lseg_analytics.reference_data.calendars.RescheduleDescription.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6536,
+        "content": "class RescheduleDescription:\n    @overload\n    def __init__(self, reschedule_type: str):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "RescheduleDescription"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.RescheduleDescription"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "RestDays",
+        "id": "lseg_analytics.reference_data.calendars.RestDays",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "rest_days",
+                "type": "List[WeekDay]",
+                "valuelookup": "enum.WeekDay"
+            },
+            {
+                "name": "validity_period",
+                "type": "ValidityPeriod"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7314,
+        "content": "class RestDays:\n    \"\"\"An object to determine rest days for the calendar.\n\n    Attributes\n    ----------\n    rest_days : list[str or ~analyticsapi.models.WeekDay]\n        Days of the week that are set as rest days. An array of WeekDay\n        objects. Default is [WeekDay.Saturday, WeekDay.Sunday]. Required.\n    validity_period : ~analyticsapi.models.ValidityPeriod\n        An object to determine the validity period. If not specified, the\n        validity period is assumed to be perpetual.\n    \n    \"\"\"\n    rest_days: typing.List[typing.Union[str, ForwardRef('_models.WeekDay')]]\n    validity_period: typing.Optional[ForwardRef('_models.ValidityPeriod')]",
+        "metadata": {
+            "doc": "An object to determine rest days for the calendar.\n\n    Attributes\n    ----------\n    rest_days : list[str or ~analyticsapi.models.WeekDay]\n        Days of the week that are set as rest days. An array of WeekDay\n        objects. Default is [WeekDay.Saturday, WeekDay.Sunday]. Required.\n    validity_period : ~analyticsapi.models.ValidityPeriod\n        An object to determine the validity period. If not specified, the\n        validity period is assumed to be perpetual.\n    \n",
+            "annotations": "    rest_days: typing.List[typing.Union[str, ForwardRef('_models.WeekDay')]]\n    validity_period: typing.Optional[ForwardRef('_models.ValidityPeriod')]",
+            "signature": "class RestDays:\n    \"\"\"\"\"\"\n    rest_days: typing.List[typing.Union[str, ForwardRef('_models.WeekDay')]]\n    validity_period: typing.Optional[ForwardRef('_models.ValidityPeriod')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.RestDays.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.WeekDay",
+                "lseg_analytics.common.ValidityPeriod"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "RestDays.__init__",
+        "id": "lseg_analytics.reference_data.calendars.RestDays.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7351,
+        "content": "class RestDays:\n    @overload\n    def __init__(self, *, rest_days: List[Union[str, ForwardRef('_models.WeekDay')]], validity_period: Optional[ForwardRef('_models.ValidityPeriod')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "RestDays"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.RestDays"
+            ],
+            "use": [
+                "lseg_analytics.common.WeekDay",
+                "lseg_analytics.common.ValidityPeriod"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "When",
+        "id": "lseg_analytics.reference_data.calendars.When",
+        "params": [],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 44,
+        "content": "class When:\n    \"\"\"An object to determine a regular annual holiday rule for the calendar.\n\n    You probably want to use the sub-classes and not this class directly. Known sub-classes are:\n    AbsolutePositionWhen, RelativePositionWhen, RelativeToRulePositionWhen\n\n\n    :ivar position_type: The type of regular annual holiday rule. Possible values are:\n     AbsolutePositionWhen (for fixed holidays), RelativePositionWhen (for holidays that fall on a\n     particular day of the week) or RelativeToRulePositionWhen (for holidays that are set by\n     reference to another date). Required. Known values are: \"AbsolutePositionWhen\",\n     \"RelativePositionWhen\", and \"RelativeToRulePositionWhen\".\n    :vartype position_type: str or ~analyticsapi.models.PositionType\n    \n    \"\"\"\n    position_type: str",
+        "metadata": {
+            "doc": "An object to determine a regular annual holiday rule for the calendar.\n\n    You probably want to use the sub-classes and not this class directly. Known sub-classes are:\n    AbsolutePositionWhen, RelativePositionWhen, RelativeToRulePositionWhen\n\n\n    :ivar position_type: The type of regular annual holiday rule. Possible values are:\n     AbsolutePositionWhen (for fixed holidays), RelativePositionWhen (for holidays that fall on a\n     particular day of the week) or RelativeToRulePositionWhen (for holidays that are set by\n     reference to another date). Required. Known values are: \"AbsolutePositionWhen\",\n     \"RelativePositionWhen\", and \"RelativeToRulePositionWhen\".\n    :vartype position_type: str or ~analyticsapi.models.PositionType\n    \n",
+            "annotations": "    position_type: str",
+            "signature": "class When:\n    \"\"\"\"\"\"\n    position_type: str"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.reference_data.calendars.When.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": [
+                "lseg_analytics.reference_data.calendars.AbsolutePositionWhen",
+                "lseg_analytics.reference_data.calendars.RelativePositionWhen",
+                "lseg_analytics.reference_data.calendars.RelativeToRulePositionWhen"
+            ]
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "When.__init__",
+        "id": "lseg_analytics.reference_data.calendars.When.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 80,
+        "content": "class When:\n    @overload\n    def __init__(self, position_type: str):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        :param mapping: raw JSON to initialize the model.\n        :type mapping: Mapping[str, Any]\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "When"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.reference_data.calendars.When"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "FunctionChunk",
+        "name": "compute_dates",
+        "id": "lseg_analytics.reference_data.calendars.compute_dates",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "tenors",
+                "type": "List[str]",
+                "valuelookup": "tenors"
+            },
+            {
+                "name": "calendars",
+                "type": "List[str]",
+                "valuelookup": "Calendar.scoped"
+            },
+            {
+                "name": "start_date",
+                "type": "date"
+            },
+            {
+                "name": "date_moving_convention",
+                "type": "DateMovingConvention",
+                "valuelookup": "enum.DateMovingConvention"
+            }
+        ],
+        "file_path": "lseg_analytics/reference_data/calendars/_functions.py",
+        "line_number": 202,
+        "content": "def compute_dates(*, tenors: List[str], calendars: List[str], start_date: Union[str, datetime.date, NoneType] = None, date_moving_convention: Union[str, DateMovingConvention, NoneType] = None) -> List[CalculateDatesOutput]:\n    \"\"\"\n    Computes dates for the calendar according to specified conditions. Start Date is included in the calculation. Only saved calendars are supported.\n\n    Parameters\n    ----------\n    tenors : List[str]\n        Tenors to be added to startDate to calculate the resulted dates.\n        A tenor expresses a period of time using a specific syntax. For example \"1D\" for one day, \"2W\" for two weeks or \"3W1M\" for three weeks and a month.\n        There are common tenors like ON, TN, SN, SW, 1W, 2W, 1M, 2M, etc.\n    start_date : Union[str, datetime.date], optional\n        The start date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01). Default is Today.\n    date_moving_convention : Union[str, DateMovingConvention], optional\n        The method to adjust dates to working days.\n    calendars : List[str]\n        An array of calendar reference strings for which the calculation should be done. Each string being composed of the space and name of a calendar. For example 'LSEG.UKG' is the string referencing the 'UKG' calendar stored in the 'LSEG' space.\n\n    Returns\n    --------\n    List[CalculateDatesOutput]\n        The result of the date calculation.\n\n    Examples\n    --------\n    >>> compute_dates(\n    >>>     calendars=['LSEG.UKG','LSEG.EUR'],\n    >>>     tenors=[\"1M\", \"2M\"],\n    >>>     start_date=datetime.date(2023, 11, 1),\n    >>>     date_moving_convention=DateMovingConvention.NEXT_BUSINESS_DAY\n    >>> )\n    [{'endDate': '2023-11-03', 'processingInformation': '<string>', 'tenor': '1M'},\n     {'endDate': '2023-12-03', 'processingInformation': '<string>', 'tenor': '2M'}]\n\n    \n    \"\"\"",
+        "metadata": {
+            "doc": "\n    Computes dates for the calendar according to specified conditions. Start Date is included in the calculation. Only saved calendars are supported.\n\n    Parameters\n    ----------\n    tenors : List[str]\n        Tenors to be added to startDate to calculate the resulted dates.\n        A tenor expresses a period of time using a specific syntax. For example \"1D\" for one day, \"2W\" for two weeks or \"3W1M\" for three weeks and a month.\n        There are common tenors like ON, TN, SN, SW, 1W, 2W, 1M, 2M, etc.\n    start_date : Union[str, datetime.date], optional\n        The start date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01). Default is Today.\n    date_moving_convention : Union[str, DateMovingConvention], optional\n        The method to adjust dates to working days.\n    calendars : List[str]\n        An array of calendar reference strings for which the calculation should be done. Each string being composed of the space and name of a calendar. For example 'LSEG.UKG' is the string referencing the 'UKG' calendar stored in the 'LSEG' space.\n\n    Returns\n    --------\n    List[CalculateDatesOutput]\n        The result of the date calculation.\n\n    Examples\n    --------\n    >>> compute_dates(\n    >>>     calendars=['LSEG.UKG','LSEG.EUR'],\n    >>>     tenors=[\"1M\", \"2M\"],\n    >>>     start_date=datetime.date(2023, 11, 1),\n    >>>     date_moving_convention=DateMovingConvention.NEXT_BUSINESS_DAY\n    >>> )\n    [{'endDate': '2023-11-03', 'processingInformation': '<string>', 'tenor': '1M'},\n     {'endDate': '2023-12-03', 'processingInformation': '<string>', 'tenor': '2M'}]\n\n    \n",
+            "signature": "def compute_dates(*, tenors: List[str], calendars: List[str], start_date: Union[str, datetime.date, NoneType] = None, date_moving_convention: Union[str, DateMovingConvention, NoneType] = None) -> List[CalculateDatesOutput]:"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.DateMovingConvention",
+                "lseg_analytics.reference_data.calendars.CalculateDatesOutput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "FunctionChunk",
+        "name": "count_periods",
+        "id": "lseg_analytics.reference_data.calendars.count_periods",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "start_date",
+                "type": "date"
+            },
+            {
+                "name": "end_date",
+                "type": "date"
+            },
+            {
+                "name": "day_count_basis",
+                "type": "DayCountBasis",
+                "valuelookup": "enum.DayCountBasis"
+            },
+            {
+                "name": "period_type",
+                "type": "PeriodType",
+                "valuelookup": "enum.PeriodType"
+            },
+            {
+                "name": "calendars",
+                "type": "List[str]",
+                "valuelookup": "Calendar.scoped"
+            }
+        ],
+        "file_path": "lseg_analytics/reference_data/calendars/_functions.py",
+        "line_number": 266,
+        "content": "def count_periods(*, start_date: Union[str, datetime.date], end_date: Union[str, datetime.date], day_count_basis: Union[str, DayCountBasis, NoneType] = None, period_type: Union[str, PeriodType, NoneType] = None, calendars: Optional[List[str]] = None) -> CountPeriodsOutput:\n    \"\"\"\n    Counts the time periods that satisfy specified conditions. Note the use of date strings for convenience. Start and End Dates are included in the calculation. Only saved calendars are supported.\n\n    Parameters\n    ----------\n    start_date : Union[str, datetime.date]\n        Start date for counting periods. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01).\n    end_date : Union[str, datetime.date]\n        End date for counting periods. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2024-01-01).\n    day_count_basis : Union[str, DayCountBasis], optional\n        The day count basis convention used to calculate the period between two dates. Default is Actual/Actual.\n        It is used when periodType is set to Year.\n        Each convention defines the number of days between two dates and the year length in days (basis) for the period calculation.\n    period_type : Union[str, PeriodType], optional\n        The method of the period calculation. Default is Day.\n    calendars : List[str], optional\n        An array of calendar reference strings for which the calculation should be done. Each string being composed of the space and name of a calendar.\n        For example 'LSEG.UKG' is the string referencing the 'UKG' calendar stored in the 'LSEG' space.\n        The calendars parameter is optional only when periodType is \"Day\" or \"Year\".\n        For a given day to be considered a working day, it must be a working day in all of the selected calendars. If it is a non-working day in any of the calendars, it is a non-working day.\n\n    Returns\n    --------\n    CountPeriodsOutput\n        The result of the period calculation.\n\n    Examples\n    --------\n    >>> count_periods(\n    >>>     calendars=['LSEG.UKG'],\n    >>>     start_date=datetime.date(2024, 5, 12),\n    >>>     end_date=datetime.date(2024, 5, 29),\n    >>>     day_count_basis=DayCountBasis.DCB_30_360,\n    >>>     period_type=PeriodType.WORKING_DAY\n    >>> )\n    {'count': 13.0, 'periodType': 'WorkingDay', 'processingInformation': ''}\n\n    \n    \"\"\"",
+        "metadata": {
+            "doc": "\n    Counts the time periods that satisfy specified conditions. Note the use of date strings for convenience. Start and End Dates are included in the calculation. Only saved calendars are supported.\n\n    Parameters\n    ----------\n    start_date : Union[str, datetime.date]\n        Start date for counting periods. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01).\n    end_date : Union[str, datetime.date]\n        End date for counting periods. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2024-01-01).\n    day_count_basis : Union[str, DayCountBasis], optional\n        The day count basis convention used to calculate the period between two dates. Default is Actual/Actual.\n        It is used when periodType is set to Year.\n        Each convention defines the number of days between two dates and the year length in days (basis) for the period calculation.\n    period_type : Union[str, PeriodType], optional\n        The method of the period calculation. Default is Day.\n    calendars : List[str], optional\n        An array of calendar reference strings for which the calculation should be done. Each string being composed of the space and name of a calendar.\n        For example 'LSEG.UKG' is the string referencing the 'UKG' calendar stored in the 'LSEG' space.\n        The calendars parameter is optional only when periodType is \"Day\" or \"Year\".\n        For a given day to be considered a working day, it must be a working day in all of the selected calendars. If it is a non-working day in any of the calendars, it is a non-working day.\n\n    Returns\n    --------\n    CountPeriodsOutput\n        The result of the period calculation.\n\n    Examples\n    --------\n    >>> count_periods(\n    >>>     calendars=['LSEG.UKG'],\n    >>>     start_date=datetime.date(2024, 5, 12),\n    >>>     end_date=datetime.date(2024, 5, 29),\n    >>>     day_count_basis=DayCountBasis.DCB_30_360,\n    >>>     period_type=PeriodType.WORKING_DAY\n    >>> )\n    {'count': 13.0, 'periodType': 'WorkingDay', 'processingInformation': ''}\n\n    \n",
+            "signature": "def count_periods(*, start_date: Union[str, datetime.date], end_date: Union[str, datetime.date], day_count_basis: Union[str, DayCountBasis, NoneType] = None, period_type: Union[str, PeriodType, NoneType] = None, calendars: Optional[List[str]] = None) -> CountPeriodsOutput:"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.DayCountBasis",
+                "lseg_analytics.common.PeriodType",
+                "lseg_analytics.reference_data.calendars.CountPeriodsOutput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "FunctionChunk",
+        "name": "delete",
+        "id": "lseg_analytics.reference_data.calendars.delete",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "resource_id",
+                "type": "str",
+                "valuelookup": "Calendar.id"
+            },
+            {
+                "name": "name",
+                "type": "str",
+                "valuelookup": "Calendar.name"
+            },
+            {
+                "name": "space",
+                "type": "str",
+                "valuelookup": "Calendar.space"
+            }
+        ],
+        "file_path": "lseg_analytics/reference_data/calendars/_functions.py",
+        "line_number": 144,
+        "content": "def delete(*, resource_id: Optional[str] = None, name: Optional[str] = None, space: Optional[str] = None):\n    \"\"\"\n    Delete Calendar instance from the server.\n\n    Parameters\n    ----------\n    resource_id : str, optional\n        The Calendar resource ID.\n        Required if name is not provided.\n    name : str, optional\n        The Calendar name.\n        Required if resource_id is not provided.\n    space : str, optional\n        The space where the Calendar is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n        LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n\n    Returns\n    -------\n    ServiceErrorResponse, optional\n        Error response, if applicable, otherwise None\n\n    Examples\n    --------\n    Delete by Id.\n\n    >>> delete(resource_id='125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF')\n    True\n\n    Delete by name and space.\n\n    >>> delete(name=\"my_calendar\", space=\"my_personal_space\")\n    True\n\n    \n    \"\"\"",
+        "metadata": {
+            "doc": "\n    Delete Calendar instance from the server.\n\n    Parameters\n    ----------\n    resource_id : str, optional\n        The Calendar resource ID.\n        Required if name is not provided.\n    name : str, optional\n        The Calendar name.\n        Required if resource_id is not provided.\n    space : str, optional\n        The space where the Calendar is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n        LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n\n    Returns\n    -------\n    ServiceErrorResponse, optional\n        Error response, if applicable, otherwise None\n\n    Examples\n    --------\n    Delete by Id.\n\n    >>> delete(resource_id='125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF')\n    True\n\n    Delete by name and space.\n\n    >>> delete(name=\"my_calendar\", space=\"my_personal_space\")\n    True\n\n    \n",
+            "signature": "def delete(*, resource_id: Optional[str] = None, name: Optional[str] = None, space: Optional[str] = None):"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "FunctionChunk",
+        "name": "generate_date_schedule",
+        "id": "lseg_analytics.reference_data.calendars.generate_date_schedule",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "frequency",
+                "type": "Frequency",
+                "valuelookup": "enum.Frequency"
+            },
+            {
+                "name": "calendars",
+                "type": "List[str]",
+                "valuelookup": "Calendar.scoped"
+            },
+            {
+                "name": "start_date",
+                "type": "date"
+            },
+            {
+                "name": "end_date",
+                "type": "date"
+            },
+            {
+                "name": "calendar_day_of_month",
+                "type": "int"
+            },
+            {
+                "name": "count",
+                "type": "int"
+            },
+            {
+                "name": "day_of_week",
+                "type": "WeekDay",
+                "valuelookup": "enum.WeekDay"
+            }
+        ],
+        "file_path": "lseg_analytics/reference_data/calendars/_functions.py",
+        "line_number": 368,
+        "content": "def generate_date_schedule(*, frequency: Union[str, Frequency], calendars: List[str], start_date: Union[str, datetime.date, NoneType] = None, end_date: Union[str, datetime.date, NoneType] = None, calendar_day_of_month: Optional[int] = None, count: Optional[int] = None, day_of_week: Union[str, WeekDay, NoneType] = None) -> List[datetime.date]:\n    \"\"\"\n    Generates a date schedule for the calendar according to specified conditions. Start and End Dates are included in the calculation. Only saved calendars are supported.\n\n    Parameters\n    ----------\n    frequency : Union[str, Frequency]\n        The frequency of dates in the schedule which should be generated. Note that \"Daily\" refers to working days only.\n    start_date : Union[str, datetime.date], optional\n        The start date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01).\n        The start date must be before the end date.\n        Required if endDate is in the past.\n    end_date : Union[str, datetime.date], optional\n        The end date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2024-01-01).\n        If startDate is not specified, endDate is used to define the list of dates from today's date to the end date.\n        The end date must be after the start date.\n        Required if count is not specified. Only one of endDate and count can be set at a time.\n    calendar_day_of_month : int, optional\n        The number of the day of the month. Required if frequency is Monthly; do not use otherwise. The minimum value is 1. The maximum value is 31.\n    count : int, optional\n        The number of dates to be generated, counting from the start date (or today's date if the start date is not set).\n        It should not have a negative value.\n        Required if endDate is not specified. Only one of endDate and count can be set at a time.\n    day_of_week : Union[str, WeekDay], optional\n        The day of the week. Required if frequency is Weekly or BiWeekly; do not use otherwise.\n    calendars : List[str]\n        An array of calendar reference strings for which the calculation should be done. Each string being composed of the space and name of a calendar. For example 'LSEG.UKG' is the string referencing the 'UKG' calendar stored in the 'LSEG' space.\n\n    Returns\n    --------\n    List[datetime.date]\n        A date on a calendar without a time zone, e.g. \"April 10th\"\n\n    Examples\n    --------\n    >>> generate_date_schedule(\n    >>>     calendars=['LSEG.UKG'],\n    >>>     frequency=Frequency.DAILY,\n    >>>     start_date=datetime.date(2023, 5, 5),\n    >>>     end_date=datetime.date(2023, 11, 1),\n    >>>     calendar_day_of_month=5,\n    >>>     count=20,\n    >>>     day_of_week=WeekDay.TUESDAY\n    >>> )\n    [datetime.date(2023, 5, 9),\n     datetime.date(2023, 5, 16),\n     datetime.date(2023, 5, 23),\n     datetime.date(2023, 5, 30),\n     datetime.date(2023, 6, 6),\n     datetime.date(2023, 6, 13),\n     datetime.date(2023, 6, 20),\n     datetime.date(2023, 6, 27),\n     datetime.date(2023, 7, 4),\n     datetime.date(2023, 7, 11),\n     datetime.date(2023, 7, 18),\n     datetime.date(2023, 7, 25),\n     datetime.date(2023, 8, 1),\n     datetime.date(2023, 8, 8),\n     datetime.date(2023, 8, 15),\n     datetime.date(2023, 8, 22),\n     datetime.date(2023, 8, 29),\n     datetime.date(2023, 9, 5),\n     datetime.date(2023, 9, 12),\n     datetime.date(2023, 9, 19)]\n\n    \n    \"\"\"",
+        "metadata": {
+            "doc": "\n    Generates a date schedule for the calendar according to specified conditions. Start and End Dates are included in the calculation. Only saved calendars are supported.\n\n    Parameters\n    ----------\n    frequency : Union[str, Frequency]\n        The frequency of dates in the schedule which should be generated. Note that \"Daily\" refers to working days only.\n    start_date : Union[str, datetime.date], optional\n        The start date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01).\n        The start date must be before the end date.\n        Required if endDate is in the past.\n    end_date : Union[str, datetime.date], optional\n        The end date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2024-01-01).\n        If startDate is not specified, endDate is used to define the list of dates from today's date to the end date.\n        The end date must be after the start date.\n        Required if count is not specified. Only one of endDate and count can be set at a time.\n    calendar_day_of_month : int, optional\n        The number of the day of the month. Required if frequency is Monthly; do not use otherwise. The minimum value is 1. The maximum value is 31.\n    count : int, optional\n        The number of dates to be generated, counting from the start date (or today's date if the start date is not set).\n        It should not have a negative value.\n        Required if endDate is not specified. Only one of endDate and count can be set at a time.\n    day_of_week : Union[str, WeekDay], optional\n        The day of the week. Required if frequency is Weekly or BiWeekly; do not use otherwise.\n    calendars : List[str]\n        An array of calendar reference strings for which the calculation should be done. Each string being composed of the space and name of a calendar. For example 'LSEG.UKG' is the string referencing the 'UKG' calendar stored in the 'LSEG' space.\n\n    Returns\n    --------\n    List[datetime.date]\n        A date on a calendar without a time zone, e.g. \"April 10th\"\n\n    Examples\n    --------\n    >>> generate_date_schedule(\n    >>>     calendars=['LSEG.UKG'],\n    >>>     frequency=Frequency.DAILY,\n    >>>     start_date=datetime.date(2023, 5, 5),\n    >>>     end_date=datetime.date(2023, 11, 1),\n    >>>     calendar_day_of_month=5,\n    >>>     count=20,\n    >>>     day_of_week=WeekDay.TUESDAY\n    >>> )\n    [datetime.date(2023, 5, 9),\n     datetime.date(2023, 5, 16),\n     datetime.date(2023, 5, 23),\n     datetime.date(2023, 5, 30),\n     datetime.date(2023, 6, 6),\n     datetime.date(2023, 6, 13),\n     datetime.date(2023, 6, 20),\n     datetime.date(2023, 6, 27),\n     datetime.date(2023, 7, 4),\n     datetime.date(2023, 7, 11),\n     datetime.date(2023, 7, 18),\n     datetime.date(2023, 7, 25),\n     datetime.date(2023, 8, 1),\n     datetime.date(2023, 8, 8),\n     datetime.date(2023, 8, 15),\n     datetime.date(2023, 8, 22),\n     datetime.date(2023, 8, 29),\n     datetime.date(2023, 9, 5),\n     datetime.date(2023, 9, 12),\n     datetime.date(2023, 9, 19)]\n\n    \n",
+            "signature": "def generate_date_schedule(*, frequency: Union[str, Frequency], calendars: List[str], start_date: Union[str, datetime.date, NoneType] = None, end_date: Union[str, datetime.date, NoneType] = None, calendar_day_of_month: Optional[int] = None, count: Optional[int] = None, day_of_week: Union[str, WeekDay, NoneType] = None) -> List[datetime.date]:"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.Frequency",
+                "lseg_analytics.common.WeekDay"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "FunctionChunk",
+        "name": "generate_holidays",
+        "id": "lseg_analytics.reference_data.calendars.generate_holidays",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "end_date",
+                "type": "date"
+            },
+            {
+                "name": "calendars",
+                "type": "List[str]",
+                "valuelookup": "Calendar.scoped"
+            },
+            {
+                "name": "start_date",
+                "type": "date"
+            }
+        ],
+        "file_path": "lseg_analytics/reference_data/calendars/_functions.py",
+        "line_number": 470,
+        "content": "def generate_holidays(*, end_date: Union[str, datetime.date], calendars: List[str], start_date: Union[str, datetime.date, NoneType] = None) -> List[HolidayOutput]:\n    \"\"\"\n    Gets the holidays for the calendar within a date range. Start and End Dates are included in the calculation. Only saved calendars are supported.\n\n    Parameters\n    ----------\n    start_date : Union[str, datetime.date], optional\n        The start date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01). Default is today.\n    end_date : Union[str, datetime.date]\n        The end date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2024-01-01).\n    calendars : List[str]\n        An array of calendar reference strings for which the calculation should be done. Each string being composed of the space and name of a calendar. For example 'LSEG.UKG' is the string referencing the 'UKG' calendar stored in the 'LSEG' space.\n\n    Returns\n    --------\n    List[HolidayOutput]\n        Dates and names of holidays for a requested calendar.\n\n    Examples\n    --------\n    >>> response = generate_holidays(\n    >>>     calendars=['LSEG.EMU','LSEG.UKG'],\n    >>>     start_date=['2023-01-01'],\n    >>>     end_date=['2023-01-31']\n    >>> )\n    >>> response[0]\n    {'date': '2023-01-01', 'names': [{'name': \"New Year's Day\", 'calendars': [{'type': 'Calendar', 'id': '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF', 'location': {'name': 'EMU', 'space': 'LSEG'}}, {'type': 'Calendar', 'id': '259B1FED-8MM3-4B1F-843F-5BA89EBE71AF', 'location': {'name': 'UKG', 'space': 'LSEG'}}], 'countries': ['', 'GBR']}], 'processingInformation': '<string>'}\n\n    \n    \"\"\"",
+        "metadata": {
+            "doc": "\n    Gets the holidays for the calendar within a date range. Start and End Dates are included in the calculation. Only saved calendars are supported.\n\n    Parameters\n    ----------\n    start_date : Union[str, datetime.date], optional\n        The start date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2023-01-01). Default is today.\n    end_date : Union[str, datetime.date]\n        The end date of the calculation. The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., 2024-01-01).\n    calendars : List[str]\n        An array of calendar reference strings for which the calculation should be done. Each string being composed of the space and name of a calendar. For example 'LSEG.UKG' is the string referencing the 'UKG' calendar stored in the 'LSEG' space.\n\n    Returns\n    --------\n    List[HolidayOutput]\n        Dates and names of holidays for a requested calendar.\n\n    Examples\n    --------\n    >>> response = generate_holidays(\n    >>>     calendars=['LSEG.EMU','LSEG.UKG'],\n    >>>     start_date=['2023-01-01'],\n    >>>     end_date=['2023-01-31']\n    >>> )\n    >>> response[0]\n    {'date': '2023-01-01', 'names': [{'name': \"New Year's Day\", 'calendars': [{'type': 'Calendar', 'id': '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF', 'location': {'name': 'EMU', 'space': 'LSEG'}}, {'type': 'Calendar', 'id': '259B1FED-8MM3-4B1F-843F-5BA89EBE71AF', 'location': {'name': 'UKG', 'space': 'LSEG'}}], 'countries': ['', 'GBR']}], 'processingInformation': '<string>'}\n\n    \n",
+            "signature": "def generate_holidays(*, end_date: Union[str, datetime.date], calendars: List[str], start_date: Union[str, datetime.date, NoneType] = None) -> List[HolidayOutput]:"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": [
+                "lseg_analytics.reference_data.calendars.HolidayOutput"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "FunctionChunk",
+        "name": "load",
+        "id": "lseg_analytics.reference_data.calendars.load",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "resource_id",
+                "type": "str",
+                "valuelookup": "Calendar.id"
+            },
+            {
+                "name": "name",
+                "type": "str",
+                "valuelookup": "Calendar.name"
+            },
+            {
+                "name": "space",
+                "type": "str",
+                "valuelookup": "Calendar.space"
+            }
+        ],
+        "file_path": "lseg_analytics/reference_data/calendars/_functions.py",
+        "line_number": 84,
+        "content": "def load(*, resource_id: Optional[str] = None, name: Optional[str] = None, space: Optional[str] = None):\n    \"\"\"\n    Load a Calendar using its name and space to perform date-based operations such as calculating working days, generating schedules, and retrieving holiday information on a predefined calendar.\n\n    Parameters\n    ----------\n    resource_id : str, optional\n        The Calendar id.\n        Required if name is not provided.\n    name : str, optional\n        The Calendar name.\n        Required if resource_id is not provided. The name parameter must be specified when the object is first created. Thereafter it is optional.\n    space : str, optional\n        The space where the Calendar is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n        LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n\n    Returns\n    -------\n    Calendar\n        The Calendar instance.\n\n    Examples\n    --------\n    Load by Id.\n\n    >>> load(resource_id=\"125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF\")\n    <Calendar space='my_personal_space' name='my_calendar' 125B1FCD\u2025>\n\n    Load by name and space.\n\n    >>> load(name=\"EMU\", space=\"LSEG\")\n    <Calendar space='my_personal_space' name='my_calendar' 125B1FCD\u2025>\n\n    \n    \"\"\"",
+        "metadata": {
+            "doc": "\n    Load a Calendar using its name and space to perform date-based operations such as calculating working days, generating schedules, and retrieving holiday information on a predefined calendar.\n\n    Parameters\n    ----------\n    resource_id : str, optional\n        The Calendar id.\n        Required if name is not provided.\n    name : str, optional\n        The Calendar name.\n        Required if resource_id is not provided. The name parameter must be specified when the object is first created. Thereafter it is optional.\n    space : str, optional\n        The space where the Calendar is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n        LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n\n    Returns\n    -------\n    Calendar\n        The Calendar instance.\n\n    Examples\n    --------\n    Load by Id.\n\n    >>> load(resource_id=\"125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF\")\n    <Calendar space='my_personal_space' name='my_calendar' 125B1FCD\u2025>\n\n    Load by name and space.\n\n    >>> load(name=\"EMU\", space=\"LSEG\")\n    <Calendar space='my_personal_space' name='my_calendar' 125B1FCD\u2025>\n\n    \n",
+            "signature": "def load(*, resource_id: Optional[str] = None, name: Optional[str] = None, space: Optional[str] = None):"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "FunctionChunk",
+        "name": "search",
+        "id": "lseg_analytics.reference_data.calendars.search",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "item_per_page",
+                "type": "int"
+            },
+            {
+                "name": "names",
+                "type": "List[str]",
+                "valuelookup": "Calendar.name"
+            },
+            {
+                "name": "spaces",
+                "type": "List[str]",
+                "valuelookup": "Calendar.space"
+            },
+            {
+                "name": "tags",
+                "type": "List[str]"
+            }
+        ],
+        "file_path": "lseg_analytics/reference_data/calendars/_functions.py",
+        "line_number": 560,
+        "content": "def search(*, item_per_page: Optional[int] = None, names: Optional[List[str]] = None, spaces: Optional[List[str]] = None, tags: Optional[List[str]] = None) -> List[CalendarAsCollectionItem]:\n    \"\"\"\n    Search resources via combination of name, space and tags\n\n    Parameters\n    ----------\n    item_per_page : int, optional\n        The maximum number of items for each search request. The valid range is 1-500. If not provided, 50 will be used.\n    names : List[str], optional\n        The list of resource names to be searched. Exact match is applied for each name.\n    spaces : List[str], optional\n        The space where the resource is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n        LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n    tags : List[str], optional\n        The list of resource tags to be searched.\n\n    Returns\n    --------\n    List[CalendarAsCollectionItem]\n        An object describing the basic properties of a calendar.\n\n    Examples\n    --------\n    Search all previously saved calendars.\n\n    >>> search()\n    [{'type': 'Calendar', 'description': {'tags': ['EU calendar'], 'summary': 'Calendar for Eurozone'}, 'id': '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF', 'location': {'name': 'EMU', 'space': 'LSEG'}}]\n\n    Search by names and spaces.\n\n    >>> search(names=[\"EMU\"], spaces=[\"LSEG\"])\n    [{'type': 'Calendar', 'description': {'tags': ['EU calendar'], 'summary': 'Calendar for Eurozone'}, 'id': '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF', 'location': {'name': 'EMU', 'space': 'LSEG'}}]\n\n    Search by names.\n\n    >>> search(names=[\"EMU\"])\n    [{'type': 'Calendar', 'description': {'tags': ['EU calendar'], 'summary': 'Calendar for Eurozone'}, 'id': '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF', 'location': {'name': 'EMU', 'space': 'LSEG'}}]\n\n    Search by spaces.\n\n    >>> search(spaces=[\"LSEG\"])\n    [{'type': 'Calendar', 'description': {'tags': ['EU calendar'], 'summary': 'Calendar for Eurozone'}, 'id': '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF', 'location': {'name': 'EMU', 'space': 'LSEG'}}]\n\n    Search by tags.\n\n    >>> search(tags=[\"EU calendar\"])\n    [{'type': 'Calendar', 'description': {'tags': ['EU calendar'], 'summary': 'Calendar for Eurozone'}, 'id': '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF', 'location': {'name': 'EMU', 'space': 'LSEG'}}]\n\n    \n    \"\"\"",
+        "metadata": {
+            "doc": "\n    Search resources via combination of name, space and tags\n\n    Parameters\n    ----------\n    item_per_page : int, optional\n        The maximum number of items for each search request. The valid range is 1-500. If not provided, 50 will be used.\n    names : List[str], optional\n        The list of resource names to be searched. Exact match is applied for each name.\n    spaces : List[str], optional\n        The space where the resource is stored. Space is like a namespace where resources are stored. By default there are two spaces:\n        LSEG is reserved for LSEG maintained resources, HOME is reserved for user's default space. If space is not specified, HOME will be used.\n    tags : List[str], optional\n        The list of resource tags to be searched.\n\n    Returns\n    --------\n    List[CalendarAsCollectionItem]\n        An object describing the basic properties of a calendar.\n\n    Examples\n    --------\n    Search all previously saved calendars.\n\n    >>> search()\n    [{'type': 'Calendar', 'description': {'tags': ['EU calendar'], 'summary': 'Calendar for Eurozone'}, 'id': '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF', 'location': {'name': 'EMU', 'space': 'LSEG'}}]\n\n    Search by names and spaces.\n\n    >>> search(names=[\"EMU\"], spaces=[\"LSEG\"])\n    [{'type': 'Calendar', 'description': {'tags': ['EU calendar'], 'summary': 'Calendar for Eurozone'}, 'id': '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF', 'location': {'name': 'EMU', 'space': 'LSEG'}}]\n\n    Search by names.\n\n    >>> search(names=[\"EMU\"])\n    [{'type': 'Calendar', 'description': {'tags': ['EU calendar'], 'summary': 'Calendar for Eurozone'}, 'id': '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF', 'location': {'name': 'EMU', 'space': 'LSEG'}}]\n\n    Search by spaces.\n\n    >>> search(spaces=[\"LSEG\"])\n    [{'type': 'Calendar', 'description': {'tags': ['EU calendar'], 'summary': 'Calendar for Eurozone'}, 'id': '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF', 'location': {'name': 'EMU', 'space': 'LSEG'}}]\n\n    Search by tags.\n\n    >>> search(tags=[\"EU calendar\"])\n    [{'type': 'Calendar', 'description': {'tags': ['EU calendar'], 'summary': 'Calendar for Eurozone'}, 'id': '125B1FCD-6EE9-4B1F-870F-5BA89EBE71AF', 'location': {'name': 'EMU', 'space': 'LSEG'}}]\n\n    \n",
+            "signature": "def search(*, item_per_page: Optional[int] = None, names: Optional[List[str]] = None, spaces: Optional[List[str]] = None, tags: Optional[List[str]] = None) -> List[CalendarAsCollectionItem]:"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": [
+                "lseg_analytics.reference_data.calendars.CalendarAsCollectionItem"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.reference_data.calendars",
+        "module_version": "1.0.0b9.post2"
+    }
+]
