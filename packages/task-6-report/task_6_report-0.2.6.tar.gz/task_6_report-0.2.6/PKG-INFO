@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: task_6_report
+Version: 0.2.6
+Summary: Аналізатор гонки F1
+Author-email: Yurii_Step <step.crypt@email.com>
+Requires-Python: >=3.9
+License-File: LICENSE
+Dynamic: license-file
