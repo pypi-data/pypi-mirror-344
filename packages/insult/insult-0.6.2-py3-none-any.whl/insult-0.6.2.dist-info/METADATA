@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: insult
+Version: 0.6.2
+Summary: Python bindings to LibInsult
+Home-page: https://insult.mattbas.org/
+Author: Mattia Basaglia
+Author-email: mattia.basaglia@gmail.com
+License: GPLv3+
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Utilities
+Classifier: Operating System :: OS Independent
+License-File: COPYING
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: platform
+Dynamic: summary
+
+A python library to generate insults
