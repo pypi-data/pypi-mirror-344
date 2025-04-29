@@ -1,0 +1,5 @@
+# include everything under the data package, recursively
+recursive-include src/gai/scripts/data *
+prune src/gai/scripts/data/__pycache__
+prune src/gai/scripts/data/**/*.py
+prune src/gai/scripts/data/**/*.py[co]
