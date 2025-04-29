@@ -1,0 +1,30 @@
+[project]
+name = "filecacheutils"
+version = "0.1.0"
+description = "Various caching utilities"
+authors = [
+    { name = "Topi Aaltonen", email = "aaltopi@gmail.com" },
+]
+dependencies = []
+requires-python = ">=3.12, <3.14"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend >= 2.4.4",
+]
+build-backend = "pdm.backend"
+
+[dependency-groups]
+dev = [
+    "pandas",
+    "pytest",
+]
+notebook = [
+    "ipykernel",
+]
+
+[tool]
