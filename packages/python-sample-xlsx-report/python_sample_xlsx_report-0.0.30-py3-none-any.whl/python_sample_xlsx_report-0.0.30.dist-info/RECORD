@@ -1,0 +1,11 @@
+python_sample_xlsx_report/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_sample_xlsx_report/src/__init__.py,sha256=2EoM1JQ3ouaq3tIC0-q12PBjwocDykLXxBGPoWmn34Y,82
+python_sample_xlsx_report/src/cli.py,sha256=fsIxRMBgSLg7joqwg0v9FCbkaJzPGFJFj_2E9ltUH5Y,828
+python_sample_xlsx_report/src/python_generate_xlsx_report.py,sha256=ASh3yHO-r2Yya5Kvq6C93-z7lVz70-oLUhjeaBaCJuc,3547
+python_sample_xlsx_report/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_sample_xlsx_report-0.0.30.dist-info/licenses/LICENSE,sha256=FRRVaEwB24O_1A0x3j6h2pFaAf_uhx_gt5BC7pMr8_U,1068
+python_sample_xlsx_report-0.0.30.dist-info/METADATA,sha256=dTFvNOCEyPqnR8NhCeugyDTVmCEMPeFTiQi5T19D5M8,1023
+python_sample_xlsx_report-0.0.30.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+python_sample_xlsx_report-0.0.30.dist-info/entry_points.txt,sha256=5AAniDXRl0Msz9ObZ_XZA8OoMR42sL_aUXfqoFDa3c8,80
+python_sample_xlsx_report-0.0.30.dist-info/top_level.txt,sha256=0e8L-Xk_9_IpIvBTFvomaNUcLdVBCCSvpkWwCqEYUBE,26
+python_sample_xlsx_report-0.0.30.dist-info/RECORD,,
