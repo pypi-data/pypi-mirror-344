@@ -1,0 +1,8 @@
+README.md
+setup.py
+tensordlx/__init__.py
+tensordlx/regression.py
+tensordlx.egg-info/PKG-INFO
+tensordlx.egg-info/SOURCES.txt
+tensordlx.egg-info/dependency_links.txt
+tensordlx.egg-info/top_level.txt
