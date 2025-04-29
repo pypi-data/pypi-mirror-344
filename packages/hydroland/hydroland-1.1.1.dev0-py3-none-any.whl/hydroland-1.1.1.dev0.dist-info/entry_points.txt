@@ -1,0 +1,6 @@
+[console_scripts]
+conclude = hydroland._cli:conclude
+initialize = hydroland._cli:initialize
+prepare_forcings = hydroland._cli:prepare_forcings
+run_mhm = hydroland._cli:run_mhm
+run_mrm = hydroland._cli:run_mrm
