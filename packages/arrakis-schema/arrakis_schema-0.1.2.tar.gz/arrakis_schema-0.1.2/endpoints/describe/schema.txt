@@ -1,0 +1,5 @@
+channel: string not null
+data_type: string not null
+sample_rate: int32 not null
+partition_id: string
+publisher: string

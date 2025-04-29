@@ -1,0 +1,4 @@
+properties: map<string, string> not null
+  child 0, entries: struct<key: string not null, value: string> not null
+      child 0, key: string not null
+      child 1, value: string
