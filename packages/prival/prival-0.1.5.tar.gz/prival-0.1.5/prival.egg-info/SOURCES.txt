@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+prival/__init__.py
+prival/core.py
+prival/report.py
+prival/scoring.py
+prival.egg-info/PKG-INFO
+prival.egg-info/SOURCES.txt
+prival.egg-info/dependency_links.txt
+prival.egg-info/requires.txt
+prival.egg-info/top_level.txt
+tests/test_report.py
+tests/test_scoring.py
+tests/tests.py
