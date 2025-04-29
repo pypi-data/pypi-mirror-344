@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: advancedchatbot
+Version: 1.0.0
+Summary: An advanced chatbot that can chat, code, and browse the web.
+Author: kkyian
+Requires-Python: >=3.7
+License-File: LICENSE
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
