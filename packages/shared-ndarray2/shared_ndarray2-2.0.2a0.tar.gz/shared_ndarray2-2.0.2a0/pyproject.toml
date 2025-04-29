@@ -1,0 +1,67 @@
+[project]
+name = "shared-ndarray2"
+version = "2.0.2a0"
+description = "Interface for NumPy ndarray using multiprocessing SharedMemory"
+authors = [
+    { name = "Randall Pittman", email = "randall.pittman@oregonstate.edu" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["numpy", "shared_memory", "ndarray"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development",
+    "Intended Audience :: Developers",
+]
+dependencies = ["numpy>=1.21.1", "packaging>=25.0", "single-version>=1.5.1"]
+
+[project.urls]
+Repository = "https://gitlab.com/osu-nrsg/shared-ndarray2"
+Issues = "https://gitlab.com/osu-nrsg/shared-ndarray2/-/issues"
+Changelog = "https://gitlab.com/osu-nrsg/shared-ndarray2/-/blob/master/CHANGELOG.md"
+
+# [[tool.uv.index]]
+# name = "testpypi"
+# url = "https://test.pypi.org/simple"
+# publish-url = "https://test.pypi.org/legacy/"
+
+[dependency-groups]
+dev = [
+    "ipdb>=0.13.13",
+    "ipython>=8.12.3",
+    "mypy>=1.14.1",
+    "pytest>=8.3.5",
+    "ruff>=0.11.7",
+    "tomli>=2.2.1 ; python_full_version < '3.11'",
+]
+test = ["pytest>=8.3.5", "tomli>=2.2.1 ; python_full_version < '3.11'"]
+
+[[tool.uv.index]]
+name = "testpypi"
+explicit = true
+url = "https://test.pypi.org/legacy/"  # pipeline fails when using /simple instead of /legacy
+publish-url = "https://test.pypi.org/legacy/"
+
+[tool.ruff]
+line-length = 90
+
+[tool.ruff.lint.extend-per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.pyright]
+defineConstant = { "NUMPY_1_23" = true } # set false for Numpy < 1.23.0
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
