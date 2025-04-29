@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load texsitecore_tags %}
+{% load wagtailimages_tags %}
+
+{% trans "Weiterlesen" as button_label %}
+{% get_live_descendant_pages value.parent value.limit value.newest_first as pages %}
+
+{% for page in pages %}
+    <div class="card overflow-hidden shadow rounded-2 border-0 {% if not forloop.last %}mb-5{% endif %}">
+        <div class="card-body p-0">
+            <div class="d-flex justify-content-between">
+                <div class="p-4 p-md-5 flex-grow-1">
+                    <h2 class="fw-bolder">{{ page.title }}</h2>
+                    <div class="small fw-bolder">{{ page.first_published_at|date:"j. F Y" }}</div>
+                    <p class="small text-muted">{{ page.owner.get_full_name }}</p>
+                    <a class="btn btn-secondary text-white" href="{{ page.url }}?navigate=true">
+                        {{ button_label }}
+                    </a>
+                </div>
+
+                {% with page.specific.body.first_block_by_name.teaser_image as teaser_image %}
+                    {% if teaser_image %}
+                        {% image teaser_image.value fill-300x300 as imagedata %}
+                        <img class="img-fluid d-none d-lg-block" src="{{ imagedata.url }}" alt="{{ imagedata.alt }}" />
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+{% endfor %}

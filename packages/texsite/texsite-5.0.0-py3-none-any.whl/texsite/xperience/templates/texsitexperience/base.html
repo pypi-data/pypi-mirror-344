@@ -1,0 +1,119 @@
+{% extends "bootstrap_ui/bootstrap5-skeleton.html" %}
+
+{% load i18n %}
+{% load static %}
+{% load texsitecore_tags %}
+{% load wagtailcore_tags %}
+
+{% block head-meta %}
+    {{ block.super }}
+
+    {% if self.search_description %}
+        <meta name="description" content="{{ self.search_description }}" />
+    {% endif %}
+
+    {% if request.in_preview_panel %}
+        <base target="_blank">
+    {% endif %}
+{% endblock %}
+
+{% block head-css %}
+    {{ block.super }}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static "vendor/startbootstrap-personal/css/styles.css" %}" rel="stylesheet" />
+{% endblock %}
+
+{% block head-title %}
+    {% wagtail_site as current_site %}
+
+    {{ page.title }} | {{ current_site.site_name }}
+{% endblock %}
+
+{% block head-extension %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "/favicon/apple-touch-icon.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "/favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "/favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "/favicon/site.webmanifest" %}">
+{% endblock %}
+
+{% block body-content %}
+    {% wagtail_site as current_site %}
+    {% get_menu_pages current_site as pages %}
+
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-xl navbar-light bg-white py-3">
+            <div class="container px-md-5">
+                <a class="navbar-brand" href="/">
+                    <img src="{% static "images/logo.png" %}" width="24" height="24" class="d-inline-block align-text-top me-2">
+                    <span class="fw-bolder text-dark d-none d-sm-inline">
+                        {{ current_site.site_name }}
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{% trans "Toggle navigation" %}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <span class="fw-bolder text-dark d-md-none">
+                        {{ current_site.site_name }}
+                    </span>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        {% for page in pages %}
+                            <li class="nav-item">
+                                <a href="{{ page.url }}" class="nav-link">{{ page.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container py-5 px-md-5">
+            <div class="text-center mb-2">
+                <h1 class="display-5 fw-bolder mb-0">{{ page.title }}</h1>
+
+                {% if page.seo_title and page.seo_title != page.title %}
+                    <div class="badge bg-gradient-primary-to-secondary text-white mt-3">
+                        {{ page.seo_title }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        {% block xperience-body-content %}{% endblock %}
+    </main>
+
+    <!-- Footer-->
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                    <div class="small m-0">{% trans "Copyright ©" %} {% now "Y" %} {{ current_site.site_name }}</div>
+                </div>
+                <div class="col-auto">
+                    {% get_footer_pages current_site as pages %}
+                    {% for page in pages %}
+                        <a class="small" href="{{ page.url }}">{{ page.title }}</a>
+
+                        {% if not forloop.last %}
+                            <span class="mx-1">&middot;</span>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
+
+{% block body-javascript %}
+    {{ block.super }}
+
+    <!-- Core theme JS-->
+    <script src="{% static "vendor/startbootstrap-personal/js/scripts.js" %}"></script>
+{% endblock %}

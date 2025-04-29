@@ -1,0 +1,24 @@
+{% load i18n %}
+
+{% with parent=page.get_parent next=page.next_sibling previous=page.previous_sibling %}
+    {% if parent or next or previous %}
+        <hr>
+
+        <ul class="pager">
+            {% if parent %}
+                {% trans "Index" as label %}
+                {% include "texsitecleanblog/includes/pager_item.html" with type="previous" link=parent.url title=parent.title icon="fa-arrow-left" icon_position="left" label=label only %}
+            {% endif %}
+
+            {% if previous %}
+                {% trans "Prev" as label %}
+                {% include "texsitecleanblog/includes/pager_item.html" with type="next" link=previous.url|add:"?navigate=true" title=previous.title icon="fa-arrow-down" icon_position="right" label=label only %}
+            {% endif %}
+
+            {% if next %}
+                {% trans "Next" as label %}
+                {% include "texsitecleanblog/includes/pager_item.html" with type="next" link=next.url|add:"?navigate=true" title=next.title icon="fa-arrow-up" icon_position="left" label=label only %}
+            {% endif %}
+        </ul>
+    {% endif %}
+{% endwith %}

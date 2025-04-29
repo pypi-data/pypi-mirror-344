@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load wagtailimages_tags %}
+
+<div id="xperience-carousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        {% for img in value %}
+            {% image img fill-1140x400 as carouselimagedata %}
+
+            <div class="carousel-item{% if forloop.first %} active{% endif %}">
+                <img src="{{ carouselimagedata.url }}" class="d-block w-100" alt="{{ carouselimagedata.alt }}">
+            </div>
+         {% endfor %}
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#xperience-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">{% trans "Previous" %}</span>
+    </button>
+    <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#xperience-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">{% trans "Next" %}</span>
+    </button>
+</div>

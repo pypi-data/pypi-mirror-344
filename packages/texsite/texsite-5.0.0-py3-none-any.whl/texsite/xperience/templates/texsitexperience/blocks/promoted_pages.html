@@ -1,0 +1,21 @@
+{% load i18n %}
+{% load wagtailimages_tags %}
+
+{% trans "Jetzt informieren!" as button_label %}
+
+{% for promotion in value %}
+    {% image promotion.teaser fill-1140x400 as imagedata %}
+
+    <div class="card overflow-hidden shadow rounded-2 border-0 {% if not forloop.last %}mb-5{% endif %}">
+        <div class="card-body p-0">
+            <div class="d-flexx align-items-center">
+                <div class="p-4 p-md-5">
+                    <h2 class="fw-bolder">{{ promotion.page.title }}</h2>
+                    <p>{{ promotion.page.search_description }}</p>
+                    <a href="{{ promotion.page.url }}" class="btn btn-secondary text-white">{{ button_label }}</a>
+                </div>
+                <img class="img-fluid" src="{{ imagedata.url }}" alt="{{ imagedata.alt }}" />
+            </div>
+        </div>
+    </div>
+{% endfor %}
