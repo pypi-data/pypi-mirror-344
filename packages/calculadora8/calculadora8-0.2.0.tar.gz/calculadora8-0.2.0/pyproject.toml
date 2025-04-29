@@ -1,0 +1,5 @@
+[tool.taskipy.tasks]
+# Tarefas de teste
+test = "pytest tests -v"
+test_cov = "pytest --cov=calculadora --cov-report=html"
+check_formatacao = "blue --check --diff ."

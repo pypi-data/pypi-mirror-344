@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+calculadora/__init__.py
+calculadora/calculadora.py
+calculadora8.egg-info/PKG-INFO
+calculadora8.egg-info/SOURCES.txt
+calculadora8.egg-info/dependency_links.txt
+calculadora8.egg-info/top_level.txt
+tests/__init__.py
+tests/test_calculadora.py
