@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: caesar-cli
+Version: 0.1
+Summary: A Caesar Cipher encryption and decryption program
+Home-page: https://github.com/ftkovr9k/caesar-cli
+Author: Farhan Khan
+Author-email: ftkover9k@gmail.com
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# Caesar Cipher Program
+
+A very simple Python implementation of the Caesar Cipher encryption and decryption algorithm. This program allows you to encrypt and decrypt messages with a shift cipher (Caesar cipher), where each letter is shifted by a given number (key). Encrypt your message, don't get stabbed in the back
+
+## Installation
+
+To install the Caesar Cipher program, you can use `pip`:
+
+```bash
+pip install caesar
