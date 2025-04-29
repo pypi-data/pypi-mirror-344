@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: mcp-time-service1
+Version: 0.1.0
+Summary: 一个实现MCP协议的时间服务器示例
+Home-page: https://github.com/yourusername/mcp-time-service1
+Author: MCP时间服务
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.6.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# MCP时间服务 (v0.1.0)
+
+这是一个基于MCP协议的时间服务器，提供获取当前时间和格式化日期等功能。
+大语言模型可以通过这个服务获取实时时间信息。
+
+## 安装
+
+```bash
+pip install mcp-time-service1
+```
+
+## 功能
+
+### 工具 (Tools)
+
+- `get_current_time`: 获取当前时间，精确到毫秒。
+- `format_date(format_string: str)`: 按照指定格式返回当前日期。
+
+### 资源 (Resources)
+
+- `time://timezone_info`: 提供当前系统的时区信息。
+
+## 在阿里云百炼中使用
+
+在阿里云百炼平台的MCP服务配置中，使用以下JSON：
+
+```json
+{
+  "mcpServers": {
+    "time-service": {  // 服务名称，可自定义
+      "command": "uvx",
+      "args": ["mcp-time-service1"]
+    }
+  }
+}
+```
+
+## 本地运行
+
+安装后，您可以在本地通过以下方式运行：
+
+```bash
+# 使用uvx
+uvx mcp-time-service1
+
+# 使用包提供的命令
+mcp-time-service1
+
+# 使用Python -m
+python -m mcp_time_service1
+```
+
+按 `Ctrl+C` 停止服务器。
+
+## 许可证
+
+MIT License 

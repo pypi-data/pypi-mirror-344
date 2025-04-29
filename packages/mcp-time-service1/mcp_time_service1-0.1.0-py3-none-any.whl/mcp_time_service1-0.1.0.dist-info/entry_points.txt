@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-time-service1 = mcp_time_service1.__main__:main
