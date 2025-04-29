@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: mockstack
+Version: 0.0.3
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: fastapi[standard]>=0.115.12
+Requires-Dist: jinja2>=3.1.6
+Requires-Dist: opentelemetry-distro[otlp]>=0.53b1
+Requires-Dist: opentelemetry-instrumentation-fastapi>=0.53b1
+Requires-Dist: pydantic>=2.11.3
+Requires-Dist: pydantic-settings>=2.9.1
+Dynamic: license-file
