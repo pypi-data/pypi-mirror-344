@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=80", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mockstack"
+version = "0.1.0"
+description = "An API mocking workhorse"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+keywords = ["mocking", "integration-testing", "testing", "microservices", "api"]
+requires-python = ">=3.11"
+dependencies = [
+    "colorama>=0.4.6",
+    "fastapi[standard]>=0.115.12",
+    "jinja2>=3.1.6",
+    "opentelemetry-distro[otlp]>=0.53b1",
+    "opentelemetry-instrumentation-fastapi>=0.53b1",
+    "pydantic>=2.11.3",
+    "pydantic-settings>=2.9.1",
+    "typer>=0.15.2",
+    "uvicorn>=0.34.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/adamhadani/mockstack"
+Issues = "https://github.com/adamhadani/mockstack/issues"
+
+[project.scripts]
+mockstack = "mockstack.main:cli"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.26.0",
+    "pytest-cov>=6.1.1",
+]
+
+[tool.mypy]
+namespace_packages = true
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff.lint]
+select = ["I"]
