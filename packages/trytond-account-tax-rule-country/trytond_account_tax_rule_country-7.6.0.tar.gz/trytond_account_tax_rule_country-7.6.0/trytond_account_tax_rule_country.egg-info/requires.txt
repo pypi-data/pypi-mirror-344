@@ -1,0 +1,9 @@
+trytond_account<7.7,>=7.6
+trytond_country<7.7,>=7.6
+trytond<7.7,>=7.6
+
+[test]
+trytond_account_invoice<7.7,>=7.6
+trytond_sale<7.7,>=7.6
+trytond_purchase<7.7,>=7.6
+trytond_stock<7.7,>=7.6
