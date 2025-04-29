@@ -1,0 +1,15 @@
+MANIFEST.in
+pyproject.toml
+setup.cfg
+setup.py
+docs/README.md
+src/unified_parts_processor/__init__.py
+src/unified_parts_processor/db.py
+src/unified_parts_processor/models.py
+src/unified_parts_processor/uploader.py
+src/unified_parts_processor.egg-info/PKG-INFO
+src/unified_parts_processor.egg-info/SOURCES.txt
+src/unified_parts_processor.egg-info/dependency_links.txt
+src/unified_parts_processor.egg-info/requires.txt
+src/unified_parts_processor.egg-info/top_level.txt
+tests/test_uploader.py

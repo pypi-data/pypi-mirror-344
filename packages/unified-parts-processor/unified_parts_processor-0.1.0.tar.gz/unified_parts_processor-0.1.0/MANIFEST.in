@@ -1,0 +1,3 @@
+include docs/README.md
+recursive-include src/unified_parts_processor *.py
+recursive-include tests *.py

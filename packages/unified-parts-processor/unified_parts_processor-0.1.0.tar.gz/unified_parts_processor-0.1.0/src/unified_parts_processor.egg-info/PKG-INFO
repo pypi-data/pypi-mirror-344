@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: unified-parts-processor
+Version: 0.1.0
+Summary: A package to upload Pandas DataFrames into PostgreSQL using ORM
+Home-page: https://github.com/yourusername/unified-parts-processor
+Author: Your Name
+Author-email: your@email.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: sqlalchemy
+Requires-Dist: psycopg2
+Requires-Dist: environs
+Requires-Dist: pytest
+
+# unified-parts-processor
+
+**unified-parts-processor** is a lightweight Python package to upload device data from Pandas DataFrames into a PostgreSQL database using SQLAlchemy ORM models.
+
+---
+
+## 🚀 Features
+- Singleton database connection
+- ORM-based PostgreSQL model (`Device`)
+- Easy DataFrame-to-database upload
+- Automatic table creation
+- Production-ready clean structure
+
+---
+
+## 📦 Installation
+
+Install from TestPyPI for development:
+
+```bash
+pip install unified-parts-processor==0.1.0
