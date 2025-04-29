@@ -1,0 +1,10 @@
+pandas_nhanes/__init__.py,sha256=iZQuFiqt5PaccxsMnOiH2PJh6hSpQ8D6UBU8dRJQqcM,470
+pandas_nhanes/api.py,sha256=hMXVqpvc1N4AW63s6h8j9vbTh0gRwsmgEPv4t6KZZ3M,5791
+pandas_nhanes/nhanes_variables.csv,sha256=Zsp4N9h0vZOr7GGi3uhp3e61tvkKq2tkT6uLokuTpAM,13909902
+pandas_nhanes/scrape_variables.py,sha256=xHZGuT4KusQE8tR2JpEc1NUXOgwYK5yH9EdVArW2kf4,5647
+pandas_nhanes/test.py,sha256=IemN_KBNCg6WL53E2BO8IvcXu3u_nzyIa3MZrnJytr8,958
+pandas_nhanes-0.1.1.dist-info/licenses/LICENSE,sha256=OphKV48tcMv6ep-7j-8T6nycykPT0g8ZlMJ9zbGvdPs,1066
+pandas_nhanes-0.1.1.dist-info/METADATA,sha256=pHlMah9EzxaXYdsRQ22kqSBV4pnCY_A2JDFokhRDCoU,2982
+pandas_nhanes-0.1.1.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+pandas_nhanes-0.1.1.dist-info/top_level.txt,sha256=OiARm6kGRu0w9Fq-Z6KG7BZrPlUBntxijF5rY9subBw,14
+pandas_nhanes-0.1.1.dist-info/RECORD,,
