@@ -1,0 +1,183 @@
+CHANGES
+=======
+
+2024.2.2b1 - chiesa - 2024-05-23
+--------------------------------
+firmware files in python package, status register
+
+2024.2.2b2 - chiesa - 2024-05-23
+--------------------------------
+fix bit register 
+
+2024.2.3b1 - chiesa - 2024-05-30
+--------------------------------
+user message
+
+2024.2.2b3 - chiesa - 2024-06-13
+--------------------------------
+fix S2Status user message
+
+2024.2.2b4 - chiesa - 2024-06-13
+--------------------------------
+add external trigger
+
+2024.3a1 - chiesa - 2024-06-13
+------------------------------
+rere
+
+2024.3.3 - chiesa - 2024-06-14
+------------------------------
+improve firmware resolution
+
+2024.3.2 - chiesa - 2024-06-14
+------------------------------
+fix last version
+
+2024.3.1 - chiesa - 2024-06-14
+------------------------------
+fix installer
+
+2024.3 - chiesa - 2024-06-14
+----------------------------
+added firmware 4000
+
+2024.2.1 - chiesa - 2024-03-22
+------------------------------
+fix messages
+
+2024.2 - chiesa - 2024-03-22
+----------------------------
+improve updater
+
+2024.1 - chiesa - 2024-02-19
+----------------------------
+upgrade to 3837
+
+1.2.7
+-----
+
+* fix retry policy
+* remove invalid description
+
+1.2.6
+-----
+
+* add usage example
+
+1.2.5
+-----
+
+* add pulse mode
+
+1.2.4
+-----
+
+* update readme
+
+1.2.3
+-----
+
+* add license information
+
+1.2.2
+-----
+
+* introduce advanced mode flat
+* introduce advanced mode flat
+
+1.2.1
+-----
+
+* improve updater
+* explicitly set configuration for modeAB
+* configurable mode Auto duty cycles
+
+1.2
+---
+
+* fixes
+* fixes
+
+1.1
+---
+
+* clean up, only code that can be distributed to clients
+
+1.0
+---
+
+* renaming to sdeux
+* release 0.2.3
+
+0.2.8
+-----
+
+* release 0.2.3
+
+0.2.3
+-----
+
+* updater testing
+* updater ready for test
+* implementing updater
+* qualification tests fw 3832.a1
+* results
+* results
+* qualification tests fw 3832.a1
+* qualification tests fw 3832.a1
+* qualification tests fw 3832.a1
+* input analysis mode AB
+* input analysis mode AB
+* input analysis mode AB
+* input analysis mode AB
+* input analysis mode AB
+* modification1 au firmware: communiation protocol changed
+* modification1 au firmware: communiation protocol changed
+* modification1 au firmware: communiation protocol changed
+* results
+* modification1 au firmware: communiation protocol changed
+* results
+* modification1 au firmware: communiation protocol changed
+* results
+* results
+* results
+* modification1 au firmware: communiation protocol changed
+* results
+* results
+* modification1 au firmware: communiation protocol changed
+* modification1 au firmware: communiation protocol changed
+* results
+* modification1 au firmware: communiation protocol changed
+* modification1 au firmware: communiation protocol changed
+* modification1 au firmware: communiation protocol changed
+* modification1 au firmware: communiation protocol changed
+* modification1 au firmware: communiation protocol changed
+* results
+* modification1 au firmware: communiation protocol changed
+* modification1 au firmware: communiation protocol changed
+* modification1 au firmware: communiation protocol changed
+* results
+* modification1 au firmware: communiation protocol changed
+* modification1 au firmware: communiation protocol changed
+* modification1 au firmware: communiation protocol changed
+* modification1 au firmware: communiation protocol changed
+* modification1 au firmware: communiation protocol changed
+* started implementing qualification and calibration scripts
+* started implementing qualification and calibration scripts
+* results
+* started implementing qualification and calibration scripts
+* started implementing qualification and calibration scripts
+* started implementing qualification and calibration scripts
+* started implementing qualification and calibration scripts
+* started implementing qualification and calibration scripts
+* started implementing qualification and calibration scripts
+* started implementing qualification and calibration scripts
+
+0.0.2
+-----
+
+* imports fixed
+* imports fixed
+* imported drivers from pirata
+* initialized
+* init\_project
