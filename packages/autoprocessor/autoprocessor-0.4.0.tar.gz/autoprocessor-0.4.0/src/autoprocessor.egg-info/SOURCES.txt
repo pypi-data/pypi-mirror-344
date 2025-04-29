@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+readme.md
+setup.py
+src/autoprocessor.egg-info/PKG-INFO
+src/autoprocessor.egg-info/SOURCES.txt
+src/autoprocessor.egg-info/dependency_links.txt
+src/autoprocessor.egg-info/top_level.txt
+src/checkthisout/Assign-2.ipynb
+src/checkthisout/DL Ass1.ipynb
+src/checkthisout/DL Ass2.ipynb
+src/checkthisout/__init__.py
+src/checkthisout/imdb USING CSV.ipynb
+src/checkthisout/imdb.csv
+src/checkthisout/main.py
+src/checkthisout/minst.ipynb
