@@ -1,0 +1,10 @@
+tutorwebhooks/__about__.py,sha256=DBzXzwthXX42Albr0Kgy7J8JDMeKElxIZsuSRa7m338,23
+tutorwebhooks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tutorwebhooks/plugin.py,sha256=ndEINl_yqk0XYfXlSYDNzyzojVf5gslUYQQ8WsGuZyw,860
+tutorwebhooks/patches/.gitignore,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tutorwebhooks/patches/openedx-dockerfile-post-python-requirements,sha256=VR_o8-u1iLucMoAB7py0rjHNFl86goNqliprcjPJMh0,130
+tutor_contrib_webhooks-19.0.0.dist-info/METADATA,sha256=rNsb0jQvnEckOoyarBrSy4iSWXEKQdlnrY-RAp1hQmE,7761
+tutor_contrib_webhooks-19.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tutor_contrib_webhooks-19.0.0.dist-info/entry_points.txt,sha256=H9y_Ba-tjJ5nWzNZ6WvWuQX8WeLrp5W894YnWF600Js,50
+tutor_contrib_webhooks-19.0.0.dist-info/licenses/LICENSE.txt,sha256=3r8IgT7s_qqg0e9WHbZtv8UJ_owUrb74_lBu7fe0HBs,34523
+tutor_contrib_webhooks-19.0.0.dist-info/RECORD,,
