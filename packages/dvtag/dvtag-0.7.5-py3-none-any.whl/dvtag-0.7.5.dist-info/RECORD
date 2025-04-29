@@ -1,0 +1,12 @@
+main.py,sha256=mq3B5yPkqDR9hVflwpPMhEcf801dFR9EU4HNeSUQ_64,1325
+dvtag/__init__.py,sha256=5dp_2Ok92zXcHTWfJghNkcvn4j_KvZ5oG8tMPAl1Dbw,99
+dvtag/_doujin_voice.py,sha256=12VfwZWKcHMnPOTTgcBWGhMNwp0oFQUHEMhb6ZxNfhM,280
+dvtag/_dvtag.py,sha256=LK26vuPVM_qm9XoB-mXpXGfZxMBUoVRrL_oceRNwvbU,4916
+dvtag/_scrape.py,sha256=h-BECEAN6lQ2Dnx4SYC_zr_68OufJJ5kNXAH0KeC2vo,2684
+dvtag/_utils.py,sha256=7mMyLwehVN5AYZgaMIwOaDitg8H27YMdfDOfhhpWiwQ,5332
+dvtag-0.7.5.dist-info/licenses/LICENSE,sha256=O8tcNT5zm-PK6EZMqzgtSgjbD0tQSMdcrsvWkDRyoQQ,1072
+dvtag-0.7.5.dist-info/METADATA,sha256=dCQMHpaotdjCLw8ugw3vHaDi2jJETnIoP0xiuX2in0E,2661
+dvtag-0.7.5.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+dvtag-0.7.5.dist-info/entry_points.txt,sha256=_k1dzJCpxhbz0oLb7Nh7tqPoghdm7IDVecdHkPHznQo,36
+dvtag-0.7.5.dist-info/top_level.txt,sha256=ZeGiOkmm_YP8-ibPs5O4hwlbwOc5n_HiJ3rjcJNYMG4,17
+dvtag-0.7.5.dist-info/RECORD,,
