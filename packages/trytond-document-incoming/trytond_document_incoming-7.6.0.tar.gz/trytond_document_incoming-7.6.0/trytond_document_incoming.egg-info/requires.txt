@@ -1,0 +1,7 @@
+pypdf>=3
+trytond_company<7.7,>=7.6
+trytond<7.7,>=7.6
+
+[test]
+proteus<7.7,>=7.6
+trytond_inbound_email<7.7,>=7.6
