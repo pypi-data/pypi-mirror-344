@@ -1,0 +1,42 @@
+[project]
+name = "vectorvfs"
+version = "0.3.0"
+description = "Your filesystem is a vector database."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.1.8",
+    "perception-models-perone>=1.0.0",
+    "pillow>=11.0.0",
+    "rich>=14.0.0",
+    "torch==2.5.1",
+    "torchaudio==2.5.1",
+    "torchcodec==0.1",
+    "torchvision==0.20.1",
+    "xformers>=0.0.29.post1",
+]
+
+[dependency-groups]
+dev = [
+    "ipdb>=0.13.13",
+    "mypy>=1.15.0",
+    "pytest>=8.3.5",
+    "ruff>=0.11.7",
+    "sphinx>=8.2.3",
+    "sphinx-autobuild>=2024.10.3",
+    "sphinx-press-theme>=0.9.1",
+]
+
+[tool.mypy]
+disable_error_code = ["import-untyped"]
+  
+[project.scripts]
+vfs = "vectorvfs.cli:vfs"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/perone/vectorvfs"
+Issues = "https://github.com/perone/vectorvfs/issues"
