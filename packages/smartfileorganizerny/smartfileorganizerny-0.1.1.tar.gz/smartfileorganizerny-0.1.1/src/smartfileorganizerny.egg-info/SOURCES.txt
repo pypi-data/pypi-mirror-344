@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/smartfileorganizerny.egg-info/PKG-INFO
+src/smartfileorganizerny.egg-info/SOURCES.txt
+src/smartfileorganizerny.egg-info/dependency_links.txt
+src/smartfileorganizerny.egg-info/requires.txt
+src/smartfileorganizerny.egg-info/top_level.txt
+src/utils/__init__.py
+src/utils/exceptions.py
+src/utils/logger.py
+src/utils/organizer.py
