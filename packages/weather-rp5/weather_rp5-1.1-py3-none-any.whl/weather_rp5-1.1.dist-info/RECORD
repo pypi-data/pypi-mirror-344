@@ -1,0 +1,11 @@
+weather_rp5/__init__.py,sha256=Wz11QJcQCaHdnoFAuSCXtZZSYSla0viVJQhX-6Jf6Tc,50
+weather_rp5/cleanup.py,sha256=F7v8NRHB1QzxrZqH7hTQT7TetvHWK3eixrsmL9d2vyY,1975
+weather_rp5/country.py,sha256=exMpsIKVvLh164W_uzUa19fLcZ5SzUlqpWyWo2AESgg,432
+weather_rp5/downloader.py,sha256=YFW7mG3KDsfDMZCzEe5Co3tgwgZg4qLy-PzncM8V4CM,4503
+weather_rp5/headers.py,sha256=gQU5_G0spQyhRtYqePfYOIKRHFz705iMAf0PhMXoO0Q,7544
+weather_rp5/main.py,sha256=z57hHZJkSBMWt3ce_Mat2SFDlKA4rEfN0MZdlPDCbZo,4057
+weather_rp5/utils.py,sha256=2BrsMvcXIqCN7cO1PHuUqcBqk-MNxFhR8qiKFj7HYdY,2989
+weather_rp5-1.1.dist-info/METADATA,sha256=VEu9689I-laL0idJU0yc4CwlSd0WLM_j7RQz9hs-s9g,1780
+weather_rp5-1.1.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+weather_rp5-1.1.dist-info/top_level.txt,sha256=meNcPQFqjNUSOSRwp2UWazt9dUzr0HVtt9fPsB1G3AU,12
+weather_rp5-1.1.dist-info/RECORD,,
