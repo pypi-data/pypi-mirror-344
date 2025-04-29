@@ -1,0 +1,2 @@
+[console_scripts]
+cloud-browser-use-mcp-server = cloud_browser_use_mcp_server.server:main
