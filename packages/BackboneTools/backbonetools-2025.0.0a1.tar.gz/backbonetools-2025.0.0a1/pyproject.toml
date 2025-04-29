@@ -1,0 +1,31 @@
+[project]
+name = "BackboneTools"
+version = "2025.0.0a1"
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "tsam",
+    "plotly",
+    "openpyxl",
+    "gamsapi",
+    "pytest",
+    "black>=25.1.0",
+]
+
+authors = [
+  {name = "David Huckebrink", email = "david.huckebrink@rub.de"},
+  {name = "Leonie Plaga", email = "leonie.plaga@rub.de"},
+]
+
+readme = "README.md"
+description = "BackboneTools is a Python package for working with Backbone."
+
+[project.urls]
+Repository = "https://gitlab.ruhr-uni-bochum.de/ee/backbonetools.git"
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
