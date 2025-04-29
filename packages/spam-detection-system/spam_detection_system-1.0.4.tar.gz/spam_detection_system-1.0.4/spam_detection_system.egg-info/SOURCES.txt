@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+spam_detection_system.egg-info/PKG-INFO
+spam_detection_system.egg-info/SOURCES.txt
+spam_detection_system.egg-info/dependency_links.txt
+spam_detection_system.egg-info/entry_points.txt
+spam_detection_system.egg-info/requires.txt
+spam_detection_system.egg-info/top_level.txt
