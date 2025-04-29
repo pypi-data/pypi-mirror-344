@@ -1,0 +1,15 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Download file using SQL</title> 
+</head> 
+<body> 
+<h1>Download file using SQL</h1> 
+	<form method="post" action="/sql_form" enctype="multipart/form-data"> 
+		{{ form.csrf_token }} 
+		<p>{{ form.table.label }}    {{ form.table() }}</p> 
+		<p>{{ form.sql.label }}      {{ form.sql(cols=100, rows=10) }}</p> 
+		<p><input type="submit" value="Submit"></p> 
+	</form> 
+</body> 
+</html>
