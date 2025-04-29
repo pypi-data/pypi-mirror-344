@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: self-code-adk
+Version: 0.1.0
+Summary: ADK agent which help in analysing currently running multiagent app
+Author: Marcin <n0npax> Niemira
+Maintainer: Marcin <n0npax> Niemira
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/n0npax/self-code-adk
+Project-URL: Documentation, https://github.com/n0npax/self-code-adk
+Project-URL: Repository, https://github.com/n0npax/self-code-adk
+Keywords: adk,agent,code-analyzer
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: google-adk>=0.3.0
+Dynamic: license-file
+
+# self code adk
+
+Agent which can read code of currently running application and help analyzing it. Its main purpose is to assist in debugging the whole application by enabling the agent, defined as a developer and multi-agent expert, to read the entire codebase.
+
+## usage
+
+### install the package
+
+```sh
+uv add self-code-adk
+```
+### import it
+
+```python
+from TODO_FIXME.agent import SelfCodeAgent
+```
+
+### And add new sub agent
+
+```diff
++self_code_agent=SelfCodeAgent("gemini-2.5-flash-preview-04-17")
+root_agent = Agent(
+    name="my-fancy-agen",
+    model="gemini-2.5-flash-preview-04-17",
+    description=("root agent which acts as coordinator"),
+    instruction=(
+        """
+        blah   
+        """
+    ),
++    sub_agents=[gardener, weather, self_code_agent],
+-    sub_agents=[gardener, weather],
+)```
