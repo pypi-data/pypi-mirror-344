@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: id3classifier_mystyle
+Version: 0.1
+Summary: ID3 Classifier implementation
+Home-page: https://github.com/yourusername/id3_classifier
+Author: Your Name
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: graphviz
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# ID3 Classifier
+
+This package implements the ID3 algorithm for decision tree classification.
+
+## Installation
+
+You can install the package via pip:
+
+```bash
+pip install id3_classifier
