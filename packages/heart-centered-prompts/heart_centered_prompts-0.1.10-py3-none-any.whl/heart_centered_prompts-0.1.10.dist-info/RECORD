@@ -1,0 +1,13 @@
+heart_centered_prompts/__init__.py,sha256=nLBSkKwTb978b2uv5AHZdGpOlxVCHxYJDpXq2gaKONg,667
+heart_centered_prompts/api.py,sha256=HrzYuaRCW_BKmLKEDyIrt3OEEIKTH-27AKIQurH6QeU,2220
+heart_centered_prompts/prompts/__init__.py,sha256=JPTfKPIdftBU5mD0Hkw5iVl4QI6n1ttdP0zLUMytalc,164
+heart_centered_prompts/prompts/align_to_love/comprehensive.txt,sha256=tL1uPgMHNrHQQN8_mRZW6yK0tc28lxBUX1Zc8VPv-ig,3408
+heart_centered_prompts/prompts/align_to_love/concise.txt,sha256=4p7jHN9XVMlAE1r0fNWedGHLqI0ur2AkehFfn6_Oo1I,901
+heart_centered_prompts/prompts/align_to_love/standard.txt,sha256=LeuPP0iGul15hCovlgyuMz7oolqk0lgt4wcX9zGdwkQ,1575
+heart_centered_prompts/prompts/align_to_love/terse.txt,sha256=YW5AslKzKVyxkJLsWFjz1wZat8Tiv6X-FBO2SjdlJ1U,515
+tests/__init__.py,sha256=AxcTFSccsKpGZl99RfIJqtQ-iQKgvVTzX67DLrRA9Ik,55
+tests/test_get_prompt.py,sha256=qE932uuG_Bfb8kZcIzL6LE_Gm7nxw9eDu0n7rd6eS0U,1766
+heart_centered_prompts-0.1.10.dist-info/METADATA,sha256=g_Zdef5B3tvKiu9LcPbNI1fOk3Wa6XS4dYanPrv8Yyc,6319
+heart_centered_prompts-0.1.10.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+heart_centered_prompts-0.1.10.dist-info/top_level.txt,sha256=039i5c0DxugQI7iwxN-kYFAMQGi-dI7x-rlP9EhhWco,29
+heart_centered_prompts-0.1.10.dist-info/RECORD,,
