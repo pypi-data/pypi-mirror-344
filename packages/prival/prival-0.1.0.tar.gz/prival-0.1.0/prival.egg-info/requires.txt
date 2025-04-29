@@ -1,0 +1,5 @@
+pyyaml
+spacy
+language-tool-python
+openpromptinject
+sentence-transformers
