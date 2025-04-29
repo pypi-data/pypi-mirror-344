@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: bibliocommons
+Version: 2025.1
+Summary: Python client library to interface with BiblioCommons library systems
+Author-email: William Jackson <william@subtlecoolness.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/williamjacksn/python-bibliocommons
+Project-URL: Changes, https://github.com/williamjacksn/python-bibliocommons/releases
+Project-URL: Issues, https://github.com/williamjacksn/python-bibliocommons/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: cssselect
+Requires-Dist: httpx
+Requires-Dist: lxml
+
+# python-bibliocommons
+
+Python client library to interface with BiblioCommons library systems

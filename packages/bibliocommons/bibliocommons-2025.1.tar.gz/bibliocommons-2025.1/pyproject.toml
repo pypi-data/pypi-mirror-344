@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bibliocommons"
+description = "Python client library to interface with BiblioCommons library systems"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+dependencies = [
+    "cssselect",
+    "httpx",
+    "lxml"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dynamic = ["version"]
+
+[[project.authors]]
+name = "William Jackson"
+email = "william@subtlecoolness.com"
+
+[project.urls]
+"Homepage" = "https://github.com/williamjacksn/python-bibliocommons"
+"Changes" = "https://github.com/williamjacksn/python-bibliocommons/releases"
+"Issues" = "https://github.com/williamjacksn/python-bibliocommons/issues"
+
+[tool.setuptools.dynamic]
+version.attr = "bibliocommons.__version__"
