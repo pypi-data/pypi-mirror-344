@@ -1,0 +1,12 @@
+gitag/auto_tagger.py,sha256=uDnsw_IusMREslJ1QjSJrxFWh2MwiHjeq8gbQuagdjc,2787
+gitag/changelog_writer.py,sha256=9uWr4D0GnN2duH371jG8Aa4i-x7mwTymYMdQ65A3qEM,3542
+gitag/config.py,sha256=h9c_DIDTAsBGM-E2p4nV4nanlecFmiyoZJPQFi1O2i0,1663
+gitag/config_validator.py,sha256=QUz-j9YgMD89cqf6y4divthROrYjoKy9FpzIZW9Fu_c,1077
+gitag/git_repo.py,sha256=Z2fRNmdLHQvKHQ5W4TtOJUBlepSHbfckDo54b_VHa9o,5008
+gitag/main.py,sha256=OE9Yn7nb-zs4VsTfA1poyCaMIH-ThcLG94FG2b6jjoM,3542
+gitag/version_manager.py,sha256=EF0gJ8hju0WJZu81jQl1MIbQpi5FDGta2hiz_TAFTac,6736
+gitag-0.1.0.dist-info/METADATA,sha256=6Mm6bK-0mhQuTO02PMIXAXUTvs68EIWYbboodhm7ut4,5887
+gitag-0.1.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+gitag-0.1.0.dist-info/entry_points.txt,sha256=sq1frfT5Kapngm1Wu3fNNWzaYT24N03-I-CIdwW8XJA,42
+gitag-0.1.0.dist-info/top_level.txt,sha256=JYo0KCTPQM100trrIDhkk_MIyTHyhUwAQsbGQ0ogLEM,6
+gitag-0.1.0.dist-info/RECORD,,
