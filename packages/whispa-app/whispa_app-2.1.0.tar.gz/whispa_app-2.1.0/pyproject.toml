@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "whispa_app"
+version = "2.1.0"
+description = "GUI for Whisper transcription & MarianMT translation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Damilare Eniolabi", email = "damilareeniolabi@gmail.com" }
+]
+keywords = ["whisper", "transcription", "translation", "GUI", "speech-to-text"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Microsoft :: Windows",
+  "Topic :: Multimedia :: Sound/Audio",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = [
+  "customtkinter>=5.1.1",
+  "psutil>=5.9.0",
+  "faster-whisper>=0.7.0",
+  "transformers>=4.31.0",
+  "huggingface-hub>=0.14.1",
+  "sentencepiece>=0.1.97",
+  "requests>=2.28.0",
+  "torch>=2.0.1"
+]
+
+[project.optional-dependencies]
+gpu = ["torch>=2.0.1"]
+
+[project.urls]
+Homepage = "https://github.com/damoojeje/whispa_app"
+"Bug Tracker" = "https://github.com/damoojeje/whispa_app/issues"
+
+[project.entry-points."gui_scripts"]
+whispa = "whispa_app.main:launch_app"
+
+[project.entry-points."console_scripts"]
+whispa_prefetch = "whispa_app.prefetch:main"
