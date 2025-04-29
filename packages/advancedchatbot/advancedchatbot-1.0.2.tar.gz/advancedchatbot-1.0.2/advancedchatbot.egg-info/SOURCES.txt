@@ -1,0 +1,7 @@
+LICENSE
+setup.py
+advancedchatbot.egg-info/PKG-INFO
+advancedchatbot.egg-info/SOURCES.txt
+advancedchatbot.egg-info/dependency_links.txt
+advancedchatbot.egg-info/entry_points.txt
+advancedchatbot.egg-info/top_level.txt
