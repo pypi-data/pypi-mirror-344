@@ -1,0 +1,10 @@
+README.md
+setup.py
+netcrackr/__init__.py
+netcrackr/__main__.py
+netcrackr.egg-info/PKG-INFO
+netcrackr.egg-info/SOURCES.txt
+netcrackr.egg-info/dependency_links.txt
+netcrackr.egg-info/entry_points.txt
+netcrackr.egg-info/requires.txt
+netcrackr.egg-info/top_level.txt
