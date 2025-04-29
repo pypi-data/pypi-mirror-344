@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools >= 61.0", "setuptools-scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "giquant"
+version = "2025.0.4"
+dependencies = [
+  "requests",
+  "wget",
+  "pandas",
+  "numpy",
+  "duckdb",
+  "duckdb_engine",
+  "pyarrow",
+  "fastparquet",
+  "pyyaml",
+  "lark",
+  "pyreadr",
+  "py_vollib",
+  "scikit-learn",
+  "ansi2html",
+  "seaborn",
+  "Flask-Markdown",
+  "Flask-Misaka",
+  "Flask-WTF",
+#  "tulipy",
+  "pandas_ods_reader",
+  "SQLAlchemy",
+  "tabulate"
+]
+requires-python = ">=3.8.5"
+authors = [
+  {name = "GiQuant"},
+  {email = "quant@gizur.com"},
+]
+maintainers = [
+  {name = "GiQuant", email = "quant@gizur.com"}
+]
+description = "Quant & Trading tools."
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["quant", "quantative finance", "trading", "Commitment Of Traders Report"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+
+#[tool.setuptools.package-data]
+#giquant = ['./giquant/tsl/server_modules/templates/*.html' ]
+
+[project.urls]
+Repository = "https://github.com/giquant/giquant.git"
