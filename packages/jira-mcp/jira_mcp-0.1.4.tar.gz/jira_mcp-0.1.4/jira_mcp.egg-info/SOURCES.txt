@@ -1,0 +1,14 @@
+README.md
+main.py
+pyproject.toml
+server.py
+jira_mcp.egg-info/PKG-INFO
+jira_mcp.egg-info/SOURCES.txt
+jira_mcp.egg-info/dependency_links.txt
+jira_mcp.egg-info/entry_points.txt
+jira_mcp.egg-info/requires.txt
+jira_mcp.egg-info/top_level.txt
+tools/__init__.py
+tools/get_resolution_issue.py
+utils/__init__.py
+utils/llm_call.py
