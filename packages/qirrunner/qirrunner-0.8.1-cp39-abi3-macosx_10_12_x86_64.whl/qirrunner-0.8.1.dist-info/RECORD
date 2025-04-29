@@ -1,0 +1,9 @@
+qirrunner-0.8.1.dist-info/METADATA,sha256=-7hR89CjvZgkcnlQcHn1Ld4gdcG26aIznKjWu8svpeI,10302
+qirrunner-0.8.1.dist-info/WHEEL,sha256=LVKiu9bgLUJICf_rdtmZa1cUv-Xgh7w2DRRx_2zV2Fs,104
+qirrunner-0.8.1.dist-info/entry_points.txt,sha256=PiqrDAybWlOst8ODZRsIDR1NV3SK8dlOGG1w0JlUtOE,52
+qirrunner-0.8.1.dist-info/licenses/NOTICE.txt,sha256=1hSOKOx0MTVIEJhPTlWMWEnTlIE9mxNs6_iB3MoW1DM,835092
+qirrunner/__init__.py,sha256=PSsZG7IFQZnJ-PRMbjyjHsPM_9zryGX6yPmCoShdxE4,692
+qirrunner/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qirrunner/_native.pyi,sha256=iNL6p0Cy-z7KaoNVpBM9QDQB7moFWe3_aE9QnLYEgX8,1421
+qirrunner/_native.abi3.so,sha256=e9M_xg5tSWRTeFbseEM6fxICfno4yLG7unny9WkPbto,41105680
+qirrunner-0.8.1.dist-info/RECORD,,
