@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: extra-input
+Version: 1.0.0
+Summary: Various functions to get input from the user
+Author-email: trinary <lpowyt3@gmail.com>
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: roman
