@@ -1,0 +1,10 @@
+pyborg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyborg/__main__.py,sha256=_ZF-f5aMUgQjty3_YXSjv7sH53ZGCTk2mX4ylgOcpZ8,69
+pyborg/cli.py,sha256=BXjHMJFLz4GzvO83SiPmysVJPpj7YItkALBr9cvA21o,63
+pyborg/pyborg.py,sha256=NiHo4aGh5AkEQYczZMx0pcvYpVOlfbfJQ96DaWgSGS4,7801
+pyborg_wrapper-0.1.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pyborg_wrapper-0.1.0.dist-info/METADATA,sha256=ZhY1n_Js6eFvfdR6z_7I4XjBDP36x7NPvks6TGYRtz4,1476
+pyborg_wrapper-0.1.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+pyborg_wrapper-0.1.0.dist-info/entry_points.txt,sha256=CAB9zm6t4NSmrpBo_PFdpPenQYMRiqo-WUh_kbElvDI,42
+pyborg_wrapper-0.1.0.dist-info/top_level.txt,sha256=kkqlXJ86CqOvqfYs2c4UvHDi5P25g7nDcQTAJQMgoV4,7
+pyborg_wrapper-0.1.0.dist-info/RECORD,,

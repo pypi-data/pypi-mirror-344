@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: pyborg-wrapper
+Version: 0.1.0
+Summary: A wrapper for borgbackup scripts
+Author-email: Alexandre Dareau <alexandre.dareau@protonmail.com>
+Maintainer-email: Alexandre Dareau <alexandre.dareau@protonmail.com>
+License: GPL-3.0-or-later
+Project-URL: Homepage, https://github.com/adareau/pyborg
+Project-URL: Repository, https://github.com/adareau/pyborg.git
+Project-URL: Issues, https://github.com/adareau/pyborg/issues
+Keywords: borgbackup,backups
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: System :: Archiving :: Backup
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer==0.15.1
+Dynamic: license-file
+
+# pyborg
+_a wrapper for borgbackup commands_
+
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+## Presentation
+
+**Disclaimer** this is still an alpha version. No support is provided currently
+
+The config files are located in ~/.config/pyborg
+
+## See also
+
+https://www.borgbackup.org/
+
+## References used to build this package
+
+https://packaging.python.org/en/latest/guides/creating-command-line-tools/
+https://packaging.python.org/en/latest/tutorials/packaging-projects/
+https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools
