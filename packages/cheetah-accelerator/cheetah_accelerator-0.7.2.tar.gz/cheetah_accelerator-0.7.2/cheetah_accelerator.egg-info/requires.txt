@@ -1,0 +1,7 @@
+matplotlib
+numpy
+scipy
+torch[opt-einsum]<=2.6
+
+[openpmd]
+openpmd-beamphysics
