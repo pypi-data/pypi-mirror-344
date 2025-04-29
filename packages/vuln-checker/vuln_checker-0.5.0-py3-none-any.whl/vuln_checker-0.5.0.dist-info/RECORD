@@ -1,0 +1,11 @@
+vuln_checker/__init__.py,sha256=pVYhOkVS5PHJd_cIEx6PTaY6VggXFTC3pqWdf0I8zao,21
+vuln_checker/main.py,sha256=d5A12PY4DMjAN2Hha-6cdQKdmNWbOgqKyeRj9FFQs_w,17335
+vuln_checker/products.csv,sha256=xMYpSaggbLyJuGVr3Iy7O34KOhBM4DtVCpkk-knmP_Q,53
+vuln_checker/requirements.txt,sha256=wAEBcLEsu8Tt6XM3z77VxYvio511FsHZGSgzWSPizIk,529
+vuln_checker/templates/template.html,sha256=oFPOj_s2FfZXPDLWJJ6G-qUwlpMbyqzF82jWd4VjRnQ,10566
+vuln_checker-0.5.0.dist-info/licenses/LICENSE,sha256=6Mt5-cyx130M6bGGIhnSYaLy55OCBTM4wX2_yfeTPUg,1072
+vuln_checker-0.5.0.dist-info/METADATA,sha256=1ZSAd2piuHy6tZOle0t6dPfWY3OaL6swh_FtTKuJzTc,9763
+vuln_checker-0.5.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+vuln_checker-0.5.0.dist-info/entry_points.txt,sha256=07042XfS8bhGv9SNKcUTok4yMbIdnc05KnRyp31Nby0,56
+vuln_checker-0.5.0.dist-info/top_level.txt,sha256=U-kKCB2Yy8NQBn0worq0CbCKF1NGDdZjDRTC8AIW7j8,13
+vuln_checker-0.5.0.dist-info/RECORD,,
