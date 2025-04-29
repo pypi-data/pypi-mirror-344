@@ -1,0 +1,86 @@
+Metadata-Version: 2.4
+Name: mcp-server-jisuanqi
+Version: 0.1.1
+Summary: 一个基于MCP的简单计算器服务
+Project-URL: Homepage, https://github.com/yourusername/mcp-server-jisuanqi
+Project-URL: Repository, https://github.com/yourusername/mcp-server-jisuanqi.git
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Keywords: calculator,math,mcp
+Requires-Python: >=3.10
+Requires-Dist: mcp[cli]>=1.6.0
+Description-Content-Type: text/markdown
+
+# MCP计算器服务
+
+这是一个基于MCP（Model Control Protocol）的简单计算器服务，提供基本的数学运算功能。
+
+## 功能特性
+
+- 加法运算
+- 减法运算
+- 乘法运算
+- 除法运算（包含除零检查）
+
+## 安装
+
+```bash
+pip install mcp-server-jisuanqi
+```
+
+## 使用方法
+
+1. 启动服务：
+
+```bash
+# 激活虚拟环境（如果使用）
+source .venv/bin/activate
+
+# 运行服务
+python -m mcp_server_jisuanqi
+```
+
+2. 使用MCP客户端调用：
+
+```python
+from mcp.client import Client
+
+client = Client()
+
+# 加法运算
+result = client.jisuanqi.mcp_jisuanqi_add(a=5, b=3)  # 返回 8
+
+# 减法运算
+result = client.jisuanqi.mcp_jisuanqi_subtract(a=10, b=4)  # 返回 6
+
+# 乘法运算
+result = client.jisuanqi.mcp_jisuanqi_multiply(a=6, b=7)  # 返回 42
+
+# 除法运算
+result = client.jisuanqi.mcp_jisuanqi_divide(a=15, b=3)  # 返回 5
+```
+
+## 开发环境设置
+
+1. 克隆仓库：
+```bash
+git clone https://github.com/yourusername/mcp-server-jisuanqi.git
+cd mcp-server-jisuanqi
+```
+
+2. 创建并激活虚拟环境：
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+# 或
+.venv\Scripts\activate  # Windows
+```
+
+3. 安装依赖：
+```bash
+pip install -e ".[dev]"
+```
+
+## 许可证
+
+MIT License
