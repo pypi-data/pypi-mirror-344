@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "queenbeethreading"
+version = "1.0"
+authors = [
+  { name="puzzle00", email="email@example.com" },
+]
+description = "A package that streamlines Python threading"
+readme = "README.MD"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.urls]
+Homepage = "https://github.com/puzzle00/queenbeethreading"
+Issues = "https://github.com/puzzle00/queenbeethreading/issues"
