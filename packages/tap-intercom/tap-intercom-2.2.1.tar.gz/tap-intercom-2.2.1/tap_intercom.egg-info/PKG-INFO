@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: tap-intercom
+Version: 2.2.1
+Summary: Singer.io tap for extracting data from the Intercom API
+Author: jeff.huth@bytecode.io
+Classifier: Programming Language :: Python :: 3 :: Only
+License-File: LICENSE
+Requires-Dist: backoff==2.2.1
+Requires-Dist: requests==2.32.3
+Requires-Dist: singer-python==6.0.0
+Provides-Extra: dev
+Requires-Dist: pylint==2.14.5; extra == "dev"
+Requires-Dist: ipdb; extra == "dev"
+Requires-Dist: nose; extra == "dev"
+Requires-Dist: parameterized; extra == "dev"
