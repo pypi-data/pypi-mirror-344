@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "picezim"
+version = "0.3.0"
+description = "A short description of your package"
+authors = [
+  { name="Qendrim Krasniqi", email="qendrim.krasniqi.ext@karlstorz.com" }
+]
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/yourusername/your-package"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
