@@ -1,0 +1,10 @@
+uncoil/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uncoil/__main__.py,sha256=Pf5dyL8c8cO8hX9F2Z_3rhZOG3Z16oFJ5i-mTUENceY,6130
+uncoil/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uncoil/config/hard_ignore.py,sha256=_hGAMsraV3EcDwGp53baaSWgTWiJBHT1G4OMWbDqFGw,300
+uncoil/config/soft_ignore.py,sha256=eeHOzLPZX8hOeplay8K1bVdLwa45hUV1lDZYACnmk8w,666
+uncoil-1.2.0.dist-info/METADATA,sha256=MAMui9VbTWX9xcb_XAxo_S82-lvonXMWLUodYUyuNV0,4978
+uncoil-1.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+uncoil-1.2.0.dist-info/entry_points.txt,sha256=-JqLfuRoUHrTvTFKjMnVKcU8f5IuG-YSJFjgcKbNqnU,48
+uncoil-1.2.0.dist-info/licenses/LICENSE,sha256=nvTu3yeK-fhWZagG2yAlrOOdfCAwNN8fRI4GYHm8TfQ,1070
+uncoil-1.2.0.dist-info/RECORD,,
