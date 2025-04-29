@@ -1,0 +1,7 @@
+pyapollo/__init__.py,sha256=0DVucuwvg2t7Lyc7LJM2qG0-IIKmOnfYdvGAGBkXw50,63
+pyapollo/apollo_client.py,sha256=966lkEYEJ4i6Sx-8nvRpIDNa6Yw0nljDaoTTtQzvZe0,11592
+pyapollo/exceptions.py,sha256=EXjMrr5oHsCFIfH9viTX09E2oT_-kNFO-0pHRfFOwDY,445
+apollo_client3-1.0.3.dist-info/METADATA,sha256=LBRWek4cjy7QPtKUNEWuziIWWblxvRmB_diwiKAW_FU,2144
+apollo_client3-1.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+apollo_client3-1.0.3.dist-info/top_level.txt,sha256=w9Ndjo1vDBt73mCN718D_yKunkViId8FFYQluKqx0vU,9
+apollo_client3-1.0.3.dist-info/RECORD,,
