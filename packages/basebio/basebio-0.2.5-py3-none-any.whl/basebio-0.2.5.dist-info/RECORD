@@ -1,0 +1,9 @@
+basebio/__init__.py,sha256=TN4VmX_O7lhMjcc4fCHvYd_25pg8H58bal1TbfL6OW0,66
+basebio/main.py,sha256=YbuBeGgh7LcI04FANiq2U1TPHVhWyE6Ul6QPlU8pITU,252
+basebio/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+basebio/modules/cmd.py,sha256=WdjjevuBGzV0oQvTTC4tAzDuzFUyUNbbOWDO_zJRnkQ,1347
+basebio/utils/cmdtools.py,sha256=k84uX9UPVG3NotZ6JPstMaL5WrqET9cI1bth-8nnKz0,1446
+basebio-0.2.5.dist-info/METADATA,sha256=2epLqK7zjeMVlgyzo-WD2N9caxrmlQG7_OPnxOsDTDM,526
+basebio-0.2.5.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+basebio-0.2.5.dist-info/entry_points.txt,sha256=4uINks3ofOicRFrV1WKrjUXH55Rm0BWbx19oQdataRA,44
+basebio-0.2.5.dist-info/RECORD,,
