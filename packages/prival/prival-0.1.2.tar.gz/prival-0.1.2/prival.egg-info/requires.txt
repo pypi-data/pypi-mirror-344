@@ -1,0 +1,4 @@
+pyyaml
+spacy
+language-tool-python
+sentence-transformers
