@@ -1,0 +1,2 @@
+[console_scripts]
+filexl = filexl.cli:main
