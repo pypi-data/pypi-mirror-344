@@ -1,0 +1,17 @@
+llama-stack>=0.2.3
+kubeflow-training==1.9.1
+kubernetes
+urllib3
+six
+pydantic
+aiohttp
+aiosqlite
+datasets
+fastapi
+httpx
+numpy
+openai
+opentelemetry-exporter-otlp-proto-http
+opentelemetry-sdk
+requests
+uvicorn
