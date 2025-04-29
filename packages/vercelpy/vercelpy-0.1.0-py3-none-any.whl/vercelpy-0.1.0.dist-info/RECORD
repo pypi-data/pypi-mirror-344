@@ -1,0 +1,10 @@
+vercelpy/__init__.py,sha256=R3318m0Dr2_bhImkgt3qrrsqsG5YkM5OPNi4NaU4h68,214
+vercelpy/blob/__init__.py,sha256=E6yhXIuW1DmI5dmH32rveIQyCPDfNMY4UCzOGMm_luc,149
+vercelpy/edge_config/__init__.py,sha256=sI8G2bclrh8WW-T1u9svqV1UOHHWk2YwHFevlqegfIU,70
+vercelpy/edge_config/connection.py,sha256=OqH8p5WrbLIL3vv8Iaxv1FgOmasQUmNTr-tiECTd41M,2816
+vercelpy/edge_config/edge.py,sha256=hMpteLmCRzXlgbJBGdzGvtvbtLgh8W_2bKCKKN1lVvA,6929
+vercelpy/edge_config/errors.py,sha256=04IDQmX8JcW-Eu11KBhb-9WA6dI48RIVbVqvqPvToNY,401
+vercelpy-0.1.0.dist-info/LICENSE,sha256=PC2tsbfYVdzZR4xVMe5TBxZcOfSBj9cLQG1WlRURYGw,1075
+vercelpy-0.1.0.dist-info/METADATA,sha256=yhaRX2ZoVryGKs1-j_2bjl2WfKGGJM21hdNSfVNYNgI,7149
+vercelpy-0.1.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+vercelpy-0.1.0.dist-info/RECORD,,
