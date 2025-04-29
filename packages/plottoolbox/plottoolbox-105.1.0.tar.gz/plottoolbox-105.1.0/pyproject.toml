@@ -1,0 +1,106 @@
+[build-system]
+requires = [
+    "setuptools>=60",
+    "setuptools_scm>=8.0",
+    "oldest-supported-numpy"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plottoolbox"
+dynamic = ["readme", "version"]
+description = "Command line script and Python library to make plots from data files."
+dependencies = [
+    "cltoolbox >= 1.0.0",
+    "dateparser",
+    "matplotlib",
+    "numpy",
+    "pandas[excel]",
+    "pint!=0.21.*",
+    "pint<0.22; python_version < '3.9'",
+    "pint-pandas",
+    "pydantic",
+    "scipy",
+    "tabulate",
+    "xlsxwriter"
+]
+license = {text = "BSD-3-Clause"}
+authors = [
+    {name = "Tim Cera", email = "tim@cerazone.net"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Developers",
+    "Environment :: Console",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+keywords = [
+    "time-series",
+    "cli-app",
+    "aggregate",
+    "fill",
+    "filter"
+]
+
+[project.scripts]
+plottoolbox = "plottoolbox.plottoolbox:_main"
+
+[project.urls]
+documentation = "https://timcera.bitbucket.io/plottoolbox/docs/index.html#plottoolbox-documentation"
+github = "https://github.com/timcera/plottoolbox"
+bitbucket = "https://bitbucket.org/timcera/plottoolbox/src/main/"
+
+[tool]
+
+[tool.black]
+# 'extend-exclude' excludes files or directories in addition to the defaults
+extend-exclude = '''
+(
+      src/plottoolbox/SciencePlots/.*
+    | src/plottoolbox/SkillMetrics/.*
+    | src/plottoolbox/waterfall_ax/.*
+    | src/plottoolbox/toolbox_utils/.*
+)
+'''
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+update_changelog_on_bump = true
+version = "105.1.1"
+version_files = ["VERSION"]
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools]
+license-files = ["LICENSE.txt"]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+readme = {file = "README.rst"}
+version = {file = "VERSION"}
+
+[tool.setuptools.package-data]
+"plottoolbox.SciencePlots.scienceplots.styles" = ["**/*.mplstyle"]
+
+[tool.setuptools.packages.find]
+namespaces = true
+where = ["src"]
+
+[tool.setuptools_scm]

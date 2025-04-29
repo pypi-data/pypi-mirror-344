@@ -1,0 +1,14 @@
+cltoolbox>=1.0.0
+dateparser
+matplotlib
+numpy
+pandas[excel]
+pint!=0.21.*
+pint-pandas
+pydantic
+scipy
+tabulate
+xlsxwriter
+
+[:python_version < "3.9"]
+pint<0.22
