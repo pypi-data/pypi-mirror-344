@@ -1,0 +1,66 @@
+Metadata-Version: 2.4
+Name: quqfin
+Version: 0.1.0
+Summary: A quantum-accelerated quantitative finance library
+Author-email: Shiwen An <sweynan@icloud.com>
+Project-URL: Homepage, https://github.com/yourusername/quqfin
+Project-URL: Documentation, https://quqfin.readthedocs.io
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: cupy>=11.0.0
+Requires-Dist: cuquantum-python>=22.11.0
+
+# QuQFin: Quantum-Accelerated Quantitative Finance Library
+
+QuQFin is a high-performance quantitative finance library that leverages NVIDIA's quantum computing frameworks (cuQuantum, custatevector, and cutensornet) to accelerate financial computations.
+
+## Features
+
+- **Options Pricing**
+  - Black-Scholes model
+  - Monte Carlo simulations
+  - Exotic options (Asian, Barrier, Lookback)
+  - Greeks calculations
+
+- **Portfolio Optimization**
+  - Markowitz optimization
+  - Risk parity
+  - Black-Litterman model
+
+- **Risk Management**
+  - Value at Risk (VaR)
+  - Conditional VaR
+  - Stress testing
+
+- **Market Making**
+  - Order book management
+  - Market making strategies
+
+- **Time Series Analysis**
+  - GARCH models
+  - Kalman filtering
+
+## Installation
+
+```bash
+pip install quqfin
+```
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details
+
+## Citation
+
+If you use QuQfin in your research, please cite the following paper:
+
+``` bibtex
+@software{quqfin2023,
+  title = {QuQFin: A Quantum-Accelerated Quantitative Finance Library},
+  year = {2025},
+  url = {https://github.com/zazabap/quqfin}
+}
+```
+
