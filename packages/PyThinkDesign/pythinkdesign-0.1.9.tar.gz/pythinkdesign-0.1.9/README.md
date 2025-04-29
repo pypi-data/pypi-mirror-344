@@ -1,0 +1,104 @@
+# PyThinkDesign
+
+python sdk for thinkdesign
+
+## install
+
+```bash
+pip install PyThinkDesign
+```
+
+## usage
+
+### 1. Get active TD application
+if the TD application is not running, it will be created.
+
+```python
+from PyThinkDesign import Application
+app = Application.GetActiveApplication()
+```
+
+### 2. Create a TD application
+
+```python
+from PyThinkDesign import Application
+app = Application.Application();
+
+# Set up interactive and visibility mode if necessary.
+app.PutVisible(True);
+app.PutInteractive(True);
+app.Quit();
+```
+
+
+
+### 3. Create lines and arcs in a document
+
+```python
+from PyThinkDesign import Application
+from PyThinkDesign import Geo3d
+
+app = Application.Application();
+doc=app.GetActiveDocument();
+
+# get creators
+curveCreator=doc.GetCurveCreator();
+
+# add lines
+p1 = Geo3d.Point(0,0,0)
+p2 = Geo3d.Point(1,0,0)
+p3 = Geo3d.Point(1,1,0)
+p4 = Geo3d.Point(0,1,0)
+curveCreator.AddLine(p1,p2)
+curveCreator.AddLine(p2,p3)
+curveCreator.AddLine(p3,p4)
+curveCreator.AddLine(p4,p1)
+
+# add arc
+pCenter = Geo3d.Point(10,0,0)
+pXDir = Geo3d.Vector(1,0,0)
+pYDir = Geo3d.Vector(0,1,0) 
+radius = 10
+startAng = 0
+endAng = 60
+curveCreator.AddArc(pCenter, pXDir, pYDir, radius, startAng, endAng)
+
+# save if necessary.
+#doc.SaveAs("d:\\tdApp.e3")
+app.Quit();
+```
+
+### 4. List entities information in a document
+
+```python
+from PyThinkDesign import Application
+from PyThinkDesign import Geo3d
+
+app = Application.Application();
+doc=app.GetActiveDocument();
+
+# get creators
+curveCreator=doc.GetCurveCreator();
+
+# add lines
+p1 = Geo3d.Point(0,0,0)
+p2 = Geo3d.Point(1,0,0)
+p3 = Geo3d.Point(1,1,0)
+curveCreator.AddLine(p1,p2)
+curveCreator.AddLine(p2,p3)
+
+# add arc
+pCenter = Geo3d.Point(10,0,0)
+pXDir = Geo3d.Vector(1,0,0)
+pYDir = Geo3d.Vector(0,1,0) 
+radius = 10
+startAng = 0
+endAng = 60
+curveCreator.AddArc(pCenter, pXDir, pYDir, radius, startAng, endAng)
+
+# get entities information
+jsonStr=doc.ListInfo()
+print(jsonStr)
+app.Quit();
+```
+
