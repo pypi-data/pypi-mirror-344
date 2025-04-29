@@ -1,0 +1,8 @@
+pytest_gradescope/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_gradescope/decorators.py,sha256=mrISoITGzQVI3sYRIPgZ46vRdP87QPF_O9D4OdraWII,5094
+pytest_gradescope/pytest_plugin.py,sha256=f78mv8vO8s5pcRpG8aGVD08az9nXYaeAYV6dP1BvbJc,2398
+pytest_gradescope-0.1.2.dist-info/METADATA,sha256=jbKYAZRZLLUWfAfNUO10p6JX0LSLT2fEA11sSCq1VnI,3428
+pytest_gradescope-0.1.2.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+pytest_gradescope-0.1.2.dist-info/entry_points.txt,sha256=j4WqCH2JCHnDI0loyIMg5EHJ5pNpsBeMbSyaAblrbmA,63
+pytest_gradescope-0.1.2.dist-info/top_level.txt,sha256=TnqmH_0BVRE8s4kj7PElLNxanXv8pymte7oeox9K0M4,18
+pytest_gradescope-0.1.2.dist-info/RECORD,,
