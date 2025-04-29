@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+graphD/__init__.py
+graphD/core.py
+graphD/renderer.py
+graphD.egg-info/PKG-INFO
+graphD.egg-info/SOURCES.txt
+graphD.egg-info/dependency_links.txt
+graphD.egg-info/top_level.txt
