@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: postcash
+Version: 0.1.1
+Summary: Asynchronous Notifications made easy with.
+Author-email: "Azat (@azataiot)" <8280770+azataiot@users.noreply.github.com>
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic>=2.11.3
+Project-URL: Documentation, https://azgh.cc/postcash
+Project-URL: Home, https://azgh.cc/postcash/
+Project-URL: Homepage, https://azgh.cc/postcash
+Project-URL: Repository, https://github.com/azataiot/postcash
+
+# postcash
+Postcash – A lightweight, async-first notification library for Python and FastAPI. Send Emails (SMTP), Discord, and Telegram messages easily, with pluggable backends.
+
+
+## Example usage
+
+```python
+import asyncio
+from postcash import send_email
+
+async def main():
+    await send_email(
+        to_email="someone@example.com",
+        subject="Welcome!",
+        body="Thanks for registering!",
+    )
+
+asyncio.run(main())
+```
+
+
