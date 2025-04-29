@@ -1,0 +1,10 @@
+jlab_rucio_policy_package/__init__.py,sha256=BgtYKW7z6gvII8Z5AmLBharlB7ZpZZTUpiDmByfinmw,395
+jlab_rucio_policy_package/lfn2pfn.py,sha256=6kowNPMqB8IAApAsRvQMXj0qUjHky2I-k42Rx2gH_Lk,1645
+jlab_rucio_policy_package/permission.py,sha256=hHZBF-0aAtmEa9W9tjWR57PB8EY6_trFc9jhlYR5J3Q,46086
+jlab_rucio_policy_package/schema.py,sha256=5zKtXpv1UWxCFhO6zbplI0TOKvpdAydx6A44saLJS2A,16920
+jlab_rucio_policy_package/scope.py,sha256=oUImXI3bXlAXch0IeeAmFv9Q5c-rWcYjp40QCFoCsak,1513
+jlab_rucio_policy_package-0.0.1a4.dist-info/licenses/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+jlab_rucio_policy_package-0.0.1a4.dist-info/METADATA,sha256=rDiEe6f_vJBVCf-vuwC4fOycIN19MNdb56Bp1kNSgD8,14203
+jlab_rucio_policy_package-0.0.1a4.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+jlab_rucio_policy_package-0.0.1a4.dist-info/top_level.txt,sha256=vIyhCnr25zcx3JxyKzj0nsPP0_RB2dvyzt6qwpdgY_Y,26
+jlab_rucio_policy_package-0.0.1a4.dist-info/RECORD,,
