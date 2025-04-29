@@ -1,0 +1,14 @@
+trytond_account_invoice<7.7,>=7.6
+trytond_product<7.7,>=7.6
+trytond_purchase<7.7,>=7.6
+trytond_stock<7.7,>=7.6
+trytond<7.7,>=7.6
+
+[test]
+proteus<7.7,>=7.6
+trytond_account_invoice_secondary_unit<7.7,>=7.6
+trytond_purchase_amendment<7.7,>=7.6
+trytond_purchase_blanket_agreement<7.7,>=7.6
+trytond_purchase_request<7.7,>=7.6
+trytond_purchase_requisition<7.7,>=7.6
+trytond_stock_secondary_unit<7.7,>=7.6
