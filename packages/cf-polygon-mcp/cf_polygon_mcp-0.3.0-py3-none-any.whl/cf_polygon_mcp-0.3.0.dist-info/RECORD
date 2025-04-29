@@ -1,0 +1,13 @@
+main.py,sha256=i1312ExoG9TiyxZdFFNOmdMa4aGb39b1M-Kn48RUIEs,174
+cf_polygon_mcp-0.3.0.dist-info/licenses/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+src/__init__.py,sha256=YzfkVAjqrMvn0XG2cGmy7WBDOIi-PWSKSD-fQ1Ayf-c,72
+src/polygon/__init__.py,sha256=SzmQqg3sDE5VA0oLDCEwVJQvdFobMNPuZd4oTFHdf08,31
+src/polygon/client.py,sha256=xlJ_fhnwKkJACAnMNh1snXEZq10lMbX9EWueRKM4W-8,2366
+src/polygon/contest.py,sha256=oTQVMiDlnHqJAvVSINrnaN9pT7DBZXPF0G0nncmfPjE,1935
+src/polygon/models.py,sha256=wF7WkrzyvNp85t5ZigwB70tZB5d7s6xU1jlhs9i8uyM,12550
+src/polygon/problem.py,sha256=OriIBYGWeKbssgiXp5Ml0tNaNM1tSiKmNgc97Tl4K1Q,13450
+cf_polygon_mcp-0.3.0.dist-info/METADATA,sha256=QdP_fdAHDY2D2nikuW2xsLVnHTTFN7iU5oJ01h5RjVg,1417
+cf_polygon_mcp-0.3.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+cf_polygon_mcp-0.3.0.dist-info/entry_points.txt,sha256=RpHpiSI25j5k8gkT8IINrcQK6hpwKyCLf1m23NiPzKY,50
+cf_polygon_mcp-0.3.0.dist-info/top_level.txt,sha256=7dQR-Fa4VIhfnQo3p1CubPBIGo7YRYTo2kAuwuj_HuI,9
+cf_polygon_mcp-0.3.0.dist-info/RECORD,,
