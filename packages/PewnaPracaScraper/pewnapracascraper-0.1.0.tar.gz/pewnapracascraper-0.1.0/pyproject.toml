@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PewnaPracaScraper"
+version = "0.1.0"
+description = "Tiny helper that fetches fully-rendered HTML with Playwright"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Your Name", email = "you@example.com"}]
+requires-python = ">=3.9"
+
+dependencies = [
+  "playwright>=1.43.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",         # linter/formatter
+]

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/scraper.py
+src/PewnaPracaScraper.egg-info/PKG-INFO
+src/PewnaPracaScraper.egg-info/SOURCES.txt
+src/PewnaPracaScraper.egg-info/dependency_links.txt
+src/PewnaPracaScraper.egg-info/requires.txt
+src/PewnaPracaScraper.egg-info/top_level.txt
+tests/test_scraper.py
