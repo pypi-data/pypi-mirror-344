@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Build tables using tsl.expr</title> 
+</head> 
+<body> 
+<h1>Build tables using tsl.expr</h1> 
+	<form method="post" action="/expr_form" enctype="multipart/form-data"> 
+		{{ form.csrf_token }} 
+		<p>{{ form.pos2.label }} {{ form.pos2() }}</p> 
+		<p>{{ form.pos3.label }} {{ form.pos3() }}</p> 
+		<p>{{ form.pos4.label }} {{ form.pos4(cols=100, rows=10) }}</p> 
+		<p><input type="submit" value="Submit"></p> 
+	</form>
+
+	<h3>Example - Input file: pring_port_alloc</h3>
+	<pre>
+Fcalc_shares_alloc("alloc", 10000);
+Vendvalperiod = VClose * Vshares;
+Fagg_over_cols("np.sum", "^.*_endvalperiod", "ZTOT_endvalperiod");
+Vdrawdown = Fdrawdown(Vendvalperiod); Vlogendval = Flog(Vendvalperiod); Vreturn = Vlogendval$ - Flag_(Vlogendval$,1);
+Vstdret6 = Fstd(Vreturn,6); Vsharperatio = Fcummean(Vreturn) / Fcumstd(Vreturn);
+Vcummean = Fcummean(Vreturn); Vcumstd = Fcumstd(Vreturn)
+	</pre>
+</body> 
+</html>
