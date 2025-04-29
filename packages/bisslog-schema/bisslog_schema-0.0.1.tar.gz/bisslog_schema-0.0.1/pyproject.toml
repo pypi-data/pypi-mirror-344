@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bisslog_schema"
+dynamic = ["version"]
+description = "It is a lightweight framework to organize and document the key elements of a distributed system, focusing on its use cases and service design. It structures the metadata without exposing any underlying technical or implementation-specific details."
+readme = "README.md"
+authors = [
+    {name = "Darwin Stiven Herrera Cartagena", email = "darwinsherrerac@gmail.com"}
+]
+requires-python = ">=3.7"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+keywords = ["hexagonal", "adapters", "pymongo"]
+[project.urls]
+Homepage = "https://github.com/darwinhc/bisslog-schema-py"
+
+[tool.setuptools.packages.find]
+include = ["bisslog_schema", "bisslog_schema.*"]
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "no-local-version"
