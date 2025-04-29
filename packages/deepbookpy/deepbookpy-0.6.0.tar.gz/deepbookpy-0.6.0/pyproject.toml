@@ -1,0 +1,29 @@
+[project]
+name = "deepbookpy"
+version = "0.6.0"
+description = "Sui Deepbook Python SDK"
+authors = [{ name = "Andrei", email = "andreid.dev@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["sui deepbook python sdk", "deepbook", "blockchain"]
+license = { text = "Apache-2.0" }
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pysui = "^0.82.0"
+
+[tool.poetry.dev-dependencies]
+black = "^23.3.0"
+flake8 = "^6.0.0"
+sphinx-rtd-theme = "^1.2.2"
+flaky = "^3.7.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+changelog = "https://github.com/andreidev1/deepbookpy/blob/main/CHANGELOG.md"
+repository = "https://github.com/andreidev1/deepbookpy"
+issues = "https://github.com/andreidev1/deepbookpy/issues"
+documentation = "https://deepbookpy.readthedocs.io"
