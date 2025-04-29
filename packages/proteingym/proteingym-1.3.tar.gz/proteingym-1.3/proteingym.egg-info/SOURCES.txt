@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+proteingym/__init__.py
+proteingym/merge.py
+proteingym/merge_supervised.py
+proteingym/performance_DMS_benchmarks.py
+proteingym/performance_DMS_supervised_benchmarks.py
+proteingym.egg-info/PKG-INFO
+proteingym.egg-info/SOURCES.txt
+proteingym.egg-info/dependency_links.txt
+proteingym.egg-info/top_level.txt
