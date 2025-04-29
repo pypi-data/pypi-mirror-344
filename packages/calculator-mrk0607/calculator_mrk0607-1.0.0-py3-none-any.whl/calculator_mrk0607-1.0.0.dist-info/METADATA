@@ -1,0 +1,85 @@
+Metadata-Version: 2.4
+Name: calculator-mrk0607
+Version: 1.0.0
+Summary: A very basic calculator module with simple math operations.
+Home-page: https://github.com/pythonophile
+Author: Muhammad Rizwan Khan Usafzai
+Author-email: rizviyousafzai123@gmail.com
+License: MIT
+Keywords: calculator basic math module education
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/plain
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: summary
+
+=======================
+📦 Simple Calculator Module
+=======================
+
+This module provides basic arithmetic operations and is defined inside the __init__.py file, making it suitable as a package initializer or standalone utility.
+
+------------
+📌 Functions
+------------
+
+1. add(num1, num2)
+   → Returns the sum of two numbers.
+
+2. sub(num1, num2)
+   → Returns the difference of num1 and num2.
+
+3. mul(num1, num2)
+   → Returns the product of two numbers.
+
+4. div(num1, num2)
+   → Returns the division result of num1 by num2.
+
+5. exp(num1, num2)
+   → Returns num1 raised to the power of num2.
+
+6. sqt(num1)
+   → Returns the square root of num1.
+
+---------------------
+🧪 Example Usage
+---------------------
+
+print(add(7, 8))        # 15
+print(div(4, 5))        # 0.8
+print(exp(4, 3))        # 64
+print(sqt(25))          # 5.0
+
+------------------------
+👨‍💻 Created for Practice
+------------------------
+
+This module is part of a practice exercise to learn:
+✔ Module creation  
+✔ Function testing  
+✔ Basic arithmetic implementation in Python
+
+
+===========================
+📜 CHANGELOG – Calculator Module
+===========================
+
+All notable changes to this project will be documented in this file.
+
+------------------------
+Version 1.0.0 – [Initial Release]
+------------------------
+
+🗓 Date: 2025-04-29
+------------------------
