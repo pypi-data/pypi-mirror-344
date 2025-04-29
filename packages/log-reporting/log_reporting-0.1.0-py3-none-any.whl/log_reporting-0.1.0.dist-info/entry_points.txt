@@ -1,0 +1,2 @@
+[console_scripts]
+report-logs = log_reporting.main.cli.__main__:main
