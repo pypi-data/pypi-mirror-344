@@ -1,0 +1,16 @@
+CHANGES.rst
+LICENSE
+README.rst
+pyproject.toml
+src/deco/__about__.py
+src/deco/__init__.py
+src/deco/astutil.py
+src/deco/conc.py
+src/deco3.egg-info/PKG-INFO
+src/deco3.egg-info/SOURCES.txt
+src/deco3.egg-info/dependency_links.txt
+src/deco3.egg-info/requires.txt
+src/deco3.egg-info/top_level.txt
+src/deco3.egg-info/zip-safe
+tests/test_ast.py
+tests/test_conc.py
