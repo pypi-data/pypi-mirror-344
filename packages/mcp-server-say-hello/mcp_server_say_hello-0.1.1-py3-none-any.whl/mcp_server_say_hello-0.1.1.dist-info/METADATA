@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: mcp_server_say_hello
+Version: 0.1.1
+Summary: MCP greeting service implementation in Python
+Author-email: Bright Lin <xiao89hui@qq.com>
+Maintainer-email: Bright Lin <xiao89hui@qq.com>
+License-Expression: MIT
+Project-URL: homepage, https://github.com/BrightLin/mcp-server-say-hello-py
+Project-URL: documentation, https://github.com/BrightLin/mcp-server-say-hello-py
+Project-URL: repository, https://github.com/BrightLin/mcp-server-say-hello-py
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: pydantic
+Dynamic: license-file
+Dynamic: requires-python

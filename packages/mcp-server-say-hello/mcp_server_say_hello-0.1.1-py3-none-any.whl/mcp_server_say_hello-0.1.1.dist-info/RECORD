@@ -1,0 +1,9 @@
+mcp_server_say_hello/__init__.py,sha256=BJqiScq5OL-h59CnpTGx_WpEISDt7jpe6394luHlKRw,122
+mcp_server_say_hello/__main__.py,sha256=PY3G5prG682LRLV_6VXszFTL6sjfLCqP6rGeAwRpMxQ,61
+mcp_server_say_hello/server.py,sha256=Hwu6dL0aWBQNXCDEZeEMDk-lUH4Ew669UINd8pd7m_A,1440
+mcp_server_say_hello-0.1.1.dist-info/licenses/LICENSE,sha256=S6P_vACILTpz4y9sCUA-sOh25TaQ2ReR2LV30SzxLrw,1067
+mcp_server_say_hello-0.1.1.dist-info/METADATA,sha256=XLkPwjDYNMfNwwQ_9XaGVEDjK0BOrZ0Cw2phGdlh88c,782
+mcp_server_say_hello-0.1.1.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+mcp_server_say_hello-0.1.1.dist-info/entry_points.txt,sha256=4U0SSJzMtTM1pcAtuMV-3zwpzsF9v8Z36zK6Qa612IQ,69
+mcp_server_say_hello-0.1.1.dist-info/top_level.txt,sha256=KWQhMDVVUaNYRYdZXhKuJmis0zzaS5FuoCa-Fn7DYi8,21
+mcp_server_say_hello-0.1.1.dist-info/RECORD,,
