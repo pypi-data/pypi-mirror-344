@@ -1,0 +1,3 @@
+[console_scripts]
+denoiser_client=phonexia_denoiser_client:main
+
