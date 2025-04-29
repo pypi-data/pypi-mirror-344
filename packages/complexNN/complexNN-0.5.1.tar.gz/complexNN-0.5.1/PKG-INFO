@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: complexNN
+Version: 0.5.1
+Summary: A toolbox for using complex valued standard network modules in PyTorch.
+Home-page: https://github.com/XinyuanLiao/ComplexNN
+Author: Xinyuan Liao
+Author-email: xnyuanliao@gmail.com
+License: Apache-2.0 License
+Keywords: pytorch,deep learning,complex values,time series
+Platform: UNKNOWN
+Classifier: 
+Requires-Python: >=3.6
+License-File: LICENSE
+
+UNKNOWN
+
