@@ -1,0 +1,10 @@
+[console_scripts]
+case-index=scripts.generate_case_index:main
+case-list=scripts.generate_case_list:main
+check=scripts.all_checks:main
+gen-all=scripts.generate_all:main
+gen-case-all=scripts.generate_case_all:main
+gen-utils=scripts.generate_utils_page:main
+infer-index=scripts.generate_inference_page:main
+view-methods=scripts.generate_view_methods:main
+
