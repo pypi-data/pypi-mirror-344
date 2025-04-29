@@ -1,0 +1,22 @@
+{
+    "PATHS": {
+	"ROOT": "fixtures",
+	"LV_PROJ": "lv_docs_testing.lvproj",
+	"TESTS": "Tests",
+	"OUTPUT": "Antidoc-Output",
+	"TEST_XML": "XML",
+	"DOC_SOURCE": "ADOCS",
+	"ANTIDOC_CONFIG":"lv_docs_testing.config"
+    },
+    "TEST_ITEMS": [
+        "Test_Suite_001.vi",
+        "Test_Suite_002.vi"
+    ],
+    "EMAIL": "info@resonatesystems.com.au",
+    "AUTHOR": "Resonate Systems",
+    "TITLE": "LV Doc Tools Documentation",
+    "CONFLUENCE":{
+	"SPACE_KEY":"A_SPACE_KEY",
+	"IMAGE_DIR":"Image_dir_relative_to_output_path"
+    }
+}

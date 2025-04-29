@@ -1,0 +1,4 @@
+== Project description
+
+This project only exists to test the LV Doc Tools.
+And to make sure the project documentation gets built right.

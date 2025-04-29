@@ -1,0 +1,27 @@
+{
+    "PATHS":{
+	"ROOT": "fixtures",
+	"LV_PROJ": "lv_docs_testing.lvproj",
+	"TESTS": "Tests",
+	"OUTPUT": "Antidoc-Output",
+	"TEST_XML": "XML",
+	"DOC_SOURCE": "Antidoc-Output",
+	"ANTIDOC_CONFIG":"lv_docs_testing.config"
+    },
+    "TEST_ITEMS": [
+        "Test_Suite_001.vi",
+        "Test_Suite_002.vi"
+    ],
+    "EMAIL": "info@resonatesystems.com.au",
+    "AUTHOR": "Resonate Systems",
+    "TITLE": "LV Doc Tools Documentation",
+    "CONFLUENCE":{
+	"SPACE_KEY":"A_SPACE_KEY",
+	"IMAGE_DIR":"Image_dir_relative_to_output_path",
+	"CONFLUENCE_URL" : "https://resonatesystems.atlassian.net/wiki",
+	"USERNAME" : "jashan.kaur@resonatesystems.com.au",
+	"API_TOKEN" : "ATATT3xFfGF0Yop0nLG2oqeLsmpd7Gtn8sZToCy8pOGuJyvaXCRKxHKJNXzNPfckXBQTVW5YStBoJxP0dWqN3ycPWu8XcbzowFm8BTrZvw0mk4lCfwMYA-b7aGHYIZ9mI-hkz--oZ12CYYwwp1IR_65_-OlfOuNe2L8PNTvuMCDdhf91lWdM26k=9C5FCE11",
+	"SPACE_KEY" : "~7120205d45f8d5bdf9446497bc33984bc95647",
+	"PAGE_TITLE" : "Test Doc-Hitachi"
+    }
+}
