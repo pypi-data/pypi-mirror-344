@@ -1,0 +1,139 @@
+# Moralis API MCP 服务
+
+这是一个基于 Model Context Protocol (MCP) 的 Moralis API 集成服务，提供全面的区块链数据访问功能。该服务允许 AI 助手（如 Claude）查询和分析区块链数据，包括钱包信息、代币数据、NFT 资产和 DeFi 活动等。
+
+## 功能
+
+* 钱包分析：交易历史、代币余额、NFT 持有等
+* 代币工具：价格查询、元数据获取、转账记录等
+* NFT 功能：元数据查询、所有权分析、交易记录等
+* DeFi 分析：协议摘要、持仓信息等
+* 区块链工具：区块查询、交易解析等
+
+## 环境要求
+
+* Python 3.12 或更高版本
+* mcp 库 >= 1.6.0
+* fastmcp >= 2.2.0
+* 有效的 Moralis API 密钥
+
+## 安装
+
+1. 克隆本仓库
+```bash
+git clone <仓库地址>
+cd mcp-server-moralis
+```
+
+2. 创建并激活虚拟环境
+```bash
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+source .venv/bin/activate  # Linux/Mac
+```
+
+3. 安装依赖
+```bash
+pip install -e .
+```
+
+4. 创建 `.env` 文件并添加 Moralis API 密钥
+```
+MORALIS_API_KEY=您的密钥
+DEFAULT_CHAIN=eth
+DEFAULT_LIMIT=100
+```
+
+## 使用方法
+
+### 使用 MCP CLI 运行服务
+
+```bash
+mcp dev main.py
+```
+
+这将使用 MCP Inspector 启动服务，可通过本地网页界面测试其功能。
+
+### 安装到 Claude Desktop
+
+要在 Claude Desktop 中使用此服务：
+
+```bash
+mcp install main.py --name "Moralis API"
+```
+
+### 直接执行
+
+```bash
+python main.py
+```
+
+## 可用的工具
+
+### 钱包相关工具
+
+1. `get_wallet_balance` - 获取钱包的代币余额
+2. `get_wallet_transactions` - 获取钱包的交易历史
+3. `get_wallet_nfts` - 获取钱包持有的 NFT
+4. `get_wallet_token_transfers` - 获取钱包的代币转账记录
+
+### 代币相关工具
+
+1. `get_token_price` - 获取代币当前价格
+2. `get_token_metadata` - 获取代币元数据信息
+3. `get_token_transfers` - 获取代币的转账记录
+4. `get_token_holders` - 获取代币的持有者列表
+
+### NFT 相关工具
+
+1. `get_nft_metadata` - 获取 NFT 元数据
+2. `get_nft_transfers` - 获取 NFT 的转账记录
+3. `get_nft_owners` - 获取 NFT 的所有者列表
+4. `get_nft_collections` - 获取钱包拥有的 NFT 合集
+
+### DeFi 相关工具
+
+1. `get_defi_positions` - 获取钱包的 DeFi 持仓
+2. `get_defi_protocol_positions` - 获取钱包在特定协议的持仓
+3. `get_defi_summary` - 获取钱包的 DeFi 活动摘要
+
+### 区块链工具
+
+1. `get_block_by_number` - 获取区块信息
+2. `get_transaction_by_hash` - 获取交易详情
+3. `get_logs_by_address` - 获取合约日志
+
+## 示例使用场景
+
+使用 Claude 与此 MCP 服务的交互示例：
+
+1. 查询钱包余额：「请查询钱包地址 0x123...abc 的 ETH 余额」
+2. 分析 NFT 持有：「分析钱包 0x456...def 拥有的 NFT 资产」
+3. 跟踪代币价格：「获取 USDT 的最新价格信息」
+4. 了解交易详情：「解析交易哈希 0xabc...123 的详细信息」
+5. DeFi 分析：「查看钱包 0x789...ghi 在 Uniswap 的流动性提供情况」
+
+## 支持的区块链
+
+- Ethereum (eth)
+- BSC (bsc)
+- Polygon (polygon)
+- Avalanche (avalanche)
+- Fantom (fantom)
+- Cronos (cronos)
+- Arbitrum (arbitrum)
+
+## 注意事项
+
+* 你需要一个有效的 Moralis API 密钥才能使用此服务
+* 某些 API 调用可能受到 Moralis 的速率限制
+* 确保遵守 Moralis 的服务条款和 API 使用政策
+
+## 开发与测试
+
+项目包含 examples 目录中的客户端示例代码，可用于了解如何从 Python 程序中调用此 MCP 服务。
+tests 目录包含基本的单元测试，可确保服务核心功能正常工作。
+
+## 许可证
+
+MIT

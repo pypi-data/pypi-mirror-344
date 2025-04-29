@@ -1,0 +1,10 @@
+httpx>=0.28.1
+mcp>=1.6.0
+python-dotenv>=1.0.0
+moralis>=0.1.37
+fastmcp>=1.0
+
+[dev]
+black>=24.1.0
+isort>=5.12.0
+pytest>=7.4.0
