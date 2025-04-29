@@ -1,0 +1,2 @@
+[console_scripts]
+jira-mcp = main:main
