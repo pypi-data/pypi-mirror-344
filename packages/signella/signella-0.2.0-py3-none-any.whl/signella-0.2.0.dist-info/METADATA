@@ -1,0 +1,73 @@
+Metadata-Version: 2.4
+Name: signella
+Version: 0.2.0
+Summary: A Redis-based variable sharing singleton
+Home-page: https://github.com/yourusername/signella
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: redis>=5.0.0
+Requires-Dist: colorama>=0.4.4
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Signella
+
+A simple Redis-based variable sharing singleton for Python.
+
+## Installation
+
+```bash
+pip install signella
+```
+
+## Usage
+
+```python
+from signella import signal
+
+# Set values
+signal['name'] = 'Jimmy'
+
+# Get values
+print(signal['name'])  # 'Jimmy'
+
+# Use compound keys
+signal['user', 123, 'profile'] = {'name': 'Jimmy', 'age': 30}
+print(signal['user', 123, 'profile'])  # {'name': 'Jimmy', 'age': 30}
+```
+
+## Features
+
+- Automatically starts a Redis server if one isn't available
+- Simple dictionary-like interface with JSON serialization
+- Support for namespacing via RADIOVAR_NS environment variable
+- Override port via RADIOVAR_PORT environment variable
+- Command-line interface for help and information
+
+## Command-line Usage
+
+After installation, you can use the `signella` command in your terminal:
+
+```bash
+# Display help and current environment settings
+signella help
+```
+
+The command will show colorful output with information about:
+- Current environment variable settings
+- Usage examples
+- Available environment variables and their descriptions
