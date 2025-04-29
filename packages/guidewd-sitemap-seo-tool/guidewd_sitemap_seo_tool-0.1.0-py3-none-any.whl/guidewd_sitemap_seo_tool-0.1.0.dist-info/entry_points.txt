@@ -1,0 +1,2 @@
+[console_scripts]
+guidewd-analyze = guidewd.analyze_sitemap:main

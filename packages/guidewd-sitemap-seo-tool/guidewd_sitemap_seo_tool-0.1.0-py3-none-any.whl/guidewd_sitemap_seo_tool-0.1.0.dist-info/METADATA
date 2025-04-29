@@ -1,0 +1,72 @@
+Metadata-Version: 2.4
+Name: guidewd-sitemap-seo-tool
+Version: 0.1.0
+Summary: Analyze sitemap XML files for SEO optimization with suggestions using Streamlit.
+Home-page: https://github.com/yourusername/guidewd-sitemap-seo-tool
+Author: Purva Tijare
+Author-email: your-email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: streamlit
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Guidewd Sitemap SEO Tool
+
+**Guidewd** is a Sitemap SEO Analysis tool that helps you analyze XML sitemaps for SEO optimization.  
+It extracts titles, descriptions, keywords, and suggests improvements.
+
+---
+
+## Features
+
+- Analyze sitemap URLs for SEO metadata
+- Check title and description lengths
+- Suggest improvements for SEO
+- Streamlit web interface
+- Command-line usage support
+
+---
+
+## Installation
+
+```bash
+pip install guidewd-sitemap-seo-tool
+Usage
+
+1. Command Line
+To analyze your sitemap directly:
+
+```bash
+guidewd-analyze --file uploaded_sitemap.xml
+This will output a CSV file with SEO analysis.
+
+2. Streamlit Web App
+To launch the Streamlit interface locally:
+
+```bash
+streamlit run guidewd/streamlit_app.py
+Then open the given localhost URL in your browser.
+
+Input
+Upload a .xml sitemap file that contains URLs.
+
+Output
+* Table of SEO metadata: Title, Description, Keywords
+
+* SEO improvement suggestions
+
+* Downloadable report (CSV)
