@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: EShAY
+Version: 1.0.3
+Summary: A package to look at similarity between two genetic datasets. Useful for finding duplicate tissue donors betwen studies.
+Author-email: Dr Gabe O'Reilly <g.oreilly@garvan.org.au>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/GabeDO/SimilarityPythonPackage
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Examine Shared Alleles? Yes! (EShAY)
+
+A small python package with a very tortured acronym. Contains functions to compare two genetic datasets to each other (in VCF format) to assess similarity.
+It was developed to find duplicate tissue donors between experiments across scRNA datasets. 
+
+## Description
+
+An in-depth paragraph about your project and overview of use.
+
+## Getting Started
+
+The main function of the package is:
+```
+Similarity(file1, file2, method)
+```
+This function take in two VCF files ('file1' and 'file2').
+'method' tells the package which calculation to use for, either using a comparison based on Expected Heterozygosity (1-sum(p*2)) or Shannons Information (-sum(p*ln(p))).
+For Expected Heterozygosity set 'method' to either the string "ExpHet" or the integer 2.
+For Shannons Information set 'method' to either the string "Shan" or the integer 1.
+
+results will be printed and returned as a list, in the format:
+```
+["Sample1","Sample2","Similarity", "Pooled diversity", "N_Loc"]
+```
+Sample1/2 are just the names of the samples taken from the VCF headers. If a VCF file has more than one sample in it, only the 1st sample will be used. 
+
+Similarity is the main result. Any value over 0.8 suggests the same donor (see 'N_Loc' below), with a value of 1 indicating a completly identical dataset.
+
+Pooled diversity is the total ammount of genotype diversity when all loci between both samples is pooled. This is used as a baseline of diveristy for the method, but can be used as a QC metric. If your samples have 0 pooled diversity it can indicate some data quality issues (even identical samples will have some pooled diversity).
+
+N_Loc is thr number of shared loci between your two samples. For this package to work, it is recommended that you have atleast 250,000 shared alleles between your samples for ths package to be accurate - and the more the merrier. 
+
+## Author
+
+Dr Gabe O'Reilly
+g.oreilly@garvan.org.au
+
