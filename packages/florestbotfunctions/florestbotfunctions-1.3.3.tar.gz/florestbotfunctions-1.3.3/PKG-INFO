@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: florestbotfunctions
+Version: 1.3.3
+Summary: Функции бота Флореста в одной библиотеке.
+Home-page: UNKNOWN
+Author: florestdev
+Author-email: florestone4185@internet.ru
+License: UNKNOWN
+Project-URL: Social Resources, https://taplink.cc/florestone4185
+Project-URL: My bot, https://t.me/postbotflorestbot
+Description: Привет! Данная библиотека включает в себя функции из https://t.me/postbotflorestbot. Все функции, с удобным объяснением кода, только здесь. P.S. Это официальная библиотека от создателя бота - FlorestDev. Все функции предоставляются в ознакомительном порядке.
+Platform: UNKNOWN
+Requires-Python: >=3.8.9
