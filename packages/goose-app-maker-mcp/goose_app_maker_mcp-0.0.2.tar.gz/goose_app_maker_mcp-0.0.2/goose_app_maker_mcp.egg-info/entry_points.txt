@@ -1,0 +1,2 @@
+[console_scripts]
+goose-app-maker-mcp = main:main
