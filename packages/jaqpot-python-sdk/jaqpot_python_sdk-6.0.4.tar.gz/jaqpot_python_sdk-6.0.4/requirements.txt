@@ -1,0 +1,2 @@
+jaqpot-api-client
+polling2
