@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-weacher-server = main:main
