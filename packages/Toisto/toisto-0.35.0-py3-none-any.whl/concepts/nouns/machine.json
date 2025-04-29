@@ -1,0 +1,15 @@
+{
+    "coffee machine": {
+        "involves": "coffee",
+        "roots": "coffee",
+        "en": "coffee machine",
+        "fi": "kahviautomaatti",
+        "nl": "de koffieautomaat"
+    },
+    "sewing machine": {
+        "involves": "to sew",
+        "en": "sewing machine",
+        "fi": "ompelukone",
+        "nl": "de naaimachine"
+    }
+}

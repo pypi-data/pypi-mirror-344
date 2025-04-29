@@ -1,0 +1,16 @@
+{
+    "to smell": {
+        "involves": "nose",
+        "infinitive": {
+            "en": "to smell",
+            "fi": "haistaa",
+            "nl": "ruiken"
+        }
+    },
+    "to smell (pleasant": {
+        "involves": "nose",
+        "en": "to smell;pleasant",
+        "fi": "tuoksua",
+        "nl": "ruiken"
+    }
+}

@@ -1,0 +1,142 @@
+{
+    "to live": {
+        "infinitive": {
+            "en": "to live",
+            "fi": "asua",
+            "nl": "wonen"
+        },
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I live",
+                    "fi": "minä asun",
+                    "nl": "ik woon"
+                },
+                "second person": {
+                    "en": "you live",
+                    "fi": "sinä asut",
+                    "nl": "jij woont"
+                },
+                "third person": {
+                    "fi": "hän asuu",
+                    "feminine": {
+                        "en": "she lives",
+                        "nl": "zij woont"
+                    },
+                    "masculine": {
+                        "en": "he lives",
+                        "nl": "hij woont"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we live",
+                    "fi": "me asumme",
+                    "nl": "wij wonen"
+                },
+                "second person": {
+                    "en": "you live",
+                    "fi": "te asutte",
+                    "nl": "jullie wonen"
+                },
+                "third person": {
+                    "en": "they live",
+                    "fi": "he asuvat",
+                    "nl": "zij wonen"
+                }
+            }
+        },
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I lived",
+                    "fi": "minä asuin",
+                    "nl": "ik woonde"
+                },
+                "second person": {
+                    "en": "you lived",
+                    "fi": "sinä asuit",
+                    "nl": "jij woonde"
+                },
+                "third person": {
+                    "fi": "hän asui",
+                    "feminine": {
+                        "en": "she lived",
+                        "nl": "zij woonde"
+                    },
+                    "masculine": {
+                        "en": "he lived",
+                        "nl": "hij woonde"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we lived",
+                    "fi": "me asuimme",
+                    "nl": "wij woonden"
+                },
+                "second person": {
+                    "en": "you lived",
+                    "fi": "te asuitte",
+                    "nl": "jullie woonden"
+                },
+                "third person": {
+                    "en": "they lived",
+                    "fi": "he asuivat",
+                    "nl": "zij woonden"
+                }
+            }
+        },
+        "present perfect tense": {
+            "singular": {
+                "first person": {
+                    "en": "I have lived",
+                    "fi": "minä olen asunut",
+                    "nl": "ik heb gewoond"
+                },
+                "second person": {
+                    "en": "you have lived",
+                    "fi": "sinä olet asunut",
+                    "nl": "jij hebt gewoond"
+                },
+                "third person": {
+                    "fi": "hän on asunut",
+                    "feminine": {
+                        "en": "she has lived",
+                        "nl": "zij heeft gewoond"
+                    },
+                    "masculine": {
+                        "en": "he has lived",
+                        "nl": "hij heeft gewoond"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we have lived",
+                    "fi": "me olemme asuneet",
+                    "nl": "wij hebben gewoond"
+                },
+                "second person": {
+                    "en": "you have lived",
+                    "fi": "te olette asuneet",
+                    "nl": "jullie hebben gewoond"
+                },
+                "third person": {
+                    "en": "they have lived",
+                    "fi": "he ovat asuneet",
+                    "nl": "zij hebben gewoond"
+                }
+            }
+        }
+    },
+    "to live together": {
+        "infinitive": {
+            "en": "to live together",
+            "fi": "asua yhdessä",
+            "nl": "samenwonen"
+        }
+    }
+}

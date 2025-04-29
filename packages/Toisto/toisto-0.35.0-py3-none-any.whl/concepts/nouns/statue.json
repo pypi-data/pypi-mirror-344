@@ -1,0 +1,17 @@
+{
+    "statue": {
+        "roots": {
+            "nl": "sculpture"
+        },
+        "singular": {
+            "en": "statue",
+            "fi": "patsas",
+            "nl": "het standbeeld"
+        },
+        "plural": {
+            "en": "statues",
+            "fi": "patsaat",
+            "nl": "de standbeelden"
+        }
+    }
+}

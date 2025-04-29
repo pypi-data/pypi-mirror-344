@@ -1,0 +1,31 @@
+{
+    "pet": {
+        "hypernym": "animal",
+        "roots": {
+            "fi": [
+                "animal",
+                "home"
+            ],
+            "nl": [
+                "animal",
+                "house"
+            ]
+        },
+        "singular": {
+            "en": "pet",
+            "fi": [
+                "lemmikkieläin|lemmikki",
+                "kotieläin"
+            ],
+            "nl": "het huisdier"
+        },
+        "plural": {
+            "en": "pets",
+            "fi": [
+                "lemmikkieläimet|lemmikit",
+                "kotieläimet"
+            ],
+            "nl": "de huisdieren"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "moon": {
+        "holonym": "solar system",
+        "singular": {
+            "en": "moon",
+            "fi": "kuu",
+            "nl": "de maan"
+        },
+        "plural": {
+            "en": "moons",
+            "fi": "kuut",
+            "nl": "de manen"
+        }
+    }
+}

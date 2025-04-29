@@ -1,0 +1,30 @@
+{
+    "just": {
+        "en": "just",
+        "fi": [
+            "juuri",
+            "just*",
+            "vasta"
+        ],
+        "nl": [
+            "juist",
+            "net",
+            "pas"
+        ]
+    },
+    "just now": {
+        "roots": "just",
+        "en": [
+            "just now",
+            "a moment ago"
+        ],
+        "fi": [
+            "äsken",
+            "juuri nyt"
+        ],
+        "nl": [
+            "daarnet",
+            "zojuist"
+        ]
+    }
+}

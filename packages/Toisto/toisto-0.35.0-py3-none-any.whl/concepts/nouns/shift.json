@@ -1,0 +1,13 @@
+{
+    "shift": {
+        "roots": {
+            "fi": [
+                "work",
+                "turn"
+            ]
+        },
+        "en": "shift",
+        "fi": "työvuoro",
+        "nl": "de dienst"
+    }
+}
