@@ -1,0 +1,108 @@
+Metadata-Version: 2.4
+Name: loki-console-logger-python
+Version: 1.0.1
+Summary: Ultra-performant Loki logger for Python applications (asyncio + aiohttp)
+Project-URL: Homepage, https://github.com/elvenobservability/loki-console-logger-python
+Project-URL: Bug Tracker, https://github.com/elvenobservability/loki-console-logger-python/issues
+Author-email: Leonardo Zwirtes <leonardo.zwirtes@elven.works>
+License: MIT
+Keywords: aiohttp,asyncio,grafana,logging,loki,observability
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Loki Console Logger for Python 🚀
+
+[![PyPI version](https://badge.fury.io/py/loki-console-logger-python.svg)](https://badge.fury.io/py/loki-console-logger-python)
+[![Python versions](https://img.shields.io/pypi/pyversions/loki-console-logger-python.svg)](https://pypi.org/project/loki-console-logger-python/)
+[![License](https://img.shields.io/github/license/seu-usuario/loki-console-logger-python)](LICENSE)
+
+A **high-performance** console logger for Python that automatically sends all `print`, `logging`, exceptions, and custom events to **Grafana Loki** — using fully **asyncio** + **aiohttp**.  
+Ideal for observability, real-time debugging, and log aggregation in microservices or modern async applications.
+
+---
+
+## ✨ Features
+
+- 🚀 Fully asynchronous (non-blocking) sending with `aiohttp`
+- 🧠 Dynamic and static labels per log stream
+- 🧹 Batching and auto-flush for high throughput
+- 💥 Captures all `print()` calls, `logging` messages and unhandled exceptions
+- 🔥 Lightweight, zero external dependencies (only `aiohttp`)
+- 🛡️ Robust error handling, resilient to network failures
+
+---
+
+## 📦 Installation
+
+```bash
+pip install loki-console-logger-python
+```
+
+## 🚀 Quickstart
+
+```python
+from loki_console_logger_python import LokiLogger
+from loki_console_logger_python.config import LokiLoggerOptions
+
+options = LokiLoggerOptions(
+    url="https://loki.elvenobservability.com/loki/api/v1/push",
+    tenant_id="your-tenant-id",
+    app_name="your-application",
+    auth_token="your-optional-token",
+    batch_size=10,             # Optional (default 10)
+    flush_interval=2,          # Optional (default 2 seconds)
+    labels={"env": "production"},
+    dynamic_labels={"hostname": lambda: "server-001"},
+)
+
+logger = LokiLogger(options)
+
+# Track custom events
+logger.track_event("user_signup", {"user_id": 123})
+
+# Capture print automatically
+print("Hello from Python!")
+
+# Capture uncaught exceptions automatically
+raise Exception("Test error!")
+```
+
+---
+
+## ⚙️ Configuration Options
+
+| Option | Description | Default |
+| --- | --- | --- |
+| `url` | URL to Loki HTTP Push API | — |
+| `tenant_id` | X-Scope-OrgID for multi-tenancy | — |
+| `app_name` | Application name label | — |
+| `auth_token` | Bearer token for authorization | None |
+| `batch_size` | Max events before flushing | 10 |
+| `flush_interval` | Max time (seconds) before flushing | 2 |
+| `labels` | Fixed labels per stream | `{}` |
+| `dynamic_labels` | Dynamic labels (functions) | `{}` |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues, submit pull requests, or suggest new features.
+
+Let's make observability in Python faster and better! 🚀
+
+1. Fork this repo
+2. Create a feature branch
+3. Submit a PR!
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+> Created with ❤️ by Leonardo Zwirtes
