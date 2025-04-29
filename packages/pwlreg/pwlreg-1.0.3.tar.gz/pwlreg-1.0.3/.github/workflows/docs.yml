@@ -1,0 +1,36 @@
+name: Deploy Docs
+on:
+  push:
+    branches:
+      - master
+      - main
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Upgrade pip
+        run: |
+          pip install --constraint=.github/workflows/constraints.txt pip
+          pip --version
+
+      - name: Install Poetry
+        run: |
+          pipx install --verbose --pip-args=--constraint=.github/workflows/constraints.txt poetry
+          poetry --version
+
+      - name: Install Nox
+        run: |
+          pipx install --pip-args=--constraint=.github/workflows/constraints.txt nox
+          pipx inject --pip-args=--constraint=.github/workflows/constraints.txt nox nox-poetry
+          nox --version
+
+      - name: Upload documentation
+        run: |
+          nox --force-color -s docs-deploy -- --force
