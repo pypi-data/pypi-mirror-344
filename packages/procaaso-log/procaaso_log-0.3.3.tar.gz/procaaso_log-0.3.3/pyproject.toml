@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "procaaso-log"
+version = "0.3.3"
+description = "Logginng Utility for use within Procaaso Python Control Tasks"
+authors = ["ConSynSys Engineering <engineering@consynsys.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+structlog = "^24.1.0"
+pydantic = "^1.10.9"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.0.0"
+black = "^24.1.0"
+mypy = "^1.8.0"
+pre-commit = "^3.6.0"
+pytest = "^8.0.0"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "production"
+url = "https://paracloud-230177812114.d.codeartifact.us-west-2.amazonaws.com/pypi/production/simple"
+priority = "supplemental"
+
+[[tool.poetry.source]]
+name = "production_publish"
+url = "https://paracloud-230177812114.d.codeartifact.us-west-2.amazonaws.com/pypi/production/"
+priority = "explicit"
+
+[[tool.poetry.source]]
+name = "public_publish"
+url = "https://paracloud-230177812114.d.codeartifact.us-west-2.amazonaws.com/pypi/public/"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

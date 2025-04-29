@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: procaaso-log
+Version: 0.3.3
+Summary: Logginng Utility for use within Procaaso Python Control Tasks
+Author: ConSynSys Engineering
+Author-email: engineering@consynsys.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pydantic (>=1.10.9,<2.0.0)
+Requires-Dist: structlog (>=24.1.0,<25.0.0)
+Description-Content-Type: text/markdown
+
+# procaaso-log
+
+Simple logging library for use with ConSynSys Procaaso ENS, etc. tasks
+
+## Usage
+
+1. Configure the logging backend at the root package within the `__init__.py` file.  Enable all desired module loggers.
+
+```python
+import procaaso_log
+procaaso_log.standard_config("app.foo", "lib.bar.baz")
+```
+
+2. Create a logger for each python file.
+
+```python
+from procaaso_log import get_logger
+logger = get_logger(__name__)
+```
+
+3. Emit logs.
+
+```python
+logger.info("something happened!")
+# -> {"event":"incoming!", ...}
+logger.info("incoming!", extra="single log context")
+# -> {"event":"incoming!","extra"="single log context", ...}
+```
+
+4. Create a contextual logger.
+
+```python
+look_logger = logger.bind(look="over there")
+look_logger.info(
+# -> {"event":"incoming!","extra"="single log context"}
+```
+
