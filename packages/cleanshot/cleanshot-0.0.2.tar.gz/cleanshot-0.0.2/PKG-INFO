@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: cleanshot
+Version: 0.0.2
+Summary: A tool to automatically rename screenshots using OpenAI's OCR
+Author: Shlomo Dahan
+License-Expression: MIT
+Project-URL: Repository, https://github.com/shlomomdahan/cleanshot
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: watchdog>=6.0.0
+Requires-Dist: openai>=1.76.0
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: Pillow>=11.2.1
+Requires-Dist: questionary>=1.10.0
+Requires-Dist: rumps>=0.4.0
+Provides-Extra: dev
+Requires-Dist: ruff>=0.11.7; extra == "dev"
+Dynamic: license-file
+
+# CleanShot
+
+This application monitors your macOS Screenshots folder and automatically renames screenshots using OpenAI's OCR capabilities.
