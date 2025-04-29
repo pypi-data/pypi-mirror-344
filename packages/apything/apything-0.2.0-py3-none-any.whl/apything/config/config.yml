@@ -1,0 +1,24 @@
+v1: "/api/v1"
+endpoints:
+  admin:
+    delete: "admin/users/{id}"
+    manage-users: "admin/workspaces/{workspaceSlug}/manage-users"
+    new: "admin/users/new"
+    update: "admin/users/{id}"
+    users: "admin/users"
+    ws-users: "admin/workspaces/{workspaceId}/users"
+  documents:
+    create-folder: "document/create-folder"
+    document: "document/{docName}"
+    documents: "documents"
+    upload: "document/upload"
+  embed:
+    embed: "embed"
+  system_settings:
+    remove-documents: "system/remove-documents"
+  workspaces:
+    chat: "workspace/{slug}/chat"
+    delete: "workspace/{slug}"
+    get: "workspace/{slug}"
+    new: "workspace/new"
+    update-embeddings: "workspace/{slug}/update-embeddings"
