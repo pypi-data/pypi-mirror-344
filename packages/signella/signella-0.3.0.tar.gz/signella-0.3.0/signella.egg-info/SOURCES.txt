@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+signella/__init__.py
+signella/cli.py
+signella/signella.py
+signella.egg-info/PKG-INFO
+signella.egg-info/SOURCES.txt
+signella.egg-info/dependency_links.txt
+signella.egg-info/entry_points.txt
+signella.egg-info/requires.txt
+signella.egg-info/top_level.txt
