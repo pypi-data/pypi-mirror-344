@@ -1,0 +1,36 @@
+# Web 服务
+starlette>=0.45.3
+uvicorn>=0.34.0
+sse-starlette>=2.2.1
+
+# MCP 相关
+mcp>=1.6.0
+httpx-sse>=0.4.0
+
+# HTTP 客户端
+httpx>=0.28.1
+requests>=2.32.3
+
+# Confluence API
+atlassian-python-api>=3.41.19
+
+# 浏览器自动化
+playwright>=1.41.0
+
+# 工具包
+python-dotenv>=1.0.0
+typing_extensions>=4.12.2
+pydantic>=2.10.6
+pydantic-settings>=2.7.1
+
+# 其他依赖
+anyio>=4.8.0
+click>=8.1.8
+h11>=0.14.0
+sniffio>=1.3.1
+python-dateutil>=2.8.2
+gitpython>=3.1.40  # 用于打包脚本获取git信息 
+ddddocr>=1.5.6 # 用于验证码识别
+beautifulsoup4>=4.13.3 # 用于解析html
+
+PyYAML>=6.0 # 用于解析YAML格式元数据
