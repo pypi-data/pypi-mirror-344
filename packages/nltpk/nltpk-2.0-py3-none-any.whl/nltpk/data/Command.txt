@@ -1,0 +1,21 @@
+Check it with:
+Command --> kubectl config get-contexts
+
+
+You should see:
+plaintext
+CURRENT   NAME             CLUSTER          AUTHINFO         NAMESPACE
+*         docker-desktop   docker-desktop   docker-desktop   
+
+
+Check the node:
+Command --> kubectl get nodes
+
+You should see:
+plaintext
+NAME             STATUS   ROLES           AGE   VERSION
+docker-desktop   Ready    control-plane   2m    v1.29.0
+
+----------------------------docker ends -----------------------------
+
+gcloud app browse
