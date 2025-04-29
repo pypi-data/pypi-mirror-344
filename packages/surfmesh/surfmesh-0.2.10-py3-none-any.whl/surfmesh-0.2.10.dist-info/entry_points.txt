@@ -1,0 +1,2 @@
+[console_scripts]
+surfmesh = surfmesh:main
