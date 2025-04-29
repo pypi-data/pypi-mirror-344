@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "discord-poster"
+version = "0.1.0"
+description = "A lightweight client for posting messages to a Discord webhook."
+authors = ["Max Chis <maxachis@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{ include = "discord_poster", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.urls]
+Homepage = "https://github.com/maxachis/Discord-Poster"
+Repository = "https://github.com/maxachis/Discord-Poster"
+Issues = "https://github.com/maxachis/Discord-Poster/issues"

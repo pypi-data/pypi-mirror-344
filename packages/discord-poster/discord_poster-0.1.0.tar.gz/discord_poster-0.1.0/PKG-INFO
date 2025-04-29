@@ -1,0 +1,50 @@
+Metadata-Version: 2.3
+Name: discord-poster
+Version: 0.1.0
+Summary: A lightweight client for posting messages to a Discord webhook.
+License: MIT
+Author: Max Chis
+Author-email: maxachis@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Project-URL: Homepage, https://github.com/maxachis/Discord-Poster
+Project-URL: Issues, https://github.com/maxachis/Discord-Poster/issues
+Project-URL: Repository, https://github.com/maxachis/Discord-Poster
+Description-Content-Type: text/markdown
+
+# Discord Poster
+
+A lightweight Python client to post messages to a Discord webhook.
+
+## Setting up Webhooks
+
+For information on creating Discord webhooks, see Discord's documentation [here](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
+
+## Features
+- Simple and lightweight
+- Supports optional error logging and exception raising
+- Custom exception class for better error handling
+- Built-in request timeout (10 seconds)
+
+## Installation
+
+```bash
+pip install discord-poster
+```
+
+## Usage
+
+```python
+from discord_poster import DiscordPoster
+
+dp = DiscordPoster(webhook_url="my-webhook-url")
+dp.post_to_discord(message="Hello from Discord Poster 😎")
+```
