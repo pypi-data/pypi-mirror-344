@@ -1,0 +1,17 @@
+ipyopt/__init__.py,sha256=7LziR_amGWa8pZB6jxU5zsx9hjexiVMifp1qp28HHxE,125
+ipyopt/ipyopt.cpython-37m-x86_64-linux-gnu.so,sha256=o0PtJodI0g1CNN9ais3oapRrCStVyzKNW3DjWUVXXSg,17817161
+ipyopt/ipyopt.pyi,sha256=USiozUzDE_zLsXHnsDmdSCgQtQRbq1EQymKKbm7z9R0,2900
+ipyopt/optimize.py,sha256=LhGxzJyDA3Fg8pTuk2bt1Dk4Vkv0kYXMn_e9sVOVQHY,9092
+ipyopt/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ipyopt/sym_compile.py,sha256=KTk1kYf7l-OXNLeouA1aLtl0NHlqEZxnRmvgX9FoN9g,7665
+ipyopt.libs/libblas-0aa2fd44.so.3.12.0,sha256=xBaCcPbcH3Db2cclvM0uycLjcnyUND2J3tkXUbCrDZs,752633
+ipyopt.libs/libcoinmumps-f7c4d0c4.so.3.0.9,sha256=GZ4mkDwnpsJkRb5BikvxH1kdiTs16nt3K8tHdwcZawE,2953089
+ipyopt.libs/libgfortran-040039e1.so.5.0.0,sha256=FK-zEpsai1C8QKOwggx_EVLqm8EBIaqxUpQ_cFdHKIY,2686065
+ipyopt.libs/libipopt-abdf3ab6.so.1.10.12,sha256=N2gplUFXDxBs447qS4LQBC4NhNkl283dQkByztwc1QM,3528617
+ipyopt.libs/liblapack-bdb0018b.so.3.12.0,sha256=3ciJvp0topfUj3CNSD25RS60oE4rf55hjBBfbxpeOI8,14714297
+ipyopt.libs/libquadmath-96973f99.so.0.0.0,sha256=k0wi3tDn0WnE1GeIdslgUa3z2UVF2pYvYLQWWbB12js,247609
+ipyopt-0.12.10.dist-info/LICENSE,sha256=vwp44FUaz8XOXy2LChb8YO629Ytr5QyZOUbKc_yr8XQ,1544
+ipyopt-0.12.10.dist-info/METADATA,sha256=81MY2xRJrf2fKNjBnIop5CDV_9Pa1YOGxJhtWB6IaCg,9096
+ipyopt-0.12.10.dist-info/WHEEL,sha256=XTrbe1v1RZIwaNy2ykqZ1b32V5o3CvHsSToseXBj9JY,150
+ipyopt-0.12.10.dist-info/top_level.txt,sha256=kpMMwnBcgqf2OvHnLI9OFeF1egeoU6hu9JPSVFHhMNg,7
+ipyopt-0.12.10.dist-info/RECORD,,
