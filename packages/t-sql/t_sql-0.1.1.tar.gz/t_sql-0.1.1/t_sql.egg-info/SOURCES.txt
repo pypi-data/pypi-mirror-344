@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+t_sql.egg-info/PKG-INFO
+t_sql.egg-info/SOURCES.txt
+t_sql.egg-info/dependency_links.txt
+t_sql.egg-info/requires.txt
+t_sql.egg-info/top_level.txt
+tests/test_tsql.py
+tsql/__init__.py
+tsql/tsql.py
