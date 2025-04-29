@@ -1,0 +1,11 @@
+spritegrid/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spritegrid/cli.py,sha256=AZ0Cc8Cg4d7_jgGZyEy55-QqFP82DYGk-8P1jhZeM0M,2291
+spritegrid/detection.py,sha256=ruQLT5fVbMHvDk_lt7aZ6bB_bsAb-4adM2M91VDfQOI,8203
+spritegrid/main.py,sha256=ekCwuDnoRdNImbghn4fuIbqgHetlp571r9bc4rzfTxI,13323
+spritegrid/segmentation.py,sha256=uvMa4fubGZqeYTKfEaSi3udFbaCzTaee1nPdr0xIAuE,3082
+spritegrid/utils.py,sha256=pBOddZ_pVre-dkSukl1eDmX-04ienuamNbFCLkLGDgY,1333
+spritegrid-0.1.1.dist-info/METADATA,sha256=_fAxo6VEKjtDIwHQYGryBcd1wsUgGZ-j2BPp5G-fEwE,2108
+spritegrid-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+spritegrid-0.1.1.dist-info/entry_points.txt,sha256=RPaJfOxdQiYcr2izwro05X7sQsay1jm8yJWRuswyE1E,50
+spritegrid-0.1.1.dist-info/licenses/LICENSE,sha256=dog4JayTZtNCo6fGWTItjiqb-EIDb6rNLndHiA8b7A4,1070
+spritegrid-0.1.1.dist-info/RECORD,,
