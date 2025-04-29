@@ -1,0 +1,167 @@
+Metadata-Version: 2.4
+Name: bisslog_schema
+Version: 0.0.1
+Summary: It is a lightweight framework to organize and document the key elements of a distributed system, focusing on its use cases and service design. It structures the metadata without exposing any underlying technical or implementation-specific details.
+Author-email: Darwin Stiven Herrera Cartagena <darwinsherrerac@gmail.com>
+Project-URL: Homepage, https://github.com/darwinhc/bisslog-schema-py
+Keywords: hexagonal,adapters,pymongo
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# bisslog-schema-py
+
+[![PyPI](https://img.shields.io/pypi/v/bisslog_schema)](https://pypi.org/project/bisslog_schema/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+**bisslog-schema-py** is a lightweight framework to organize and document the key elements of a distributed system, focusing on its use cases and service design.  
+It structures the metadata without exposing any underlying technical or implementation-specific details.
+The goal is to design and document a distributed system from a service-centric perspective, emphasizing business use cases and their criticality, while remaining technology-agnostic.
+
+
+## 🚀 Installation
+You can install `bisslog-pymongo` using **pip**:
+
+```bash
+pip install bisslog_pymongo
+```
+
+
+---
+
+## Main Concepts
+
+### ServiceInfo
+
+The `ServiceInfo` class models a service in the system.  
+Each service can define:
+
+- `name`: Name of the service.
+- `description`: A short explanation of the service's responsibility.
+- `type`: Logical category (e.g., "microservice", "library", etc.).
+- `service_type`: Type of service (e.g., "functional", "technical").
+- `team`: The responsible or owning team.
+- `tags`: Arbitrary metadata tags for classification.
+- `use_cases`: A list of `UseCaseInfo` objects representing the service's use cases.
+
+Service metadata can be loaded dynamically from external YAML or JSON files.
+
+---
+
+### UseCaseInfo
+
+The `UseCaseInfo` class represents a use case belonging to a service, with the following fields:
+
+- `keyname`: Unique identifier for the use case.
+- `name`: Human-readable name.
+- `description`: A detailed description of what the use case does.
+- `actor`: The entity (user, system, platform) that initiates the use case.
+- `type`: Logical operation type (e.g., "create", "read", "update", "delete").
+- `criticality`: Business importance of the use case, represented as a `CriticalityEnum`.
+- `tags`: Metadata tags for further classification.
+- `triggers`: List of `TriggerInfo` entries defining how the use case is triggered.
+
+---
+
+### TriggerInfo and TriggerOptions
+
+Triggers define how a use case is initiated.  
+Available trigger types (enumerated by `TriggerEnum`) include:
+
+- `HTTP`: HTTP request initiation.
+- `WebSocket`: WebSocket-based interaction.
+- `Consumer`: Event-driven trigger (e.g., queues).
+- `Schedule`: Time-based scheduled triggers.
+
+Each trigger may have associated options (e.g., route, method, authenticator).
+
+---
+
+### CriticalityEnum
+
+`CriticalityEnum` provides a standardized set of criticality levels for use cases:
+
+| Level      | Value |
+|------------|-------|
+| NONE       | 0     |
+| VERY_LOW   | 10    |
+| LOW        | 20    |
+| MEDIUM     | 50    |
+| HIGH       | 70    |
+| VERY_HIGH  | 90    |
+| CRITICAL   | 100   |
+
+This scale helps prioritize use cases based on their business or operational impact.
+
+---
+
+## Loading Service Metadata
+
+You can load service definitions from YAML or JSON files using the `read_service_metadata` function.  
+It automatically searches for metadata files in predefined locations if a path is not provided.
+
+Example:
+
+```python
+from bisslog_schema.metadata import read_service_metadata
+
+service_info = read_service_metadata()
+print(service_info.name)
+for use_case in service_info.use_cases:
+    print(f"{use_case.keyname}: {use_case.name}")
+```
+
+
+## Example YAML for Service Definition
+
+Here is an example of how to define a service and its use cases using YAML:
+
+~~~yaml
+---
+name: "webhook receiver"
+type: "microservice"
+description: "Receives events from external platforms and converts them into company events for internal processing"
+service_type: "functional"
+team: "code-infrastructure"
+tags:
+  service: "webhook-receptor"
+
+use_cases:
+  - keyname: "notifyEventFromWebhookDynamicPlatform"
+    name: "notify external event from external platform"
+    description: "Receives and transforms external events into internal company events"
+    actor: "external platform"
+    type: "transfer data"
+    criticality: "high"
+    triggers:
+      - type: "http"
+        options:
+          method: "post"
+          route: "/webhook-receptor/{platform}/{token}"
+          apigw: "webhook-receptor"
+    tags:
+      accessibility: "private"
+  # More use cases...
+~~~
+    Note: The criticality field can use either named levels (e.g., "high") or direct numeric values (e.g., 90).
+
+## Why use bisslog-schema-py?
+
+- **Technology-agnostic**: Focus on service and use case modeling, independent of the underlying implementation.
+
+- **Organized metadata:** Centralizes your distributed system documentation.
+
+- **Extensible:** Easily expandable with new fields and trigger types.
+
+- **Integration-friendly:** Can be used for CI/CD validation or automated documentation generation.
+
+## Future Improvements
+
+- Validation of a metadata structure against a schema.
+
+- Additional trigger option models (authentication, caching, timeouts).
+
+- Support for linking external specifications (e.g., OpenAPI, AsyncAPI).

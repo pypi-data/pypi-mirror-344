@@ -1,0 +1,13 @@
+bisslog_schema/__init__.py,sha256=0K8B_Wnaruy5DJWxvCvrw3HE9I9ziMmTEPYqOpF2iJE,353
+bisslog_schema/entity_info.py,sha256=uiVtV6cgnlrzoSe5ltMrCSFBdX6xXWNSeG14Eg3LlQM,754
+bisslog_schema/read_metadata.py,sha256=QFKZ4LYHfYhnqKDVV1hJKDOjnywAYurA7czyZkuTZl8,1986
+bisslog_schema/service_info.py,sha256=_5_LOnLnXjV_xOi2QvmanRKplfV4adbhxKk7yYRwJ1E,2331
+bisslog_schema/trigger_info.py,sha256=alvSIZ6l5_L29Zy-bCGPLBaCHb7v1ldQflZmNBLdStk,6789
+bisslog_schema/use_case_info.py,sha256=e_0Aysy_4d-4DXg2thBl59q2tpy9D8CVlydRsR4Bdzs,2275
+bisslog_schema/enums/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bisslog_schema/enums/criticality_enum.py,sha256=OwNBuJBH1Y4Q4lJq_ncNhCIvvVrXIEuXUhVXIQ08aXs,1602
+bisslog_schema-0.0.1.dist-info/licenses/LICENSE,sha256=TSlM1hRIXc6yR3xpGzy2DMSSbds0svqHSetfNfQqCEk,1074
+bisslog_schema-0.0.1.dist-info/METADATA,sha256=dGDY2sd6rJc9lRenfEqvBgS6edCOFZUDVKqm4Yj9LLk,5664
+bisslog_schema-0.0.1.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+bisslog_schema-0.0.1.dist-info/top_level.txt,sha256=_CuP6DQ3Y9QVvTu7zengBiTxLqpXEbwbLsOeKqeWlgk,15
+bisslog_schema-0.0.1.dist-info/RECORD,,
