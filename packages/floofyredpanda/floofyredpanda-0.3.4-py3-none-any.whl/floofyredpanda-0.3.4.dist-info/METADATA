@@ -1,0 +1,120 @@
+Metadata-Version: 2.4
+Name: floofyredpanda
+Version: 0.3.4
+Summary: load & train .pt models on any inputs/files, emit any outputs
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=1.7.0
+Requires-Dist: soundfile>=0.10.0
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# floofyredpanda
+
+a joyful little wrapper that lets you feed a PyTorch `.pt` model any kind of input, from numbers and text files to wavs and raw bytes—and get back exactly the output you asked for. all with the charm of a red panda, and none of the tantrums... hopefully
+
+## features
+
+- infinite positional inputs: numbers, lists, file-paths, bytes, you name it  
+- optional reinforcement points (just toss an `int` or `float` right after your `.pt` path)  
+- output converters for `int`, `float`, `str`, `binary` (and any custom type you fancy)  
+- wav file support out of the box (requires `soundfile`)  
+- easy to extend: register your own converters for images, midi, pickles—whatever tickles your whiskers
+## installation
+# linux
+```bash
+ pip install floofyredpanda
+```
+# windows
+should be the same
+```cmd
+pip install floofyredpanda
+```
+## Uses
+# Simple numeric inference
+```python
+import floofyredpanda as frp
+
+# model expects a couple of floats, returns a float
+result = frp.nn(0.1, 0.2, 'models/simple.pt')
+print("prediction:", result)   # e.g. [0.305]
+```
+# Lists → list output
+```python
+from pathlib import Path
+import floofyredpanda as frp
+
+# vector inputs, default output as Python list
+vector1 = [1.0, 2.0, 3.0]
+vector2 = [0.5, 0.4, 0.1]
+model_path = Path('models/vector_model.pt')
+
+out = frp.nn(vector1, vector2, str(model_path))
+print("vector output:", out)    # e.g. [[0.1, 0.2, 0.3], [0.4, 0.5, 0.6]]
+
+```
+# File input & custom converter
+```python
+import floofyredpanda as frp
+import soundfile as sf
+
+# register a WAV writer so we can get a .wav back
+def wav_writer(tensor):
+    data = tensor.cpu().numpy()
+    sf.write('out.wav', data, samplerate=22050)
+    return 'out.wav'
+
+frp.register_output_converter('wav', wav_writer)
+
+# feed in a .wav, ask for .wav out
+output_file = frp.nn('input.wav', 'models/audio.pt', output_type='wav')
+print("saved processed audio at", output_file)
+
+```
+# With “reinforcement points”
+```python
+import floofyredpanda as frp
+
+# some models might take an extra scalar “reinforcement score”
+score = frp.nn( [10,20], [30,40], 'models/multi_input.pt', 5 )
+print("with reinforcement:", score)
+
+```
+# Training a tiny net
+```python
+import torch
+import floofyredpanda as frp
+
+# toy data: learn y = 2x
+inputs  = [1.0, 2.0, 3.0, 4.0]
+outputs = [2.0, 4.0, 6.0, 8.0]
+
+model = frp.train(
+    raw_inputs  = inputs,
+    raw_outputs = outputs,
+    layers      = [8, 4],          # two hidden layers
+    activation  = 'relu',
+    lr          = 0.01,
+    epochs      = 50,
+    batch_size  = 2,
+)
+
+# save & test
+torch.save(model, 'models/x2net.pt')
+print("saved to models/x2net.pt")
+
+# run inference on unseen x
+print("predict 5→", frp.nn(5, 'models/x2net.pt'))
+
+```
+# Licence
+
+This project is licensed under the MIT License - see the [LICENCE](LICENCE) file for details.
+
