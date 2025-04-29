@@ -1,0 +1,29 @@
+PROCEDIMENTOS DE SEGURANÇA - MANUAL BÁSICO
+
+1. CONTROLE DE ACESSO
+- Todos os funcionários devem usar crachá de identificação
+- Visitantes devem ser registrados na recepção
+- Áreas restritas necessitam de autorização especial
+
+2. EMERGÊNCIAS
+- Em caso de incêndio, utilize as saídas de emergência sinalizadas
+- Pontos de encontro localizados no estacionamento
+- Números de emergência:
+  * Bombeiros: 193
+  * Ambulância: 192
+  * Segurança interna: ramal 1234
+
+3. SEGURANÇA DA INFORMAÇÃO
+- Senhas devem ser trocadas a cada 90 dias
+- Documentos confidenciais não podem ser compartilhados
+- Computadores devem ser bloqueados ao sair da estação
+
+4. EQUIPAMENTOS DE PROTEÇÃO
+- Uso obrigatório de EPI nas áreas industriais
+- Capacete, óculos e botas de segurança são essenciais
+- Inspeção mensal dos equipamentos de proteção
+
+5. PROCEDIMENTOS ESPECÍFICOS
+- Manutenção só pode ser realizada por pessoal autorizado
+- Produtos químicos requerem ficha técnica de segurança
+- Acidentes devem ser reportados imediatamente 
