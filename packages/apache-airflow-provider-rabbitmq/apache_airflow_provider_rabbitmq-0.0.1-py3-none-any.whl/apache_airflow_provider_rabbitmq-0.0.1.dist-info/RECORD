@@ -1,0 +1,13 @@
+airflow/providers/rabbitmq/__init__.py,sha256=hoDh8sNBT4rBWD4gajZIbIPhaEgHdNLG6gH3BqC1gPE,193
+airflow/providers/rabbitmq/provider.yaml,sha256=ki0J0UuQ7W2Q-i2ZObBbedP41qCQnDYizx55M0PZrZ8,965
+airflow/providers/rabbitmq/version.py,sha256=cpN85A4rlqx4rLccp4WrVf10gZWTss_lXLa0ow11XEQ,63
+airflow/providers/rabbitmq/hooks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow/providers/rabbitmq/hooks/rabbitmq_hook.py,sha256=oev8hFd9uiEkjJ9T0HExjlvmqUdBgetU1nY7nqrg9RY,7637
+airflow/providers/rabbitmq/operators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow/providers/rabbitmq/operators/rabbitmq_producer.py,sha256=AqpzfSM1MG6iSAgpZMIwkDN4I2yakA1yuwHKrRyGXoE,3316
+airflow/providers/rabbitmq/sensors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow/providers/rabbitmq/sensors/rabbitmq_sensor.py,sha256=BSwHlxl1_u4r1xvUJMppDa6AXkl3PsPMOZZ6sqi-PA8,3010
+apache_airflow_provider_rabbitmq-0.0.1.dist-info/METADATA,sha256=792INsarPHmp01OSKZY_XjzZKx79iWRC8Wf_giWcoIQ,18511
+apache_airflow_provider_rabbitmq-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+apache_airflow_provider_rabbitmq-0.0.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+apache_airflow_provider_rabbitmq-0.0.1.dist-info/RECORD,,
