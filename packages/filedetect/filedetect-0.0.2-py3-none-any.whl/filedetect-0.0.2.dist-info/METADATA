@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: filedetect
+Version: 0.0.2
+Summary: Detects files in a directory and its subdirectories.
+Project-URL: Documentation, https://github.com/Marceau/filedetect#readme
+Project-URL: Issues, https://github.com/Marceau/filedetect/issues
+Project-URL: Source, https://github.com/Marceau/filedetect
+Author-email: Marceau <pypi@marceau-h.fr>
+License-Expression: AGPL-3.0-or-later
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# FileDetect
+
+[![PyPI - Version](https://img.shields.io/pypi/v/filedetect.svg)](https://pypi.org/project/filedetect)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/filedetect.svg)](https://pypi.org/project/filedetect)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```bash
+pip install filedetect
+```
+
+## Usage
+
+```python
+from filedetect import FileDetect
+
+
+## License
+
+`filedetect` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
