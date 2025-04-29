@@ -1,0 +1,66 @@
+{
+    "article": [
+        {
+            "target": "^[aeiouAEIOU8].*",
+            "result": "an"
+        },
+        {
+            "target": "^.*$",
+            "result": "a"
+        }
+    ],
+    "verb_3rd": [
+        {
+            "target": "(.*)y$",
+            "result": "\\1ies",
+            "replace": true
+        },
+        {
+            "target": "^(.*)$",
+            "result": "\\1s",
+            "replace": true
+        }
+    ],
+    "verb_noun_3rd": [
+        {
+            "target": "^(.*)$",
+            "helper": "^.*s$",
+            "result": "\\1",
+            "replace": true
+        },
+        {
+            "target": "(.*)y$",
+            "helper": "^.*$",
+            "result": "\\1ies",
+            "replace": true
+        },
+        {
+            "target": "^(.*)$",
+            "helper": "^.*$",
+            "result": "\\1s",
+            "replace": true
+        }
+    ],
+    "article_singular": [
+        {
+            "target": "^.*$",
+            "helper": "^.*s( .*)?$",
+            "result": ""
+        },
+        {
+            "target": "^.*$",
+            "helper": "^data$",
+            "result": ""
+        },
+        {
+            "target": "^[aeiouAEIOU8].*",
+            "helper": "^.*$",
+            "result": "an"
+        },
+        {
+            "target": "^.*$",
+            "helper": "^.*$",
+            "result": "a"
+        }
+    ]
+}

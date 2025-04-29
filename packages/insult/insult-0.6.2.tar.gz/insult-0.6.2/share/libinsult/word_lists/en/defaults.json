@@ -1,0 +1,17 @@
+[
+    {
+        "person": null,
+        "plural": null,
+        "template": "You are as <adjective> as <article target=adj1> <adjective min=1 max=3 id=adj1> <amount> of <adjective min=1 max=3> <animal> <animal_part>"
+    },
+    {
+        "person": 3,
+        "plural": false,
+        "template": "<who> is as <adjective> as <article target=adj1> <adjective min=1 max=3 id=adj1> <amount> of <adjective min=1 max=3> <animal> <animal_part>"
+    },
+    {
+        "person": 3,
+        "plural": true,
+        "template": "<who> are as <adjective> as <article target=adj1> <adjective min=1 max=3 id=adj1> <amount> of <adjective min=1 max=3> <animal> <animal_part>"
+    }
+]

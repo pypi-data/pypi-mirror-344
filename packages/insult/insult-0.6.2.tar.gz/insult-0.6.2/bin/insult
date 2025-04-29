@@ -1,0 +1,67 @@
+#!/usr/bin/env python
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+import argparse
+from os import path
+import insult
+
+parser = argparse.ArgumentParser(
+    description="Command-line insult utility"
+)
+
+parser.add_argument(
+    "--language", "-l",
+    default="en",
+    help="Language data to load"
+)
+
+parser.add_argument(
+    "--words-dir", "-w",
+    default=path.join(path.dirname(path.dirname(path.realpath(__file__))),
+                      "share", "libinsult", "word_lists"),
+    help="Base path for word lists data",
+)
+
+parser.add_argument(
+    "template",
+    nargs="*",
+    default=None,
+    help="Insult template",
+)
+
+parser.add_argument(
+    "--who",
+    default=None,
+    help="Turns the default template into the third person",
+)
+
+parser.add_argument(
+    "--plural",
+    action="store_true",
+    help="Treat --who as plural",
+)
+
+args = parser.parse_args()
+
+insulter = insult.Insulter()
+insulter.load_directory(path.join(args.words_dir, args.language))
+
+if args.template:
+    template = " ".join(args.template)
+else:
+    template = insulter.default_template(3 if args.who else None, args.plural, None)
+
+print(insulter.format(template, {"who": args.who}))
