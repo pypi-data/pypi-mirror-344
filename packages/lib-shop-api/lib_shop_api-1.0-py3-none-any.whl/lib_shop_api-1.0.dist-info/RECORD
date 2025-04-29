@@ -1,0 +1,9 @@
+lib_shop_api/__init__.py,sha256=dd5hjlj4xLFUwqDTxwA1SVYNOV__rSeD_Z0_Nq7y5CQ,26
+lib_shop_api/constants.py,sha256=I-qaBdbpj0BZQVAFhRN5at5hg4BCJ379X_FUkG62iBs,555
+lib_shop_api/models.py,sha256=F7LMGrpMg9hKg2Kyiq0koXZxuo7uBIScZuevIYM7IuQ,329
+lib_shop_api/parser.py,sha256=U2t4fUQxPIqltENddQNDJTFIMvL11Y9rYdeDhKxBW4Q,3203
+lib_shop_api/urls.py,sha256=jDXsrHxVBq36-4cKg8mnXGW6_xQjFMm-guf-nX3WsKw,4709
+lib_shop_api-1.0.dist-info/METADATA,sha256=O0cOCsgYdKSdOOv5CBcNlxW2y8FuFUtUoxgh3gNmTgc,397
+lib_shop_api-1.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+lib_shop_api-1.0.dist-info/top_level.txt,sha256=XAbgNBHZEk3B3XzaXpD8CiDGQxM1mEWqERY58VaxH_A,13
+lib_shop_api-1.0.dist-info/RECORD,,
