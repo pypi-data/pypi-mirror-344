@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: bootlace
+Version: 0.4.0
+Summary: Pythonic Bootstrap Utilities
+Project-URL: Documentation, https://github.com/alexrudy/bootlace#readme
+Project-URL: Issues, https://github.com/alexrudy/bootlace/issues
+Project-URL: Source, https://github.com/alexrudy/bootlace
+Author-email: Alex Rudy <github@alexrudy.net>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.11
+Requires-Dist: attrs>=25.3.0
+Requires-Dist: domilite
+Requires-Dist: flask>=3.1.0
+Requires-Dist: html5lib>=1.1
+Requires-Dist: marshmallow-oneofschema>=3.1.1
+Requires-Dist: marshmallow>=3.26.1
+Requires-Dist: wtforms>=3.2.1
+Description-Content-Type: text/markdown
+
+# bootlace
+
+[![PyPI - Version](https://img.shields.io/pypi/v/bootlace.svg)](https://pypi.org/project/bootlace)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/bootlace.svg)](https://pypi.org/project/bootlace)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install bootlace
+```
+
+## License
+
+`bootlace` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
