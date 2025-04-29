@@ -1,0 +1,2 @@
+[console_scripts]
+asr-mcp-server = mcp_asr.server:main
