@@ -1,0 +1,2 @@
+[console_scripts]
+colab-markdown-editor = colab_markdown_editor.__main__:main
