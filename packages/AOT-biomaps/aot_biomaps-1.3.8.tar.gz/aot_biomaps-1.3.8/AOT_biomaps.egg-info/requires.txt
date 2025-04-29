@@ -1,0 +1,7 @@
+k-wave-python
+GPUtil
+
+[cpu]
+
+[gpu]
+cupy
