@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=70.1.0", "setuptools_scm>=8", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ramalama-stack"
+version = "0.1.1"
+description = "Llama Stack Provider for Ramalama Inference"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+keywords = ["ramalama", "llama", "AI"]
+requires-python = ">=3.10"
+dependencies = [
+    "llama-stack>=0.2.3",
+    "ramalama>=0.7.5",
+    "urllib3",
+    "faiss-cpu",
+    "autoevals",
+    "six",
+    "pydantic",
+    "aiohttp",
+    "aiosqlite",
+    "datasets",
+    "fastapi",
+    "httpx",
+    "numpy",
+    "openai",
+    "opentelemetry-exporter-otlp-proto-http",
+    "opentelemetry-sdk",
+    "requests",
+    "uvicorn",
+]
+
+[project.urls]
+homepage = "https://ramalama.ai"
+Repository = "https://github.com/containers/ramalama-stack"
+Issues = "https://github.com/containers/ramalama-stack/issues"
+
+[tool.setuptools_scm]
+version_file = "src/ramalama_stack/_version.py"
+# do not include +gREV local version, required for Test PyPI upload
+local_scheme = "no-local-version"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.ruff]
+extend-exclude = ["*.ipynb"]
