@@ -1,0 +1,3 @@
+[console_scripts]
+lapa-ng=lapa_ng._cli:cli
+
