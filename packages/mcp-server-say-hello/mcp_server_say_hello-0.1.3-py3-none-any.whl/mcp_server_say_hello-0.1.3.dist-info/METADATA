@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: mcp-server-say-hello
+Version: 0.1.3
+Summary: A Model Context Protocol server providing tools to greeting
+Project-URL: homepage, https://github.com/BrightLin/mcp-server-say-hello-py
+Project-URL: documentation, https://github.com/BrightLin/mcp-server-say-hello-py
+Project-URL: repository, https://github.com/BrightLin/mcp-server-say-hello-py
+Author-email: Bright Lin <xiao89hui@qq.com>
+Maintainer-email: Bright Lin <xiao89hui@qq.com>
+License: MIT
+License-File: LICENSE
+Keywords: helloworld,llm,mcp
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.9
+Requires-Dist: fastapi
+Requires-Dist: mcp
+Requires-Dist: pydantic
+Requires-Dist: uvicorn
