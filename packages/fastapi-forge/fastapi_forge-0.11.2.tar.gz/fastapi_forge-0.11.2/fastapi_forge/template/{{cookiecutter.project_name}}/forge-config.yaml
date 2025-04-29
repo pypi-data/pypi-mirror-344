@@ -1,0 +1,57 @@
+# Used for post project generation tasks
+# You may delete this file!
+
+paths:
+  use_postgres:
+    enabled: {{cookiecutter.use_postgres | lower}}
+    paths: []
+    
+  use_alembic:
+    enabled: {{cookiecutter.use_alembic | lower}}
+    paths:
+      - migrations
+
+  use_builtin_auth:
+    enabled: {{cookiecutter.use_builtin_auth | lower}}
+    paths:
+      - {{cookiecutter.project_name}}/dependencies/auth_dependencies.py
+      - {{cookiecutter.project_name}}/dtos/auth_dtos.py
+      - {{cookiecutter.project_name}}/routes/auth_routes.py
+      - {{cookiecutter.project_name}}/utils/auth_utils.py
+
+  use_redis:
+    enabled: {{cookiecutter.use_redis | lower}}
+    paths:
+      - {{cookiecutter.project_name}}/services/redis
+
+  use_rabbitmq:
+    enabled: {{cookiecutter.use_rabbitmq | lower}}
+    paths:
+      - {{cookiecutter.project_name}}/services/rabbitmq
+
+  use_taskiq:
+    enabled: {{cookiecutter.use_taskiq | lower}}
+    paths:
+      - {{cookiecutter.project_name}}/services/taskiq
+  
+  use_prometheus:
+    enabled: {{cookiecutter.use_prometheus | lower}}
+    paths:
+      - observability/prometheus
+
+  constants:
+    requires_all:
+      - use_builtin_auth
+      - use_rabbitmq
+    paths:
+      - {{cookiecutter.project_name}}/constants.py
+
+  observability:
+    requires_all:
+      - use_prometheus
+    paths:
+      - observability
+
+  
+
+  
