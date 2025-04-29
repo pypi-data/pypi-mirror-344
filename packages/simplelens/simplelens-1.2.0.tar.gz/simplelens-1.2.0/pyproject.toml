@@ -1,0 +1,13 @@
+[project]
+description = "Implementation of the lens functional pattern"
+name = "simplelens"
+version = "1.2.0"
+readme = "README.md"
+requires-python = ">= 3.11"
+
+dependencies = [
+    'build == 1.2.1'
+]
+
+[tool.ruff]
+    line-length = 120
