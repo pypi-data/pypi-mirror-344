@@ -1,0 +1,15 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/rtasp/__init__.py
+src/rtasp/__init__.py.bak
+src/rtasp/__main__.py
+src/rtasp/_version.py
+src/rtasp/_version.py.bak
+src/rtasp.egg-info/PKG-INFO
+src/rtasp.egg-info/SOURCES.txt
+src/rtasp.egg-info/dependency_links.txt
+src/rtasp.egg-info/top_level.txt
+src/rtasp/config/__init__.py
