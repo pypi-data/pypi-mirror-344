@@ -1,0 +1,5 @@
+[console_scripts]
+openweather-mcp = openweather_mcp:main
+
+[gui_scripts]
+

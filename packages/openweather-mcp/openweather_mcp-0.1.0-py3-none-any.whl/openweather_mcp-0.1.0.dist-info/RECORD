@@ -1,0 +1,9 @@
+openweather_mcp-0.1.0.dist-info/METADATA,sha256=86YJf5EOwZJW5gD10h2l87LRo35P-QGcKTNdmmhbIaM,1311
+openweather_mcp-0.1.0.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+openweather_mcp-0.1.0.dist-info/entry_points.txt,sha256=8zRFKqY9Mjh-wnSyuaBp4IpIkxMkUMZ7mvUiJY8zjVI,73
+openweather_mcp-0.1.0.dist-info/licenses/LICENSE,sha256=7GMCXAZJifJSi_nVIArq9ZRr7O9VrN2iFZLhXxzZOkM,1059
+openweather_mcp/__init__.py,sha256=dFNBtW_xgqbSX3QEfrYoLZl58UXX4tGlLUqr0pnzrrE,84
+openweather_mcp/errors.py,sha256=tllF5N33LaawSy1ORg1enP58LmXPcxMJPvc81385Fz8,223
+openweather_mcp/server.py,sha256=b5StFMBwUtdpil53Bu-gIDOWy5fh79h2X4ooWvum4w0,3436
+openweather_mcp/structs.py,sha256=M9X9WZiucbx3uY0HoSxv4GEf8-8zbpj9NWPVSPf0OI4,2545
+openweather_mcp-0.1.0.dist-info/RECORD,,
