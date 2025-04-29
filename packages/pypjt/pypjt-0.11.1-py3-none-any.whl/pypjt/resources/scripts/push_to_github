@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+import os
+
+import click
+from dotenv import load_dotenv
+
+os.chdir("..")
+load_dotenv()
+
+
+@click.command()
+@click.option('-n', default="main",
+              help="The branch or tag name or others, default is main")
+def push(n):
+    os.system(f"""/usr/bin/expect <<EOF
+    set timeout 10
+    spawn git push -u origin {n}
+    expect "Username for"
+    send "$GITHUB_USERNAME\r"
+    expect "Password for"
+    send "$GITHUB_TOKEN\r"
+    expect eof
+EOF""")
+
+
+if __name__ == '__main__':
+    push()
