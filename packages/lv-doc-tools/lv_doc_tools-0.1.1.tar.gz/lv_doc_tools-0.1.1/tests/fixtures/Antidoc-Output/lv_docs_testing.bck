@@ -1,0 +1,34 @@
+= LV Doc Tools Documentation
+Antidoc v3.0.0; Resonate Systems <info@resonatesystems.com.au>
+:doctype: book
+:toc: left
+:imagesdir: Images
+:sectnums: 
+:toclevels: 2
+:sectanchors: 
+:sectlinks: 
+:chapter-label: Section
+
+include::Includes/000.adoc[leveloffset=+0]
+
+== Libraries
+
+This section describes the libraries contained in the project.
+
+include::Includes/001.adoc[leveloffset=+1]
+
+== Legal Information
+
+=== Document creation
+
+This document has been generated using the following tools.
+
+include::Includes/002.adoc[leveloffset=+2]
+
+include::Includes/003.adoc[leveloffset=+2]
+
+=== Product used in the project
+
+Antidoc hasn't been able to detect third party products in the project.
+This is the author's responsibility to list any of the missing product used.
+
