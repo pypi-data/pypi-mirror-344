@@ -1,0 +1,10 @@
+solar_radiation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+solar_radiation/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+solar_radiation/core/extraterrestrial_radiation.py,sha256=kl4dagtudeQ6f-6_hBbZldBJKKQ1-1RorCaxB8WxdBI,3240
+solar_radiation/core/solar_geometry.py,sha256=hMqNglysk7dpNy0Agmc_I_9XQc6hVjZ3oifGGkeGKt0,2730
+solar_radiation/core/utils.py,sha256=tmhaBoTGEAft49Nz6zOiVE0b8jDpnoM4Eg8jb3857Kw,3455
+solar_radiation/solar_radiation.py,sha256=J4ldCZWPdDQrH9ccZeHUfSHzQOZ9Ao0HkonoshIUhV4,4661
+solar_radiation-0.1.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+solar_radiation-0.1.2.dist-info/METADATA,sha256=GHrkALRHbSku0bTNLCljfmh4c0YT4gzVde_DHWuPvrI,2248
+solar_radiation-0.1.2.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+solar_radiation-0.1.2.dist-info/RECORD,,
