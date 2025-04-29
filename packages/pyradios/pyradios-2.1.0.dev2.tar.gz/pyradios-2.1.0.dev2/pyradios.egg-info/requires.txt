@@ -1,0 +1,8 @@
+httpx>=0.25.2
+
+[dev]
+pytest>=6.2.5
+flake8>=4.0.1
+setuptools
+pytest-recording
+pytest-mock
