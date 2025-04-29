@@ -1,0 +1,2 @@
+[console_scripts]
+mqpy = mqpy.__main__:main
