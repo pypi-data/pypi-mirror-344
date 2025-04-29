@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: tensordlx
+Version: 0.2
+Summary: DLcodex
+Author: BabaTunde
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: tensorflow
+Requires-Dist: scikit-learn
+Requires-Dist: networkx
+Requires-Dist: tensorflow_hub
+
+# My ML Library
+This library provides code examples for common ML/DL models.
