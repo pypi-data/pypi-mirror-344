@@ -1,0 +1,54 @@
+[project]
+name = "trifast"
+description = "Fast kernel for triangle self attetion."
+readme = "README.md"
+authors = [
+    { name = "Liam Atkinson", email = "hello@liamatkinson.com" }
+]
+requires-python = ">=3.10"
+dynamic = ["version"]
+dependencies = [
+    "einops>=0.8.0",
+    "jaxtyping>=0.2.36",
+    "numpy>=1.26.3",
+    "platformdirs>=4.3.6",
+    "pyyaml>=6.0.2",
+    "setuptools>=75.6.0",
+    "torch>=2.6.0",
+    "triton>=3.1.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.3.4",
+]
+benchmark = [
+    "deepspeed>=0.16.0",
+]
+
+[build-system]
+requires = ["hatchling", "hatch-vcs>=0.4"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+package-dir = "src"
+
+[tool.hatch.version]
+source = "vcs"
+tag-pattern = "v?(?P<version>.*)"  # accepts `v1.2.3` or `1.2.3`
+fallback-version = "0.0.0"
+
+[project.scripts]
+trifast-tune = "trifast.tune:main"
+
+[tool.uv]
+dev-dependencies = [
+    "fastparquet>=2024.11.0",
+    "matplotlib>=3.9.2",
+    "neovim>=0.3.1",
+    "pandas>=2.2.3",
+    "pudb>=2024.1.3",
+    "pyarrow>=18.1.0",
+    "ruff>=0.8.0",
+    "seaborn>=0.13.2",
+]
