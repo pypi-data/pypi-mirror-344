@@ -1,0 +1,45 @@
+# Futures Calendar
+# ================
+#
+# NOTE: This calendar is an approximation of the true CME calendar. It should be ok for backtesting but should 
+#       *not* be used for live trading!
+#
+# REMINDER: January F February G March H April J May K June M July N August Q September U October V November X December Z
+#
+
+# Calendars
+calF:
+  FI  : {months: [H,M,U,Z], freq: WOM-3TUE, exch: CBOT}                  # Fixed Income
+  VX  : {months: [F,G,H,J,K,M,N,Q,U,V,X,Z], freq: WOM-3FRI, exch: CFE}
+  CU  : {months: [H,M,U,Z], freq: WOM-3MON, exch: CME}                   # Currencies
+  EQ  : {months: [H,M,U,Z], freq: WOM-3FRI, exch: CME}                   # Index
+  ME  : {months: [F,G,H,J,K,M,N,Q,U,V,X,Z], freq: WOM-4TUE, exch: COMEX} # Metals
+  EN  : {months: [F,G,H,J,K,M,N,Q,U,V,X,Z], freq: WOM-4MON, exch: CME}   # Energy
+  LS  : {months: [G,J,K,M,N,Q,V,Z], freq: WOM-3MON, exch: CME}           # Livestock
+  SO  : {months: [H,K,N,U,Z], freq: WOM-3MON, exch: NYMEX}               # Softs
+  GR  : {months: [H,K,N,U,Z], freq: WOM-2THU, exch: CBOT}                # Grains
+
+# Tickers per calendar
+calF_fut: {
+  'FI' : 'ZB,ZN,ZF,ZT',
+  'EQ' : 'ES,NQ,YM,RTY',
+  'ME' : 'GC,SI,HG,PL',
+  'CU' : '6A,6B,6C,6E,6J,6S,6M,BTC,ETH',
+  'EN' : 'CL,NG,HO,RB',
+  'LS' : 'HE,LE',
+  'SO' : 'CC,KC,SB,OJ,CT,LBS',
+  'GR' : 'ZC,ZO,ZS,ZL,ZM,ZW,KE,ZR',
+  'VX' : 'VX'
+}
+
+# For testing
+# -----------
+
+# Calendar
+calF_test:
+  FI  : {months: [H,M,U,Z], freq: WOM-3TUE, exch: CBOT}
+
+# Tickers
+calF_test_fut: {
+  'FI' : 'ZB,ZN',
+}
