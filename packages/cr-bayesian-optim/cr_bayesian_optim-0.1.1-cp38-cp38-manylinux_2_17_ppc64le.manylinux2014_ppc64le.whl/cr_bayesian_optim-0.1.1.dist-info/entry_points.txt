@@ -1,0 +1,2 @@
+[console_scripts]
+crb_fractal_dim=cr_bayesian_optim:fractal_dim_main
