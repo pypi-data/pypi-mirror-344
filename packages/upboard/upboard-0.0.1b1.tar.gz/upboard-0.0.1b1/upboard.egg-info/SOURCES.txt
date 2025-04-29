@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+upboard/__init__.py
+upboard/upboard_publish.py
+upboard/upboard_server.py
+upboard.egg-info/PKG-INFO
+upboard.egg-info/SOURCES.txt
+upboard.egg-info/dependency_links.txt
+upboard.egg-info/entry_points.txt
+upboard.egg-info/requires.txt
+upboard.egg-info/top_level.txt
