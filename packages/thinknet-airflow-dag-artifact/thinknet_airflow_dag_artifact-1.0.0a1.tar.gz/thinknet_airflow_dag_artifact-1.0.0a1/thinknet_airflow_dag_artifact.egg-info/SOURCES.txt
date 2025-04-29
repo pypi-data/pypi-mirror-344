@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+tests/test_read_from_s3_as_dataframe.py
+tests/test_write_dataframe_to_s3.py
+tests/test_write_xcom_to_file.py
+thinknet_airflow_dag_artifact/__init__.py
+thinknet_airflow_dag_artifact/error_data.py
+thinknet_airflow_dag_artifact/spark_utilities.py
+thinknet_airflow_dag_artifact/xcom_utilities.py
+thinknet_airflow_dag_artifact.egg-info/PKG-INFO
+thinknet_airflow_dag_artifact.egg-info/SOURCES.txt
+thinknet_airflow_dag_artifact.egg-info/dependency_links.txt
+thinknet_airflow_dag_artifact.egg-info/requires.txt
+thinknet_airflow_dag_artifact.egg-info/top_level.txt

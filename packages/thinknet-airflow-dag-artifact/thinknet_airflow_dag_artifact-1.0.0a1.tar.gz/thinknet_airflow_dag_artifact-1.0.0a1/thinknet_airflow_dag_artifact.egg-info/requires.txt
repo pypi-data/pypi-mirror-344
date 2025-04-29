@@ -1,0 +1,7 @@
+botocore>=1.35
+pyspark>=3.5
+thinknet-application-specific-exception>=1.0.0rc0
+thinknet-variable-validator>=1.0.0b4
+
+[dev]
+pytest

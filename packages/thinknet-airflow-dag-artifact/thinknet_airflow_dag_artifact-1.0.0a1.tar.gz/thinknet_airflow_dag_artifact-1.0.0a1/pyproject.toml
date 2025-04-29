@@ -1,0 +1,31 @@
+[project]
+name = "thinknet-airflow-dag-artifact"
+version = "1.0.0a1"
+description = "Airflow artifact manager for data-eng@thinknet"
+readme = "README.md"
+authors = [
+    { name = "TN-DE Team", email = "thinknet_dataengineer@thinknet.co.th" }
+]
+requires-python = ">=3.8"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Development Status :: 3 - Alpha",
+    "Topic :: Software Development :: Libraries"
+]
+dependencies = [
+    "botocore>=1.35",
+    "pyspark>=3.5",
+    "thinknet-application-specific-exception>=1.0.0rc0",
+    "thinknet-variable-validator>=1.0.0b4"
+]
+
+[project.urls]
+Homepage = "https://gitlab.thinknet.co.th/data-eng/library/airflow-dag-artifact"
+
+[project.optional-dependencies]
+dev = ["pytest"]
