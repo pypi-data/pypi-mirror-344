@@ -1,0 +1,5 @@
+ka_uts_dic>=2.2.0.250427
+ka_uts_log>=2.2.0.250427
+ka_uts_obj>=2.1.1.250415
+ka_uts_uts>=2.2.0.250427
+watchdog>=6.0.0
