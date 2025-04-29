@@ -1,0 +1,7 @@
+febelfin-coda
+trytond_account_statement<7.7,>=7.6
+trytond_bank<7.7,>=7.6
+trytond<7.7,>=7.6
+
+[test]
+proteus<7.7,>=7.6
