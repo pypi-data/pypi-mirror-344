@@ -1,0 +1,1 @@
+from .main import vae_predict
