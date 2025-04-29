@@ -1,0 +1,3 @@
+anywidget<1.0,>=0.9
+traitlets<6.0,>=5.9
+IPython<9.0,>=8.12
