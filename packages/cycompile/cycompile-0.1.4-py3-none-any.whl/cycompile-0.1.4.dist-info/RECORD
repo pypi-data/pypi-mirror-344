@@ -1,0 +1,9 @@
+cycompile/__init__.py,sha256=9aj4kaR3EyaP3VarZOb4kWcLoIfHsa9g7H32LqzwIh4,912
+cycompile/cythonize_decorator.py,sha256=yQtdpVzYTUsXQn5HvD865oD2ckAodmWNhKuLEuP4-eY,23279
+cycompile/cythonize_decorator.pyi,sha256=gY8Lt28uetFS8w_8LxmJtF6WqaxCQfU9WdEQ4uCOa8U,1787
+cycompile/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cycompile-0.1.4.dist-info/licenses/LICENSE,sha256=i9EEWKDSUW-bemC1g50BXMzuCKefTuWmO4VMj8NV-fo,11620
+cycompile-0.1.4.dist-info/METADATA,sha256=VWpiLML26VpnxhjPvyNprOf3-5ge3nhCepRzsOyBiNY,20926
+cycompile-0.1.4.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+cycompile-0.1.4.dist-info/top_level.txt,sha256=qLsNG2jAHNRqGSVnZ7LyOczQvUBXsYvABh1d9iRCN8M,10
+cycompile-0.1.4.dist-info/RECORD,,
