@@ -1,0 +1,14 @@
+procaaso_client/asynchronous/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+procaaso_client/asynchronous/application.py,sha256=-mPXOpvpMiuj6SatLCpSxEuxibkEbj_IjAOXydHgY9Q,1133
+procaaso_client/asynchronous/client.py,sha256=Fu6q5n3bAqPBnqmtSLuoHBX311cW2CjCAUATd3lHqC0,4512
+procaaso_client/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+procaaso_client/core/base.py,sha256=Fe8_34_NOhgeK5a24VlPS2OvhxSS7W2n5G9XPO1IG4w,3091
+procaaso_client/core/client_models.py,sha256=DeicB68IYEuFhrhsj0JX8M2iXS_KpFCrpl_nUcyi1sQ,357
+procaaso_client/core/http_clients.py,sha256=ewwsNNb5KPiED6fn0ZsPu5v178uyX5MuHDCZazBcng0,2475
+procaaso_client/synchronous/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+procaaso_client/synchronous/application.py,sha256=U2p9dqn4DnUj7M63wQDdfuJG0rzBda-AuuoxbcBUxI8,895
+procaaso_client/synchronous/client.py,sha256=-9zFZZr9XLtVb2Ba1CGxWgd8l-kMcxIh74pJW3cO-bo,4407
+procaaso_client-0.1.19.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+procaaso_client-0.1.19.dist-info/METADATA,sha256=GBtzVpNy0HytVI1eTGjJrcOw3bHtcNyW4bbolNnjIGs,16109
+procaaso_client-0.1.19.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+procaaso_client-0.1.19.dist-info/RECORD,,
