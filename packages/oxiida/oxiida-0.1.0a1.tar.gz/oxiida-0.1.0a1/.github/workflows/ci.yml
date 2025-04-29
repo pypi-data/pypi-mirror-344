@@ -1,0 +1,99 @@
+name: build-and-upload
+on:
+  push:
+    branch: main
+
+env:
+  CRATE: oxiida
+  PROJECT: ${{ secrets.SF_PROJECT }}
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Cargo registry + build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry    # downloaded crates (.crate files)
+            ~/.cargo/git         # git deps
+            target               # compiled deps & incremental
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: Build release
+        run: cargo build --release
+
+      - name: Package binary
+        shell: bash
+        run: |
+          set -euxo pipefail
+
+          DATE=$(date -u +%Y%m%d)
+          SHORT_SHA=${GITHUB_SHA::7}
+          VERSION="nightly-${DATE}-${SHORT_SHA}"
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+          TARGET_DIR="target/release"
+
+          case "${{ runner.os }}" in
+            macOS)
+              BINARY="${CRATE}"
+              ARCHIVE="${CRATE}-${VERSION}-aarch64-apple-darwin.tar.gz"
+              tar -C "$TARGET_DIR" -czf "$ARCHIVE" "$BINARY"
+              ;;
+            Linux)
+              BINARY="${CRATE}"
+              ARCHIVE="${CRATE}-${VERSION}-x86_64-unknown-linux-gnu.tar.gz"
+              tar -C "$TARGET_DIR" -czf "$ARCHIVE" "$BINARY"
+              ;;
+          esac
+
+          echo "ARCHIVE=$ARCHIVE" >> $GITHUB_ENV
+
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARCHIVE }}
+          path: ${{ env.ARCHIVE }}
+
+  upload-sourceforge:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download all build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: dist
+
+      - name: Download all build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge: true
+
+      - name: Prepare SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SF_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan frs.sourceforge.net >> ~/.ssh/known_hosts
+
+      - name: Upload to SourceForge (nightly)
+        run: |
+          # put every build into /nightly/<YYYYMMDD-SHA>/
+          scp -r dist/* \
+            ${{ secrets.SF_USER }}@frs.sourceforge.net:/home/frs/project/${PROJECT}/nightly/${VERSION}/
+
