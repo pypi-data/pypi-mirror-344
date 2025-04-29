@@ -1,0 +1,8 @@
+numpy
+SimpleITK
+scikit-learn
+scipy
+trimesh
+matplotlib
+plotly
+scikit-image
