@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+Name = "apollo-client3"
+Version='1.0.4'
+authors = [
+    { name = "Johnliu", email = "1242108463@qq.com" }
+]
+description = "apollo-client升级到python3.10"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.10"
+]
+dependencies = [
+    "requests"
+]
+
+[project.urls]
+Homepage = "https://pypi.org/project/apollo-client3/"
