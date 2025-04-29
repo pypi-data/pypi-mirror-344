@@ -1,0 +1,9 @@
+fastapi
+pydantic
+starlette
+sqlalchemy
+asyncpg
+python-dotenv
+loguru
+httpx
+uvicorn
