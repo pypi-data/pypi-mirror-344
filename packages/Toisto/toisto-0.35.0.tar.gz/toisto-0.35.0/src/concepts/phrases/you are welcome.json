@@ -1,0 +1,21 @@
+{
+    "you are welcome": {
+        "roots": {
+            "en": [
+                "to be",
+                "welcome"
+            ],
+            "nl": "thanks",
+            "fi": "no"
+        },
+        "en": "You are welcome!",
+        "nl": [
+            "Geen dank!",
+            "Graag gedaan!"
+        ],
+        "fi": [
+            "Ei kestä!",
+            "Eipä mitään!*"
+        ]
+    }
+}

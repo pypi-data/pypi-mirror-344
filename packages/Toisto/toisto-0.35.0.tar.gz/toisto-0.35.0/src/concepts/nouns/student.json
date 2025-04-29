@@ -1,0 +1,33 @@
+{
+    "student": {
+        "singular": {
+            "en": "student",
+            "fi": "opiskelija",
+            "nl": "de student"
+        },
+        "plural": {
+            "en": "students",
+            "fi": "opiskelijat",
+            "nl": "de studenten"
+        }
+    },
+    "exchange student": {
+        "hypernym": "student",
+        "roots": {
+            "en": "student",
+            "fi": [
+                "transfer",
+                "student"
+            ],
+            "nl": "student"
+        },
+        "en": "exchange student",
+        "fi": "vaihto-opiskelija",
+        "nl": "de uitwisselingsstudent"
+    },
+    "student cap": {
+        "en": "student cap",
+        "fi": "ylioppilaslakki",
+        "nl": "( traditionele witte studentenpet die men krijgt bij het behalen van het diploma middelbaar onderwijs)"
+    }
+}

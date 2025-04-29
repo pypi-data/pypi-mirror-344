@@ -1,0 +1,17 @@
+{
+    "to start": {
+        "antonym": "to stop",
+        "infinitive": {
+            "en": "to start",
+            "fi": "aloittaa",
+            "nl": "starten"
+        }
+    },
+    "to start (doing)": {
+        "infinitive": {
+            "en": "to start",
+            "fi": "ruveta",
+            "nl": "starten"
+        }
+    }
+}

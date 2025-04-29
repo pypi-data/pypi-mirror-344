@@ -1,0 +1,24 @@
+{
+    "event": {
+        "singular": {
+            "en": "event",
+            "fi": "tapahtuma",
+            "nl": "het evenement"
+        },
+        "plural": {
+            "en": "events",
+            "fi": "tapahtumat",
+            "nl": "de evenementen"
+        }
+    },
+    "cultural event": {
+        "hypernym": "event",
+        "roots": [
+            "culture",
+            "event"
+        ],
+        "en": "cultural event",
+        "fi": "kulttuuritapahtuma",
+        "nl": "het culturele evenement"
+    }
+}
