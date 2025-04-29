@@ -1,0 +1,4 @@
+trytond<7.7,>=7.6
+
+[test]
+proteus<7.7,>=7.6
