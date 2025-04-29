@@ -1,0 +1,44 @@
+# Data Generator Configuration
+
+# Database settings
+database:
+  type: sqlite
+  path: sample_data.db
+
+# Default generation settings
+generation:
+  default_locale: en_US
+  available_locales:
+    - en_US
+    - fa_IR
+  default_counts:
+    users: 10
+    products: 20
+    orders: 50
+
+# Export settings
+export:
+  default_format: json
+  available_formats:
+    - json
+    - csv
+    - yaml
+  output_directory: exports
+
+# Logging settings
+logging:
+  level: INFO
+  file: data_generator.log
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Data validation settings
+validation:
+  email_domains:
+    - gmail.com
+    - yahoo.com
+    - hotmail.com
+  phone_formats:
+    en_US: "+1-###-###-####"
+    fa_IR: "+98-###-###-####"
+  min_age: 18
+  max_age: 100 
