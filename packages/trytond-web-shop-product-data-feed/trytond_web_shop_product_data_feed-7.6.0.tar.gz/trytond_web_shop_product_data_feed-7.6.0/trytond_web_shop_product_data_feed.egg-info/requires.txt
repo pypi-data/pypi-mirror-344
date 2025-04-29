@@ -1,0 +1,9 @@
+trytond_product<7.7,>=7.6
+trytond_web_shop<7.7,>=7.6
+trytond<7.7,>=7.6
+
+[test]
+trytond_account_tax_rule_country<7.7,>=7.6
+trytond_product_kit<7.7,>=7.6
+trytond_product_measurements<7.7,>=7.6
+trytond_sale_shipment_cost<7.7,>=7.6
