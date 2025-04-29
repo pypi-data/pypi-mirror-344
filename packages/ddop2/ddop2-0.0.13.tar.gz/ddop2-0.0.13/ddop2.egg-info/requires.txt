@@ -1,0 +1,13 @@
+fastcore>=1.8.1
+numpy>=1.21
+scipy>=1.15.2
+pandas>=2.2.3
+statsmodels>=0.14.4
+scikit-learn>=1.6.1
+pulp>=3.1.1
+mpmath
+matplotlib
+torch
+ipywidgets
+
+[dev]
