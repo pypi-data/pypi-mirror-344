@@ -1,0 +1,23 @@
+Metadata-Version: 2.3
+Name: static-site-containerizer
+Version: 0.1.0
+Summary: A CLI tool for producing a Docker container for hosting your static site
+License: MIT
+Author: Max Pfeiffer
+Author-email: max@maxpfeiffer.ch
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.1.8,<9.0.0)
+Requires-Dist: python-on-whales (>=0.76.1,<0.77.0)
+Project-URL: Homepage, https://github.com/max-pfeiffer/static-site-containerizer
+Description-Content-Type: text/markdown
+
+# Static Site Containerizer
+
+CLI tool for generating Docker containers to host your static site.
+
+## Information Sources
+* [nginx Docker image](https://hub.docker.com/_/nginx)
