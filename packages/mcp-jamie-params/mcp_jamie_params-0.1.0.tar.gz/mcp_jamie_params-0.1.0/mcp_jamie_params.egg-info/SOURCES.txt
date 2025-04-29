@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+mcp_jamie_params.egg-info/PKG-INFO
+mcp_jamie_params.egg-info/SOURCES.txt
+mcp_jamie_params.egg-info/dependency_links.txt
+mcp_jamie_params.egg-info/top_level.txt
