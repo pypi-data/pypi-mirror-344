@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "redshift-utils-mcp": {
+      "command": "uvx",
+      "args": [
+        "redshift_utils_mcp@latest"
+      ],
+      "env": {
+        "REDSHIFT_CLUSTER_ID": "grid",
+        "REDSHIFT_DATABASE": "prod",
+        "REDSHIFT_SECRET_ARN": "arn:aws:secretsmanager:us-east-1:381492190438:secret:Grid-Admin-User-Creds-UH2LQO",
+        "AWS_REGION": "us-east-1",
+        "AWS_PROFILE": "redshift"
+      }
+    }
+  }
+}
