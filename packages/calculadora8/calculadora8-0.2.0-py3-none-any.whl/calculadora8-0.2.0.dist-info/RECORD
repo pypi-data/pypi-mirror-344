@@ -1,0 +1,9 @@
+calculadora/__init__.py,sha256=0NNFk9TRxv-Cu726VO0aGYi8iEs7kO0ZQADhUxZnmDA,38
+calculadora/calculadora.py,sha256=DN7OshG-X1SZBV2joKmOs08_LQ9BdgtHHJHhwMkbTQw,1255
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_calculadora.py,sha256=iYpP_x6kGxCNFyZjHkOCD1ny3qHHImBNQ5Ecwxb1KYo,1015
+calculadora8-0.2.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+calculadora8-0.2.0.dist-info/METADATA,sha256=F5eUlb9TXspsIdL6yp9B_u5te-RkdU-9adfdxfC4BFo,265
+calculadora8-0.2.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+calculadora8-0.2.0.dist-info/top_level.txt,sha256=_YWvALopo4uEdFiSnFqjnZIUlchW6_o239LuyNqY91Y,18
+calculadora8-0.2.0.dist-info/RECORD,,

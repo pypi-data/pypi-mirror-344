@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: calculadora8
+Version: 0.2.0
+Summary: Uma calculadora simples para operações básicas
+Author: Luiz Elias
+Author-email: luizelias8@gmail.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
