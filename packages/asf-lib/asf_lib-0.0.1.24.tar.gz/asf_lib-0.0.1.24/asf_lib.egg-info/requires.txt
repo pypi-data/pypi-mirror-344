@@ -1,0 +1,16 @@
+scikit-learn
+pandas
+ConfigSpace
+smac
+
+[aslib]
+pyyaml
+
+[aspeed]
+clingo
+
+[nn]
+torch
+
+[xgb]
+xgboost
