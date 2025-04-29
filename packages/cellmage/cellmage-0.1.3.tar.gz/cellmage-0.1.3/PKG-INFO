@@ -1,0 +1,491 @@
+Metadata-Version: 2.4
+Name: cellmage
+Version: 0.1.3
+Author-email: Allen Institute for Artificial Intelligence <contact@allenai.org>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                https://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "{}"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright {yyyy} {name of copyright owner}
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               https://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+        
+Project-URL: Homepage, https://github.com/madpin/cellmage
+Project-URL: Repository, https://github.com/madpin/cellmage
+Project-URL: Changelog, https://github.com/madpin/cellmage/blob/main/CHANGELOG.md
+Classifier: Intended Audience :: Science/Research
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: pydantic>=2.0
+Requires-Dist: pydantic-settings>=2.0.0
+Requires-Dist: requests>=2.25.0
+Requires-Dist: ipython>=8.0
+Requires-Dist: requests
+Requires-Dist: PyYAML
+Requires-Dist: python-dotenv
+Requires-Dist: types-PyYAML
+Requires-Dist: types-requests
+Provides-Extra: langchain
+Requires-Dist: langchain==0.3.24; extra == "langchain"
+Requires-Dist: langchain-core>=0.1.20; extra == "langchain"
+Requires-Dist: langchain-community>=0.1.20; extra == "langchain"
+Requires-Dist: langchain-openai>=0.0.8; extra == "langchain"
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: mypy<2.0,>=1.0; extra == "dev"
+Requires-Dist: black<25.0,>=23.0; extra == "dev"
+Requires-Dist: isort<5.14,>=5.12; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-sphinx; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: twine>=1.11.0; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: setuptools; extra == "dev"
+Requires-Dist: wheel; extra == "dev"
+Requires-Dist: Sphinx<9.0,>=6.0; extra == "dev"
+Requires-Dist: furo==2024.8.6; extra == "dev"
+Requires-Dist: myst-parser>=1.0; extra == "dev"
+Requires-Dist: sphinx-copybutton; extra == "dev"
+Requires-Dist: sphinx-autobuild; extra == "dev"
+Requires-Dist: sphinx-autodoc-typehints==1.23.3; extra == "dev"
+Requires-Dist: packaging; extra == "dev"
+Dynamic: license-file
+
+# 🧙 CellMage ✨
+
+[![PyPI version](https://badge.fury.io/py/cellmage.svg)](https://badge.fury.io/py/cellmage) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+**Stop juggling browser tabs! Start casting LLM spells directly in your Jupyter Notebook cells!**
+
+<p align="center">
+  <img src="docs/images/cellmage_logo.png" alt="CellMage Logo Concept" width="200"/>
+</p>
+
+Ever find yourself deep in a complex data analysis or coding session, only to hit a wall? You need a quick code snippet, an explanation, or just some creative brainstorming juice from your favorite Large Language Model. But *ugh*, that means breaking your flow, opening a new tab, copying, pasting, context-switching... the magic is *gone*.
+
+**Fear not, apprentice! CellMage is here to restore the enchantment!** 🪄
+
+CellMage is your personal LLM wizard, living right inside your Jupyter or IPython notebook. It provides powerful, intuitive magic commands to interact with LLMs without ever leaving your cell-based sanctuary.
+
+## What Sorcery is This? (Core Features)
+
+CellMage isn't *actual* magic, but it feels pretty close:
+
+* ✨ **Intuitive Spellcasting:** Use the `%%llm` cell magic. Write your prompt, run the cell, and *poof* – the LLM's response appears!
+* 📜 **Arcane History Scrolls:** CellMage remembers your conversation. Even better, it detects when you re-run a cell and cleverly avoids duplicating history. Like turning back time, but less paradoxical!
+* 🔮 **Persona Grimoires:** Define different LLM "personalities" (system prompts + configs) in simple Markdown files. Need a Python expert? A terse code generator? A rubber duck? Switch personas with a simple command!
+* 🌍 **Access Diverse Magical Fonts:** Connect to OpenAI, Anthropic, Azure, and other OpenAI-compatible APIs.
+* ⚡️ **Live Conjuring:** Watch the LLM weave its response character-by-character with built-in streaming support (the default!).
+* 🪄 **Ambient Enchantment (Optional):** Feeling lazy? Use `%llm_setup_forever` to automatically treat *any* standard cell you run as a prompt! (Use `%disable_llm_config_persistent` to turn it off).
+* 🧪 **Precise Incantations:** Override models, temperature, and other parameters on-the-fly for specific spells or configure instance-wide defaults. Use model aliases (like 'g4' for 'gpt-4') for quick access to your favorite models.
+* 📝 **Model Aliases:** Define short aliases for your frequently used models in a `cellmage_models.yml` file or manage them through magic commands.
+* GOTO **Re-usable Spell Snippets:** Inject content from local files (like code context or data samples) directly into the conversation history before casting your spell.
+* 💰 **Mana Tracking:** Get a handy status bar after each call showing duration and estimated cost (because even magic has its price!).
+* 📚 **Detailed Spell Logs:** Keep a record of your magical experiments with robust file logging.
+
+## The Installation Incantation 🪄
+
+Ready to wield this power? Open your terminal and chant the sacred words:
+
+```bash
+# Basic installation
+pip install cellmage
+
+# For LangChain integration
+pip install "cellmage[langchain]"
+```
+
+## LLM Connection Options 🔌
+
+CellMage provides a DirectLLMAdapter for connecting to LLM APIs:
+
+**DirectLLMAdapter** (built-in with no additional dependencies): 
+- Connects directly to OpenAI-compatible APIs via standard HTTP requests
+- Supports standard OpenAI API functionality including streaming
+- Simple and reliable with minimal dependencies
+
+## Summoning Your First Spell (Quick Start) ⚡️
+
+1.  **Load the Extension:** In a notebook cell, run:
+    ```python
+    %load_ext cellmage
+    ```
+
+2.  **Configure (Optional but Recommended):** Tell CellMage where to find its power source. Set your API key and base URL (if needed) using environment variables (`CELLMAGE_API_KEY`, `CELLMAGE_API_BASE`) or the setup magic:
+    ```python
+    # Example for a local OpenAI-compatible API server
+    %llm_setup --api_base http://localhost:1234/v1 --default_model local-model
+    ```
+    *Or for OpenAI:*
+    ```python
+    # Make sure CELLMAGE_API_KEY is set as an environment variable, or use:
+    # %llm_setup --api_key "sk-..." --default_model gpt-4o
+    ```
+    *(See "Connecting to Magical Fonts" below for more ways)*
+
+3.  **Cast Your Spell!** In a new cell, use the `%%llm` magic:
+    ```python
+    %%llm
+    Explain the difference between a list and a tuple in Python like I'm five.
+    ```
+    Run the cell and behold the LLM's wisdom appearing below! ✨
+
+## Mastering the Arcane Arts (Core Concepts) 📖
+
+### Available Magic Commands
+
+CellMage provides the following IPython magic commands:
+
+* `%%llm` - Cell magic to send your prompt to the LLM
+* `%llm_config` - Line magic to configure session state and manage resources 
+* `%llm_config_persistent` - Enable ambient mode (process regular cells as LLM prompts)
+* `%disable_llm_config_persistent` - Disable ambient mode
+* `%%py` - Execute a cell as normal Python code when ambient mode is active
+
+For a comprehensive reference of all available magic commands and their arguments, see the [IPython Magic Commands documentation](docs/source/ipython_magic_commands.md).
+
+### The `%%llm` Cell Spell
+
+This is your bread-and-butter. Anything in a cell marked with `%%llm` at the top gets sent as a prompt to the currently configured LLM.
+
+```python
+%%llm --model gpt-4o --persona python_expert
+Write a python function that takes a list of numbers and returns the sum,
+but handle potential type errors gracefully.
+```
+
+Common arguments:
+* `-p`, `--persona`: Temporarily use a different personality for this spell
+* `-m`, `--model`: Temporarily use a different model for this spell
+* `-t`, `--temperature`: Set temperature for this call
+* `--max-tokens`: Set max_tokens for this call
+* `--no-stream`: Disable streaming output just for this cell
+* `--no-history`: Don't add this exchange to conversation history
+* `--param KEY VALUE`: Set any other LLM param ad-hoc (e.g., `--param top_p 0.9`)
+
+### Configuring Your Session (`%llm_config` & `%llm_config_persistent`)
+
+* `%llm_config`: Configure CellMage for the current session. Set defaults like your preferred model, API endpoints, persona folders, logging preferences, etc.
+    ```python
+    %llm_config --model gpt-4o --persona coding_assistant --auto_save True --status
+    ```
+* `%llm_config_persistent`: Does the same as `%llm_config`, *but also* enables the "Ambient Enchantment" mode, treating subsequent non-magic cells as prompts. Great for pure chat sessions! Use `%disable_llm_config_persistent` to deactivate.
+
+### Model Aliases
+
+CellMage supports defining short aliases for model names. You can:
+
+1. Create a `cellmage_models.yml` file in your project directory:
+```yaml
+# Model aliases
+g4: gpt-4
+g4t: gpt-4-turbo
+c2: claude-2
+```
+
+2. Manage aliases through magic commands:
+```python
+%llm_config --list-mappings  # Show current mappings
+%llm_config --add-mapping g4 gpt-4  # Add new mapping
+%llm_config --remove-mapping g4  # Remove mapping
+```
+
+Then use your aliases anywhere you'd use a model name:
+```python
+%llm_config --model g4  # Use GPT-4
+%%llm -m g4t  # Use GPT-4 Turbo for this cell
+```
+
+### Ambient Enchantment (Auto-Processing)
+
+Run `%llm_config_persistent`. Now, just type a prompt in a regular cell and run it! CellMage intercepts it and sends it to the LLM. Magic!
+
+To run actual Python code while in ambient mode, use the `%%py` cell magic:
+
+```python
+%%py
+# This will run as normal Python code, not as an LLM prompt
+x = 10
+print(f"The value is {x}")
+```
+
+Remember to use `%disable_llm_config_persistent` when you want normal cell execution back.
+
+### Spell Snippets
+
+Need to include the content of a file (like code context or data) in your prompt history *before* asking your question?
+
+```python
+# Add content of my_code.py as a system message before the next %%llm call
+%llm_setup --snippets my_code.py system
+
+# Or add multiple files with a specific role
+# %llm_setup --snippets file1.txt file2.json user
+```
+
+The snippet content will be added to the history for the *next* LLM call.
+
+### Multiple Persona and Snippet Folders
+
+CellMage supports using personas and snippets from multiple directories, making it easier to organize resources by project or purpose:
+
+1. **Environment Variables**: Set additional directories using comma-separated values:
+   ```bash
+   # Using environment variables
+   export CELLMAGE_PERSONAS_DIRS=project_A/personas,project_B/personas
+   export CELLMAGE_SNIPPETS_DIRS=project_A/snippets,project_B/snippets
+   ```
+
+2. **Auto-discovery**: CellMage automatically looks for personas and snippets in standard locations:
+   - Root `llm_personas` and `llm_snippets` directories
+   - `notebooks/llm_personas`, `notebooks/llm_snippets`
+   - `notebooks/examples` and `notebooks/tests` subdirectories
+
+3. **Custom Loaders**: For programmatic access to multiple directories:
+   ```python
+   from cellmage.resources.file_loader import MultiFileLoader
+   
+   # Create a loader with multiple directories
+   loader = MultiFileLoader(
+       personas_dirs=["llm_personas", "project_A/personas"], 
+       snippets_dirs=["llm_snippets", "project_A/snippets"]
+   )
+   
+   # See available resources
+   print(f"Available personas: {loader.list_personas()}")
+   print(f"Available snippets: {loader.list_snippets()}")
+   ```
+
+### Mana Tracking (Status Bar)
+
+After each successful call, a small status bar appears showing:
+✅ Success | ⏱️ Duration | 📥 Tokens In | 📤 Tokens Out | 🪙 Estimated Cost
+
+*(Cost estimation is basic and may vary wildly based on the model/provider)*
+
+## Advanced Spellcraft
+
+*(Add examples here later for things like programmatic use, complex overrides, etc.)*
+
+```python
+# Example: Accessing the underlying object (if needed)
+from cellmage import NotebookLLMMagics # Assuming this path
+mage_instance = %magics_object NotebookLLMMagics
+llm_helper = mage_instance.llm
+
+# Now you can use methods directly
+# llm_helper.set_override("temperature", 0.9)
+# response = llm_helper.chat("This uses the override", personality_name="creative")
+# llm_helper.remove_override("temperature")
+```
+
+## Join the Coven? (Contributing)
+
+Found a mischievous bug? Have an idea for a powerful new spell? Contributions are welcome! Please check the `CONTRIBUTING.md` file for guidelines.
+
+## The Fine Print (License)
+
+CellMage is distributed under the MIT License. See `LICENSE` file for details. May cause spontaneous bursts of productivity and/or delight. Not responsible for accidentally summoning sentient code.
+
+---
+
+**Happy Conjuring!** ✨
