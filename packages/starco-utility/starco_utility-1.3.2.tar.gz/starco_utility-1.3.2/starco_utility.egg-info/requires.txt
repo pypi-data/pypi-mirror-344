@@ -1,0 +1,10 @@
+cryptography
+psutil
+requests[socks]
+python-socks
+easy-db==0.9.15
+jdatetime
+deep-translator
+colorama
+aiohttp
+paramiko
