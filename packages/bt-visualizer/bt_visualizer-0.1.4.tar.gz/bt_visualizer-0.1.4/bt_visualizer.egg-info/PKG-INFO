@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: bt-visualizer
+Version: 0.1.4
+Summary: Backtest visualization widget for JupyterLab
+Author: Your Name
+Author-email: Ali Gheshlaghi <aliigheshlaghi97@email.com>
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: anywidget
+Requires-Dist: traitlets
+Requires-Dist: IPython
