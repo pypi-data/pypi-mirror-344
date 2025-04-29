@@ -1,0 +1,2 @@
+[console_scripts]
+shipzo_plus = shipzo_plus.plus:main
