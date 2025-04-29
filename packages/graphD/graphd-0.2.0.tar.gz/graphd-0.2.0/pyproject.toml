@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphD"
+version = "0.2.0"
+authors = [
+  { name="ghwst-point", email="pocox6prohypeee@gmail.com" }, # TODO: Update with your details
+]
+description = "A Python library for drawing graphs from scratch."
+readme = "README.md"
+requires-python = ">=3.7" # Specify your target Python versions
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+# Add dependencies here if your library needs any external packages
+# dependencies = [
+#     "numpy>=1.20",
+# ]
+
+[project.urls]
+"Homepage" = "https://github.com/ghwst-point/graphD" # TODO: Update URL
+"Bug Tracker" = "https://github.com/ghwst-point/graphD/issues" # TODO: Update URL 

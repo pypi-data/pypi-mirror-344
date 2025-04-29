@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+graphD/__init__.py
+graphD/animation.py
+graphD/core.py
+graphD/interactive.py
+graphD/renderer.py
+graphD/stats.py
+graphD/subplot.py
+graphD/visualizations.py
+graphD.egg-info/PKG-INFO
+graphD.egg-info/SOURCES.txt
+graphD.egg-info/dependency_links.txt
+graphD.egg-info/top_level.txt
