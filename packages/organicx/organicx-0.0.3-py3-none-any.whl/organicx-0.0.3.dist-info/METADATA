@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: organicx
+Version: 0.0.3
+Summary: A simple package for example.
+Author-email: Mustafa Kılıç <klcm51@gmail.com>
+Project-URL: Homepage, https://github.com/kilic-mustafa/organicx
+Keywords: mustafa,kilic
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+This is a test package for the PyPi tutorial.
