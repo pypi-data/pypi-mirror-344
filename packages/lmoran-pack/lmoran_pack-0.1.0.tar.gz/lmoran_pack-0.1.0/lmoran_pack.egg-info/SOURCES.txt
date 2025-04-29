@@ -1,0 +1,5 @@
+setup.py
+lmoran_pack.egg-info/PKG-INFO
+lmoran_pack.egg-info/SOURCES.txt
+lmoran_pack.egg-info/dependency_links.txt
+lmoran_pack.egg-info/top_level.txt
