@@ -1,0 +1,23 @@
+[project]
+name = "nyt-leaderboard-scraper"
+version = "0.0.1"
+authors = [
+  { name="Rampiggy", email="pypi@rocket.simplelogin.com" },
+]
+description = "A package to scrape the current NYT Mini Leaderboard."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+keywords = ["nyt", "leaderboard", "scraper", "nyt leaderboard", "nyt scraper", "leaderboard scraper", "nyt leaderboard scraper", "nyt-leaderboard", "nyt-scraper", "leaderboard-scraper", "nyt-leaderboard-scraper"]
+
+[project.urls]
+Homepage = "https://github.com/Rampiggy/nyt-leaderboard-scraper"
+Issues = "https://github.com/Rampiggy/nyt-leaderboard-scraper/issues"
+
+[tool.black]
+line-length = 100

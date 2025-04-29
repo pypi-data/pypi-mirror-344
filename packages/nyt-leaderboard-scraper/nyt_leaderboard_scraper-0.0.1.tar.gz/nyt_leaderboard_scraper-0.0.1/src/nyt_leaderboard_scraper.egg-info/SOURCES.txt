@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+pyproject.toml
+src/__init__.py
+src/nyt_leaderboard_scraper/score.py
+src/nyt_leaderboard_scraper/scraper.py
+src/nyt_leaderboard_scraper.egg-info/PKG-INFO
+src/nyt_leaderboard_scraper.egg-info/SOURCES.txt
+src/nyt_leaderboard_scraper.egg-info/dependency_links.txt
+src/nyt_leaderboard_scraper.egg-info/top_level.txt
+tests/test_scraper.py
