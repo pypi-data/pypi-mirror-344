@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: geocolor
+Version: 0.0.2
+Summary: A package for mapping colors
+Author-email: BH Z <zbhgisrs@gmail.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/zbhgis/geocolor
+Keywords: geocolor
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: all
+Requires-Dist: geocolor[extra]; extra == "all"
+Provides-Extra: extra
+Requires-Dist: pandas; extra == "extra"
+Dynamic: license-file
+
+# geocolor
+
+[![image](https://img.shields.io/pypi/v/geocolor.svg)](https://pypi.python.org/pypi/geocolor)
+[![image](https://img.shields.io/conda/vn/conda-forge/geocolor.svg)](https://anaconda.org/conda-forge/geocolor)
+
+**A package for mapping colors**
+
+-   Free software: MIT License
+-   Documentation: https://zbhgis.github.io/geocolor
+
+## Features
+
+-   tool for GIS
