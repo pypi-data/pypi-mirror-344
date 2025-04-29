@@ -1,0 +1,6 @@
+LICENSE
+setup.py
+autoprocessor.egg-info/PKG-INFO
+autoprocessor.egg-info/SOURCES.txt
+autoprocessor.egg-info/dependency_links.txt
+autoprocessor.egg-info/top_level.txt
