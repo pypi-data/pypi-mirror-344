@@ -1,0 +1,2 @@
+[console_scripts]
+autodan = autodan.core:AutoDAN.run
