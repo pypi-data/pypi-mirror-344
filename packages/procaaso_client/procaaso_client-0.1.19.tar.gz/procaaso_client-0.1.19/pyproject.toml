@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "procaaso_client"
+version = "0.1.19"
+description = ""
+authors = ["Procaaso <bsmith_devops@outlook.com>"]
+readme = "README.md"
+
+packages = [{include = "procaaso_client"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+httpx = {extras = ["http2"], version = "^0.28.1"}
+procaaso-log = "^0.3.2"
+httpcore = {extras = ["asyncio"], version = "^1.0.3"}
+exceptiongroup = "^1.2.0"
+
+[[tool.poetry.source]]
+name = "production"
+url = "https://paracloud-230177812114.d.codeartifact.us-west-2.amazonaws.com/pypi/production/simple"
+default = false
+secondary = true
+
+[[tool.poetry.source]]
+name = "production_publish"
+url = "https://paracloud-230177812114.d.codeartifact.us-west-2.amazonaws.com/pypi/production/"
+default = false
+secondary = true
+
+
+[[tool.poetry.source]]
+name = "public_publish"
+url = "https://paracloud-230177812114.d.codeartifact.us-west-2.amazonaws.com/pypi/public/"
+default = false
+secondary = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
