@@ -1,0 +1,30 @@
+[project]
+name = "pytroll-runner"
+dynamic = ["version"]
+dependencies = ["posttroll>=1.10.0"]
+
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2", 'setuptools_scm_git_archive']
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+# write_to = "pytroll-runner/version.py"
+
+[project.scripts]
+pytroll-runner = "pytroll_runner:main"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.3.5",
+]
+
+[tool.ruff]
+lint.select = ["E", "W", "F", "I", "D", "S", "B", "A", "PT", "Q", "TID"]
+lint.ignore = ["B905"]  # only available from python 3.10
+line-length = 120
+
+[tool.ruff.lint.per-file-ignores]
+"pytroll_runner/tests/*" = ["S101"]  # assert allowed in tests
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

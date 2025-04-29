@@ -1,0 +1,4 @@
+posttroll>=1.10.0
+
+[test]
+pytest>=8.3.5
