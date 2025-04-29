@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: polygon-reader
+Version: 0.1.0
+Summary: A simple package to read financial data from Polygon.io
+Project-URL: Homepage, https://github.com/igorrivin/polygon-reader
+Author-email: Igor Rivin <igor@dimensionreducers.com>
+License: MIT
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: loguru>=0.6.0
+Requires-Dist: numpy>=1.23.0
+Requires-Dist: pandas-market-calendars>=4.0.0
+Requires-Dist: pandas>=1.5.0
+Requires-Dist: polygon-api-client>=1.0.0
+Requires-Dist: python-dateutil>=2.8.0
+Requires-Dist: requests>=2.25.1
+Description-Content-Type: text/markdown
+
+### Reading polygon data
+## You must bring your own polygon.io api key
+
+I have been using high frequency polygon data, and it is useful to have this script both for sectioning and for skipping holidays.
+
