@@ -1,0 +1,24 @@
+# config.toml
+
+[models]
+summary_server = "qwq:32b"
+
+[servers]
+summary_server_host = "http://192.168.109.217:11434"
+summary_server_color = "light-pink"
+
+[[response_servers]]
+host = "http://192.168.109.227:11434"
+model = "granite3.3:latest"
+color = "light-blue"
+
+[[response_servers]]
+host = "http://192.168.109.218:11434"
+model = "aya-expanse:latest"
+color = "green"
+
+[[response_servers]]
+host = "http://192.168.109.222:11434"
+model = "mistral-small3.1:latest"
+color = "gold"
+
