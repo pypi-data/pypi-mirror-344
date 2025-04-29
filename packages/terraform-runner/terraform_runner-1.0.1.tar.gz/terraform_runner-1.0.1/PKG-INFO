@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: terraform-runner
+Version: 1.0.1
+Summary: A Terraform automation runner for AI-driven cloud deployments.
+Home-page: https://github.com/monsterindian/gaigentic-infra
+Author: ctogaigenticai
+Author-email: cto@gaigentic.ai
+Project-URL: Bug Tracker, https://github.com/monsterindian/gaigentic-infra/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+A Python package to automate Terraform deployment workflows for agents and cloud services.
