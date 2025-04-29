@@ -1,0 +1,9 @@
+lightpdf_aipdf_mcp/__init__.py,sha256=PPnAgpvJLYLVOTxnHDmJAulFnHJD6wuTwS6tRGjqq6s,141
+lightpdf_aipdf_mcp/common.py,sha256=_UO1f6S9Qr_3k6u5iBpdVDpvTK5U-tHEpu9KsDGqV8Y,6635
+lightpdf_aipdf_mcp/converter.py,sha256=VUQ03z93KjVFd0ZXpqoptGKOobWTtHEPtKSvy6aen58,14605
+lightpdf_aipdf_mcp/editor.py,sha256=jVYksqO68o-7jIiH93rkbL4roIg_ps3Gnewl3NtsLvQ,26788
+lightpdf_aipdf_mcp/server.py,sha256=gVu99QUN-9impuOMQnAfkBVtAaFF3lIsZuutb8pqVls,47395
+lightpdf_aipdf_mcp-0.1.79.dist-info/METADATA,sha256=t81D_1PK3DShdSJ4Yl6637KWHoX3buUPSPsgtmVcrXY,8119
+lightpdf_aipdf_mcp-0.1.79.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+lightpdf_aipdf_mcp-0.1.79.dist-info/entry_points.txt,sha256=X7TGUe52N4sYH-tYt0YUGApeJgw-efQlZA6uAZmlmr4,63
+lightpdf_aipdf_mcp-0.1.79.dist-info/RECORD,,
