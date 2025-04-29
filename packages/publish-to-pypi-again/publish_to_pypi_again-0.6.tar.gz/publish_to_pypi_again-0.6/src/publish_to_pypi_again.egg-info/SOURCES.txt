@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+src/publish_to_pypi_again/__init__.py
+src/publish_to_pypi_again.egg-info/PKG-INFO
+src/publish_to_pypi_again.egg-info/SOURCES.txt
+src/publish_to_pypi_again.egg-info/dependency_links.txt
+src/publish_to_pypi_again.egg-info/requires.txt
+src/publish_to_pypi_again.egg-info/top_level.txt
+src/publish_to_pypi_again/example/__init__.py
+src/publish_to_pypi_again/example/custom_numpy.py

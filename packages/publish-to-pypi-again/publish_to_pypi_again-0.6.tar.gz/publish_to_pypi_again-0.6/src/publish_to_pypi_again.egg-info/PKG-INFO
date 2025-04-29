@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: publish_to_pypi_again
+Version: 0.6
+Author: SpiralTrain
+Author-email: spiraltrain@gmail.com
+License: MIT
+Keywords: example project
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
