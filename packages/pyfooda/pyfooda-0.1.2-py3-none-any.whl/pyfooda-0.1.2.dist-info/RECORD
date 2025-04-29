@@ -1,0 +1,12 @@
+pyfooda/VERSION,sha256=VKRsZExOtvEo-Z9_CENJGGF7MbaAUi7UrLV8lCQ3KCc,5
+pyfooda/__init__.py,sha256=nZ660sfJXEUXcHbtKiqqPZrRUNtX_9HRicTdXhzfccA,200
+pyfooda/api.py,sha256=oppzpVWi7EIx_7zfcKCoUlw8XbWmRZDTBVaLkbe1YtU,2517
+pyfooda/myplot.py,sha256=QfHwz2fdpLpHTv3Q328em5T7hmrNEoT2Y8sdEEjDpQI,1734
+pyfooda/nutrients_drv.py,sha256=LRyCOz7AYhRrsIDkGRPeowFM2qjyuX_q_rBGpVhdPgw,5319
+pyfooda/preprocess_pandas.py,sha256=whKBbXNJ3UcJOuPviYy4ZlW_DXJtNyokz6NHS5jnYJs,4570
+pyfooda/data/fooddata.csv,sha256=dGVgcwW1VehHcnBRyqlinufAo2OZaLz9rXIvR-9zdb8,47893852
+pyfooda/data/nutrients.csv,sha256=S28VN-dngqrqeOEq-Bswk_7SURtgVUtyWmjwGIdGBUQ,1810
+pyfooda-0.1.2.dist-info/METADATA,sha256=cKFy3H_yIgiFTnkK4K-GgWXWVPmmzInwII2g40fKagc,3346
+pyfooda-0.1.2.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+pyfooda-0.1.2.dist-info/top_level.txt,sha256=XEv1lC0vOmTar2eTwRgjEl53XIHQLQfwM29XVfNrFko,8
+pyfooda-0.1.2.dist-info/RECORD,,
