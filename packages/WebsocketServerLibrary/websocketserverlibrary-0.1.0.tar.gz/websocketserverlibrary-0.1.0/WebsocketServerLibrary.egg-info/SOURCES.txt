@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+WebsocketServer/CLI.py
+WebsocketServer/WebsocketServer.py
+WebsocketServer/__init__.py
+WebsocketServerLibrary.egg-info/PKG-INFO
+WebsocketServerLibrary.egg-info/SOURCES.txt
+WebsocketServerLibrary.egg-info/dependency_links.txt
+WebsocketServerLibrary.egg-info/top_level.txt

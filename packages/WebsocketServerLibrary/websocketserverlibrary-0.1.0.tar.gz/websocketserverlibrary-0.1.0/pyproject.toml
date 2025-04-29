@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "WebsocketServerLibrary"
+version = "0.1.0"
+description = "A websocket server interface. Easy to use."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+  { name="Erri4" }
+]
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/erri4/WebsocketServer"
+"Bug Tracker" = "https://github.com/erri4/WebsocketServer/issues"
