@@ -1,0 +1,87 @@
+[project]
+name = "blackwall"
+description = "Blackwall Protocol for mainframe security administration"
+dynamic = ["version"]
+requires-python = ">=3.12"
+dependencies = [
+  "racfu==1.0a1",
+  "textual>=3.1.1",
+]
+authors = [
+  {name = "Emma Skovgaard"},
+  {name = "Karoline Halberg Rasmussen"}
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["RACF", "security", "mainframe", "zos", "TUI", "RACFu", "ESM"]
+
+classifiers = [    
+  #Application audience and type
+  "Topic :: Security",
+
+  #Status
+  "Development Status :: 3 - Alpha",
+
+  #Application environment
+  "Environment :: Console",
+
+  #Supported python versions
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13"
+]
+
+[project.optional-dependencies]
+images = [
+  "qrcode>=8.1",
+  "textual-image>=0.8.2",
+]
+
+[project.scripts]
+blackwall = "blackwall.main:main"
+
+[project.urls]
+Repository = "https://github.com/EmmasBox/blackwall-protocol"
+Source = "https://github.com/EmmasBox/blackwall-protocol"
+Issues = "https://github.com/EmmasBox/blackwall-protocol/issues"
+Pypi = "https://pypi.org/project/blackwall/"
+Documentation = "https://emmasbox.github.io/blackwall-protocol-docs/"
+
+[build-system]
+requires = ["setuptools >= 61.0", "setuptools-scm >= 8.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[tool.setuptools.package-data]
+blackwall = ["*.css", "*.tcss", "*.md", "*.png"]
+
+[tool.bandit]
+exclude_dirs = [".github"]
+
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".git",
+]
+
+[tool.ruff.lint]
+select = [
+  "E", 
+  "F", 
+  "B", 
+  "EM", 
+  "SIM", 
+  "PTH", #Must use pathlib instead of os
+  "N", 
+  "PLE", 
+  "UP", 
+  "TRY", 
+  "FLY", 
+  "I", 
+  "COM", 
+  "A", 
+  "C4"
+  ]
+
+# Avoid enforcing line-length violations (`E501`)
+ignore = ["E501"]
