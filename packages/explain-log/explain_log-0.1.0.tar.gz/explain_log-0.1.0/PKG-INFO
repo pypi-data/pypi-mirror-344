@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: explain-log
+Version: 0.1.0
+Summary: CLI tool to explain logs using OpenAI
+Author: Your Name
+Keywords: cli devops logs openai explanation
+Requires-Python: >=3.8
+Requires-Dist: openai
+Requires-Dist: click
+Requires-Dist: rich
+Requires-Dist: python-dotenv
+Dynamic: author
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

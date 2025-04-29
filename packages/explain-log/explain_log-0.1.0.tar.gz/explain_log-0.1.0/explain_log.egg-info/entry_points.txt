@@ -1,0 +1,2 @@
+[console_scripts]
+explain-log = explain_log.main:cli
