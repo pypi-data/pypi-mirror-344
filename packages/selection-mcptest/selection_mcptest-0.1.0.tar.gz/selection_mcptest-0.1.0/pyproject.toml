@@ -1,0 +1,19 @@
+[project]
+name = "selection_mcptest"
+version = "0.1.0"
+description = "测试mcp上传用项目"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp>=1.6.0",
+]
+
+[project.scripts]
+mcptest = "mcp_server.server:main"
+
+[tool.setuptools]
+include-package-data = true
+packages = {find = {where = ["src"]}}
+
+[tool.setuptools.package-data]
+mcptest = ["*.env"]
