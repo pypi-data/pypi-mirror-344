@@ -1,0 +1,2 @@
+aratinga
+wagtail=={{wagtail_release.0}}.{{wagtail_release.1}}.*
