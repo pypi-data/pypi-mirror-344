@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: dmrid_lookup
+Version: 1.0.14
+Summary: A Python package for looking up DMR IDs from radioid.net
+Home-page: https://github.com/k6ef/dmrid_lookup
+Author: Mark Cohen
+Author-email: k6ef@k6ef.net
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: rich>=10.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# DMRID Lookup 📡 for amateur radio
+
+A lightweight command-line tool to lookup DMR IDs for amateur radio callsigns using [radioid.net](https://www.radioid.net/).
+
+## Features
+
+- 🔎 Lookup one or more callsigns
+- 📋 Pretty table output with `--pretty`
+- 📂 Save results to CSV with `--save filename.csv`
+- Added --id lookup
+
+## Installation
+
+```bash
+pip install dmrid-lookup
+
