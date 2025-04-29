@@ -1,0 +1,17 @@
+name: log-reporting
+
+services:
+  log-reporting:
+    build:
+      context: ../../
+      dockerfile: deployments/dev/log-reporting/Dockerfile
+      tags:
+        - "log-reporting:dev"
+    container_name: log-reporting
+    volumes:
+      - ../..:/app
+      - log-reporting-data:/run/app
+    command: bash
+
+volumes:
+  log-reporting-data: null
