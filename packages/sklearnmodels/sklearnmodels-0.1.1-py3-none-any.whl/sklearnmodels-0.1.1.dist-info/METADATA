@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: sklearnmodels
+Version: 0.1.1
+Summary: Extra models for scikit-learn
+Author-email: Facundo Manuel Quiroga <{first_name}{last_name_initial}@gmail.com>
+Project-URL: Homepage, https://github.com/facundoq/sklearnmodels
+Project-URL: Bug Reports, https://github.com/facundoq/sklearnmodels/issues
+Project-URL: Source, https://github.com/facundoq/sklearnmodels
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=2.2.0
+Requires-Dist: matplotlib>=3.10.0
+Requires-Dist: graphviz>=0.20.3
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: scikit-learn>=1.6.1
+Requires-Dist: data-science-types>=0.2.23
+Requires-Dist: pytest>=8.3.5
+Requires-Dist: pygraphviz>=1.14
+Dynamic: license-file
+
+# scikit-learn-models
+Extra models for scikit-learn, including Decision/Regression Trees with support for nominal values
