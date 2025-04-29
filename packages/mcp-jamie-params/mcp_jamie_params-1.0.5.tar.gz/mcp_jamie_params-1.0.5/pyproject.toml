@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-jamie-params"
+version = "1.0.5"
+description = "数据类型中文翻译器"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp>=1.6.0",
+    "requests>=2.32.3",
+]
+
+[project.scripts]
+mcp-jamie-params = "mcp_jamie_params.server:main"
