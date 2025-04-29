@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: netcrackr
+Version: 1.0.2
+Summary: Network live monitor with ping, speedtest, and traceroute
+Author: Eytin
+Requires-Python: >=3.7
+Requires-Dist: speedtest-cli
+Requires-Dist: rich
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
