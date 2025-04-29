@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/test_mcp_oranges/__init__.py
+src/test_mcp_oranges/server.py
+src/test_mcp_oranges.egg-info/PKG-INFO
+src/test_mcp_oranges.egg-info/SOURCES.txt
+src/test_mcp_oranges.egg-info/dependency_links.txt
+src/test_mcp_oranges.egg-info/entry_points.txt
+src/test_mcp_oranges.egg-info/requires.txt
+src/test_mcp_oranges.egg-info/top_level.txt

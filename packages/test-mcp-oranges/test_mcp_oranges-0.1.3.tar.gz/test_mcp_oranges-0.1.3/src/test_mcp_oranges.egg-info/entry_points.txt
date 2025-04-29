@@ -1,0 +1,2 @@
+[console_scripts]
+test-mcp-oranges = test_mcp_oranges.server:main

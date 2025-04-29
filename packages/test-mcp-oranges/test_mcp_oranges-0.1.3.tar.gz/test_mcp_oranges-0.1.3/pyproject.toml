@@ -1,0 +1,25 @@
+[project]
+name = "test-mcp-oranges"
+version = "0.1.3"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.6.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+test-mcp-oranges= "test_mcp_oranges.server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true
