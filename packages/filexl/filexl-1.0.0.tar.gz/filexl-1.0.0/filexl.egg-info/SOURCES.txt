@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+filexl/__init__.py
+filexl/cli.py
+filexl.egg-info/PKG-INFO
+filexl.egg-info/SOURCES.txt
+filexl.egg-info/dependency_links.txt
+filexl.egg-info/entry_points.txt
+filexl.egg-info/requires.txt
+filexl.egg-info/top_level.txt
