@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "exutils"          # ⚡ PyPI包名
+version = "0.1.0"
+description = "Common Python utilities, including exception catching decorator."
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+authors = [
+  {name = "Tsinling", email = "449598613@qq.com"}
+]
+dependencies = [
+  "pandas>=2.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/tsinling/exutils"
