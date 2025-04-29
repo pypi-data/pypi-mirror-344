@@ -1,0 +1,16 @@
+# nc files
+*.nc
+
+# png files
+*.png
+
+# out files
+*.out
+
+# cache
+.pytest_cache
+__pycache__
+.ruff_cache/
+
+# files created when using mount
+**/._*
