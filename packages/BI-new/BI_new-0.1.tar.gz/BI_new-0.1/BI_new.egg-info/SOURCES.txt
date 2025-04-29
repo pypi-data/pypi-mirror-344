@@ -1,0 +1,10 @@
+setup.py
+BI_new.egg-info/PKG-INFO
+BI_new.egg-info/SOURCES.txt
+BI_new.egg-info/dependency_links.txt
+BI_new.egg-info/requires.txt
+BI_new.egg-info/top_level.txt
+BI_p/__init__.py
+BI_p/bi2.py
+BI_p/bi5.py
+BI_p/bi6.py
