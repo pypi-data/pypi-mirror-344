@@ -1,0 +1,2 @@
+[console_scripts]
+netcrackr = netcrackr.main:cli
