@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: uoishelpers
+Version: 1.4.2
+Summary: A short description of your package
+Home-page: https://github.com/hrbolek/uoishelpers
+Author: Profesor Hrbolek
+Author-email: profesor@Hrbolek.cz
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Database
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: numpy
+Dynamic: license-file
+
+# Library for usefull utitilies use in _uois
+
+pytest --cov-report term-missing --cov=uoishelpers tests
