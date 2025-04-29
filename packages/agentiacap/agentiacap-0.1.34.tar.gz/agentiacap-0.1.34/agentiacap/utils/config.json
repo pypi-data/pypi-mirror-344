@@ -1,0 +1,97 @@
+{
+    "categories": [
+        {
+            "Categoría": "Alta de usuario",
+            "Descripción": "Se suele pedir explícitamente en el asunto o en el cuerpo del mail. Sujeto a palabras claves dentro del contexto de la generación o gestión de un nuevo usuario."
+        },
+        {
+            "Categoría": "Error de registración",
+            "Descripción": "El reclamo siempre es por fechas de vencimiento mal aplicadas. Sujeto al contexto en que el proveedor reclama una mala asignación de la fecha de vencimiento de su factura en el sistema."
+        },
+        {
+            "Categoría": "Impresión de NC/ND",
+            "Descripción": "Ahora se llama “Multas”. Sujeto a palabras clave relacionadas con Multas. Sujeto al contexto en que se reclama o consulta por diferencias en el pago."
+        },
+        {
+            "Categoría": "Impresión de OP y/o Retenciones",
+            "Descripción": "Suele ser una solicitud o pedido de órdenes de pago (OP) o retenciones. Suele estar explícito en el asunto o en el cuerpo del mail un mensaje pidiendo retenciones/OP."
+        },
+        {
+            "Categoría": "Pedido devolución retenciones",
+            "Descripción": "Suele estar explícito en el asunto o cuerpo del mail. Sujeto a palabras clave relacionadas con una devolución o reintegro de una retención. También se suele hacer mención con frecuencia que se envía una nota o se adjunta una nota solicitando a la devolución del monto retenido."
+        },
+        {
+            "Categoría": "Problemas de acceso",
+            "Descripción": "Sujeto al contexto en que se reclama por no poder acceder a facturar u obtener información de una factura. No se solicita información de una factura solo se reclama el acceso al sistema."
+        },
+        {
+            "Categoría": "Otras consultas",
+            "Descripción": "Consultas generales que no encajan en ninguna de las categorías."
+        },
+        {
+            "Categoría": "Estado de facturas",
+            "Descripción": "Consultas sobre estado de facturas, facturas pendientes, facturas vencidas, facturas impagas, facturas no cobradas, facturas rechazadas (o que se haga alguna mención a algún tipo de rechazo) o que puede estar rechazadas. Sujeto a contexto en que se pide motivo del rechazo de una factura, validar el estado de presentación de una factura para saber si se encuentra bien cargada o aún no se efectuó este paso."
+        },
+        {
+            "Categoría": "Estado de cuenta",
+            "Descripción": "Se consulta y/o informa el estado de la cuenta para conocer deudas o saldos a favor."
+        }
+    ],
+    "fields_to_extract": [
+        "VendorName",
+        "CustomerName",
+        "CustomerTaxId",
+        "CustomerCodSap",
+        "VendorTaxId",
+        "CustomerAddress",
+        "InvoiceId",
+        "InvoiceDate",
+        "InvoiceTotal",
+        "PurchaseOrderNumber",
+        "Signed"
+    ],
+    "lista_sociedades": [
+        {
+            "Nombre Soc SAP": "",
+            "Código SAP": "",
+            "Estado": "",
+            "CUIT": "",
+            "Nombre en AFIP": ""
+        },
+        {
+            "Nombre Soc SAP": "A - EVANGELISTA S.A.",
+            "Código SAP": "478",
+            "Estado": "Activa",
+            "CUIT": "30685218190",
+            "Nombre en AFIP": "A EVANGELISTA S A"
+        },
+        {
+            "Nombre Soc SAP": "AESA",
+            "Código SAP": "478",
+            "Estado": "Activa",
+            "CUIT": "30685218190",
+            "Nombre en AFIP": "A EVANGELISTA S A"
+        },
+        {
+            "Nombre Soc SAP": "YPF GAS SOCIEDAD ANONIMA",
+            "Código SAP": "522",
+            "Estado": "Activa",
+            "CUIT": "30515488479",
+            "Nombre en AFIP": "YPF GAS SOCIEDAD ANONIMA"
+        },
+        {
+            "Nombre Soc SAP": "YACIMIENTO LA VENTANA YPF S.A.",
+            "Código SAP": "571",
+            "Estado": "Activa",
+            "CUIT": "30652671418",
+            "Nombre en AFIP": "YACIMIENTO LA VENTANA YPF SA SINOPEC ARGENTINA EXPLORATION AND PRODUCTION INC UTE"
+        },
+        {
+            "Nombre Soc SAP": "YPF SA IATE SA UTE",
+            "Código SAP": "575",
+            "Estado": "Activa",
+            "CUIT": "30656820477",
+            "Nombre en AFIP": "YPF S.A IATE S.A UTE"
+        }
+    ]
+}
