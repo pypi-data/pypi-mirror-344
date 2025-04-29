@@ -1,0 +1,50 @@
+pillow>=9.0.0
+PyPDF2>=2.0.0
+mutagen>=1.45.0
+colorama>=0.4.4
+tabulate>=0.8.9
+tqdm>=4.62.0
+exifread>=2.3.2
+cryptography>=35.0.0
+
+[:platform_system != "Windows"]
+python-magic>=0.4.24
+
+[:platform_system == "Windows"]
+python-magic-bin>=0.4.14
+
+[document]
+python-docx>=0.8.11
+openpyxl>=3.0.7
+olefile>=0.46
+
+[executable]
+
+[executable:platform_system != "Windows"]
+pyelftools>=0.27
+
+[executable:platform_system == "Darwin"]
+macholib>=1.15.2
+
+[executable:platform_system == "Windows"]
+pefile>=2021.5.24
+
+[full]
+python-docx>=0.8.11
+openpyxl>=3.0.7
+olefile>=0.46
+yara-python>=4.1.0
+ssdeep>=3.4
+
+[full:platform_system != "Windows"]
+pyelftools>=0.27
+
+[full:platform_system == "Darwin"]
+macholib>=1.15.2
+
+[full:platform_system == "Windows"]
+pefile>=2021.5.24
+
+[security]
+yara-python>=4.1.0
+ssdeep>=3.4
