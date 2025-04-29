@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_encoders.py
+tests/test_vfsstore.py
+vectorvfs/__init__.py
+vectorvfs/cli.py
+vectorvfs/encoders.py
+vectorvfs/utils.py
+vectorvfs/vfsstore.py
+vectorvfs.egg-info/PKG-INFO
+vectorvfs.egg-info/SOURCES.txt
+vectorvfs.egg-info/dependency_links.txt
+vectorvfs.egg-info/entry_points.txt
+vectorvfs.egg-info/requires.txt
+vectorvfs.egg-info/top_level.txt

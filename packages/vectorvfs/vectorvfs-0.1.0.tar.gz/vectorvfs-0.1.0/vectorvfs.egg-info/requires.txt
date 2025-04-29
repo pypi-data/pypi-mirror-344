@@ -1,0 +1,9 @@
+click>=8.1.8
+perception-models
+pillow>=11.0.0
+rich>=14.0.0
+torch==2.5.1
+torchaudio==2.5.1
+torchcodec==0.1
+torchvision==0.20.1
+xformers>=0.0.29.post1
