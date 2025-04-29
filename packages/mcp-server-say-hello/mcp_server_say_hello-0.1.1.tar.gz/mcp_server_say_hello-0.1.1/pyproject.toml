@@ -1,0 +1,28 @@
+[project]
+name = "mcp_server_say_hello"
+version = "0.1.1"
+description = "MCP greeting service implementation in Python"
+authors = [
+    {name = "Bright Lin", email = "xiao89hui@qq.com"}
+]
+license = "MIT"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries"
+]
+maintainers = [
+    {name = "Bright Lin", email = "xiao89hui@qq.com"}
+]
+urls = {homepage = "https://github.com/BrightLin/mcp-server-say-hello-py", documentation = "https://github.com/BrightLin/mcp-server-say-hello-py", repository = "https://github.com/BrightLin/mcp-server-say-hello-py"}
+dynamic = ["scripts"]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic"
+]
+
+[build-system]
+requires = ["setuptools>=80.0", "wheel"]
+build-backend = "setuptools.build_meta"
