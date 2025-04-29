@@ -1,0 +1,5 @@
+[console_scripts]
+httpfpt = httpfpt.cli:cappa_invoke
+
+[gui_scripts]
+
