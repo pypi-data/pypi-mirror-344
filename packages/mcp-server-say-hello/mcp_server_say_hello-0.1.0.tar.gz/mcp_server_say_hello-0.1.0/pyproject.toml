@@ -1,0 +1,16 @@
+[project]
+name = "mcp_server_say_hello"
+version = "0.1.0"
+description = "MCP greeting service implementation in Python"
+license = "MIT"
+requires-python = ">=3.9"
+dynamic = ["scripts"]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic"
+]
+
+[build-system]
+requires = ["setuptools>=80.0", "wheel"]
+build-backend = "setuptools.build_meta"
