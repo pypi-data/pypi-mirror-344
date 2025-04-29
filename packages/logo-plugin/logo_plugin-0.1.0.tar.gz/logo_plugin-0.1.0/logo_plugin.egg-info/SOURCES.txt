@@ -1,0 +1,11 @@
+README.md
+setup.py
+logo_plugin/__init__.py
+logo_plugin/config.py
+logo_plugin/service.py
+logo_plugin.egg-info/PKG-INFO
+logo_plugin.egg-info/SOURCES.txt
+logo_plugin.egg-info/dependency_links.txt
+logo_plugin.egg-info/entry_points.txt
+logo_plugin.egg-info/requires.txt
+logo_plugin.egg-info/top_level.txt
