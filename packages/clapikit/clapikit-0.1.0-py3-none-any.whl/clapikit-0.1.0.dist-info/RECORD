@@ -1,0 +1,9 @@
+clapikit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clapikit/cli.py,sha256=iAIF-LvlIA-_u-aKMK-06SHTvmJE5K0gP53vAzi_Qi8,7632
+clapikit/client.py,sha256=s0GtTirJmOXu5WqORY7VSE5ehoNO8b9l_kd0Bgy8Yiw,824
+clapikit/parser.py,sha256=kIqWMFx7afF1iP1RrjiyZw5I00SjuK2IogoZhFTgpFo,3841
+clapikit-0.1.0.dist-info/METADATA,sha256=TH_WrKEwK6NBSD-_M_jzgaKmfD962QoOxinjDfr09sU,2488
+clapikit-0.1.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+clapikit-0.1.0.dist-info/entry_points.txt,sha256=2Xyyho443eRpFqNJAhjPC-SIzLplHUu0yK1XJ_YZLY8,47
+clapikit-0.1.0.dist-info/top_level.txt,sha256=_dAmVztqiY9vzUSB-kiqLihKmQfgb1rV8QvezKHWL7g,9
+clapikit-0.1.0.dist-info/RECORD,,
