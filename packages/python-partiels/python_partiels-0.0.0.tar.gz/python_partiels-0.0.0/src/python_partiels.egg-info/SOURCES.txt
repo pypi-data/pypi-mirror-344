@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/python_partiels/__init__.py
+src/python_partiels/xml.py
+src/python_partiels.egg-info/PKG-INFO
+src/python_partiels.egg-info/SOURCES.txt
+src/python_partiels.egg-info/dependency_links.txt
+src/python_partiels.egg-info/requires.txt
+src/python_partiels.egg-info/top_level.txt
+src/python_partiels/templates/spectrogram.ptldoc
+tests/test_export.py

@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: python-partiels
+Version: 0.0.0
+Summary: A Python wrapper for Partiels
+Author-email: Thomas barbé <thomas-barbe@hotmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/totolabrico/python-partiels
+Project-URL: Issues, https://github.com/totolabrico/python-partiels/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: lxml>=5.4.0
+Dynamic: license-file
+
+# Python wrapper for Partiels
+
+The wrapper use subprocess to access Partiels's Command Line Interface.
+
+[The Partiels Github page](https://github.com/Ircam-Partiels)
