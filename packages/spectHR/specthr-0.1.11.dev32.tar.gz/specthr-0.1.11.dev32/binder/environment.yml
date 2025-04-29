@@ -1,0 +1,22 @@
+name: spectHR
+channels:
+  - conda-forge
+  - anaconda
+dependencies:
+  - mamba
+  - ipython
+  - ipympl
+  - ipyvuetify
+  - ipywidgets
+  - jupyter
+  - jupyterlab
+  - matplotlib
+  - mplcursors
+  - numpy
+  - pandas
+  - python>=3.6
+  - pyxdf
+  - scipy
+  - pip:
+    - spectHR
+    - easywebdav
