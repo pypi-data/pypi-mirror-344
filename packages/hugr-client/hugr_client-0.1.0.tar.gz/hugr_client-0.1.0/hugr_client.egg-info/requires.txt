@@ -1,0 +1,10 @@
+requests
+pyarrow
+pandas
+geopandas
+shapely
+requests_toolbelt
+numpy
+shapely
+keplergl
+pydeck
