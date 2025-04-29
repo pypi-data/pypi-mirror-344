@@ -1,0 +1,2294 @@
+[
+    {
+        "type": "ClassChunk",
+        "name": "AdjustableDate",
+        "id": "lseg_analytics.common.AdjustableDate",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "date",
+                "type": "date"
+            },
+            {
+                "name": "date_moving_convention",
+                "type": "DateMovingConvention",
+                "valuelookup": "enum.DateMovingConvention"
+            },
+            {
+                "name": "calendars",
+                "type": "List[CalendarRelatedResource]"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 222,
+        "content": "class AdjustableDate:\n    \"\"\"AdjustableDate.\n\n    Attributes\n    ----------\n    date_moving_convention : str or ~analyticsapi.models.DateMovingConvention\n        The method to adjust dates to working days. The possible values are:\n        ModifiedFollowing: dates are adjusted to the next business day\n        convention unless it goes into the next month. In such case, the\n        previous business day convention is used, NextBusinessDay: dates are\n        moved to the following working day, PreviousBusinessDay: dates are\n        moved to the preceding working day, NoMoving: dates are not adjusted,\n        EveryThirdWednesday: dates are moved to the third Wednesday of the\n        month, or to the next working day if the third Wednesday is not a\n        working day, BbswModifiedFollowing: dates are adjusted to the next\n        business day convention unless it goes into the next month, or crosses\n        mid-month (15th). In such case, the previous business day convention is\n        used. Default is ModifiedFollowing. Known values are:\n        \"ModifiedFollowing\", \"NextBusinessDay\", \"PreviousBusinessDay\",\n        \"NoMoving\", \"EveryThirdWednesday\", and \"BbswModifiedFollowing\".\n    calendars : list[~analyticsapi.models.CalendarRelatedResource]\n        An array of calendars that should be used for the date adjustment.\n        Typically the calendars are derived based on the instruments currency\n        or crossCurrency code.\n    date_type : str or ~analyticsapi.models.ADJUSTABLE_DATE\n        Required.\n    date : ~datetime.date\n        The date that will be adjusted based on the dateMovingConvention.The\n        value is expressed in ISO 8601 format: YYYY-MM-DD (e.g. 2021-01-01).\n        Required.\n    \n    \"\"\"\n    date_type: typing.Literal[<DateType.ADJUSTABLE_DATE: 'AdjustableDate'>]\n    date_moving_convention: typing.Union[str, ForwardRef('_models.DateMovingConvention'), NoneType]\n    calendars: typing.Optional[typing.List[ForwardRef('_models.CalendarRelatedResource')]]\n    date: date",
+        "metadata": {
+            "doc": "AdjustableDate.\n\n    Attributes\n    ----------\n    date_moving_convention : str or ~analyticsapi.models.DateMovingConvention\n        The method to adjust dates to working days. The possible values are:\n        ModifiedFollowing: dates are adjusted to the next business day\n        convention unless it goes into the next month. In such case, the\n        previous business day convention is used, NextBusinessDay: dates are\n        moved to the following working day, PreviousBusinessDay: dates are\n        moved to the preceding working day, NoMoving: dates are not adjusted,\n        EveryThirdWednesday: dates are moved to the third Wednesday of the\n        month, or to the next working day if the third Wednesday is not a\n        working day, BbswModifiedFollowing: dates are adjusted to the next\n        business day convention unless it goes into the next month, or crosses\n        mid-month (15th). In such case, the previous business day convention is\n        used. Default is ModifiedFollowing. Known values are:\n        \"ModifiedFollowing\", \"NextBusinessDay\", \"PreviousBusinessDay\",\n        \"NoMoving\", \"EveryThirdWednesday\", and \"BbswModifiedFollowing\".\n    calendars : list[~analyticsapi.models.CalendarRelatedResource]\n        An array of calendars that should be used for the date adjustment.\n        Typically the calendars are derived based on the instruments currency\n        or crossCurrency code.\n    date_type : str or ~analyticsapi.models.ADJUSTABLE_DATE\n        Required.\n    date : ~datetime.date\n        The date that will be adjusted based on the dateMovingConvention.The\n        value is expressed in ISO 8601 format: YYYY-MM-DD (e.g. 2021-01-01).\n        Required.\n    \n",
+            "annotations": "    date_type: typing.Literal[<DateType.ADJUSTABLE_DATE: 'AdjustableDate'>]\n    date_moving_convention: typing.Union[str, ForwardRef('_models.DateMovingConvention'), NoneType]\n    calendars: typing.Optional[typing.List[ForwardRef('_models.CalendarRelatedResource')]]\n    date: date",
+            "signature": "class AdjustableDate:\n    \"\"\"\"\"\"\n    date_type: typing.Literal[<DateType.ADJUSTABLE_DATE: 'AdjustableDate'>]\n    date_moving_convention: typing.Union[str, ForwardRef('_models.DateMovingConvention'), NoneType]\n    calendars: typing.Optional[typing.List[ForwardRef('_models.CalendarRelatedResource')]]\n    date: date"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.AdjustableDate.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.DateMovingConvention",
+                "lseg_analytics.instruments.fx_forwards.CalendarRelatedResource"
+            ],
+            "base_classes": [
+                "lseg_analytics.common.Date"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "AdjustableDate.__init__",
+        "id": "lseg_analytics.common.AdjustableDate.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 278,
+        "content": "class AdjustableDate:\n    @overload\n    def __init__(self, *, date: datetime.date, date_moving_convention: Union[str, ForwardRef('_models.DateMovingConvention'), NoneType] = None, calendars: Optional[List[ForwardRef('_models.CalendarRelatedResource')]] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "AdjustableDate"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.AdjustableDate"
+            ],
+            "use": [
+                "lseg_analytics.common.DateMovingConvention",
+                "lseg_analytics.instruments.fx_forwards.CalendarRelatedResource"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "AdjustedDate",
+        "id": "lseg_analytics.common.AdjustedDate",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "un_adjusted",
+                "type": "date"
+            },
+            {
+                "name": "adjusted",
+                "type": "date"
+            },
+            {
+                "name": "date_moving_convention",
+                "type": "DateMovingConvention",
+                "valuelookup": "enum.DateMovingConvention"
+            },
+            {
+                "name": "reference_date",
+                "type": "ReferenceDate",
+                "valuelookup": "enum.ReferenceDate"
+            },
+            {
+                "name": "date",
+                "type": "date"
+            },
+            {
+                "name": "tenor",
+                "type": "str",
+                "valuelookup": "tenors"
+            },
+            {
+                "name": "processing_information",
+                "type": "str"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 284,
+        "content": "class AdjustedDate:\n    \"\"\"AdjustedDate.\n\n    Attributes\n    ----------\n    un_adjusted : ~datetime.date\n        The unadjusted date. The value is expressed in ISO 8601 format: YYYY-\n        MM-DD (e.g. 2021-01-01). Required.\n    adjusted : ~datetime.date\n        The date that has been adjusted based on the dateMovingConvention. The\n        value is expressed in ISO 8601 format: YYYY-MM-DD (e.g. 2021-01-01).\n        Required.\n    date_moving_convention : str or ~analyticsapi.models.DateMovingConvention\n        Required. Known values are: \"ModifiedFollowing\", \"NextBusinessDay\",\n        \"PreviousBusinessDay\", \"NoMoving\", \"EveryThirdWednesday\", and\n        \"BbswModifiedFollowing\".\n    reference_date : str or ~analyticsapi.models.ReferenceDate\n        The date which has been used as a reference date for the provided\n        tenor. Possible values are: StartDate, ValuationDate, SpotDate. Known\n        values are: \"SpotDate\", \"StartDate\", and \"ValuationDate\".\n    date : ~datetime.date\n        The date provided in the request. The value is expressed in ISO 8601\n        format: YYYY-MM-DD (e.g. 2021-01-01).\n    tenor : str\n        A tenor (relatvie date) expressed as a code indicating the period\n        between referenceDate(default=startDate) to endDate of the instrument\n        (e.g., '6M', '1Y').\n    processing_information : str\n        The error message for the calculation in case of a non-blocking error.\n    \n    \"\"\"\n    un_adjusted: date\n    adjusted: date\n    date_moving_convention: typing.Union[str, ForwardRef('_models.DateMovingConvention')]\n    reference_date: typing.Union[str, ForwardRef('_models.ReferenceDate'), NoneType]\n    date: typing.Optional[datetime.date]\n    tenor: typing.Optional[str]\n    processing_information: typing.Optional[str]",
+        "metadata": {
+            "doc": "AdjustedDate.\n\n    Attributes\n    ----------\n    un_adjusted : ~datetime.date\n        The unadjusted date. The value is expressed in ISO 8601 format: YYYY-\n        MM-DD (e.g. 2021-01-01). Required.\n    adjusted : ~datetime.date\n        The date that has been adjusted based on the dateMovingConvention. The\n        value is expressed in ISO 8601 format: YYYY-MM-DD (e.g. 2021-01-01).\n        Required.\n    date_moving_convention : str or ~analyticsapi.models.DateMovingConvention\n        Required. Known values are: \"ModifiedFollowing\", \"NextBusinessDay\",\n        \"PreviousBusinessDay\", \"NoMoving\", \"EveryThirdWednesday\", and\n        \"BbswModifiedFollowing\".\n    reference_date : str or ~analyticsapi.models.ReferenceDate\n        The date which has been used as a reference date for the provided\n        tenor. Possible values are: StartDate, ValuationDate, SpotDate. Known\n        values are: \"SpotDate\", \"StartDate\", and \"ValuationDate\".\n    date : ~datetime.date\n        The date provided in the request. The value is expressed in ISO 8601\n        format: YYYY-MM-DD (e.g. 2021-01-01).\n    tenor : str\n        A tenor (relatvie date) expressed as a code indicating the period\n        between referenceDate(default=startDate) to endDate of the instrument\n        (e.g., '6M', '1Y').\n    processing_information : str\n        The error message for the calculation in case of a non-blocking error.\n    \n",
+            "annotations": "    un_adjusted: date\n    adjusted: date\n    date_moving_convention: typing.Union[str, ForwardRef('_models.DateMovingConvention')]\n    reference_date: typing.Union[str, ForwardRef('_models.ReferenceDate'), NoneType]\n    date: typing.Optional[datetime.date]\n    tenor: typing.Optional[str]\n    processing_information: typing.Optional[str]",
+            "signature": "class AdjustedDate:\n    \"\"\"\"\"\"\n    un_adjusted: date\n    adjusted: date\n    date_moving_convention: typing.Union[str, ForwardRef('_models.DateMovingConvention')]\n    reference_date: typing.Union[str, ForwardRef('_models.ReferenceDate'), NoneType]\n    date: typing.Optional[datetime.date]\n    tenor: typing.Optional[str]\n    processing_information: typing.Optional[str]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.AdjustedDate.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.DateMovingConvention",
+                "lseg_analytics.common.ReferenceDate"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "AdjustedDate.__init__",
+        "id": "lseg_analytics.common.AdjustedDate.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 359,
+        "content": "class AdjustedDate:\n    @overload\n    def __init__(self, *, un_adjusted: datetime.date, adjusted: datetime.date, date_moving_convention: Union[str, ForwardRef('_models.DateMovingConvention')], reference_date: Union[str, ForwardRef('_models.ReferenceDate'), NoneType] = None, date: Optional[datetime.date] = None, tenor: Optional[str] = None, processing_information: Optional[str] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "AdjustedDate"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.AdjustedDate"
+            ],
+            "use": [
+                "lseg_analytics.common.DateMovingConvention",
+                "lseg_analytics.common.ReferenceDate"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "BidAskMidSimpleValues",
+        "id": "lseg_analytics.common.BidAskMidSimpleValues",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "bid",
+                "type": "float"
+            },
+            {
+                "name": "ask",
+                "type": "float"
+            },
+            {
+                "name": "mid",
+                "type": "float"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 363,
+        "content": "class BidAskMidSimpleValues:\n    \"\"\"An object that contains the bid, ask and mid quotes for the instrument.\n\n    Attributes\n    ----------\n    bid : float\n        The bid value.\n    ask : float\n        The ask value.\n    mid : float\n        The mid value.\n    \n    \"\"\"\n    bid: typing.Optional[float]\n    ask: typing.Optional[float]\n    mid: typing.Optional[float]",
+        "metadata": {
+            "doc": "An object that contains the bid, ask and mid quotes for the instrument.\n\n    Attributes\n    ----------\n    bid : float\n        The bid value.\n    ask : float\n        The ask value.\n    mid : float\n        The mid value.\n    \n",
+            "annotations": "    bid: typing.Optional[float]\n    ask: typing.Optional[float]\n    mid: typing.Optional[float]",
+            "signature": "class BidAskMidSimpleValues:\n    \"\"\"\"\"\"\n    bid: typing.Optional[float]\n    ask: typing.Optional[float]\n    mid: typing.Optional[float]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.BidAskMidSimpleValues.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "BidAskMidSimpleValues.__init__",
+        "id": "lseg_analytics.common.BidAskMidSimpleValues.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 401,
+        "content": "class BidAskMidSimpleValues:\n    @overload\n    def __init__(self, *, bid: Optional[float] = None, ask: Optional[float] = None, mid: Optional[float] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "BidAskMidSimpleValues"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.BidAskMidSimpleValues"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "BidAskSimpleValues",
+        "id": "lseg_analytics.common.BidAskSimpleValues",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "bid",
+                "type": "float"
+            },
+            {
+                "name": "ask",
+                "type": "float"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 405,
+        "content": "class BidAskSimpleValues:\n    \"\"\"An object that contains the bid and ask quotes for the instrument.\n\n    Attributes\n    ----------\n    bid : float\n        The bid quote.\n    ask : float\n        The ask quote.\n    \n    \"\"\"\n    bid: typing.Optional[float]\n    ask: typing.Optional[float]",
+        "metadata": {
+            "doc": "An object that contains the bid and ask quotes for the instrument.\n\n    Attributes\n    ----------\n    bid : float\n        The bid quote.\n    ask : float\n        The ask quote.\n    \n",
+            "annotations": "    bid: typing.Optional[float]\n    ask: typing.Optional[float]",
+            "signature": "class BidAskSimpleValues:\n    \"\"\"\"\"\"\n    bid: typing.Optional[float]\n    ask: typing.Optional[float]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.BidAskSimpleValues.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "BidAskSimpleValues.__init__",
+        "id": "lseg_analytics.common.BidAskSimpleValues.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 438,
+        "content": "class BidAskSimpleValues:\n    @overload\n    def __init__(self, *, bid: Optional[float] = None, ask: Optional[float] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "BidAskSimpleValues"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.BidAskSimpleValues"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "BidAskValues",
+        "id": "lseg_analytics.common.BidAskValues",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "bid",
+                "type": "FieldValue"
+            },
+            {
+                "name": "ask",
+                "type": "FieldValue"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 442,
+        "content": "class BidAskValues:\n    \"\"\"An object that contains the bid and ask quotes for the instrument.\n\n    Attributes\n    ----------\n    bid : ~analyticsapi.models.FieldValue\n        An object that contains the bid quote for the instrument.\n    ask : ~analyticsapi.models.FieldValue\n        An object that contains the ask quote for the instrument.\n    \n    \"\"\"\n    bid: typing.Optional[ForwardRef('_models.FieldValue')]\n    ask: typing.Optional[ForwardRef('_models.FieldValue')]",
+        "metadata": {
+            "doc": "An object that contains the bid and ask quotes for the instrument.\n\n    Attributes\n    ----------\n    bid : ~analyticsapi.models.FieldValue\n        An object that contains the bid quote for the instrument.\n    ask : ~analyticsapi.models.FieldValue\n        An object that contains the ask quote for the instrument.\n    \n",
+            "annotations": "    bid: typing.Optional[ForwardRef('_models.FieldValue')]\n    ask: typing.Optional[ForwardRef('_models.FieldValue')]",
+            "signature": "class BidAskValues:\n    \"\"\"\"\"\"\n    bid: typing.Optional[ForwardRef('_models.FieldValue')]\n    ask: typing.Optional[ForwardRef('_models.FieldValue')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.BidAskValues.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.FieldValue"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "BidAskValues.__init__",
+        "id": "lseg_analytics.common.BidAskValues.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 475,
+        "content": "class BidAskValues:\n    @overload\n    def __init__(self, *, bid: Optional[ForwardRef('_models.FieldValue')] = None, ask: Optional[ForwardRef('_models.FieldValue')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "BidAskValues"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.BidAskValues"
+            ],
+            "use": [
+                "lseg_analytics.common.FieldValue"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "CollectionLinks",
+        "id": "lseg_analytics.common.CollectionLinks",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "self_property",
+                "type": "Link"
+            },
+            {
+                "name": "first",
+                "type": "Link"
+            },
+            {
+                "name": "prev",
+                "type": "Link"
+            },
+            {
+                "name": "next",
+                "type": "Link"
+            },
+            {
+                "name": "last",
+                "type": "Link"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 912,
+        "content": "class CollectionLinks:\n    \"\"\"CollectionLinks.\n\n    Attributes\n    ----------\n    self_property : ~analyticsapi.models.Link\n        Required.\n    first : ~analyticsapi.models.Link\n    prev : ~analyticsapi.models.Link\n    next : ~analyticsapi.models.Link\n    last : ~analyticsapi.models.Link\n    \n    \"\"\"\n    self_property: _models.Link\n    first: typing.Optional[ForwardRef('_models.Link')]\n    prev: typing.Optional[ForwardRef('_models.Link')]\n    next: typing.Optional[ForwardRef('_models.Link')]\n    last: typing.Optional[ForwardRef('_models.Link')]",
+        "metadata": {
+            "doc": "CollectionLinks.\n\n    Attributes\n    ----------\n    self_property : ~analyticsapi.models.Link\n        Required.\n    first : ~analyticsapi.models.Link\n    prev : ~analyticsapi.models.Link\n    next : ~analyticsapi.models.Link\n    last : ~analyticsapi.models.Link\n    \n",
+            "annotations": "    self_property: _models.Link\n    first: typing.Optional[ForwardRef('_models.Link')]\n    prev: typing.Optional[ForwardRef('_models.Link')]\n    next: typing.Optional[ForwardRef('_models.Link')]\n    last: typing.Optional[ForwardRef('_models.Link')]",
+            "signature": "class CollectionLinks:\n    \"\"\"\"\"\"\n    self_property: _models.Link\n    first: typing.Optional[ForwardRef('_models.Link')]\n    prev: typing.Optional[ForwardRef('_models.Link')]\n    next: typing.Optional[ForwardRef('_models.Link')]\n    last: typing.Optional[ForwardRef('_models.Link')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.CollectionLinks.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.Link"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "CollectionLinks.__init__",
+        "id": "lseg_analytics.common.CollectionLinks.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 952,
+        "content": "class CollectionLinks:\n    @overload\n    def __init__(self, *, self_property: '_models.Link', first: Optional[ForwardRef('_models.Link')] = None, prev: Optional[ForwardRef('_models.Link')] = None, next: Optional[ForwardRef('_models.Link')] = None, last: Optional[ForwardRef('_models.Link')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "CollectionLinks"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.CollectionLinks"
+            ],
+            "use": [
+                "lseg_analytics.common.Link"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "CrossCurrencyInput",
+        "id": "lseg_analytics.common.CrossCurrencyInput",
+        "params": [
+            {
+                "name": "code",
+                "type": "str",
+                "valuelookup": "cross_currency_list"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 1274,
+        "content": "class CrossCurrencyInput:\n    \"\"\"An object to specify a cross currency pair.\n\n    Attributes\n    ----------\n    code : str\n        The currency pair of FX Cross, expressed in ISO 4217 alphabetical\n        format (e.g., 'EURCHF'). Required.\n    \n    \"\"\"\n    code: str",
+        "metadata": {
+            "doc": "An object to specify a cross currency pair.\n\n    Attributes\n    ----------\n    code : str\n        The currency pair of FX Cross, expressed in ISO 4217 alphabetical\n        format (e.g., 'EURCHF'). Required.\n    \n",
+            "annotations": "    code: str",
+            "signature": "class CrossCurrencyInput:\n    \"\"\"\"\"\"\n    code: str"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.CrossCurrencyInput.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "CrossCurrencyInput.__init__",
+        "id": "lseg_analytics.common.CrossCurrencyInput.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 1303,
+        "content": "class CrossCurrencyInput:\n    @overload\n    def __init__(self, code: str):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "CrossCurrencyInput"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.CrossCurrencyInput"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "CurrencyInput",
+        "id": "lseg_analytics.common.CurrencyInput",
+        "params": [
+            {
+                "name": "code",
+                "type": "str",
+                "valuelookup": "currency_list"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 1939,
+        "content": "class CurrencyInput:\n    \"\"\"An object to specify a currency.\n\n    Attributes\n    ----------\n    code : str\n        The currency expressed in ISO 4217 alphabetical format (e.g., 'EUR').\n        Required.\n    \n    \"\"\"\n    code: str",
+        "metadata": {
+            "doc": "An object to specify a currency.\n\n    Attributes\n    ----------\n    code : str\n        The currency expressed in ISO 4217 alphabetical format (e.g., 'EUR').\n        Required.\n    \n",
+            "annotations": "    code: str",
+            "signature": "class CurrencyInput:\n    \"\"\"\"\"\"\n    code: str"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.CurrencyInput.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "CurrencyInput.__init__",
+        "id": "lseg_analytics.common.CurrencyInput.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 1967,
+        "content": "class CurrencyInput:\n    @overload\n    def __init__(self, code: str):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "CurrencyInput"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.CurrencyInput"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "Date",
+        "id": "lseg_analytics.common.Date",
+        "params": [],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 145,
+        "content": "class Date:\n    \"\"\"Date.\n\n    You probably want to use the sub-classes and not this class directly. Known sub-classes are:\n    AdjustableDate, RelativeAdjustableDate\n\n    Attributes\n    ----------\n    date_type : str or ~analyticsapi.models.DateType\n        Required. Known values are: \"AdjustableDate\" and\n        \"RelativeAdjustableDate\".\n    date_moving_convention : str or ~analyticsapi.models.DateMovingConvention\n        The method to adjust dates to working days. The possible values are:\n        ModifiedFollowing: dates are adjusted to the next business day\n        convention unless it goes into the next month. In such case, the\n        previous business day convention is used, NextBusinessDay: dates are\n        moved to the following working day, PreviousBusinessDay: dates are\n        moved to the preceding working day, NoMoving: dates are not adjusted,\n        EveryThirdWednesday: dates are moved to the third Wednesday of the\n        month, or to the next working day if the third Wednesday is not a\n        working day, BbswModifiedFollowing: dates are adjusted to the next\n        business day convention unless it goes into the next month, or crosses\n        mid-month (15th). In such case, the previous business day convention is\n        used. Default is ModifiedFollowing. Known values are:\n        \"ModifiedFollowing\", \"NextBusinessDay\", \"PreviousBusinessDay\",\n        \"NoMoving\", \"EveryThirdWednesday\", and \"BbswModifiedFollowing\".\n    calendars : list[~analyticsapi.models.CalendarRelatedResource]\n        An array of calendars that should be used for the date adjustment.\n        Typically the calendars are derived based on the instruments currency\n        or crossCurrency code.\n    \n    \"\"\"\n    date_type: str\n    date_moving_convention: typing.Union[str, ForwardRef('_models.DateMovingConvention'), NoneType]\n    calendars: typing.Optional[typing.List[ForwardRef('_models.CalendarRelatedResource')]]",
+        "metadata": {
+            "doc": "Date.\n\n    You probably want to use the sub-classes and not this class directly. Known sub-classes are:\n    AdjustableDate, RelativeAdjustableDate\n\n    Attributes\n    ----------\n    date_type : str or ~analyticsapi.models.DateType\n        Required. Known values are: \"AdjustableDate\" and\n        \"RelativeAdjustableDate\".\n    date_moving_convention : str or ~analyticsapi.models.DateMovingConvention\n        The method to adjust dates to working days. The possible values are:\n        ModifiedFollowing: dates are adjusted to the next business day\n        convention unless it goes into the next month. In such case, the\n        previous business day convention is used, NextBusinessDay: dates are\n        moved to the following working day, PreviousBusinessDay: dates are\n        moved to the preceding working day, NoMoving: dates are not adjusted,\n        EveryThirdWednesday: dates are moved to the third Wednesday of the\n        month, or to the next working day if the third Wednesday is not a\n        working day, BbswModifiedFollowing: dates are adjusted to the next\n        business day convention unless it goes into the next month, or crosses\n        mid-month (15th). In such case, the previous business day convention is\n        used. Default is ModifiedFollowing. Known values are:\n        \"ModifiedFollowing\", \"NextBusinessDay\", \"PreviousBusinessDay\",\n        \"NoMoving\", \"EveryThirdWednesday\", and \"BbswModifiedFollowing\".\n    calendars : list[~analyticsapi.models.CalendarRelatedResource]\n        An array of calendars that should be used for the date adjustment.\n        Typically the calendars are derived based on the instruments currency\n        or crossCurrency code.\n    \n",
+            "annotations": "    date_type: str\n    date_moving_convention: typing.Union[str, ForwardRef('_models.DateMovingConvention'), NoneType]\n    calendars: typing.Optional[typing.List[ForwardRef('_models.CalendarRelatedResource')]]",
+            "signature": "class Date:\n    \"\"\"\"\"\"\n    date_type: str\n    date_moving_convention: typing.Union[str, ForwardRef('_models.DateMovingConvention'), NoneType]\n    calendars: typing.Optional[typing.List[ForwardRef('_models.CalendarRelatedResource')]]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.Date.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.DateMovingConvention",
+                "lseg_analytics.instruments.fx_forwards.CalendarRelatedResource"
+            ],
+            "base_classes": [],
+            "sub_classes": [
+                "lseg_analytics.common.AdjustableDate",
+                "lseg_analytics.common.RelativeAdjustableDate"
+            ]
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "Date.__init__",
+        "id": "lseg_analytics.common.Date.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 216,
+        "content": "class Date:\n    @overload\n    def __init__(self, *, date_type: str, date_moving_convention: Union[str, ForwardRef('_models.DateMovingConvention'), NoneType] = None, calendars: Optional[List[ForwardRef('_models.CalendarRelatedResource')]] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "Date"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.Date"
+            ],
+            "use": [
+                "lseg_analytics.common.DateMovingConvention",
+                "lseg_analytics.instruments.fx_forwards.CalendarRelatedResource"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "DateMovingConvention",
+        "id": "lseg_analytics.common.DateMovingConvention",
+        "content": "class DateMovingConvention(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"The method to adjust dates to working days.\"\"\"\n\n    MODIFIED_FOLLOWING = \"ModifiedFollowing\"\n    \"\"\"Dates are moved to the next working day unless it falls on the next month. In such case,\n    PreviousBusinessDay convention is used.\n    \"\"\"\n    NEXT_BUSINESS_DAY = \"NextBusinessDay\"\n    \"\"\"Dates are moved to the next working day.\"\"\"\n    PREVIOUS_BUSINESS_DAY = \"PreviousBusinessDay\"\n    \"\"\"Dates are moved to the previous working day.\"\"\"\n    NO_MOVING = \"NoMoving\"\n    \"\"\"Dates are not adjusted.\"\"\"\n    EVERY_THIRD_WEDNESDAY = \"EveryThirdWednesday\"\n    \"\"\"Dates are moved to the third Wednesday of the month, or to the next working day if the third\n    Wednesday is not a working day.\n    \"\"\"\n    BBSW_MODIFIED_FOLLOWING = \"BbswModifiedFollowing\"\n    \"\"\"Dates are moved to the next working day unless it falls on the next month, or crosses mid-month\n    (15th). In such case, PreviousBusinessDay convention is used.\n    \"\"\"\n",
+        "metadata": {
+            "doc": "The method to adjust dates to working days.\n",
+            "members": [
+                "DateMovingConvention.MODIFIED_FOLLOWING = 'ModifiedFollowing'",
+                "DateMovingConvention.NEXT_BUSINESS_DAY = 'NextBusinessDay'",
+                "DateMovingConvention.PREVIOUS_BUSINESS_DAY = 'PreviousBusinessDay'",
+                "DateMovingConvention.NO_MOVING = 'NoMoving'",
+                "DateMovingConvention.EVERY_THIRD_WEDNESDAY = 'EveryThirdWednesday'",
+                "DateMovingConvention.BBSW_MODIFIED_FOLLOWING = 'BbswModifiedFollowing'"
+            ],
+            "signature": "class DateMovingConvention(Enum):\n    \"\"\"\"\"\"\n    MODIFIED_FOLLOWING = 'ModifiedFollowing'\n    NEXT_BUSINESS_DAY = 'NextBusinessDay'\n    PREVIOUS_BUSINESS_DAY = 'PreviousBusinessDay'\n    NO_MOVING = 'NoMoving'\n    EVERY_THIRD_WEDNESDAY = 'EveryThirdWednesday'\n    BBSW_MODIFIED_FOLLOWING = 'BbswModifiedFollowing'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "DayCountBasis",
+        "id": "lseg_analytics.common.DayCountBasis",
+        "content": "class DayCountBasis(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"The day count basis convention used to calculate the period between two dates.\"\"\"\n\n    DCB_30_360 = \"Dcb_30_360\"\n    \"\"\"For two dates (Y1,M1,D1) and (Y2,M2,D2) the number of days in the period is defined as:\n    (D2\u2212D1)+(M2\u2212M1)\u00d730+(Y2\u2212Y1)\u00d7360. The year basis is 360 days.\n\n    Date adjustment rules (to be applied in order):\n\n    #. If D1 is the last day of the month, change D1 to 30.\n    #. If D1=30, then D2=min(D2,30).\n    \"\"\"\n    DCB_30_360_US = \"Dcb_30_360_US\"\n    \"\"\"For two dates (Y1,M1,D1) and (Y2,M2,D2) the number of days in the period is defined as:\n    (D2\u2212D1)+(M2\u2212M1)\u00d730+(Y2\u2212Y1)\u00d7360. The year basis is 360 days.\n\n    Date adjustment rules (to be applied in order):\n\n    #. If D1 is the last day of the month, change D1 to 30.\n    #. If D1=30 then, D2=min(D2,30).\n    #. If D1 and D2 are the last day of February, then D2=30.\n    \"\"\"\n    DCB_30_360_GERMAN = \"Dcb_30_360_German\"\n    \"\"\"For two dates (Y1,M1,D1) and (Y2,M2,D2) the number of days in the period is defined as:\n    (D2\u2212D1)+(M2\u2212M1)\u00d730+(Y2\u2212Y1)\u00d7360. The year basis is 360 days.\n\n    Date adjustment rules (to be applied in order):\n\n    #. If D1 or D2 is 31, change it to 30.\n    #. If D1 or D2 is February 29th, change it to 30.\n    \"\"\"\n    DCB_30_360_ISDA = \"Dcb_30_360_ISDA\"\n    \"\"\"For two dates (Y1,M1,D1) and (Y2,M2,D2) the number of days in the period is defined as:\n    (D2\u2212D1)+(M2\u2212M1)\u00d730+(Y2\u2212Y1)\u00d7360. The year basis is 360 days.\n\n    Date adjustment rules (to be applied in order):\n\n    #. D1=min(D1,30).\n    #. If D1=30, then D2=min(D2,30).\n    \"\"\"\n    DCB_30_365_ISDA = \"Dcb_30_365_ISDA\"\n    \"\"\"Similar to\u00a0Dcb_30_360_ISDA convention, except that the year basis is 365 days.\"\"\"\n    DCB_30_365_GERMAN = \"Dcb_30_365_German\"\n    \"\"\"Similar to\u00a0Dcb_30_360_German convention, except that the year basis is 365 days.\"\"\"\n    DCB_30_365_BRAZIL = \"Dcb_30_365_Brazil\"\n    \"\"\"Similar to\u00a0Dcb_30_360_US convention, except that the year basis is 365 days.\"\"\"\n    DCB_30_ACTUAL_GERMAN = \"Dcb_30_Actual_German\"\n    \"\"\"Similar to Dcb_30_360_German\u00a0convention, except that the year basis is the actual number of\n    days in the year.\n    \"\"\"\n    DCB_30_ACTUAL = \"Dcb_30_Actual\"\n    \"\"\"Similar to Dcb_30_360_US\u00a0convention, except that the year basis is the actual number of days in\n    the year.\n    \"\"\"\n    DCB_30_ACTUAL_ISDA = \"Dcb_30_Actual_ISDA\"\n    \"\"\"Similar to\u00a0Dcb_30_360_ISDA\u00a0convention, except that the year basis is the actual number of days\n    in the year.\n    \"\"\"\n    DCB_30_E_360_ISMA = \"Dcb_30E_360_ISMA\"\n    \"\"\"The actual number of days in the coupon period is used.\n    But it is calculated on the year basis of 360 days with twelve 30-day months (regardless of the\n    date of the first day or last day of the period).\n    \"\"\"\n    DCB_ACTUAL_360 = \"Dcb_Actual_360\"\n    \"\"\"The actual number of days in the period is used. The year basis is 360 days.\"\"\"\n    DCB_ACTUAL_364 = \"Dcb_Actual_364\"\n    \"\"\"The actual number of days in the period is used. The year basis is 364 days.\"\"\"\n    DCB_ACTUAL_365 = \"Dcb_Actual_365\"\n    \"\"\"The actual number of days in the period is used. The year basis is 365 days.\"\"\"\n    DCB_ACTUAL_ACTUAL = \"Dcb_Actual_Actual\"\n    \"\"\"The actual number of days in the period is used. The year basis is the actual number of days in\n    the year.\n    \"\"\"\n    DCB_ACTUAL_ACTUAL_ISDA = \"Dcb_Actual_Actual_ISDA\"\n    \"\"\"Similar to\u00a0Dcb_Actual_365 convention, except that on a leap year the year basis is 366 days.\n    The period is calculated as: the number of days in a leap year/366 + the number of days in a\n    non-leap year/365.\n    \"\"\"\n    DCB_ACTUAL_ACTUAL_AFB = \"Dcb_Actual_Actual_AFB\"\n    \"\"\"The actual number of days in the period is used. The year basis is 366 days if the calculation\n    period contains February 29th, otherwise it is 365 days.\n    \"\"\"\n    DCB_WORKING_DAYS_252 = \"Dcb_WorkingDays_252\"\n    \"\"\"The actual number of business days in the period according to a given calendar is used. The\n    year basis is 252 days.\n    \"\"\"\n    DCB_ACTUAL_365_L = \"Dcb_Actual_365L\"\n    \"\"\"The actual number of days in the period is used. The year basis is calculated as follows:\n    If the coupon frequency is annual and February 29th is included in the period, the year basis\n    is 366 days, otherwise it is 365 days.\n    If the coupon frequency is not annual, the year basis is 366 days for each coupon period whose\n    end date falls in a leap year, otherwise it is 365.\n    \"\"\"\n    DCB_ACTUAL_365_P = \"Dcb_Actual_365P\"\n    DCB_ACTUAL_LEAP_DAY_365 = \"Dcb_ActualLeapDay_365\"\n    \"\"\"The actual number of days in the period is used, but February 29th is ignored for a leap year\n    when counting days. The year basis is 365 days.\"\"\"\n    DCB_ACTUAL_LEAP_DAY_360 = \"Dcb_ActualLeapDay_360\"\n    \"\"\"The actual number of days in the period is used, but February 29th is ignored for a leap year\n    when counting days. The year basis is 360 days.\n    \"\"\"\n    DCB_ACTUAL_36525 = \"Dcb_Actual_36525\"\n    \"\"\"The actual number of days in the period is used. The year basis is 365.25 days.\"\"\"\n    DCB_ACTUAL_365_CANADIAN_CONVENTION = \"Dcb_Actual_365_CanadianConvention\"\n    \"\"\"The actual number of days in the period is used. If it is less than one regular coupon period,\n    the year basis is 365 days.\n    Otherwise, the day count is defined as: 1 \u2013\u00a0days remaining in the period\u00a0x\u00a0Frequency\u00a0/ 365.\n    In most cases, Canadian domestic bonds have semiannual coupons.\n    \"\"\"\n",
+        "metadata": {
+            "doc": "The day count basis convention used to calculate the period between two dates.\n",
+            "members": [
+                "DayCountBasis.DCB_30_360 = 'Dcb_30_360'",
+                "DayCountBasis.DCB_30_360_US = 'Dcb_30_360_US'",
+                "DayCountBasis.DCB_30_360_GERMAN = 'Dcb_30_360_German'",
+                "DayCountBasis.DCB_30_360_ISDA = 'Dcb_30_360_ISDA'",
+                "DayCountBasis.DCB_30_365_ISDA = 'Dcb_30_365_ISDA'",
+                "DayCountBasis.DCB_30_365_GERMAN = 'Dcb_30_365_German'",
+                "DayCountBasis.DCB_30_365_BRAZIL = 'Dcb_30_365_Brazil'",
+                "DayCountBasis.DCB_30_ACTUAL_GERMAN = 'Dcb_30_Actual_German'",
+                "DayCountBasis.DCB_30_ACTUAL = 'Dcb_30_Actual'",
+                "DayCountBasis.DCB_30_ACTUAL_ISDA = 'Dcb_30_Actual_ISDA'",
+                "DayCountBasis.DCB_30_E_360_ISMA = 'Dcb_30E_360_ISMA'",
+                "DayCountBasis.DCB_ACTUAL_360 = 'Dcb_Actual_360'",
+                "DayCountBasis.DCB_ACTUAL_364 = 'Dcb_Actual_364'",
+                "DayCountBasis.DCB_ACTUAL_365 = 'Dcb_Actual_365'",
+                "DayCountBasis.DCB_ACTUAL_ACTUAL = 'Dcb_Actual_Actual'",
+                "DayCountBasis.DCB_ACTUAL_ACTUAL_ISDA = 'Dcb_Actual_Actual_ISDA'",
+                "DayCountBasis.DCB_ACTUAL_ACTUAL_AFB = 'Dcb_Actual_Actual_AFB'",
+                "DayCountBasis.DCB_WORKING_DAYS_252 = 'Dcb_WorkingDays_252'",
+                "DayCountBasis.DCB_ACTUAL_365_L = 'Dcb_Actual_365L'",
+                "DayCountBasis.DCB_ACTUAL_365_P = 'Dcb_Actual_365P'",
+                "DayCountBasis.DCB_ACTUAL_LEAP_DAY_365 = 'Dcb_ActualLeapDay_365'",
+                "DayCountBasis.DCB_ACTUAL_LEAP_DAY_360 = 'Dcb_ActualLeapDay_360'",
+                "DayCountBasis.DCB_ACTUAL_36525 = 'Dcb_Actual_36525'",
+                "DayCountBasis.DCB_ACTUAL_365_CANADIAN_CONVENTION = 'Dcb_Actual_365_CanadianConvention'"
+            ],
+            "signature": "class DayCountBasis(Enum):\n    \"\"\"\"\"\"\n    DCB_30_360 = 'Dcb_30_360'\n    DCB_30_360_US = 'Dcb_30_360_US'\n    DCB_30_360_GERMAN = 'Dcb_30_360_German'\n    DCB_30_360_ISDA = 'Dcb_30_360_ISDA'\n    DCB_30_365_ISDA = 'Dcb_30_365_ISDA'\n    DCB_30_365_GERMAN = 'Dcb_30_365_German'\n    DCB_30_365_BRAZIL = 'Dcb_30_365_Brazil'\n    DCB_30_ACTUAL_GERMAN = 'Dcb_30_Actual_German'\n    DCB_30_ACTUAL = 'Dcb_30_Actual'\n    DCB_30_ACTUAL_ISDA = 'Dcb_30_Actual_ISDA'\n    DCB_30_E_360_ISMA = 'Dcb_30E_360_ISMA'\n    DCB_ACTUAL_360 = 'Dcb_Actual_360'\n    DCB_ACTUAL_364 = 'Dcb_Actual_364'\n    DCB_ACTUAL_365 = 'Dcb_Actual_365'\n    DCB_ACTUAL_ACTUAL = 'Dcb_Actual_Actual'\n    DCB_ACTUAL_ACTUAL_ISDA = 'Dcb_Actual_Actual_ISDA'\n    DCB_ACTUAL_ACTUAL_AFB = 'Dcb_Actual_Actual_AFB'\n    DCB_WORKING_DAYS_252 = 'Dcb_WorkingDays_252'\n    DCB_ACTUAL_365_L = 'Dcb_Actual_365L'\n    DCB_ACTUAL_365_P = 'Dcb_Actual_365P'\n    DCB_ACTUAL_LEAP_DAY_365 = 'Dcb_ActualLeapDay_365'\n    DCB_ACTUAL_LEAP_DAY_360 = 'Dcb_ActualLeapDay_360'\n    DCB_ACTUAL_36525 = 'Dcb_Actual_36525'\n    DCB_ACTUAL_365_CANADIAN_CONVENTION = 'Dcb_Actual_365_CanadianConvention'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "Description",
+        "id": "lseg_analytics.common.Description",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "summary",
+                "type": "str"
+            },
+            {
+                "name": "tags",
+                "type": "List[str]"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2280,
+        "content": "class Description:\n    \"\"\"A description and up to 5 tags for a resource.\n\n    Attributes\n    ----------\n    summary : str\n        A summary of information about the resource. Limited to 500 characters.\n    tags : list[str]\n        User-defined tags to identify the resource. Limited to 5 items and 50\n        characters each. To change the tags, reassign the new tag list, e.g.\n        my_curve.description.tags = new_tags. Direct operation on the tag list\n        using append, remove, etc., e.g.\n        my_curve.description.tags.remove('tag_1'), will not change the actual\n        tag list of the Description object.\n    \n    \"\"\"\n    summary: typing.Optional[str]\n    tags: typing.Optional[typing.List[str]]",
+        "metadata": {
+            "doc": "A description and up to 5 tags for a resource.\n\n    Attributes\n    ----------\n    summary : str\n        A summary of information about the resource. Limited to 500 characters.\n    tags : list[str]\n        User-defined tags to identify the resource. Limited to 5 items and 50\n        characters each. To change the tags, reassign the new tag list, e.g.\n        my_curve.description.tags = new_tags. Direct operation on the tag list\n        using append, remove, etc., e.g.\n        my_curve.description.tags.remove('tag_1'), will not change the actual\n        tag list of the Description object.\n    \n",
+            "annotations": "    summary: typing.Optional[str]\n    tags: typing.Optional[typing.List[str]]",
+            "signature": "class Description:\n    \"\"\"\"\"\"\n    summary: typing.Optional[str]\n    tags: typing.Optional[typing.List[str]]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.Description.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "Description.__init__",
+        "id": "lseg_analytics.common.Description.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2322,
+        "content": "class Description:\n    @overload\n    def __init__(self, *, summary: Optional[str] = None, tags: Optional[List[str]] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "Description"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.Description"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "Direction",
+        "id": "lseg_analytics.common.Direction",
+        "content": "class Direction(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"An indicator of whether the observation period falls before or after the reference point.\"\"\"\n\n    BEFORE = \"Before\"\n    AFTER = \"After\"\n",
+        "metadata": {
+            "doc": "An indicator of whether the observation period falls before or after the reference point.\n",
+            "members": [
+                "Direction.BEFORE = 'Before'",
+                "Direction.AFTER = 'After'"
+            ],
+            "signature": "class Direction(Enum):\n    \"\"\"\"\"\"\n    BEFORE = 'Before'\n    AFTER = 'After'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "Duration",
+        "id": "lseg_analytics.common.Duration",
+        "params": [],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2328,
+        "content": "class Duration:\n    \"\"\"An object to determine the duration of the holiday.\n\n    You probably want to use the sub-classes and not this class directly. Known sub-classes are:\n    FullDayDuration, HalfDayDuration\n\n    Attributes\n    ----------\n    duration_type : str or ~analyticsapi.models.DurationType\n        The type of the holiday duration. Possible values are: FullDayDuration\n        or HalfDayDuration. Required. Known values are: \"FullDayDuration\" and\n        \"HalfDayDuration\".\n    \n    \"\"\"\n    duration_type: str",
+        "metadata": {
+            "doc": "An object to determine the duration of the holiday.\n\n    You probably want to use the sub-classes and not this class directly. Known sub-classes are:\n    FullDayDuration, HalfDayDuration\n\n    Attributes\n    ----------\n    duration_type : str or ~analyticsapi.models.DurationType\n        The type of the holiday duration. Possible values are: FullDayDuration\n        or HalfDayDuration. Required. Known values are: \"FullDayDuration\" and\n        \"HalfDayDuration\".\n    \n",
+            "annotations": "    duration_type: str",
+            "signature": "class Duration:\n    \"\"\"\"\"\"\n    duration_type: str"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.Duration.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": [
+                "lseg_analytics.reference_data.calendars.FullDayDuration",
+                "lseg_analytics.reference_data.calendars.HalfDayDuration"
+            ]
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "Duration.__init__",
+        "id": "lseg_analytics.common.Duration.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2362,
+        "content": "class Duration:\n    @overload\n    def __init__(self, duration_type: str):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "Duration"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.Duration"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "ExtrapolationMode",
+        "id": "lseg_analytics.common.ExtrapolationMode",
+        "content": "class ExtrapolationMode(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"The extrapolation method used in the curve bootstrapping.\"\"\"\n\n    NONE = \"None\"\n    \"\"\"No extrapolation.\"\"\"\n    CONSTANT = \"Constant\"\n    \"\"\"Constant extrapolation.\"\"\"\n    LINEAR = \"Linear\"\n    \"\"\"Linear extrapolation.\"\"\"\n",
+        "metadata": {
+            "doc": "The extrapolation method used in the curve bootstrapping.\n",
+            "members": [
+                "ExtrapolationMode.NONE = 'None'",
+                "ExtrapolationMode.CONSTANT = 'Constant'",
+                "ExtrapolationMode.LINEAR = 'Linear'"
+            ],
+            "signature": "class ExtrapolationMode(Enum):\n    \"\"\"\"\"\"\n    NONE = 'None'\n    CONSTANT = 'Constant'\n    LINEAR = 'Linear'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "FieldValue",
+        "id": "lseg_analytics.common.FieldValue",
+        "params": [
+            {
+                "name": "value",
+                "type": "float"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2369,
+        "content": "class FieldValue:\n    \"\"\"An object that contains the bid and ask quotes and related attributes for the instrument.\n\n    Readonly variables are only populated by the server, and will be ignored when sending a request.\n\n    Attributes\n    ----------\n    value : float\n        The quote value of the instrument. Required.\n    is_overridden : bool\n        An indicator whether the value is overridden. It returns only 'true' if\n        value is overridden in the request.\n    market_value : float\n        The quote retrieved from the market. It is returned in the response\n        only if the value is overridden in the request.\n    \n    \"\"\"\n    value: float\n    is_overridden: typing.Optional[bool]\n    market_value: typing.Optional[float]",
+        "metadata": {
+            "doc": "An object that contains the bid and ask quotes and related attributes for the instrument.\n\n    Readonly variables are only populated by the server, and will be ignored when sending a request.\n\n    Attributes\n    ----------\n    value : float\n        The quote value of the instrument. Required.\n    is_overridden : bool\n        An indicator whether the value is overridden. It returns only 'true' if\n        value is overridden in the request.\n    market_value : float\n        The quote retrieved from the market. It is returned in the response\n        only if the value is overridden in the request.\n    \n",
+            "annotations": "    value: float\n    is_overridden: typing.Optional[bool]\n    market_value: typing.Optional[float]",
+            "signature": "class FieldValue:\n    \"\"\"\"\"\"\n    value: float\n    is_overridden: typing.Optional[bool]\n    market_value: typing.Optional[float]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.FieldValue.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "FieldValue.__init__",
+        "id": "lseg_analytics.common.FieldValue.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 2410,
+        "content": "class FieldValue:\n    @overload\n    def __init__(self, value: float):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "FieldValue"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.FieldValue"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "Frequency",
+        "id": "lseg_analytics.common.Frequency",
+        "content": "class Frequency(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"Type of Frequency.\"\"\"\n\n    DAILY = \"Daily\"\n    WEEKLY = \"Weekly\"\n    BI_WEEKLY = \"BiWeekly\"\n    MONTHLY = \"Monthly\"\n",
+        "metadata": {
+            "doc": "Type of Frequency.\n",
+            "members": [
+                "Frequency.DAILY = 'Daily'",
+                "Frequency.WEEKLY = 'Weekly'",
+                "Frequency.BI_WEEKLY = 'BiWeekly'",
+                "Frequency.MONTHLY = 'Monthly'"
+            ],
+            "signature": "class Frequency(Enum):\n    \"\"\"\"\"\"\n    DAILY = 'Daily'\n    WEEKLY = 'Weekly'\n    BI_WEEKLY = 'BiWeekly'\n    MONTHLY = 'Monthly'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "FxForwardCurveInterpolationMode",
+        "id": "lseg_analytics.common.FxForwardCurveInterpolationMode",
+        "content": "class FxForwardCurveInterpolationMode(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"The interpolation method used in the curve bootstrapping.\"\"\"\n\n    CUBIC_SPLINE = \"CubicSpline\"\n    \"\"\"Local cubic interpolation of discount factors.\"\"\"\n    CONSTANT = \"Constant\"\n    \"\"\"Constant interpolation.\"\"\"\n    LINEAR = \"Linear\"\n    \"\"\"Linear interpolation.\"\"\"\n    CUBIC_DISCOUNT = \"CubicDiscount\"\n",
+        "metadata": {
+            "doc": "The interpolation method used in the curve bootstrapping.\n",
+            "members": [
+                "FxForwardCurveInterpolationMode.CUBIC_SPLINE = 'CubicSpline'",
+                "FxForwardCurveInterpolationMode.CONSTANT = 'Constant'",
+                "FxForwardCurveInterpolationMode.LINEAR = 'Linear'",
+                "FxForwardCurveInterpolationMode.CUBIC_DISCOUNT = 'CubicDiscount'"
+            ],
+            "signature": "class FxForwardCurveInterpolationMode(Enum):\n    \"\"\"\"\"\"\n    CUBIC_SPLINE = 'CubicSpline'\n    CONSTANT = 'Constant'\n    LINEAR = 'Linear'\n    CUBIC_DISCOUNT = 'CubicDiscount'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "IndexOrder",
+        "id": "lseg_analytics.common.IndexOrder",
+        "content": "class IndexOrder(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"The ordinal number of the day of the week in the month when defining holiday timing. For\n    example, a rule for the last Monday of September would use \"Last\" in its definition.\n    \"\"\"\n\n    FIRST = \"First\"\n    SECOND = \"Second\"\n    THIRD = \"Third\"\n    FOURTH = \"Fourth\"\n    LAST = \"Last\"\n",
+        "metadata": {
+            "doc": "The ordinal number of the day of the week in the month when defining holiday timing. For\n    example, a rule for the last Monday of September would use \"Last\" in its definition.\n    \n",
+            "members": [
+                "IndexOrder.FIRST = 'First'",
+                "IndexOrder.SECOND = 'Second'",
+                "IndexOrder.THIRD = 'Third'",
+                "IndexOrder.FOURTH = 'Fourth'",
+                "IndexOrder.LAST = 'Last'"
+            ],
+            "signature": "class IndexOrder(Enum):\n    \"\"\"\"\"\"\n    FIRST = 'First'\n    SECOND = 'Second'\n    THIRD = 'Third'\n    FOURTH = 'Fourth'\n    LAST = 'Last'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "InnerError",
+        "id": "lseg_analytics.common.InnerError",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "key",
+                "type": "str"
+            },
+            {
+                "name": "reason",
+                "type": "str"
+            },
+            {
+                "name": "name",
+                "type": "str"
+            },
+            {
+                "name": "invalid_name",
+                "type": "str"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6294,
+        "content": "class InnerError:\n    \"\"\"An object that contains the detailed information in case of a blocking error in a calculation.\n\n    Attributes\n    ----------\n    key : str\n        The specification of the request in which an error occurs. Required.\n    reason : str\n        The reason why an error occurs. Required.\n    name : str\n        The name of the property causing the error.\n    invalid_name : str\n        The name of the invalid property.\n    \n    \"\"\"\n    key: str\n    reason: str\n    name: typing.Optional[str]\n    invalid_name: typing.Optional[str]",
+        "metadata": {
+            "doc": "An object that contains the detailed information in case of a blocking error in a calculation.\n\n    Attributes\n    ----------\n    key : str\n        The specification of the request in which an error occurs. Required.\n    reason : str\n        The reason why an error occurs. Required.\n    name : str\n        The name of the property causing the error.\n    invalid_name : str\n        The name of the invalid property.\n    \n",
+            "annotations": "    key: str\n    reason: str\n    name: typing.Optional[str]\n    invalid_name: typing.Optional[str]",
+            "signature": "class InnerError:\n    \"\"\"\"\"\"\n    key: str\n    reason: str\n    name: typing.Optional[str]\n    invalid_name: typing.Optional[str]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.InnerError.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "InnerError.__init__",
+        "id": "lseg_analytics.common.InnerError.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6337,
+        "content": "class InnerError:\n    @overload\n    def __init__(self, *, key: str, reason: str, name: Optional[str] = None, invalid_name: Optional[str] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "InnerError"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.InnerError"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "Link",
+        "id": "lseg_analytics.common.Link",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "href",
+                "type": "str"
+            },
+            {
+                "name": "href_schema",
+                "type": "str"
+            },
+            {
+                "name": "http_method",
+                "type": "str"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6586,
+        "content": "class Link:\n    \"\"\"Link.\n\n    Attributes\n    ----------\n    href : str\n        Required.\n    href_schema : str\n    http_method : str\n    \n    \"\"\"\n    href: str\n    href_schema: typing.Optional[str]\n    http_method: typing.Optional[str]",
+        "metadata": {
+            "doc": "Link.\n\n    Attributes\n    ----------\n    href : str\n        Required.\n    href_schema : str\n    http_method : str\n    \n",
+            "annotations": "    href: str\n    href_schema: typing.Optional[str]\n    http_method: typing.Optional[str]",
+            "signature": "class Link:\n    \"\"\"\"\"\"\n    href: str\n    href_schema: typing.Optional[str]\n    http_method: typing.Optional[str]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.Link.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "Link.__init__",
+        "id": "lseg_analytics.common.Link.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6620,
+        "content": "class Link:\n    @overload\n    def __init__(self, *, href: str, href_schema: Optional[str] = None, http_method: Optional[str] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "Link"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.Link"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "Location",
+        "id": "lseg_analytics.common.Location",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "name",
+                "type": "str"
+            },
+            {
+                "name": "space",
+                "type": "str"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6624,
+        "content": "class Location:\n    \"\"\"An object to define a location in memory (space and name).\n\n    Attributes\n    ----------\n    space : str\n        The storage location for the resource.\n    name : str\n        The name of the resource. Required.\n    \n    \"\"\"\n    space: typing.Optional[str]\n    name: str",
+        "metadata": {
+            "doc": "An object to define a location in memory (space and name).\n\n    Attributes\n    ----------\n    space : str\n        The storage location for the resource.\n    name : str\n        The name of the resource. Required.\n    \n",
+            "annotations": "    space: typing.Optional[str]\n    name: str",
+            "signature": "class Location:\n    \"\"\"\"\"\"\n    space: typing.Optional[str]\n    name: str"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.Location.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "Location.__init__",
+        "id": "lseg_analytics.common.Location.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6657,
+        "content": "class Location:\n    @overload\n    def __init__(self, *, name: str, space: Optional[str] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "Location"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.Location"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "MetaData",
+        "id": "lseg_analytics.common.MetaData",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "create_time",
+                "type": "datetime"
+            },
+            {
+                "name": "status",
+                "type": "Status",
+                "valuelookup": "enum.Status"
+            },
+            {
+                "name": "revision",
+                "type": "str"
+            },
+            {
+                "name": "creator",
+                "type": "str"
+            },
+            {
+                "name": "update_time",
+                "type": "datetime"
+            },
+            {
+                "name": "delete_time",
+                "type": "datetime"
+            },
+            {
+                "name": "updated_by",
+                "type": "str"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6733,
+        "content": "class MetaData:\n    \"\"\"The metadata of the resource.Metadata properites.\n\n    Attributes\n    ----------\n    create_time : ~datetime.datetime\n        The date and time when the resource was created. The value is expressed\n        in ISO 8601 format: YYYY-MM-DDT[hh]:[mm]:[ss]Z (e.g.,\n        2023-01-01T00:00:00Z). Required.\n    status : str or ~analyticsapi.models.Status\n        The status of the resource. Required. Known values are: \"Active\" and\n        \"Deleted\".\n    revision : str\n        The version of the resource. Required.\n    creator : str\n        The uuid of the user who created the resource. Required.\n    update_time : ~datetime.datetime\n        The date and time when the resource was updated. The value is expressed\n        in ISO 8601 format: YYYY-MM-DDT[hh]:[mm]:[ss]Z (e.g.,\n        2023-01-01T00:00:00Z).\n    delete_time : ~datetime.datetime\n        The date and time when the resource was deleted. The value is expressed\n        in ISO 8601 format: YYYY-MM-DDT[hh]:[mm]:[ss]Z (e.g.,\n        2023-01-01T00:00:00Z).\n    updated_by : str\n        The name of the user who updated the resource.\n    \n    \"\"\"\n    create_time: datetime\n    status: typing.Union[str, ForwardRef('_models.Status')]\n    revision: str\n    creator: str\n    update_time: typing.Optional[datetime.datetime]\n    delete_time: typing.Optional[datetime.datetime]\n    updated_by: typing.Optional[str]",
+        "metadata": {
+            "doc": "The metadata of the resource.Metadata properites.\n\n    Attributes\n    ----------\n    create_time : ~datetime.datetime\n        The date and time when the resource was created. The value is expressed\n        in ISO 8601 format: YYYY-MM-DDT[hh]:[mm]:[ss]Z (e.g.,\n        2023-01-01T00:00:00Z). Required.\n    status : str or ~analyticsapi.models.Status\n        The status of the resource. Required. Known values are: \"Active\" and\n        \"Deleted\".\n    revision : str\n        The version of the resource. Required.\n    creator : str\n        The uuid of the user who created the resource. Required.\n    update_time : ~datetime.datetime\n        The date and time when the resource was updated. The value is expressed\n        in ISO 8601 format: YYYY-MM-DDT[hh]:[mm]:[ss]Z (e.g.,\n        2023-01-01T00:00:00Z).\n    delete_time : ~datetime.datetime\n        The date and time when the resource was deleted. The value is expressed\n        in ISO 8601 format: YYYY-MM-DDT[hh]:[mm]:[ss]Z (e.g.,\n        2023-01-01T00:00:00Z).\n    updated_by : str\n        The name of the user who updated the resource.\n    \n",
+            "annotations": "    create_time: datetime\n    status: typing.Union[str, ForwardRef('_models.Status')]\n    revision: str\n    creator: str\n    update_time: typing.Optional[datetime.datetime]\n    delete_time: typing.Optional[datetime.datetime]\n    updated_by: typing.Optional[str]",
+            "signature": "class MetaData:\n    \"\"\"\"\"\"\n    create_time: datetime\n    status: typing.Union[str, ForwardRef('_models.Status')]\n    revision: str\n    creator: str\n    update_time: typing.Optional[datetime.datetime]\n    delete_time: typing.Optional[datetime.datetime]\n    updated_by: typing.Optional[str]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.MetaData.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.Status"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "MetaData.__init__",
+        "id": "lseg_analytics.common.MetaData.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6804,
+        "content": "class MetaData:\n    @overload\n    def __init__(self, *, create_time: datetime.datetime, status: Union[str, ForwardRef('_models.Status')], revision: str, creator: str, update_time: Optional[datetime.datetime] = None, delete_time: Optional[datetime.datetime] = None, updated_by: Optional[str] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "MetaData"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.MetaData"
+            ],
+            "use": [
+                "lseg_analytics.common.Status"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "Month",
+        "id": "lseg_analytics.common.Month",
+        "content": "class Month(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"Months of the year. Month names written in full.\"\"\"\n\n    JANUARY = \"January\"\n    FEBRUARY = \"February\"\n    MARCH = \"March\"\n    APRIL = \"April\"\n    MAY = \"May\"\n    JUNE = \"June\"\n    JULY = \"July\"\n    AUGUST = \"August\"\n    SEPTEMBER = \"September\"\n    OCTOBER = \"October\"\n    NOVEMBER = \"November\"\n    DECEMBER = \"December\"\n",
+        "metadata": {
+            "doc": "Months of the year. Month names written in full.\n",
+            "members": [
+                "Month.JANUARY = 'January'",
+                "Month.FEBRUARY = 'February'",
+                "Month.MARCH = 'March'",
+                "Month.APRIL = 'April'",
+                "Month.MAY = 'May'",
+                "Month.JUNE = 'June'",
+                "Month.JULY = 'July'",
+                "Month.AUGUST = 'August'",
+                "Month.SEPTEMBER = 'September'",
+                "Month.OCTOBER = 'October'",
+                "Month.NOVEMBER = 'November'",
+                "Month.DECEMBER = 'December'"
+            ],
+            "signature": "class Month(Enum):\n    \"\"\"\"\"\"\n    JANUARY = 'January'\n    FEBRUARY = 'February'\n    MARCH = 'March'\n    APRIL = 'April'\n    MAY = 'May'\n    JUNE = 'June'\n    JULY = 'July'\n    AUGUST = 'August'\n    SEPTEMBER = 'September'\n    OCTOBER = 'October'\n    NOVEMBER = 'November'\n    DECEMBER = 'December'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "PeriodType",
+        "id": "lseg_analytics.common.PeriodType",
+        "content": "class PeriodType(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"The method of the period calculation.\"\"\"\n\n    WORKING_DAY = \"WorkingDay\"\n    \"\"\"Only working days are taken into account.\"\"\"\n    NON_WORKING_DAY = \"NonWorkingDay\"\n    \"\"\"Only non-working days are taken into account.\"\"\"\n    DAY = \"Day\"\n    \"\"\"All calendar days are taken into account.\"\"\"\n    WEEK = \"Week\"\n    \"\"\"The period is calculated in weeks.\"\"\"\n    MONTH = \"Month\"\n    \"\"\"The period is calculated in months.\"\"\"\n    QUARTER = \"Quarter\"\n    \"\"\"The period is calculated in quarters.\"\"\"\n    YEAR = \"Year\"\n    \"\"\"The period is calculated in years.\"\"\"\n",
+        "metadata": {
+            "doc": "The method of the period calculation.\n",
+            "members": [
+                "PeriodType.WORKING_DAY = 'WorkingDay'",
+                "PeriodType.NON_WORKING_DAY = 'NonWorkingDay'",
+                "PeriodType.DAY = 'Day'",
+                "PeriodType.WEEK = 'Week'",
+                "PeriodType.MONTH = 'Month'",
+                "PeriodType.QUARTER = 'Quarter'",
+                "PeriodType.YEAR = 'Year'"
+            ],
+            "signature": "class PeriodType(Enum):\n    \"\"\"\"\"\"\n    WORKING_DAY = 'WorkingDay'\n    NON_WORKING_DAY = 'NonWorkingDay'\n    DAY = 'Day'\n    WEEK = 'Week'\n    MONTH = 'Month'\n    QUARTER = 'Quarter'\n    YEAR = 'Year'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "QuoteInput",
+        "id": "lseg_analytics.common.QuoteInput",
+        "params": [
+            {
+                "name": "definition",
+                "type": "QuoteInputDefinition"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6889,
+        "content": "class QuoteInput:\n    \"\"\"An object used to get the instrument quote.\n\n    Attributes\n    ----------\n    definition : ~analyticsapi.models.QuoteInputDefinition\n        An object that defines the attributes for getting the instrument quote.\n        Required.\n    \n    \"\"\"\n    definition: _models.QuoteInputDefinition",
+        "metadata": {
+            "doc": "An object used to get the instrument quote.\n\n    Attributes\n    ----------\n    definition : ~analyticsapi.models.QuoteInputDefinition\n        An object that defines the attributes for getting the instrument quote.\n        Required.\n    \n",
+            "annotations": "    definition: _models.QuoteInputDefinition",
+            "signature": "class QuoteInput:\n    \"\"\"\"\"\"\n    definition: _models.QuoteInputDefinition"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.QuoteInput.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.QuoteInputDefinition"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "QuoteInput.__init__",
+        "id": "lseg_analytics.common.QuoteInput.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6917,
+        "content": "class QuoteInput:\n    @overload\n    def __init__(self, definition: '_models.QuoteInputDefinition'):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "QuoteInput"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.QuoteInput"
+            ],
+            "use": [
+                "lseg_analytics.common.QuoteInputDefinition"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "QuoteInputDefinition",
+        "id": "lseg_analytics.common.QuoteInputDefinition",
+        "params": [
+            {
+                "name": "instrument_code",
+                "type": "str"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6924,
+        "content": "class QuoteInputDefinition:\n    \"\"\"An object that defines the attributes for getting the instrument quote.\n\n    Attributes\n    ----------\n    instrument_code : str\n        The code (RIC) of the instrument. Required.\n    \n    \"\"\"\n    instrument_code: str",
+        "metadata": {
+            "doc": "An object that defines the attributes for getting the instrument quote.\n\n    Attributes\n    ----------\n    instrument_code : str\n        The code (RIC) of the instrument. Required.\n    \n",
+            "annotations": "    instrument_code: str",
+            "signature": "class QuoteInputDefinition:\n    \"\"\"\"\"\"\n    instrument_code: str"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.QuoteInputDefinition.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "QuoteInputDefinition.__init__",
+        "id": "lseg_analytics.common.QuoteInputDefinition.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6951,
+        "content": "class QuoteInputDefinition:\n    @overload\n    def __init__(self, instrument_code: str):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "QuoteInputDefinition"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.QuoteInputDefinition"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "QuoteOutput",
+        "id": "lseg_analytics.common.QuoteOutput",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "definition",
+                "type": "QuoteOutputDefinition"
+            },
+            {
+                "name": "values_property",
+                "type": "BidAskValues"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 6958,
+        "content": "class QuoteOutput:\n    \"\"\"An object that contains the instrument quote and related attributes.\n\n    Readonly variables are only populated by the server, and will be ignored when sending a request.\n\n    Attributes\n    ----------\n    start_date : ~datetime.date\n        The start date of the instrument. Depending on the tenor the start date\n        is defined as follows:\n\n        * for ON and SPOT it is typically equal to the valuation date,\n        * for TN it is the valuation date + 1D,\n        * for post-spot tenors (1D, 1M, 1Y, etc.) it is the valuation date + spot lag.\n          The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., '2023-01-01').\n    end_date : ~datetime.date\n        The maturity or expiry date of the instrument. The value is expressed\n        in ISO 8601 format: YYYY-MM-DD (e.g., '2024-01-01').\n    definition : ~analyticsapi.models.QuoteOutputDefinition\n        An object that defines the attributes for getting the instrument quote.\n        Required.\n    values_property : ~analyticsapi.models.BidAskValues\n        An object that contains the bid and ask quotes for the instrument.\n    \n    \"\"\"\n    start_date: typing.Optional[datetime.date]\n    end_date: typing.Optional[datetime.date]\n    definition: _models.QuoteOutputDefinition\n    values_property: typing.Optional[ForwardRef('_models.BidAskValues')]",
+        "metadata": {
+            "doc": "An object that contains the instrument quote and related attributes.\n\n    Readonly variables are only populated by the server, and will be ignored when sending a request.\n\n    Attributes\n    ----------\n    start_date : ~datetime.date\n        The start date of the instrument. Depending on the tenor the start date\n        is defined as follows:\n\n        * for ON and SPOT it is typically equal to the valuation date,\n        * for TN it is the valuation date + 1D,\n        * for post-spot tenors (1D, 1M, 1Y, etc.) it is the valuation date + spot lag.\n          The value is expressed in ISO 8601 format: YYYY-MM-DD (e.g., '2023-01-01').\n    end_date : ~datetime.date\n        The maturity or expiry date of the instrument. The value is expressed\n        in ISO 8601 format: YYYY-MM-DD (e.g., '2024-01-01').\n    definition : ~analyticsapi.models.QuoteOutputDefinition\n        An object that defines the attributes for getting the instrument quote.\n        Required.\n    values_property : ~analyticsapi.models.BidAskValues\n        An object that contains the bid and ask quotes for the instrument.\n    \n",
+            "annotations": "    start_date: typing.Optional[datetime.date]\n    end_date: typing.Optional[datetime.date]\n    definition: _models.QuoteOutputDefinition\n    values_property: typing.Optional[ForwardRef('_models.BidAskValues')]",
+            "signature": "class QuoteOutput:\n    \"\"\"\"\"\"\n    start_date: typing.Optional[datetime.date]\n    end_date: typing.Optional[datetime.date]\n    definition: _models.QuoteOutputDefinition\n    values_property: typing.Optional[ForwardRef('_models.BidAskValues')]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.QuoteOutput.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.QuoteOutputDefinition",
+                "lseg_analytics.common.BidAskValues"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "QuoteOutput.__init__",
+        "id": "lseg_analytics.common.QuoteOutput.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7016,
+        "content": "class QuoteOutput:\n    @overload\n    def __init__(self, *, definition: '_models.QuoteOutputDefinition', values_property: Optional[ForwardRef('_models.BidAskValues')] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "QuoteOutput"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.QuoteOutput"
+            ],
+            "use": [
+                "lseg_analytics.common.QuoteOutputDefinition",
+                "lseg_analytics.common.BidAskValues"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "QuoteOutputDefinition",
+        "id": "lseg_analytics.common.QuoteOutputDefinition",
+        "params": [
+            {
+                "name": "instrument_code",
+                "type": "str"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7020,
+        "content": "class QuoteOutputDefinition:\n    \"\"\"An object that defines the attributes for getting the instrument quote.\n\n    Attributes\n    ----------\n    instrument_code : str\n        The code (RIC) of the instrument. Required.\n    \n    \"\"\"\n    instrument_code: str",
+        "metadata": {
+            "doc": "An object that defines the attributes for getting the instrument quote.\n\n    Attributes\n    ----------\n    instrument_code : str\n        The code (RIC) of the instrument. Required.\n    \n",
+            "annotations": "    instrument_code: str",
+            "signature": "class QuoteOutputDefinition:\n    \"\"\"\"\"\"\n    instrument_code: str"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.QuoteOutputDefinition.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "QuoteOutputDefinition.__init__",
+        "id": "lseg_analytics.common.QuoteOutputDefinition.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7047,
+        "content": "class QuoteOutputDefinition:\n    @overload\n    def __init__(self, instrument_code: str):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "QuoteOutputDefinition"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.QuoteOutputDefinition"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "ReferenceDate",
+        "id": "lseg_analytics.common.ReferenceDate",
+        "content": "class ReferenceDate(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"Type of ReferenceDate.\"\"\"\n\n    SPOT_DATE = \"SpotDate\"\n    START_DATE = \"StartDate\"\n    VALUATION_DATE = \"ValuationDate\"\n",
+        "metadata": {
+            "doc": "Type of ReferenceDate.\n",
+            "members": [
+                "ReferenceDate.SPOT_DATE = 'SpotDate'",
+                "ReferenceDate.START_DATE = 'StartDate'",
+                "ReferenceDate.VALUATION_DATE = 'ValuationDate'"
+            ],
+            "signature": "class ReferenceDate(Enum):\n    \"\"\"\"\"\"\n    SPOT_DATE = 'SpotDate'\n    START_DATE = 'StartDate'\n    VALUATION_DATE = 'ValuationDate'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "RelativeAdjustableDate",
+        "id": "lseg_analytics.common.RelativeAdjustableDate",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "tenor",
+                "type": "str",
+                "valuelookup": "tenors"
+            },
+            {
+                "name": "date_moving_convention",
+                "type": "DateMovingConvention",
+                "valuelookup": "enum.DateMovingConvention"
+            },
+            {
+                "name": "calendars",
+                "type": "List[CalendarRelatedResource]"
+            },
+            {
+                "name": "reference_date",
+                "type": "ReferenceDate",
+                "valuelookup": "enum.ReferenceDate"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7054,
+        "content": "class RelativeAdjustableDate:\n    \"\"\"RelativeAdjustableDate.\n\n    Attributes\n    ----------\n    date_moving_convention : str or ~analyticsapi.models.DateMovingConvention\n        The method to adjust dates to working days. The possible values are:\n        ModifiedFollowing: dates are adjusted to the next business day\n        convention unless it goes into the next month. In such case, the\n        previous business day convention is used, NextBusinessDay: dates are\n        moved to the following working day, PreviousBusinessDay: dates are\n        moved to the preceding working day, NoMoving: dates are not adjusted,\n        EveryThirdWednesday: dates are moved to the third Wednesday of the\n        month, or to the next working day if the third Wednesday is not a\n        working day, BbswModifiedFollowing: dates are adjusted to the next\n        business day convention unless it goes into the next month, or crosses\n        mid-month (15th). In such case, the previous business day convention is\n        used. Default is ModifiedFollowing. Known values are:\n        \"ModifiedFollowing\", \"NextBusinessDay\", \"PreviousBusinessDay\",\n        \"NoMoving\", \"EveryThirdWednesday\", and \"BbswModifiedFollowing\".\n    calendars : list[~analyticsapi.models.CalendarRelatedResource]\n        An array of calendars that should be used for the date adjustment.\n        Typically the calendars are derived based on the instruments currency\n        or crossCurrency code.\n    date_type : str or ~analyticsapi.models.RELATIVE_ADJUSTABLE_DATE\n        The type of the Date input. Possible values are: AdjustableDate,\n        RelativeAdjustableDate. Required.\n    tenor : str\n        A code indicating the length of the period between the start date and\n        the end date of the instrument. Predefined values are: ON (Overnight -\n        A one business day period that starts today), TN (Tomorrow-Next - A one\n        business day period that starts next business day, SPOT (Spot Date), SN\n        (Spot-Next - A one business day period that starts at the spot date of\n        a currency pair) or SW (Spot-Week - A one business week period that\n        starts at the spot date of a currency pair). Tenors can also be\n        specified as a whole number of time units. Possible units are: D\n        (Days), W (Weeks), M (Months) or Y (Years). For example, one month is\n        written '1M', 3 years is written: '3Y'. Time units can be mixed.  For\n        example, 5M3D means '5 months and 3 days'. Note: units must be written\n        in descending order of size (Y > M > W > D). Required.\n    reference_date : str or ~analyticsapi.models.ReferenceDate\n        The date which has been used as a reference date for the provided\n        tenor. Possible values are: StartDate, ValuationDate, SpotDate. Default\n        is StartDate. Known values are: \"SpotDate\", \"StartDate\", and\n        \"ValuationDate\".\n    \n    \"\"\"\n    date_type: typing.Literal[<DateType.RELATIVE_ADJUSTABLE_DATE: 'RelativeAdjustableDate'>]\n    date_moving_convention: typing.Union[str, ForwardRef('_models.DateMovingConvention'), NoneType]\n    calendars: typing.Optional[typing.List[ForwardRef('_models.CalendarRelatedResource')]]\n    tenor: str\n    reference_date: typing.Union[str, ForwardRef('_models.ReferenceDate'), NoneType]",
+        "metadata": {
+            "doc": "RelativeAdjustableDate.\n\n    Attributes\n    ----------\n    date_moving_convention : str or ~analyticsapi.models.DateMovingConvention\n        The method to adjust dates to working days. The possible values are:\n        ModifiedFollowing: dates are adjusted to the next business day\n        convention unless it goes into the next month. In such case, the\n        previous business day convention is used, NextBusinessDay: dates are\n        moved to the following working day, PreviousBusinessDay: dates are\n        moved to the preceding working day, NoMoving: dates are not adjusted,\n        EveryThirdWednesday: dates are moved to the third Wednesday of the\n        month, or to the next working day if the third Wednesday is not a\n        working day, BbswModifiedFollowing: dates are adjusted to the next\n        business day convention unless it goes into the next month, or crosses\n        mid-month (15th). In such case, the previous business day convention is\n        used. Default is ModifiedFollowing. Known values are:\n        \"ModifiedFollowing\", \"NextBusinessDay\", \"PreviousBusinessDay\",\n        \"NoMoving\", \"EveryThirdWednesday\", and \"BbswModifiedFollowing\".\n    calendars : list[~analyticsapi.models.CalendarRelatedResource]\n        An array of calendars that should be used for the date adjustment.\n        Typically the calendars are derived based on the instruments currency\n        or crossCurrency code.\n    date_type : str or ~analyticsapi.models.RELATIVE_ADJUSTABLE_DATE\n        The type of the Date input. Possible values are: AdjustableDate,\n        RelativeAdjustableDate. Required.\n    tenor : str\n        A code indicating the length of the period between the start date and\n        the end date of the instrument. Predefined values are: ON (Overnight -\n        A one business day period that starts today), TN (Tomorrow-Next - A one\n        business day period that starts next business day, SPOT (Spot Date), SN\n        (Spot-Next - A one business day period that starts at the spot date of\n        a currency pair) or SW (Spot-Week - A one business week period that\n        starts at the spot date of a currency pair). Tenors can also be\n        specified as a whole number of time units. Possible units are: D\n        (Days), W (Weeks), M (Months) or Y (Years). For example, one month is\n        written '1M', 3 years is written: '3Y'. Time units can be mixed.  For\n        example, 5M3D means '5 months and 3 days'. Note: units must be written\n        in descending order of size (Y > M > W > D). Required.\n    reference_date : str or ~analyticsapi.models.ReferenceDate\n        The date which has been used as a reference date for the provided\n        tenor. Possible values are: StartDate, ValuationDate, SpotDate. Default\n        is StartDate. Known values are: \"SpotDate\", \"StartDate\", and\n        \"ValuationDate\".\n    \n",
+            "annotations": "    date_type: typing.Literal[<DateType.RELATIVE_ADJUSTABLE_DATE: 'RelativeAdjustableDate'>]\n    date_moving_convention: typing.Union[str, ForwardRef('_models.DateMovingConvention'), NoneType]\n    calendars: typing.Optional[typing.List[ForwardRef('_models.CalendarRelatedResource')]]\n    tenor: str\n    reference_date: typing.Union[str, ForwardRef('_models.ReferenceDate'), NoneType]",
+            "signature": "class RelativeAdjustableDate:\n    \"\"\"\"\"\"\n    date_type: typing.Literal[<DateType.RELATIVE_ADJUSTABLE_DATE: 'RelativeAdjustableDate'>]\n    date_moving_convention: typing.Union[str, ForwardRef('_models.DateMovingConvention'), NoneType]\n    calendars: typing.Optional[typing.List[ForwardRef('_models.CalendarRelatedResource')]]\n    tenor: str\n    reference_date: typing.Union[str, ForwardRef('_models.ReferenceDate'), NoneType]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.RelativeAdjustableDate.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.DateMovingConvention",
+                "lseg_analytics.instruments.fx_forwards.CalendarRelatedResource",
+                "lseg_analytics.common.ReferenceDate"
+            ],
+            "base_classes": [
+                "lseg_analytics.common.Date"
+            ],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "RelativeAdjustableDate.__init__",
+        "id": "lseg_analytics.common.RelativeAdjustableDate.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7140,
+        "content": "class RelativeAdjustableDate:\n    @overload\n    def __init__(self, *, tenor: str, date_moving_convention: Union[str, ForwardRef('_models.DateMovingConvention'), NoneType] = None, calendars: Optional[List[ForwardRef('_models.CalendarRelatedResource')]] = None, reference_date: Union[str, ForwardRef('_models.ReferenceDate'), NoneType] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "RelativeAdjustableDate"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.RelativeAdjustableDate"
+            ],
+            "use": [
+                "lseg_analytics.common.DateMovingConvention",
+                "lseg_analytics.instruments.fx_forwards.CalendarRelatedResource",
+                "lseg_analytics.common.ReferenceDate"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "ResourceType",
+        "id": "lseg_analytics.common.ResourceType",
+        "content": "class ResourceType(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"Resource type. Possible values are: Calendar, Currency, CrossCurrency, IrCurve, FxForwardCurve,\n    Analytics, Loan, FxSpot, NonDeliverableForward, Deposit, CrossCurrencySwap or Space.\n    \"\"\"\n\n    CALENDAR = \"Calendar\"\n    CURRENCY = \"Currency\"\n    CROSS_CURRENCY = \"CrossCurrency\"\n    IR_CURVE = \"IrCurve\"\n    FX_FORWARD_CURVE = \"FxForwardCurve\"\n    ANALYTICS = \"Analytics\"\n    LOAN = \"Loan\"\n    FX_SPOT = \"FxSpot\"\n    FX_FORWARD = \"FxForward\"\n    NON_DELIVERABLE_FORWARD = \"NonDeliverableForward\"\n    DEPOSIT = \"Deposit\"\n    CROSS_CURRENCY_SWAP = \"CrossCurrencySwap\"\n    SPACE = \"Space\"\n    INSTRUMENT = \"Instrument\"\n",
+        "metadata": {
+            "doc": "Resource type. Possible values are: Calendar, Currency, CrossCurrency, IrCurve, FxForwardCurve,\n    Analytics, Loan, FxSpot, NonDeliverableForward, Deposit, CrossCurrencySwap or Space.\n    \n",
+            "members": [
+                "ResourceType.CALENDAR = 'Calendar'",
+                "ResourceType.CURRENCY = 'Currency'",
+                "ResourceType.CROSS_CURRENCY = 'CrossCurrency'",
+                "ResourceType.IR_CURVE = 'IrCurve'",
+                "ResourceType.FX_FORWARD_CURVE = 'FxForwardCurve'",
+                "ResourceType.ANALYTICS = 'Analytics'",
+                "ResourceType.LOAN = 'Loan'",
+                "ResourceType.FX_SPOT = 'FxSpot'",
+                "ResourceType.FX_FORWARD = 'FxForward'",
+                "ResourceType.NON_DELIVERABLE_FORWARD = 'NonDeliverableForward'",
+                "ResourceType.DEPOSIT = 'Deposit'",
+                "ResourceType.CROSS_CURRENCY_SWAP = 'CrossCurrencySwap'",
+                "ResourceType.SPACE = 'Space'",
+                "ResourceType.INSTRUMENT = 'Instrument'"
+            ],
+            "signature": "class ResourceType(Enum):\n    \"\"\"\"\"\"\n    CALENDAR = 'Calendar'\n    CURRENCY = 'Currency'\n    CROSS_CURRENCY = 'CrossCurrency'\n    IR_CURVE = 'IrCurve'\n    FX_FORWARD_CURVE = 'FxForwardCurve'\n    ANALYTICS = 'Analytics'\n    LOAN = 'Loan'\n    FX_SPOT = 'FxSpot'\n    FX_FORWARD = 'FxForward'\n    NON_DELIVERABLE_FORWARD = 'NonDeliverableForward'\n    DEPOSIT = 'Deposit'\n    CROSS_CURRENCY_SWAP = 'CrossCurrencySwap'\n    SPACE = 'Space'\n    INSTRUMENT = 'Instrument'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "ServiceError",
+        "id": "lseg_analytics.common.ServiceError",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "id",
+                "type": "str"
+            },
+            {
+                "name": "code",
+                "type": "str"
+            },
+            {
+                "name": "message",
+                "type": "str"
+            },
+            {
+                "name": "status",
+                "type": "str"
+            },
+            {
+                "name": "errors",
+                "type": "List[InnerError]"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7357,
+        "content": "class ServiceError:\n    \"\"\"An object that contains the information in case of a blocking error in a calculation.\n\n    Attributes\n    ----------\n    id : str\n        The identifier of the error. Required.\n    code : str\n        The code of the error. Required.\n    message : str\n        The message in case of a blocking error in the calculation. Required.\n    status : str\n        The status of the error.\n    errors : list[~analyticsapi.models.InnerError]\n        An array of objects that contains the detailed information in case of a\n        blocking error in the calculation.\n    \n    \"\"\"\n    id: str\n    code: str\n    message: str\n    status: typing.Optional[str]\n    errors: typing.Optional[typing.List[ForwardRef('_models.InnerError')]]",
+        "metadata": {
+            "doc": "An object that contains the information in case of a blocking error in a calculation.\n\n    Attributes\n    ----------\n    id : str\n        The identifier of the error. Required.\n    code : str\n        The code of the error. Required.\n    message : str\n        The message in case of a blocking error in the calculation. Required.\n    status : str\n        The status of the error.\n    errors : list[~analyticsapi.models.InnerError]\n        An array of objects that contains the detailed information in case of a\n        blocking error in the calculation.\n    \n",
+            "annotations": "    id: str\n    code: str\n    message: str\n    status: typing.Optional[str]\n    errors: typing.Optional[typing.List[ForwardRef('_models.InnerError')]]",
+            "signature": "class ServiceError:\n    \"\"\"\"\"\"\n    id: str\n    code: str\n    message: str\n    status: typing.Optional[str]\n    errors: typing.Optional[typing.List[ForwardRef('_models.InnerError')]]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.ServiceError.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.InnerError"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "ServiceError.__init__",
+        "id": "lseg_analytics.common.ServiceError.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7407,
+        "content": "class ServiceError:\n    @overload\n    def __init__(self, *, id: str, code: str, message: str, status: Optional[str] = None, errors: Optional[List[ForwardRef('_models.InnerError')]] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "ServiceError"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.ServiceError"
+            ],
+            "use": [
+                "lseg_analytics.common.InnerError"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "ServiceErrorResponse",
+        "id": "lseg_analytics.common.ServiceErrorResponse",
+        "params": [
+            {
+                "name": "error",
+                "type": "ServiceError"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7413,
+        "content": "class ServiceErrorResponse:\n    \"\"\"The information returned in an error response.\n\n    Attributes\n    ----------\n    error : ~analyticsapi.models.ServiceError\n        An object that contains the information in case of a blocking error in\n        a calculation. Required.\n    \n    \"\"\"\n    error: _models.ServiceError",
+        "metadata": {
+            "doc": "The information returned in an error response.\n\n    Attributes\n    ----------\n    error : ~analyticsapi.models.ServiceError\n        An object that contains the information in case of a blocking error in\n        a calculation. Required.\n    \n",
+            "annotations": "    error: _models.ServiceError",
+            "signature": "class ServiceErrorResponse:\n    \"\"\"\"\"\"\n    error: _models.ServiceError"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.ServiceErrorResponse.__init__"
+            ],
+            "parent": [],
+            "use": [
+                "lseg_analytics.common.ServiceError"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "ServiceErrorResponse.__init__",
+        "id": "lseg_analytics.common.ServiceErrorResponse.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7441,
+        "content": "class ServiceErrorResponse:\n    @overload\n    def __init__(self, error: '_models.ServiceError'):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "ServiceErrorResponse"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.ServiceErrorResponse"
+            ],
+            "use": [
+                "lseg_analytics.common.ServiceError"
+            ],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "SettlementType",
+        "id": "lseg_analytics.common.SettlementType",
+        "content": "class SettlementType(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"Type of SettlementType.\"\"\"\n\n    CASH = \"Cash\"\n    PHYSICAL = \"Physical\"\n",
+        "metadata": {
+            "doc": "Type of SettlementType.\n",
+            "members": [
+                "SettlementType.CASH = 'Cash'",
+                "SettlementType.PHYSICAL = 'Physical'"
+            ],
+            "signature": "class SettlementType(Enum):\n    \"\"\"\"\"\"\n    CASH = 'Cash'\n    PHYSICAL = 'Physical'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "Status",
+        "id": "lseg_analytics.common.Status",
+        "content": "class Status(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"Status of the resource.\"\"\"\n\n    ACTIVE = \"Active\"\n    DELETED = \"Deleted\"\n",
+        "metadata": {
+            "doc": "Status of the resource.\n",
+            "members": [
+                "Status.ACTIVE = 'Active'",
+                "Status.DELETED = 'Deleted'"
+            ],
+            "signature": "class Status(Enum):\n    \"\"\"\"\"\"\n    ACTIVE = 'Active'\n    DELETED = 'Deleted'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "TenorType",
+        "id": "lseg_analytics.common.TenorType",
+        "content": "class TenorType(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"The tenor type.\"\"\"\n\n    ODD = \"Odd\"\n    LONG = \"Long\"\n    \"\"\"Long-term tenor.\"\"\"\n    IMM = \"IMM\"\n    \"\"\"Tenor, end date of which is the third Wednesday of March, June, September and December.\"\"\"\n    BEGINNING_OF_MONTH = \"BeginningOfMonth\"\n    \"\"\"Tenor, end date of which is the first business day of the month.\"\"\"\n    END_OF_MONTH = \"EndOfMonth\"\n    \"\"\"Tenor, end date of which is the last business day of the month.\"\"\"\n",
+        "metadata": {
+            "doc": "The tenor type.\n",
+            "members": [
+                "TenorType.ODD = 'Odd'",
+                "TenorType.LONG = 'Long'",
+                "TenorType.IMM = 'IMM'",
+                "TenorType.BEGINNING_OF_MONTH = 'BeginningOfMonth'",
+                "TenorType.END_OF_MONTH = 'EndOfMonth'"
+            ],
+            "signature": "class TenorType(Enum):\n    \"\"\"\"\"\"\n    ODD = 'Odd'\n    LONG = 'Long'\n    IMM = 'IMM'\n    BEGINNING_OF_MONTH = 'BeginningOfMonth'\n    END_OF_MONTH = 'EndOfMonth'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "Time",
+        "id": "lseg_analytics.common.Time",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "local_time",
+                "type": "time"
+            },
+            {
+                "name": "time_zone_id",
+                "type": "str"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7448,
+        "content": "class Time:\n    \"\"\"Time and timezone specification.\n\n    Attributes\n    ----------\n    local_time : ~datetime.time\n        The specified time expressed in hh:mm:ss format (e.g., '17:00:00').\n        Required.\n    time_zone_id : str\n        The time zone of the specified time.\n    \n    \"\"\"\n    local_time: time\n    time_zone_id: typing.Optional[str]",
+        "metadata": {
+            "doc": "Time and timezone specification.\n\n    Attributes\n    ----------\n    local_time : ~datetime.time\n        The specified time expressed in hh:mm:ss format (e.g., '17:00:00').\n        Required.\n    time_zone_id : str\n        The time zone of the specified time.\n    \n",
+            "annotations": "    local_time: time\n    time_zone_id: typing.Optional[str]",
+            "signature": "class Time:\n    \"\"\"\"\"\"\n    local_time: time\n    time_zone_id: typing.Optional[str]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.Time.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "Time.__init__",
+        "id": "lseg_analytics.common.Time.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7482,
+        "content": "class Time:\n    @overload\n    def __init__(self, *, local_time: datetime.time, time_zone_id: Optional[str] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "Time"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.Time"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "ClassChunk",
+        "name": "ValidityPeriod",
+        "id": "lseg_analytics.common.ValidityPeriod",
+        "params": [
+            {
+                "name": "*",
+                "type": "python-keyword"
+            },
+            {
+                "name": "start_date",
+                "type": "date"
+            },
+            {
+                "name": "end_date",
+                "type": "date"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7531,
+        "content": "class ValidityPeriod:\n    \"\"\"An object to determine the validity period.\n\n    Attributes\n    ----------\n    start_date : ~datetime.date\n        The start date of the validity period. The value is expressed in ISO\n        8601 format: YYYY-MM-DD (e.g., 2023-01-01).\n    end_date : ~datetime.date\n        The end date of the validity period. The value is expressed in ISO 8601\n        format: YYYY-MM-DD (e.g., 2024-01-01).\n    \n    \"\"\"\n    start_date: typing.Optional[datetime.date]\n    end_date: typing.Optional[datetime.date]",
+        "metadata": {
+            "doc": "An object to determine the validity period.\n\n    Attributes\n    ----------\n    start_date : ~datetime.date\n        The start date of the validity period. The value is expressed in ISO\n        8601 format: YYYY-MM-DD (e.g., 2023-01-01).\n    end_date : ~datetime.date\n        The end date of the validity period. The value is expressed in ISO 8601\n        format: YYYY-MM-DD (e.g., 2024-01-01).\n    \n",
+            "annotations": "    start_date: typing.Optional[datetime.date]\n    end_date: typing.Optional[datetime.date]",
+            "signature": "class ValidityPeriod:\n    \"\"\"\"\"\"\n    start_date: typing.Optional[datetime.date]\n    end_date: typing.Optional[datetime.date]"
+        },
+        "dependencies": {
+            "children": [
+                "lseg_analytics.common.ValidityPeriod.__init__"
+            ],
+            "parent": [],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "OverloadedMethodChunk",
+        "name": "ValidityPeriod.__init__",
+        "id": "lseg_analytics.common.ValidityPeriod.__init__",
+        "params": [
+            {
+                "name": "args",
+                "type": "Any"
+            },
+            {
+                "name": "kwargs",
+                "type": "Any"
+            }
+        ],
+        "file_path": "lseg_analytics_basic_client/models/_models.py",
+        "line_number": 7568,
+        "content": "class ValidityPeriod:\n    @overload\n    def __init__(self, *, start_date: Optional[datetime.date] = None, end_date: Optional[datetime.date] = None):\n        \"\"\"\"\"\"\n\n    @overload\n    def __init__(self, mapping: Mapping[str, Any]):\n        \"\"\"\n        Parameters\n        ----------\n        mapping : Mapping[str, Any]\n            raw JSON to initialize the model.\n        \n        \"\"\"\n\n    def __init__(self, *args: Any, **kwargs: Any) -> None:\n        \"\"\"\"\"\"",
+        "metadata": {
+            "doc": "",
+            "signature": "__init__(self, *args: Any, **kwargs: Any) -> None:",
+            "class": "ValidityPeriod"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [
+                "lseg_analytics.common.ValidityPeriod"
+            ],
+            "use": [],
+            "base_classes": [],
+            "sub_classes": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "WeekDay",
+        "id": "lseg_analytics.common.WeekDay",
+        "content": "class WeekDay(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"Days of the week. Day names written in full.\"\"\"\n\n    MONDAY = \"Monday\"\n    TUESDAY = \"Tuesday\"\n    WEDNESDAY = \"Wednesday\"\n    THURSDAY = \"Thursday\"\n    FRIDAY = \"Friday\"\n    SATURDAY = \"Saturday\"\n    SUNDAY = \"Sunday\"\n",
+        "metadata": {
+            "doc": "Days of the week. Day names written in full.\n",
+            "members": [
+                "WeekDay.MONDAY = 'Monday'",
+                "WeekDay.TUESDAY = 'Tuesday'",
+                "WeekDay.WEDNESDAY = 'Wednesday'",
+                "WeekDay.THURSDAY = 'Thursday'",
+                "WeekDay.FRIDAY = 'Friday'",
+                "WeekDay.SATURDAY = 'Saturday'",
+                "WeekDay.SUNDAY = 'Sunday'"
+            ],
+            "signature": "class WeekDay(Enum):\n    \"\"\"\"\"\"\n    MONDAY = 'Monday'\n    TUESDAY = 'Tuesday'\n    WEDNESDAY = 'Wednesday'\n    THURSDAY = 'Thursday'\n    FRIDAY = 'Friday'\n    SATURDAY = 'Saturday'\n    SUNDAY = 'Sunday'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    },
+    {
+        "type": "EnumChunk",
+        "name": "YearBasis",
+        "id": "lseg_analytics.common.YearBasis",
+        "content": "class YearBasis(str, Enum, metaclass=CaseInsensitiveEnumMeta):\n    \"\"\"Year basis convention for a currency. Possible values are 360 or 365.\"\"\"\n\n    ENUM_360 = \"360\"\n    ENUM_365 = \"365\"\n",
+        "metadata": {
+            "doc": "Year basis convention for a currency. Possible values are 360 or 365.\n",
+            "members": [
+                "YearBasis.ENUM_360 = '360'",
+                "YearBasis.ENUM_365 = '365'"
+            ],
+            "signature": "class YearBasis(Enum):\n    \"\"\"\"\"\"\n    ENUM_360 = '360'\n    ENUM_365 = '365'"
+        },
+        "dependencies": {
+            "children": [],
+            "parent": [],
+            "use": []
+        },
+        "source_module": "lseg_analytics.common",
+        "module_version": "1.0.0b9.post2"
+    }
+]
