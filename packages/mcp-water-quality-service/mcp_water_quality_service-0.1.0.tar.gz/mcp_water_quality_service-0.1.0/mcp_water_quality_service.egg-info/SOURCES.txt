@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+mcp_water_quality_service.egg-info/PKG-INFO
+mcp_water_quality_service.egg-info/SOURCES.txt
+mcp_water_quality_service.egg-info/dependency_links.txt
+mcp_water_quality_service.egg-info/requires.txt
+mcp_water_quality_service.egg-info/top_level.txt
