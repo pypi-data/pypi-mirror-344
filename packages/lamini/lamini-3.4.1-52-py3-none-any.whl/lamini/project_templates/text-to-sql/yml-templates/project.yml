@@ -1,0 +1,9 @@
+Lamini:
+  api_key: <your_api_key>
+  base_url: https://app.lamini.ai
+  base_url_inf: https://api.lamini.ai/inf
+
+Project:
+  project_name: initial_template
+  description: project_init
+  model: meta-llama/Meta-Llama-3.1-8B-Instruct
