@@ -1,0 +1,8 @@
+pathlib_abc/__init__.py,sha256=qfG_i8usEZTKDG9r6nhz3mPDzyCZIdXE-nNOgrTUWy0,15120
+pathlib_abc/_fnmatch.py,sha256=dH_t3wOYli-oGWRIiVIhnB8mqASAdgl2vbTf2FYTWL0,6791
+pathlib_abc/_glob.py,sha256=gu1xBcPVBazUeZEvBAlS7bKxF3aUB-a6UgcVR1jt51c,19588
+pathlib_abc/_os.py,sha256=7m62_x270jAff4mgxgK8kSm9C-u_1SjB3IVNqhpMSbA,18261
+pathlib_abc-0.4.2.dist-info/METADATA,sha256=EkP4gwuOuVGmQk41015qEmWOjkyi67xcQQYej94ZMKs,4617
+pathlib_abc-0.4.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pathlib_abc-0.4.2.dist-info/licenses/LICENSE.txt,sha256=eb-nQWR9U7dT_1YVAPI7zvSpG4ruBAI0-4PmXPldFE0,2279
+pathlib_abc-0.4.2.dist-info/RECORD,,
