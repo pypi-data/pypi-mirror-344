@@ -1,0 +1,7 @@
+README.md
+setup.py
+id3classifier_mystyle.egg-info/PKG-INFO
+id3classifier_mystyle.egg-info/SOURCES.txt
+id3classifier_mystyle.egg-info/dependency_links.txt
+id3classifier_mystyle.egg-info/requires.txt
+id3classifier_mystyle.egg-info/top_level.txt
