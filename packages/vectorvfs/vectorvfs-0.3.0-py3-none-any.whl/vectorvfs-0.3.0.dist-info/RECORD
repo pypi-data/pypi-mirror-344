@@ -1,0 +1,11 @@
+vectorvfs/__init__.py,sha256=VrXpHDu3erkzwl_WXrqINBm9xWkcyUy53IQOj042dOs,22
+vectorvfs/cli.py,sha256=NP0Km-7f39LohXeN7YqH3oEkWo2TlqnDHfyLWL5AaTU,3967
+vectorvfs/encoders.py,sha256=xtAwc6O2AS7Mbr6ocKRMgz2KsqxBEIzKVki0L2A5OAY,3234
+vectorvfs/utils.py,sha256=t6hUQgkMFCIyyKQcb18DUUqDkDQi4Krj0xD7pHLEiRI,980
+vectorvfs/vfsstore.py,sha256=ugdgRU5C9-XlxjMwhJ8DMBMXw695LBrAB9yuyfozdEg,2150
+vectorvfs-0.3.0.dist-info/licenses/LICENSE,sha256=pUV0Vq_UWxQJTdedn_YqfkOHL2lMfy7Jltw-hUkViko,11349
+vectorvfs-0.3.0.dist-info/METADATA,sha256=kyK26jyXIvzqJFgxyIdahV1f6a0e5-Nx8qRcicezsHE,2192
+vectorvfs-0.3.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+vectorvfs-0.3.0.dist-info/entry_points.txt,sha256=kBPA_huthZ-00IJu3AkPH_d13ebxwYBwX4APIPL-EZ4,42
+vectorvfs-0.3.0.dist-info/top_level.txt,sha256=L5EXoD0sX3K7BCYGviC-zWAiHy7EPkgTpF-5A9gfAi8,10
+vectorvfs-0.3.0.dist-info/RECORD,,
