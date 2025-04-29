@@ -1,0 +1,52 @@
+[build-system]
+requires = [
+	"setuptools>=77.0.3", # For PEP 639 license identifier
+	"wheel", 
+	"cython"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ctfr"
+dynamic = ["version", "authors"]
+#authors = [
+#  { name="Bernardo Boechat", email="bernardoant@poli.ufrj.br" },
+#  { name="Luiz Wagner Pereira Biscainho", email="cpneqs@gmail.com" },
+#  { name="Mauricio do Vale Madeira da Costa", email="mauriciomvc@gmail.com" },
+#]
+description = "Efficient toolbox for computing combined time-frequency representations of audio signals."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy", "librosa", "scipy", "pooch"]
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3 :: Only",
+    "Development Status :: 1 - Planning",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Cython",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Sound/Audio",
+]
+keywords = ["audio", "music", "sound", "music information retrieval", "time-frequency representations"]
+
+[project.urls]
+Homepage = "https://github.com/b-boechat/ctfr"
+Issues = "https://github.com/b-boechat/ctfr/issues"
+Documentation = "https://ctfr.readthedocs.io/en/latest/"
+
+[project.optional-dependencies]
+dev = ["cython>=3", "setuptools>=69", "pip>=24", "matplotlib>=3.3"]
+display = ["matplotlib>=3.3"]
+
+[tool.setuptools.dynamic]
+version = {attr = "ctfr.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
