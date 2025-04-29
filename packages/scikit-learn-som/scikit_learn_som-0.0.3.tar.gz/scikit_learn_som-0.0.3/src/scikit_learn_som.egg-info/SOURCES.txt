@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/scikit_learn_som.egg-info/PKG-INFO
+src/scikit_learn_som.egg-info/SOURCES.txt
+src/scikit_learn_som.egg-info/dependency_links.txt
+src/scikit_learn_som.egg-info/requires.txt
+src/scikit_learn_som.egg-info/top_level.txt
+src/som/__init__.py
+src/som/som.py
+tests/test_som.py
