@@ -1,0 +1,16 @@
+mqpy/__init__.py,sha256=JbJ2avGkW9oxllsSCrMQNoh2GLK2npnuRrrd8rmEuIk,256
+mqpy/__main__.py,sha256=q5xz4QGSb0nAsGQkWGrh5R_Zp8mm0fL8djTaK9dcOPw,137
+mqpy/book.py,sha256=FGrJOCnVYsWp3szjL4b5sY64wlB4mRhJutFBKlpqYp0,1479
+mqpy/indicator_connector.py,sha256=WN_vHnlp30di4kxVY5H4WobeGi70BQfPv3luUF7-poY,78120
+mqpy/logger.py,sha256=gT-rO7CXS_wXuTo2J1XJOShS6GyMOdfCKDyH04bw3Y4,1696
+mqpy/rates.py,sha256=eXHkvY5RXmZelXQy9HEjjXpGmPYfbybTZIj3_YWh0Hg,2645
+mqpy/template.py,sha256=rpYEe5ZoA_W6G2X509ey8obtnakEdMbwffcyH6FFD6k,17587
+mqpy/tick.py,sha256=PG3Fp1uWVmvcCInq37qOOwo3VhFgVWDr-t-VgqtJ4hc,2095
+mqpy/trade.py,sha256=7Je3_xe9AiFAtJH2PP7NwcoThcJuM-TKQZE6f-BRnno,19281
+mqpy/utilities.py,sha256=I6inqes1za1aNZNaWWhJdE83a7qX2WukY_5UkrbE99g,5173
+mqpy-0.6.11.dist-info/LICENSE,sha256=LppknE49t-61_lwWxaRVBlt7Y6eaOEwBTQMti8ol_bs,1092
+mqpy-0.6.11.dist-info/METADATA,sha256=fivUANuzAD5BGeSiLWEbBq6DItYNE2p5g3ZFaNbCu1g,5108
+mqpy-0.6.11.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+mqpy-0.6.11.dist-info/entry_points.txt,sha256=QBX3M4e0QzoUIvngMEymzjicahqzGntuBsmoKNqgW24,44
+mqpy-0.6.11.dist-info/top_level.txt,sha256=8mYvVrgW1ZLW7YMiqpD_DY-i5obtrZzMTZ5xsV-kZrg,5
+mqpy-0.6.11.dist-info/RECORD,,
