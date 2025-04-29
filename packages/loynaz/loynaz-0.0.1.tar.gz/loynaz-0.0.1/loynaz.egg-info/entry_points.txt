@@ -1,0 +1,4 @@
+[console_scripts]
+batch_edge = loynaz.batch:main
+edge = loynaz.app:main
+test_edge = loynaz.test:main
