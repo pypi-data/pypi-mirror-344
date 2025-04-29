@@ -1,0 +1,37 @@
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+For best results and maximum compatibility (especially to match the reference script and avoid edge artifacts), you should pad with trim zeros at both the start and end, and pad zeros in the middle when preparing your mixture for chunking in the demix method.
+```python
+# ...existing code...
+mixture = np.concatenate(
+    (np.zeros((2, self.trim), dtype="float32"), mix, np.zeros((2, pad), dtype="float32"), np.zeros((2, self.trim), dtype="float32")), 1
+)
+# ...existing code...
+```
+
+------------------------------------------------------------------------------------------------------------
+But also apply the compensation (and negative sign) when creating the secondary source (the "other" stem).
+
+Find where you have:: self.secondary_source = mix.T - source.T
+
+Change it to: self.secondary_source = (-source.T * self.compensate) + mix.T
+
+This ensures the secondary stem is properly compensated and matches the reference script’s output.
+--------------------------------------------------------------------------------------------------------------
+
+Restoring the original peak:
+The reference script ensures the output has the same peak amplitude as the input.
+Your open file normalizes the output, but not necessarily to the original input peak—it uses a fixed threshold.
+
+Effect:
+
+If you want the output to have the same loudness as the input, you should multiply the separated output by the original input peak (as in the reference script).
+```python
+peak = np.abs(mix).max()
+mix = spec_utils.normalize(wave=mix, max_peak=self.normalization_threshold, min_peak=self.amplification_threshold)
+source = self.demix(mix)
+source *= peak
+-------------------------------------------------------------------------------------------------------------------------------
