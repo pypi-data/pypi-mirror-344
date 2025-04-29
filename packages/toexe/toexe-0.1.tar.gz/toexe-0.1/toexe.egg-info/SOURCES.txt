@@ -1,0 +1,8 @@
+README.md
+setup.py
+toexe/__init__.py
+toexe/toexe.py
+toexe.egg-info/PKG-INFO
+toexe.egg-info/SOURCES.txt
+toexe.egg-info/dependency_links.txt
+toexe.egg-info/top_level.txt
