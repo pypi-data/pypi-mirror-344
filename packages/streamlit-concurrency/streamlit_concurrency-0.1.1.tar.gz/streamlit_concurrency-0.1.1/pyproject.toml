@@ -1,0 +1,23 @@
+[project]
+name = "streamlit-concurrency"
+description = "Easier and safer concurrency for Streamlit"
+version = "0.1.1"
+authors = [
+    {name = "Wang Guan", email = "momocraft@gmail.com"},
+]
+dependencies = []
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "Apache 2.0"}
+
+[tool.ruff]
+
+[tool.ruff.lint]
+ignore = [
+    'E402', # 
+    "F401", # unused import
+    'F541', # f-string is missing placeholders
+]
+
+# [tool.pdm]
+# distribution = false
