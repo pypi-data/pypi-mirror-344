@@ -1,0 +1,11 @@
+setup.py
+bixconnect/__init__.py
+bixconnect/dashboard_manager.py
+bixconnect/data_manager.py
+bixconnect/hel.py
+bixconnect/request.py
+bixconnect/system_manager.py
+bixconnect.egg-info/PKG-INFO
+bixconnect.egg-info/SOURCES.txt
+bixconnect.egg-info/dependency_links.txt
+bixconnect.egg-info/top_level.txt
