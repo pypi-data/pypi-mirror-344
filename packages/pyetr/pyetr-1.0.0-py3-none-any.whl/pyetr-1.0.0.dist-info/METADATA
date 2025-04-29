@@ -1,0 +1,42 @@
+Metadata-Version: 2.3
+Name: pyetr
+Version: 1.0.0
+Summary: A Python implementation of the Erotetic Theory of Reasoning (ETR) as presented in the book Reason & Inquiry, OUP 2023
+License: MIT
+Author: Philipp Koralus
+Author-email: philipp.koralus@philosophy.ox.ac.uk
+Requires-Python: >=3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydantic (>=2.4.2,<3.0.0)
+Requires-Dist: pyparsing (>=3.1.0,<4.0.0)
+Requires-Dist: pysmt (>=0.9.6,<0.10.0)
+Project-URL: Documentation, https://oxford-hai-lab.github.io/PyETR
+Project-URL: Source, https://github.com/Oxford-HAI-Lab/PyETR
+Description-Content-Type: text/markdown
+
+# PyETR
+
+Welcome to the PyETR Project!
+
+---
+
+**Documentation**: https://oxford-hai-lab.github.io/PyETR
+
+**Source**: https://github.com/Oxford-HAI-Lab/PyETR
+
+---
+
+## Installation
+
+Make sure you have [python 3.11 or above](https://www.python.org/downloads/) installed.
+
+Then install PyETR with:
+
+```py
+pip install pyetr
+```
+
