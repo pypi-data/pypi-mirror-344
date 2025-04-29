@@ -1,0 +1,2 @@
+[console_scripts]
+clapikit = clapikit.cli:main
