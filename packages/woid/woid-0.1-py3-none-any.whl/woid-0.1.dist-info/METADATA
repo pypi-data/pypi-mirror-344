@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: woid
+Version: 0.1
+Summary: Tool for managing multi-project workspaces.
+Project-URL: repository, https://github.com/JaagupAverin/woid
+Project-URL: homepage, https://github.com/JaagupAverin/woid
+Author-email: Jaagup Averin <jaagup.averin@gmail.com>
+License: LICENSE.md
+License-File: LICENSE.md
+Keywords: git,management,project,workspace
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Typing :: Typed
+Requires-Python: <4.0,>=3.13
+Requires-Dist: click==8.1.*
+Requires-Dist: gitpython==3.1.*
+Requires-Dist: msgspec==0.19.*
+Requires-Dist: structlog==25.3.*
+Requires-Dist: typer==0.15.*
+Description-Content-Type: text/markdown
+
+# woid
