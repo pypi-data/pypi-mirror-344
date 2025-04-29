@@ -1,0 +1,44 @@
+Metadata-Version: 2.3
+Name: pyetr
+Version: 0.2.5
+Summary: 
+Author: mark-todd
+Author-email: markpeter.todd@hotmail.co.uk
+Requires-Python: >=3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydantic (>=2.4.2,<3.0.0)
+Requires-Dist: pyparsing (>=3.1.0,<4.0.0)
+Requires-Dist: pysmt (>=0.9.6,<0.10.0)
+Description-Content-Type: text/markdown
+
+# PyETR
+
+## Documentation
+
+Please see the documentation page [here](https://oxford-hai-lab.github.io/PyETR/)
+
+## Installation
+
+Make sure you have [python 3.11 or above](https://www.python.org/downloads/) and [poetry](https://python-poetry.org/docs/#installation) installed
+
+Then just run:
+
+`poetry install`
+
+## Testing
+
+For a test program, enter the tests directory and run:
+
+`poetry run pytest -n auto`
+
+For more advanced tests:
+
+`poetry run pytest -n auto --viewops`
+
+For coverage of pyetr (from tests folder):
+
+`poetry run pytest -n 8 --viewops --cov=../pyetr/ --cov-report=term-missing`
+

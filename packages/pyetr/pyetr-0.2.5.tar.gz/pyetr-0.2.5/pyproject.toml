@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "pyetr"
+version = "0.2.5"
+description = ""
+authors = ["mark-todd <markpeter.todd@hotmail.co.uk>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+pyparsing = "^3.1.0"
+pydantic = "^2.4.2"
+pysmt = "^0.9.6"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-xdist = "^3.3.1"
+pytest-cov = "^4.1.0"
+pre-commit = "^3.3.3"
+autoflake = "^2.2.0"
+isort = "^5.12.0"
+black = "^24.3.0"
+mkdocs = "^1.6.0"
+mkdocs-material = "^9.5.28"
+pyright = "^1.1.396"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+venvPath="./"
+venv=".venv"
+
+[tool.poetry.scripts]
+case-index = "scripts.generate_case_index:main"
+case-list = "scripts.generate_case_list:main"
+infer-index = "scripts.generate_inference_page:main"
+view-methods = "scripts.generate_view_methods:main"
+gen-utils = "scripts.generate_utils_page:main"
+gen-case-all = "scripts.generate_case_all:main"
+gen-all = "scripts.generate_all:main"
+check = "scripts.all_checks:main"
+
+[tool.poetry_bumpversion.file."pyetr/__init__.py"]
