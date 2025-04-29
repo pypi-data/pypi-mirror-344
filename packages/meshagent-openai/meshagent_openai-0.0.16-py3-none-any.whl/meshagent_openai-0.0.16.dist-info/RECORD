@@ -1,0 +1,10 @@
+meshagent/openai/__init__.py,sha256=4JRby-ltGfJzrNYhJkMNIpVc2ml2zL_JkkFC0T1_8Vk,174
+meshagent/openai/version.py,sha256=FVaR7FECqXYVLPTbZJc8xaVE53Dla9KUQqy1YxYZH0A,22
+meshagent/openai/tools/__init__.py,sha256=RBU_J4qRDuBaaUdi6jpgpuMlIbvT30QmTBrZrYLwsUU,185
+meshagent/openai/tools/completions_adapter.py,sha256=yEZcIlfgvNXUjgppZsRIX147WcQGpNh3imUJsSyITLk,15229
+meshagent/openai/tools/responses_adapter.py,sha256=MbFXd8yVOBK6HBa4rR4FynL1Ihe09jRL0tyEbs6uLjY,23350
+meshagent_openai-0.0.16.dist-info/licenses/LICENSE,sha256=eTt0SPW-sVNdkZe9PS_S8WfCIyLjRXRl7sUBWdlteFg,10254
+meshagent_openai-0.0.16.dist-info/METADATA,sha256=-NMspnlwa18JgTydF3FtIyykudH8M_QJYWwM7ua1EDE,633
+meshagent_openai-0.0.16.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+meshagent_openai-0.0.16.dist-info/top_level.txt,sha256=GlcXnHtRP6m7zlG3Df04M35OsHtNXy_DY09oFwWrH74,10
+meshagent_openai-0.0.16.dist-info/RECORD,,
