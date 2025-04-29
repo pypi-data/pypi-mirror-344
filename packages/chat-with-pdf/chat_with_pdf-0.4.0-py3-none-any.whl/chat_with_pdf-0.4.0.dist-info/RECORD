@@ -1,0 +1,17 @@
+chat_with_pdf/__init__.py,sha256=FqHQPIziZJgArBEQli3ft2qHvkLLKl1fN4gtRLplVFQ,33
+chat_with_pdf/chat_engine.py,sha256=hyVbeL9TUAGM3_tlSg4VS3bbkl62OIv2-_pfYT5-vlM,2981
+chat_with_pdf/embedder.py,sha256=t5jrsyu-acpTkmaudJajyHLWakNqdK-Pgs7VHuSKUrM,401
+chat_with_pdf/integrations/gpts/__init__.py,sha256=gNU3hBYosUFXPMGJcC_8717kYrdVRPzqUTL_2s7Su2g,1121
+chat_with_pdf/integrations/gpts/base.py,sha256=SRLYNOHgN5Ika09H55B02tKJaVSmZrpgH5Ffu2pZwvA,711
+chat_with_pdf/integrations/gpts/deepseek.py,sha256=dTG_CG_7RPhmr2wM-lA2Zb8gYP2TeT002WSUGqMpRME,2412
+chat_with_pdf/integrations/gpts/openai.py,sha256=-T06D7Uc1lhB53MQI2MEUJdlBLcCsDO-YT_vKtDTtDA,2961
+chat_with_pdf/integrations/gpts/perplexity.py,sha256=usE5d2n9dbfBTcvA7bPyA6_wpNaUOisagbkzs9mjGj0,1992
+chat_with_pdf/pdf_parser.py,sha256=SoSowIW_iF49pD-Jfb-jdedIywbsrPfhEnUdKnv9LwU,1252
+chat_with_pdf/retriever.py,sha256=xsBJSF9_VKi2GCKy0dBMf8biY7-vpo_IXgZQrFGFFXI,682
+chat_with_pdf/settings.py,sha256=ozZeYkbY4x7Ii4T4I5DAbLwnTAUfQ9FiTMXUysvnWkg,576
+chat_with_pdf/setup.py,sha256=XagNgmFN72IqneT_oM6Rq21_3QD8rV-2gRqKzvIikB0,398
+chat_with_pdf/utils.py,sha256=MVzEZlqiTq2--pTyV81tGkycTnhuSh1qTUjtrjOCuBU,825
+chat_with_pdf-0.4.0.dist-info/LICENSE,sha256=rP3eN60JVfS4zM6iDkY2w9GeyHEBFfJz-Hzw2E2w3uE,1069
+chat_with_pdf-0.4.0.dist-info/METADATA,sha256=Rv1g_2mLJo2d0eYwvUFUN52sL6wdKIWOkdn-TRNZTDk,5393
+chat_with_pdf-0.4.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+chat_with_pdf-0.4.0.dist-info/RECORD,,
