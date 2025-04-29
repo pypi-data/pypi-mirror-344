@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+scrapemaster/scrapemaster.egg-info/PKG-INFO
+scrapemaster/scrapemaster.egg-info/SOURCES.txt
+scrapemaster/scrapemaster.egg-info/dependency_links.txt
+scrapemaster/scrapemaster.egg-info/requires.txt
+scrapemaster/scrapemaster.egg-info/top_level.txt
+tests/test_core.py
+tests/test_utils.py
