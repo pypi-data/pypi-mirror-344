@@ -1,0 +1,9 @@
+LICENSE.lic
+README.md
+setup.py
+mlflow_logger/__init__.py
+mlflow_logger/mlflow_logger.py
+mlflow_logger.egg-info/PKG-INFO
+mlflow_logger.egg-info/SOURCES.txt
+mlflow_logger.egg-info/dependency_links.txt
+mlflow_logger.egg-info/top_level.txt
