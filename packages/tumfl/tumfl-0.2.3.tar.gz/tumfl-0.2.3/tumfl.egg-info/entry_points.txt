@@ -1,0 +1,2 @@
+[console_scripts]
+name = tumfl.__main__:main
