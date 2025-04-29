@@ -1,0 +1,2 @@
+[console_scripts]
+pom_tool = signalwire.pom_tool:main
