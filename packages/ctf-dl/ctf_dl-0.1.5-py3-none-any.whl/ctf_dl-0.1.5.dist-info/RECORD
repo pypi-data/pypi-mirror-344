@@ -1,0 +1,15 @@
+ctf_dl-0.1.5.dist-info/licenses/LICENSE,sha256=RsfnJzxFwAQp4PY3DXBoqgaivGPNgxaeGf5B-O2sLcY,1068
+ctfdl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ctfdl/cli.py,sha256=_LuKndo4dIxAtXs1aPuaZXXcW-aP9Oh0UoNi770qE6E,3954
+ctfdl/downloader.py,sha256=-pudZCVbqvURunGd_twHSe_P1_mKdtlOQXXlGu38rEQ,3951
+ctfdl/filters.py,sha256=DWdBSB1_E8EOMrseG4zjQX4lzkyah5dVZynDusAKuMI,1574
+ctfdl/folder_structure.py,sha256=FTQ-Qa6K8mS5DV5jC_Ri08M6JYc8zVWEzjhbLgEfDiM,1751
+ctfdl/template_writer.py,sha256=3sBg4nCQqTP0_pERamEJlDG6NIre18647-032TDFE1U,2691
+ctfdl/utils.py,sha256=eUk99sqlUSQb3ANwUdCLVpAMFtmgUyVaHc3CpSuKgR0,2440
+ctfdl/templates/default.md.jinja,sha256=My3EaWrwBS2lmR6aIwbuxgzFg5uIy6Rbi8Wv3UfM1fQ,316
+ctfdl/templates/folder_structure/default.path.jinja,sha256=ku7DeSDhylP2071yr4WUTx6ugSXI7InpcVMHCwZeyIs,65
+ctf_dl-0.1.5.dist-info/METADATA,sha256=dlXO57DIL8lyVNp8Avs698QjEU7YT_JK6ev7Am9664s,2985
+ctf_dl-0.1.5.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+ctf_dl-0.1.5.dist-info/entry_points.txt,sha256=76tX4TTf-clBg1aMg8AA_FUuC-DkD2SLRdAx-14ehIw,42
+ctf_dl-0.1.5.dist-info/top_level.txt,sha256=QlBI6cZkCINmWQweZ-TOEIQKc6JrMGm6WSIuZn_TBWg,6
+ctf_dl-0.1.5.dist-info/RECORD,,
