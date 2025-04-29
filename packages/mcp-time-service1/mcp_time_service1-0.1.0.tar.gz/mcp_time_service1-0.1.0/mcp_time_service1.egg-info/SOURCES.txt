@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+mcp_time_service1/__init__.py
+mcp_time_service1/__main__.py
+mcp_time_service1.egg-info/PKG-INFO
+mcp_time_service1.egg-info/SOURCES.txt
+mcp_time_service1.egg-info/dependency_links.txt
+mcp_time_service1.egg-info/entry_points.txt
+mcp_time_service1.egg-info/requires.txt
+mcp_time_service1.egg-info/top_level.txt
