@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: a2a-proxy-server
+Version: 0.1.1
+Summary: Add your description here
+Author-email: amandal-cn <mandal.ashish@codenation.co.in>
+Requires-Python: >=3.13
+Requires-Dist: click>=8.1.8
+Requires-Dist: google-a2a
+Requires-Dist: langchain-anthropic>=0.3.12
+Requires-Dist: langchain-mcp-adapters>=0.0.9
+Requires-Dist: langchain-ollama>=0.3.2
+Requires-Dist: langchain>=0.3.24
+Requires-Dist: langgraph>=0.3.34
+Requires-Dist: python-dotenv>=1.1.0

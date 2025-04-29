@@ -1,0 +1,2 @@
+[console_scripts]
+a2a-proxy-server = a2a_proxy_server:main

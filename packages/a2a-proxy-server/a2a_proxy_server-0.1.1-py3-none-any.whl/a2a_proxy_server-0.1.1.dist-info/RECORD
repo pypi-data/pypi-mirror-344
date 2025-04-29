@@ -1,0 +1,9 @@
+a2a_proxy_server/__init__.py,sha256=jMFy0wwaGRmP1vbfQ0lewjz7ixn9kUeVrr1k3f83b_4,3975
+a2a_proxy_server/agent.py,sha256=2uIRyqumavsEmTwctnKM6tEie6QCpizkFtlm-3gYCqs,3348
+a2a_proxy_server/server.py,sha256=ZnSEdalnzdW3GWdP_ESa8fp3GMU8W4mgTXKKLXbnqOI,4965
+a2a_proxy_server/task_manager.py,sha256=7nDraDJ5qezz6XANjq8Rhk_xtL42o6q5LQfyxMV2Opw,4018
+a2a_proxy_server/configs/sample-agent.yml,sha256=d5knqp5kZaEGW-6e4xOUhieSp-xo9FFmed6lhGk1N6U,727
+a2a_proxy_server-0.1.1.dist-info/METADATA,sha256=5sqK5vR9SKSBIaqKkBEF23xMnMUhM7O_TjxVMhDVmE4,460
+a2a_proxy_server-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+a2a_proxy_server-0.1.1.dist-info/entry_points.txt,sha256=ZAW74b_K2BPv_FCSOvWickEe-uHBNCftsQwz1KePvh8,59
+a2a_proxy_server-0.1.1.dist-info/RECORD,,
