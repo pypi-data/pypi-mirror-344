@@ -1,0 +1,12 @@
+trytond/modules/sale_credit_limit/__init__.py,sha256=zU0WW6RaG7QsNND1F6Qulu3oyv1dBSPHrlm3yu6pU1k,349
+trytond/modules/sale_credit_limit/party.py,sha256=qUCjT4ro9fZPzMqWjkZ0Kfkuw9Yl6YUKshEWxIjg9P4,2767
+trytond/modules/sale_credit_limit/sale.py,sha256=WR0oLMj83HrDUdAoe7-QViAvMG-uU4guK24qka5-IUE,1822
+trytond/modules/sale_credit_limit/tryton.cfg,sha256=q2EFL65DvB_Mqq-WvCAmVboz_j72DRozC7jKKHwJQM4,118
+trytond/modules/sale_credit_limit/tests/__init__.py,sha256=-5OdjQ8rEVZvZALCT9wzhMNZf0ryRVaqgbkVmHOqmqE,144
+trytond/modules/sale_credit_limit/tests/test_module.py,sha256=Wpa6YQzBVJH_708u0t1P3aFSfuhjmyWBXKGSURz22b4,5446
+trytond_sale_credit_limit-7.6.0.dist-info/licenses/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+trytond_sale_credit_limit-7.6.0.dist-info/METADATA,sha256=QvIJUHfuayVn5WopqnuK3r1VQNKLyoSa8Z46TeMW_RU,3042
+trytond_sale_credit_limit-7.6.0.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+trytond_sale_credit_limit-7.6.0.dist-info/entry_points.txt,sha256=lSUQzgx2FWvbG1fQKOIb8vgvWDZdbyll3JRWezo0rD0,72
+trytond_sale_credit_limit-7.6.0.dist-info/top_level.txt,sha256=1UNriCfRfjRjutJbJ_B8i13huVUoV_Otp9RlW3mCfw4,8
+trytond_sale_credit_limit-7.6.0.dist-info/RECORD,,
