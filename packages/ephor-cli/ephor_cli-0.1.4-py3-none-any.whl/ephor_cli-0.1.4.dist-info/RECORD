@@ -1,0 +1,9 @@
+ephor_cli/__init__.py,sha256=dkWx8O9gtx40qUuDMUaMDnnrZ9Dfy77T5F4grC5oDgs,8566
+ephor_cli/agent.py,sha256=2uIRyqumavsEmTwctnKM6tEie6QCpizkFtlm-3gYCqs,3348
+ephor_cli/server.py,sha256=ZnSEdalnzdW3GWdP_ESa8fp3GMU8W4mgTXKKLXbnqOI,4965
+ephor_cli/task_manager.py,sha256=FWk0Do1eKwyHSVux3l4mJ_jwemja3ZKfuE8wg_Gl9S4,4011
+ephor_cli/configs/sample-agent.yml,sha256=KdgE0BMPk5p6wgL_BWMFm5cKuof6eUkmLBLMHVKWg0g,804
+ephor_cli-0.1.4.dist-info/METADATA,sha256=AbbE_C56mqWU-KGPwQFY9GCMQ6yxh6tjE7EtcEI5jLE,2009
+ephor_cli-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ephor_cli-0.1.4.dist-info/entry_points.txt,sha256=J-yROKGaoiLKpoeGKpHNGgkDd20_pD2GGzXrE4HWYQE,45
+ephor_cli-0.1.4.dist-info/RECORD,,
