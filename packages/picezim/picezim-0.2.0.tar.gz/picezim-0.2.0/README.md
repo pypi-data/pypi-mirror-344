@@ -1,0 +1,78 @@
+# Picezim
+How to deploy a `Picezim` to pypi
+
+## Step 1: Set Up Project Structure
+
+```
+picezim/
+├── src/
+│   └── picezim/
+│       ├── __init__.py
+│       └── picezim.py
+├── tests/
+│   └── test_picezim.py
+├── pyproject.toml
+├── README.md
+└── LICENSE
+```
+
+# Step 2: Create pyproject.toml
+
+```
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "your-package-name"
+version = "0.1.0"
+description = "A short description of your package"
+authors = [
+  { name="Your Name", email="your.email@example.com" }
+]
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/yourusername/your-package"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+```
+
+#  Step 3: Build the Package
+
+Install build tools if you haven’t:
+```
+pip install build
+```
+
+Then build your distribution:
+```
+python -m build
+```
+
+# Step 4: Upload to PyPI
+
+Install Twine
+```
+pip install twine
+```
+
+Register at https://pypi.org/account/register
+Then upload:
+```
+twine upload dist/*
+```
+
+# Step 5: Install Your Package via pip
+
+```
+pip install your-package-name
+```
+
+
+# TOKEN
+pypi-AgEIcHlwaS5vcmcCJDE3ZGZmOTZiLWJlYjctNDgzMy04ZTY3LWViNzhkNjAyMGVlNAACKlszLCI2MjZiMjg4MC1jYzlmLTQxZTYtODBhMS04Y2VkZGUwNzEwNmQiXQAABiCrA23HFUlOQNqh9LV2aUWqoZdwpdPM_TMHqxaRNiN7iA
