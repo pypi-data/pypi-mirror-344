@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: eblint
+Version: 0.0.0
+Summary: A linter for easybuild config files
+Author-email: Leon Boschman <leon.boschman@chalmers.se>
+License-Expression: GPL-2.0-or-later
+Project-URL: Homepage, https://github.com/lboschman/eblint
+Project-URL: Issues, https://github.com/lboschman/eblint/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: importlib-metadata; python_version < "3.10"
+Dynamic: license-file
+
+# An easybuild config linter
+
+This package is to create a linter for easybuild config files.
+
+## Installation
+
+Install `eblint` with using `pip`:
+
+```bash
+pip install eblint
+```
+
+## Usage
+
+You can lint an individual config file with
+
+```bash
+eblint example-config.eb
+```
