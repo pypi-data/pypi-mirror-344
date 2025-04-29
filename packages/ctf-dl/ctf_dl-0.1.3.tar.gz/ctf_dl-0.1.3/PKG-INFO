@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: ctf-dl
+Version: 0.1.3
+Summary: Command-line tool to download CTF challenges
+Author-email: bjornmorten <bjornmdev@proton.me>
+License: MIT
+Project-URL: Homepage, https://github.com/bjornmorten/ctf-dl/
+Project-URL: Repository, https://github.com/bjornmorten/ctf-dl/
+Project-URL: Issues, https://github.com/bjornmorten/ctf-dl/issues
+Keywords: ctf,ctfd
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Security
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ctfbridge>=0.1.1
+Dynamic: license-file
+
+# ctf-dl
+
+ctf-dl is a command line tool to download CTF challenges.
+
+⚠️ This project is still in development ⚠️
+
+## Installation
+
+```bash
+pip install ctf-dl
+```
+
+## Basic Usage
+
+```bash
+ctf-dl --url https://demo.ctfd.io --username admin --password password
+```
+
+## License
+
+MIT License © 2025 bjornmorten
