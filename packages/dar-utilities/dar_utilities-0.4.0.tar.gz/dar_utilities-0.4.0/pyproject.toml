@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "dar_utilities"
+version = "0.4.0"
+authors = [
+    { name = "Michal Klinka", email = "klinka@ics.muni.cz" },
+]
+description = "Utilities for advanced users of eLTER Data asset registry"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+dependencies = [
+    "requests==2.32.3",
+    "requests-toolbelt==1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/eLTER-RI/elter-dar-utilities"
+Issues = "https://github.com/eLTER-RI/elter-dar-utilities/issues"
