@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: AreaCalcF
+Version: 0.0.4
+Summary: This is the simplest module for calculation square of input figure.
+Home-page: http://wubbalubba/area_function
+Author: fominaav
+Author-email: fomina.av@phystech.edu
+Project-URL: GitHub, https://github.com/vvubbalubbab
+Keywords: files speedfiles
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Area Library #
+
+## What is this? ##
+The module allows you to calculate area of figure by it's parameters.
+
+----------
+
+
+### Using ###
+
+
+Using the library is as simple and convenient as possible:
+
+Let's import it first:
+First, import everything from the library (use the `from `...` import *` construct).
+
+Examples of all operations:
+
+Calculating circle area with radius=5 using the `calc_area()` function:
+
+    s = Area(figure_type="circle", {"r": 5}).calc_area()
+
+----------
+
+
+## Developer ##
+wubbalubba

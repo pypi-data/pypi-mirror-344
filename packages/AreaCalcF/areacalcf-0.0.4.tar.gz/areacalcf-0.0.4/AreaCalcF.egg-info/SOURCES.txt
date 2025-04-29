@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+AreaCalcF.egg-info/PKG-INFO
+AreaCalcF.egg-info/SOURCES.txt
+AreaCalcF.egg-info/dependency_links.txt
+AreaCalcF.egg-info/requires.txt
+AreaCalcF.egg-info/top_level.txt
+PythonProject/__init__.py
+PythonProject/area.py
