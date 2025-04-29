@@ -1,0 +1,13 @@
+<rule>
+<code_analysis>
+Render code architecture mermaid diagrams by code_analysis and render_mermaid.
+
+CREATE 3 FOCUSED DIAGRAMS
+   - MODULE DEPENDENCIES: Show import/usage relationships between major components
+   - DATA FLOW: Illustrate how information moves through the system during typical operations
+   - SEQUENCE DIAGRAM: Show critical interaction patterns between key components
+
+Give a short summary and ask user for further instructions
+
+</code_analysis>
+</rule>
