@@ -1,0 +1,2 @@
+[console_scripts]
+smartfileorganizer = smartfileorganizerny.main:main
