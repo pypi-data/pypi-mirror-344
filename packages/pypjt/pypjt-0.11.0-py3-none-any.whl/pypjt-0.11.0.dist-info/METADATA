@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: pypjt
+Version: 0.11.0
+Summary: A project to create python project template.
+Author-email: sleeping-in-bed <nyanyanyaworld@gmail.com>
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: click
+Requires-Dist: coverage
+Requires-Dist: jinja2
+Requires-Dist: mypy
+Requires-Dist: pytest
+Requires-Dist: python-dotenv
+Requires-Dist: rtoml
+Requires-Dist: ruff
+Requires-Dist: sphinx
+Requires-Dist: tox
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: sphinx-autobuild; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Provides-Extra: prod
+Dynamic: provides-extra
+Dynamic: requires-dist
