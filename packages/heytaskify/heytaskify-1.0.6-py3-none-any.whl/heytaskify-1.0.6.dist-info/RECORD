@@ -1,0 +1,9 @@
+taskify/__init__.py,sha256=r6v-SVj4oYAGGPXTpMqWBm8-wxTz0YvBvcOLRJVS7gY,42
+taskify/main.py,sha256=xN69A5rfdHXlQgNzCvE2I-unpp7m5B3KF1ajWvOWmuY,4301
+taskify/storage.py,sha256=WhIPnN2e3EKmLySQDB7V9qczDdux6UDM38RGbkwl4lU,4434
+taskify/task_manager.py,sha256=QHJQRjPuORVA-i0-7F716LZHO8ORTJ2fSsicH6Pn8Z8,3480
+heytaskify-1.0.6.dist-info/METADATA,sha256=5MP3GqV31lU2YoNMOJLN6O2CaNRx56YAc-boeaFaaCU,2047
+heytaskify-1.0.6.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+heytaskify-1.0.6.dist-info/entry_points.txt,sha256=x0F9lhqEguIAWPT1Spx9Wf8O9ibeFHETsf9E555pwvo,49
+heytaskify-1.0.6.dist-info/top_level.txt,sha256=ReiasrKqBJyJu3I9PkbI5lc8nhVYxLeM5m7PyfNflnA,8
+heytaskify-1.0.6.dist-info/RECORD,,
