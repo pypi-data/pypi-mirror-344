@@ -1,0 +1,12 @@
+# Exclude the tests directory
+prune src/tests
+prune pretrained_models
+prune spkrec-resnet-voxceleb
+prune .vscode
+prune src/pretrained_models
+prune src/spkrec-resnet-voxceleb
+
+exclude .gitignore
+recursive-exclude * *.wav
+recursive-exclude * *.mp3
+recursive-exclude * *.pstats
