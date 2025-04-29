@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+setup.py
+tests/test_core.py
+tests/test_custom.py
+tests/test_matrix.py
+tests/test_vector.py
+transformative_harmonization/__init__.py
+transformative_harmonization/core.py
+transformative_harmonization/custom.py
+transformative_harmonization/matrix.py
+transformative_harmonization/vector.py
+transformative_harmonization.egg-info/PKG-INFO
+transformative_harmonization.egg-info/SOURCES.txt
+transformative_harmonization.egg-info/dependency_links.txt
+transformative_harmonization.egg-info/requires.txt
+transformative_harmonization.egg-info/top_level.txt
