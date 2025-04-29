@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flink-cdc-gateway"
+dynamic = ["version"]
+description = "Change Data Capture Gateway for Apache Flink"
+readme = "README.md"
+authors = [
+    {name = "Moshe Eliya", email = "mosiko1234@gmail.com"}
+]
+license = {text = "Apache-2.0"}  # SPDX identifier instead of classifier
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Database",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+# Dependencies - removed and relying on setup.py for now until we fix the conflicts
+
+[project.urls]
+Homepage = "https://github.com/mosiko1234/flink-cdc-gateway"
+"Bug Tracker" = "https://github.com/mosiko1234/flink-cdc-gateway/issues"
+
+[project.scripts]
+cdc-gateway = "cdc_gateway.app:main"
+cdc-gateway-admin = "cdc_gateway.admin:main"
+cdc-gateway-monitor = "cdc_gateway.monitor:main"
+
+[tool.setuptools]
+packages = ["cdc_gateway"]
+
+[tool.setuptools.dynamic]
+version = {attr = "cdc_gateway.__version__"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+disallow_incomplete_defs = false

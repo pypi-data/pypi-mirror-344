@@ -1,0 +1,4 @@
+[console_scripts]
+cdc-gateway = cdc_gateway.app:main
+cdc-gateway-admin = cdc_gateway.admin:main
+cdc-gateway-monitor = cdc_gateway.monitor:main
