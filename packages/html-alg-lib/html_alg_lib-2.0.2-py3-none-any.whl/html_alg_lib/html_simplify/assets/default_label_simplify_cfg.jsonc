@@ -1,0 +1,99 @@
+{
+    // 是否使用快速文本转换
+    "use_fast_html_to_text": true,
+
+    // 标签定义配置
+    "tags": {
+        // 未封闭文本标签
+        "unclosed_text": "cc-alg-uc-text"
+    },
+
+    // 属性定义
+    "attributes": {
+        // 节点index属性
+        "node_idxs": "cc-alg-node-idxs",
+        // LLM 标注的节点id属性
+        "alg_node_idxs": "_item_id"
+    },
+
+    // 流水线定义
+    "pipeline": [
+        // 预处理
+        {
+            "name": "WrapUnenclosedText",
+            "args": {}
+        },
+        {
+            "name": "AddNodeIdx",
+            "args": {},
+            "record_name": "pre_normalized"
+        },
+        {
+            "name": "RemovePredefinedStylesTags",
+            "args": {
+                "tag_list": [
+                    "base",
+                    "head",
+                    "link",
+                    "meta",
+                    "style",
+                    "title",
+                    "aside",
+                    "footer",
+                    "nav",
+                    "hr",
+                    "del",
+                    "dialog",
+                    "embed",
+                    "iframe",
+                    "object",
+                    "source",
+                    "canvas",
+                    "script",
+                    "button",
+                    "datalist",
+                    "fieldset",
+                    "input",
+                    "label",
+                    "legend",
+                    "meter",
+                    "optgroup",
+                    "option",
+                    "output",
+                    "progress",
+                    "select",
+                    "textarea"
+                ]
+            }
+        },
+        {
+            "name": "RemoveInvisibleTags",
+            "args": {}
+        },
+        {
+            "name": "RemoveEmptyTags",
+            "args": {
+                "predefined_non_empty_tags": [
+                    "img",
+                    "br"
+                ]
+            }
+        },
+        {
+            "name": "MergeNoBlockElement",
+            "args": {}
+        },
+        {
+            "name": "MergeContinuousInlineLeafElement",
+            "args": {}
+        },
+        {
+            "name": "AlgReadable",
+            "args": {
+                "remained_attr": ["class", "id", "src", "alt"],
+                "replace_unenclosed_text_tag": "span"
+            },
+            "record_name": "alg"
+        }
+    ]
+}

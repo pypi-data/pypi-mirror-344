@@ -1,0 +1,94 @@
+{
+    // 标签定义配置
+    "tags": {
+        // 未封闭文本标签
+        "unclosed_text": "cc-alg-uc-text"
+    },
+
+    // 属性定义
+    "attributes": {
+        // 节点index属性
+        "node_idxs": "cc-alg-node-idxs"
+    },
+
+    // 流水线定义
+    "pipeline": [
+        // 预处理
+        {
+            "name": "WrapUnenclosedText",
+            "args": {}
+        },
+        {
+            "name": "AddNodeIdx",
+            "args": {},
+            "record_name": "pre_normalized"
+        },
+        {
+            "name": "RemovePredefinedStylesTags",
+            "args": {
+                "tag_list": [
+                    "base",
+                    "head",
+                    "link",
+                    "meta",
+                    "style",
+                    "title",
+                    "aside",
+                    "footer",
+                    "nav",
+                    "hr",
+                    "del",
+                    "dialog",
+                    "embed",
+                    "iframe",
+                    "object",
+                    "source",
+                    "canvas",
+                    "script",
+                    "button",
+                    "datalist",
+                    "fieldset",
+                    "input",
+                    "label",
+                    "legend",
+                    "meter",
+                    "optgroup",
+                    "option",
+                    "output",
+                    "progress",
+                    "select",
+                    "textarea"
+                ]
+            }
+        },
+        {
+            "name": "RemoveInvisibleTags",
+            "args": {}
+        },
+        {
+            "name": "RemoveEmptyTags",
+            "args": {
+                "predefined_non_empty_tags": [
+                    "img",
+                    "br"
+                ]
+            }
+        },
+        {
+            "name": "MergeNoBlockElement",
+            "args": {}
+        },
+        {
+            "name": "MergeContinuousInlineLeafElement",
+            "args": {},
+            "record_name": "simplified"
+        },
+        {
+            "name": "ClsAlgReadable",
+            "args": {
+                "remained_attr": ["class", "src", "alt"]
+            },
+            "record_name": "alg"
+        }
+    ]
+}
