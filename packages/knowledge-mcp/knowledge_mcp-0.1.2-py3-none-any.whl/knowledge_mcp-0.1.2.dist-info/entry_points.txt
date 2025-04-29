@@ -1,0 +1,3 @@
+[console_scripts]
+knowledge-mcp = knowledge_mcp.cli:main
+test = pytest:main
