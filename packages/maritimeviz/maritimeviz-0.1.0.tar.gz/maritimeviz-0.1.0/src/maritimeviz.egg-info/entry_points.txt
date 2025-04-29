@@ -1,0 +1,2 @@
+[console_scripts]
+maritimeviz = maritimeviz.cli:main
