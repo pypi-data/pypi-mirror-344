@@ -1,0 +1,55 @@
+Metadata-Version: 2.3
+Name: viz-lower-limb
+Version: 0.1.0
+Summary: A simple Python template
+Author: Tsmorz
+Author-email: tonysmoragiewicz@gmail.com
+Requires-Python: >=3.12,<3.14
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: bleak (>=0.22.3,<0.23.0)
+Requires-Dist: dash (>=3.0.3,<4.0.0)
+Requires-Dist: loguru (>=0.7.3,<0.8.0)
+Requires-Dist: numpy (>=2.2.3,<3.0.0)
+Requires-Dist: plotly (>=6.0.1,<7.0.0)
+Requires-Dist: poetry-core (>=2.1.2,<3.0.0)
+Requires-Dist: pre-commit (>=4.1.0,<5.0.0)
+Requires-Dist: py-imu (==0.0.1)
+Requires-Dist: pytest (>=8.3.5,<9.0.0)
+Requires-Dist: pytest-cov (>=6.0.0,<7.0.0)
+Requires-Dist: scipy (>=1.15.2,<2.0.0)
+Requires-Dist: tqdm (>=4.67.1,<5.0.0)
+Requires-Dist: uart-ble (==0.1.7a3)
+Project-URL: homepage, https://github.com/Tsmorz/viz-lower-limb
+Description-Content-Type: text/markdown
+
+# template-python
+Simple README.md for a Python project template.
+
+## Install
+To install the library run: `pip install change-me`
+
+## Development
+0. Install [Poetry](https://python-poetry.org/docs/#installing-with-the-official-installer)
+1. `make init` to create the virtual environment and install dependencies
+2. `make format` to format the code and check for errors
+3. `make test` to run the test suite
+4. `make clean` to delete the temporary files and directories
+5. `poetry publish --build` to build and publish to https://pypi.org/project/change-me
+
+
+## Usage
+```
+"""Basic docstring for my module."""
+
+from loguru import logger
+
+def main() -> None:
+    """Run a simple demonstration."""
+logger.info("Hello World!")
+
+if __name__ == "__main__":
+    main()
+```
+

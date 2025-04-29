@@ -1,0 +1,14 @@
+"""Sample doc string."""
+
+DUMMY_VARIABLE = "dummy_variable"
+
+FILTER_GAIN = 0.033
+
+BUFFER_SIZE = 500
+
+UPDATE_RATE_MILLISEC = 50
+
+# colors
+TUM_BLUE = "#0065BD"
+TUM_LIGHT_BLUE = "#64A0C8"
+TUM_GREY_BG = "#1E1E1E"
