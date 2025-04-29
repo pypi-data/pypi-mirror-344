@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: glair
+Version: 0.1.0
+Summary: GLAIR - An AI model for Glioblastoma Latent-space Artificial Intelligence Rendering
+Author: Josh Stanley
+License: MIT
+Project-URL: Homepage, https://github.com/joshstanley/glair
+Project-URL: Repository, https://github.com/joshstanley/glair
+Keywords: glioblastoma,AI,tumor progression,machine learning,healthcare,tensorflow
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+This is the Python backend library for interfacing with GLAIR models and backend.
