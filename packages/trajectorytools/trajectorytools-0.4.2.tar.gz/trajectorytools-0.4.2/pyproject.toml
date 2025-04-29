@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "trajectorytools"
+version = "0.4.2"
+requires-python = ">=3.10"
+authors = [
+    { name = "Jordi Torrents" },
+    { name = "Dean Rance" },
+    { name = "Francisco Romero Ferrero" },
+    { name = "Francisco J.H. Heras" },
+    { name = "Gonzalo Polavieja" },
+]
+description = "A tool to study 2D trajectories"
+readme = "README.rst"
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities",
+]
+dependencies = ['scipy', 'scikit-learn', 'matplotlib', 'h5py', 'miniballcpp']
+
+[project.urls]
+"Repository" = "https://gitlab.com/polavieja_lab/trajectorytools"
+
+[tool.setuptools.package-data]
+trajectorytools = ["data/*.npy"]
+
+
+[tool.black]
+skip-magic-trailing-comma = true
+
+[tool.isort]
+profile = "black"
