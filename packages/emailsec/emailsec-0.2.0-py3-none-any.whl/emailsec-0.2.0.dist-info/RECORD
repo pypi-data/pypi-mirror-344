@@ -1,0 +1,12 @@
+emailsec/__init__.py,sha256=-YFIRQSH0IlaXtLGCJFkod3sDuJnmf-EmIGP2YVmpMI,57
+emailsec/dns_resolver.py,sha256=twzMg7_hxBlQzMSKLkrOG3JlK880WowlXQHbg18sbbs,1690
+emailsec/errors.py,sha256=5N-GJcGi5Nq0eygqTdA3Vl0JslWlobU2RjGXr6gCMW8,135
+emailsec/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+emailsec/dkim/parser.py,sha256=OSAfAh8jygvJ-e_-pUgyPslWjrAt2haVlRokNShQH9M,11784
+emailsec/spf/checker.py,sha256=LCJikbY3PHep3-2h_YNaYf6hZOE9himpTFAAA_Eifrw,8232
+emailsec/spf/expander.py,sha256=O0JCSTFOp_dX1LbYuPy7Tj9tXK4wTt2ZEapv2VXCs3g,3243
+emailsec/spf/parser.py,sha256=GJ4Hnch1NkJ8ls2vpPj3KeZJcgB9imFyk9gB6iI57D4,7424
+emailsec-0.2.0.dist-info/METADATA,sha256=qY3aBtOuAx57f2lOxNTW12LXUtSSwii7R3yJkt_BURo,1695
+emailsec-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+emailsec-0.2.0.dist-info/licenses/LICENSE,sha256=9fPGYZBl_h6CoA8vKQqzAg-nkLpLpb_MIeHwwYLKfqs,1069
+emailsec-0.2.0.dist-info/RECORD,,
