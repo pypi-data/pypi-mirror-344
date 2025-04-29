@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smartfileorganizerny"
+version = "0.1.4"
+description = "Organize your files by type or date automatically"
+authors = [{name="Nikhil Yakkala", email="nikhilyakkala@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file="LICENSE" }
+dependencies = [
+    "colorlog"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+smartfileorganizer = "smartfileorganizerny.main:main"
