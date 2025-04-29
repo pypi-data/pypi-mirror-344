@@ -1,0 +1,56 @@
+[build-system]
+build-backend = "mesonpy"
+requires = [
+    "meson-python",
+    "meson",
+    "ninja",
+    "Cython",
+    'numpy',
+]
+
+[project]
+name = "bfit"
+authors  = [{name="Derek Fujimoto", email="dfujimoto@triumf.ca" }]
+version = '4.22.0'
+description = "β-NMR and β-NQR Data Analysis"
+readme = "README.md"
+classifiers = [
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+        "Operating System :: POSIX :: Linux",
+        "Operating System :: MacOS",
+        "Operating System :: Microsoft :: Windows",
+        "Development Status :: 5 - Production/Stable",
+        "Programming Language :: Cython",
+]
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+dependencies = [
+    'tqdm',
+    'bdata',
+    'matplotlib',
+    'pandas',
+    'pyyaml',
+    'scipy',
+    'iminuit',
+    'requests',
+    'argparse',
+    'pytest',
+    'wheel',
+    'jax',
+    'jaxlib',
+]
+
+[project.urls]
+"Homepage" = "https://github.com/dfujim/bfit"
+"Bug Tracker" = "https://github.com/dfujim/bfit/issues"
+
+[project.scripts]
+bfit = "bfit:main"
+
+[project.gui-scripts]
+bfit = "bfit:main"
