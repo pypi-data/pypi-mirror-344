@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-jisuanqi = mcp_server_jisuanqi.__main__:main
