@@ -1,0 +1,10 @@
+trytond_company<7.7,>=7.6
+trytond_currency<7.7,>=7.6
+trytond_party<7.7,>=7.6
+trytond_product<7.7,>=7.6
+trytond_purchase_request<7.7,>=7.6
+trytond<7.7,>=7.6
+
+[test]
+proteus<7.7,>=7.6
+trytond_purchase_requisition<7.7,>=7.6
