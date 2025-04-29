@@ -1,0 +1,271 @@
+# VercelPy
+
+A Python wrapper for Vercel's storage services, providing a clean, Pythonic interface to Vercel Blob Storage and Edge Config.
+
+[![PyPI version](https://badge.fury.io/py/vercelpy.svg)](https://badge.fury.io/py/vercelpy)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Installation
+
+```bash
+# Install with pip
+pip install vercelpy
+```
+
+## Features
+
+- **Blob Storage**: Upload, download, list, copy, and delete files with Vercel's Blob Storage
+- **Edge Config**: Store and retrieve configuration values with Vercel's Edge Config
+
+## Blob Storage
+
+Vercel Blob is a global object storage service designed for serving content directly at the edge. VercelPy provides a simple interface for working with Vercel Blob.
+
+### Setup
+
+Set your Blob Storage credentials via environment variables:
+
+```bash
+# In your .env file
+BLOB_READ_WRITE_TOKEN=your_read_write_token
+```
+
+### Usage Examples
+
+#### Uploading Files
+
+```python
+import vercelpy.blob as blob
+
+# Upload a file
+response = blob.put("my-file.txt", open("local-file.txt", "rb"))
+print(f"Uploaded file URL: {response.url}")
+
+# Upload with metadata
+response = blob.put(
+    "my-image.jpg", 
+    open("image.jpg", "rb"),
+    {"contentType": "image/jpeg", "cacheControl": "public, max-age=31536000"}
+)
+
+# Upload from a string or bytes
+content = "Hello, World!"
+response = blob.put("hello.txt", content.encode())
+
+# Upload with a specific path
+response = blob.put("folder/subfolder/file.txt", open("file.txt", "rb"))
+```
+
+#### Downloading Files
+
+```python
+import vercelpy.blob as blob
+
+# Download a file
+blob_data = blob.get("https://your-blob-url.com/file.txt")
+print(blob_data.text())  # For text files
+
+# Download as binary
+image_data = blob.get("https://your-blob-url.com/image.jpg")
+with open("downloaded-image.jpg", "wb") as f:
+    f.write(image_data.blob())
+```
+
+#### Listing Blobs
+
+```python
+import vercelpy.blob as blob
+
+# List all blobs
+all_blobs = blob.list()
+for item in all_blobs.blobs:
+    print(f"Blob URL: {item.url}, Size: {item.size}")
+
+# List blobs with a prefix
+images = blob.list(prefix="images/")
+for image in images.blobs:
+    print(f"Image URL: {image.url}")
+
+# List with pagination
+page1 = blob.list(limit=10)
+page2 = blob.list(limit=10, cursor=page1.cursor)
+```
+
+#### Checking Blob Metadata
+
+```python
+import vercelpy.blob as blob
+
+# Get blob metadata
+metadata = blob.head("https://your-blob-url.com/file.txt")
+print(f"Content Type: {metadata.contentType}")
+print(f"Size: {metadata.size}")
+```
+
+#### Copying Blobs
+
+```python
+import vercelpy.blob as blob
+
+# Copy a blob to a new path
+new_blob = blob.copy(
+    "https://your-blob-url.com/source.txt", 
+    "destination/file.txt"
+)
+print(f"New URL: {new_blob.url}")
+```
+
+#### Deleting Blobs
+
+```python
+import vercelpy.blob as blob
+
+# Delete a blob
+blob.del_("https://your-blob-url.com/file-to-delete.txt")
+```
+
+## Edge Config
+
+Vercel Edge Config allows you to store and retrieve configuration values at the edge. VercelPy provides a convenient interface for working with Edge Config.
+
+### Setup
+
+Set your Edge Config credentials via environment variables:
+
+```bash
+# In your .env file
+EDGE_CONFIG=your_edge_config_connection_string
+```
+
+The connection string can be in either of these formats:
+- `edge-config:id=your_id&token=your_token`
+- `https://edge-config.vercel.com/your_id?token=your_token`
+
+### Usage Examples
+
+#### Creating a Client
+
+```python
+import vercelpy.edge_config as edge
+
+# Create a client with environment variables
+# This happens automatically when using module functions
+
+# Create a client with a connection string
+connection_string = "edge-config:id=your_id&token=your_token"
+client = edge.create_client(connection_string)
+
+# With options
+client = edge.create_client(connection_string, {"consistentRead": True})
+```
+
+#### Getting a Value
+
+```python
+import vercelpy.edge_config as edge
+
+# Get a value with the default client (using EDGE_CONFIG env var)
+value = edge.get("api_key")
+print(f"API Key: {value}")
+
+# Get with options for consistent reads
+value = edge.get("feature_flags", {"consistentRead": True})
+
+# Using a specific client
+client = edge.create_client("your_connection_string")
+value = client.get("database_url")
+```
+
+#### Checking if a Key Exists
+
+```python
+import vercelpy.edge_config as edge
+
+# Check if a key exists
+if edge.has("feature_flag_new_ui"):
+    print("Feature flag is set")
+
+# With a specific client
+client = edge.create_client("your_connection_string")
+if client.has("rate_limit"):
+    print("Rate limit is configured")
+```
+
+#### Getting Multiple Values
+
+```python
+import vercelpy.edge_config as edge
+
+# Get all values
+all_config = edge.get_all()
+print(f"All config: {all_config}")
+
+# Get specific keys
+settings = edge.get_all(["api_url", "timeout", "retry_count"])
+print(f"API URL: {settings['api_url']}")
+print(f"Timeout: {settings['timeout']}")
+
+# With options
+settings = edge.get_all(["api_key", "secret"], {"consistentRead": True})
+```
+
+#### Getting Configuration Digest
+
+```python
+import vercelpy.edge_config as edge
+
+# Get the configuration digest (for caching purposes)
+digest_info = edge.digest()
+print(f"Digest: {digest_info['digest']}")
+print(f"Items Count: {digest_info['itemsCount']}")
+```
+
+## Error Handling
+
+```python
+import vercelpy.edge_config as edge
+from vercelpy.edge_config.errors import EdgeConfigError, UnexpectedNetworkError
+
+try:
+    value = edge.get("api_key")
+except Exception as e:
+    if str(e) == EdgeConfigError.UNAUTHORIZED:
+        print("Authentication failed")
+    elif str(e) == EdgeConfigError.EDGE_CONFIG_NOT_FOUND:
+        print("Edge Config not found")
+    else:
+        print(f"Unexpected error: {e}")
+```
+
+## Advanced Usage
+
+### Cloning Values
+
+```python
+import vercelpy.edge_config as edge
+
+# Get a value and clone it (deep copy)
+original = edge.get("complex_object")
+copy = edge.clone(original)
+# Modify copy without affecting original
+```
+
+## Environment Variables
+
+- `BLOB_READ_WRITE_TOKEN`: Your Vercel Blob read-write token
+- `EDGE_CONFIG`: Your Edge Config connection string
+
+## License
+
+MIT - See the [LICENSE](LICENSE) file for details.
+
+## Author
+
+Surya Sekhar Datta <hello@surya.dev>
+
+## Links
+
+- [GitHub Repository](https://github.com/SuryaSekhar14/vercelpy)
+- [PyPI Package](https://pypi.org/project/vercelpy/)
+- [Vercel Blob Documentation](https://vercel.com/docs/storage/vercel-blob)
+- [Vercel Edge Config Documentation](https://vercel.com/docs/storage/edge-config)
