@@ -1,0 +1,5 @@
+Metadata-Version: 2.2
+Name: mongo_logger_2025
+Version: 0.1.0
+Requires-Dist: pymongo
+Dynamic: requires-dist
