@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: fuzzy_word_map
+Version: 0.0.0
+Summary: 여러 방법을 혼합하여 효율적으로 유사 단어를 찾는 기능 제공
+Home-page: https://github.com/lugglory/fuzzy_word_map
+Author: Hyonyoung Park
+Author-email: lugglory@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: python-Levenshtein
+Requires-Dist: jamo
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# fuzzy_word_map
+
+여러 방법을 혼합하여 효율적으로 유사 단어를 찾는 기능을 제공하는 Python 라이브러리입니다.
