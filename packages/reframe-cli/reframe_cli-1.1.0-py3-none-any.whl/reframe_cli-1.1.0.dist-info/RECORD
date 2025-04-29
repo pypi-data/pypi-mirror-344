@@ -1,0 +1,12 @@
+ReFrame/__init__.py,sha256=Qlr0fSstHMYiMrflEbtsz6zCoUFBSqkQuuqMO8GK6dM,102
+ReFrame/cli.py,sha256=QQKSofwkbmeboZqZWt9pY18lOevt9LWEb70EczxcNa4,5489
+ReFrame/extract_frames.py,sha256=CbVQyjzXl1IZBJOx97JIlTSdGrWLWA75HA1_5bRs344,6622
+ReFrame/gif_creator.py,sha256=1OQk5t5bsvwDBmM-soKJV6zFo4gGewNd_lIdo-aZrSs,3279
+ReFrame/image_converter.py,sha256=yE9MDuuMbqtcmNyKtXVV4i7E9kz4vj09ZBUWWFDIzxo,7228
+ReFrame/image_resizer.py,sha256=jLtUUrvjRKPSeV5GDkHWrE6Eh_8aGN0h5SGLTGhwcxU,14705
+ReFrame/utils.py,sha256=F8WxCbP9f4JXxsi_rNltmhXlfhHMZtnmfa339SS5dus,586
+reframe_cli-1.1.0.dist-info/METADATA,sha256=N66V_g_IgQiArWttEacIfFQNiv7mStdAtsdBiQvvmqU,8394
+reframe_cli-1.1.0.dist-info/WHEEL,sha256=SmOxYU7pzNKBqASvQJ7DjX3XGUF92lrGhMb3R6_iiqI,91
+reframe_cli-1.1.0.dist-info/entry_points.txt,sha256=_0bCVQMrvXH0Idaym5Jy06Qvy6792HnO-gvOPEhZv10,45
+reframe_cli-1.1.0.dist-info/top_level.txt,sha256=bXs22DXM1q8iyXJ_LSQBBzIcyuEDHI6Kx_h0jBeaTXY,8
+reframe_cli-1.1.0.dist-info/RECORD,,
