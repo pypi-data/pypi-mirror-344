@@ -1,0 +1,33 @@
+from pathlib import Path
+from typing import Generator
+from urllib.parse import urlparse
+import pymupdf
+from chercher import Document, hookimpl
+
+pymupdf.JM_mupdf_show_errors = 0
+
+
+def normalize_uri(uri: str) -> Path:
+    if uri.startswith("file://"):
+        parsed_uri = urlparse(uri)
+        return Path(parsed_uri.path).resolve()
+
+    return Path(uri)
+
+
+@hookimpl
+def ingest(uri: str) -> Generator[Document, None, None]:
+    path = normalize_uri(uri)
+    if not path.exists() or not path.is_file() or path.suffix != ".epub":
+        return
+
+    body = ""
+    with pymupdf.open(path) as doc:
+        for page in doc:
+            body += page.get_text()
+
+    yield Document(
+        uri=uri,
+        body=body,
+        metadata={},
+    )
