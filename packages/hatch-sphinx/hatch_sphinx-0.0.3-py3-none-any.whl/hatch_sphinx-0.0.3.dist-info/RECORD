@@ -1,0 +1,8 @@
+hatch_sphinx/__init__.py,sha256=HQAQIBgda9wxpzZypUdA3WIn_yptqdZu4nnw5LOXf0U,94
+hatch_sphinx/hooks.py,sha256=H5mxJj7PgJVKDmeAYSLWR1zGb0y7UrxOXYX2314Hr4o,404
+hatch_sphinx/plugin.py,sha256=Xh2JmVE87drEbJNSOiAPrNs_tD2ca4O5pWqnf5QfLbw,14901
+hatch_sphinx-0.0.3.dist-info/METADATA,sha256=671YfI7wvn-H0GWiSOmgr7QnOnKSN-VGlZULct17zmU,6251
+hatch_sphinx-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hatch_sphinx-0.0.3.dist-info/entry_points.txt,sha256=neLXMLdIVjKF3dyTHYKMkW2J3i7t4bx5pDdMdEYoaqY,36
+hatch_sphinx-0.0.3.dist-info/licenses/LICENSE,sha256=sXzDCMzUxGDUPZxPieytM2h3K8cJtHo3BOd3qBXLCG4,1082
+hatch_sphinx-0.0.3.dist-info/RECORD,,
