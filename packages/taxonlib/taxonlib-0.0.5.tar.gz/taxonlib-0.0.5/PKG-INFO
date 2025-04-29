@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: taxonlib
+Version: 0.0.5
+Summary: A library of tools that help analyse and combine taxa files intended for Naturalis AI MSM deployments
+Author-email: Laurens Hogeweg <laurens.hogeweg@naturalis.nl>, Django Brunink <django.brunink@naturalis.nl>
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# TaxonLib
+
+## Precommit gitleaks
+
+This project has been protected by [gitleaks](https://github.com/gitleaks/gitleaks).
+The pipeline is configured to scan on leaked secrets.
+
+To be sure you do not push any secrets,
+please [follow our guidelines](https://docs.aob.naturalis.io/standards/secrets/),
+install [precommit](https://pre-commit.com/#install)
+and run the commands:
+
+- `pre-commit autoupdate`
+- `pre-commit install`
+
+## Installation
+
+```bash
+conda create -n taxonlib python==3.10.17
+```
+
+```bash
+conda activate taxonlib
+```
+
+```bash
+pip install -r requirements.txt
+```
