@@ -1,0 +1,10 @@
+auth0_api_python/__init__.py,sha256=CTj82tGIXF0ypzAjMeCZ3cuAfKF472ZsZ0bdorGPh7E,291
+auth0_api_python/api_client.py,sha256=59_aYUMXGv1JTJosDjZnOteLeEmT_XPX589FzG5Gnsk,4578
+auth0_api_python/config.py,sha256=CjqJ1nTO1XT9bJZgoLUbCGp3SSFkKYItoV1eE9V_Gr4,651
+auth0_api_python/errors.py,sha256=PG5NSZqTR8JJhFtWsxZPQwC-BNmKhtFwvCS1vE3Dcc0,671
+auth0_api_python/token_utils.py,sha256=2sa0m4y8Mgnh2mIbI0-VN-UUUTysYmS1Gk255xpeUHc,3817
+auth0_api_python/utils.py,sha256=D38wC2Wan3fMF25TqqTZzyrRo0EUkk3XDCX-ADTQQJo,2905
+auth0_api_python-1.0.0b3.dist-info/LICENSE,sha256=EEi9tibVAgKdGU1DmXmHjZFOwMfYXDV45mabfEmULkQ,1116
+auth0_api_python-1.0.0b3.dist-info/METADATA,sha256=vBbMTeQL04GgNjMZc9Vj0LQUiXTz3Lt_lLYIJ8YsRrg,5166
+auth0_api_python-1.0.0b3.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+auth0_api_python-1.0.0b3.dist-info/RECORD,,
