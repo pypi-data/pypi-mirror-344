@@ -1,0 +1,9 @@
+sbom2dot/__init__.py,sha256=UXoScW29szuUhsP-AvPIJLEPeX_U31M1gxYUSooemy8,76
+sbom2dot/cli.py,sha256=vbhgV3yKc6x_X29sH-FQabG8uiNhDNvyG2_FdP4PNBs,2535
+sbom2dot/dotgenerator.py,sha256=BT59ULd7ByjBsQJ1T4vMqzhGzoeF51Eyd80Ne6jv8vA,3985
+sbom2dot/version.py,sha256=jXzkestZ50OIRvWUbssnf8hLAliODbVDRi3CYhSB3IM,100
+sbom2dot-0.3.2.dist-info/METADATA,sha256=LblWX9ejmY11a1-CNaF5Q36vw1t3rcOjGvatXPbqcqU,7904
+sbom2dot-0.3.2.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+sbom2dot-0.3.2.dist-info/entry_points.txt,sha256=NCoLNj-LIJCkkYH91B_3xexdWse4snrLlEFxwlNMzO0,47
+sbom2dot-0.3.2.dist-info/top_level.txt,sha256=_V_3qTiGX2c9tLPS7xbX51Dc4oWALXo693JqM7AMoJ4,9
+sbom2dot-0.3.2.dist-info/RECORD,,
