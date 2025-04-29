@@ -1,0 +1,26 @@
+[CDF-24586] 🧑‍🔧 Deploying more than 100 workflows (#1544)
+
+# Description
+
+Small bug not respecting the API limit.
+
+![image](https://github.com/user-attachments/assets/f0d6bbc8-b9bc-463f-a836-7ed9a79904c5)
+
+
+## Changelog
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+## cdf
+
+### Fixed
+
+- When deploying more than 100 `WorkflowVersions` Toolkit no longer
+gives a `CogniteAPIError: Maximum 100 items are allowed per request. |
+code: 400`.
+
+## templates
+
+No changes.
