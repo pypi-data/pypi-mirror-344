@@ -1,0 +1,2 @@
+[console_scripts]
+reinforceui-studio = main:main
