@@ -1,0 +1,8 @@
+tqdm
+ipywidgets
+matplotlib
+numpy
+cupy-cuda12x
+scikit-learn
+hf-transfer
+huggingface_hub
