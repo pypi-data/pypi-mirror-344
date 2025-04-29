@@ -1,0 +1,2047 @@
+Received: from phl-compute-04.internal (phl-compute-04.phl.internal [10.202.2.44])
+	by mailfforwardl.phl.internal (Postfix) with ESMTP id 8EC8427E0525
+	for <ulule@m.8a.io>; Thu, 17 Apr 2025 10:39:03 -0400 (EDT)
+Received: from stl-outbound-01 ([10.204.2.202])
+  by phl-compute-04.internal (MEProxy); Thu, 17 Apr 2025 10:39:03 -0400
+X-ME-Proxy-Cause: gggruggvucftvghtrhhoucdtuddrgeefvddrtddtgddvvdelhedvucetufdoteggodetrf
+    dotffvucfrrhhofhhilhgvmecuhfgrshhtofgrihhlpdggtfgfnhhsuhgsshgtrhhisggv
+    pdfurfetoffkrfgpnffqhgenuceurghilhhouhhtmecufedttdenucdnofetkffnkffpif
+    culddujedmnecujfgurhepkfgghfhrvffufffjtgesrgdtreerredtjeenucfhrhhomhep
+    fghluhhlvgcuoehpohhsthhmrghnsehulhhulhgvrdgtohhmqeenucggtffrrghtthgvrh
+    hnpedtueelkeekkeevtdfguefgudefffekleekieegheevuedujeegleevlefhleeigfen
+    ucffohhmrghinhepuhhluhhlvgdrtghomhdpvgguihhtihhonhhsrghnshhprggthhdrtg
+    homhdplhhinhhkvgguihhnrdgtohhmpdifhhgrthhsrghpphdrtghomhdpfhgrtggvsgho
+    ohhkrdgtohhmpdhtihhkthhokhdrtghomhdpihhnshhtrghgrhgrmhdrtghomhenucfkph
+    epudekhedrudekledrvdefiedruddvjeenucevlhhushhtvghrufhiiigvpedtnecurfgr
+    rhgrmhepmhgrihhlfhhrohhmpeekgeeikeduleegsgdrteghgfettefijhhhhehqfgette
+    etteetteetteettefmfehfjfgvgeetteetteetteetgfetteetteetteetmhhsggetueho
+    teftmfeusegrieeffeelgedtrdgsnhgtfedrmhgrihhljhgvthdrtghomhdpnhgspghrtg
+    hpthhtohepuddpmhhouggvpehsmhhtphhouhhtpdhrtghpthhtohepshhrshdggdhulhhu
+    lhgvsehmrdekrgdrihho
+X-ME-Proxy: <xmx:hxIBaJbtlHyWvHx2j5DvubHLVlWZnAQyVGBl2qsxtT3uiLUY6x2Cog>
+    <xmx:hxIBaAYJHDvp54WkWqqg_rb7_rwilouq1ja7m60MsMarcZTR8bNhXA>
+    <xmx:hxIBaL-T89cuA697EdGDQDbTyd4Bt-I8oHyz_nH3e-ddym7oEMD9Hw>
+    <xmx:hxIBaErqhDSHebzbFNM9-AYzPZJ4O6qr57UFV3SM0MwY0nqhtHdFcmhsxBJ-TJNfxtWDlYtRBvinbF7NcKxKsLg>
+    <xmx:hxIBaJjfXwg9A1KtcnG3HAeYmNz7T_79vxIio9C6fMGsNWR0o0cDCxVo>
+Received: from phl-compute-01.internal (phl-compute-01.phl.internal [10.202.2.41])
+	by mailfforwardl.stl.internal (Postfix) with ESMTP id B099822C1234
+	for <srs##ulule@m.8a.io>; Thu, 17 Apr 2025 10:39:02 -0400 (EDT)
+Received: from phl-imap-04 ([10.202.2.82])
+  by phl-compute-01.internal (MEProxy); Thu, 17 Apr 2025 10:39:02 -0400
+X-ME-Proxy-Cause: gggruggvucftvghtrhhoucdtuddrgeefvddrtddtgddvvdelhedvucetufdoteggodetrf
+    dotffvucfrrhhofhhilhgvmecuhfgrshhtofgrihhlpdggtfgfnhhsuhgsshgtrhhisggv
+    pdfurfetoffkrfgpnffqhgenuceurghilhhouhhtmecufedttdenucdnofetkffnkffpif
+    culddujedmnecujfgurhepkfgghfhrvffufffjtgesrgdtreerredtjeenucfhrhhomhep
+    fghluhhlvgcuoehpohhsthhmrghnsehulhhulhgvrdgtohhmqeenucggtffrrghtthgvrh
+    hnpedtueelkeekkeevtdfguefgudefffekleekieegheevuedujeegleevlefhleeigfen
+    ucffohhmrghinhepuhhluhhlvgdrtghomhdpvgguihhtihhonhhsrghnshhprggthhdrtg
+    homhdplhhinhhkvgguihhnrdgtohhmpdifhhgrthhsrghpphdrtghomhdpfhgrtggvsgho
+    ohhkrdgtohhmpdhtihhkthhokhdrtghomhdpihhnshhtrghgrhgrmhdrtghomhenucfkph
+    epudekhedrudekledrvdefiedruddvjeenucevlhhushhtvghrufhiiigvpedtnecurfgr
+    rhgrmhepmhgrihhlfhhrohhmpeekgeeikeduleegsgdrteghgfettefijhhhhehqfgette
+    etteetteetteettefmfehfjfgvgeetteetteetteetgfetteetteetteetmhhsggetueho
+    teftmfeusegrieeffeelgedtrdgsnhgtfedrmhgrihhljhgvthdrtghomhdpnhgspghrtg
+    hpthhtohepuddpmhhouggvpehsmhhtphhouhhtpdhrtghpthhtohepshhrshdggdhulhhu
+    lhgvsehmrdekrgdrihho
+X-ME-Proxy: <xmx:hhIBaAH_P0p8YEb793D7gfwVASeUTtsjidPzjsVpG47GuL_LsLt6wQ>
+    <xmx:hhIBaJWVPFdkDk46kylZZJZiRvIEialZ_uVcBK1qo78rKiA7ovD3jQ>
+    <xmx:hhIBaKLm66UmQMrSg087MTllUMyW_aGOs_RA6bZRKXKD1lkoap8wKA>
+    <xmx:hhIBaGXHuxN_0J7uxrYVL41tdfPmgJx4rCA4LNAsnxdF3Td0aO20adunP75-gULmF5A06I0WciWEH3BH5HEEFBY>
+    <xmx:hhIBaNN5RaUwlYRLXNnVVbQw3g32cbvsoLpTm-k3wHl3GlxdItG30Fs_>
+Received: by mailredirect.phl.internal (Postfix, from userid 501)
+	id 4966C2E60088; Thu, 17 Apr 2025 10:39:02 -0400 (EDT)
+X-Mailer: MessagingEngine.com Webmail Interface
+X-Sieve-Action: redirect
+Received: from phl-compute-01.internal (phl-compute-01.phl.internal [10.202.2.41])
+	 by slotpi04n56 (Cyrus 3.13.0-alpha0-588-g85cd82fdd-fm-20250410.004-g85cd82fd) with LMTPA;
+	 Thu, 17 Apr 2025 10:39:02 -0400
+X-Cyrus-Session-Id: slotpi04n56-1744900742-561207-2-8065880286015427746
+X-Sieve: CMU Sieve 3.0
+X-Spam-known-sender: no
+X-Spam-sender-reputation: 1000 (email)
+X-Spam-score: 0.0
+X-Spam-hits: HEADER_FROM_DIFFERENT_DOMAINS 0.001, HTML_MESSAGE 0.001, ME_HAS_VSSU 0.001,
+  ME_RCVD_IN_CSA -0.001, ME_SC_SENDERREP -100, ME_SENDERREP_ALLOW -4,
+  RCVD_IN_DNSWL_NONE -0.0001, SHORTCIRCUIT -0.0001, SPF_HELO_PASS -0.001,
+  SPF_PASS -0.001, T_REMOTE_IMAGE 0.01, LANGUAGES fr, BAYES_USED none,
+  SA_VERSION 4.0.1
+X-Spam-source: IP='185.189.236.127', Host='o127.p25.mailjet.com', Country='FR',
+  FromHeader='com', MailFrom='com'
+X-Spam-charsets: subject='UTF-8', plain='utf-8', html='utf-8'
+X-Resolved-to: a4io@fastmail.com
+X-Delivered-to: thomas.sileo@sent.com
+X-Mail-from: 8468194b.AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKB@a633940.bnc3.mailjet.com
+Received: from phl-mx-07 ([10.202.2.206])
+  by phl-compute-01.internal (LMTPProxy); Thu, 17 Apr 2025 10:39:02 -0400
+Received: from phl-mx-07.messagingengine.com (localhost [127.0.0.1])
+	by mailmx.phl.internal (Postfix) with ESMTP id 0F6A72EA00E9
+	for <thomas.sileo@sent.com>; Thu, 17 Apr 2025 10:39:01 -0400 (EDT)
+Received: from mailmx.phl.internal (localhost [127.0.0.1])
+    by phl-mx-07.messagingengine.com (Authentication Milter) with ESMTP
+    id 879AFF52DF1.3AAB32EA00D6;
+    Thu, 17 Apr 2025 10:39:01 -0400
+ARC-Seal: i=1; a=rsa-sha256; cv=none; d=messagingengine.com; s=fm2; t=
+    1744900741; b=llw1Y7sHWv3b9OrflUmv0L0iMfO2y1r3lkMILeLKflZ9KU5Qr6
+    /sPToLPzdzgPq3fRnr6phojr0jlOActR0VVBCSoWVfKDAsNPPoLtd0d40oz4Aaj/
+    cTm6KSuHJxxoI4x5uO0wZpmzJqoTUemyb4a1gz1Y80R0OLpgp37/49cIz8ZJw/q2
+    bU9urxp9KDmQUvsJwM1DGmyOT3uYjFmI2B7Yi9uB5oKIlotTcWclvERWuNZf2E+J
+    vWoht76zGGJaskwJ0vYDqYPGD3YX03VUbt1R17K/GDmXzQAptqBp0R+bC6c3gqNA
+    Bp0KJtRkcb2/4Wa+04ghYqY9LySQyWcM4GGg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=
+    messagingengine.com; h=message-id:mime-version:from:reply-to:to
+    :subject:date:list-unsubscribe:content-type; s=fm2; t=
+    1744900741; bh=wlkDM6Iv1Brf4GpKPDGHcWu//iyYCGpJCbf7aw/xKgs=; b=B
+    sKJSbdIBsPr5YvIJ+s7mzvh8uIUVOl9Hv91hU8y7GEoSvNILGXXlqOAvZRvy4B3z
+    o8z8s7+myvhrRXRArwFb3oQ9EYZ1Bx0VCdyC3nQzIrBmN1yF2oCvh4FIlcw5TVjO
+    dHj04SV/v3NaoObkP06jFkGYPpyqIi2w7JoDGlDhXQOXPzYRD+HjsO8ZwS2MwnCt
+    mB9GQcUYAwybGV4SORwhMIvFZlxEV5u1i68h2DSKd11dFL89kw13fwNpz1luKwfZ
+    dM7k+Lqr8ehGSZAXyjJ2a7bJA4sEtmmPCbwE8ufo8iMBTqYJYualm/2P3kShJ742
+    dX6gQsqm4T/90UtHFDD6g==
+ARC-Authentication-Results: i=1; phl-mx-07.messagingengine.com;
+    x-csa=pass;
+    x-me-sender=none;
+    x-ptr=pass smtp.helo=o127.p25.mailjet.com
+    policy.ptr=o127.p25.mailjet.com;
+    bimi=skipped (DMARC Policy is not at enforcement);
+    arc=none (no signatures found);
+    dkim=pass (2048-bit rsa key sha256) header.d=ulule.com
+    header.i=postman@ulule.com header.b=Bl9+adoK header.a=rsa-sha256
+    header.s=mailjet;
+    dmarc=pass policy.published-domain-policy=none
+    policy.applied-disposition=none policy.evaluated-disposition=none
+    (p=none,d=none,d.eval=none) policy.policy-from=p
+    header.from=ulule.com;
+    iprev=pass smtp.remote-ip=185.189.236.127 (o127.p25.mailjet.com);
+    spf=pass
+    smtp.mailfrom=
+    8468194b.AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKB@a633940.bnc3.mailjet.com
+    smtp.helo=o127.p25.mailjet.com
+X-ME-Authentication-Results: phl-mx-07.messagingengine.com;
+    x-tls=pass smtp.version=TLSv1.3 smtp.cipher=TLS_AES_256_GCM_SHA384
+      smtp.bits=256/256;
+    x-vs=commercial:mce score=17 state=11
+Authentication-Results: phl-mx-07.messagingengine.com;
+    x-csa=pass;
+    x-me-sender=none;
+    x-ptr=pass smtp.helo=o127.p25.mailjet.com
+      policy.ptr=o127.p25.mailjet.com
+Authentication-Results: phl-mx-07.messagingengine.com;
+    bimi=skipped (DMARC Policy is not at enforcement)
+Authentication-Results: phl-mx-07.messagingengine.com;
+    arc=none (no signatures found)
+Authentication-Results: phl-mx-07.messagingengine.com;
+    dkim=pass (2048-bit rsa key sha256) header.d=ulule.com
+      header.i=postman@ulule.com header.b=Bl9+adoK header.a=rsa-sha256
+      header.s=mailjet;
+    dmarc=pass policy.published-domain-policy=none
+      policy.applied-disposition=none policy.evaluated-disposition=none
+      (p=none,d=none,d.eval=none) policy.policy-from=p
+      header.from=ulule.com;
+    iprev=pass smtp.remote-ip=185.189.236.127 (o127.p25.mailjet.com);
+    spf=pass
+      smtp.mailfrom=
+      8468194b.AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKB@a633940.bnc3.mailjet.com
+      smtp.helo=o127.p25.mailjet.com
+X-ME-VSSU: VW5zdWI9aHR0cDovL21haWxpbmcudWx1bGUuY29tL2xuay9BV0VBQUdqaDVxVUFBQUFBQU
+    FBQUFLM2ZIZTRBQUFBQUFBRUFBQUFBQUFtc1ZBQm9BUktCcE1pbjBOQjRTZ3lSU2tZU2FP
+    cGJVd0FBZXhRLzIyL3otREI0cjdDdDFVQkhIX0p5dlBGMkEvYUhSMGNEb3ZMMlp5TG5Wc2
+    RXeGxMbU52YlM5MWMyVnljeTh5T1RneU1UWXhMM05sZEhScGJtZHpMMjV2ZEdsbWFXTmhk
+    R2x2Ym5Ndg
+X-ME-VSSU: VW5zdWI9aHR0cHM6Ly9uem80Lm1qdC5sdS91bnN1YjI_bT1BV0VBQUdqaDVxVUFBQUFBQU
+    FBQUFLM2ZIZTRBQUFBQUFBRUFBQUFBQUFtc1ZBQm9BUktCcE1pbjBOQjRTZ3lSU2tZU2FP
+    cGJVd0FBZXhRJmI9ODQ2ODE5NGImZT1iOWY3MTRlMyZ4PWcxeDNOb1BTa1FEVU8zdXpZal
+    Bkc09iY0dYaTNHaHNWZEJaUE5HRHRnQVU
+X-ME-VSSU: VW5zdWI9bWFpbHRvOnVuc3ViLTg0NjgxOTRiLm56bzQubDZweDR1NGtyeHI4QGJuYzMubW
+    FpbGpldC5jb20
+X-ME-VSCause: gggruggvucftvghtrhhoucdtuddrgeefvddrtddtgddvvdelhedvucetufdoteggodetrf
+    dotffvucfrrhhofhhilhgvmecuhfgrshhtofgrihhlpdggtfgfnhhsuhgsshgtrhhisggv
+    pdfurfetoffkrfgpnffqhgenuceurghilhhouhhtmecufedttdenucdnofetkffnkffpif
+    culddujedmnecujfgurhepkfgghfhrvffufffjtgesrgdtreertddtjeenucfhrhhomhep
+    fghluhhlvgcuoehpohhsthhmrghnsehulhhulhgvrdgtohhmqeenucggtffrrghtthgvrh
+    hnpeetvdeuledvkefgkeevhfevhfekveefhffgfffhgeefheefgeekgefgheetfeeltden
+    ucffohhmrghinhepuhhluhhlvgdrtghomhdpvgguihhtihhonhhsrghnshhprggthhdrtg
+    homhdplhhinhhkvgguihhnrdgtohhmpdifhhgrthhsrghpphdrtghomhdpfhgrtggvsgho
+    ohhkrdgtohhmpdhtihhkthhokhdrtghomhdpihhnshhtrghgrhgrmhdrtghomhenucfkph
+    epudekhedrudekledrvdefiedruddvjeenucevlhhushhtvghrufhiiigvpedtnecurfgr
+    rhgrmhepihhnvghtpedukeehrddukeelrddvfeeirdduvdejpdhhvghlohepohduvdejrd
+    hpvdehrdhmrghilhhjvghtrdgtohhmpdhmrghilhhfrhhomhepoeekgeeikeduleegsgdr
+    teghgfettefijhhhhehqfgetteetteetteetteettefmfehfjfgvgeetteetteetteetgf
+    etteetteetteetmhhsggetuehoteftmfeusegrieeffeelgedtrdgsnhgtfedrmhgrihhl
+    jhgvthdrtghomheqpdhnsggprhgtphhtthhopedupdhrtghpthhtohepoehthhhomhgrsh
+    drshhilhgvohesshgvnhhtrdgtohhmqe
+X-ME-VSScore: 17
+X-ME-VSCategory: commercial:mce
+X-ME-CSA: pass
+X-ME-Received: <xmx:hBIBaGzeiklOmCXdO6P5vxbd3m9eUb0n_vbfU1S86W-FHssk2Cy4BA>
+X-ME-Received: <xmx:hBIBaCB9bVCJnfIcnqNVu19vNOHXigT87YWV51Btbd-JkjhhGQhKDA>
+Received-SPF: pass
+    (a633940.bnc3.mailjet.com: Sender is authorized to use '8468194b.AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKB@a633940.bnc3.mailjet.com' in 'mfrom' identity (mechanism 'include:spf.mailjet.com' matched))
+    receiver=phl-mx-07.messagingengine.com;
+    identity=mailfrom;
+    envelope-from="8468194b.AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKB@a633940.bnc3.mailjet.com";
+    helo=o127.p25.mailjet.com;
+    client-ip=185.189.236.127
+Received: from o127.p25.mailjet.com (o127.p25.mailjet.com [185.189.236.127])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by phl-mx-07.messagingengine.com (Postfix) with ESMTPS id 3AAB32EA00D6
+	for <thomas.sileo@sent.com>; Thu, 17 Apr 2025 10:38:59 -0400 (EDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; q=dns/txt;
+  d=ulule.com; i=postman@ulule.com; s=mailjet; x=1744907937;
+  h=message-id:mime-version:from:from:reply-to:to:to:subject:subject:date:date:list-unsubscribe-post:
+  list-unsubscribe:feedback-id:x-csa-complaints:x-mj-mid:x-mj-smtpguid:
+  x-report-abuse-to:content-type;
+  bh=aaUcYWZO8oyHFlkvqDo3qCeapIMh4XQiBj/1MMPLwUo=;
+  b=Bl9+adoKs07wgE686wthkc2EZeh3WMcMYo4Q8+tK2VF9cJAT0uA8/HmEO
+ f+/IVIeeK/gcFQT4X7B7NU8PRqAVeATOAGxf2f2IjoYxyVuNezHwIFLj0H/+
+ HLbgdxKIczUDl9Ign5PkNXFnQ43gEfJoWXJ3Pp6ap3WLPxGTCkunbXhK6YNg
+ QUvjIdeMviNmDGghWfRZ3sG0IyxL66HEJyYBVtlxyZluume2n70DsDBshjQE
+ +Rs+qckty29sm43EasNkLo2lJiWXBg9Hkyoi7kky0wdId6RxWjDn5EnOWcs6
+ uLdtwA8RpKmY5C8dodRj8yHsgxumqHWM4hrShOwqknsOw==
+Message-Id: <8468194b.AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKB@mailjet.com>
+MIME-Version: 1.0
+From: Ulule <postman@ulule.com>
+Reply-To: Ulule <postman@ulule.com>
+To: thomas.sileo@sent.com
+Subject: =?UTF-8?Q?=5BPublication=5D_Pomp=C3=A9i_=3A_?=
+ =?UTF-8?Q?Interview_des_auteurs_de_Pomp=C3=A9i_?= =?UTF-8?Q?-_2=2F2?=
+Date: Thu, 17 Apr 2025 14:38:57 -0000
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe:
+	<mailto:unsub-8468194b.nzo4.l6px4u4krxr8@bnc3.mailjet.com>,
+	<https://nzo4.mjt.lu/unsub2?m=AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ&b=8468194b&e=b9f714e3&x=g1x3NoPSkQDUO3uzYjPdsObcGXi3GhsVdBZPNGDtgAU>
+Feedback-Id: 42.633940.31508:MJ
+X-CSA-Complaints: csa-complaints@eco.de
+X-MJ-Mid:
+	AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ
+X-MJ-SMTPGUID: a4c8a7d0-d078-4a0c-914a-461268ea5b53
+X-REPORT-ABUSE-TO: Message sent by Mailjet please report to
+	abuse@mailjet.com with a copy of the message
+Content-Type: multipart/alternative;
+	boundary="===============6818609319074211277=="
+
+--===============6818609319074211277==
+Content-Type: text/plain; charset=utf-8
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+|  |  |  =20
+--- =20
+|  [ ![](https://assets.ulule.com/site/build/img/mail/mjml/owl-
+only@2x.60621e095d37.png) ](https://ulule.com "Ulule") =20
+--- =20
+ =20
+|  |  |  Interview des auteurs de Pomp=C3=A9i - 2/2 =20
+--- =20
+ =20
+--- =20
+ =20
+|  |  **Seconde partie de notre passionnante interview des auteurs de** _**=
+Pomp=C3=A9i**_**.**[**Fabienne Pigi=C3=A8re**](https://www.editionsanspach.=
+com/auteur/fabienne-pigiere/)**et**[**Rudi Miel**](https://www.editionsansp=
+ach.com/auteur/rudi-miel/)**(cosc=C3=A9naristes) d=C3=A9veloppent leur pass=
+ion pour l=E2=80=99Antiquit=C3=A9 et les personnages forts. Ils sont rejoin=
+ts par**[**Paolo Grella**](https://www.editionsanspach.com/auteur/paolo-gre=
+lla-dessinateur-bd/)**(dessinateur et coloriste), qui l=C3=A8ve un coin du =
+voile sur son =C3=A9poustouflante reconstitution de la ville avant sa destr=
+uction.****Paolo, comment avez-vous approch=C3=A9 le dessin et l=E2=80=99am=
+biance visuelle de l=E2=80=99album ?****P.G. :** J=E2=80=99adore cette p=C3=
+=A9riode de l=E2=80=99Histoire. Je suis n=C3=A9 =C3=A0 Rome, et j=E2=80=99a=
+i grandi dans l=E2=80=99h=C3=A9ritage des anciens Romains. Au-del=C3=A0 d=
+=E2=80=99une description d=C3=A9taill=C3=A9e, j=E2=80=99ai cherch=C3=A9 =C3=
+=A0 capturer l=E2=80=99essence de cette =C3=A9poque, en mettant l=E2=80=99a=
+ccent sur l=E2=80=99atmosph=C3=A8re de Pomp=C3=A9i, l=E2=80=99ambiance, le =
+sentiment de se promener dans ses rues. J=E2=80=99ai voulu donner vie =C3=
+=A0 ses habitants. Selon Pline le Jeune, Pomp=C3=A9i est =C2=AB  _la plus v=
+ivante des villes mortes_ =C2=BB. Cette expression a guid=C3=A9 ma d=C3=A9m=
+arche tout au long de la r=C3=A9alisation de l=E2=80=99album.**Quelles ont =
+=C3=A9t=C3=A9 les plus grandes difficult=C3=A9s graphiques dans ce projet ?=
+** =20
+**P.G. :** Le d=C3=A9part n=E2=80=99a pas =C3=A9t=C3=A9 des plus faciles. C=
+omme l=E2=80=99a soulign=C3=A9
+[Fabienne](https://www.editionsanspach.com/auteur/fabienne-pigiere/), les
+vestiges de Pomp=C3=A9i offrent un aper=C3=A7u fascinant sur le quotidien d=
+e ses
+habitants, ainsi que sur sa structure sociale et urbaine. Cependant, ces =
+=C2=AB
+instantan=C3=A9s =C2=BB sont tr=C3=A8s fragmentaires, ce qui laisse beaucou=
+p de place =C3=A0
+l=E2=80=99interpr=C3=A9tation. Au fil des ans et des d=C3=A9couvertes, des =
+certitudes qui
+semblaient intangibles ont =C3=A9t=C3=A9 compl=C3=A8tement remises en quest=
+ion, ce qui
+complique consid=C3=A9rablement l=E2=80=99=C3=A9tude de Pomp=C3=A9i. Ma m=
+=C3=A9thode de dessin est tr=C3=A8s
+libre et impressionniste, mais, pour cette s=C3=A9rie, j=E2=80=99ai d=C3=BB=
+ creuser plus
+profond=C3=A9ment, explorer et =C3=A9tudier pour reconstruire et comprendre=
+ l=E2=80=99apparence
+de b=C3=A2timents ou de lieux particuliers =C3=A0 l=E2=80=99=C3=A9poque. Me=
+s recherches se sont
+parfois av=C3=A9r=C3=A9es beaucoup plus complexes que pr=C3=A9vu. Heureusem=
+ent, [Rudi
+](https://www.editionsanspach.com/auteur/rudi-miel/)et Fabienne m=E2=80=99o=
+nt beaucoup
+aid=C3=A9. J=E2=80=99esp=C3=A8re que tous ces efforts de recherche et de re=
+constitution sont
+perceptibles dans chaque page.**Y a-t-il un d=C3=A9tail historique ou une a=
+necdote
+qui vous a particuli=C3=A8rement marqu=C3=A9 lors de vos recherches ?** =20
+**R.M. :** De mani=C3=A8re g=C3=A9n=C3=A9rale, j=E2=80=99ai =C3=A9t=C3=A9 f=
+rapp=C3=A9, dans toutes nos lectures, par
+l=E2=80=99atmosph=C3=A8re tr=C3=A8s particuli=C3=A8re qui semblait se d=C3=
+=A9gager de Pomp=C3=A9i avant que le
+destin ne la frappe. =C3=80 condition bien entendu d=E2=80=99=C3=AAtre du c=
+=C3=B4t=C3=A9 des nantis, dans
+la hi=C3=A9rarchie sociale de l=E2=80=99=C3=A9poque, la qualit=C3=A9 de vie=
+ y semble exceptionnelle.
+Une grande s=C3=A9r=C3=A9nit=C3=A9 se d=C3=A9gage de l=E2=80=99architecture=
+ de la ville et de son regard =C3=A0
+l=E2=80=99art. Les jardins, les monuments, le climat, tout semble inviter =
+=C3=A0 la
+tranquillit=C3=A9. Mais c=E2=80=99=C3=A9tait aussi une ville de contrastes =
+o=C3=B9 les in=C3=A9galit=C3=A9s de
+statut =C3=A9taient parfois vertigineuses. =20
+**F.P. :** La mise au jour d=E2=80=99un graffiti au fusain sur le mur d=E2=
+=80=99une maison de
+Pomp=C3=A9i. Ce gribouillis humoristique mentionnant =C2=AB Il s=E2=80=99es=
+t b=C3=A2fr=C3=A9 =C2=BB est
+accompagn=C3=A9 de la date du 17 octobre, qui constitue l=E2=80=99argument =
+d=C3=A9cisif pour
+placer l=E2=80=99=C3=A9ruption du V=C3=A9suve le 24 octobre et non pas le 2=
+4 ao=C3=BBt comme on l=E2=80=99a
+longtemps pens=C3=A9. **L=E2=80=99=C3=A9ruption du V=C3=A9suve est un momen=
+t cl=C3=A9 du r=C3=A9cit. Comment
+avez-vous construit cette mont=C3=A9e en tension ?** =20
+**R.M. :** Contrairement aux id=C3=A9es re=C3=A7ues, quelques signes annonc=
+iateurs de la
+catastrophe ont =C3=A9t=C3=A9 observ=C3=A9s avant l=E2=80=99=C3=A9ruption. =
+L=E2=80=99=C3=A9ruption a dur=C3=A9 plusieurs
+jours. Mais avant, la Terre a trembl=C3=A9 de nombreuses fois=E2=80=A6 Cert=
+ains habitants,
+effray=C3=A9s par tous ces signes, ont donc fui =C3=A0 temps une mort tragi=
+que. La
+mont=C3=A9e en tension, dans notre album, est rythm=C3=A9e par ces secousse=
+s qui
+annoncent le destin effroyable des habitants.**Qu=E2=80=99esp=C3=A9rez vous=
+ que les
+lecteurs retiennent de** _**Pomp=C3=A9i**_**?** =20
+**R.M.** : Comme je l=E2=80=99=C3=A9voquais plus t=C3=B4t, notre destin peu=
+t s=E2=80=99arr=C3=AAter
+brutalement. Parfois tr=C3=A8s t=C3=B4t. La le=C3=A7on universelle que nous=
+ envoie Pomp=C3=A9i,
+pr=C3=A8s de 2000 ans apr=C3=A8s le cataclysme, est de mettre =C3=A0 profit=
+ chaque micro-
+moment de notre existence, comme si c=E2=80=99=C3=A9tait le dernier. N=E2=
+=80=99ayons aucune
+inqui=C3=A9tude =C3=A0 forcer notre destin m=C3=AAme s=E2=80=99il nous ratt=
+rape parfois. =20
+**F.P. :** Je rejoins Rudi. Le destin tragique de Pomp=C3=A9i interpelle en=
+core et
+toujours au fil des si=C3=A8cles. J=E2=80=99esp=C3=A8re aussi susciter un i=
+nt=C3=A9r=C3=AAt pour les
+civilisations du pass=C3=A9. Notre soci=C3=A9t=C3=A9 n=E2=80=99est pas appa=
+rue ex nihilo. Il est
+important de savoir d=E2=80=99o=C3=B9 on vient. =20
+**P.G. :** J=E2=80=99esp=C3=A8re que notre travail a pu restituer toute la =
+beaut=C3=A9 du Pomp=C3=A9i
+de l=E2=80=99=C3=A9poque romaine. En =C3=A9tudiant et en approfondissant, j=
+=E2=80=99ai d=C3=A9couvert une
+complexit=C3=A9, une beaut=C3=A9, une ing=C3=A9niosit=C3=A9, vraiment impre=
+ssionnantes. Les
+fresques, en particulier, semblent =C3=AAtre sorties tout droit de la Renai=
+ssance,
+par leur beaut=C3=A9 et leur d=C3=A9licatesse. Je crois qu=E2=80=99une part=
+ie de cette magie se
+refl=C3=A8te dans notre r=C3=A9cit. **Pour finir, combien de volumes sont-i=
+ls pr=C3=A9vus et
+pouvez-vous d=C3=A9voiler un peu les prochains tomes ?** =20
+**R.M. :** Nous pr=C3=A9voyons cinq tomes=E2=80=A6 Peut-=C3=AAtre plus si l=
+e public nous suit.
+Le second tome mettra en sc=C3=A8ne un jeune gladiateur, un dieu de l=E2=80=
+=99ar=C3=A8ne, que
+certaines failles dans son histoire ont fragilis=C3=A9. Et le troisi=C3=A8m=
+e devrait
+=C3=A9voquer la magie noire qui =C3=A9tait tr=C3=A8s courante =C3=A0 Pomp=
+=C3=A9i.[**LIRE LA PREMIERE
+PARTIE DE L'INTERVIEW**](https://fr.ulule.com/pompei-6/news/interview-des-
+auteurs-de-pompei---
+1-2-437588/)![](https://media.ulule.com/presales/5/4/0/5/0/2/205045/pompei_=
+312-233_hr-
+print-fr-28.xvgACnbIhR.jpg) =20
+--- =20
+ =20
+|  |  |  [ Voir la publication ](http://fr.ulule.com/pompei-6/news/intervie=
+w-des-auteurs-de-pompei---2-2-437708/?ul_campaign=3Dpresale_205045&ul_sourc=
+e=3Dshared-from-Ulule-mail-project.news.created-on---http.referer--&lang=3D=
+fr&ul_medium=3Duluid_2982161-unknown-202504171638) =20
+--- =20
+ =20
+|  |  =20
+--- =20
+ =20
+|  |  Vous pouvez aider encore plus cette collecte en la partageant ! =20
+--- =20
+|  |  |  |  |  [ ![](https://assets.ulule.com/site/build/img/mail/mjml/Link=
+edin.9b7b3147be2e.png) ](http://www.linkedin.com/shareArticle?url=3Dhttp%3A=
+//fr.ulule.com/pompei-6/%3Futm_campaign%3Dpresale_205045%26utm_source%3Dsha=
+red-from-Ulule-mail-project.news.created-on-Linkedin%26lang%3Dfr%26utm_medi=
+um%3Duluid_2982161-post-202504171638) =20
+--- =20
+[ Linkedin
+](http://www.linkedin.com/shareArticle?url=3Dhttp%3A//fr.ulule.com/pompei-6=
+/%3Futm_campaign%3Dpresale_205045%26utm_source%3Dshared-
+from-Ulule-mail-project.news.created-on-
+Linkedin%26lang%3Dfr%26utm_medium%3Duluid_2982161-post-202504171638) =20
+ =20
+|  |  |  [ ![](https://assets.ulule.com/site/build/img/mail/mjml/Messenger.=
+9976601b384d.png) ]() =20
+--- =20
+[ Messenger ]() =20
+ =20
+|  |  |  [ ![](https://assets.ulule.com/site/build/img/mail/mjml/Whatsapp.3=
+d695f434998.png) ](https://api.whatsapp.com/send?text=3Dhttp%3A//fr.ulule.c=
+om/pompei-6/%3Futm_campaign%3Dpresale_205045%26utm_source%3Dshared-from-Ulu=
+le-mail-project.news.created-on-Whatsapp%26lang%3Dfr%26utm_medium%3Duluid_2=
+982161-post-202504171638) =20
+--- =20
+[ Whatsapp
+](https://api.whatsapp.com/send?text=3Dhttp%3A//fr.ulule.com/pompei-6/%3Fut=
+m_campaign%3Dpresale_205045%26utm_source%3Dshared-
+from-Ulule-mail-project.news.created-on-
+Whatsapp%26lang%3Dfr%26utm_medium%3Duluid_2982161-post-202504171638) =20
+ =20
+|  |  |  [ ![](https://assets.ulule.com/site/build/img/mail/mjml/Facebook.7=
+52bc7702fa8.png) ](https://www.facebook.com/sharer/sharer.php?u=3Dhttp%3A//=
+fr.ulule.com/pompei-6/%3Futm_campaign%3Dpresale_205045%26utm_source%3Dshare=
+d-from-Ulule-mail-project.news.created-on-Facebook%26lang%3Dfr%26utm_medium=
+%3Duluid_2982161-post-202504171638&display=3Dpopup) =20
+--- =20
+[ Facebook
+](https://www.facebook.com/sharer/sharer.php?u=3Dhttp%3A//fr.ulule.com/pomp=
+ei-6/%3Futm_campaign%3Dpresale_205045%26utm_source%3Dshared-
+from-Ulule-mail-project.news.created-on-
+Facebook%26lang%3Dfr%26utm_medium%3Duluid_2982161-post-202504171638&display=
+=3Dpopup) =20
+ =20
+|  |  |  =20
+--- =20
+|  [ ![Logo
+Ulule](https://assets.ulule.com/site/build/img/mail/mjml/footer@2x.9896b2f7=
+170e.png)
+](https://ulule.com "Ulule") =20
+--- =20
+Vous avez une question =C3=A0 propos d'Ulule ? Consultez notre
+[support](https://support.ulule.com/) =20
+Suivez-nous ! =20
+ =20
+|  |  [Facebook](https://www.facebook.com/ulule) =20
+--- =20
+ =20
+|  [TikTok](https://www.tiktok.com/@ulule_off) =20
+--- =20
+ =20
+|  [Instagram](https://www.instagram.com/ulule/) =20
+--- =20
+ =20
+|  [Linkedin](https://www.linkedin.com/company/ulule/) =20
+--- =20
+ =20
+|  |  Vous recevez cet email car vous suivez la collecte [Pomp=C3=A9i](http=
+://fr.ulule.com/pompei-6/?ul_campaign=3Dpresale_205045&ul_source=3Dshared-f=
+rom-Ulule-mail-project.news.created-on---http.referer--&lang=3Dfr&ul_medium=
+=3Duluid_2982161-unknown-202504171638). Si vous ne souhaitez plus recevoir =
+ce type de courriel, [merci de g=C3=A9rer vos pr=C3=A9f=C3=A9rences d'envoi=
+](http://fr.ulule.com/users/2982161/settings/notifications/) .  =20
+---
+
+=
+
+--===============6818609319074211277==
+Content-Type: text/html; charset=utf-8
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html lang=3D"und" dir=3D"auto" xmlns=3D"http://www.w3.org/1999/xhtml" xmln=
+s:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:=
+office:office">
+  <head>
+    <title>[Publication] Pomp=C3=A9i : Interview des auteurs de Pomp=C3=A9i=
+ - 2/2</title>
+    <!--[if !mso]><!-->
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <!--<![endif]-->
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1">
+    <style type=3D"text/css">
+      #outlook a { padding:0; }
+      body { margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size=
+-adjust:100%; }
+      table, td { border-collapse:collapse;mso-table-lspace:0pt;mso-table-r=
+space:0pt; }
+      img { border:0;height:auto;line-height:100%; outline:none;text-decora=
+tion:none;-ms-interpolation-mode:bicubic; }
+      p { display:block;margin:13px 0; }
+    </style>
+    <!--[if mso]>
+    <noscript>
+    <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    </noscript>
+    <![endif]-->
+    <!--[if lte mso 11]>
+    <style type=3D"text/css">
+      .mj-outlook-group-fix { width:100% !important; }
+    </style>
+    <![endif]-->
+   =20
+      <!--[if !mso]><!-->
+        <link href=3D"https://use.typekit.net/nyr7bbn.css" rel=3D"styleshee=
+t" type=3D"text/css">
+        <style type=3D"text/css">
+          @import url(https://use.typekit.net/nyr7bbn.css);
+        </style>
+      <!--<![endif]-->
+
+   =20
+   =20
+    <style type=3D"text/css">
+      @media only screen and (min-width:480px) {
+        .mj-column-per-100 { width:100% !important; max-width: 100%; }
+.mj-column-per-25 { width:25% !important; max-width: 25%; }
+.mj-column-px-100 { width:100px !important; max-width: 100px; }
+      }
+    </style>
+    <style media=3D"screen and (min-width:480px)">
+      .moz-text-html .mj-column-per-100 { width:100% !important; max-width:=
+ 100%; }
+.moz-text-html .mj-column-per-25 { width:25% !important; max-width: 25%; }
+.moz-text-html .mj-column-px-100 { width:100px !important; max-width: 100px=
+; }
+    </style>
+   =20
+   =20
+ =20
+   =20
+    <style type=3D"text/css">
+
+    @media only screen and (max-width:479px) {
+      table.mj-full-width-mobile { width: 100% !important; }
+      td.mj-full-width-mobile { width: auto !important; }
+    }
+ =20
+    </style>
+   =20
+    <style type=3D"text/css">
+            .content-wrapper img {
+                max-width: 100%;
+            }
+            .embed-ratio {
+              padding-bottom:0 !important;
+            }
+        </style>
+  </head>
+  <body style=3D"word-spacing:normal;background-color:#F6F1EB;">
+   =20
+   =20
+      <div style=3D"background-color:#F6F1EB;" lang=3D"und" dir=3D"auto">
+        <!-- START header -->
+     =20
+      <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"width:600px=
+;" width=3D"600" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-h=
+eight-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"margin:0px auto;max-width:600px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;padding-bo=
+ttom:20px;padding-top:20px;text-align:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" width=3D"600px" ><t=
+able align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"" role=3D"presentation" style=3D"width:600px;" width=3D"600" ><tr><td =
+style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![en=
+dif]-->
+   =20
+     =20
+      <div style=3D"margin:0px auto;max-width:600px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;text-align=
+:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:600px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:t=
+op;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:0;word-=
+break:break-word;">
+                 =20
+      <div style=3D"font-family:sofia-pro, Helvetica, Arial, sans-serif;fon=
+t-size:13px;font-weight:400;line-height:22px;text-align:center;color:#00000=
+0;">
+           =20
+            </div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"background:transparent;font-s=
+ize:0px;padding:0;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style=3D"width:30px;">
+             =20
+        <a href=3D"http://mailing.ulule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK3fHe4=
+AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/1/28kkOh5LeVVnB_LtnpDD=
+4g/aHR0cHM6Ly91bHVsZS5jb20" target=3D"_blank" title=3D"Ulule">
+         =20
+      <img alt src=3D"https://assets.ulule.com/site/build/img/mail/mjml/owl=
+-only@2x.60621e095d37.png" srcset=3D"https://assets.ulule.com/site/build/im=
+g/mail/mjml/owl-only.92677997aa9b.png 1x, https://assets.ulule.com/site/bui=
+ld/img/mail/mjml/owl-only@2x.60621e095d37.png 2x, https://assets.ulule.com/=
+site/build/img/mail/mjml/owl-only@3x.d5604ccc1778.png 3x" style=3D"border:0=
+;display:block;outline:none;text-decoration:none;height:30px;width:100%;fon=
+t-size:13px;" title=3D"Ulule" width=3D"30" height=3D"30">
+   =20
+        </a>
+     =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table><![endif]-->
+   =20
+    <!-- END header --><!-- START content -->
+     =20
+      <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"content-wrapper-outlook" role=3D"presentatio=
+n" style=3D"width:600px;" width=3D"600" bgcolor=3D"#FFFFFF" ><tr><td style=
+=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-=
+->
+   =20
+     =20
+      <div class=3D"content-wrapper" style=3D"background:#FFFFFF;background=
+-color:#FFFFFF;margin:0px auto;max-width:600px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"background:#FFFFFF;background-color:#=
+FFFFFF;width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:10px 34px;te=
+xt-align:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" width=3D"600px" ><t=
+able align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"" role=3D"presentation" style=3D"width:532px;" width=3D"532" ><tr><td =
+style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![en=
+dif]-->
+   =20
+     =20
+      <div style=3D"margin:0px auto;max-width:532px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:20px 0;text-=
+align:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:532px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:t=
+op;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:0;paddi=
+ng-bottom:20px;word-break:break-word;">
+                 =20
+      <div style=3D"font-family:sofia-pro, Helvetica, Arial, sans-serif;fon=
+t-size:30px;font-weight:900;line-height:30px;text-align:center;color:#23222=
+1;">Interview des auteurs de Pomp=C3=A9i - 2/2</div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr><tr><td class=3D"" widt=
+h=3D"600px" ><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" class=3D"" role=3D"presentation" style=3D"width:532px;" width=3D=
+"532" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"margin:0px auto;max-width:532px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;text-align=
+:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><![endif]-->
+                 =20
+     =20
+
+      <!--[if mso | IE]></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr><tr><td class=3D"" widt=
+h=3D"532px" ><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" class=3D"" role=3D"presentation" style=3D"width:532px;" width=3D=
+"532" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"margin:0px auto;max-width:532px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;text-align=
+:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:532px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:t=
+op;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"left" class=3D"content-wrapper" style=3D"font-=
+size:0px;padding:0;word-break:break-word;">
+                 =20
+      <div style=3D"font-family:sofia-pro, Helvetica, Arial, sans-serif;fon=
+t-size:14px;font-weight:400;line-height:22px;text-align:left;color:#59544E;=
+"><p style=3D"background-color:white;margin-bottom:10.5pt;margin-left:0cm;m=
+argin-right:0cm;margin-top:0cm;"><span style=3D"color:#1A1A19;"><strong>Sec=
+onde partie de notre passionnante interview des auteurs de </strong><i><str=
+ong>Pomp=C3=A9i</strong></i><strong>. </strong></span><a href=3D"http://mai=
+ling.ulule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin=
+0NB4SgyRSkYSaOpbUwAAexQ/2/CBZBRbmVHs02epHwWjjAMg/aHR0cHM6Ly93d3cuZWRpdGlvbn=
+NhbnNwYWNoLmNvbS9hdXRldXIvZmFiaWVubmUtcGlnaWVyZS8" rel=3D"nofollow noopener=
+ noreferrer"><span style=3D"color:#1B94CC;"><span><strong>Fabienne Pigi=C3=
+=A8re</strong></span></span></a><span style=3D"color:#1A1A19;"><strong> et =
+</strong></span><a href=3D"http://mailing.ulule.com/lnk/AWEAAGjh5qUAAAAAAAA=
+AAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/3/KVYtmAjx70wg=
+_KaZRUgdlw/aHR0cHM6Ly93d3cuZWRpdGlvbnNhbnNwYWNoLmNvbS9hdXRldXIvcnVkaS1taWVs=
+Lw" rel=3D"nofollow noopener noreferrer"><span style=3D"color:#1B94CC;"><sp=
+an><strong>Rudi Miel=C2=A0</strong></span></span></a><span style=3D"color:#=
+1A1A19;"><strong>(cosc=C3=A9naristes) d=C3=A9veloppent leur passion pour l=
+=E2=80=99Antiquit=C3=A9 et les personnages forts. Ils sont rejoints par </s=
+trong></span><a href=3D"http://mailing.ulule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK=
+3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/4/nNifmsIxA2Lvn1Q=
+TGuQYSQ/aHR0cHM6Ly93d3cuZWRpdGlvbnNhbnNwYWNoLmNvbS9hdXRldXIvcGFvbG8tZ3JlbGx=
+hLWRlc3NpbmF0ZXVyLWJkLw" rel=3D"nofollow noopener noreferrer"><span style=
+=3D"color:#1B94CC;"><span><strong>Paolo Grella</strong></span></span></a><s=
+pan style=3D"color:#1A1A19;"><strong> (dessinateur et coloriste), qui l=C3=
+=A8ve un coin du voile sur son =C3=A9poustouflante reconstitution de la vil=
+le avant sa destruction.=C2=A0</strong></span></p><p><span><strong>Paolo, c=
+omment avez-vous approch=C3=A9 le dessin et l=E2=80=99ambiance visuelle de =
+l=E2=80=99album=E2=80=89?</strong></span></p><p><span style=3D"color:#30323=
+4;"><strong>P.G.=C2=A0:</strong> J=E2=80=99adore cette p=C3=A9riode de l=E2=
+=80=99Histoire. Je suis n=C3=A9 =C3=A0 Rome, et j=E2=80=99ai grandi dans l=
+=E2=80=99h=C3=A9ritage des anciens Romains. Au-del=C3=A0 d=E2=80=99une desc=
+ription d=C3=A9taill=C3=A9e, j=E2=80=99ai cherch=C3=A9 =C3=A0 capturer l=E2=
+=80=99essence de cette =C3=A9poque, en mettant l=E2=80=99accent sur l=E2=80=
+=99atmosph=C3=A8re de Pomp=C3=A9i, l=E2=80=99ambiance, le sentiment de se p=
+romener dans ses rues. J=E2=80=99ai voulu donner vie =C3=A0 ses habitants. =
+Selon Pline le Jeune, Pomp=C3=A9i est =C2=AB=E2=80=89<i>la plus vivante des=
+ villes mortes=E2=80=89</i>=C2=BB. Cette expression a guid=C3=A9 ma d=C3=A9=
+marche tout au long de la r=C3=A9alisation de l=E2=80=99album.</span></p><p=
+><span><strong>Quelles ont =C3=A9t=C3=A9 les plus grandes difficult=C3=A9s =
+graphiques dans ce projet=E2=80=89?=C2=A0</strong></span><br/><span><strong=
+>P.G.=C2=A0:</strong> Le d=C3=A9part n=E2=80=99a pas =C3=A9t=C3=A9 des plus=
+ faciles.=C2=A0Comme l=E2=80=99a soulign=C3=A9 </span><a href=3D"http://mai=
+ling.ulule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin=
+0NB4SgyRSkYSaOpbUwAAexQ/5/KkA3qY-cAeP0JxI0P4G0-A/aHR0cHM6Ly93d3cuZWRpdGlvbn=
+NhbnNwYWNoLmNvbS9hdXRldXIvZmFiaWVubmUtcGlnaWVyZS8" rel=3D"nofollow noopener=
+ noreferrer" target=3D"_blank"><span>Fabienne</span></a><span>, les vestige=
+s de Pomp=C3=A9i offrent un aper=C3=A7u fascinant sur le quotidien de ses h=
+abitants, ainsi que sur sa structure sociale et urbaine. Cependant, ces =C2=
+=AB=E2=80=89instantan=C3=A9s=E2=80=89=C2=BB sont tr=C3=A8s fragmentaires, c=
+e qui laisse beaucoup de place =C3=A0 l=E2=80=99interpr=C3=A9tation. Au fil=
+ des ans et des d=C3=A9couvertes, des certitudes qui semblaient intangibles=
+ ont =C3=A9t=C3=A9 compl=C3=A8tement remises en question, ce qui complique =
+consid=C3=A9rablement l=E2=80=99=C3=A9tude de Pomp=C3=A9i. Ma m=C3=A9thode =
+de dessin est tr=C3=A8s libre et impressionniste, mais, pour cette s=C3=A9r=
+ie, j=E2=80=99ai d=C3=BB creuser plus profond=C3=A9ment, explorer et =C3=A9=
+tudier pour reconstruire et comprendre l=E2=80=99apparence de b=C3=A2timent=
+s ou de lieux particuliers =C3=A0 l=E2=80=99=C3=A9poque. Mes recherches se =
+sont parfois av=C3=A9r=C3=A9es beaucoup plus complexes que pr=C3=A9vu. Heur=
+eusement, </span><a href=3D"http://mailing.ulule.com/lnk/AWEAAGjh5qUAAAAAAA=
+AAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/6/Aoxg5sl5teC=
+iZQFcn5Lalw/aHR0cHM6Ly93d3cuZWRpdGlvbnNhbnNwYWNoLmNvbS9hdXRldXIvcnVkaS1taWV=
+sLw" rel=3D"nofollow noopener noreferrer" target=3D"_blank"><span>Rudi </sp=
+an></a><span>et Fabienne m=E2=80=99ont beaucoup aid=C3=A9.=C2=A0J=E2=80=99e=
+sp=C3=A8re que tous ces efforts de recherche et de reconstitution sont perc=
+eptibles dans chaque page.</span></p><p><span><strong>Y a-t-il un d=C3=A9ta=
+il historique ou une anecdote qui vous a particuli=C3=A8rement marqu=C3=A9 =
+lors de vos recherches=E2=80=89?=C2=A0</strong></span><br/><span><strong>R.=
+M.=C2=A0:</strong> De mani=C3=A8re g=C3=A9n=C3=A9rale, j=E2=80=99ai =C3=A9t=
+=C3=A9 frapp=C3=A9, dans toutes nos lectures, par l=E2=80=99atmosph=C3=A8re=
+ tr=C3=A8s particuli=C3=A8re qui semblait se d=C3=A9gager de Pomp=C3=A9i av=
+ant que le destin ne la frappe. =C3=80 condition bien entendu d=E2=80=99=C3=
+=AAtre du c=C3=B4t=C3=A9 des nantis, dans la hi=C3=A9rarchie sociale de l=
+=E2=80=99=C3=A9poque, la qualit=C3=A9 de vie y semble exceptionnelle. Une g=
+rande s=C3=A9r=C3=A9nit=C3=A9 se d=C3=A9gage de l=E2=80=99architecture de l=
+a ville et de son regard =C3=A0 l=E2=80=99art. Les jardins, les monuments, =
+le climat, tout semble inviter =C3=A0 la tranquillit=C3=A9. Mais c=E2=80=99=
+=C3=A9tait aussi une ville de contrastes o=C3=B9 les in=C3=A9galit=C3=A9s d=
+e statut =C3=A9taient parfois vertigineuses.</span><br/><span><strong>F.P.=
+=C2=A0:</strong> La mise au jour d=E2=80=99un graffiti au fusain sur le mur=
+ d=E2=80=99une maison de Pomp=C3=A9i. Ce gribouillis humoristique mentionna=
+nt =C2=AB=E2=80=89Il s=E2=80=99est b=C3=A2fr=C3=A9=E2=80=89=C2=BB est accom=
+pagn=C3=A9 de la date du 17=C2=A0octobre, qui constitue l=E2=80=99argument =
+d=C3=A9cisif pour placer l=E2=80=99=C3=A9ruption du V=C3=A9suve le 24=C2=A0=
+octobre et non pas le 24=C2=A0ao=C3=BBt comme on l=E2=80=99a longtemps pens=
+=C3=A9.=C2=A0</span></p><p><span><strong>L=E2=80=99=C3=A9ruption du V=C3=A9=
+suve est un moment cl=C3=A9 du r=C3=A9cit. Comment avez-vous construit cett=
+e mont=C3=A9e en tension=E2=80=89?=C2=A0</strong></span><br/><span><strong>=
+R.M.=C2=A0:</strong> Contrairement aux id=C3=A9es re=C3=A7ues, quelques sig=
+nes annonciateurs de la catastrophe ont =C3=A9t=C3=A9 observ=C3=A9s avant l=
+=E2=80=99=C3=A9ruption. L=E2=80=99=C3=A9ruption a dur=C3=A9 plusieurs jours=
+. Mais avant, la Terre a trembl=C3=A9 de nombreuses fois=E2=80=A6 Certains =
+habitants, effray=C3=A9s par tous ces signes, ont donc fui =C3=A0 temps une=
+ mort tragique. La mont=C3=A9e en tension, dans notre album, est rythm=C3=
+=A9e par ces secousses qui annoncent le destin effroyable des habitants.</s=
+pan></p><p><span><strong>Qu=E2=80=99esp=C3=A9rez vous que les lecteurs reti=
+ennent de=C2=A0</strong></span><i><span><strong>Pomp=C3=A9i</strong></span>=
+</i><span><strong>=E2=80=89?=C2=A0</strong></span><br/><span><strong>R.M.=
+=C2=A0</strong>: Comme je l=E2=80=99=C3=A9voquais plus t=C3=B4t, notre dest=
+in peut s=E2=80=99arr=C3=AAter brutalement. Parfois tr=C3=A8s t=C3=B4t. La =
+le=C3=A7on universelle que nous envoie Pomp=C3=A9i, pr=C3=A8s de 2000 ans a=
+pr=C3=A8s le cataclysme, est de mettre =C3=A0 profit chaque micro-moment de=
+ notre existence, comme si c=E2=80=99=C3=A9tait le dernier. N=E2=80=99ayons=
+ aucune inqui=C3=A9tude =C3=A0 forcer notre destin m=C3=AAme s=E2=80=99il n=
+ous rattrape parfois.</span><br/><span><strong>F.P.=C2=A0:</strong> Je rejo=
+ins Rudi. Le destin tragique de Pomp=C3=A9i interpelle encore et toujours a=
+u fil des si=C3=A8cles. J=E2=80=99esp=C3=A8re aussi susciter un int=C3=A9r=
+=C3=AAt pour les civilisations du pass=C3=A9. Notre soci=C3=A9t=C3=A9 n=E2=
+=80=99est pas apparue ex nihilo. Il est important de savoir d=E2=80=99o=C3=
+=B9 on vient.=C2=A0</span><br/><span><strong>P.G.=C2=A0:</strong>=C2=A0J=E2=
+=80=99esp=C3=A8re que notre travail a pu restituer toute la beaut=C3=A9 du =
+Pomp=C3=A9i de l=E2=80=99=C3=A9poque romaine. En =C3=A9tudiant et en approf=
+ondissant, j=E2=80=99ai d=C3=A9couvert une complexit=C3=A9, une beaut=C3=A9=
+, une ing=C3=A9niosit=C3=A9,=C2=A0vraiment impressionnantes. Les fresques, =
+en particulier, semblent =C3=AAtre sorties tout droit de la Renaissance, pa=
+r leur beaut=C3=A9 et leur d=C3=A9licatesse. Je crois qu=E2=80=99une partie=
+ de cette magie se refl=C3=A8te dans notre r=C3=A9cit.=C2=A0</span></p><p><=
+span><strong>Pour finir, combien de volumes sont-ils pr=C3=A9vus et pouvez-=
+vous d=C3=A9voiler un peu les prochains tomes=E2=80=89?</strong></span><br/=
+><span><strong>R.M.=C2=A0:</strong> Nous pr=C3=A9voyons cinq tomes=E2=80=A6=
+ Peut-=C3=AAtre plus si le public nous suit. Le second tome mettra en sc=C3=
+=A8ne un jeune gladiateur, un dieu de l=E2=80=99ar=C3=A8ne, que certaines f=
+ailles dans son histoire ont fragilis=C3=A9. Et le troisi=C3=A8me devrait =
+=C3=A9voquer la magie noire qui =C3=A9tait tr=C3=A8s courante =C3=A0 Pomp=
+=C3=A9i.</span></p><p><a href=3D"http://mailing.ulule.com/lnk/AWEAAGjh5qUAA=
+AAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/7/FqUhgX=
+LmxahVovIOBq9vJQ/aHR0cHM6Ly9mci51bHVsZS5jb20vcG9tcGVpLTYvbmV3cy9pbnRlcnZpZX=
+ctZGVzLWF1dGV1cnMtZGUtcG9tcGVpLS0tMS0yLTQzNzU4OC8" rel=3D"nofollow noopener=
+ noreferrer" target=3D"_blank"><span><strong>LIRE LA PREMIERE PARTIE DE L'I=
+NTERVIEW=C2=A0</strong></span></a></p><figure class=3D"image"><img src=3D"h=
+ttps://media.ulule.com/presales/5/4/0/5/0/2/205045/pompei_312-233_hr-print-=
+fr-28.xvgACnbIhR.jpg" style=3D"max-width: 100%"/></figure></div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr><tr><td class=3D"" widt=
+h=3D"532px" ><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" class=3D"" role=3D"presentation" style=3D"width:532px;" width=3D=
+"532" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"margin:0px auto;max-width:532px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;text-align=
+:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:532px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:t=
+op;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px;wo=
+rd-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"border-collapse:separate;width:50%;line-height:100%;">
+        <tbody>
+          <tr>
+            <td align=3D"center" bgcolor=3D"#FFFFFF" role=3D"presentation" =
+style=3D"border:2px solid #18a5d6;border-radius:2px;cursor:auto;mso-padding=
+-alt:12px 20px 12px 20px;background:#FFFFFF;" valign=3D"middle">
+              <a href=3D"http://mailing.ulule.com/lnk/AWEAAGjh5qUAAAAAAAAAA=
+K3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/8/W9TcfgoKFnRBB3=
+QDl1IRcw/aHR0cDovL2ZyLnVsdWxlLmNvbS9wb21wZWktNi9uZXdzL2ludGVydmlldy1kZXMtYX=
+V0ZXVycy1kZS1wb21wZWktLS0yLTItNDM3NzA4Lz91bF9jYW1wYWlnbj1wcmVzYWxlXzIwNTA0N=
+SZ1bF9zb3VyY2U9c2hhcmVkLWZyb20tVWx1bGUtbWFpbC1wcm9qZWN0Lm5ld3MuY3JlYXRlZC1v=
+bi0tLWh0dHAucmVmZXJlci0tJmxhbmc9ZnImdWxfbWVkaXVtPXVsdWlkXzI5ODIxNjEtdW5rbm9=
+3bi0yMDI1MDQxNzE2Mzg" style=3D"display: inline-block; background: #FFFFFF; =
+color: #18a5d6; font-family: sofia-pro, Helvetica, Arial, sans-serif; font-=
+size: 15px; font-weight: 400; line-height: 22px; margin: 0; text-decoration=
+: none; text-transform: none; padding: 12px 20px 12px 20px; mso-padding-alt=
+: 0px; border-radius: 2px;" target=3D"_blank">
+                Voir la publication
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr><tr><td class=3D"" widt=
+h=3D"600px" ><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" class=3D"" role=3D"presentation" style=3D"width:532px;" width=3D=
+"532" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"margin:0px auto;max-width:532px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;text-align=
+:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:532px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:t=
+op;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:20px 0;=
+word-break:break-word;">
+                 =20
+      <p style=3D"border-top:solid 1px #E0E0E0;font-size:1px;margin:0px aut=
+o;width:100%;">
+      </p>
+     =20
+      <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" style=3D"border-top:solid 1px #E0E0E0;font-size:1px;m=
+argin:0px auto;width:532px;" role=3D"presentation" width=3D"532px" ><tr><td=
+ style=3D"height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+   =20
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
+       =20
+          <!--[if mso | IE]><tr><td class=3D"" width=3D"600px" ><table alig=
+n=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" ro=
+le=3D"presentation" style=3D"width:532px;" width=3D"532" ><tr><td style=3D"=
+line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"margin:0px auto;max-width:532px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;text-align=
+:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:532px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:t=
+op;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 0 =
+20px 0;word-break:break-word;">
+                 =20
+      <div style=3D"font-family:sofia-pro, Helvetica, Arial, sans-serif;fon=
+t-size:19px;font-weight:600;line-height:19px;text-align:center;color:#23222=
+1;">Vous pouvez aider encore plus cette collecte en la partageant !</div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td style=3D"font-size:0px;padding:0;word-break:break-word;=
+">
+                 =20
+     =20
+      <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"width:532px=
+;" width=3D"532" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-h=
+eight-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"margin:0px auto;max-width:532px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;text-align=
+:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:133px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-25 mj-outlook-group-fix" style=3D"font-si=
+ze:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:to=
+p;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:12px 0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:0;word-=
+break:break-word;">
+                 =20
+     =20
+     <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" ><tr><td><![endif]-->
+              <table align=3D"center" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" style=3D"float:none;display:inline-table;=
+">
+                <tbody>
+                 =20
+      <tr>
+        <td style=3D"padding:0;vertical-align:middle;">
+          <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" style=3D"border-radius:0px;width:30px;">
+            <tbody>
+              <tr>
+                <td style=3D"padding:0 5px 0 0;font-size:0;height:30px;vert=
+ical-align:middle;width:30px;">
+                  <a href=3D"http://mailing.ulule.com/lnk/AWEAAGjh5qUAAAAAA=
+AAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/9/_baLIZfsbp=
+h34YJ5TlTGWg/aHR0cDovL3d3dy5saW5rZWRpbi5jb20vc2hhcmVBcnRpY2xlP3VybD1odHRwJT=
+NBLy9mci51bHVsZS5jb20vcG9tcGVpLTYvJTNGdXRtX2NhbXBhaWduJTNEcHJlc2FsZV8yMDUwN=
+DUlMjZ1dG1fc291cmNlJTNEc2hhcmVkLWZyb20tVWx1bGUtbWFpbC1wcm9qZWN0Lm5ld3MuY3Jl=
+YXRlZC1vbi1MaW5rZWRpbiUyNmxhbmclM0RmciUyNnV0bV9tZWRpdW0lM0R1bHVpZF8yOTgyMTY=
+xLXBvc3QtMjAyNTA0MTcxNjM4" target=3D"_blank" style=3D"color: #18a5d6;">
+                    <img alt height=3D"30" src=3D"https://assets.ulule.com/=
+site/build/img/mail/mjml/Linkedin.9b7b3147be2e.png" style=3D"border-radius:=
+0px;display:block;" width=3D"30">
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+       =20
+          <td style=3D"vertical-align:middle;padding:4px 4px 0 0;">
+            <a href=3D"http://mailing.ulule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK3=
+fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/10/GhA5TeMKSFVuCXi=
+Q_8kh6A/aHR0cDovL3d3dy5saW5rZWRpbi5jb20vc2hhcmVBcnRpY2xlP3VybD1odHRwJTNBLy9=
+mci51bHVsZS5jb20vcG9tcGVpLTYvJTNGdXRtX2NhbXBhaWduJTNEcHJlc2FsZV8yMDUwNDUlMj=
+Z1dG1fc291cmNlJTNEc2hhcmVkLWZyb20tVWx1bGUtbWFpbC1wcm9qZWN0Lm5ld3MuY3JlYXRlZ=
+C1vbi1MaW5rZWRpbiUyNmxhbmclM0RmciUyNnV0bV9tZWRpdW0lM0R1bHVpZF8yOTgyMTYxLXBv=
+c3QtMjAyNTA0MTcxNjM4" style=3D"color: grey; font-size: 15px; font-weight: 6=
+00; font-family: sofia-pro, Helvetica, Arial, sans-serif; line-height: 22px=
+; text-decoration: none;" target=3D"_blank">
+              Linkedin
+            </a>
+          </td>
+         =20
+      </tr>
+   =20
+                </tbody>
+              </table>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+   =20
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td><td class=3D"" style=3D"vertical-align:top=
+;width:133px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-25 mj-outlook-group-fix" style=3D"font-si=
+ze:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:to=
+p;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:12px 0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:0;word-=
+break:break-word;">
+                 =20
+     =20
+     <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" ><tr><td><![endif]-->
+              <table align=3D"center" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" style=3D"float:none;display:inline-table;=
+">
+                <tbody>
+                 =20
+      <tr>
+        <td style=3D"padding:0;vertical-align:middle;">
+          <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" style=3D"border-radius:0px;width:30px;">
+            <tbody>
+              <tr>
+                <td style=3D"padding:0 5px 0 0;font-size:0;height:30px;vert=
+ical-align:middle;width:30px;">
+                  <a href=3D"" rel=3D"notrack" target=3D"_blank" style=3D"c=
+olor: #18a5d6;">
+                    <img alt height=3D"30" src=3D"https://assets.ulule.com/=
+site/build/img/mail/mjml/Messenger.9976601b384d.png" style=3D"border-radius=
+:0px;display:block;" width=3D"30">
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+       =20
+          <td style=3D"vertical-align:middle;padding:4px 4px 0 0;">
+            <a href=3D"" style=3D"color: grey; font-size: 15px; font-weight=
+: 600; font-family: sofia-pro, Helvetica, Arial, sans-serif; line-height: 2=
+2px; text-decoration: none;" rel=3D"notrack" target=3D"_blank">
+              Messenger
+            </a>
+          </td>
+         =20
+      </tr>
+   =20
+                </tbody>
+              </table>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+   =20
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td><td class=3D"" style=3D"vertical-align:top=
+;width:133px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-25 mj-outlook-group-fix" style=3D"font-si=
+ze:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:to=
+p;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:12px 0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:0;word-=
+break:break-word;">
+                 =20
+     =20
+     <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" ><tr><td><![endif]-->
+              <table align=3D"center" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" style=3D"float:none;display:inline-table;=
+">
+                <tbody>
+                 =20
+      <tr>
+        <td style=3D"padding:0;vertical-align:middle;">
+          <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" style=3D"border-radius:0px;width:30px;">
+            <tbody>
+              <tr>
+                <td style=3D"padding:0 5px 0 0;font-size:0;height:30px;vert=
+ical-align:middle;width:30px;">
+                  <a href=3D"http://mailing.ulule.com/lnk/AWEAAGjh5qUAAAAAA=
+AAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/11/y43YX5w4j=
+Kep_nPyL9TY6w/aHR0cHM6Ly9hcGkud2hhdHNhcHAuY29tL3NlbmQ_dGV4dD1odHRwJTNBLy9mc=
+i51bHVsZS5jb20vcG9tcGVpLTYvJTNGdXRtX2NhbXBhaWduJTNEcHJlc2FsZV8yMDUwNDUlMjZ1=
+dG1fc291cmNlJTNEc2hhcmVkLWZyb20tVWx1bGUtbWFpbC1wcm9qZWN0Lm5ld3MuY3JlYXRlZC1=
+vbi1XaGF0c2FwcCUyNmxhbmclM0RmciUyNnV0bV9tZWRpdW0lM0R1bHVpZF8yOTgyMTYxLXBvc3=
+QtMjAyNTA0MTcxNjM4" target=3D"_blank" style=3D"color: #18a5d6;">
+                    <img alt height=3D"30" src=3D"https://assets.ulule.com/=
+site/build/img/mail/mjml/Whatsapp.3d695f434998.png" style=3D"border-radius:=
+0px;display:block;" width=3D"30">
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+       =20
+          <td style=3D"vertical-align:middle;padding:4px 4px 0 0;">
+            <a href=3D"http://mailing.ulule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK3=
+fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/12/2srDoMEV0-da1-t=
+M_36sJA/aHR0cHM6Ly9hcGkud2hhdHNhcHAuY29tL3NlbmQ_dGV4dD1odHRwJTNBLy9mci51bHV=
+sZS5jb20vcG9tcGVpLTYvJTNGdXRtX2NhbXBhaWduJTNEcHJlc2FsZV8yMDUwNDUlMjZ1dG1fc2=
+91cmNlJTNEc2hhcmVkLWZyb20tVWx1bGUtbWFpbC1wcm9qZWN0Lm5ld3MuY3JlYXRlZC1vbi1Xa=
+GF0c2FwcCUyNmxhbmclM0RmciUyNnV0bV9tZWRpdW0lM0R1bHVpZF8yOTgyMTYxLXBvc3QtMjAy=
+NTA0MTcxNjM4" style=3D"color: grey; font-size: 15px; font-weight: 600; font=
+-family: sofia-pro, Helvetica, Arial, sans-serif; line-height: 22px; text-d=
+ecoration: none;" target=3D"_blank">
+              Whatsapp
+            </a>
+          </td>
+         =20
+      </tr>
+   =20
+                </tbody>
+              </table>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+   =20
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td><td class=3D"" style=3D"vertical-align:top=
+;width:133px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-25 mj-outlook-group-fix" style=3D"font-si=
+ze:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:to=
+p;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:12px 0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:0;word-=
+break:break-word;">
+                 =20
+     =20
+     <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" ><tr><td><![endif]-->
+              <table align=3D"center" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" style=3D"float:none;display:inline-table;=
+">
+                <tbody>
+                 =20
+      <tr>
+        <td style=3D"padding:0;vertical-align:middle;">
+          <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" style=3D"border-radius:0px;width:30px;">
+            <tbody>
+              <tr>
+                <td style=3D"padding:0 5px 0 0;font-size:0;height:30px;vert=
+ical-align:middle;width:30px;">
+                  <a href=3D"http://mailing.ulule.com/lnk/AWEAAGjh5qUAAAAAA=
+AAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/13/jVqUilv_0=
+FOVmNlLV4DPtQ/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3NoYXJlci9zaGFyZXIucGhwP3U9a=
+HR0cCUzQS8vZnIudWx1bGUuY29tL3BvbXBlaS02LyUzRnV0bV9jYW1wYWlnbiUzRHByZXNhbGVf=
+MjA1MDQ1JTI2dXRtX3NvdXJjZSUzRHNoYXJlZC1mcm9tLVVsdWxlLW1haWwtcHJvamVjdC5uZXd=
+zLmNyZWF0ZWQtb24tRmFjZWJvb2slMjZsYW5nJTNEZnIlMjZ1dG1fbWVkaXVtJTNEdWx1aWRfMj=
+k4MjE2MS1wb3N0LTIwMjUwNDE3MTYzOCZkaXNwbGF5PXBvcHVw" target=3D"_blank" style=
+=3D"color: #18a5d6;">
+                    <img alt height=3D"30" src=3D"https://assets.ulule.com/=
+site/build/img/mail/mjml/Facebook.752bc7702fa8.png" style=3D"border-radius:=
+0px;display:block;" width=3D"30">
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+       =20
+          <td style=3D"vertical-align:middle;padding:4px 4px 0 0;">
+            <a href=3D"http://mailing.ulule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK3=
+fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/14/Ug0Ip105EMgPsem=
+LAgV_9g/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3NoYXJlci9zaGFyZXIucGhwP3U9aHR0cCU=
+zQS8vZnIudWx1bGUuY29tL3BvbXBlaS02LyUzRnV0bV9jYW1wYWlnbiUzRHByZXNhbGVfMjA1MD=
+Q1JTI2dXRtX3NvdXJjZSUzRHNoYXJlZC1mcm9tLVVsdWxlLW1haWwtcHJvamVjdC5uZXdzLmNyZ=
+WF0ZWQtb24tRmFjZWJvb2slMjZsYW5nJTNEZnIlMjZ1dG1fbWVkaXVtJTNEdWx1aWRfMjk4MjE2=
+MS1wb3N0LTIwMjUwNDE3MTYzOCZkaXNwbGF5PXBvcHVw" style=3D"color: grey; font-si=
+ze: 15px; font-weight: 600; font-family: sofia-pro, Helvetica, Arial, sans-=
+serif; line-height: 22px; text-decoration: none;" target=3D"_blank">
+              Facebook
+            </a>
+          </td>
+         =20
+      </tr>
+   =20
+                </tbody>
+              </table>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+   =20
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table><![endif]-->
+   =20
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table><![endif]-->
+   =20
+    <!-- END content --><!-- START footer -->
+     =20
+      <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"width:600px=
+;" width=3D"600" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-h=
+eight-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"margin:0px auto;max-width:600px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;padding-to=
+p:10px;text-align:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" width=3D"600px" ><t=
+able align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"" role=3D"presentation" style=3D"width:600px;" width=3D"600" ><tr><td =
+style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![en=
+dif]-->
+   =20
+     =20
+      <div style=3D"margin:0px auto;max-width:600px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;text-align=
+:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:600px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:t=
+op;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:0;word-=
+break:break-word;">
+                 =20
+      <div style=3D"font-family:sofia-pro, Helvetica, Arial, sans-serif;fon=
+t-size:13px;font-weight:400;line-height:22px;text-align:center;color:#00000=
+0;">
+           =20
+            </div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"background:transparent;font-s=
+ize:0px;padding:0;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style=3D"width:600px;">
+             =20
+        <a href=3D"http://mailing.ulule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK3fHe4=
+AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/15/Apj4pyh6WAVxJ2X_8dQ=
+GRw/aHR0cHM6Ly91bHVsZS5jb20" target=3D"_blank" title=3D"Ulule">
+         =20
+      <img alt=3D"Logo Ulule" src=3D"https://assets.ulule.com/site/build/im=
+g/mail/mjml/footer@2x.9896b2f7170e.png" srcset=3D"https://assets.ulule.com/=
+site/build/img/mail/mjml/footer.27f6e1b7a738.png 1x, https://assets.ulule.c=
+om/site/build/img/mail/mjml/footer@2x.9896b2f7170e.png 2x, https://assets.u=
+lule.com/site/build/img/mail/mjml/footer@3x.c649cfdc6eb1.png 3x" style=3D"b=
+order:0;display:block;outline:none;text-decoration:none;height:auto;width:1=
+00%;font-size:13px;" title=3D"Ulule" width=3D"600" height=3D"auto">
+   =20
+        </a>
+     =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:0;word-br=
+eak:break-word;">
+                 =20
+      <div style=3D"font-family:sofia-pro, Helvetica, Arial, sans-serif;fon=
+t-size:14px;font-weight:400;line-height:22px;text-align:left;color:#59544E;=
+">
+            Vous avez une question =C3=A0 propos d'Ulule ? Consultez notre=20
+                <a href=3D"http://mailing.ulule.com/lnk/AWEAAGjh5qUAAAAAAAA=
+AAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/16/6Dzi4a8Pwwu=
+1XDvrDOhwpA/aHR0cHM6Ly9zdXBwb3J0LnVsdWxlLmNvbS8" style=3D"color: #18a5d6">s=
+upport</a>
+            </div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:0;word-br=
+eak:break-word;">
+                 =20
+      <div style=3D"font-family:sofia-pro, Helvetica, Arial, sans-serif;fon=
+t-size:14px;font-weight:400;line-height:22px;text-align:left;color:#59544E;=
+">Suivez-nous !</div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr><tr><td class=3D"" widt=
+h=3D"600px" ><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" class=3D"" role=3D"presentation" style=3D"width:600px;" width=3D=
+"600" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"margin:0px auto;max-width:600px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;text-align=
+:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:100px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-px-100 mj-outlook-group-fix" style=3D"font-si=
+ze:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:to=
+p;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:0;word-=
+break:break-word;">
+                 =20
+      <div style=3D"font-family:sofia-pro, Helvetica, Arial, sans-serif;fon=
+t-size:13px;font-weight:500;line-height:22px;text-align:center;text-decorat=
+ion:underline;color:#232221;"><a target=3D"_blank" href=3D"http://mailing.u=
+lule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4Sg=
+yRSkYSaOpbUwAAexQ/17/EZufL0gV8oDwr4hKb3_jgg/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29=
+tL3VsdWxl" class=3D"link-nostyle" style=3D"color: inherit; text-decoration:=
+ none;">Facebook</a></div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td><td class=3D"" style=3D"vertical-align:top=
+;width:100px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-px-100 mj-outlook-group-fix" style=3D"font-si=
+ze:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:to=
+p;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:0;word-=
+break:break-word;">
+                 =20
+      <div style=3D"font-family:sofia-pro, Helvetica, Arial, sans-serif;fon=
+t-size:13px;font-weight:500;line-height:22px;text-align:center;text-decorat=
+ion:underline;color:#232221;"><a target=3D"_blank" href=3D"http://mailing.u=
+lule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4Sg=
+yRSkYSaOpbUwAAexQ/18/dnwTnwfLt5RnQ-3s0_rAog/aHR0cHM6Ly93d3cudGlrdG9rLmNvbS9=
+AdWx1bGVfb2Zm" class=3D"link-nostyle" style=3D"color: inherit; text-decorat=
+ion: none;">TikTok</a></div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td><td class=3D"" style=3D"vertical-align:top=
+;width:100px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-px-100 mj-outlook-group-fix" style=3D"font-si=
+ze:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:to=
+p;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:0;word-=
+break:break-word;">
+                 =20
+      <div style=3D"font-family:sofia-pro, Helvetica, Arial, sans-serif;fon=
+t-size:13px;font-weight:500;line-height:22px;text-align:center;text-decorat=
+ion:underline;color:#232221;"><a target=3D"_blank" href=3D"http://mailing.u=
+lule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4Sg=
+yRSkYSaOpbUwAAexQ/19/Kg_9ymY_H_gpGJMUDb7PUw/aHR0cHM6Ly93d3cuaW5zdGFncmFtLmN=
+vbS91bHVsZS8" class=3D"link-nostyle" style=3D"color: inherit; text-decorati=
+on: none;">Instagram</a></div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td><td class=3D"" style=3D"vertical-align:top=
+;width:100px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-px-100 mj-outlook-group-fix" style=3D"font-si=
+ze:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:to=
+p;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:0;word-=
+break:break-word;">
+                 =20
+      <div style=3D"font-family:sofia-pro, Helvetica, Arial, sans-serif;fon=
+t-size:13px;font-weight:500;line-height:22px;text-align:center;text-decorat=
+ion:underline;color:#232221;"><a target=3D"_blank" href=3D"http://mailing.u=
+lule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4Sg=
+yRSkYSaOpbUwAAexQ/20/IdC9fXhvH6Ybo1UtX4xtwQ/aHR0cHM6Ly93d3cubGlua2VkaW4uY29=
+tL2NvbXBhbnkvdWx1bGUv" class=3D"link-nostyle" style=3D"color: inherit; text=
+-decoration: none;">Linkedin</a></div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr><tr><td class=3D"" widt=
+h=3D"600px" ><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" class=3D"" role=3D"presentation" style=3D"width:600px;" width=3D=
+"600" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"margin:0px auto;max-width:600px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:10px 20px;te=
+xt-align:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:560px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:t=
+op;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding:0;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:0;word-=
+break:break-word;">
+                 =20
+      <div style=3D"font-family:sofia-pro, Helvetica, Arial, sans-serif;fon=
+t-size:11px;font-weight:400;line-height:16px;text-align:center;color:#80797=
+4;">
+           =20
+
+
+           =20
+            Vous recevez cet email car vous suivez la collecte <a href=3D"h=
+ttp://mailing.ulule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVAB=
+oARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/21/Sa5aA-tR-dKmq8_ym0HLRA/aHR0cDovL2ZyLnVs=
+dWxlLmNvbS9wb21wZWktNi8_dWxfY2FtcGFpZ249cHJlc2FsZV8yMDUwNDUmdWxfc291cmNlPXN=
+oYXJlZC1mcm9tLVVsdWxlLW1haWwtcHJvamVjdC5uZXdzLmNyZWF0ZWQtb24tLS1odHRwLnJlZm=
+VyZXItLSZsYW5nPWZyJnVsX21lZGl1bT11bHVpZF8yOTgyMTYxLXVua25vd24tMjAyNTA0MTcxN=
+jM4" style=3D"text-decoration: none" target=3D"_blank">Pomp=C3=A9i</a>. Si =
+vous ne souhaitez plus recevoir ce type de courriel,=20
+                <a target=3D"_blank" href=3D"http://mailing.ulule.com/lnk/A=
+WEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAA=
+exQ/22/z-DB4r7Ct1UBHH_JyvPF2A/aHR0cDovL2ZyLnVsdWxlLmNvbS91c2Vycy8yOTgyMTYxL=
+3NldHRpbmdzL25vdGlmaWNhdGlvbnMv" style=3D"color: #999999">merci de g=C3=A9r=
+er vos pr=C3=A9f=C3=A9rences d&#39;envoi</a>
+            .
+        </div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table><![endif]-->
+   =20
+    <!-- END footer -->
+      </div>
+   =20
+  <br/><a style=3D"font-family: Arial, sans-serif;" href=3D"http://mailing.=
+ulule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4S=
+gyRSkYSaOpbUwAAexQ/0/XXwGH3R-lVLeSRNWP9r5oA/aHR0cHM6Ly91bHVsZS5jb20?b=3D1">=
+&#8203;</a><div style=3D"display: none; height: 0px; width: 0px; overflow: =
+hidden; visibility: hidden; mso-hide: all"><a href=3D"http://mailing.ulule.=
+com/lnk/AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0NB4SgyRSkY=
+SaOpbUwAAexQ/0/XXwGH3R-lVLeSRNWP9r5oA/aHR0cHM6Ly91bHVsZS5jb20?b=3D2" target=
+=3D"_blank" rel=3D"noreferrer">Click on me</a></div><a href=3D"http://maili=
+ng.ulule.com/lnk/AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAEAAAAAAAmsVABoARKBpMin0N=
+B4SgyRSkYSaOpbUwAAexQ/0/XXwGH3R-lVLeSRNWP9r5oA/aHR0cHM6Ly91bHVsZS5jb20?b=3D=
+3">
+<img src=3D"http://mailing.ulule.com/oo/AWEAAGjh5qUAAAAAAAAAAK3fHe4AAAAAAAE=
+AAAAAAAmsVABoARKBpMin0NB4SgyRSkYSaOpbUwAAexQ/daf456c9/e.gif" height=3D"1" w=
+idth=3D"1" alt=3D"" border=3D"0" style=3D"height:1px;width:1px;border:0;"/>
+</a></body>
+</html>=
+
+--===============6818609319074211277==--
