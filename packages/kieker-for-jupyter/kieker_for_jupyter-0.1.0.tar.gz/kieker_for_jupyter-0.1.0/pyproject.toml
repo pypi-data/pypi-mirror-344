@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=76.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kieker_for_jupyter"
+version = "0.1.0"
+authors = [
+  { name="Yorrick Josuttis", email="stu211751@mail.uni-kiel.de" },
+]
+description = "Enhancing Kieker usability in Jupyter Notebooks"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license-files = ["LICENSE.txt"]
+
+[project.urls]
+Homepage = "https://github.com/kieker-monitoring/kieker"
+Issues = "https://sustainkieker.kieker-monitoring.net/"

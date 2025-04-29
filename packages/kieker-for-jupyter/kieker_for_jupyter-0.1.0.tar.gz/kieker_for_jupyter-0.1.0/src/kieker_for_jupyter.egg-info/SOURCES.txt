@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/kieker/__init__.py
+src/kieker/tools/__init__.py
+src/kieker/tools/command_builder.py
+src/kieker/tools/trace_analysis.py
+src/kieker_for_jupyter.egg-info/PKG-INFO
+src/kieker_for_jupyter.egg-info/SOURCES.txt
+src/kieker_for_jupyter.egg-info/dependency_links.txt
+src/kieker_for_jupyter.egg-info/top_level.txt
