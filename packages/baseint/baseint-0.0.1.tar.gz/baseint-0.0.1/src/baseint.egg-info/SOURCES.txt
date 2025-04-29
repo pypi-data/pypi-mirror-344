@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/baseint/__init__.py
+src/baseint.egg-info/PKG-INFO
+src/baseint.egg-info/SOURCES.txt
+src/baseint.egg-info/dependency_links.txt
+src/baseint.egg-info/top_level.txt
