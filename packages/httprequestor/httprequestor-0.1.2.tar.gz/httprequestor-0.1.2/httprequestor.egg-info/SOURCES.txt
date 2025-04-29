@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+httprequestor/__init__.py
+httprequestor/httprequestor.py
+httprequestor.egg-info/PKG-INFO
+httprequestor.egg-info/SOURCES.txt
+httprequestor.egg-info/dependency_links.txt
+httprequestor.egg-info/top_level.txt
