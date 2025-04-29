@@ -1,0 +1,9 @@
+trytond_purchase<7.7,>=7.6
+trytond_purchase_request<7.7,>=7.6
+trytond_sale<7.7,>=7.6
+trytond_stock<7.7,>=7.6
+trytond<7.7,>=7.6
+
+[test]
+proteus<7.7,>=7.6
+trytond_stock_supply<7.7,>=7.6
