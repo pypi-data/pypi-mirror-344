@@ -1,0 +1,11 @@
+autodan/__init__.py,sha256=qbGGQB33Zd2nIOITpu-mXgfH7w8McdZOIEd-WrZ-ZE8,122
+autodan/config.py,sha256=VcbfVWbibSulrXocknmBP8_ZBbiqlEd2SNQ9ca7cMhE,3499
+autodan/core.py,sha256=rhwaXBOFnsHY5AHVCCq6tSY6RPvjt8SI37zKe5nUScs,11038
+autodan/assets/autodan_initial_prompt.txt,sha256=_BtKzgh4TQup7Cq16MZa51u-WWIeQUJd-VQd1xVaMoM,300
+autodan/assets/prompt_group.pth,sha256=BNwAiZqrbwnvRgqwIndoZwdeE8eOoBUP65x8NCAfmhs,168703
+autodan/data/advbench/harmful_behaviors.csv,sha256=bNGlxjwHYQ1-tnMHdy7lYGAX7pULV3CrKIosSHSJ0-E,82125
+llm_jailbreak-0.1.1.dist-info/METADATA,sha256=I3HDPTEL7w0Hqqz4XLsk3ryMZDWLX5nEJo-j6cgbsyY,2823
+llm_jailbreak-0.1.1.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+llm_jailbreak-0.1.1.dist-info/entry_points.txt,sha256=mnWtRqHKFU0bc8nKpSvEJPNeF2tdBNeoJnz2Z0P8mbQ,53
+llm_jailbreak-0.1.1.dist-info/top_level.txt,sha256=vCeNEiy7I0w8BQEnMaY585CKKRY-hgsMvobwDZMIrdg,8
+llm_jailbreak-0.1.1.dist-info/RECORD,,
