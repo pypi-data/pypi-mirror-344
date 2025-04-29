@@ -1,0 +1,10 @@
+dp_accounting>=0.4.4
+scipy>=1.7.0
+matplotlib>=3.4.0
+numba>=0.60.0
+numpy<3.0,>=1.21
+
+[dev]
+pytest>=6.0
+black>=21.0
+flake8>=3.9
