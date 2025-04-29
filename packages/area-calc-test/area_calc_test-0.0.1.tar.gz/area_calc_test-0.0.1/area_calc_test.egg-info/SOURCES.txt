@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+PythonProject/__init__.py
+PythonProject/area.py
+area_calc_test.egg-info/PKG-INFO
+area_calc_test.egg-info/SOURCES.txt
+area_calc_test.egg-info/dependency_links.txt
+area_calc_test.egg-info/requires.txt
+area_calc_test.egg-info/top_level.txt
