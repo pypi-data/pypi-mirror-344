@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: mcp-server-get-warehouse-user
+Version: 0.1.1
+Summary: Add your description here
+Home-page: 
+Author: bowen
+Author-email: 704836663@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]
+Requires-Dist: httpx
+Dynamic: author-email
+Dynamic: requires-python
+
+mcp测试文件
