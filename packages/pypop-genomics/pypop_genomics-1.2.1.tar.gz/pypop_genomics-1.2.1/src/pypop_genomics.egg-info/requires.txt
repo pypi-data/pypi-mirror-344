@@ -1,0 +1,14 @@
+numpy<=2.2.4
+lxml<=5.4.0
+pooch<=v1.8.2
+
+[:python_version <= "3.8"]
+importlib-resources
+importlib-metadata
+
+[test]
+pytest
+pytest-benchmark[histogram]
+
+[test-pval-benchmarking]
+scipy
