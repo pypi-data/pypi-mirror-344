@@ -1,0 +1,11 @@
+ipykernel
+
+numpy
+scipy
+my_custom_package
+seaborn
+sklearn
+matplotlib
+networkx
+pandas
+requests
