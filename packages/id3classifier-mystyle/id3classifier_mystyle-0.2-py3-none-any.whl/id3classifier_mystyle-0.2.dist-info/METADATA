@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: id3classifier-mystyle
+Version: 0.2
+Summary: An ID3 Decision Tree Classifier
+Home-page: https://pypi.org/project/id3classifier-mystyle/
+Author: Srinu Vakada
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: graphviz
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# ID3 Classifier
+
+This package implements the ID3 algorithm for decision tree classification.
+
+## Installation
+
+You can install the package via pip:
+
+```bash
+pip install id3_classifier
