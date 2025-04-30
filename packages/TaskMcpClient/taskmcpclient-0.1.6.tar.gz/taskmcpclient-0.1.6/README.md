@@ -1,0 +1,2 @@
+## Localization configurable MCP client
+

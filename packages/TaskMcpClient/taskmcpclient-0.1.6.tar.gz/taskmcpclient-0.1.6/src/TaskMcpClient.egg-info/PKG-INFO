@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: TaskMcpClient
+Version: 0.1.6
+Summary: Localization configurable MCP client, interacting through task files
+Author-email: weiyf1225 <weiyf1225@qq.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: openai>=1.76.0
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: weberfuncs>=0.0.166
+
+## Localization configurable MCP client
+
