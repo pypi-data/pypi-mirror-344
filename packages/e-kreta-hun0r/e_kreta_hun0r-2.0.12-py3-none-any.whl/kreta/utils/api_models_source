@@ -1,0 +1,13 @@
+UidNameStructure
+Nev	name	string
+Uid	uid	string
+UidStructure
+Uid	uid	string
+ValueDescriptor
+Leiras	description	string
+Nev	name	string
+Uid	uid	string
+SubjectDescriptor
+Nev	name	string
+Kategoria	subjectCategory	ValueDescriptor
+Uid	uid	string

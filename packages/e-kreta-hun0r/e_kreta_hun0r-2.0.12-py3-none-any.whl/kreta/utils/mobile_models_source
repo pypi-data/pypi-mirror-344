@@ -1,0 +1,265 @@
+AnnouncedTest
+TantargyNeve	subjectName	string
+BejelentesDatuma	announcedAtAsString	string
+OrarendiOraOraszama	classScheduleNumber	int
+Datum	dateAsString	string
+OsztalyCsoport	group	UidStructure
+Modja	mode	ValueDescriptor
+Tantargy	subject	SubjectDescriptor
+RogzitoTanarNeve	teacher	string
+Temaja	theme	string
+Uid	uid	string
+ClassAverage
+TanuloAtlag	average	double
+OsztalyCsoportAtlag	classAverageNumber	double
+OsztalyCsoportAtlagtolValoElteres	differenceFromClassAverage	double
+Tantargy	subject	SubjectDescriptor
+Uid	uid	string
+ClassMaster
+Osztalyai	listOfClass	List<SchoolClass>
+Tanar	teacher	Teacher
+Uid	uid	string
+Email
+Email	email	string
+Uid	uid	string
+Employee
+Emailek	email	List<Email>
+Nev	name	string
+Telefonok	phoneList	List<Phone>
+Uid	uid	string
+Phone
+Telefonszam	phone	string
+Uid	uid	string
+Teacher
+Alkalmazott	employee	Employee
+Uid	uid	string
+ConsultingHour
+Terem	classroomDescriptor	UidNameStructure
+Idopontok	consultingHourTimeSlots	List<ConsultingHourTimeSlot>
+JelentkezesHatarido	deadlineAsString	string
+VegIdopont	endTimeAsString	string
+IsJelentkezesFeatureEnabled	isReservationEnabled	bool
+KezdoIdopont	startTimeAsString	string
+Uid	uid	string
+Evaluation
+KeszitesDatuma	creatingTimeAsString	string
+Jelleg	form	string
+ErtekFajta	formType	ValueDescriptor
+OsztalyCsoport	group	UidStructure
+Mod	mode	ValueDescriptor
+SzamErtek	numberValue	int
+RogzitesDatuma	recordDateAsString	string
+LattamozasDatuma	seenByTutelaryAsString	string
+SzovegesErtekelesRovidNev	shortValue	string
+SortIndex	sortIndex	int
+Tantargy	subject	SubjectDescriptor
+ErtekeloTanarNeve	teacher	string
+Tema	theme	string
+Tipus	type	ValueDescriptor
+Uid	uid	string
+SzovegesErtek	value	string
+SulySzazalekErteke	weight	string
+Group
+OktatasNevelesiKategoria	category	ValueDescriptor
+OsztalyFonok	classMaster	UidStructure
+OsztalyFonokHelyettes	classMasterAssistant	UidStructure
+OktatasNevelesiFeladat	educationType	ValueDescriptor
+IsAktiv	isActive	bool
+Nev	name	string
+OktatasNevelesiFeladatSortIndex	sortIndex	int
+Tipus	type	string
+Uid	uid	string
+Guardian4T
+SzuletesiDatum	dateOfBirthAsString	string
+Utonev	firstname	string
+SzuletesiUtonev	firstnameOfBirth	string
+AnyjaUtonev	mothersFirstname	string
+AnyjaVezeteknev	mothersSurname	string
+Elotag	namePrefix	string
+SzuletesiHely	placeOfBirth	string
+Vezeteknev	surname	string
+SzuletesiVezeteknev	surnameOfBirth	string
+Homework
+TantargyNeve	subjectName	string
+Csatolmanyok	attachmentList	List<Attachment>
+RogzitesIdopontja	createDateAsString	string
+HataridoDatuma	deadlineDateAsString	string
+OsztalyCsoport	group	UidStructure
+IsCsatolasEngedelyezes	isAllowToAttachFile	bool
+IsMegoldva	isDone	bool
+IsTanuloHaziFeladatEnabled	isStudentHomeworkEnabled	bool
+IsTanarRogzitette	isTeacherRecorded	bool
+FeladasDatuma	recordDateAsString	string
+RogzitoTanarNeve	recorderTeacherName	string
+Tantargy	subject	SubjectDescriptor
+IsBeadhato	submitable	bool
+Szoveg	text	string
+Uid	uid	string
+Attachment
+Nev	name	string
+Tipus	type	string
+Uid	uid	string
+LepEvent
+Helyszin	address	string
+Datum	creationDateAsString	string
+EloadasVege	eventEndTimeAsString	string
+EloadasKezdete	eventStartTimeAsString	string
+EloadasNev	eventTitle	string
+GondviseloElfogadas	hasGuardianPermission	bool
+Megjelent	hasStudentAppeared	bool
+SzervezetNev	organizationName	string
+Uid	uid	string
+Lesson
+BejelentettSzamonkeresUid	announcedTestUid	string
+Csatolmanyok	attachments	List<Attachment>
+OsztalyCsoport	classGroup	UidNameStructure
+Oraszam	classScheduleNumber	int
+TeremNeve	classroom	string
+FeladatGroupUid	classworkGroupId	string
+DigitalisEszkozTipus	digitalInstrumentType	string
+DigitalisPlatformTipus	digitalPlatformType	string
+VegIdopont	endTimeAsString	string
+HaziFeladatUid	homeWorkUid	string
+IsTanuloHaziFeladatEnabled	homeworkEditedByStudentEnabled	bool
+IsDigitalisOra	isDigitalLesson	bool
+NyelviFeladatGroupUid	languageTaskGroupId	string
+OraEvesSorszama	lessonNumber	int
+Nev	name	string
+TanuloJelenlet	presence	ValueDescriptor
+KezdetIdopont	startTimeAsString	string
+Allapot	state	ValueDescriptor
+Tantargy	subject	SubjectDescriptor
+HelyettesTanarNeve	supplyTeacher	string
+DigitalisTamogatoEszkozTipusList	supportedDigitalInstrumentTypes	List<string>
+TanarNeve	teacher	string
+Tema	topic	string
+Tipus	type	ValueDescriptor
+Uid	uid	string
+Attachment
+Nev	name	string
+Uid	uid	string
+Note
+Tartalom	content	string
+KeszitesDatuma	creatingTimeAsString	string
+Datum	dateAsString	string
+OsztalyCsoport	group	UidStructure
+LattamozasDatuma	seenByTutelaryAsString	string
+KeszitoTanarNeve	teacher	string
+Cim	title	string
+Tipus	type	ValueDescriptor
+Uid	uid	string
+NoticeBoardItem
+Tartalom	content	string
+ErvenyessegVege	expireEndTimeAsString	string
+ErvenyessegKezdete	expireStartTimeAsString	string
+RogzitoNeve	madeBy	string
+Cim	title	string
+Uid	uid	string
+Omission
+KeszitesDatuma	creatingTimeAsString	string
+Datum	dateAsString	string
+KesesPercben	delayTimeMinutes	int
+OsztalyCsoport	group	UidStructure
+IgazolasAllapota	justificationState	string
+IgazolasTipusa	justificationType	ValueDescriptor
+Ora	lesson	Lesson
+Mod	mode	ValueDescriptor
+Tantargy	subject	SubjectDescriptor
+RogzitoTanarNeve	teacher	string
+Tipus	type	ValueDescriptor
+Uid	uid	string
+SchoolYearCalendarEntry
+Datum	dateAsString	string
+Naptipus	dayType	ValueDescriptor
+OsztalyCsoport	group	UidStructure
+ElteroOrarendSzerintiTanitasiNap	irregularDay	ValueDescriptor
+Uid	uid	string
+OrarendiNapHetirendje	weekTypeSchedule	ValueDescriptor
+Student
+Cimek	addressDataList	List<string>
+Bankszamla	bankAccount	BankAccount
+SzuletesiNap	dayOfBirth	int
+EmailCim	emailAddress	string
+Gondviselok	guardianList	List<Guardian>
+IntezmenyAzonosito	instituteCode	string
+IntezmenyNev	instituteName	string
+Intezmeny	institution	Institution
+SzuletesiHonap	monthOfBirth	int
+AnyjaNeve	mothersName	string
+Nev	name	string
+SzuletesiNev	nameOfBirth	string
+Telefonszam	phoneNumber	string
+SzuletesiHely	placeOfBirth	string
+TanevUid	schoolYearUID	long
+Uid	uid	string
+SzuletesiEv	yearOfBirth	int
+BankAccount
+BankszamlaSzam	accountNumber	string
+IsReadOnly	isReadOnly	string
+BankszamlaTulajdonosNeve	ownerName	string
+BankszamlaTulajdonosTipusId	ownerType	string
+SubjectAverage
+Atlag	averageNumber	decimal
+AtlagAlakulasaIdoFuggvenyeben	averagesInTime	List<AverageWithTime>
+SortIndex	sortIndex	int
+Tantargy	subject	SubjectDescriptor
+SulyozottOsztalyzatOsszege	sumOfWeightedEvaluations	float
+SulyozottOsztalyzatSzama	sumOfWeights	float
+Uid	uid	string
+AverageWithTime
+Atlag	average	float
+Datum	dateAsString	string
+TimeTableWeek
+VegNapDatuma	endDateAsString	string
+HetSorszama	numberOfWeek	int
+KezdoNapDatuma	startDateAsString	string
+Tipus	type	ValueDescriptor
+Uid	uid	string
+BankAccountNumberPost
+BankszamlaSzam	bankAccountNumber	string
+BankszamlaTulajdonosNeve	bankAccountOwnerName	string
+BankszamlaTulajdonosTipusId	bankAccountOwnerType	int
+SzamlavezetoBank	bankName	string
+Guardian4TPost
+SzuletesiDatum	dateOfBirthAsString	string
+Utonev	firstname	string
+SzuletesiUtonev	firstnameOfBirth	string
+IsElfogadottAszf	isAszfAccepted	bool
+AnyjaUtonev	mothersFirstname	string
+AnyjaVezeteknev	mothersSurname	string
+Elotag	namePrefix	string
+SzuletesiHely	placeOfBirth	string
+Vezeteknev	surname	string
+SzuletesiVezeteknev	surnameOfBirth	string
+LepEventGuardianPermissionPost
+EloadasId	eventId	int
+Dontes	isPermitted	bool
+SchoolClass
+OktatasNevelesiKategoria	category	ValueDescriptor
+Nev	name	string
+Uid	uid	string
+ConsultingHourTimeSlot
+VegIdopont	endTimeAsString	string
+IsJelentkeztem	isReservedByMe	bool
+KezdoIdopont	startTimeAsString	string
+Uid	uid	string
+Guardian
+EmailCim	email	string
+IsTorvenyesKepviselo	isLegalRepresentative	bool
+Nev	name	string
+Telefonszam	phoneNumber	string
+Uid	uid	string
+Institution
+TestreszabasBeallitasok	customizationSettings	CustomizationSettings
+RovidNev	shortName	string
+Rendszermodulok	systemModuleList	List<SystemModule>
+Uid	uid	string
+CustomizationSettings
+ErtekelesekMegjelenitesenekKesleltetesenekMerteke	delayOfNotifications	int
+IsOsztalyAtlagMegjeleniteseEllenorzoben	isClassAverageVisible	bool
+IsTanorakTemajaMegtekinthetoEllenorzoben	isLessonsThemeVisible	bool
+KovetkezoTelepitesDatuma	nextServerDeployAsString	string
+SystemModule
+IsAktiv	isActive	bool
+Tipus	type	string
+Url	url	string
