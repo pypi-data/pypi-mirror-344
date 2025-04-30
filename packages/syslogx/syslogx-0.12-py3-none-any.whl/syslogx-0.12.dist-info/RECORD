@@ -1,0 +1,10 @@
+syslogx/__init__.py,sha256=PryTxF2qINfYHIhYwS3-stn9LEJt5axeAvn17JHkO8g,24
+syslogx/__main__.py,sha256=D0r3IA7UBI-XuCXup5uFMphBwPHpVTLk8sb1Z3_QTTw,74
+syslogx/__meta__.py,sha256=QZRvcNLcTLDhr4JaOwfi9FGSuMXqZPGY_BUoT0ifNXU,7134
+syslogx/__version__.py,sha256=YN4ExLufhCajbivMaExuqdEgXu-DSzdzzVcKXas-ssI,16
+syslogx/syslogx.py,sha256=Wt0jyBPr5nxZ95U4e4MGNCggPE-hAAGHqLTHQjkFj8c,1506
+syslogx-0.12.dist-info/METADATA,sha256=EPk2hCiPcQeQRleSApTniYYykCqA52y-e-cM8hYnE7g,1130
+syslogx-0.12.dist-info/WHEEL,sha256=UvcQYKBHoFqaQd6LKyqHw9fxEolWLQnlzP0h_LgJAfI,91
+syslogx-0.12.dist-info/entry_points.txt,sha256=lXq5wcV6od02Bd_FYvDAmLFirnjZFYuHAXzZF1buoBQ,52
+syslogx-0.12.dist-info/top_level.txt,sha256=a1VRSjohvpS1iimFsstyaI_T-_61kyGYTlqCnfFTP2E,8
+syslogx-0.12.dist-info/RECORD,,

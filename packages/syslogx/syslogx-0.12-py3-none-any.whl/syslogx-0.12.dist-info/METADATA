@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: syslogx
+Version: 0.12
+Summary: simple module to send log with facility & severity to remote syslog (default port: 514)
+Home-page: https://github.com/cumulus13/syslogx
+Download-URL: https://github.com/cumulus13/syslogx/tarball/master
+Author: Hadi Cahyadi LD
+Author-email: cumulus13@gmail.com
+License: MIT License
+Keywords: syslog
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+
+syslogx
+============
+
+description
+===============
+simple module to send log with facility & severity to remote syslog (default port: 514)
+
+author
+=============
+
+[cumulus13](mailto:cumulus13@gmail.com)
+
+license
+============
+MIT
