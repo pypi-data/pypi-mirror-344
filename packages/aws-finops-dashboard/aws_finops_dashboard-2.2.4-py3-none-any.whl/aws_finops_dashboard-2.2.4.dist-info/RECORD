@@ -1,0 +1,12 @@
+aws_finops_dashboard/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_finops_dashboard/aws_client.py,sha256=isEMavvM_wXh6xTRuWrrwQaK2fVhucEyVTF_gX2UmaE,3844
+aws_finops_dashboard/cli.py,sha256=BFrED31DSBr5WxTXP8_y7n7zo-O1Dg5wDIwoU7gteJ8,4375
+aws_finops_dashboard/cost_processor.py,sha256=614KsL_XoHffMMIGeU9XmffsvedqZ794TtqHdNxGUgo,15232
+aws_finops_dashboard/main.py,sha256=fxzaWUh5-LWxtJJLHvIIKIehzmtKT4y_ZhGx7DUCxVY,17081
+aws_finops_dashboard/types.py,sha256=yRLCFS3ucjmyjoJvoWxNXvc9Q9_P5Q2bFN1C3514SCY,1536
+aws_finops_dashboard/visualisations.py,sha256=VjF49h3_FmzixKkeCyawp8s9HAmWTEATWHcTnQGDUjQ,2754
+aws_finops_dashboard-2.2.4.dist-info/METADATA,sha256=lwHSCy44yxwaWx4kapaJdlYXsG_iJQ9ML2sivmEHnBE,11636
+aws_finops_dashboard-2.2.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+aws_finops_dashboard-2.2.4.dist-info/entry_points.txt,sha256=7q28G0HWzNTU9-U7uDE-1PV_fkszdwkiDBaM7CZI2Rw,61
+aws_finops_dashboard-2.2.4.dist-info/licenses/LICENSE,sha256=89-0t0fHL7AlRIj_ajYyQNXfhLo4B-E24rD-i_lSXXk,1079
+aws_finops_dashboard-2.2.4.dist-info/RECORD,,
