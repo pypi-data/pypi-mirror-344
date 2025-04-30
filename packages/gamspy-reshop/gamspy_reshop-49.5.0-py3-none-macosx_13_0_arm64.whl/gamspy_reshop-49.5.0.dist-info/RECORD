@@ -1,0 +1,10 @@
+gamspy_reshop/__init__.py,sha256=y477pKDVonk7hu4TR7QudickTCXzDjM6w_6iPzZup60,389
+gamspy_reshop/libembrhpcclib64.dylib,sha256=sBhCKo--X5NcDzwonoJa3VMumnKmhIcIxWkXPr48ntM,112168
+gamspy_reshop/libreshop.dylib,sha256=18O3A9HLEIBhciQctqWkls7KmDgAx1GxleuQeremIIs,1411600
+gamspy_reshop/librhpcclib64.dylib,sha256=F_jECMNAV3BSCrj0tupYaRy97ua5mlqrdy23P5mLKjI,413984
+gamspy_reshop/optreshop.def,sha256=_S3qG7TUBv2TWBX49M83E4PknrlugVhDKbx_CNTBrVI,1626
+gamspy_reshop/version.py,sha256=L0oF1boRuhTJbCViTvmJTBvQU2K8-sAOPinHzEBswfY,22
+gamspy_reshop-49.5.0.dist-info/METADATA,sha256=NkjOYdjXDK8LvFwXY4cm9Ut9Wr7s3H2rnu_q9rSEOVI,58
+gamspy_reshop-49.5.0.dist-info/WHEEL,sha256=Fry3rS__8Isjs_d-tRFqtGtBMvJQhm_D1A2pE42Z0Fs,111
+gamspy_reshop-49.5.0.dist-info/top_level.txt,sha256=peQiVQdHnZBrwpU9V13pPOaGhuWaVY4aQ_Q2neu49xE,14
+gamspy_reshop-49.5.0.dist-info/RECORD,,
