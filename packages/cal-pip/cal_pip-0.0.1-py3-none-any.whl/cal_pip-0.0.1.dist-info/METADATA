@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: cal_pip
+Version: 0.0.1
+Summary: this cal_pip  package
+Author-email: Rahul Kumar <rahul8969051051@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Keywords: sample,setuptools,development
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.2
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# math_pip
+
+This is an example Python package created by Rahul Kumar.
+
+It provides additional math operations and utility functions.
+
+---
+
+## Installation
+
+You can install the package via pip:
+
+## how can you use in your project 
+
+import math_pip as ms
+ms.add(a,b)
+ms.subtract(a,b)
+
+```bash
+
+pip install cal_pip
