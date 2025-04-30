@@ -1,0 +1,21 @@
+{% extends "mc_question_base.tex" %}
+{% block tables %}
+{% endblock %}
+{% block question -%}
+\input{../{{body}}}
+{% endblock %}
+
+
+{% block answers %}
+{% for a in answers %}
+\item  {{a}}
+{% endfor %}
+{% endblock %}
+{#
+{% block solution %}
+    asdlfasdf laskdfj alsdfk
+{% endblock %}
+#}
+
+
+

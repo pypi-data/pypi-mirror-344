@@ -1,0 +1,76 @@
+{% import 'macros.tex' as m %}
+{% set glob={'nparts': 0} %} % Global variables keeping track of number of sub-questions. A bit hacky but whatever...
+
+{% macro format_part() %}
+    {% if len(caller().strip() ) > 0 %}
+        {% if glob['nparts'] == 0 %}
+            \begin{parts}
+        {% endif %}
+        \part {{caller() }}
+        {% set _ = glob.update({'nparts': glob['nparts']+1 }) %}
+    {% endif %}
+{% endmacro %}
+
+{% block header %} {% endblock %}
+{% block tables %} {% endblock %}
+% [{{overall_exam_score}}]
+
+\titledquestion{Question \thequestion:
+{{question_title}} } {%- if showlabels %}\label{{classname|bracket}} \todo[inline]{ \footnotesize { {{ previous_usage }}  } }	{% endif -%} \normalsize
+{#
+\question {%- if showlabels %}\label{{classname|bracket}} \todo[inline]{ \footnotesize { {{ previous_usage }}  } }	{% endif -%} \normalsize
+#}
+{% if program_path %}
+\textbf{To solve this question, you should edit the file \pyi{{program_path|bracket}}.}
+{% endif %}
+\noindent{{' '}}
+{%- block question %}
+    your question goes here.
+{% endblock %}
+
+{% call format_part() -%}{% if problem_a %}Complete \pyi{{problem_a|bracket}}: {% endif %}{% block part1 %}{% endblock %}{%- endcall %}
+{% call format_part() -%}{% if problem_b %}Complete \pyi{{problem_b|bracket}}: {% endif %}{% block part2 %}{% endblock %}{%- endcall %}
+{% call format_part() -%}{% if problem_c %}Complete \pyi{{problem_c|bracket}}: {% endif %}{% block part3 %}{% endblock %}{%- endcall %}
+{% call format_part() -%}{% if problem_d %}Complete \pyi{{problem_d|bracket}}: {% endif %}{% block part4 %}{% endblock %}{%- endcall %}
+{% call format_part() -%}{% if problem_e %}Complete \pyi{{problem_e|bracket}}: {% endif %}{% block part5 %}{% endblock %}{%- endcall %}
+{% call format_part() -%}{% if problem_f %}Complete \pyi{{problem_f|bracket}}: {% endif %}{% block part6 %}{% endblock %}{%- endcall %}
+
+{% if glob['nparts'] > 0 %}
+\end{parts}
+{% endif  %}
+
+{% block question_foot %}
+
+{% endblock %}
+
+{% if include_solution_box is undefined or include_solution_box  %}
+\begin{solution}
+    {% if correct_answer is defined and correct_answer %}
+    \textbf{The correct answer is {{correct_answer}}.}
+    {% endif %}
+
+    {% if static_solution is defined and static_solution is not none %}
+        \input{../{{ static_solution }}}
+    {% else %}
+    {{ solution_head }}
+    {% block solution %}
+        {% if text_solution is defined and text_solution is not none %}{{text_solution}}{% endif %}
+        {% if solution_options is defined and solution_options is not none %}
+          \begin{choices}
+          {% filter permute_exam_answers(answer_permutation) %}
+          \item {{solution_options[0] }}
+          \item {{solution_options[1] }}
+          \item {{solution_options[2] }}
+          \item {{solution_options[3] }}
+          {% endfilter %}
+          \end{choices}
+        {% endif %}
+    {% endblock %}
+    {% endif %}
+\end{solution}
+{% endif %}
+
+{% block footer %}
+{% if flush_footer %} \newpage {% endif %}
+{% if clearpage %}\clearpage{% endif %}
+{% endblock %}

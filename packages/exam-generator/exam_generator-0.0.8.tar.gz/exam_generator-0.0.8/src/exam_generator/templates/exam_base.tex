@@ -1,0 +1,215 @@
+% https://www.overleaf.com/read/yyzgvwtqrfny
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% START EXAM GENERATOR TEMPLATE. THIS DOCUMENT HAS BEEN AUTOMATICALLY GENERATED.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{% set clearpage = "\\clearpage \\newpage" %}
+
+\documentclass[addpoints]{exam}
+\usepackage{bbm}
+
+{% if dirs.public_git_dir_relative_to_latex %}
+\input{ {{dirs.public_git_dir_relative_to_latex}}/shared/02465shared_preamble}
+{% endif %}
+
+\usepackage{tikz}
+%\usetikzlibrary{shapes,arrows,positioning}
+\usetikzlibrary{automata,arrows,positioning,calc}
+\usetikzlibrary{arrows.meta}
+% Exam-class specific stuff.
+\usepackage{color}
+\usepackage{comment}
+\shadedsolutions
+\definecolor{SolutionColor}{rgb}{1.,.85,.85}
+{% if show_solutions %}
+\printanswers
+{% endif %}
+\CorrectChoiceEmphasis{\color{red}}
+
+\usepackage{rotating}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{enumerate}
+\usepackage{url}
+\usepackage{todonotes}
+\usepackage[yyyymmdd,hhmmss]{datetime}
+\usepackage{enumitem}
+
+\usepackage{xr}
+{% if dirs.public_git_dir_relative_to_latex %}
+\externaldocument{ {{dirs.public_git_dir_relative_to_latex}}/Notes/Latex/02465_Notes}
+{% endif %}
+
+
+\newcommand*\nref[1]{\cite[\cref{{'#1'|bracket}}]{{'herlau'|bracket}}}
+
+\newcommand{\yoursolution}{ \redt{YOUR SOLUTION HERE} }
+\newcommand{\stub}{ \begin{solutionstub} \redt{YOUR SOLUTION HERE} \end{solutionstub} }
+\newtoggle{show_solutions}\toggletrue{show_solutions}
+\togglefalse{show_solutions} \newtoggle{show_stubs}\toggletrue{show_stubs}
+\newcommand{\projectnum}{3}
+
+
+%% Boxes for solutions (eventually).
+\usepackage{amsmath}
+\usepackage{empheq}
+\usepackage{xcolor}
+\definecolor{lightgreen}{HTML}{90EE90}
+\newcommand{\sstub}[1]{\begin{empheq}[box={\fboxsep=6pt\fbox}]{align}{ #1}\end{empheq} }
+
+
+\pagestyle{headandfoot}
+\runningheadrule
+\newcommand{\continuedmessage}{
+\ifcontinuation{Question \ContinuedQuestion\ continues\ldots}{}%
+}
+\firstpageheader{ {{header_left}} }{ {{header_center}} }{ {{date}} }
+\runningheader{\continuedmessage}
+{ {{centerlabel}} }
+{Page \thepage\ of \numpages}
+\footer{}
+{}
+{\ifincomplete{Question \IncompleteQuestion\ continues
+on the next page\ldots}{}}
+
+ \pointpoints{$\%$}{$\%$}
+
+
+
+\PassOptionsToPackage{svgnames,x11names,dvipsnames}{xcolor}
+%\usepackage[most]{tcolorbox}
+\newtcbox{\qbox}[1][]{enhanced,
+	box align=base,
+	nobeforeafter,
+	colback=yellow!20,
+	colframe=red!20,
+	size=small,
+	left=1pt,
+	right=1pt,
+	boxsep=2pt,
+	#1}
+
+
+\begin{document}
+{% if show_frontpage  %}
+
+
+% -------------------------------------------------------------
+% This code creates the text before the first question
+% -------------------------------------------------------------
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{
+\begin{description}[noitemsep,topsep=0pt]
+\item[{% if midterm %}Midterm date:{% else %}Written examination date:{%endif %}]  {{date}}
+\item[Course title:] {{course_title}}
+\item[Course number:] 02465
+\item[Aids allowed:] All aids allowed
+\item[{% if midterm %}Midterm{% else %}Exam{%endif %} duration:] {{duration}}
+% Kursusnavn Introduktion til Intelligente Systemer
+% Kursusnummer 02461
+% Hjælpemidler Alle hjælpemidler er tilladt
+% Varighed 2 timer
+% Vægtning Alle delopgaver vægtes ens
+\end{description}
+\textbf{Weighting:} The exam is divided into 3 parts:
+\begin{itemize}[noitemsep,topsep=0pt]
+\item Multiple-Choice questions
+\item Conceptual questions
+\item Programming questions
+\end{itemize}
+The overall scores of each part contribute roughly equally towards the overall result. Each question in each part contribute equally towards the score of that part.
+
+\noindent \textbf{Part I: } Questions 1-{{N_MC}} are multiple choice. The score of a correct answer is 3 points. The score of an incorrect answer is $-1$ points. The score of option $E$ or blank is $0$ points.\\
+\noindent \textbf{Part II and part III: } Each completed sub-task contribute towards your score. \\
+\noindent \textbf{Preparing your handin:} The three parts are prepared as follows:
+\begin{description}[noitemsep,topsep=0pt]
+    \item[Part I:] Edit the file \bai{{mc_answer_path|bracket}}. Don't include calculations. Only answer with \pyi{'A'}, \pyi{'B'}, \pyi{'C'}, \pyi{'D'}, \pyi{'E'}.
+    \item[Part II:] Create a PDF file with your answers and justifications.
+    \item[Part III:] Program your answer in the \pyi{.py}-files indicated in the question and run \bai{{gradepy|bracket}} to generate your \bai{.token}-file.
+\end{description}
+\noindent \textbf{Handing in: } To hand in, you should upload the files:
+\begin{itemize}
+\item The \bai{{mc_answer_path|bracket}}-file with your answer to part I
+\item The \bai{.pdf}-file with your answers to part II
+\item The \bai{.token}-file with your answers to part III
+{% for t in programming_handin_files %}
+\item The \bai{{t|bracket}} source file containing your solution
+{% endfor %}
+\end{itemize}
+\noindent \textbf{Note on part II: }
+The main quantities asked for are highlighted as \qbox{$f(x)$}. Answer unambigiously, concisely, and if applicable with algebraic simplifications.
+Your final result must be clearly indicated at the end of your answer: \qbox{$f(x) = 3\sin(x)$}. To get credit, you must state the relevant theory and equations, and all relevant calculations must be included.
+  Credit is not given for answers with missing or erroneous justifications.\\
+\noindent \textbf{Note on part III:} To get started, move the folder \bai{{midterm_base|bracket}} from the \bai{.zip} file to the corresponding location in your existing exercise directory.
+The \bai{.py} source files must be \textbf{reproducible} and \textbf{readable} so that someone else can run and fully understand your solution.
+You can freely use the \pyi{irlc}-toolbox (including solutions) and the packages we have used in the course,
+but you \textbf{must} include additional code you write during the exam or have prepared beforehand in the source files listed above. The source files must not be renamed.
+The \bai{.token} file contains your results and must be up to date with your source files, i.e., generate it just prior to handin. In the case they differ, the \bai{.token} file takes precedence.
+Credit is given for correct implementations defined by the problem description. The points in the \bai{.token} file name is computed from the public tests, and might not correspond to overall correctness.
+\clearpage
+
+
+
+%Fill in your answers in the provided boxes.  \newline
+%\noindent
+%\textbf{Scoring:} The score of each question is indicated in the margin in a box. The score of the exam is the sum of the individual scores. I.e., a completely correct exam will give a total score of $100\%$, and a blank exam will give a score of $0\%$.
+
+%\textbf{Scoring of the multiple-choice questions: } Questions 1-9 are multiple choice. The score of a correctly filled in questions is as indicated in the margin ($3.7\%$). The score of a wrong answer is $\frac{-3.7}{3} = -1.2\%$. The score of option $E$, or a blank answer, is $0\%$. This mean random guessing will on average net a score of $0\%$.
+
+
+%Alle spørgsmål skal besvares med et entydigt resultat, som skal angives med understregning sidst i hver
+%besvarelse. Besvarelsen skal altid underbygges med relevante betragtninger og/eller beregninger. Det skal
+%klart fremgå hvilke teorier og formler der tages udgangspunkt i, og alle relevante mellemregninger skal
+%medtages.
+}  } }
+
+
+\end{center}
+
+%\qformat{\textbf{Question \thequestion : \thequestiontitle\dotfill\thepoints} }
+\qformat{\textbf{\thequestiontitle\dotfill} }
+
+%\vspace{5mm}
+
+%\makebox[\textwidth]{Name:\enspace\hrulefill}
+
+%\vspace{5mm}
+
+%\makebox[\textwidth]{Student ID (Format: \texttt{s123456}):\enspace\hrulefill}
+% -------------------------------------------------------------
+
+{% endif %}
+
+\clearpage
+\begin{questions}
+
+{% for q in questions %}
+	{% if q %}
+		{{q}}
+	{% endif %}
+{% endfor %}
+\end{questions}
+
+\clearpage
+
+
+\bibliographystyle{alpha}
+
+{% if dirs.public_git_dir_relative_to_latex %}
+\bibliography{ {{dirs.public_git_dir_relative_to_latex}}/shared/pensum}
+{% endif %}
+
+
+
+\noindent \emph{This line concludes the exam. Document build: \today, \currenttime.}
+
+
+%\inputminted[]{python}
+
+\end{document}

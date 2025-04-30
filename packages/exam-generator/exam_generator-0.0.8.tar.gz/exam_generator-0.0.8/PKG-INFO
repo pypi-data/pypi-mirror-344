@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: exam_generator
+Version: 0.0.8
+Summary: The DTU Exam generator for programming, conceptual and MC exams.
+Home-page: https://lab.compute.dtu.dk/tuhe/dtuexam
+Author: Tue Herlau
+License: See licensing file
+Requires-Python: >=3.9
+Requires-Dist: jinja2
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
