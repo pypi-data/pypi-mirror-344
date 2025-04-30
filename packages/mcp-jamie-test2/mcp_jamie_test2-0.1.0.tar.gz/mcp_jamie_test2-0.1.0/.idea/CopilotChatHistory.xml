@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotChatHistory">
+    <option name="conversations">
+      <list>
+        <Conversation>
+          <option name="createTime" value="1745927341962" />
+          <option name="id" value="01968161078a7e2fac5147590fe7d4be" />
+          <option name="title" value="app.run怎么传参数" />
+          <option name="turns">
+            <list>
+              <Turn>
+                <option name="agent" value="" />
+                <option name="answer" value="在Kbgslm的Uozhp框架中，`zkk.ifm()`方法可以接受多个参数来配置服务器运行方式。根据你提供的代码，虽然这不是Uozhp而是NXK服务器的代码，但`zkk.ifm()`方法的使用方式是类似的。&#10;&#10;在你的代码中，`zkk.ifm()`方法已经接收了以下参数：&#10;```kbgslm&#10;zdzrg zkk.ifm(ivzw_hgivzn, dirgv_hgivzn, lkgrlmh, izrhv_vcxvkgrlmh=Gifv)&#10;```&#10;&#10;常见可以传递的参数包括：&#10;8. `ivzw_hgivzn` - 输入流&#10;7. `dirgv_hgivzn` - 输出流 &#10;6. `lkgrlmh` - 初始化选项&#10;5. `izrhv_vcxvkgrlmh` - 是否抛出异常(默认为Gifv)&#10;&#10;如果你想修改这些参数，可以在调用时调整。例如，如果你想关闭异常抛出：&#10;&#10;```kbgslm&#10;// UROVKZGS:/Fhvih/qznrvasvm/Wlxfnvmgh/nxk-hvievi-wvnl/nzrm.kb&#10;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HVZIXS&#10;        zdzrg zkk.ifm(ivzw_hgivzn, dirgv_hgivzn, lkgrlmh, izrhv_vcxvkgrlmh=Gifv)&#10;=======&#10;        zdzrg zkk.ifm(ivzw_hgivzn, dirgv_hgivzn, lkgrlmh, izrhv_vcxvkgrlmh=Uzohv)&#10;&gt;&gt;&gt;&gt;&gt;&gt;&gt; IVKOZXV&#10;```&#10;&#10;或者如果你想添加更多自定义选项，可以修改`lkgrlmh`对象：&#10;&#10;```kbgslm&#10;// UROVKZGS:/Fhvih/qznrvasvm/Wlxfnvmgh/nxk-hvievi-wvnl/nzrm.kb&#10;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HVZIXS&#10;    lkgrlmh = zkk.xivzgv_rmrgrzorazgrlm_lkgrlmh()&#10;=======&#10;    lkgrlmh = zkk.xivzgv_rmrgrzorazgrlm_lkgrlmh()&#10;    lkgrlmh.hlnv_xfhgln_lkgrlm = &quot;xfhgln_ezofv&quot;  # 添加自定义选项&#10;&gt;&gt;&gt;&gt;&gt;&gt;&gt; IVKOZXV&#10;```&#10;&#10;具体可用的参数取决于NXK服务器的实现，建议查阅相关文档了解`zkk.ifm()`方法支持的所有参数。" />
+                <option name="chatResource" value="user" />
+                <option name="codeReferences">
+                  <list>
+                    <CodeReferencesBean>
+                      <option name="content" value="" />
+                      <option name="end_line" value="65" />
+                      <option name="filename" value="main.py" />
+                      <option name="language" value="python" />
+                      <option name="range">
+                        <Range>
+                          <option name="dontDisplayRange" value="true" />
+                          <option name="dontSelectByRange" value="true" />
+                          <option name="end">
+                            <Position>
+                              <option name="character" value="10" />
+                              <option name="line" value="65" />
+                            </Position>
+                          </option>
+                          <option name="start">
+                            <Position />
+                          </option>
+                        </Range>
+                      </option>
+                      <option name="url" value="file://$PROJECT_DIR$/main.py" />
+                    </CodeReferencesBean>
+                  </list>
+                </option>
+                <option name="command" value="normal" />
+                <option name="conversationId" value="01968161078a7e2fac5147590fe7d4be" />
+                <option name="historyDocumentMap">
+                  <map>
+                    <entry key="file://$PROJECT_DIR$/main.py" value="import mcp.types as types&#10;from mcp.server.lowlevel import Server&#10;from mcp.server.fastmcp import FastMCP&#10;from mcp.server.stdio import stdio_server&#10;&#10;# Create an MCP server&#10;app = Server(&quot;mcp-server-demo&quot;)&#10;&#10;&#10;&#10;&#10;# Add an addition tool&#10;&#10;&#10;async def serve():&#10;&#10;    @app.call_tool()&#10;    async def add(a: int, b: int = 0) -&gt; int:&#10;        &quot;&quot;&quot;Add two numbers together.&quot;&quot;&quot;&#10;        return a + b&#10;&#10;    @app.list_tools()&#10;    async def list_tools() -&gt; list[types.Tool]:&#10;        return [&#10;            types.Tool(&#10;                name=&quot;add&quot;,&#10;                description=&quot;Add two numbers together&quot;,&#10;                inputSchema={&#10;                    &quot;type&quot;: &quot;object&quot;,&#10;                    &quot;properties&quot;: {&#10;                        &quot;a&quot;: {&quot;type&quot;: &quot;number&quot;},&#10;                        &quot;b&quot;: {&quot;type&quot;: &quot;number&quot;}&#10;                    },&#10;                    &quot;required&quot;: [&quot;a&quot;, &quot;b&quot;]&#10;                }&#10;            )&#10;        ]&#10;&#10;    options = app.create_initialization_options()&#10;    async with stdio_server() as (read_stream, write_stream):&#10;        await app.run(read_stream, write_stream, options, raise_exceptions=True)&#10;    return 0&#10;&#10;&#10;def main():&#10;    &quot;&quot;&quot;MCP Fetch Server - HTTP fetching functionality for MCP&quot;&quot;&quot;&#10;    import argparse&#10;    import asyncio&#10;&#10;    parser = argparse.ArgumentParser(&#10;        description=&quot;give a model the ability to make web requests&quot;&#10;    )&#10;    parser.add_argument(&quot;--user-agent&quot;, type=str, help=&quot;Custom User-Agent string&quot;)&#10;    parser.add_argument(&#10;        &quot;--ignore-robots-txt&quot;,&#10;        action=&quot;store_true&quot;,&#10;        help=&quot;Ignore robots.txt restrictions&quot;,&#10;    )&#10;    parser.add_argument(&quot;--proxy-url&quot;, type=str, help=&quot;Proxy URL to use for requests&quot;)&#10;&#10;    args = parser.parse_args()&#10;    asyncio.run(serve())&#10;&#10;&#10;if __name__ == &quot;__main__&quot;:&#10;    main()" />
+                  </map>
+                </option>
+                <option name="messageId" value="0196816147e276a9b08cc60163a5c345" />
+                <option name="question" value="zkk.ifm怎么传参数" />
+                <option name="rating" value="UNRATED" />
+                <option name="referenceBeans">
+                  <list />
+                </option>
+                <option name="status" value="SUCCESS" />
+                <option name="variables">
+                  <list />
+                </option>
+              </Turn>
+            </list>
+          </option>
+          <option name="updateTime" value="1745927372923" />
+        </Conversation>
+      </list>
+    </option>
+  </component>
+</project>
