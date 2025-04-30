@@ -1,0 +1,2 @@
+[console_scripts]
+k2n-highlights = k2n_highlights.bot:main
