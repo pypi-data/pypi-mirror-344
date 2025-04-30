@@ -1,0 +1,5 @@
+[console_scripts]
+lithio = lithio:app
+
+[gui_scripts]
+
