@@ -1,0 +1,2 @@
+[console_scripts]
+clea-vectordb-cli = vectordb.cli:main
