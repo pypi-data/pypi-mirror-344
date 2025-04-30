@@ -1,0 +1,14 @@
+pytrate/__init__.py,sha256=MOBO3N-13r-myjQGocMQsjXGF1BA61DonFp1rWgxMZE,409
+pytrate/conftest.py,sha256=bAKvx750LxMR1hT_FZZ1RxDsLWN5hdpC8AJ2mV9UKOo,2936
+pytrate/foldchange.py,sha256=wOaek1fpybclPzHC5XXxLUSBNf6OTA_KLU1ValoLQWc,10412
+pytrate/helper.py,sha256=rdAjsbhoqkr7NSqzTfFUpjp1-UkG0QPK4LsonnuBPGQ,72241
+pytrate/pytrate.py,sha256=tSqM1t46zrBfgUioLxR3Ijdyk9SxHpTsJFjhhDJ9DKM,23624
+pytrate/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytrate/tests/test_foldchange.py,sha256=Xlgj84GhFNr-GNMyal2LoQSQJpNPT1wBNWnAfyssIe4,2677
+pytrate/tests/test_helper.py,sha256=MYjjhwqkbdXO0pATaJDvCK3SMkBJCJGtQX1WrWCXqSc,18122
+pytrate/tests/test_pytrate.py,sha256=absh3Pwkqu_GvFQ1j8g6FcreSu2EGl6nK6L1NNjMGZ4,13665
+pytrate/tests/test_seqdf.py,sha256=Vc0FQ8Fi5qJIiR628E62EQfWPL83b05LyCsZhf6qqNk,7820
+pytrate-2.3.2.dist-info/METADATA,sha256=kbXC16Eo5L5TyKv_JmxSBfSzVfdADe5kBi0XkFEmMN8,518
+pytrate-2.3.2.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+pytrate-2.3.2.dist-info/top_level.txt,sha256=hU1bPpg_3RsnGEtu-8DOQiGTcvs1wTrjHOR0948f4Kg,8
+pytrate-2.3.2.dist-info/RECORD,,
