@@ -1,0 +1,16 @@
+semanticpy/__init__.py,sha256=8QVnr_CjO602ll6SsgBALFp4EvqJuVFbR2e0rsBoD4Q,41128
+semanticpy/errors.py,sha256=OBm1XfGWhpPVWbnyN2WYDeku5zwqRa1ciFsGcBeMQGg,245
+semanticpy/logging.py,sha256=tQCSZPj-CFLtYE6K_uPrU3UTxhlbBVYLTdAjbkYr2hM,127
+semanticpy/version.txt,sha256=bPTghLR_M8mwLveSedFXgzho-PcFFBaadovjU-4yj-o,6
+semanticpy/profiles/linked-art.json,sha256=ioiI6baKlx9dFp63W2ogJGuqzCtJ5h2UdpCEiRrDtzE,303509
+semanticpy/types/__init__.py,sha256=KnzxurXj0XgzhEY2mv1Tt_Tzwv3918PtQTtg4Va_9GY,192
+semanticpy/types/attributed.py,sha256=lPcsaLMu75FNl0mwBXg-8UmJR0GrwSWcdbnfVUhWRaE,2106
+semanticpy/types/dictionary.py,sha256=R8IM-V-CBUzTL2m31hNicaSA5FgbYSYiIYMVeKS5eNk,416
+semanticpy/types/namespace.py,sha256=Sq6lvDHnKOHF0HBgc09mfl-CFGwDIZlycOLz5DkEl2Q,154
+semanticpy/types/node.py,sha256=JfOmGCFneyNSn0xzXOlfrjC2rLl37EscmxnIpHsrlVI,10600
+semanticpy-1.2.1.dist-info/licenses/LICENSE.md,sha256=dvy831xUrxFDxpre2X6M5Tlo0O8geaTH18fqQTUBE10,1076
+semanticpy-1.2.1.dist-info/METADATA,sha256=9XhMIH5yDofr2jzYPJr9DqCqxBNII7V6uTaDP6taR4Y,9467
+semanticpy-1.2.1.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+semanticpy-1.2.1.dist-info/top_level.txt,sha256=u-p4wG4EZgdAzg1CwM3gWyFKZ0b_6fiLkMoI5P6ICsU,11
+semanticpy-1.2.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+semanticpy-1.2.1.dist-info/RECORD,,
