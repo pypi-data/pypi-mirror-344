@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: typed-urdf
+Version: 0.1.2
+Summary: Collection of URDF components, fully-type annotated
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: networkx >=3.1
+
