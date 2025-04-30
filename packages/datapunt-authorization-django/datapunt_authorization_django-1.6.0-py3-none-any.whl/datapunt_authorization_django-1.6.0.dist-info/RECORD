@@ -1,0 +1,12 @@
+authorization_django/__init__.py,sha256=4Zn_Tinb9axZq2wNkl1ytnazTpFZOdnUi4WKOIF80LI,202
+authorization_django/config.py,sha256=Vq-Ly1LadQVfNVA6JIarjrAtZzGsvG8IOIFSpBRj-SU,5863
+authorization_django/jwks.py,sha256=JXNOfYVjzHGilGKhMVtGl7V2dLMYTQ5RZ6YOuzjVGxQ,2259
+authorization_django/middleware.py,sha256=mMk1Q9yPB7CF7Ac9rB6OIMhtBq58tz4_HRHdzVD_7ks,10140
+authorization_django/extensions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+authorization_django/extensions/drf.py,sha256=1v4J7Yw1pxyWveGN1tlc8a05ISZU7h97UpS76As3M48,1192
+authorization_django/extensions/scheme.py,sha256=a2zIZrvo5Xy-8_Xipzvg3VJkyjqXaaGK4W3e4VpgLc0,375
+datapunt_authorization_django-1.6.0.dist-info/licenses/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+datapunt_authorization_django-1.6.0.dist-info/METADATA,sha256=BFKXv6e1XeMrXrayCIDDPDG7Z7TF8wyIlBqHtpJbtzQ,9245
+datapunt_authorization_django-1.6.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+datapunt_authorization_django-1.6.0.dist-info/top_level.txt,sha256=z3--K1KW_C4McWnCy_yVbOZz42JR4ES64-uRlfPecfQ,21
+datapunt_authorization_django-1.6.0.dist-info/RECORD,,
