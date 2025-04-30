@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5ce6a727-6187-4970-b4b5-e0571f06d609" name="Changes" comment="feat(database): 增加对 MySQL 数据库的增删查改功能&#10;&#10;- 在 DsHelper 类中添加 exec_ 和 async_exec_ 方法，用于执行不同类型的 SQL 查询&#10;- 在 OrmExec 类中实现 all、first、update、delete 和 insert 方法，支持 ORM 方式的数据库操作&#10;- 优化数据库连接池配置，增加 DictCursor 支持">
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesscode_database/version.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/.pyenv/versions/3.7.17/lib/python3.7/typing.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2mPsXUrYvyJMeLT2lYDQoYZ9bwu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.orm_exec.executor&quot;: &quot;Run&quot;,
+    &quot;Python.orm_typing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.t.executor&quot;: &quot;Run&quot;,
+    &quot;Python.typing.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/navy/Desktop/other&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lesscode_database/orm" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.orm_exec">
+    <configuration name="orm_exec" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lesscode_database" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesscode_database/orm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesscode_database/orm/orm_exec.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="orm_typing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lesscode_database" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesscode_database/orm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesscode_database/orm/orm_typing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="t" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lesscode_database" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/t.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.orm_exec" />
+        <item itemvalue="Python.orm_typing" />
+        <item itemvalue="Python.t" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PY-251.23774.444" />
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ce6a727-6187-4970-b4b5-e0571f06d609" name="Changes" comment="" />
+      <created>1726989588115</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726989588115</updated>
+      <workItem from="1726989589697" duration="52000" />
+      <workItem from="1726990079669" duration="2668000" />
+      <workItem from="1743917546471" duration="147000" />
+      <workItem from="1743917704527" duration="34088000" />
+      <workItem from="1744722510689" duration="298000" />
+      <workItem from="1744722825747" duration="2130000" />
+      <workItem from="1745845007941" duration="1773000" />
+      <workItem from="1745986151014" duration="194000" />
+      <workItem from="1745986369694" duration="6717000" />
+      <workItem from="1745993614636" duration="4389000" />
+    </task>
+    <task id="LOCAL-00001" summary="add dm">
+      <option name="closed" value="true" />
+      <created>1726992524046</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726992524046</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(database): 新增 ORM 相关模块&#10;&#10;- 添加 orm_exec.py 文件，实现 SQL 查询的构建和执行&#10;- 添加 orm_model.py 文件，定义基础模型类和元类&#10;- 添加 orm_typing.py 文件，实现字段类型和操作符的定义&#10;- 通过 TestModel 类进行简单测试">
+      <option name="closed" value="true" />
+      <created>1743937994275</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743937994275</updated>
+    </task>
+    <task id="LOCAL-00003" summary="refactor(orm): 优化代码结构和格式&#10;&#10;- 移除了 orm_model.py 中未使用的导入- 优化了 orm_typing.py 中的代码格式">
+      <option name="closed" value="true" />
+      <created>1743938057553</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743938057554</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat(orm): 添加 ORM 函数支持&#10;&#10;- 新增 OrmFunc 类用于定义 ORM 函数&#10;- 在 orm_exec.py 中添加对 OrmFunc 的支持&#10;- 新增 func_sum、func_min、func_max 和 func_argv 等 ORM函数">
+      <option name="closed" value="true" />
+      <created>1743939552237</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743939552237</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix(orm): 修复聚合函数在 ORM 中的使用问题&#10;&#10;- 增加对聚合函数如 sum、argv、min、max 的空参数处理&#10;- 当 column 参数为空时，返回函数名后不带参数的字符串表示&#10;-保持了向后兼容性，当 column 参数存在时，行为与之前相同">
+      <option name="closed" value="true" />
+      <created>1743939781788</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743939781788</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactor(orm): 优化 orm_func.py 中的代码逻辑&#10;&#10;- 将判断 column 变量的条件从 if not column 改为 if column is None&#10;- 这样可以更准确地判断 column 是否被设置，避免潜在的逻辑错误">
+      <option name="closed" value="true" />
+      <created>1743939833377</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743939833377</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat(orm): 为函数列添加别名支持&#10;&#10;- 在 FuncColumnType 类的 __repr__ 方法中增加了对别名属性的支持&#10;- 当存在别名时，会在函数列的字符串表示中添加 AS子句&#10;- 此修改允许在使用函数列时指定别名，提高查询结果的可读性">
+      <option name="closed" value="true" />
+      <created>1743940193533</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743940193533</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat(orm): 新增 Update、Delete 和 Insert 类以支持对应 SQL 操作&#10;&#10;- 新增 Update 类，用于生成更新操作的 SQL语句&#10;- 新增 Delete 类，用于生成删除操作的 SQL语句&#10;- 新增 Insert 类，用于生成插入操作的 SQL语句&#10;- 扩展 Exec 类以支持新的 SQL 操作对象">
+      <option name="closed" value="true" />
+      <created>1743944949171</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743944949171</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor(orm_exec): 重构 Exec 类以提高代码质量和可用性&#10;&#10;- 修改构造函数，使其不再需要 SQL 对象参数&#10;-重写 execute 方法，使其可以接受任何 SQL 对象&#10;- 添加 all 和 first 方法，以更清晰地获取查询结果&#10;- 优化代码结构，提高可读性和可维护性">
+      <option name="closed" value="true" />
+      <created>1743945868579</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743945868579</updated>
+    </task>
+    <task id="LOCAL-00010" summary="refactor(orm): 优化 Select 类的执行逻辑&#10;&#10;- 修改 exec 方法，针对 Select 类型的查询返回自身实例&#10;- 对于非 Select 查询，返回执行结果&#10;- 优化了查询执行流程，提高了代码的可读性和灵活性">
+      <option name="closed" value="true" />
+      <created>1743946016483</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743946016483</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat(orm_typing): 添加新的数据类型类&#10;&#10;- 新增了多种数据类型类，包括 BigInt、Decimal、Float、Double、Numeric、Real、Date、DateTime、TimeStamp、Time、Year、Char、Text、Varchar、Binary、Varbinary、Bolb、Boolean 和 Bool&#10;- 为每个数据类型类添加了适当的类型检查和属性初始化&#10;- 优化了部分现有类的定义，增加了默认值和参数类型注解">
+      <option name="closed" value="true" />
+      <created>1743948246804</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1743948246804</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat(orm_typing): 为 ColumnType 类添加值类型检查- 在 ColumnType 类中添加 _check_value 方法，用于检查值的类型&#10;- 当传入的值与列类型不匹配时，抛出异常">
+      <option name="closed" value="true" />
+      <created>1743948772953</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1743948772953</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix(orm): 修复字段比较操作的字符串格式化问题&#10;&#10;- 在 Field 类的比较方法中，将 other 参数的字符串表示改为 other._name&#10;- 修复了字段比较时可能出现的错误字符串格式- 保证了字段比较操作的正确性和一致性">
+      <option name="closed" value="true" />
+      <created>1744722178647</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1744722178647</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat(orm_typing): 为字段类型添加别名属性&#10;&#10;- 在 BaseColumnType 类中添加 alias 参数，用于指定字段的别名- 如果未提供别名，则使用字段名称作为默认别名&#10;- 这个改动可以增强 ORM 的灵活性，特别是在处理与数据库字段名称不一致的情况时">
+      <option name="closed" value="true" />
+      <created>1744722592669</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1744722592669</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactor(orm): 修改列别名处理逻辑&#10;&#10;- 在 BaseColumnType 类中的 alias 方法中添加对别名的赋值操作&#10;- 删除了原本返回 BaseColumnTypeAlias 实例的逻辑">
+      <option name="closed" value="true" />
+      <created>1744722755689</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1744722755689</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat(database): 增加对 MySQL 数据库的增删查改功能&#10;&#10;- 在 DsHelper 类中添加 exec_ 和 async_exec_ 方法，用于执行不同类型的 SQL 查询&#10;- 在 OrmExec 类中实现 all、first、update、delete 和 insert 方法，支持 ORM 方式的数据库操作&#10;- 优化数据库连接池配置，增加 DictCursor 支持">
+      <option name="closed" value="true" />
+      <created>1745992956905</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1745992956905</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add dm" />
+    <MESSAGE value="feat(database): 新增 ORM 相关模块&#10;&#10;- 添加 orm_exec.py 文件，实现 SQL 查询的构建和执行&#10;- 添加 orm_model.py 文件，定义基础模型类和元类&#10;- 添加 orm_typing.py 文件，实现字段类型和操作符的定义&#10;- 通过 TestModel 类进行简单测试" />
+    <MESSAGE value="refactor(orm): 优化代码结构和格式&#10;&#10;- 移除了 orm_model.py 中未使用的导入- 优化了 orm_typing.py 中的代码格式" />
+    <MESSAGE value="feat(orm): 添加 ORM 函数支持&#10;&#10;- 新增 OrmFunc 类用于定义 ORM 函数&#10;- 在 orm_exec.py 中添加对 OrmFunc 的支持&#10;- 新增 func_sum、func_min、func_max 和 func_argv 等 ORM函数" />
+    <MESSAGE value="fix(orm): 修复聚合函数在 ORM 中的使用问题&#10;&#10;- 增加对聚合函数如 sum、argv、min、max 的空参数处理&#10;- 当 column 参数为空时，返回函数名后不带参数的字符串表示&#10;-保持了向后兼容性，当 column 参数存在时，行为与之前相同" />
+    <MESSAGE value="refactor(orm): 优化 orm_func.py 中的代码逻辑&#10;&#10;- 将判断 column 变量的条件从 if not column 改为 if column is None&#10;- 这样可以更准确地判断 column 是否被设置，避免潜在的逻辑错误" />
+    <MESSAGE value="feat(orm): 为函数列添加别名支持&#10;&#10;- 在 FuncColumnType 类的 __repr__ 方法中增加了对别名属性的支持&#10;- 当存在别名时，会在函数列的字符串表示中添加 AS子句&#10;- 此修改允许在使用函数列时指定别名，提高查询结果的可读性" />
+    <MESSAGE value="feat(orm): 新增 Update、Delete 和 Insert 类以支持对应 SQL 操作&#10;&#10;- 新增 Update 类，用于生成更新操作的 SQL语句&#10;- 新增 Delete 类，用于生成删除操作的 SQL语句&#10;- 新增 Insert 类，用于生成插入操作的 SQL语句&#10;- 扩展 Exec 类以支持新的 SQL 操作对象" />
+    <MESSAGE value="refactor(orm_exec): 重构 Exec 类以提高代码质量和可用性&#10;&#10;- 修改构造函数，使其不再需要 SQL 对象参数&#10;-重写 execute 方法，使其可以接受任何 SQL 对象&#10;- 添加 all 和 first 方法，以更清晰地获取查询结果&#10;- 优化代码结构，提高可读性和可维护性" />
+    <MESSAGE value="refactor(orm): 优化 Select 类的执行逻辑&#10;&#10;- 修改 exec 方法，针对 Select 类型的查询返回自身实例&#10;- 对于非 Select 查询，返回执行结果&#10;- 优化了查询执行流程，提高了代码的可读性和灵活性" />
+    <MESSAGE value="feat(orm_typing): 添加新的数据类型类&#10;&#10;- 新增了多种数据类型类，包括 BigInt、Decimal、Float、Double、Numeric、Real、Date、DateTime、TimeStamp、Time、Year、Char、Text、Varchar、Binary、Varbinary、Bolb、Boolean 和 Bool&#10;- 为每个数据类型类添加了适当的类型检查和属性初始化&#10;- 优化了部分现有类的定义，增加了默认值和参数类型注解" />
+    <MESSAGE value="feat(orm_typing): 为 ColumnType 类添加值类型检查- 在 ColumnType 类中添加 _check_value 方法，用于检查值的类型&#10;- 当传入的值与列类型不匹配时，抛出异常" />
+    <MESSAGE value="fix(orm): 修复字段比较操作的字符串格式化问题&#10;&#10;- 在 Field 类的比较方法中，将 other 参数的字符串表示改为 other._name&#10;- 修复了字段比较时可能出现的错误字符串格式- 保证了字段比较操作的正确性和一致性" />
+    <MESSAGE value="feat(orm_typing): 为字段类型添加别名属性&#10;&#10;- 在 BaseColumnType 类中添加 alias 参数，用于指定字段的别名- 如果未提供别名，则使用字段名称作为默认别名&#10;- 这个改动可以增强 ORM 的灵活性，特别是在处理与数据库字段名称不一致的情况时" />
+    <MESSAGE value="refactor(orm): 修改列别名处理逻辑&#10;&#10;- 在 BaseColumnType 类中的 alias 方法中添加对别名的赋值操作&#10;- 删除了原本返回 BaseColumnTypeAlias 实例的逻辑" />
+    <MESSAGE value="feat(database): 增加对 MySQL 数据库的增删查改功能&#10;&#10;- 在 DsHelper 类中添加 exec_ 和 async_exec_ 方法，用于执行不同类型的 SQL 查询&#10;- 在 OrmExec 类中实现 all、first、update、delete 和 insert 方法，支持 ORM 方式的数据库操作&#10;- 优化数据库连接池配置，增加 DictCursor 支持" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(database): 增加对 MySQL 数据库的增删查改功能&#10;&#10;- 在 DsHelper 类中添加 exec_ 和 async_exec_ 方法，用于执行不同类型的 SQL 查询&#10;- 在 OrmExec 类中实现 all、first、update、delete 和 insert 方法，支持 ORM 方式的数据库操作&#10;- 优化数据库连接池配置，增加 DictCursor 支持" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lesscode_database$t.coverage" NAME="t Coverage Results" MODIFIED="1743923878274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/lesscode_database$orm_exec.coverage" NAME="orm_exec Coverage Results" MODIFIED="1743936991014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lesscode_database/orm" />
+    <SUITE FILE_PATH="coverage/lesscode_database$typing.coverage" NAME="orm_typing Coverage Results" MODIFIED="1743924819370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lesscode_database/orm" />
+  </component>
+</project>
