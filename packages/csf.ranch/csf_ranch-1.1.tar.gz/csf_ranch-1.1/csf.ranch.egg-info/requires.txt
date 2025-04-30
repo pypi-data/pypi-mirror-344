@@ -1,0 +1,3 @@
+arrow
+celery<5.0
+rollbar
