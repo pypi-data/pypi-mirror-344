@@ -1,0 +1,9 @@
+README.md
+ansible_scaffold.py
+pyproject.toml
+ansible_scaffold.egg-info/PKG-INFO
+ansible_scaffold.egg-info/SOURCES.txt
+ansible_scaffold.egg-info/dependency_links.txt
+ansible_scaffold.egg-info/entry_points.txt
+ansible_scaffold.egg-info/requires.txt
+ansible_scaffold.egg-info/top_level.txt
