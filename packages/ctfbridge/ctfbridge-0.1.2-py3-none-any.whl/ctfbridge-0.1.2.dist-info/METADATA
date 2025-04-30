@@ -1,0 +1,95 @@
+Metadata-Version: 2.4
+Name: ctfbridge
+Version: 0.1.2
+Summary: A Python library for interacting with multiple CTF platforms.
+Author-email: bjornmorten <bjornmdev@proton.me>
+License: MIT
+Project-URL: Homepage, https://github.com/bjornmorten/ctfbridge/
+Project-URL: Repository, https://github.com/bjornmorten/ctfbridge/
+Project-URL: Issues, https://github.com/bjornmorten/ctfbridge/issues
+Keywords: ctf,ctfd
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Security
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests<3.0,>=2.25
+Requires-Dist: beautifulsoup4<5.0,>=4.9
+Requires-Dist: pydantic<3.0,>=2.0
+Dynamic: license-file
+
+# CTF Bridge
+
+CTF Bridge is a Python library for interacting with multiple CTF platforms through a unified interface.
+
+⚠️ This project is still in development ⚠️
+
+## Overview
+
+CTFBridge provides a simple, unified API to interact with different Capture the Flag (CTF) competition platforms like CTFd and more.
+
+It hides platform-specific quirks and gives you consistent access to challenges, submissions, and authentication across platforms.
+
+## Features
+
+- 🌟 Unified API across different CTF platforms
+- 📄 Fetch challenges, attachments, and challenge metadata
+- 🔑 Handle logins, sessions, and authentication cleanly
+- ⚡ Automatic rate-limiting and retry handling
+- 🧩 Easy to extend with new platform clients
+- 🧪 Demo client for quick testing without external servers
+
+## Installation
+
+```bash
+pip install ctfbridge
+```
+
+## Basic Usage
+
+```python
+from ctfbridge import CTFdClient
+
+client = CTFdClient(base_url="https://demo.ctfd.io")
+client.login(username="admin", password="password")
+
+challenges = client.get_challenges()
+for chal in challenges:
+    print(f"[{chal.category}] {chal.name} - {chal.value} points")
+```
+
+### Optional: Automatic Platform Detection
+
+If you don't know which platform you are connecting to, you can use `get_client()` to auto-detect and connect automatically.
+
+```python
+from ctfbridge import get_client
+
+client = get_client("https://demo.ctfd.io")
+client.login("admin", "password")
+
+challenges = client.get_challenges()
+for chal in challenges:
+    print(f"[{chal.category}] {chal.name} ({chal.value} points)")
+```
+
+## Supported Platforms
+
+| Platform                   | Status            |
+| -------------------------- | ----------------- |
+| CTFd                       | ✅ Supported      |
+| rCTF                       | ✅ Supported      |
+| DemoClient (Local testing) | ✅ Available      |
+
+## License
+
+MIT License © 2025 bjornmorten
