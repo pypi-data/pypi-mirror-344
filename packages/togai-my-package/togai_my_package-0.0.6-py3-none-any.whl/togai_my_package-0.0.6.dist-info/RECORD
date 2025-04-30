@@ -1,0 +1,13 @@
+togai_my_packaging/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+togai_my_packaging/my_file.py,sha256=WYfoC-wTs0xxMmfd-lRgJF2k9lJPtN6Hqmp-SnPtkeM,154
+togai_my_packaging/my_other_file.py,sha256=z6X5jci1sJm8YnosccwgfxACLyC1_zXGnKTV1B52XoI,27
+togai_my_packaging/states_info.py,sha256=1n4bS8x8NunTNXbEMC-WYbtdgY9G3BYm0ehhdc5syq0,1232
+togai_my_packaging/my_folder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+togai_my_packaging/my_folder/my_nested_file.py,sha256=zjcWij2Ufi_mAaHN9lSPeYZPuBh511TVo_-buMYMYOw,199
+togai_my_packaging/my_folder/my_nested_file_not_recom.py,sha256=q4x_WQtwMLSmSIleydq5NjsDOP3ZsfyoJ7rpMTQwWJ4,796
+togai_my_packaging/my_folder/sub_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+togai_my_packaging/my_folder/sub_package/some_deeply_nested_file.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+togai_my_package-0.0.6.dist-info/METADATA,sha256=cr5szOAplAvVByBVP28mHUOt8ICGQXN85oDPSOjP4uw,10591
+togai_my_package-0.0.6.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+togai_my_package-0.0.6.dist-info/top_level.txt,sha256=psq6iV6qtOL6uRdrMFb5GPzE4NEJiUGH55wY-h-vLi8,19
+togai_my_package-0.0.6.dist-info/RECORD,,
