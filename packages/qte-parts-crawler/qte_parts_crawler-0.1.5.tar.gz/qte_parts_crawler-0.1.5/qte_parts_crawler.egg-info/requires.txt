@@ -1,0 +1,14 @@
+requests
+beautifulsoup4
+lxml
+2captcha-python
+certifi
+charset-normalizer
+idna
+selenium
+urllib3
+websocket-client
+Flask
+gunicorn
+Werkzeug
+dotenv
