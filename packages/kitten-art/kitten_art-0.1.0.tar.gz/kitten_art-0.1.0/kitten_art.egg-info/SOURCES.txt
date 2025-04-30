@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+kitten_art/__init__.py
+kitten_art/art.py
+kitten_art/data.py
+kitten_art.egg-info/PKG-INFO
+kitten_art.egg-info/SOURCES.txt
+kitten_art.egg-info/dependency_links.txt
+kitten_art.egg-info/top_level.txt
