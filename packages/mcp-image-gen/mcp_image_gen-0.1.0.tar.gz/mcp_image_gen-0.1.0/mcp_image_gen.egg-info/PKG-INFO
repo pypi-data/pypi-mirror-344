@@ -1,0 +1,99 @@
+Metadata-Version: 2.4
+Name: mcp-image-gen
+Version: 0.1.0
+Summary: 一个基于MCP协议的OpenAI图像生成服务器
+Home-page: https://github.com/yourusername/mcp-image-gen
+Author: MCP服务开发者
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: requests>=2.25.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# OpenAI图像生成MCP服务 (v0.1.0)
+
+这是一个基于MCP协议的OpenAI图像生成服务器，允许大语言模型通过MCP协议调用OpenAI的图像生成API。
+
+## 安装
+
+```bash
+pip install mcp-image-gen
+```
+
+## 功能
+
+### 工具 (Tools)
+
+- `generate_image`: 根据文本提示生成图像，返回Base64编码的图像数据。
+  - 参数:
+    - `prompt`: 描述想要生成的图像的文本提示
+    - `size`: 图像尺寸，可选 `1024x1024`(默认), `1024x1536`, `1536x1024`
+    - `quality`: 图像质量，可选 `low`, `medium`(默认), `high`, `auto`
+    - `model`: 使用的模型，默认为 `gpt-image-1`
+    - `api_key`: 可选，OpenAI API密钥
+    - `base_url`: 可选，API基础URL
+
+- `save_image_base64`: 将Base64编码的图像数据保存为文件。
+  - 参数:
+    - `base64_data`: Base64编码的图像数据
+    - `filename`: 要保存的文件名，默认为 `generated_image.png`
+
+### 资源 (Resources)
+
+- `openai://api/status`: 检查OpenAI API的可用性状态。
+
+## 在阿里云百炼中使用
+
+在阿里云百炼平台的MCP服务配置中，使用以下JSON：
+
+```json
+{
+  "mcpServers": {
+    "openai-image-gen": {  // 服务名称，可自定义
+      "command": "uvx",
+      "args": ["mcp-image-gen"]
+    }
+  }
+}
+```
+
+## 本地运行
+
+安装后，您可以在本地通过以下方式运行：
+
+```bash
+# 使用uvx
+uvx mcp-image-gen
+
+# 使用包提供的命令
+mcp-image-gen
+
+# 使用Python -m
+python -m mcp_image_gen
+```
+
+按 `Ctrl+C` 停止服务器。
+
+## 配置
+
+默认情况下，服务器使用内置的API密钥和代理URL，但您可以在调用工具时通过参数覆盖它们。
+
+## 许可证
+
+MIT License 
