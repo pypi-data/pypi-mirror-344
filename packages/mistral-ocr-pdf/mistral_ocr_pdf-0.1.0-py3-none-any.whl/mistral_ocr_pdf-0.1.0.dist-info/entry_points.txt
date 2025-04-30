@@ -1,0 +1,2 @@
+[console_scripts]
+mistral-ocr-pdf = mistral_ocr_pdf:main
