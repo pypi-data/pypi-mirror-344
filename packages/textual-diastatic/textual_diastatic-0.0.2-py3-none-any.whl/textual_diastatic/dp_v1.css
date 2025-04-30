@@ -1,0 +1,94 @@
+
+Screen {
+    layout: grid;
+    grid-size: 3 2;
+    grid-rows: 0.75fr 0.25fr;
+    grid-columns: 0.4fr 0.4fr 0.80fr;
+    scrollbar-gutter: stable;
+}
+
+Header {
+    height: 1;
+    dock: top;
+}
+/*
+Footer {
+    height: 3;
+    dock: bottom;
+}
+*/
+
+/* Parent Container */
+#left_scroll {
+    background: $panel;
+    color: $text;
+    /* Set a solid white border */
+    border-left: solid white;
+    border-top: solid white;
+    border-bottom: solid white;
+    padding: 1 0;
+}
+
+/* Parent Container */
+#mid_scroll {
+    background: $panel;
+    color: $text;
+    /* Set a solid white border */
+    border-right: solid white;
+    border-top: solid white;
+    border-bottom: solid white;
+    padding: 1 0;
+}
+
+/* Parent Container */
+#right_scroll {
+    background: $panel;
+    color: $text;
+    /* Set a solid white border */
+    border: solid white;
+
+    padding: 0 0;
+}
+
+/* Parent Container */
+#bleft_scroll {
+
+    color: $text;
+    /* Set a solid white border */
+    border: solid white;
+    padding: 0 0;
+    column-span: 2;
+}
+
+/* Parent Container */
+#bright_scroll {
+
+    color: $text;
+    /* Set a solid white border */
+    border: solid white;
+
+    padding: 0 0;
+    column-span: 1;
+
+
+
+}
+
+/* The input class */
+Input {
+    width: 1fr;
+    height: 3;
+}
+
+#calc_dp {
+    margin-top: 1;
+    margin-left: 8;
+
+    border: round $panel ;
+
+}
+
+/* used to make a widget invisible until .styles.visibility = "visible" is called */
+Label.invisible {
+    visibility: hidden;
+}
