@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: vowelextractor_pip
+Version: 0.0.1
+Summary: A simple package to retrieve the Vowels in a given string
+Project-URL: Repository, https://github.com/SurajSah776/learning-python
+Project-URL: Homepage, https://github.com/SurajSah776/learning-python
+Author-email: Suraj Kumar Sah <kumarsurajsah776@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: extract,extract vowels,vowels
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Vowel Extractor
+
+A simple Python package with utility function for working with string.
+
+## Feature
+
+- Extract vowels from a string
+
+## Installation
+
+```bash
+pip install vowelextractor_pip
+```
