@@ -1,0 +1,83 @@
+Metadata-Version: 2.4
+Name: qte-parts-crawler
+Version: 0.1.4
+Summary: A web crawler for QTE parts data
+Home-page: https://github.com/yourusername/qte-parts-crawler
+Author: Allen Yan
+Author-email: wsyanligang@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Requires-Dist: 2captcha-python
+Requires-Dist: certifi
+Requires-Dist: charset-normalizer
+Requires-Dist: idna
+Requires-Dist: selenium
+Requires-Dist: urllib3
+Requires-Dist: websocket-client
+Requires-Dist: Flask
+Requires-Dist: gunicorn
+Requires-Dist: Werkzeug
+Requires-Dist: dotenv
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+## Usage
+
+1. 使用命令行启动 Chrome 浏览器，开启远程调试模式
+```bash
+# MacOS
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \ --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-debug
+
+# Windows
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --user-data-dir="C:\tmp\chrome-debug"
+```
+
+2. 在Chrome浏览器地址栏输入 https://www.showmetheparts.com, 然后人工完成验证码
+
+3. 安装Python(如果已经安装了Python 3.11，可以跳过此步骤)
+
+```bash
+# MacOS
+brew install python@3.11
+python3.11 -m pip install --upgrade pip
+
+# Windows
+winget install python --version 3.11
+python3.11 -m pip install --upgrade pip
+```
+
+4. 安装 qte-parts-crawler
+```bash
+pip3 install qte-parts-crawler==0.1.3
+```
+5. 使用 qte-parts-crawler-cli
+```bash
+
+```
+
+
+## Install
+```bash
+pip install -r requirements.txt
+```
+
+## Package & Publish
+```bash
+python3.11 -m build
+twine upload dist/*
+```
