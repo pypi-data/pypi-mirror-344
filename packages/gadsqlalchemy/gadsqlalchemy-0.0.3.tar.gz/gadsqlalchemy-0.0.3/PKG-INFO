@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: gadsqlalchemy
+Version: 0.0.3
+Summary: Wrapper around SQLAlchemy AsyncSession with built-in query execution profiling and connection context management.
+Home-page: https://github.com/AlexDemure/gadsqlalchemy
+Author: Alexander Grishchenko
+Author-email: alexanderdemure@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<p align="center">
+  <a href="https://github.com/AlexDemure/gadsqlalchemy">
+    <a href="https://ibb.co/QFMLpQhC"><img src="https://i.ibb.co/Lz1mYRBJ/logo.png" alt="logo" border="0"></a>
+  </a>
+</p>
+
+<p align="center">
+  Wrapper around SQLAlchemy AsyncSession with built-in query execution profiling and connection context management.
+</p>
+
+---
+
+### Installation
+
+```
+pip install gadsqlalchemy
+```
+
+### Usage
+
+```python
+from gadsqlalchemy import Sqlalchemy, Base, CRUD
+
+alchemy = Sqlalchemy("postgresql+asyncpg://postgres:postgres@localhost:5432/db")
+
+
+class Table(Base):
+    ...
+
+
+class Crud(CRUD):
+    table = Table
+
+
+class Service:
+
+    @classmethod
+    async def get(cls):
+        async with alchemy.connect() as session:
+            ...
+
+    @classmethod
+    async def create(cls,):
+        async with alchemy.connect(transaction=True) as session:
+           ...
+
+# testing
+import faker
+
+from gadsqlalchemy.testing import Table
+
+fake = faker.Faker()
+
+class Dummy(Table):
+    class Meta:
+        model = Table
+
+    name = fake.name()
+
+pytest_plugins = [
+    "gadsqlalchemy.testing.fixtures",
+]
+
+```
