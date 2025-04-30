@@ -1,0 +1,4 @@
+dist
+iisy
+pretrained_models
+spkrec-resnet-voxceleb
