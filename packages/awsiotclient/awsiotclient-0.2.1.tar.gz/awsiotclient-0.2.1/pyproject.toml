@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "awsiotclient"
+version = "0.2.1"
+description = "The AWS IoT Device Client provides device-side functionality for AWS IoT services such as jobs, device shadow, and simple pubsub."
+authors = ["Seiya Shimizu <seiya.shimizu@gmail.com>"]
+license = "Apache License 2.0"
+repository = "https://github.com/whill-labs/aws-iot-device-client-python"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7.1"
+awsiotsdk = "^1.5.11"
+
+[tool.poetry.group.dev.dependencies]
+boto3 = "^1.26.155"
+black = "^23.3.0"
+flake8 = {version = "^6.0.0", python = ">=3.8.1"}
+flake8-pyproject = "^1.2.3"
+isort = {version = "^5.12.0", python = ">=3.8"}
+mypy = "^1.3.0"
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+ignore = "E501"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
