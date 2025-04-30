@@ -1,0 +1,48 @@
+Metadata-Version: 2.4
+Name: openapi-llm-tools
+Version: 0.1.0
+Summary: Python library to convert OpenAPI endpoints into callable tools for LLM AI agents.
+Author-email: Aria Dhanang <ariadng@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/ariadng/openapi-agent-tools
+Keywords: openapi,llm,ai,agent
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.32.3
+Requires-Dist: pydantic>=2.11.4
+Requires-Dist: openai-agents>=0.0.13
+
+# OpenAPI Agent Tools
+
+Generate function tools from OpenAPI server that can be used with LLM AI agents.
+
+## Project Checklist
+
+- ✅ Generate python functions from OpenAPI server endpoints
+- Generate function tools for OpenAPI Agent SDK
+- Generate function tools for Google ADK
+- Integrate pydantic for better typings
+- Support for endpoints with multiple path parameters
+
+## Installation
+
+```bash
+pip install openapi-agent-tools
+```
+
+## Usage
+
+```python
+from openapi_agent_tools import generate_tools
+
+spec = load_spec('https://api.example.com/openapi.json')
+
+generate_tools(spec)
+```
+
+## License
+
+MIT
