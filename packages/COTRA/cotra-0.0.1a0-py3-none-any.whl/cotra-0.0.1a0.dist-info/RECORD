@@ -1,0 +1,9 @@
+COTRA/__init__.py,sha256=pXRa_Rs_2FKbfZCuvzV4GNznmKXBkoX_Q9rqt71kRUg,115
+COTRA/animation.py,sha256=4EL4J9j_Kj4on8JCi4rz-OjQSvuEbcU-5de0K_03xPE,880
+COTRA/export.py,sha256=42HltAVeqEpyMgrZ0-YiWU8zykHa2kTddBgjOSyNtDo,571
+COTRA/plot.py,sha256=LCqZI8_E5KT2GaNM1TGQz7ohKfOqEWroZ5XXH1ZQWy4,5064
+COTRA/solver.py,sha256=-J4qAUeJVEBSzYXA57a8W2iUNm2F9qvJOy7m1Qcy4CE,2600
+cotra-0.0.1a0.dist-info/METADATA,sha256=btxrKn1G6BXlC1YSOPg4CgWXeB1nbtq7o79Zl-CBtr8,1209
+cotra-0.0.1a0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+cotra-0.0.1a0.dist-info/top_level.txt,sha256=9hx0hD2peicQ-2Ao-HuMlIbsWD9YWbkTSB5lS-KnsNM,6
+cotra-0.0.1a0.dist-info/RECORD,,
