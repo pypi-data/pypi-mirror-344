@@ -1,0 +1,10 @@
+libassist.cpython-313-darwin.so,sha256=4EpX6mtMyEE_eon1xQYuvr6t2aIXFAGnWZ94z7_uIJ8,91568
+assist/__init__.py,sha256=oNAx1zISeKzZzyCAsqW-1OYDHuymzF8_DiDUu9p7F8o,1813
+assist/ephem.py,sha256=BxzE9P4QsTApppYEjxz-Y-KX9cbjbMRzSzSl_GN5K44,2898
+assist/extras.py,sha256=W-ayyYvEiAMcbwkarAo2tUpG188IjYm5LuzhPVW0bxk,3637
+assist/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+assist_adam_fork-1.1.9.post1.dist-info/licenses/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+assist_adam_fork-1.1.9.post1.dist-info/METADATA,sha256=-ixQd_QYAO9OrE1xoUrf2QDcpSUKBw7vIDOVIr-HaPg,6943
+assist_adam_fork-1.1.9.post1.dist-info/WHEEL,sha256=xqMUdL5_aXepRGS0JWkjLT2VFrAr2NQQK5GUUBQjxgg,109
+assist_adam_fork-1.1.9.post1.dist-info/top_level.txt,sha256=07De_TWbjtcTeCORbfXGvcSz-vkDuif_EzpkYpKDk-Y,17
+assist_adam_fork-1.1.9.post1.dist-info/RECORD,,
