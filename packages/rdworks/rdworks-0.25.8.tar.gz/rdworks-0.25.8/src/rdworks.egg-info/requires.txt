@@ -1,0 +1,13 @@
+numpy
+scipy
+scikit-learn
+pandas
+seaborn
+networkx
+tqdm
+psutil
+ase
+rdkit>=2023
+bitarray
+cdpkit
+pytest
