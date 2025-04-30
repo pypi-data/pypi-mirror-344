@@ -1,0 +1,9 @@
+cmem_plugin_nextcloud/__init__.py,sha256=PgMuRfxkJbY6NEMTBmmlFm57F0szns83ACBU4b7RryY,28
+cmem_plugin_nextcloud/autocomplete.py,sha256=EEikOP26zajhE1gpm1ucgANgZZObxuUWgwlKGrKkTIE,4256
+cmem_plugin_nextcloud/download.py,sha256=r-VjA30FB2fOwb8UL8P9zMw0_aM53jqY3YTnZlilduk,11433
+cmem_plugin_nextcloud/list.py,sha256=NAbMAqVhic4eFq4odEfwp11O0-agxuMTTZdchuWKfco,10713
+cmem_plugin_nextcloud/nextcloud.svg,sha256=8CJSkngisO4paBcey9JB7JCejR5cb8SLDf-45bJlHSc,2347
+cmem_plugin_nextcloud-1.1.0.dist-info/LICENSE,sha256=5t6lcWcFU3TBO5wwq9PYNbgzfVfFUuL-80v5BTGuuMQ,11334
+cmem_plugin_nextcloud-1.1.0.dist-info/METADATA,sha256=caxeAoUkioul1oEDYVf6DyA4C2Q1cozQqKSlwla631k,2326
+cmem_plugin_nextcloud-1.1.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+cmem_plugin_nextcloud-1.1.0.dist-info/RECORD,,
