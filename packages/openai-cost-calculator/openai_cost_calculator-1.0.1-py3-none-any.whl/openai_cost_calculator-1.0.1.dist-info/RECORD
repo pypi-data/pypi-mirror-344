@@ -1,0 +1,10 @@
+openai_cost_calculator/__init__.py,sha256=RWseWHmR-G8hNs1ZwLK62mkpZym2cyTzBV5H-nmvm0Y,571
+openai_cost_calculator/core.py,sha256=Hdr7-m_flM9-7q1XgG0wInSSuzRuLc6ID1uSllBqCpw,2197
+openai_cost_calculator/estimate.py,sha256=HG1MY7WyDRPDBZnrm-1kWs_agj1W298l1bIYG6Xmt88,3024
+openai_cost_calculator/parser.py,sha256=hOMUgG5sdPP8rUsjwI-ET-dsPyZ34qUG5OvRnT-kHbg,2962
+openai_cost_calculator/pricing.py,sha256=K5MECEasiv8HLsBaYJwwfulRJ-Gz-4INPCE4F_Zvrdg,1404
+openai_cost_calculator-1.0.1.dist-info/licenses/LICENSE,sha256=uC4plXE40ss6mHUWNmIZIxPct-jf1lV1uMbNZ5zObzE,1130
+openai_cost_calculator-1.0.1.dist-info/METADATA,sha256=3ZSbfyBpijzsw7VyzVFkY4jyYuDlgaQs5xS2KtOlFeA,4306
+openai_cost_calculator-1.0.1.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+openai_cost_calculator-1.0.1.dist-info/top_level.txt,sha256=6PCE-xE7QpK0UsGhBdT2lxPCYdT7huQxsqNUzYdvae4,23
+openai_cost_calculator-1.0.1.dist-info/RECORD,,
