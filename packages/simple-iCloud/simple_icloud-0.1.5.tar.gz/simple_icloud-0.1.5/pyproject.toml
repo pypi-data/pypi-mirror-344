@@ -1,0 +1,40 @@
+[build-system]
+    requires = ["poetry-core>=2.0.0,<3.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+    build-backend = "poetry_dynamic_versioning.backend"
+
+[project]
+name = "simple-iCloud"
+description = "SimpleiCloud is a lightweight iCloud client for Python, currently focused exclusively on managing contacts."
+authors = [
+    {name = "Luca Ferreri"},
+]
+dynamic = []
+package-mode = true
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    ]
+requires-python = ">=3.12,<4"
+readme = "README.md"
+license = "Apache"
+license-files = ["LICENSE"]
+
+dependencies =[
+    "requests (>=2.32.3,<3.0.0)",
+    "uuid (>=1.30,<2.0)",
+    "vobject (>=0.9.9,<0.10.0)",
+    "lxml (>=5.4.0,<6.0.0)"
+]
+version = "0.1.5"
+
+[tool.poetry]
+
+[tool.poetry-dynamic-versioning]
+    enable = false
+    vcs="git"
+    dirty=true
+    style="pep440"
+
+[project.urls]
+    repository = "https://github.com/luca-ferreri/simple-icloud"
