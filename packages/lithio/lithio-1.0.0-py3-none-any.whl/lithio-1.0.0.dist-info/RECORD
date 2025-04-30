@@ -1,0 +1,8 @@
+lithio-1.0.0.dist-info/METADATA,sha256=4Pk-tlt-15eE4_rUD8FAR82zEK8WPYrAcqVOJz-picc,3387
+lithio-1.0.0.dist-info/WHEEL,sha256=tSfRZzRHthuv7vxpI4aehrdN9scLjk-dCJkPLzkHxGg,90
+lithio-1.0.0.dist-info/entry_points.txt,sha256=Yoc48br43SRB5qZTSNkVAD_fxga_TKcDC8W28F56LOE,54
+lithio-1.0.0.dist-info/licenses/LICENSE,sha256=EeeXdjXtoXY9PE51iJTLLaYtBplTPjBzfGIaC1swGyU,1069
+lithio/__init__.py,sha256=npQdZs8Lo16q9KXIycAofKGz0KahTgXWTQ-HWpA6H2k,363
+lithio/__main__.py,sha256=r0xbySTfHxt_YBgAAdHmCi52yHwD-ugHNXWe7Nfe0Z8,91
+lithio/cli.py,sha256=ia4u-kvOjhFG96ce1tizXjDKzJZwK_8icNu5Sl_vVfk,5157
+lithio-1.0.0.dist-info/RECORD,,
