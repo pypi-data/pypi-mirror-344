@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/edusoho/__init__.py
+src/edusoho/__main__.py
+src/edusoho/server.py
+src/mcp_server_edusoho.egg-info/PKG-INFO
+src/mcp_server_edusoho.egg-info/SOURCES.txt
+src/mcp_server_edusoho.egg-info/dependency_links.txt
+src/mcp_server_edusoho.egg-info/entry_points.txt
+src/mcp_server_edusoho.egg-info/requires.txt
+src/mcp_server_edusoho.egg-info/top_level.txt
