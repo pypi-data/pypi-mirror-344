@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+src/__init__.py
+src/__main__.py
+src/tardys3_generator.py
+tardys3_generator.egg-info/PKG-INFO
+tardys3_generator.egg-info/SOURCES.txt
+tardys3_generator.egg-info/dependency_links.txt
+tardys3_generator.egg-info/entry_points.txt
+tardys3_generator.egg-info/requires.txt
+tardys3_generator.egg-info/top_level.txt
