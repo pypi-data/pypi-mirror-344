@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Visualize</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container" id="main-container">
+        <h1>Dataset Visualize</h1>
+        <hr>
+        <section>
+            <h2>Dataset Info</h2>
+            <div class="container" id="dataset-info-container">
+                <p><b>Datasets Path</b></p>
+                <p class="code inline-info">{{ datasets_path }}</p>
+                <p><b>List Path</b></p>
+                <p class="code inline-info">{{ list_path }}</p>
+                <p><b>Template Path</b></p>
+                <p class="code inline-info">{{ template_path }}</p>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <h2>Data List</h2>
+            <p><b>Indexes</b></p>
+            <p class="code">{{ indexes }}</p>
+            <p><b>List</b></p>
+            <div class="container">
+                <table id="main-table">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Image</th>
+                            <th>Image Name</th>
+                            <th>Label</th>
+                            <th>Type</th>
+                            <th>Original Index</th>
+                        </tr>
+                    </thead>
+                    {% for item in items %}
+                    <tr>
+                        <td>
+                            {{ loop.index }}
+                        </td>
+                        <td>
+                            <img src="{{ item.image }}" alt="" style="width: {{ img_size }}px;">
+                        </td>
+                        <td class="code">
+                            {{ item.image_name }}
+                        </td>
+                        <td>
+                            {{ item.label }}
+                        </td>
+                        <td>
+                            {{ item.type }}
+                        </td>
+                        <td>
+                            {{ item.index }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </section>
+    </div>
+
+
+</body>
+
+</html>
