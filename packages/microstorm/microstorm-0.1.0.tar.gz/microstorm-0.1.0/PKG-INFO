@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: microstorm
+Version: 0.1.0
+Summary: A modern microservices toolkit for Python with built-in discovery, metrics, and security.
+Home-page: https://github.com/tuusuario/microstorm
+Author: Jhoel Peralta
+Author-email: Jhoel Peralta <jhoelperalta@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/tuusuario/microstorm
+Project-URL: Documentation, https://github.com/tuusuario/microstorm#readme
+Project-URL: Source, https://github.com/tuusuario/microstorm
+Keywords: microservices,fastapi,prometheus,jwt,service discovery,microstorm
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: FastAPI
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: httpx
+Requires-Dist: prometheus_client
+Requires-Dist: python-dotenv
+Requires-Dist: PyJWT
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# Microstorm 🚀
+
+**Microstorm** es un micro-framework para construir microservicios modernos en **Python** usando **FastAPI**, enfocado en:
+
+- Simplicidad
+- Auto-registro dinámico de servicios
+- Comunicación segura entre microservicios
+- Métricas Prometheus integradas
+- Registro Discovery Server opcional
+- Control de acceso a métodos (público, privado, protegido)
+
+Ideal para arquitecturas basadas en microservicios pequeños, escalables y seguros.
+
+---
+
+## ✨ Características principales
+
+- 🔒 Control de acceso con decoradores (@private, @public, @protected)
+- 📦 Auto-registro de servicios (archivo local o Discovery Server)
+- 📡 Comunicación HTTP segura usando JWT
+- 📊 Métricas listas para Prometheus
+- 🔄 Reintentos automáticos con backoff exponencial
+- 📚 Fácil integración en cualquier proyecto FastAPI
+
+---
+
+## ⚙️ Instalación
+
+```bash
+pip install fastapi uvicorn httpx prometheus_client python-dotenv
