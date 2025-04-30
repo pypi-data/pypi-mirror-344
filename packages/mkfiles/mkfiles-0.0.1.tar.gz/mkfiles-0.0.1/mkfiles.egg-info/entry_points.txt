@@ -1,0 +1,2 @@
+[console_scripts]
+mkfiles = mkfiles.__main__:main
