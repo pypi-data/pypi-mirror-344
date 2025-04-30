@@ -1,0 +1,13 @@
+frontegg_ai_sdk/__init__.py,sha256=SU2WjNk9mzMelSz52Y0H0gSHtkRL_-BkYbmjD0E68GI,362
+frontegg_ai_sdk/core/__init__.py,sha256=YaOGuHXR-C28ARbBr7ICPjaYG2zziUkvukyD9FWA-Eg,421
+frontegg_ai_sdk/core/client.py,sha256=e3XjBc1OfMUo7_6Ug_uezuvHhfTbpoR5QbjBHFyY2vE,11004
+frontegg_ai_sdk/core/client_utils.py,sha256=xVBAmXPXp6IdRVkuoG2yIDHW_oFCUNwZOF5jyRT0BQs,3557
+frontegg_ai_sdk/core/config.py,sha256=b0yZ3v8vvFmL6vHBxluysDQJHY5Mjma49KT_uaPt3yU,242
+frontegg_ai_sdk/core/enums.py,sha256=OyhE4DrWMOyFmsO-o19k8aSHKJlw1jNVBeUaj3SZKyo,175
+frontegg_ai_sdk/core/httpTransport.py,sha256=dTz_sGLVpBJey9htHC0DzBKvF2IeIGgqGmPerGkVH3Y,19509
+frontegg_ai_sdk/core/logger.py,sha256=0wM1ZVDQMfC3PHG2CM1gYvydfs5iXWj0b1M7OtICMhA,1610
+frontegg_ai_sdk-1.0.0.dist-info/licenses/LICENSE.md,sha256=sbH6cFnu4UwPdSSnydyIpFNBJ2tXwHMVQbLoXfhhT40,1065
+frontegg_ai_sdk-1.0.0.dist-info/METADATA,sha256=-dQZnS2vxJTLAQNT6PurmJmjxDp11B7dYOFn3gijkXw,5282
+frontegg_ai_sdk-1.0.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+frontegg_ai_sdk-1.0.0.dist-info/top_level.txt,sha256=plWWO8LDz0irJ1vogjNkjY1ucH66T70GrWgypJwifMs,16
+frontegg_ai_sdk-1.0.0.dist-info/RECORD,,
