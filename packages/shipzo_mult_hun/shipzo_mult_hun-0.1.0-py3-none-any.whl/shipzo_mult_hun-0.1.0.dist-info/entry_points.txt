@@ -1,0 +1,2 @@
+[console_scripts]
+shipzo_mult = shipzo_mult.mult:main
