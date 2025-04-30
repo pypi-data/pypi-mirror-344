@@ -1,0 +1,2 @@
+[console_scripts]
+visionsim = visionsim.cli:main

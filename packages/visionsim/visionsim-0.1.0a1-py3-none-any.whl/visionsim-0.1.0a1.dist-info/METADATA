@@ -1,0 +1,77 @@
+Metadata-Version: 2.4
+Name: visionsim
+Version: 0.1.0a1
+Summary: Towards a Sensor-Realistic World Simulator
+Project-URL: GitHub, https://github.com/WISION-Lab/visionsim
+License-Expression: MIT
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Python: >=3.9
+Requires-Dist: imageio
+Requires-Dist: invoke
+Requires-Dist: jsonschema
+Requires-Dist: matplotlib
+Requires-Dist: more-itertools
+Requires-Dist: multiprocess
+Requires-Dist: natsort
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: openexr
+Requires-Dist: rich
+Requires-Dist: rpyc
+Requires-Dist: scipy
+Requires-Dist: tdigest
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: tqdm
+Requires-Dist: tyro
+Provides-Extra: dev
+Requires-Dist: click-extra[pygments,sphinx]; extra == 'dev'
+Requires-Dist: coverage; extra == 'dev'
+Requires-Dist: furo; extra == 'dev'
+Requires-Dist: hypothesis; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Requires-Dist: scipy-stubs; (python_version >= '3.10') and extra == 'dev'
+Requires-Dist: sphinx; extra == 'dev'
+Requires-Dist: sphinx-copybutton; extra == 'dev'
+Requires-Dist: sphinxcontrib-napoleon; extra == 'dev'
+Requires-Dist: sphinxcontrib-programoutput>=0.18; extra == 'dev'
+Requires-Dist: sphinxcontrib-video; extra == 'dev'
+Requires-Dist: types-jsonschema; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# VisionSIM: Towards a Sensor-Realistic World Simulator
+
+A modular and extensible framework that realistically emulates many different sensor types, alongside rich pixel-perfect ground truth annotations across low-, mid-, and high-level scene characteristics, as well as intrinsic and extrinsic camera properties.
+
+*Warning:* This project is under heavy development and still considered unstable. 
+
+## Installation & Dependencies 
+
+You'll need:
+
+- [Blender](https://www.blender.org/download/) >= 3.3.1, to render new views. 
+- [ffmpeg](https://ffmpeg.org/download.html), for visualizations. 
+- python dependencies listed in `requirements.txt`. 
+- install `visionsim` locally using `pip install .` or using `pip install -e ".[dev]"` if developing.
+
+Make sure Blender and ffmpeg are on your PATH.
+The first time you use the renderer, it may ask you to install additional packages into blender's runtime. 
+
+## Building the Documentation
+
+In the project root, with visionsim installed with the dev dependencies, run:
+```
+inv clean build-docs --preview
+```
