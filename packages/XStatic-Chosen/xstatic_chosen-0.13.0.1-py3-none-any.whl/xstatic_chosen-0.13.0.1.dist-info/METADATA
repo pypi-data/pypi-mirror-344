@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: XStatic-Chosen
+Version: 0.13.0.1
+Summary: Chosen 0.13.0 (XStatic packaging standard)
+Home-page: http://harvesthq.github.io/chosen/
+Maintainer: Cheer Xiao
+Maintainer-email: xiaqqaix@gmail.com
+License: (same as Chosen)
+Keywords: chosen xstatic
+Platform: any
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: platform
+Dynamic: summary
+
+XStatic-Chosen
+--------------
+
+The Chosen library, usable as a plugin for jQuery or Prototype, packaged for
+setuptools (easy_install) / pip.
+
+This package is intended to be used by **any** project that needs these files.
+
+It intentionally does **not** provide any extra code except some metadata
+**nor** has any extra requirements. You MAY use some minimal support code from
+the XStatic base package, if you like.
+
+You can find more info about the xstatic packaging way in the package `XStatic`.
+
