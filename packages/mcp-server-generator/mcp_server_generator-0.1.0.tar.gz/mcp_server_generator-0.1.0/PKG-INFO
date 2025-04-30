@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: mcp-server_generator
+Version: 0.1.0
+Summary: Automatically generates a full MCP server codebase (Node/Python/Java) using the validated schema, outputting modular files for CLI-based execution or Claude Desktop connection
+Home-page: https://github.com/Sumedh99/mcp_server_generator
+Author: Sumedh99
+Author-email: Sumedh99@users.noreply.github.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# mcp-server_generator
+
+Automatically generates a full MCP server codebase (Node/Python/Java) using the validated schema, outputting modular files for CLI-based execution or Claude Desktop connection.
+
+## Features
+
+- Supports TypeScript, Python, and Java output
+- Creates tools, resources, prompts, transports
+- Modular codebase with ready-to-run server
+- Claude Desktop compatible structure
+- SDK-compliant directory structure
+
+## Installation
+
+```bash
+pip install mcp-server_generator
+```
+
+## Usage
+
+```python
+from mcp_server_generator import Mcp_server_generator
+
+# Initialize the library
+mcp_server_generator_instance = Mcp_server_generator()
+
+# Use the library functions
+# Example usage will be added in future versions
+```
+
+## License
+
+MIT
