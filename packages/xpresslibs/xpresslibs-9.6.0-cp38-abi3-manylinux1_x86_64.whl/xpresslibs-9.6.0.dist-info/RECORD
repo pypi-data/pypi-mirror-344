@@ -1,0 +1,17 @@
+xpresslibs/__init__.py,sha256=mGMdlxY1kIKOmZY6uX_n2jnAYgRvLzBmie3D_wpPQEo,192
+xpresslibs/lib/libxknitro.so,sha256=N6-R-a4P_2Y4EfFy7DPxB4PmV2aSGt_ARcjdq8nMctE,132717128
+xpresslibs/lib/libxprl.so.x9.6,sha256=pEOF-F_dvSgDNZdvdV631DfFZ9-CQnaIxm6Gi2Z-dcA,572368
+xpresslibs/lib/libxprs.so.45,sha256=6tzV0ZiYhT51X1GmKtW2nB-OuorL2sw7WSgXepHXnXI,25906920
+xpresslibs/lib/libxprsws.so,sha256=4djYBrwxFddS7MWQTxEl6ouW1viudZf-SQsjgy45uaY,187952
+xpresslibs/lib/xpressdeps/libcrypto.so.3,sha256=hArYJdoEDEhP5KDDfI8SkRWI5ZPbuJf3RHvqG3w0iU0,4972344
+xpresslibs/lib/xpressdeps/libcurl.so.4.7.0,sha256=k0msfR-lbpkkP_UTurKjpboe7Z2tzKqx6zhjfDFdBYo,486744
+xpresslibs/lib/xpressdeps/libiomp5.so,sha256=ENCWDOjJm84jU1ftvVsc62NVdWh5diGZ_W_HqTqNuWg,2670096
+xpresslibs/lib/xpressdeps/libjansson.so.4,sha256=VOSh7uXWYHVyuUGzxj6ySIGeKKRjFaOlar3H6_2dfZ4,84744
+xpresslibs/lib/xpressdeps/liblibzip.so.5,sha256=CRINHIj2BtlRcVb52q1SBZUY0PmP1375vvKwiJGYCR4,143608
+xpresslibs/lib/xpressdeps/libssl.so.3,sha256=LXLpZrn1qWs6z4yRp6ZFEP6bX_N9rBVeagsK8ZTRoh0,746464
+xpresslibs/lib/xpressdeps/libwebsockets.so.18,sha256=S7eSe5_xyb0_lhHf3kJcO0176K1EsDgUdP3pypDITZ4,402992
+xpresslibs-9.6.0.dist-info/licenses/LICENSE.txt,sha256=ZqZtL6UGfz2NAfLsoZjUebapQomLuNIsYWQ10o2gK_U,47346
+xpresslibs-9.6.0.dist-info/METADATA,sha256=qbbb30q2ldwB5mfI3yMTruk4s3Qi3zUQxK7ccYkRd5M,5153
+xpresslibs-9.6.0.dist-info/WHEEL,sha256=8bDucgLdUir9wUB6xNYVrtQT0sLMv2zmUITbkpCap9E,102
+xpresslibs-9.6.0.dist-info/top_level.txt,sha256=j8DwRzeWdIR4NdfHdCqxPbALvOANSP-hZ_--pOPO51Y,11
+xpresslibs-9.6.0.dist-info/RECORD,,
