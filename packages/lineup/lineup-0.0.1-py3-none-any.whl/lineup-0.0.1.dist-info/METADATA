@@ -1,0 +1,104 @@
+Metadata-Version: 2.4
+Name: lineup
+Version: 0.0.1
+Summary: A tool to customize exception tracebacks to show file, line number, and code line
+Home-page: https://github.com/TaireruLLC/lineup
+Author: Taireru LLC
+Author-email: tairerullc@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# `lineup`
+
+**`lineup`** is a lightweight Python utility that globally formats and prints detailed tracebacks for *all exceptions* — both uncaught and handled. It's a powerful debugging tool to help you better understand error behavior across your codebase.
+
+## Features
+
+- Clean, readable formatting of Python tracebacks
+- Captures **all** exceptions, even those caught in `try` blocks
+- Automatically activates for both the main thread and additional threads
+- Simple one-line activation
+
+## Installation
+
+```bash
+pip install lineup
+```
+
+## Usage
+
+Call `detail()` early in your script or application:
+
+```python
+from lineup import detail
+
+detail()
+```
+
+Once active, all exceptions—whether caught or uncaught—will be printed in a readable format:
+
+```
+Traceback (most recent call last):
+File "example.py", line 10, in my_function
+    result = 1 / 0
+ZeroDivisionError: division by zero
+```
+
+This includes exceptions inside `try`/`except` blocks, providing visibility into *all* error events.
+
+## Example
+
+```python
+from lineup import detail
+
+detail()
+
+def foo():
+    try:
+        raise ValueError("Oops!")
+    except ValueError:
+        pass  # This would still be printed thanks to `lineup`
+
+foo()
+```
+
+Output:
+
+```
+Traceback (most recent call last):
+  File "example.py", line 6, in foo
+    raise ValueError("Oops!")
+ValueError: Oops!
+```
+
+## How It Works
+
+- Overrides `sys.excepthook` to format uncaught exceptions.
+- Uses `sys.setprofile` and `threading.setprofile` to monitor *all* raised exceptions, even inside `try/except`.
+- Ignores `KeyboardInterrupt` and `SystemExit` to avoid clutter during normal exits.
+
+## When to Use
+
+- During development and debugging
+- When you want full visibility into exception flow
+- In multi-threaded applications where tracebacks can be hard to track
+
+> ⚠️ This tool is not recommended for production environments where performance or clean logs are critical.
+
+## License
+
+MIT License
