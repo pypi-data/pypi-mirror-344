@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+mcp_auto_builder/__init__.py
+mcp_auto_builder/main.py
+mcp_auto_builder.egg-info/PKG-INFO
+mcp_auto_builder.egg-info/SOURCES.txt
+mcp_auto_builder.egg-info/dependency_links.txt
+mcp_auto_builder.egg-info/top_level.txt

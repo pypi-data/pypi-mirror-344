@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: mcp-auto_builder
+Version: 0.1.0
+Summary: Final unified interface for global users
+Home-page: https://github.com/Sumedh99/mcp_auto_builder
+Author: Sumedh99
+Author-email: Sumedh99@users.noreply.github.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# mcp-auto_builder
+
+Final unified interface for global users. Just describe your server, paste your API key (Claude/OpenAI/Grok), and this library will build, test, and deploy the full MCP server locally or remotely.
+
+## Features
+
+- Unified UI or CLI interface
+- Takes one input: server description + key
+- Auto-generates MCP server via internal libraries
+- Claude Desktop auto-configuration
+- Production and dev modes available
+
+## Installation
+
+```bash
+pip install mcp-auto_builder
+```
+
+## Usage
+
+```python
+from mcp_auto_builder import Mcp_auto_builder
+
+# Initialize the library
+mcp_auto_builder_instance = Mcp_auto_builder()
+
+# Use the library functions
+# Example usage will be added in future versions
+```
+
+## License
+
+MIT
