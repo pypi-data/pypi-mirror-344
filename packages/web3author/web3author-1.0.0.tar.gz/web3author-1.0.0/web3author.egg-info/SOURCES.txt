@@ -1,0 +1,8 @@
+README.md
+setup.py
+web3author/__init__.py
+web3author/web3author.py
+web3author.egg-info/PKG-INFO
+web3author.egg-info/SOURCES.txt
+web3author.egg-info/dependency_links.txt
+web3author.egg-info/top_level.txt
