@@ -1,0 +1,123 @@
+Metadata-Version: 2.4
+Name: sopel-pypi
+Version: 0.3.0
+Summary: A Sopel plugin to show information about linked PyPI packages.
+Author-email: dgw <dgw@technobabbl.es>
+License-Expression: EFL-2.0
+Project-URL: Homepage, https://github.com/sopel-irc/sopel-pypi
+Project-URL: Bug Tracker, https://github.com/sopel-irc/sopel-pypi/issues
+Keywords: sopel,plugin,bot,irc
+Platform: Linux x86, x86-64
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Communications :: Chat :: Internet Relay Chat
+Requires-Python: <4,>=3.8
+Description-Content-Type: text/markdown
+License-File: COPYING
+Requires-Dist: sopel>=8.0
+Requires-Dist: requests
+Dynamic: license-file
+
+# sopel-pypi
+
+A Sopel plugin to show information about linked PyPI packages.
+
+## Installing
+
+Releases are hosted on PyPI, so after installing Sopel, all you need is `pip`:
+
+```bash
+$ pip install sopel-pypi
+```
+
+## Usage
+
+Just send a link to a package or release:
+
+```irclog
+<dgw> https://pypi.org/project/sopel/7.1.9/
+<Sopel> [PyPI] sopel 7.1.9 | Author: dgw | Released 2 years, 11 months ago |
+        Simple and extensible IRC bot
+<dgw> https://pypi.org/project/sopel/ no version this time
+<Sopel> [PyPI] sopel 8.0.2 | Author: dgw, Florian Strzelecki, Sean B. Palmer,
+        Else Powell, Elad Alfassa, Dimitri Molenaars, Michael Yanovich |
+        Released 1 month, 26 days ago | Simple and extensible IRC bot
+```
+
+You can also look up packages (optionally, at a specific version) with the
+`.pypi` command:
+
+```irclog
+<dgw> .pypi sopel-xkcdb
+<Sopel> [PyPI] sopel-xkcdb 0.1.0 | Author: dgw | Released 1 day, 2 hours ago |
+        XKCDB quotes plugin for Sopel IRC bots |
+        https://pypi.org/project/sopel-xkcdb/0.1.0/
+<dgw> .pypi sopel 6
+<Sopel> [PyPI] sopel 6.0.0 | Author: Edward Powell | Released 9 years, 6 months
+        ago | Simple and extendible IRC bot |
+        https://pypi.org/project/sopel/6.0.0/
+```
+
+Note that specifying an incomplete version number relies on how PyPI chooses to
+handle it. The behavior as of April 2025 is to find the earliest non-prerelease
+version with that prefix, as shown above.
+
+## Changelog
+
+### 0.3.0
+
+Changed:
+* Require Sopel 8 and Python 3.8 or higher (#10)
+
+Fixed:
+* More robust "Author" name parsing (#11)
+
+Meta:
+* Various code style, structure, and package metadata housekeeping (#10)
+* Modernized changelog format
+* Automated package publishing
+
+
+### 0.2.0
+
+Added:
+* Support pypi.io links (#5)
+
+Changed:
+* Support upcoming Sopel 8.0 version; now requires 7.1+ (#6)
+
+
+### 0.1.4
+
+Fixed:
+* Package author field can be empty (#4)
+
+
+### 0.1.3
+
+Fixed:
+* PyPI API changed (#3)
+
+
+### 0.1.2
+
+Fixed:
+* Query with no version specified now says "(any)" instead of the previous
+  direct-to-string conversion of "None" (#2)
+
+
+### 0.1.1
+
+Added:
+* Output link to release if invoked via command
+
+Fixed:
+* URL pattern not matching some allowed punctuation in package names
+
+Meta:
+* Corrected project description content type for PyPI
+
+
+### 0.1.0
+
+Initial release.
