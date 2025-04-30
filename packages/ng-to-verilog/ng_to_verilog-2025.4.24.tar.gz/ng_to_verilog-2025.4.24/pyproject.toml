@@ -1,0 +1,44 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=69.5.1", "wheel>=0.43.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ng_to_verilog"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+pythonpath = [
+	"src"
+]
+testpaths = [
+    "tests"
+]
+
+[project]
+name = "ng-to-verilog"
+version = "2025.04.24"
+description = "Nandgame to Verilog"
+readme = "README.md"
+authors = [{ name = "Patrick Cox", email = "patrick.cox@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3"
+]
+keywords = ["nandgame", "verilog"]
+dependencies = [
+	"Jinja2 >= 3.1.4",
+	"MarkupSafe >= 2.1.5"
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/xocp/ng-to-python"
