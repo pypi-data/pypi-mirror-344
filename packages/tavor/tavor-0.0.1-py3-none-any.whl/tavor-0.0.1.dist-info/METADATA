@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: tavor
+Version: 0.0.1
+Summary: Tavor SDK
+Project-URL: Homepage, https://github.com/tavor-dev/python-sdk
+Project-URL: Issues, https://github.com/tavor-dev/python-sdk/issues
+Author-email: Tavor <pkg@tavor.dev>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Tavor SDK
