@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: franktestcat2
+Version: 0.1.0
+Summary: Display cat information for the specified breed.
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.32.3

@@ -1,0 +1,9 @@
+README.md
+main.py
+pyproject.toml
+franktestcat2.egg-info/PKG-INFO
+franktestcat2.egg-info/SOURCES.txt
+franktestcat2.egg-info/dependency_links.txt
+franktestcat2.egg-info/entry_points.txt
+franktestcat2.egg-info/requires.txt
+franktestcat2.egg-info/top_level.txt
