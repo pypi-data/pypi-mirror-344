@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: fastmcp-demo
+Version: 0.1.1
+Summary: 本地开发 mcp server 测试版本
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: fastmcp>=2.2.1
+Requires-Dist: mysql-connector-python>=9.3.0
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: twine>=6.1.0
+Requires-Dist: uvicorn>=0.34.2
