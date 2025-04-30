@@ -1,0 +1,106 @@
+Metadata-Version: 2.4
+Name: nprxchange
+Version: 0.1.0
+Summary: Nepal Rastra Bank Currency Converter
+Author: Munal Poudel
+Author-email: munalpoudel3@gmail.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Requires-Dist: rich>=14.0.0
+Requires-Dist: InquirerPy>=0.3.4
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# 💱 nprxchange
+
+**nprxchange** is a modern and easy-to-use command-line tool that converts Nepali Rupees (NPR) to other major currencies using the official exchange rates published by the Nepal Rastra Bank (NRB).
+
+It supports both interactive and non-interactive (direct CLI arguments) modes, with beautiful terminal output powered by [Rich](https://github.com/Textualize/rich).
+
+---
+
+## 📌 Features
+
+- 🏦 Uses **official NRB exchange rates**
+- 🌐 Works **online and offline** (uses cache if offline)
+- 🎨 Clean and stylish CLI output using `rich`
+- 📋 View available currencies and their codes
+- 💬 Interactive currency selection using `InquirerPy`
+- 🔁 Refresh latest exchange rates manually
+
+---
+
+## 🛠️ Installation
+
+### 📦 Install via `pip`:
+```bash
+pip install nprxchange
+```
+### 🧪 Usage Examples:
+```bash
+# Show help
+nprxchange --help
+
+# View all supported currencies
+nprxchange -v
+
+# Convert 1000 NPR to USD directly
+nprxchange -c 1000 -t USD
+
+# Convert 5000 NPR to EUR with full command
+nprxchange --convert 5000 --to-currency EUR
+
+# Refresh latest exchange rates
+nprxchange -r
+
+# Launch interactive mode
+nprxchange -i
+```
+
+### 🔍 Command Line Arguments
+
+| Argument | Short | Description |
+|----------|-------|-------------|
+| `--view-currencies` | `-v` | View all available currencies with their codes |
+| `--convert AMOUNT` | `-c AMOUNT` | Amount in NPR to convert to foreign currency |
+| `--to-currency CODE` | `-t CODE` | Target currency code (e.g., USD, EUR, INR) |
+| `--refresh` | `-r` | Force refresh rates from the NRB API |
+| `--interactive` | `-i` | Launch interactive mode to select currency |
+
+## 🧑‍💻 Contributing
+Contributions are welcome! To contribute:
+- Fork this repository
+- Create your feature branch (git checkout -b feature-name)
+- Commit your changes (git commit -m 'Add feature')
+- Push to the branch (git push origin feature-name)
+- Open a pull request
+
+Please follow clean code practices and test your changes before submitting.
+
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## 👤 Author
+Name: Munal Poudel
+
+Email: munalpoudel3@gmail.com
+
+GitHub: github.com/munal777
+
