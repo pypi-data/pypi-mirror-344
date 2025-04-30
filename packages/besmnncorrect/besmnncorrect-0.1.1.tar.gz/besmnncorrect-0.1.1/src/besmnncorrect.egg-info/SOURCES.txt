@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/BESMNNCORRECT/BESMNNCORRECT.py
+src/BESMNNCORRECT/__init__.py
+src/besmnncorrect.egg-info/PKG-INFO
+src/besmnncorrect.egg-info/SOURCES.txt
+src/besmnncorrect.egg-info/dependency_links.txt
+src/besmnncorrect.egg-info/requires.txt
+src/besmnncorrect.egg-info/top_level.txt

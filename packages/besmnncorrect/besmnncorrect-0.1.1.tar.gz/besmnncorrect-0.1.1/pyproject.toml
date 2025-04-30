@@ -1,0 +1,16 @@
+[project]
+name = "besmnncorrect"
+version = "0.1.1"
+description = "A batch effect correction method for subregional radiomics dataset"
+authors = [
+    {name = "Pan Ziqi"}
+]
+license = {text = "file=\"LICENSE\""}
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.23.0","pandas>=2.2.3","scikit_learn>=1.6.1"]
+
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
