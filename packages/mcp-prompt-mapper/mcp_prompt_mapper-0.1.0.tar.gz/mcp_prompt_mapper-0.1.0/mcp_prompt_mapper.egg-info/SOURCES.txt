@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+mcp_prompt_mapper/__init__.py
+mcp_prompt_mapper/main.py
+mcp_prompt_mapper.egg-info/PKG-INFO
+mcp_prompt_mapper.egg-info/SOURCES.txt
+mcp_prompt_mapper.egg-info/dependency_links.txt
+mcp_prompt_mapper.egg-info/top_level.txt
