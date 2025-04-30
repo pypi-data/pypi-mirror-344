@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: bflb-flash-command-uart
+Version: 1.0.0
+Summary: Bouffalolab Flash Command Tool
+Home-page: https://pypi.org/project/bflb-flash-command-uart/
+Author: bouffalolab
+Author-email: jxtan@bouffalolab.com
+License: MIT
+Description: 
+        ## Bouffalolab Flash Command Tool For Uart
+        ====================================
+        
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: Unix
+Classifier: Environment :: Console
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
