@@ -1,0 +1,75 @@
+[project]
+name = "litegrad"
+dynamic = ["version"]  # Version is managed by git tags
+description = "A minimal implementation of PyTorch's autograd engine"
+readme = "README.md"
+authors = [
+    { name = "Miguel Barbosa Pereira", email = "miguel.b.per@gmail.com" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=2.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2.0",  # Git hooks for code quality
+    "pyright>=1.1.400",   # Static type checker
+    "pytest>=8.3.5",      # Testing framework
+    "pytest-cov>=6.1.1",  # Test coverage reporting
+    "ruff>=0.11.7",       # Linter and formatter
+]
+
+# ------------------------------------------------------------------------------
+# Build
+# ------------------------------------------------------------------------------
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/litegrad"]
+
+# Version management using git tags
+[tool.hatch.version]
+source = "vcs"
+
+# https://docs.astral.sh/uv/concepts/projects/config/#project-packaging
+# will force a project to be built and installed into the project environment
+[tool.uv]
+package = true
+
+# ------------------------------------------------------------------------------
+# Linting
+# ------------------------------------------------------------------------------
+
+[tool.ruff]
+target-version = "py39"
+line-length = 120
+
+# Set of rules taken from https://docs.astral.sh/ruff/linter/#rule-selection
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle - Python style guide
+    "F",   # Pyflakes - Python linter
+    "I",   # isort - Import sorting
+    "B",   # flake8-bugbear - Bug detection
+    "UP",  # pyupgrade - Python upgrade tool
+    "SIM", # flake8-simplify - Code simplification
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["litegrad"]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+strict = ["**/*.py"]
+pythonVersion = "3.9"
+
+# Ignore lines in the main block for coverage purposes
+[tool.coverage.report]
+exclude_also = [
+    "if __name__ == .__main__.:",
+]
