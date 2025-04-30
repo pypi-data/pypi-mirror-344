@@ -1,0 +1,21 @@
+[project]
+name = "dmt-auto-gui"
+version = "0.1.22"
+description = ""
+authors = [
+    {name = "Daniel",email = "daniel.mtorres7@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pyperclip (>=1.9.0,<2.0.0)",
+    "pyautogui (>=0.9.54,<0.10.0)",
+    "pyscreeze (>=1.0.1,<2.0.0)",
+    "pillow (>=11.1.0,<12.0.0)",
+    "opencv-python (>=4.11.0.86,<5.0.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
