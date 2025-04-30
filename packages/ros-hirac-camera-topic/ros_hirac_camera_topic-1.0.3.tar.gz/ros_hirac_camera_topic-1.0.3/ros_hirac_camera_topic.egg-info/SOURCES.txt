@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+ros_hirac_camera_topic/__init__.py
+ros_hirac_camera_topic/script.py
+ros_hirac_camera_topic.egg-info/PKG-INFO
+ros_hirac_camera_topic.egg-info/SOURCES.txt
+ros_hirac_camera_topic.egg-info/dependency_links.txt
+ros_hirac_camera_topic.egg-info/top_level.txt

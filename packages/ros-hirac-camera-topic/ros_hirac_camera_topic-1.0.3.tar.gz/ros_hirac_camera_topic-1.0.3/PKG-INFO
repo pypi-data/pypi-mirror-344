@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ros_hirac_camera_topic
+Version: 1.0.3
+Summary: Changed from ros-sensor-topic. A utility package to find ROS topic names for color and depth streams.
+Home-page: https://github.com/katrinmisel/ros_sensor_topic
+Author: Anke Fischer-Janzen, Katrin-Misel Ponomarjova
+Author-email: katrinmisel@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# ros_hirac_camera_topic
+
+A utility package to find ROS topic names for color, depth and camera info streams for Luxonis and RealSense devices.
+
