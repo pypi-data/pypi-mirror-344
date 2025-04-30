@@ -1,0 +1,15 @@
+aiosqlcipher/__init__.py,sha256=ZGJizTFE1eZo-Z5vZQFRha9EzbQc2lxdb5tIKmztFYU,849
+aiosqlcipher/context.py,sha256=lpiuXi6seSpWqcXO7Vth_YL8JiPE4cL9PU3iWeP8IcM,1503
+aiosqlcipher/core.py,sha256=vNeB-eZomZJBC5XhasDuB7Tu64w5yLeTLio3RlBEyns,12722
+aiosqlcipher/cursor.py,sha256=x9I_v8x8UnLKxt5GtTJXucbmI7SIgbASiDKercIoJ7M,3600
+aiosqlcipher/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiosqlcipher/tests/__init__.py,sha256=-WHXje8T8oIkDiXAsr0avjhJa6nQByVRqKF18AT69vs,94
+aiosqlcipher/tests/__main__.py,sha256=zY4uOa9ggnrYqxeDxEmJcaRwEtz74dOXEM-ixM2IaiM,172
+aiosqlcipher/tests/helpers.py,sha256=AZVEPXBVzFVtIaofURzywhwjZW_lrE5jFCGOGhASIpA,751
+aiosqlcipher/tests/perf.py,sha256=N07TRgQce9dr434bjpNbm2sA4eJk0eGoq_u2YcDMWtk,6824
+aiosqlcipher/tests/smoke.py,sha256=OL5Hz2cf_ZFNInCrq_0oYfoZZXm2aiWGjZzx2esgnHY,17861
+aiosqlcipher-0.1.0.dist-info/licenses/LICENSE,sha256=FffXpNtMF_Y4gRJiJ-aAON0HVFIK8Ecunv6rCETxAl4,1092
+aiosqlcipher-0.1.0.dist-info/METADATA,sha256=OmeU9QGMCtlMj_4gAZIbu_0G1qNh2OzQR1SdTBNyD8k,2730
+aiosqlcipher-0.1.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+aiosqlcipher-0.1.0.dist-info/top_level.txt,sha256=JL4YfbF7oHFUnDhKo5HvJFBQLi3VnH4LKTW5YpbeN1g,13
+aiosqlcipher-0.1.0.dist-info/RECORD,,
