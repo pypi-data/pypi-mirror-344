@@ -1,0 +1,14 @@
+itemie/__init__.py,sha256=-dHT6-SP4yBxjDUgrkD8oMO7VEVckOw7tZsGSDLOU8M,175
+itemie/analyse/__init__.py,sha256=y2R5_n4arXIHC9uXUMfrfGd-tk9FIH1opRVFVtSrkgk,110
+itemie/analyse/topic.py,sha256=-0AjBmKjZEQyPvpng7PVzI43Vz7zJ3HQ-9WL0pqgvus,4854
+itemie/core/__init__.py,sha256=Sh6ch7rMBvMmAhQizQzSujQ_R7fwZ5tb4AI1MghhiLM,130
+itemie/core/convert.py,sha256=Y0bBf5ELSIsu-R54qG-3I8w0_xkAqL45RyawjTDal3o,3586
+itemie/core/group.py,sha256=2MalpcVMM_gJNjDabVALOl-x27McXtnFlzoF9qR9U2g,7768
+itemie/core/item.py,sha256=ys36GVmNRm6cKLmkxkWdBrsijHf9yHQjaCuyqf1P45c,11203
+itemie/report/__init__.py,sha256=W-FFtYmKtO7iz8lAC5JLEGEihoPxkzFR2qeolqN9h8U,114
+itemie/report/wordcloud.py,sha256=g1c9rcY_kRYtgssPBbNJCIjmrr5azwSP-r1P-PR4ZXc,776
+itemie/utils/__init__.py,sha256=Nzk4a53er1HIu_9O0d3Cd_5-MmTll-25AhZm2_SKvzo,91
+itemie-0.0.3.dist-info/METADATA,sha256=n9ku8azy-a-mXx4Fnf69oVfrsAoatG4-o9TwX-ASPLk,1325
+itemie-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+itemie-0.0.3.dist-info/licenses/LICENSE,sha256=QmxOP9csg_fTu_u1KtbIczkjRTHUeXkKao4OZP5GiQg,1087
+itemie-0.0.3.dist-info/RECORD,,
