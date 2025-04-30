@@ -1,0 +1,9 @@
+sentence2simvec/__init__.py,sha256=ybnSpg6Jo3DMCxHsPmYub1aDd68--KSCyn-eOjHx0tw,197
+sentence2simvec/cli.py,sha256=ydg5ISqm0YleCEm-QB3JF-46GrbEzKhVzF5f8L5tPPg,1100
+sentence2simvec/core.py,sha256=yU6n_va9F2m1IeNm7IVF15Kl5tojxN3PB_BHg6P-d8w,6271
+sentence2simvec-0.0.1.dist-info/licenses/LICENSE,sha256=39mVmCwZctZhQIjrzE4QFK9QT2Dl2pLSWaWkUD2VTrM,11343
+sentence2simvec-0.0.1.dist-info/METADATA,sha256=OJ2kyT9sAaVeB8AqVmKEPfho8uk46uP2CDhsyXLqFhk,2534
+sentence2simvec-0.0.1.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+sentence2simvec-0.0.1.dist-info/entry_points.txt,sha256=s7AmvyyY2UKsiNQCf3RJU4EpcTrX9eXhhIizVMgMpB8,62
+sentence2simvec-0.0.1.dist-info/top_level.txt,sha256=p3QxRhoju0Hw-xnvFIdK92oM3VAN_iDEoNYKQK86ZMc,16
+sentence2simvec-0.0.1.dist-info/RECORD,,
