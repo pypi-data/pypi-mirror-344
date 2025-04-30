@@ -1,0 +1,103 @@
+# macrokeyd
+
+`macrokeyd` es un daemon Python que permite asignar acciones personalizadas a un teclado específico, como comandos, texto, atajos de sistema o secuencias encadenadas. Diseñado para ejecutarse como servicio `systemd` y con configuración modular en JSON.
+
+---
+
+## 🚀 Instalación rápida desde PyPI
+
+```bash
+pip install macrokeyd
+```
+
+> Requiere Python >= 3.7 y Linux con soporte para `evdev`.
+
+---
+
+## 🧪 Probar instalación
+
+```bash
+macrokeyd --help
+macrokeyd --version
+```
+
+Puedes lanzar el daemon con:
+
+```bash
+macrokeyd --run
+```
+
+> Por defecto busca `~/.local/share/macrokeyd/default.json` y lo crea si no existe.
+
+---
+
+## ⚙️ Instalar como servicio systemd
+
+```bash
+macrokeyd-install-service
+```
+
+Verificar estado:
+
+```bash
+systemctl status macrokeyd
+```
+
+Desinstalar:
+
+```bash
+macrokeyd-uninstall-service
+```
+
+---
+
+## 🎛️ Configuración de macros
+
+El archivo de configuración se encuentra (o se crea) en:
+
+```
+~/.local/share/macrokeyd/default.json
+```
+
+Ejemplo de contenido:
+
+```json
+{
+  "meta": {
+    "target_device_name": "TEC-FX556K"
+  },
+  "macros": {
+    "KEY_Q": {"action": "command", "value": "gnome-terminal"},
+    "KEY_W": {"action": "text", "value": "Hello world"}
+  }
+}
+```
+
+---
+
+## 🧱 Desarrollo local
+
+```bash
+git clone https://gitlab.com/tu_usuario/macrokeyd.git
+cd macrokeyd
+make install
+```
+
+---
+
+## 🛠 Comandos útiles (`make`)
+
+- `make build` → genera el paquete `.whl` y `.tar.gz`
+- `make install` → instala localmente con `--force-reinstall`
+- `make clean` → limpia artefactos
+- `make release LEVEL=patch` → sube versión y hace push
+- `make release-changelog` → igual que `release` y actualiza `CHANGELOG.md`
+- `make release-pypi` → publica en PyPI
+- `make release-test` → publica en TestPyPI
+
+---
+
+## 📦 Publicación en PyPI
+
+Ver [RELEASE.md](./RELEASE.md) para el ciclo completo de versionado y publicación.
+
