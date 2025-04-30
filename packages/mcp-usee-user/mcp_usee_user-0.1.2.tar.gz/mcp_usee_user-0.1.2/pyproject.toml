@@ -1,0 +1,12 @@
+[project]
+name = "mcp-usee-user"
+version = "0.1.2"
+description = "测试服务"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.6.0",
+    "httpx>=0.28.1"
+]
+[project.scripts]
+mcp-usee-user = "main:main"
