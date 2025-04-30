@@ -1,0 +1,9 @@
+modelopt_core/__init__.py,sha256=tXQ1dsnbeUo8ODrfp9bwIZly29yGg-5cDiPx6c6gGr0,879
+modelopt_core/torch/quantization/algorithms.cp311-win_amd64.pyd,sha256=m8ePkSBf4YUaDY1DyyqqUho06Q7Vutt_f_0n6jdosSg,272896
+modelopt_core/torch/quantization/config.cp311-win_amd64.pyd,sha256=j8jq99GErT4itlSvQB1L8IEWQF9D7wc6V-ETz3MxZX8,40448
+modelopt_core/torch/quantization/qtensor/nvfp4_tensor.cp311-win_amd64.pyd,sha256=5_dnaFfZM2wyqLB1QNZnJELIUcEbW6G0cyA4GBpkbfY,105984
+nvidia_modelopt_core-0.27.0.dist-info/licenses/LICENSE,sha256=SZDKN8cMAPdmXJFKnrn-YUFI37rhYaIokx9oETLvWXk,673
+nvidia_modelopt_core-0.27.0.dist-info/METADATA,sha256=dNSEUeGPpNXIOdIqPvac6nf_nl4E9SCaz3rdXuMMP1E,872
+nvidia_modelopt_core-0.27.0.dist-info/WHEEL,sha256=ZhKniLpVlRfVU2a9ty7N0kTvsYDNee6K-jhM1zk8cMw,101
+nvidia_modelopt_core-0.27.0.dist-info/top_level.txt,sha256=ZfNmAEKPejz14Ded4nlbUoZ7dWU8aerBNi8dfb-zP3I,14
+nvidia_modelopt_core-0.27.0.dist-info/RECORD,,
