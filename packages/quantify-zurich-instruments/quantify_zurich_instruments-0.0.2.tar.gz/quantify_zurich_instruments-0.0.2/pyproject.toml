@@ -1,0 +1,120 @@
+[build-system]
+requires = ["setuptools>=66.1", "wheel"]
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = "quantify-zurich-instruments"
+description = "Zurich Instruments backend for Quantify."
+authors = [
+    { name="Orange Quantum Systems", email="info@orangeqs.com" },
+    { name = "Zurich Instruments Development Team", email = "info@zhinst.com" },
+]
+license = { file="LICENSE" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+keywords = [
+    "orange-quantum-systems",
+    "orangeqs",
+    "quantify",
+    "zurich-instruments",
+    "laboneq",
+    "quantum",
+]
+
+dynamic = ["readme", "version"]
+requires-python = ">=3.9"
+dependencies = [
+    "quantify_scheduler",
+    "laboneq",
+    "eval_type_backport",
+    "pydantic>=2.6",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+
+docs = [
+    # astroid only added to prevent to sphinx-autoapi error AttributeError: 'Module' object has no attribute 'doc' (!838)
+    # (solvable by sphinx-autoapi>=3, see https://stackoverflow.com/q/77257145, but requires sphinx>=6.2 while latest myst-nb-0.17.2 requires sphinx<6)
+    "astroid<3.0",
+    "jupyter_sphinx>=0.4.0",
+    "jupytext",
+    "sphinx",
+    "pydata-sphinx-theme",
+    "myst-nb",
+    "hvplot",
+    "pylint",
+    "rich[jupyter]",
+    "scanpydoc",
+    "sphinx-autoapi",
+    "sphinx-autodoc-typehints", # required by either sphinx.ext.autodoc or sphinx.ext.napoleon
+    "sphinx-design",
+    "sphinx-jsonschema",
+    "sphinx-togglebutton",
+    "sphinxcontrib-bibtex",
+]
+
+dev = [
+    # "quantify-zurich-instruments[test]",
+    "pytest",
+    "black",
+    "nbstripout",
+    "pre-commit",
+    "pyright",
+    "pytest-cov",
+    "pytest-xdist",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+include = ["quantify_zurich_instruments", "quantify_zurich_instruments.*"]
+
+[tool.setuptools.dynamic]
+readme = { file = ["README.md"], content-type = "text/markdown" }
+
+[tool.ruff]
+target-version = "py39"
+line-length = 88
+select = [
+    "F",  # pyflakes
+    "E",  # pycodestyle
+    "W",  # pycodestyle
+    "D",  # pydocstyle
+    "I",  # isort
+    "N",  # flake8-naming
+    "UP", # pyupgrade
+    "TID",  # flake8-tidy-imports
+    "SIM",  # flake8-simplify
+    "TCH",  # flake8-type-checking
+]
+extend-exclude = [
+    "docs",
+]
+
+[tool.ruff.per-file-ignores]
+"setup.py" = ["D"]
+
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[tool.ruff.pydocstyle]
+convention = "numpy"
+
+[tool.pyright]
+pythonVersion = "3.9"  
+exclude = [
+    "build",
+]
