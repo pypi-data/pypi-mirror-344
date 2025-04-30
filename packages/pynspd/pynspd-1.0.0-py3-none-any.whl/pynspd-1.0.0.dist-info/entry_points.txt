@@ -1,0 +1,2 @@
+[console_scripts]
+pynspd = src.pynspd.cli:main
