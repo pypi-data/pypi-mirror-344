@@ -1,0 +1,62 @@
+Metadata-Version: 2.4
+Name: bruggeman
+Version: 0.1.0.dev0
+Summary: Add your description here
+Author-email: Davíd Brakenhoff <d.brakenhoff@artesia-water.nl>
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: ci
+Requires-Dist: nbconvert; extra == 'ci'
+Requires-Dist: nbformat; extra == 'ci'
+Requires-Dist: pytest; extra == 'ci'
+Requires-Dist: pytest-cov; extra == 'ci'
+Provides-Extra: docs
+Requires-Dist: ipykernel; extra == 'docs'
+Requires-Dist: ipython; extra == 'docs'
+Requires-Dist: latexify-py; extra == 'docs'
+Requires-Dist: myst-nb; extra == 'docs'
+Requires-Dist: numpydoc; extra == 'docs'
+Requires-Dist: pydata-sphinx-theme; extra == 'docs'
+Requires-Dist: sphinx; extra == 'docs'
+Requires-Dist: sphinx-design; extra == 'docs'
+Requires-Dist: sphinxcontrib-bibtex; extra == 'docs'
+Requires-Dist: ttim; extra == 'docs'
+Provides-Extra: latexify
+Requires-Dist: latexify-py; extra == 'latexify'
+Description-Content-Type: text/markdown
+
+# Bruggeman: Analytical Solutions of Geohydrological Problems
+
+This repository contains implementations of Bruggeman's analytical solutions in Python.
+
+The philosphy behind this repository is to collect implementations of
+analytical solutions so they are readily available for use in projects or for
+benchmarking other computations or models.
+
+Very much a work in progress.
+
+## Installation
+
+Normal install:
+
+`pip install bruggeman`
+
+Development install:
+
+`pip install -e .`
+
+## Documentation
+
+The documentation is available [here](https://bruggeman.readthedocs.io/en/latest/index.html).
+
+To build the documentation locally:
+
+1. Install the optional documentation dependencies `pip install bruggeman[docs]`
+(or `pip install -e ".[docs]"`).
+2. Navigate to `docs/`
+3. Enter the command `make html`.
+4. The documenation is contained in the `docs/_build` folder. Open `index.html` in
+your browser to view the documentation.

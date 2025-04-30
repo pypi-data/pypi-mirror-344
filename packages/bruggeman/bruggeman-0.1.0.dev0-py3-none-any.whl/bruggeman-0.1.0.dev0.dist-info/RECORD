@@ -1,0 +1,10 @@
+bruggeman/__about__.py,sha256=qbhMh4mg2JMoCFflKwIRvApU63RR8AxvYq1OT__8sgI,27
+bruggeman/__init__.py,sha256=YhPY5oPkh5cBEPch2zWxzIFbtPMlPLG6j4CxKY9H5Hg,110
+bruggeman/edelman.py,sha256=zDworW6a8ccjULL26pnkbfImwyKsIVSlqY5GNSXL32A,705
+bruggeman/flow1d.py,sha256=i94lRjuSlCb4beKlczUq5YY79yTrH5vw1YsKoWh7vGk,7086
+bruggeman/general.py,sha256=Nj27txqdxV8-WMHiPIFNz7RfxpXDHa_5N2dIg9Byz8k,1829
+bruggeman-0.1.0.dev0.dist-info/METADATA,sha256=wsNaojIgUmPQ5Ze-Csc56RHlfkIv5rnl6SSC3eFwJLQ,1936
+bruggeman-0.1.0.dev0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bruggeman-0.1.0.dev0.dist-info/entry_points.txt,sha256=FwH5GYRqiI5oQgvFO08yV-NxQVFGMF9yde2H_rgik9c,45
+bruggeman-0.1.0.dev0.dist-info/licenses/LICENSE,sha256=3SFH5Vsx7tmNwk89zsM0auhtRYvUTcqjUL5A_kG8Dkk,1063
+bruggeman-0.1.0.dev0.dist-info/RECORD,,
