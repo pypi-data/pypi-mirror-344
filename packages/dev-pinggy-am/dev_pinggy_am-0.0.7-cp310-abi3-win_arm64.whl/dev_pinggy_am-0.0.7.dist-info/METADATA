@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: dev-pinggy-am
+Version: 0.0.7
+Summary: Tunneling tool
+Author: Abhijit Mondal
+License: Apache 2.0
+License-File: LICENSE
+Dynamic: author
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
