@@ -1,0 +1,8 @@
+httpx[http2]>=0.28.1
+pydantic>=2.11.3
+
+[test]
+mypy==1.10.0
+ruff==0.4.8
+pytest==8.3.4
+pytest-ruff==0.3.2
