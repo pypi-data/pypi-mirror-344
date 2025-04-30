@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: XStatic-svgweb
+Version: 2011.2.3.2
+Summary: svgweb 2011.2.3 (XStatic packaging standard)
+Home-page: http://code.google.com/p/svgweb/
+Maintainer: Thomas Waldmann
+Maintainer-email: tw@waldmann-edv.de
+License: (same as svgweb)
+Keywords: svgweb xstatic
+Platform: any
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: platform
+Dynamic: summary
+
+XStatic-svgweb
+--------------
+
+svgweb packaged for setuptools (easy_install) / pip.
+
+This package is intended to be used by **any** project that needs these files.
+
+It intentionally does **not** provide any extra code except some metadata
+**nor** has any extra requirements. You MAY use some minimal support code from
+the XStatic base package, if you like.
+
+You can find more info about the xstatic packaging way in the package `XStatic`.
+

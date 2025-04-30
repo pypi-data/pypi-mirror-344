@@ -1,0 +1,12 @@
+XStatic_svgweb-2011.2.3.2-py3.13-nspkg.pth,sha256=dPPL1-j8jZrCgMSdQ85VAIdcjF_uMUCSOXlcXpFomsY,1014
+xstatic/pkg/svgweb/__init__.py,sha256=3H5bqLiBAdnPoERmC7COh6SSE7NyMYXN69J-DxNVLlQ,1364
+xstatic/pkg/svgweb/data/svg-uncompressed.htc,sha256=AubKfDlrJ3_LuI5jLTEoSkH-nxUEMntm4kr6jyAkssU,8469
+xstatic/pkg/svgweb/data/svg-uncompressed.js,sha256=v7sEsVf-MZQt5vs_I3VmWSJswywNat0Fb5r5iHxPBN0,363415
+xstatic/pkg/svgweb/data/svg.htc,sha256=N3mCVUSyIb0D7u0aH4v8s1lqrriCrF8NOgVac_ONnNY,5948
+xstatic/pkg/svgweb/data/svg.js,sha256=cGOUcrrUjo5pleISEYxBt6dqH8efggQywt9PUBattDs,108000
+xstatic/pkg/svgweb/data/svg.swf,sha256=6BjJ3tor9yO2OOgwrjFm3flQOwEc4xo_VffGYfv_8a4,52363
+xstatic_svgweb-2011.2.3.2.dist-info/METADATA,sha256=DLKFY9KbCtXWtfcQEf5A64nbd2B8jkt5Jh5OAKCG2gQ,888
+xstatic_svgweb-2011.2.3.2.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+xstatic_svgweb-2011.2.3.2.dist-info/namespace_packages.txt,sha256=oP6kTUKNrWkfPGcNNMQWOlBu3vuiEsAVYT4dUN1V4Hg,20
+xstatic_svgweb-2011.2.3.2.dist-info/top_level.txt,sha256=tDpXyaHF81JGnzDNskkXZNoFrs3YW_a1ueuzoAmLNas,8
+xstatic_svgweb-2011.2.3.2.dist-info/RECORD,,
