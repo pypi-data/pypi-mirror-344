@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+ohptat/__init__.py
+ohptat/hisob.py
+ohptat.egg-info/PKG-INFO
+ohptat.egg-info/SOURCES.txt
+ohptat.egg-info/dependency_links.txt
+ohptat.egg-info/top_level.txt

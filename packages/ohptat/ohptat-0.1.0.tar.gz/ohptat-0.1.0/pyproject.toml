@@ -1,0 +1,14 @@
+[project]
+name = "ohptat"
+version = "0.1.0"
+description = "Oddiy matematik amallar kutubxonasi"
+authors = [
+    { name="Jahongir", email="yusupovj859@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT" }
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
