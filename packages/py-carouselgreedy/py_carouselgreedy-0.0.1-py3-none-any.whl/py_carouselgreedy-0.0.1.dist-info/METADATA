@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: py_carouselgreedy
+Version: 0.0.1
+Summary: A Python library implementing the Carousel Greedy Algorithm.
+Author-email: Carmine Cerrone <carmine.cerrone@unige.it>, Raffaele Dragone <raffaele.dragone@edu.unige.it>
+License: MIT
+Project-URL: Homepage, https://pypi.org/project/py_carouselgreedy/
+Project-URL: Repository, https://github.com/CarmineCerrone/py_carouselgreedy
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# py_carouselgreedy
+
+**py_carouselgreedy** is a Python library designed to implement the *Carousel Greedy Algorithm*.  
+Its goal is to provide a simple, modular, and efficient implementation of the algorithm, useful for combinatorial optimization problems.
+
+Currently, the package is in an initial stage and will be expanded with additional features in the future.
