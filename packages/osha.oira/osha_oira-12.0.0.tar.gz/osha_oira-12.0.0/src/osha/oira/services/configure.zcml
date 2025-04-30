@@ -1,0 +1,42 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    >
+
+  <plone:service
+      method="GET"
+      factory=".surveys.ToolVersionsGet"
+      for="euphorie.content.surveygroup.ISurveyGroup"
+      permission="zope2.View"
+      layer="osha.oira.interfaces.IOSHAContentSkinLayer"
+      name="@tool-versions"
+      />
+
+  <plone:service
+      method="GET"
+      factory=".sector.SearchWithVersionDescriptionGet"
+      for="euphorie.content.sector.ISector"
+      permission="zope2.View"
+      layer="osha.oira.interfaces.IOSHAContentSkinLayer"
+      name="@search-with-version-description"
+      />
+
+  <plone:service
+      method="GET"
+      factory=".training.TrainingService"
+      for="euphorie.content.survey.ISurvey"
+      permission="zope2.View"
+      layer="osha.oira.interfaces.IOSHAContentSkinLayer"
+      name="@training"
+      />
+
+  <plone:service
+      method="GET"
+      factory=".navigation.NavigationService"
+      permission="zope2.View"
+      for="*"
+      layer="osha.oira.interfaces.IOSHAContentSkinLayer"
+      name="@navtree"
+      />
+
+</configure>
