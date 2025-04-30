@@ -1,0 +1,44 @@
+Metadata-Version: 2.2
+Name: almos_kit
+Version: 0.1.1
+Summary: Active Learning Molecular Selection
+Home-page: https://github.com/MiguelMartzFdez/almos
+Download-URL: https://github.com/MiguelMartzFdez/almos/archive/refs/tags/0.1.1.tar.gz
+Author: Miguel Martínez Fernández, Susana García Abellán, Juan V. Alegre Requena
+Author-email: miguel.martinez@csic.es, susanag.abellan@gmail.com
+License: MIT
+Keywords: workflows,machine learning,cheminformatics,clustering,active learning,automated
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aqme==1.7.2
+Requires-Dist: robert==2.0.1
+Requires-Dist: plotly==5.24.1
+Requires-Dist: matplotlib==3.10.0
+Requires-Dist: numpy<3.0,>=1.26.4
+Requires-Dist: pandas<2.3,>=2.2.2
+Requires-Dist: pdfplumber==0.11.5
+Requires-Dist: rdkit==2024.3.3
+Requires-Dist: scikit_learn<1.7,>=1.6
+Requires-Dist: scikit_learn_intelex==2025.0.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Documentation in Read The Docs: https://almos.readthedocs.io
