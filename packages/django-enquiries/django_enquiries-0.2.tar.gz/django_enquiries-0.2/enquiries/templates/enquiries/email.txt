@@ -1,0 +1,17 @@
+Dear {{ name }}
+
+Thank you for contacting us. This is an automated response to confirm that we have received your message.
+
+Your enquiry has been received and assigned the ticket number #{{ ticket_number }}. We will review your enquiry and respond as soon as we can. For further questions or assistance, or if you wish to add details or comments to your enquiry, please reply to this email.
+
+Kind regards,
+{business_name}
+
+-------------------------------------------------
+{{ name }}, {{ date_created }}
+{{ message }}
+-------------------------------------------------
+
+E: {{ from_email }}
+This email has been sent in accordance with the {business_name} Privacy Policy
+copyright 2025 [company]

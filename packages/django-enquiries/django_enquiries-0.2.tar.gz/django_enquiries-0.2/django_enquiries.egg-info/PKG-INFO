@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: django-enquiries
+Version: 0.2
+Summary: A Django app to handle un-authenticated user enquiries via a contuct-us form.
+Author-email: Egide Ndazimana <egide.n1997@gmail.com>
+License-Expression: MIT
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 5.1
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: django>=5.1
+Dynamic: license-file
+
+================
+django-enquiries
+================
+
+django-enquiries is a Python Django app to handle un-authenticated user enquiries via a contuct-us form.
+
+Detailed documentation is in the "docs" directory.
+
+Quick start
+-----------
+
+1. Add "enquiries" to your INSTALLED_APPS setting like so::
+
+    INSTALLED_APPS = [
+        ...,
+        "enquiries",
+    ]
+
+2. Include the enquiries URLconf in your project urls.py like so::
+
+    path("enquiries/", include("enquiries.urls")),
+
+3. Run ``python manage.py migrate`` to create the models.

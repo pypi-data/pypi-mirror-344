@@ -1,0 +1,21 @@
+<form action="" method="POST" id="form-password-change" class="content-section normal hover-shadow">
+    {% csrf_token %}
+    <legend style="font-size: x-large;">Contact Us</legend>
+    <small>Got any questions? Fill out this form to reach out.</small>
+    {{ form.non_field_errors }}
+    {% for field in form %}
+        <div class="form-group">
+            {{ field.errors }}
+            {{ field }}
+            {% if field.help_text %}
+                <div class="help-text" id="{{ field.auto_id }}_helptext">
+                    {{ field.help_text|safe }}
+                </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+    <div class="form-group buttons">
+        <button class="button form-button hover" type="submit">Submit</button>
+        <a class="link normal hover" href="{% url 'login' %}">Back to login</a>
+    </div>
+</form>
