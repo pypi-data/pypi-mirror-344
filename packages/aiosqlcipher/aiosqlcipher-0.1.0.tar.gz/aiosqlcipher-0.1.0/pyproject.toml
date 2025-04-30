@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "aiosqlcipher"
+readme = "README.md"
+license = {file="LICENSE"}
+version = "0.1.0"
+description = "Python asyncio bindings for SQLCipher"
+authors = [
+    {name="tianqing", email="tianqing108@126.com"},
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "sqlcipher3-wheels>=0.5.4.post0",
+    "typing_extensions >= 4.0",
+]
+
+[dependency-groups]
+dev = [
+    "attribution==1.7.1",
+    "build>=1.2",
+    "coverage[toml]==7.6.10",
+    "mypy==1.14.1",
+]
+
+[project.urls]
+Github = "https://github.com/tianqing108/aiosqlcipher"
+
+[tool.attribution]
+name = "aiosqlcipher"
+package = "aiosqlcipher"
+ignored_authors = ["dependabot"]
+signed_tags = true
+version_file = true
+
+[tool.coverage.run]
+branch = true
+include = ["aiosqlcipher/*"]
+omit = ["aiosqlcipher/tests/*"]
+
+[tool.coverage.report]
+fail_under = 75
+precision = 1
+show_missing = true
+skip_covered = true
+
+[tool.mypy]
+ignore_missing_imports = true
+python_version = "3.9"
+
+[[tool.mypy.overrides]]
+module = "aiosqlcipher.tests.perf"
+follow_imports = "silent"
+
+
