@@ -1,0 +1,10 @@
+requests
+
+[development]
+black==24.3.0
+pytest==7.2.1
+
+[distribution]
+build
+twine
+wheel
