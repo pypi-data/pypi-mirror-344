@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: pycantus
+Version: 0.0.1
+Summary: PyCantus: A Python library designed to enhance accessibility of Gregorian chants for both coders and non-coders.
+Project-URL: Homepage, https://github.com/dact-chant/PyCantus
+Project-URL: Documentation, https://github.com/dact-chant/PyCantus/tree/main/docs
+Project-URL: Repository, https://github.com/dact-chant/PyCantus.git
+Author-email: Tim Eipert <tim.eipert@uni-wuerzburg.de>, "Jan Hajic jr." <hajicj@ufal.mff.cuni.cz>, Vojtech Lanz <lanz@ufal.mff.cuni.cz>, Anna Dvorakova <anna.dvorakova332@student.cuni.cz>
+Maintainer-email: Tim Eipert <tim.eipert@uni-wuerzburg.de>, "Jan Hajic jr." <hajicj@ufal.mff.cuni.cz>, Vojtech Lanz <lanz@ufal.mff.cuni.cz>, Anna Dvorakova <anna.dvorakova332@student.cuni.cz>
+License: Copyright (c) 2022-2024 Jan Hajic and others
+        
+        Permission is hereby granted, free of charge, to any person obtaining
+        a copy of this software and associated documentation files (the
+        "Software"), to deal in the Software without restriction, including
+        without limitation the rights to use, copy, modify, merge, publish,
+        distribute, sublicense, and/or sell copies of the Software, and to
+        permit persons to whom the Software is furnished to do so, subject to
+        the following conditions:
+        
+        The above copyright notice and this permission notice shall be
+        included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+        NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+        LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+        OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+        WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+License-File: LICENSE
+Keywords: Cantus,Gregorian Chant
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Python: >=3.10
+Requires-Dist: pandas==2.2.2
+Requires-Dist: requests==2.31.0
+Provides-Extra: examples
+Provides-Extra: tests
+Description-Content-Type: text/markdown
+
+# PyCantus
+PyCantus is envisioned as a Python API to the Cantus family of databases that makes it easy to use this data for computational processing. Primarily we intend this to be used for research in digital chant scholarship, but of course it can be used to build chant-centric apps, new websites, extract data for comparative studies across different repertoires, study liturgy, etc.
+
+
+## Data model
+At the heart of the library is the Cantus Database and Cantus Index data model. The two elementary objects in this model are a `Chant`, and a `Source`.
+
+* A `Source` is a physical manuscript or print that contains Gregorian chant. Primarily, this will be a liturgical book such as an antiphonary, gradual, or other sources. Fragments are, in principle, also sources. (Note: tonaries may get special handling.)
+
+* A `Chant` is one instance of a chant in a source. Typically it has a text, a melody (which is not necessarily transcribed), and a Cantus ID assigned, and it should link to a source in which it is found. It should align with the cantus API: https://github.com/DDMAL/CantusDB/wiki/APIs 
+
+## Installing PyCantus library locally
+1. clone the repository 
+    
+    ```git clone https://github.com/dact-chant/PyCantus```
+2. go to the root directory of the project
+3. run the following command 
+
+    ```pip install -e .```
+4. import the pycantus library and call its functionality
+
+    ```python
+    from pycantus import hello_pycantus
+    hello_pycantus()
+    ```
