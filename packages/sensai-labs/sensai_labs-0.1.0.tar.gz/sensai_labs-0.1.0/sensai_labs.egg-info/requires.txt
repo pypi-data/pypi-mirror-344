@@ -1,0 +1,27 @@
+black>=25.1.0
+colorlog>=6.9.0
+decouple>=0.0.7
+fastapi>=0.115.12
+isort>=6.0.1
+matplotlib>=3.10.1
+mcp[cli]
+openai>=1.69.0
+opencv-python>=4.11.0.86
+plotly>=6.0.1
+plyer>=2.1.0
+psycopg2>=2.9.10
+pydantic>=2.11.0
+python-decouple>=3.8
+python-dotenv>=1.1.0
+redis>=5.2.1
+requests>=2.32.3
+setuptools>=78.1.0
+sqlparse>=0.5.3
+supabase>=2.15.0
+tqdm>=4.67.1
+uvicorn>=0.34.0
+
+[:platform_system == "Linux"]
+gpiod>=2.3.0
+gpiozero>=2.0.1
+lgpio>=0.2.2.0
