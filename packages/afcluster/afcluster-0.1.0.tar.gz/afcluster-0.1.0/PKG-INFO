@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: afcluster
+Version: 0.1.0
+Summary: Cluster Multiple-Sequence Alignments (MSA) using DBSCAN
+Home-page: https://github.com/NoahHenrikKleinschmidt/AFCluster-api
+Author: Noah Kleinschmidt
+Author-email: noah.kleinschmidt@unibe.ch
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE.md
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: polyleven
+Requires-Dist: scipy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
