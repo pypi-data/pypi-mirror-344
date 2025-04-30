@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ialog"
+version = "0.1.0"
+description = "AI-powered log analysis tool using Groq API"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Yassir Ait Elaizzi", email = "yassir.aitelaizzi@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Security",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "rich>=13.7.0",
+    "click>=8.1.7",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/yassir-aea/ialog"
+Documentation = "https://github.com/yassir-aea/ialog#readme"
+Repository = "https://github.com/yassir-aea/ialog.git"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["ialog"]
+
+[project.scripts]
+ialog = "ialog.cli:main" 
