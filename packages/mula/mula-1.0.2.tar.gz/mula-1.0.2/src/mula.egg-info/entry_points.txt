@@ -1,0 +1,2 @@
+[console_scripts]
+tko = mula.__main__:main
