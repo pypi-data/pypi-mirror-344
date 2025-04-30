@@ -1,0 +1,2 @@
+[console_scripts]
+numato-discover = numato_gpio.__main__:main
