@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+oiffmpeg/__init__.py
+oiffmpeg/core.py
+oiffmpeg/utils.py
+oiffmpeg.egg-info/PKG-INFO
+oiffmpeg.egg-info/SOURCES.txt
+oiffmpeg.egg-info/dependency_links.txt
+oiffmpeg.egg-info/requires.txt
+oiffmpeg.egg-info/top_level.txt
