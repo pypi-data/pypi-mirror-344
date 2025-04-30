@@ -1,0 +1,49 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/Tool.schema.json
+pf_reasoning_tool.tools.reasoning_vision_tool.reasoning_vision_llm:
+  name: Reasoning Vision Call
+  description: Calls a vision-capable reasoning LLM (GPT-4o) with text plus an optional image.
+  type: custom_llm
+  category: HW_PF_tools
+  module: pf_reasoning_tool.tools.reasoning_vision_tool
+  function: reasoning_vision_llm
+
+  # A simple starting prompt so the node is draggable in Studio without editing
+  default_prompt: |
+    # developer:
+    You are an expert legal-tech assistant.  Use rigorous reasoning and support your answer with clear logic.
+
+    # user:
+    {{user_question}}
+    {% if image_url is defined %}![image]({{image_url}}){% endif %}
+
+  inputs:
+    connection:
+      type: [CustomConnection, AzureOpenAIConnection, OpenAIConnection]
+
+    # Works for both AOAI (deployment name) and OpenAI (model name) – leave blank to pick inside the node UI
+    deployment_name:
+      type: [string]
+      optional: true
+      ui_hints: {text_box_size: lg}
+
+    image_url:
+      type: [string]
+      optional: true       # blank = text-only request
+
+    max_completion_tokens:
+      type: [int]
+      optional: true       # omitted means “use service default”
+
+    reasoning_effort:
+      type: [string]
+      enum: [low, medium, high]
+      default: low
+
+    detail:
+      type: [string]
+      enum: [auto, low, high]
+      default: auto
+
+  outputs:
+    output:
+      type: [string]
