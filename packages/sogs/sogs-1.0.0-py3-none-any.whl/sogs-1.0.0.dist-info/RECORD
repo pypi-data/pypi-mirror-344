@@ -1,0 +1,8 @@
+sogs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sogs/cli.py,sha256=hXji6VnK7fKVtfNcr5vhU5c8_f9qHBp6a8msciT1T44,383
+sogs/sogs_compression.py,sha256=Pv0ydfvvwHcmBjYiP_CxFqAjtT7QVu_W4e1yibu4wWU,12625
+sogs-1.0.0.dist-info/METADATA,sha256=iymFA0vUz7dUXHI4pFOlbBfSJoTGQgK44kWZP9Vk0Zk,14538
+sogs-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sogs-1.0.0.dist-info/entry_points.txt,sha256=xhdZkVncUyE14_cSvyn8yfqmCulEKyV_3fdXQU2vfFQ,48
+sogs-1.0.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+sogs-1.0.0.dist-info/RECORD,,
