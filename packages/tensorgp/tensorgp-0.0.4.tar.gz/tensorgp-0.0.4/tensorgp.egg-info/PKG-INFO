@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: tensorgp
+Version: 0.0.4
+Summary: A vectorized approach to Genetic Programming - PyTorch version
+Home-page: https://github.com/AwardOfSky/TensorGP/tree/pytorch
+Author: Francisco Baeta
+Author-email: <fjrbaeta@dei.uc.pt>
+License: UNKNOWN
+Project-URL: Source, https://github.com/AwardOfSky/TensorGP/tree/pytorch
+Description: UNKNOWN
+Keywords: Genetic Programming,Vectorization,GPU,Python,PyTorch
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
