@@ -1,0 +1,2 @@
+[console_scripts]
+tmeragflow-mcp-server = tmeragflow_mcp_server:main
