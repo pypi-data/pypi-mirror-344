@@ -1,0 +1,13 @@
+automacao_utils/__init__.py,sha256=8uobg3SCqyvJpHZ-ZQjFl6VG6KwHk_mYh6FuTUTN6QI,808
+automacao_utils/download_utils.md,sha256=5pYGmqJIpWFq6IBOXegv6AGG8hQyBOPLrDb_UvCQ8e0,5699
+automacao_utils/download_utils.py,sha256=eAo3DlbxzoeyrZ6gyo1NRLi2oWj-Z_RAEfpO5qRvGVs,21102
+automacao_utils/mover_arquivo_utils.md,sha256=zuw0d3TnA5DL1yLgycEJtQnb4Fjw3194sqYMuX4IYsw,3120
+automacao_utils/mover_arquivo_utils.py,sha256=jtZHx4MXQ3n_GfPOEk9j4NNDF0XFqdn2RqTSiE-Z8ZY,6423
+automacao_utils/notificacao_utils.md,sha256=NP9sBywDcwS8-zpznMoQpaIXipp71gGdh-tn29FXkxw,1572
+automacao_utils/notificacao_utils.py,sha256=TfoPwqj37hkoLXft4TqWaZH6eqez1LqEQeswm3csvHE,2192
+automacao_utils/README.md,sha256=rNkaGSnYA-K_llUIB2aiUABy6PMhhDSiyHWh8rI0E_w,1080
+automacao_utils/selenium_utils.md,sha256=HZXxNoVJxj8aDFX-9QosCU0yGE95lb5U2TrKzKMr_mk,1538
+automacao_utils/selenium_utils.py,sha256=knt86lD41GAW9UG4RVbsHaxTQFYr3lD3xgJUET9IWDY,643
+utils_global-1.8.4.dist-info/METADATA,sha256=tH_fO8p_F1545t1vxNj_3yzD8y8sltNHJ48MjuAe7mo,6286
+utils_global-1.8.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+utils_global-1.8.4.dist-info/RECORD,,
