@@ -1,0 +1,9 @@
+
+include LICENSE
+include MANIFEST.in
+include .gitignore
+
+recursive-include bflb_flash_command/chips *
+recursive-include bflb_flash_command/utils *
+
+
