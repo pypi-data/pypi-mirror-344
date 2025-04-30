@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: calculator-wolfskullcave
+Version: 1.0.1
+Summary: A simple command-line calculator
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: sympy>=1.13.3
+Requires-Dist: typer>=0.15.2
+
+## This application is a simple command line calculator
+
+
+### Installation
+
+**Install** with: `pip install calculator-wolfskullcave`
+
+Or: `pipx install calculator-wolfskullcave`
+
+---
+### Usage
+Open a **terminal** and type `calc` followed by your expression.
+
+eg.
+```shell
+calc 200+(30*2)+60
+320 # solution
+```
