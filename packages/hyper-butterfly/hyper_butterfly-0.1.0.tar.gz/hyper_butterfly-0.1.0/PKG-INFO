@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: hyper_butterfly
+Version: 0.1.0
+Summary: 하이퍼볼릭 기하학을 위한 효율적인 PyTorch 라이브러리
+Home-page: https://github.com/username/hyper_butterfly
+Author: Your Name
+Author-email: you@example.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: torch>=2.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
