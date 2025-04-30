@@ -1,0 +1,2 @@
+[console_scripts]
+sentence2simvec = sentence2simvec.cli:_main

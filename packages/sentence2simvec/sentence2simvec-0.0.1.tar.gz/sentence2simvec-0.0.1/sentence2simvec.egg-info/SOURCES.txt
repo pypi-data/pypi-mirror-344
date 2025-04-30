@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+sentence2simvec/__init__.py
+sentence2simvec/cli.py
+sentence2simvec/core.py
+sentence2simvec.egg-info/PKG-INFO
+sentence2simvec.egg-info/SOURCES.txt
+sentence2simvec.egg-info/dependency_links.txt
+sentence2simvec.egg-info/entry_points.txt
+sentence2simvec.egg-info/requires.txt
+sentence2simvec.egg-info/top_level.txt
+tests/test_core.py
