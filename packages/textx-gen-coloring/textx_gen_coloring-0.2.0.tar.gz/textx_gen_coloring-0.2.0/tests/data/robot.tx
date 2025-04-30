@@ -1,0 +1,23 @@
+import direction
+
+Program:
+  'begin'
+    commands*=Command
+  'end'
+;
+
+Command:
+  InitialCommand | MoveCommand
+;
+
+InitialCommand:
+  'initial' x=INT ',' y=INT
+;
+
+MoveCommand:
+  direction=Direction (steps=INT)?
+;
+
+Comment:
+  /\/\/.*$/
+;
