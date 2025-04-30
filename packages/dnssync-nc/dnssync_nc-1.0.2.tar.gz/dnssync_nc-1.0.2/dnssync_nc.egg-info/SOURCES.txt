@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+dnssync_nc/DNSRecords.py
+dnssync_nc/EntryHelper.py
+dnssync_nc/Exceptions.py
+dnssync_nc/FriendlyArgumentParser.py
+dnssync_nc/NetcupConnection.py
+dnssync_nc/__init__.py
+dnssync_nc/__main__.py
+dnssync_nc.egg-info/PKG-INFO
+dnssync_nc.egg-info/SOURCES.txt
+dnssync_nc.egg-info/dependency_links.txt
+dnssync_nc.egg-info/entry_points.txt
+dnssync_nc.egg-info/requires.txt
+dnssync_nc.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+dnssync-cli = dnssync_nc.__main__:main
