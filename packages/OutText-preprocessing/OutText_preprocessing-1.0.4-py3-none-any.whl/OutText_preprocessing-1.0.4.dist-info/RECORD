@@ -1,0 +1,11 @@
+OutText_preprocessing/__init__.py,sha256=HUH6iUWrAV0RpK7MLrKooJDaHv21APEO8q-NdukWHIo,142
+OutText_preprocessing/outlier_removal.py,sha256=zEBo1xIafDd1XiSB1AsT1vzZhprW8xEADtfaHjNJS7g,9810
+OutText_preprocessing/text_preprocessing.py,sha256=M8ZQYz9CiPEwKwbAYmpGcc93j-gp0SKMpmX-2V0gOi4,11171
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_outlier_removal.py,sha256=bA55S9tpPzyJUxjGb2eF8KVX1hVwquRvn0GtfkT46h8,2884
+tests/test_text_prepeocessing.py,sha256=lKfbka2jIZkcqiv6Cd-gvHr_lubIbgne2CVlzmNOfck,2248
+OutText_preprocessing-1.0.4.dist-info/LICENSE,sha256=5cChE1IPp82Qry0NPO9RExrKur1vmheUSHsw9KqL3wg,2295
+OutText_preprocessing-1.0.4.dist-info/METADATA,sha256=Kryp4cK4hCYHQ_T9NX8NGIKJtgzKUZkItsHHLFy0ZdE,915
+OutText_preprocessing-1.0.4.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+OutText_preprocessing-1.0.4.dist-info/top_level.txt,sha256=IEJcvoTig-M9pL0RHfve5v_PUoZ8Ko8AyLfMwWi_vrI,28
+OutText_preprocessing-1.0.4.dist-info/RECORD,,
