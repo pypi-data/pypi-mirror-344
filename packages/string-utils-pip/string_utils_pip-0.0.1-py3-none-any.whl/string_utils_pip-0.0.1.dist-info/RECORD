@@ -1,0 +1,10 @@
+string_utils_pip/__init__.py,sha256=qqdZ7i0O0P5BS2eac7jhrY8mI3q1_whn9qAiMaNwHB0,401
+string_utils_pip/clean.py,sha256=7-ApA7lohYg4l6WNbiv3C1htyd6RaY53UBXI1_J1Zso,546
+string_utils_pip/frequency.py,sha256=dVklunmJ-NsKoh7xYmZGmS0jnuap4WZzShEDTZAio4s,736
+string_utils_pip/palindrome.py,sha256=Ekns-qca2dEhwuXBOwRNFiFRMbZL7RyE14TJXRfjdnQ,451
+string_utils_pip/removeduplicates.py,sha256=IfLR9ZjFivUbcCxVFCXMzBaBedy-RD54n6-uuP1hBEY,397
+string_utils_pip/vowels.py,sha256=IioiQGedoA7TPa9wP_PrzZvrvfWi7rHIfBl96q5M_rw,280
+string_utils_pip-0.0.1.dist-info/METADATA,sha256=PGKQvniGrCLCEQ3k90ZaekZ3-d6AkOrTVZXLErF7VSE,942
+string_utils_pip-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+string_utils_pip-0.0.1.dist-info/licenses/LICENSE,sha256=63w39i5AXcmKWtAtkKRP8D6hrvMA81BjtkIesiWsJyQ,1119
+string_utils_pip-0.0.1.dist-info/RECORD,,

@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: string_utils_pip
+Version: 0.0.1
+Summary: A utility package for common string operations.
+Project-URL: Repository, https://github.com/SurajSah776/learning-python
+Project-URL: Homepage, https://github.com/SurajSah776/learning-python
+Author-email: Suraj Kumar Sah <kumarsurajsah776@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: string,string utils,text,tools,utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# string-utils-pip
+
+A utility package for common string operations.
+
+## Features
+
+- Extract vowels from a string
+- Count character frequencies
+- Remove whitespace
+- Remove special characters
+- Check for palinfrom string
+- Remove duplicates from given string
+
+## Installation
+
+```bash
+pip install string-utils-pip
+```
