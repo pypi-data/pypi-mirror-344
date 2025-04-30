@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+kroki_diagrams = markdown_kroki.plugin:KrokiDiagramPlugin
