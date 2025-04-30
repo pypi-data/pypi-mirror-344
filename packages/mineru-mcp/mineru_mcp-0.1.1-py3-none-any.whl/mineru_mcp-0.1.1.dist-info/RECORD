@@ -1,0 +1,10 @@
+mineru/__init__.py,sha256=FVsRoHSkuz0phYKyVHM0MmAalfoi-9ic7Dfa4LX95qk,66
+mineru/api.py,sha256=0ct_tbwYIAGWyYkS8XTckypvASz9p8nzwYn5N-nj5T0,16094
+mineru/cli.py,sha256=ZBQjumYqHU3F65FzWTO8tjuQCLO-3OoQkz5HeqH_4-M,1558
+mineru/config.py,sha256=GOqXJ-Rfyy6qFqL2j5UKFKnfi7z7tP41Ja3hxUgNWtE,1160
+mineru/examples.py,sha256=Ev-yePKb0KDjWwoSfcHYO_pHL86LrV9elWAjuzhiM3U,2406
+mineru/server.py,sha256=F-2gcNEtuhZ_6KUde66uL0tzemI-7aVOcMLEAIg6od4,9700
+mineru_mcp-0.1.1.dist-info/METADATA,sha256=4pwP5zARI6P8ORZbP86_PuCb-LbYCutV2y7C_IoDe0g,5799
+mineru_mcp-0.1.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+mineru_mcp-0.1.1.dist-info/entry_points.txt,sha256=ewxZfrAFn0cafs2X5-gic6nxwd8KDRHp9jrzw1M8lpA,46
+mineru_mcp-0.1.1.dist-info/RECORD,,
