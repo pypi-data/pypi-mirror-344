@@ -1,0 +1,18 @@
+"""Constants for the WeLock integration."""
+
+OAUTH2_AUTHORIZE = "https://iot.we-lock.com/auth/login"
+OAUTH2_TOKEN = "https://iot.we-lock.com/auth/Authorize"
+OAUTH2_CLIENT_ID = ""
+MQ_CONFIG_URL = "url"
+MQ_CONFIG_CLIENT_ID = "clientId"
+MQ_CONFIG_USER_NAME = "username"
+MQ_CONFIG_PASSWORD = "password"
+MQ_CONFIG_TOPIC = "topic"
+MQ_CONFIG_EXP = "expireTime"
+
+SENSOR_BATTERY_KEY = "Battery"
+SENSOR_RECORD_KEY = "Record"
+SWITCH_WIFIBOX_KEY = "RemoteControl"
+BUTTON_WIFIBOX_KEY = "RemoteControl"
+LOCK_WELOCK_KEY = "LockOperation"
+BINARYSENSORS_DOOR_KEY = "status"

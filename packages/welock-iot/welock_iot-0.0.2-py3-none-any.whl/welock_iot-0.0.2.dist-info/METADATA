@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: welock_iot
+Version: 0.0.2
+Summary: welock_iot
+Author: hzjchina
+Author-email: hzjchina@yeah.net
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp>=3.8.1
+Requires-Dist: aiomqtt<3.0.0,>=2.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# welock-iot for ha
+
+## Features
+
+ - Api
+ - mqttClient
+
+## Usage
+
+## Release Note
+
+| version | Description                                            |
+| ------- | ------------------------------------------------------ |
+| 0.0.1   | first upload                                           |
+| ------- | ------------------------------------------------------ |
+| 0.0.2   | add install_requires                                           |
+
+## Installation
+
+`pip3 install welock-iot`
+
+## Issue feedback
+
+ - research@we-lock.com 
+
+## License
+
+ - MIT
+
