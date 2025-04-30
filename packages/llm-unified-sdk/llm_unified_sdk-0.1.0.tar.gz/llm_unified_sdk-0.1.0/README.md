@@ -1,0 +1,187 @@
+A Python SDK providing convenient clients to interact with a **Unified LLM Chat Backend API**. This SDK allows your Python applications to easily send chat completion requests to your backend hub, which then routes them to the appropriate LLM provider (e.g., Anthropic, Gemini, OpenAI).
+
+**Note:** This SDK communicates with _your specific backend API_, not directly with the LLM providers themselves. Your backend service handles the authentication and interaction with the final LLM APIs.
+
+## Features
+
+- Provider-specific clients (`GeminiClient`, `OpenAIClient`, `AnthropicClient`) for clear usage.
+- Handles communication with the unified backend chat endpoint (typically `/v1/chat`).
+- Configuration of the backend API URL via environment variables (`CHAT_API_BASE_URL`).
+- Optional authentication with the backend API via environment variables (`SDK_CHAT_API_KEY`) or direct initialization.
+- Built-in custom exceptions (`APIRequestError`, `ConnectionError`, `TimeoutError`, `SDKError`) for easier error handling.
+- Based on the robust `requests` library for HTTP communication.
+
+<!-- Project Structure section is omitted as it's less relevant for SDK users -->
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.8+
+- `pip` package manager
+- Access to a running instance of the Unified LLM Chat Backend API this SDK is designed to talk to.
+
+### Installation
+
+It's recommended to use a virtual environment for your project.
+
+1.  **Install the SDK:**
+
+    ```bash
+    pip install llm-unified-sdk  # Replace llm-unified-sdk with your actual package name
+    ```
+
+    This will automatically install the required `requests` library.
+
+2.  **(Optional) Install `python-dotenv`:** If you plan to manage configuration using a `.env` file in your application, install `python-dotenv`:
+    ```bash
+    pip install python-dotenv
+    ```
+
+## Configuration
+
+The SDK needs to know the URL of your Unified LLM Chat Backend API. This is typically configured in the environment of the application _using_ the SDK.
+
+1.  **Create a `.env` file** in the root directory of _your application project_:
+
+    ```dotenv
+    # .env file for YOUR application
+
+    # REQUIRED: The full base URL of your running Unified LLM Chat Backend API
+    # Example: CHAT_API_BASE_URL="http://localhost:8000"
+    # Example: CHAT_API_BASE_URL="https://your-llm-hub-api.com"
+    CHAT_API_BASE_URL="YOUR_BACKEND_API_URL_HERE"
+
+    # OPTIONAL: API key required BY YOUR BACKEND API itself (if it's protected)
+    # The SDK will use this as a fallback if no api_key is passed during init.
+    # Leave blank or omit if your backend doesn't require a key from clients.
+    # SDK_CHAT_API_KEY="YOUR_BACKEND_API_ACCESS_KEY_HERE"
+    ```
+
+2.  **Load the `.env` file** in your application code _before_ initializing the SDK client:
+
+    ```python
+    from dotenv import load_dotenv
+    import os
+
+    load_dotenv() # Loads variables from .env into the environment
+
+    # Retrieve the base URL for the SDK
+    api_url = os.getenv("CHAT_API_BASE_URL")
+
+    if not api_url:
+        print("Error: CHAT_API_BASE_URL is not set in the environment!")
+        # Handle error appropriately
+    ```
+
+## Usage Example
+
+```python
+import os
+import logging
+from dotenv import load_dotenv
+
+# --- Import the desired provider module from the SDK ---
+# This also makes exceptions like gemini.APIRequestError available
+from SDK import gemini
+# from SDK import openai
+# from SDK import anthropic
+
+# --- Load Environment & Configure Logging ---
+load_dotenv()
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# --- Get Backend API URL ---
+API_URL = os.getenv("CHAT_API_BASE_URL")
+if not API_URL:
+    logging.error("FATAL: CHAT_API_BASE_URL environment variable not set.")
+    exit(1)
+
+# --- Initialize the Specific Client ---
+# Choose the provider and the target model for this client instance.
+# The SDK handles reading SDK_CHAT_API_KEY from env if api_key arg is omitted.
+SELECTED_PROVIDER = "gemini" # Or "openai", "anthropic"
+TARGET_MODEL = "gemini-1.5-flash-latest" # Or "gpt-4o", "claude-3-haiku-20240307" etc.
+
+try:
+    if SELECTED_PROVIDER == "gemini":
+        provider_module = SDK.gemini
+        ClientClass = provider_module.GeminiClient
+    elif SELECTED_PROVIDER == "openai":
+        provider_module = SDK.openai
+        ClientClass = provider_module.OpenAIClient
+    elif SELECTED_PROVIDER == "anthropic":
+        provider_module = SDK.anthropic
+        ClientClass = provider_module.AnthropicClient
+    else:
+        raise ValueError(f"Unsupported provider selected: {SELECTED_PROVIDER}")
+
+    # Assign exceptions locally for easier handling
+    APIRequestError = provider_module.APIRequestError
+    ConnectionError = provider_module.ConnectionError
+    TimeoutError = provider_module.TimeoutError
+    SDKError = provider_module.SDKError
+
+    # Instantiate the client
+    chat_client = ClientClass(
+        base_url=API_URL,
+        model=TARGET_MODEL
+        # api_key="explicit_key_if_needed" # Optional explicit key for backend auth
+    )
+    logging.info(f"{ClientClass.__name__} initialized for model '{TARGET_MODEL}', targeting API: {API_URL}")
+
+except (AttributeError, ImportError, ValueError, TypeError) as e:
+    logging.error(f"Failed to initialize SDK client for provider '{SELECTED_PROVIDER}': {e}")
+    exit(1)
+
+
+# --- Make a Chat Request ---
+messages = [{"role": "user", "content": "Explain the purpose of this SDK."}]
+
+try:
+    logging.info(f"Sending request via {SELECTED_PROVIDER} client...")
+    # Pass only messages and optional LLM parameters (max_tokens, etc.)
+    api_response = chat_client.chat(messages=messages, temperature=0.7)
+    logging.info("Received response from API.")
+
+    # --- Process the response (adjust based on YOUR backend's response format) ---
+    try:
+         assistant_message = api_response.get("choices", [{}])[0].get("message", {}).get("content", "") # OpenAI-like
+         if not assistant_message and SELECTED_PROVIDER == "gemini":
+             assistant_message = api_response.get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "") # Gemini-like
+
+         if assistant_message:
+             print(f"\nAssistant: {assistant_message}")
+         else:
+             import json
+             print("\nAssistant (raw response):")
+             print(json.dumps(api_response, indent=2))
+    except Exception as parse_e:
+         import json
+         print(f"\nError parsing response: {parse_e}")
+         print(f"\nAssistant (raw): {json.dumps(api_response, indent=2)}")
+
+# --- Handle SDK Errors ---
+except APIRequestError as e:
+    logging.error(f"API Error: {e}")
+    print(f"\nAssistant Error: Could not get response from API ({e.status_code}). Details: {e.details or e.message}")
+except ConnectionError as e:
+    logging.error(f"Connection Error: {e}")
+    print(f"\nAssistant Error: Could not connect to the chat service: {e}")
+except TimeoutError as e:
+    logging.error(f"Timeout Error: {e}")
+    print(f"\nAssistant Error: The request timed out: {e}")
+except SDKError as e:
+    logging.error(f"SDK Error: {e}")
+    print(f"\nAssistant Error: An unexpected SDK error occurred: {e}")
+except Exception as e:
+    logging.exception(f"An unexpected error occurred: {e}")
+    print(f"\nAssistant Error: An unexpected error occurred: {e}")
+
+
+## License
+
+Copyright (c) [Year] [Your Name or Company Name]. All rights reserved.
+
+This software is proprietary and is distributed without any license granting rights to use, copy, modify, or distribute. Use of this software requires specific permission from the copyright holder. Please refer to the NOTICE file (if provided) or contact the copyright holder for terms of use.
+```
