@@ -1,0 +1,3 @@
+[console_scripts]
+TORCphysics=TORCphysics.src.cli:main
+
