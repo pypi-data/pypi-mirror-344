@@ -1,0 +1,24 @@
+# build directories
+.coverage
+build/
+covhtml
+dist/
+examples/whip/results/
+lib/rucio.egg-info/
+cache/
+changed_files.txt
+docs/
+
+# Backup and temp files
+*.log
+*.pyc
+*.swp
+*.swp
+*~
+.venv
+lib/rucio/vcsversion.py
+*.egg-info
+pylint.out
+
+# OS-specific
+.DS_Store

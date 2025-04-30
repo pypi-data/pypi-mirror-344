@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+.github/workflows/publish.yml
+src/jlab_rucio_policy_package/__init__.py
+src/jlab_rucio_policy_package/lfn2pfn.py
+src/jlab_rucio_policy_package/permission.py
+src/jlab_rucio_policy_package/schema.py
+src/jlab_rucio_policy_package/scope.py
+src/jlab_rucio_policy_package.egg-info/PKG-INFO
+src/jlab_rucio_policy_package.egg-info/SOURCES.txt
+src/jlab_rucio_policy_package.egg-info/dependency_links.txt
+src/jlab_rucio_policy_package.egg-info/top_level.txt
