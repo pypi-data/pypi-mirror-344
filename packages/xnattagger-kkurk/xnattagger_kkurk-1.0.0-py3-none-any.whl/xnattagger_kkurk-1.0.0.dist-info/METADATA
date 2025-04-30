@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: xnattagger-kkurk
+Version: 1.0.0
+Summary: XNAT Tagger
+Home-page: https://github.com/kakurk/xnattagger
+Author: Kyle Kurkela
+Author-email: kkurkela@bu.edu
+License-File: LICENSE
+Requires-Dist: yaxil
+Requires-Dist: pyaml
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary

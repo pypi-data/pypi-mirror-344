@@ -1,0 +1,10 @@
+xnattagger/__init__.py,sha256=LoE-3L70nwbRDvzwKAR4EoXBHenpahQhnqmt4YSGhiI,18235
+xnattagger/__version__.py,sha256=TkGdCSBUzDz8OAA7seEKTTVjk6I8RpKCSBniSvJ6V6Y,199
+xnattagger/config/__init__.py,sha256=9NvVYPkoanrrNVRCljmYCAjjJZGq5kvF_oatEgVQDQo,160
+xnattagger/config/tagger.yaml,sha256=sWK8PBkv1aLe1G22SvrwBylos0C5UXYg-W3ugGc5Wbg,1448
+xnattagger_kkurk-1.0.0.data/scripts/xnat_tagger.py,sha256=EDz2SrhbQpEFdRrIY-0dMgUmIptzm_SyNSigT203ano,2253
+xnattagger_kkurk-1.0.0.dist-info/licenses/LICENSE,sha256=ReOF9BmlQdkCj4b2gQYogJrk_QkbUAuz8W1ZVqI0pcs,1541
+xnattagger_kkurk-1.0.0.dist-info/METADATA,sha256=yAOLhjZ-Gr9VmOlVwlMc5iAvNYcz8Abw4ZD0Vu4_rHs,363
+xnattagger_kkurk-1.0.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+xnattagger_kkurk-1.0.0.dist-info/top_level.txt,sha256=LdHhj5smL9uEh9HAguIPB8FH7EgYimhI-AODf4fl6tE,11
+xnattagger_kkurk-1.0.0.dist-info/RECORD,,

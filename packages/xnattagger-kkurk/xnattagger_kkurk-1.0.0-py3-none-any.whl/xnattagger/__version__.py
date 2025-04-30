@@ -1,0 +1,6 @@
+__title__ = 'xnattagger-kkurk'
+__description__ = 'XNAT Tagger'
+__url__ = 'https://github.com/kakurk/xnattagger'
+__version__ = '1.0.0'
+__author__ = 'Kyle Kurkela'
+__author_email__ = 'kkurkela@bu.edu'
