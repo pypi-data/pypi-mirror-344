@@ -1,0 +1,9 @@
+LlmServer.py,sha256=ngkrvJGxYvLxro84ZSTMA3ZijtoxTxN8bpH7CkJ0czc,4918
+LoadMcpServerConfig.py,sha256=G8Qtoj1DNsHK1wPgbiKV2yec_Th_3sg0qpe1JRpOo1A,3803
+TaskFileQueryResult.py,sha256=cZejnaARFaTinx6fonPbBNd7r4nd8WzPJ0Q6B5IXQcc,3205
+WyfMcpClient.py,sha256=U2Xs5SIERm4tMKY8YthNOkNT7Y-THwjTEb2JnbOwBtk,9484
+taskmcpclient-0.1.6.dist-info/METADATA,sha256=B0xDmkZIsd2PCz7duXDNfFz8TLp03uJVgGlCuIZw0IQ,455
+taskmcpclient-0.1.6.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+taskmcpclient-0.1.6.dist-info/entry_points.txt,sha256=GW3A87GofouQMFEvhyTKxyPoMEbO6KYx880eFcpnJkA,52
+taskmcpclient-0.1.6.dist-info/top_level.txt,sha256=f9lIhq4q0py_WdRISMllCI1L8CtoMFy2Lxe1tZSALys,63
+taskmcpclient-0.1.6.dist-info/RECORD,,
