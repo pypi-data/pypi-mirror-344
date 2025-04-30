@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "string_utils_pip"
+version = "0.0.1"
+description = "A utility package for common string operations."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+keywords = ["string", "utilities", "text", "tools", "string utils"]
+
+authors = [
+  { name="Suraj Kumar Sah", email="kumarsurajsah776@gmail.com" }
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Repository = "https://github.com/SurajSah776/learning-python"
+Homepage = "https://github.com/SurajSah776/learning-python"
