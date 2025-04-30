@@ -1,0 +1,6 @@
+setup.py
+testmyrenovatestrong/__init__.py
+testmyrenovatestrong.egg-info/PKG-INFO
+testmyrenovatestrong.egg-info/SOURCES.txt
+testmyrenovatestrong.egg-info/dependency_links.txt
+testmyrenovatestrong.egg-info/top_level.txt
