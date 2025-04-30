@@ -1,0 +1,12 @@
+syntaxmatrix/__init__.py,sha256=I_FacOQYSeKSAq6_AjLiJaGDjh8yiChW-UlPrRj4G4g,1760
+syntaxmatrix/core.py,sha256=ye424rpizKNNZMTPJxjY1iW2yWPxvDcjaMC-vWRk7-k,9096
+syntaxmatrix/db.py,sha256=2nD17bOyv5Oh-TgmBiAmi9GawXpdOmKpv5xsDnjaWQg,3758
+syntaxmatrix/file_processor.py,sha256=M61v6jzHc1S1N2XaV3L6J_zl2_4rGKggx4nzmmkYWeA,3125
+syntaxmatrix/plottings.py,sha256=_qBo-ciJ6x7fLTg-yKtsGU9b1CyubSNlbtnsVC8nnrE,768
+syntaxmatrix/routes.py,sha256=7lLMA6_92oImWXVP4ntYgslkUR6lGyy3uNxzxzBzrFU,70113
+syntaxmatrix/themes.py,sha256=c5c1DrAQnN6af94InP9xAryOVAbklqdYVnMTH33PyY0,5109
+syntaxmatrix-1.2.0.dist-info/licenses/LICENSE.txt,sha256=j1P8naTdy1JMxTC80XYQjbyAQnuOlpDusCUhncrvpy8,1083
+syntaxmatrix-1.2.0.dist-info/METADATA,sha256=hresPe6FVHOr2r9OPeIBhnHsd6BMNmYNRsujC55d35U,12598
+syntaxmatrix-1.2.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+syntaxmatrix-1.2.0.dist-info/top_level.txt,sha256=HKP_zkl4V_nt7osC15DlacoBZktHrbZYOqf_pPkF3T8,13
+syntaxmatrix-1.2.0.dist-info/RECORD,,
