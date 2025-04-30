@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/viewforge/__init__.py
+src/viewforge/core.py
+src/viewforge.egg-info/PKG-INFO
+src/viewforge.egg-info/SOURCES.txt
+src/viewforge.egg-info/dependency_links.txt
+src/viewforge.egg-info/top_level.txt
+tests/test_core.py
