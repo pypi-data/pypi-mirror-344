@@ -1,0 +1,2 @@
+[console_scripts]
+syslogx3 = syslogx.__main__:usage

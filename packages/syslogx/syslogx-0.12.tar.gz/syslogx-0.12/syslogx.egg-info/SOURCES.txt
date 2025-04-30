@@ -1,0 +1,12 @@
+README.md
+setup.py
+syslogx/__init__.py
+syslogx/__main__.py
+syslogx/__meta__.py
+syslogx/__version__.py
+syslogx/syslogx.py
+syslogx.egg-info/PKG-INFO
+syslogx.egg-info/SOURCES.txt
+syslogx.egg-info/dependency_links.txt
+syslogx.egg-info/entry_points.txt
+syslogx.egg-info/top_level.txt
