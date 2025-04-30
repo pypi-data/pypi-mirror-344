@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: qte-parts-crawler
+Version: 0.1.0
+Summary: A web crawler for QTE parts data
+Home-page: https://github.com/yourusername/qte-parts-crawler
+Author: Allen Yan
+Author-email: wsyanligang@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+## Install
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+Open a Debug Browser:
+```bash
+python main.py --task browser
+```
+
+Run Preparation Task:
+```bash
+python main.py --task prepare --year 2025
+```
+
+Run Detail Task:
+```bash
+python main.py --task detail --count 3
+```
+
+
