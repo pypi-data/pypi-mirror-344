@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: PyCoT
+Version: 3.0.0
+Summary: Python Cursor On Target Object-Relational Mapper
+Home-page: https://github.com/ampledata/pycot
+Author: William Crum
+Author-email: will@wcrum.dev
+License-File: LICENSE
+Requires-Dist: pydantic>=1.10.2
+Requires-Dist: xmltodict>=0.13.0
+Provides-Extra: mitre
+Requires-Dist: PyCoT-MITRE; extra == "mitre"
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
