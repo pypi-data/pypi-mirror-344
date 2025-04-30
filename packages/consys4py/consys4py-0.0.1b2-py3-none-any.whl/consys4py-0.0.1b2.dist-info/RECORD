@@ -1,0 +1,10 @@
+consys4py/con_sys_api.py,sha256=nf2MDyQu4TAbvxbZA8gdC521aqvuYkF_JKpFiQrG7bc,3521
+consys4py/constants.py,sha256=cpgwuC2qLFXUUN77rKgfvxJRQFiD96FW2xNgOOp_uFg,2600
+consys4py/endpoints.py,sha256=CgBJA95A2DY6HNeo_3UKISi6xHotUs3hO5PA_0CHXCE,3930
+consys4py/querymodel.py,sha256=kEOXSuVbKw1DIgCRR1B6lh4RzKclEfjadHNEWFLSwzE,782
+consys4py/request_bodies.py,sha256=IwRBBfWoxihBejEMVyl9gVyB_yj7UiIWKVEtd-VVtPU,3906
+consys4py/request_wrappers.py,sha256=fOesve0f_yUINbGKQZpACes-vWdnFAfHa8cKl1--yHU,1850
+consys4py-0.0.1b2.dist-info/METADATA,sha256=sHLf5OfGKZcXdd2ESs8okQzdPXw5DMOPraoOYHaHqys,2261
+consys4py-0.0.1b2.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+consys4py-0.0.1b2.dist-info/top_level.txt,sha256=WqlAcAlQqsRdMf4akioRXqBPWA4l_jvZW8Z1OgQwjZQ,10
+consys4py-0.0.1b2.dist-info/RECORD,,
