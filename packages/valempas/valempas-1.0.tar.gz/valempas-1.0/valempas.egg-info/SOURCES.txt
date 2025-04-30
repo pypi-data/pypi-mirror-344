@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+valempas/__init__.py
+valempas.egg-info/PKG-INFO
+valempas.egg-info/SOURCES.txt
+valempas.egg-info/dependency_links.txt
+valempas.egg-info/top_level.txt

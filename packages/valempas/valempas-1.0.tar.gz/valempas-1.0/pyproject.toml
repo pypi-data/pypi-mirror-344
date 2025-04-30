@@ -1,0 +1,21 @@
+[project]
+name = "valempas"
+version = "1.0"
+description = "Library sederhana untuk validasi email dan password"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+  { name="Rifki Taufikurrohman", email="rifkitmn23@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/rifkitaufikurrohman/valempas"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
