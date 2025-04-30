@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/abc_pip/__init__.py
+src/abc_pip/cat.py
+src/abc_pip/version.py
+src/abc_pip.egg-info/PKG-INFO
+src/abc_pip.egg-info/SOURCES.txt
+src/abc_pip.egg-info/dependency_links.txt
+src/abc_pip.egg-info/top_level.txt
