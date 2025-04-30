@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-usee-user = main:main
