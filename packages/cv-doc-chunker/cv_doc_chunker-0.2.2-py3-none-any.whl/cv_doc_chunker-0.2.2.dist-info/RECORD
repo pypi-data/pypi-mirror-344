@@ -1,0 +1,12 @@
+cv_doc_chunker/__init__.py,sha256=Hvc_y0HMQkcmcu7_avWVItVno5DklZ2qXXQjCn7sWTU,143
+cv_doc_chunker/box_processing.py,sha256=qSh7pqiJnp2J-gEkWbQJIQNfplJxR7lGUQbcWWhwFKo,26325
+cv_doc_chunker/config.py,sha256=YHGgvanCOnFekWeqQ5kEkpU_wSdPPZLDySGRHRO6GW4,2039
+cv_doc_chunker/image_processing.py,sha256=s-sFx4qWof9i5uTrF2eU40ttPW5yWY1svl9jNvkJhTA,6810
+cv_doc_chunker/main.py,sha256=OyO-TaW0KxqZC9DC9bEgf68vOHxL0msmgDmIcEqzVnA,32968
+cv_doc_chunker/models.py,sha256=rWxl4F7kNnR01iSLyW3yZZg524IPLj46fBpWfE6oIfw,2661
+cv_doc_chunker/pdf.py,sha256=9NvRHnHWbFyfe67uE_ua-IomYHF5DEtK8RmUgOf5gio,4044
+cv_doc_chunker-0.2.2.dist-info/licenses/LICENSE,sha256=oxA9-juFBCBko0t5sgbp4gsOl--8j_ekp8jqLVLIVJw,1069
+cv_doc_chunker-0.2.2.dist-info/METADATA,sha256=Ydyvn46qg_N9j0WATwWEo8cZGDEZYHw40KtpTnKJvAk,4946
+cv_doc_chunker-0.2.2.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+cv_doc_chunker-0.2.2.dist-info/top_level.txt,sha256=T9VjTwXEiYCqIYOT64OmLAgDxAINJ2cUwPVo7DcVEnQ,15
+cv_doc_chunker-0.2.2.dist-info/RECORD,,
