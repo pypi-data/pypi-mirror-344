@@ -1,0 +1,27 @@
+[project]
+name = "kiana"
+version = "0.2.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Xiaohua Zhang", email = "xiaohua.dev@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "bar",
+    "foo",
+]
+
+[project.scripts]
+kiana = "kiana:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.workspace]
+members = ["packages/foo", "packages/bar"]
+
+[tool.uv.sources]
+foo = { workspace = true }
+bar = { workspace = true }
