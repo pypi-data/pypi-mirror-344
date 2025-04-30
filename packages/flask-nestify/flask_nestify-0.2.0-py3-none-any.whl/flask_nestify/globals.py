@@ -1,0 +1,12 @@
+controllers = []
+injectables = {}
+methods_map = {}
+queries_map = {}
+pipes_map = {}
+bodies_map = {}
+data_transfer_objs = {}
+headers_map = {}
+response_map = {}
+http_code_map = {}
+decorators = {}
+ready = {}
