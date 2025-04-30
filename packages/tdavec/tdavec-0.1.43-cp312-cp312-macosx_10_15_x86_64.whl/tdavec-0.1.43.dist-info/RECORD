@@ -1,0 +1,11 @@
+tdavec/__init__.py,sha256=o-qtO3gZu0RPZ3svV-_ke9Ugr0qyZVPEtM0T7HABB24,400
+tdavec/tdavec_core.c,sha256=IRT4mv3OPkyyY7Rbhm_l9ufSDnW45Ky02fimfnHjAAM,2009748
+tdavec/tdavec_core.cpython-312-darwin.so,sha256=p7BU0va3i3SSlUvLHgYmc90NqcOZRyw4GFxyUxt4Fk4,475136
+tdavec/tdavec_core.pyx,sha256=ClyYaQ-SjyxivNz3-S915mtdOQTWlkvQ4l_m1Bc261k,25261
+tdavec/unit_test.py,sha256=LF5t4LGrISx3Cv4NGC2F2tdAqc1PB5yNUI1bR0VqN_Q,12298
+tdavec/vectorizer.py,sha256=PLPBpiPEcawrk4qjxXXMbeisJ10TgIErTveFXdamstk,7117
+tdavec-0.1.43.dist-info/licenses/LICENSE,sha256=qkMqFKex3g54YzVCFqmxoY7ifXsDbaUVFtWtnJeCJx8,1068
+tdavec-0.1.43.dist-info/METADATA,sha256=elrc5jax_FH5f_JJzwTOISFcmGS8wWuIe3vzb0Ah9VQ,7026
+tdavec-0.1.43.dist-info/WHEEL,sha256=1vi8GY6QOEq-5VHmcM7EOxM8Sl4LGYqi9TC5nAeYwbs,111
+tdavec-0.1.43.dist-info/top_level.txt,sha256=Z_sd0jf1Hp8k-bkKnevQ_MP12TCtLGuwqb8fQTXXrwE,7
+tdavec-0.1.43.dist-info/RECORD,,
