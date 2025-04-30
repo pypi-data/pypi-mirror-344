@@ -1,0 +1,8 @@
+pack_pip/__init__.py,sha256=pSACXWSGiozvvfAAsFsJ-Dk-qWckrJAlr9jTO6rzQSY,48
+pack_pip/cal.py,sha256=Cbo3nyb8IYIUPjiWlnILPY9YhhHYXzbIWPalBPt5Ss4,31
+pack_pip/version.py,sha256=Qs9tJnu9ox1ZVjUG8vgm8RqD00P9gLGcr_PD-wvKpbQ,15
+pack_pip-0.0.1.dist-info/licenses/LICENSE,sha256=ed-S4ExxzQb3zz5B5GxoXF-Y7dF-kvQbOchshH7Q33k,1089
+pack_pip-0.0.1.dist-info/METADATA,sha256=a2aAJ7K9t6SJI3WBv7PfiSkKta2ye86IGsMXXCIcwuA,755
+pack_pip-0.0.1.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+pack_pip-0.0.1.dist-info/top_level.txt,sha256=HobrGhiw5JHpxV6GONBVN2roTQa3EIFbmpOWntuOpW8,9
+pack_pip-0.0.1.dist-info/RECORD,,
