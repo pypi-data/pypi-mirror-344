@@ -1,0 +1,16 @@
+
+# pixi environments
+.pixi
+*.egg-info
+
+__pycache__
+*.DS_Store
+tests/test.gbff
+tests/plot.png
+tests/variants.fasta
+tests/variant_alignments.txt
+dist/
+tests/circle.svg
+tests/out.gbff
+tests/linear.svg
+tests/test.sh
