@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: TP-RequestFlows
+Version: 2025.4.30
+Home-page: https://github.com/tpcybersec/TP-RequestFlows
+Author: TP Cyber Security
+Author-email: tpcybersec2023@gmail.com
+License: MIT
+Keywords: TPCyberSec,TP-RequestFlows,Request Flows
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: json-duplicate-keys>=2024.12.12
+Requires-Dist: TP-HTTP-Request-Response-Parser>=2025.4.30
+Requires-Dist: TP-Requests>=2025.4.30
+
+# TP-RequestFlows - PyPI
+
+<p align="center">
+	<a href="https://github.com/tpcybersec/TP-RequestFlows/releases/"><img src="https://img.shields.io/github/release/tpcybersec/TP-RequestFlows" height=30></a>
+	<a href="#"><img src="https://img.shields.io/github/downloads/tpcybersec/TP-RequestFlows/total" height=30></a>
+	<a href="#"><img src="https://img.shields.io/github/stars/tpcybersec/TP-RequestFlows" height=30></a>
+	<a href="#"><img src="https://img.shields.io/github/forks/tpcybersec/TP-RequestFlows" height=30></a>
+	<a href="https://github.com/tpcybersec/TP-RequestFlows/issues?q=is%3Aopen+is%3Aissue"><img src="https://img.shields.io/github/issues/tpcybersec/TP-RequestFlows" height=30></a>
+	<a href="https://github.com/tpcybersec/TP-RequestFlows/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed/tpcybersec/TP-RequestFlows" height=30></a>
+	<br>
+	<a href="#"><img src="https://img.shields.io/pypi/v/TP-RequestFlows" height=30></a>
+	<a href="#"><img src="https://img.shields.io/pypi/dm/TP-RequestFlows" height=30></a>
+</p>
+
+## Installation
+#### From PyPI:
+```console
+pip install TP-RequestFlows
+```
+#### From Source:
+```console
+git clone https://github.com/tpcybersec/TP-RequestFlows.git --branch <Branch/Tag>
+cd TP-RequestFlows
+python setup.py build
+python setup.py install
+```
+
+## Basic Usage
+```
+import TP_RequestFlows
+```
