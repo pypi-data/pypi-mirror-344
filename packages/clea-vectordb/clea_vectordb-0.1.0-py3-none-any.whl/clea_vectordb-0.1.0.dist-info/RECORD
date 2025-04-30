@@ -1,0 +1,14 @@
+api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+api/database_endpoint.py,sha256=0tTxoVJdkR7Lg8bkDprn81tCSxFa_7VL4-KLn2T6NfY,3415
+api/search_endpoint.py,sha256=ed_rUgsN6ej5NswH7X7e75LKRFyr3WYsCMwwSTZsieo,1394
+clea_vectordb-0.1.0.dist-info/licenses/LICENSE,sha256=70vERwX00Cr_n0zBlT_pylgTCa1_Q7YZbFfBzQzzcE0,1064
+vectordb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vectordb/database.py,sha256=0I07bW122kkM4vu0sTVAFsmT3rlq-WugY4IjjVd77N4,10454
+vectordb/embeddings.py,sha256=JPzLGMBlHZID50v5wcdiI1gK0IjCzuic4z1OJ0zr5lI,2930
+vectordb/ranking.py,sha256=ce1XKvNr-9U00Y8C_V7SRFtRW7km9OZBQyUbJ0DER1k,2351
+vectordb/search.py,sha256=9TPqvwv8oxXyLQF_KHgnNZPe5Z138pqDo706zWUb-uI,8714
+clea_vectordb-0.1.0.dist-info/METADATA,sha256=uxiI7Ijr4zeljbN4uOOitJe6IAsZyGYntBJgIxSnET0,5246
+clea_vectordb-0.1.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+clea_vectordb-0.1.0.dist-info/entry_points.txt,sha256=Ymh7-BTxPIg_nVNsZetdAPD8GcjuKHHuzNE0h89bXv8,56
+clea_vectordb-0.1.0.dist-info/top_level.txt,sha256=plKLmOwlWr4Pvqp4-jAJT_1J9M_3grbxUWIIew7IZGM,13
+clea_vectordb-0.1.0.dist-info/RECORD,,
