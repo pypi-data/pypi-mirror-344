@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+
+
+[project]
+name = "vowelextractor_pip"
+version = "0.0.1"
+authors = [
+  { name="Suraj Kumar Sah", email="kumarsurajsah776@gmail.com" },
+]
+description = "A simple package to retrieve the Vowels in a given string"
+readme = "README.md"
+requires-python = ">=3.9"
+
+
+
+keywords = ["extract vowels", "vowels", "extract"] 
+
+
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.urls]
+Repository = "https://github.com/SurajSah776/learning-python"
+Homepage = "https://github.com/SurajSah776/learning-python"
