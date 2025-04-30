@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: valempas
+Version: 2.0
+Summary: Library sederhana untuk validasi email dan password
+Author-email: Rifki Taufikurrohman <rifkitmn23@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/rifkitaufikurrohman/valempas
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# valempas
+
+Library sederhana untuk validasi format email dan password (minimal 8 karakter, kombinasi huruf besar, kecil, angka, dan simbol).
+
+## Contoh Penggunaan
+
+```python
+from valempas import is_valid_email, is_valid_password
+
+print(is_valid_email("user@example.com"))         # True
+print(is_valid_password("Passw0rd!"))             # True
