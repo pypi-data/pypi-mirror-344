@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+thonny_data_visualization_Collins_v1.0.egg-info/PKG-INFO
+thonny_data_visualization_Collins_v1.0.egg-info/SOURCES.txt
+thonny_data_visualization_Collins_v1.0.egg-info/dependency_links.txt
+thonny_data_visualization_Collins_v1.0.egg-info/requires.txt
+thonny_data_visualization_Collins_v1.0.egg-info/top_level.txt
+thonnycontrib/data_visualization/__init__.py
+thonnycontrib/data_visualization/graphical_view.py
+thonnycontrib/data_visualization/hierarchical_view.py
+thonnycontrib/data_visualization/locals_variables_view.py
+thonnycontrib/data_visualization/representation_format.py
+thonnycontrib/data_visualization/sender.py
+thonnycontrib/data_visualization/Graphical/DB.py
+thonnycontrib/data_visualization/Graphical/graphic.py
