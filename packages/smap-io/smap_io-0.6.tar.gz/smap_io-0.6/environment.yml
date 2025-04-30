@@ -1,0 +1,20 @@
+name: smap_io
+channels:
+- conda-forge
+dependencies:
+- pip
+- pip:   # make sure that these match with the packages in setup.cfg
+  - numpy
+  - netCDF4
+  - h5py
+  - pyproj
+  - pandas
+  - pyresample
+  - ease-grid
+  - pygeobase
+  - pygeogrids
+  - repurpose
+  - trollsift==0.2.1
+  - pynetcf
+  - parse
+  - yapf
