@@ -1,0 +1,10 @@
+LICENCE
+README.md
+setup.py
+django_annotated_property/__init__.py
+django_annotated_property/annotated_property.py
+django_annotated_property.egg-info/PKG-INFO
+django_annotated_property.egg-info/SOURCES.txt
+django_annotated_property.egg-info/dependency_links.txt
+django_annotated_property.egg-info/requires.txt
+django_annotated_property.egg-info/top_level.txt
