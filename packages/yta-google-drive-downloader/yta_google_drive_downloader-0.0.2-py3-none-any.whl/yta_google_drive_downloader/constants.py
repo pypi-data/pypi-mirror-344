@@ -1,0 +1,17 @@
+DRIVE_RESOURCE_URL = 'https://drive.google.com/file/d/'
+"""
+The start of the sharable url to be able to detect
+it and obtain the id.
+"""
+DOWNLOAD_URL = 'https://docs.google.com/uc?export=download&confirm=1'
+"""
+The start of the sharable download url.
+"""
+CONFIRMATION_STRING = 'confirm=t'
+"""
+The confirmation string that allows Google Drive to
+download a file surpassing a new virus scan check.
+Check these links:
+- https://github.com/ndrplz/google-drive-downloader/pull/30
+- https://github.com/tensorflow/datasets/issues/3935#issuecomment-2067094366
+"""
