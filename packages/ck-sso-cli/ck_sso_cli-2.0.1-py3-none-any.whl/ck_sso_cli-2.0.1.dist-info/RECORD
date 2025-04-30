@@ -1,0 +1,11 @@
+ckssocli/__init__.py,sha256=r3V1hueosJQ649WRm59a4ngczWUaPWf5agoMiuhBTLQ,45
+ckssocli/ck_configuration.py,sha256=z7aVknKwuKJg5KFDWxhHdKx_DaiHEL07VoytiLAvgUg,2708
+ckssocli/ck_help.py,sha256=rHk23hWlM9dF_quyws5cCTD9s_PPaD6kXzeTEufrNqM,496
+ckssocli/ck_login.py,sha256=Pq5vYDxsyOPf05t_8AzW5WxZQZ_s732ecY_niRymV6Q,5522
+ckssocli/ck_sso_cli.py,sha256=qU49W5qt7VTzqnlr2Ikl6cNnLMMmPov2l9w7rRz-JTg,796
+ckssocli/version.py,sha256=gT6k9g5wV8rB9SMLN4nlllYfEyGcoFuqHjWuA1rPpkI,45
+ck_sso_cli-2.0.1.dist-info/LICENSE,sha256=gyvkvGgseeIyli6i9BfntWahjD_QaWUOPD-nHHyEq6U,11353
+ck_sso_cli-2.0.1.dist-info/METADATA,sha256=aabMx_daLrlAELw3TKL6KEQ2D1Oohcrzxg8LxaNns_I,362
+ck_sso_cli-2.0.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+ck_sso_cli-2.0.1.dist-info/top_level.txt,sha256=h7KCyK3GGLgmJ19B6IL46szN8aWMxlkSJpjG3nl6n5M,9
+ck_sso_cli-2.0.1.dist-info/RECORD,,
