@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: msrc-appconfig-attrs
+Version: 0.5.8
+Summary: Plugin for msrc-appconfig.
+Home-page: https://github.com/microsoft/msrc-appconfig
+Author: Vassily Lyutsarev
+Author-email: vassilyl@microsoft.com
+License: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: msrc-appconfig
+Requires-Dist: attrs
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# msrc-appconfig-attrs
+
+`msrc.appconfig` extension to use [`attra`](https://www.attrs.org/en/stable/) package to declare appconfig schema. 
