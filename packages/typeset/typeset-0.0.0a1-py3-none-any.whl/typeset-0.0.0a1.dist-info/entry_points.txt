@@ -1,0 +1,3 @@
+[console_scripts]
+typeset = typeset:main
+
