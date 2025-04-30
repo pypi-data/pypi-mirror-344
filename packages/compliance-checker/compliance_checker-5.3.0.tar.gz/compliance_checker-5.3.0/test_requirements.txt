@@ -1,0 +1,7 @@
+mocket>=3.13.3
+myst-parser
+numpydoc
+pydata-sphinx-theme
+pytest>=2.9.0
+pytest-vcr
+requests-mock>=1.7.0
