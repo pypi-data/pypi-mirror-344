@@ -1,0 +1,2 @@
+[console_scripts]
+sample-web-extractor = eb.server:main

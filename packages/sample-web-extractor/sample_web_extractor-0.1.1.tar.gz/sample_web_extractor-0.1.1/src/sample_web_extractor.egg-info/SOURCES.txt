@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/eb/__init__.py
+src/eb/server.py
+src/sample_web_extractor.egg-info/PKG-INFO
+src/sample_web_extractor.egg-info/SOURCES.txt
+src/sample_web_extractor.egg-info/dependency_links.txt
+src/sample_web_extractor.egg-info/entry_points.txt
+src/sample_web_extractor.egg-info/requires.txt
+src/sample_web_extractor.egg-info/top_level.txt
