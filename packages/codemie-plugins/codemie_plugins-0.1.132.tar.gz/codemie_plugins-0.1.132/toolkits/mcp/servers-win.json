@@ -1,0 +1,70 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "npx.cmd",
+        "-y",
+        "@modelcontextprotocol/server-filesystem"
+      ]
+    },
+    "puppeteer": {
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "npx.cmd",
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ]
+    },
+    "cli-mcp-server": {
+      "command": "uvx",
+      "args": [
+        "cli-mcp-server"
+      ],
+      "env": {
+        "ALLOWED_DIR": "TODO: folder to allow. Must be reworked",
+        "ALLOWED_COMMANDS": "all",
+        "ALLOWED_FLAGS": "all",
+        "MAX_COMMAND_LENGTH": "2048",
+        "COMMAND_TIMEOUT": "300",
+        "TIMEOUT": "300"
+      }
+    },
+    "slack": {
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "npx.cmd",
+        "@modelcontextprotocol/server-slack"
+      ],
+      "env": {
+        "SLACK_BOT_TOKEN": "your token",
+        "SLACK_TEAM_ID": "your team id"
+      }
+    },
+    "jetbrains": {
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "npx.cmd",
+        "-y",
+        "@jetbrains/mcp-proxy"
+      ],
+      "env": {
+        "LOG_ENABLED": "false"
+      }
+    },
+    "mcp-openapi-schema": {
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "npx.cmd",
+        "-y",
+        "mcp-openapi-schema",
+        "/abolute/path/to/json/openapi.json"
+      ]
+    }
+  }
+}
