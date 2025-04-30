@@ -1,0 +1,28 @@
+[project]
+name = "llm-cache-plugin"
+version = "0.1"
+description = "Check whether you've already run this prompt before calling the LLM"
+readme = "README.md"
+authors = [{name = "Kevin Schaul"}]
+license = "Apache-2.0"
+classifiers = []
+requires-python = ">=3.9"
+dependencies = [
+    "llm"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/kevinschaul/llm-cache-plugin"
+Changelog = "https://github.com/kevinschaul/llm-cache-plugin/releases"
+Issues = "https://github.com/kevinschaul/llm-cache-plugin/issues"
+CI = "https://github.com/kevinschaul/llm-cache-plugin/actions"
+
+[project.entry-points.llm]
+cache = "llm_cache"
+
+[project.optional-dependencies]
+test = ["pytest"]
