@@ -1,0 +1,21 @@
+[project]
+name = "shipzo_plus_hun"
+version = "0.1.6"
+description = "Shipzo Plus 기능을 제공하는 패키지"
+authors = [
+    {name = "hun0219", email = "gsw98000@gmail.com"},
+]
+dependencies = []
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm]
+distribution = true
+
+[project.urls]
+Homepage = "https://github.com/hun0219/shipzo_plus"
+Issues = "https://github.com/hun0219/shipzo_plus/Issues"
+
+[project.scripts]
+shipzo_plus='shipzo_plus.plus:main'
