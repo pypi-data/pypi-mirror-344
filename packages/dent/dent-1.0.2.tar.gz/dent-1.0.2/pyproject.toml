@@ -1,0 +1,43 @@
+[project]
+version = '1.0.2'
+name = 'dent'
+description = 'Enter interactive shells in Docker containers and manage persistent containers'
+authors = [
+    { name = 'Curt J. Sampson', email = 'cjs@cynic.net' },
+    { name = 'Nishant Rodrigues', email = 'nishantjr@gmail.com' },
+]
+readme = 'README.md'
+urls.homepage = 'https://github.com/cynic-net/dent'
+urls.source = 'https://github.com/cynic-net/dent'
+urls.tracker = 'https://github.com/cynic-net/dent/issues'
+
+requires-python = '>=3.8'
+dependencies = []
+
+####################################################################
+
+[project.scripts]
+dent            = 'dent.main:main'
+#   `dockerd-proxy` installation is handled by `setup.cfg`;
+#   see that file for important information on this.
+
+[build-system]
+requires = ['setuptools']
+build-backend = 'setuptools.build_meta'
+
+####################################################################
+
+[tool.mypy]
+#   This locks all typing syntax to the specified version, even if you're using
+#   a later version of Python. (You do not need to have the specified version
+#   of Python available.) This should match project.requires-python above.
+python_version = 3.8
+#   We must also have src/*/__init__.py files because mypy doesn't really
+#   understand namespace packages.
+files       = [ 'src', 'src/**/*.pt' ]
+#   Type-check the interior of functions without type annotations.
+check_untyped_defs  = true
+
+[tool.pytest.ini_options]
+testpaths = ['src']     # used only when pytest started from rootdir
+addopts   = ['-q', '-p pytest_pt', '--doctest-modules']
