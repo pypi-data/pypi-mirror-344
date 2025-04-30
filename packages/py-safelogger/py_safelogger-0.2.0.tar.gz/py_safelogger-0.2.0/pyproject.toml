@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py_safelogger"
+version = "0.2.0"
+description = "Biblioteca de logging estruturado para Python"
+authors = [
+    {name = "Bruno Schuster Fraga", email = "brunofraga_@outlook.com.br"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "python-json-logger",
+    "structlog"
+]
+
+[project.optional-dependencies]
+yaml = ["PyYAML>=6.0"]
+test = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+    "PyYAML>=6.0"
+]
+
+[tool.setuptools]
+packages = ["src", "src.filters", "src.handlers", "src.utils"] 
