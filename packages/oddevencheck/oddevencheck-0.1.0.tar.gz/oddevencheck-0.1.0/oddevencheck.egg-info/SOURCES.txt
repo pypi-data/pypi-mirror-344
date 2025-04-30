@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+OddEvenChecker/__init__.py
+OddEvenChecker/checker.py
+oddevencheck.egg-info/PKG-INFO
+oddevencheck.egg-info/SOURCES.txt
+oddevencheck.egg-info/dependency_links.txt
+oddevencheck.egg-info/top_level.txt
