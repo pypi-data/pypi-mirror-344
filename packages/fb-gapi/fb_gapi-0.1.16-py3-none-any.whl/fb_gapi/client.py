@@ -1,0 +1,246 @@
+import httpx
+from httpx import RetryPolicy
+from .exceptions import MessengerAPIError
+from .utils import (
+    message_payload,
+    attachment_payload_remote,
+    attachment_payload_local,
+    attachment_upload_local,
+    extract_chat_messages,
+)
+
+
+class MessengerClient:
+    """
+    A client for sending messages via the Facebook Messenger Send API.
+
+    Args:
+        access_token (str): Your Facebook Page access token.
+        api_version (str): Version of the Facebook Graph API to use (default: "v22.0").
+
+    Raises:
+        ValueError: If the access token is not provided.
+    """
+
+    def __init__(
+        self, access_token: str, api_version: str = "v22.0", max_retries: int = 3
+    ):
+        if not access_token:
+            raise ValueError("An access token must be provided.")
+        self.access_token = access_token
+        self.api_version = api_version
+        self.api_base_url = f"https://graph.facebook.com/{self.api_version}/me"
+
+        retry_policy = RetryPolicy(
+            retries=max_retries,
+            backoff_factor=0.5,  # exponential backoff starting from 0.5s
+            status_forcelist=[429, 500, 502, 503, 504],  # common FB server errors
+            allowed_methods=["GET", "POST"],
+        )
+
+        self.client = httpx.AsyncClient(
+            timeout=30.0, follow_redirects=True, retry=retry_policy
+        )
+
+    async def get_user_name(self, user_id: int) -> str:
+        """
+        Fetches the sender's name using their Facebook PSID.
+
+        Args:
+            user_id (int): The PSID of the user.
+
+        Returns:
+            str: Full name of the user.
+
+        Raises:
+            MessengerAPIError: If the API call fails.
+        """
+
+        url = f"https://graph.facebook.com/{self.api_version}/{user_id}"
+        params = {"access_token": self.access_token, "fields": "name"}
+
+        response = await self.client.get(url, params=params)
+        if response.status_code != 200:
+            await self._raise_api_error(response)
+
+        data = response.json()
+        return data.get("name", "")
+
+    async def send_text(self, recipient_id: int, message_text: str) -> dict:
+        """
+        Sends a plain text message to a Facebook user.
+
+        Args:
+            recipient_id (int): The PSID (Page-scoped ID) of the message recipient.
+            message_text (str): The text content of the message.
+
+        Returns:
+            dict: A JSON response from the Facebook API indicating success or failure.
+
+        Raises:
+            MessengerAPIError: If the API responds with an error.
+        """
+
+        url = f"{self.api_base_url}/messages"
+        payload = message_payload(recipient_id, message_text)
+        params = {"access_token": self.access_token}
+
+        response = await self.client.post(url, params=params, json=payload)
+        if response.status_code != 200:
+            await self._raise_api_error(response)
+
+        return response.json()
+
+    async def send_remote_attachment(self, recipient_id: int, image_url: str) -> dict:
+        """
+        Sends an image attachment to a Facebook user via a publicly accessible URL.
+
+        Args:
+            recipient_id (int): The PSID (Page-scoped ID) of the message recipient.
+            image_url (str): URL of the image to be sent as an attachment.
+
+        Returns:
+            dict: A JSON response from the Facebook API indicating success or failure.
+
+        Raises:
+            MessengerAPIError: If the API responds with an error.
+        """
+
+        url = f"{self.api_base_url}/messages"
+        payload = attachment_payload_remote(recipient_id, image_url)
+        params = {"access_token": self.access_token}
+
+        response = await self.client.post(url, params=params, json=payload)
+        if response.status_code != 200:
+            await self._raise_api_error(response)
+
+        return response.json()
+
+    async def send_local_attachment(self, recipient_id: int, file_path: str) -> dict:
+        """
+        Sends a local image file to a user by first uploading it and then sending via attachment_id.
+
+        Args:
+            recipient_id (int): The PSID of the user.
+            file_path (str): The path to the local image file.
+
+        Returns:
+            dict: Facebook API response JSON.
+
+        Raises:
+            MessengerAPIError: If any part of the upload or message send fails.
+        """
+
+        attachment_id = await self._upload_image(file_path)
+        return await self._send_image_by_attachment_id(recipient_id, attachment_id)
+
+    async def _upload_image(self, file_path: str) -> str:
+        """
+        Uploads a local image and returns the attachment_id.
+
+        Args:
+            file_path (str): Path to the local image file.
+
+        Returns:
+            str: Facebook-generated attachment_id.
+
+        Raises:
+            MessengerAPIError: If upload fails.
+        """
+
+        url = f"{self.api_base_url}/message_attachments"
+        params = {"access_token": self.access_token}
+        files = await attachment_upload_local(file_path)
+
+        try:
+            response = await self.client.post(url, params=params, files=files)
+            response.raise_for_status()
+            data = response.json()
+            attachment_id = data.get("attachment_id")
+
+            if not attachment_id:
+                raise MessengerAPIError(response.status_code, data)
+
+            return attachment_id
+
+        except httpx.RequestError as e:
+            raise MessengerAPIError(500, {"error": {"message": str(e)}})
+
+    async def _send_image_by_attachment_id(
+        self, recipient_id: int, attachment_id: str
+    ) -> dict:
+        """
+        Sends a message using a previously uploaded image attachment.
+
+        Args:
+            recipient_id (int): The PSID of the user.
+            attachment_id (str): The image attachment ID from Facebook.
+
+        Returns:
+            dict: Facebook API response.
+
+        Raises:
+            MessengerAPIError: If sending the message fails.
+        """
+
+        url = f"{self.api_base_url}/messages"
+        params = {"access_token": self.access_token}
+        payload = attachment_payload_local(recipient_id, attachment_id)
+
+        response = await self.client.post(url, params=params, json=payload)
+        if response.status_code != 200:
+            await self._raise_api_error(response)
+
+        return response.json()
+
+    async def get_chat_history(self, recipient_id: int, limit: int = None) -> list:
+        """
+        Fetches the latest incoming and outgoing messages from the Facebook Conversations API.
+
+        Args:
+            access_token (str): Facebook Page Access Token.
+            user_id (int): PSID to filter only the specific user's messages. Defaults to None.
+            limit (int, optional): Maximum number of messages to retrieve.
+
+        Returns:
+            list: A list of dictionaries with 'sender' and 'message' keys.
+        """
+
+        url = f"{self.api_base_url}/conversations"
+        params = {
+            "access_token": self.access_token,
+            "fields": "messages{message,from,created_time}",
+        }
+
+        response = await self.client.get(url, params=params)
+        if response.status_code != 200:
+            await self._raise_api_error(response)
+
+        fb_json = response.json()
+        messages_list = extract_chat_messages(recipient_id, fb_json)
+        messages_list.sort(key=lambda m: m.get("created_time", ""), reverse=True)
+
+        return messages_list[:limit]
+
+    async def _raise_api_error(self, response: httpx.Response):
+        """
+        Raises an exception with the error details from the API response.
+        Args:
+            response (httpx.Response): The HTTP response object.
+        Raises:
+            MessengerAPIError: Custom error class for handling API errors.
+        """
+
+        try:
+            error_json = response.json()
+        except Exception:
+            error_json = {"error": {"message": await response.aread()}}
+
+        raise MessengerAPIError(response.status_code, error_json)
+
+    async def aclose(self):
+        """
+        Closes the HTTP client connection.
+        """
+
+        await self.client.aclose()
