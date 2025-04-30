@@ -1,0 +1,9 @@
+pip_sequencer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pip_sequencer/cli.py,sha256=N-vCex74ukJknyCvh6GD38wvNqKd8daWpJ2g75814vI,11344
+pip_sequencer/history.py,sha256=yzFYNwYGeV1anm2dcxm8awnktlDHw_6pOjSWIiBn0eA,3453
+pip_sequencer/recorder.py,sha256=ekd6bZolmF8dGWNvPzAsddanVnPtWkCyX_yoxYhusf8,22756
+pip_sequencer-0.6.0.dist-info/METADATA,sha256=TEtm_6Pb-hFUn_94vTdecHjsCRaL0YC-VX2ZihDi788,10851
+pip_sequencer-0.6.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+pip_sequencer-0.6.0.dist-info/entry_points.txt,sha256=X0-ZM5E9m09qJXCczx3NoNeYJMh7UadvkNJs4b8B3kw,57
+pip_sequencer-0.6.0.dist-info/top_level.txt,sha256=kB5AkLWC1RPrSd66GRBXINVH5B4pZPzVRKTLnaYiS6g,14
+pip_sequencer-0.6.0.dist-info/RECORD,,
