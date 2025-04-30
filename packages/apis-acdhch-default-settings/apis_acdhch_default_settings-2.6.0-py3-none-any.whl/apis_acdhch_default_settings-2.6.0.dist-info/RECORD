@@ -1,0 +1,12 @@
+apis_acdhch_default_settings/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apis_acdhch_default_settings/ldapauth.py,sha256=P1NDgWG2Pp4JzqoETq3VDC3DtECoEIXWBA3Lzn6CUIA,423
+apis_acdhch_default_settings/querysets.py,sha256=3sqDRupDrDIxE2Oyf-7dC6BfU6p8pROzjN5KZPS3AQE,1203
+apis_acdhch_default_settings/settings.py,sha256=kxo4nU4tdj7XzFFnYM5wi2TP0YSZwZfMpDyapcbeYIQ,9297
+apis_acdhch_default_settings/urls.py,sha256=QOkc8QD0rEj0ftcJWJqVyO9qFAgVXrj1rl9R9jARSqc,1017
+apis_acdhch_default_settings/views.py,sha256=4fwNnkjH-X4T2zojGTFndxvznOl_3JavHbmpDLD6wOA,1022
+apis_acdhch_default_settings/templates/base.html,sha256=9W2T6xxGbNHdfhyjaKyiUBPi8n1hAyOC9ktCWqJNX4k,322
+apis_acdhch_default_settings/templates/imprint.html,sha256=juOqq6yzT9FMhjPjhbofDPZxRNO2fhOLlS478reFjE0,254
+apis_acdhch_default_settings-2.6.0.dist-info/METADATA,sha256=7lSqTSQPr01epoM1Pd-0-bdmO6JnWypz3sPXQJOTLYs,1343
+apis_acdhch_default_settings-2.6.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+apis_acdhch_default_settings-2.6.0.dist-info/licenses/LICENSE,sha256=cMJgiPvvZVbZQcWrf-s1Es1W2b8sxKA0C7HlD4n8_Oo,1146
+apis_acdhch_default_settings-2.6.0.dist-info/RECORD,,
