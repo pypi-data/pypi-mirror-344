@@ -1,0 +1,13 @@
+smap_io/__init__.py,sha256=YwyxVLH1HZMJgsfMnAgJ2HFniknlUq13mveS9L8rvRc,593
+smap_io/download.py,sha256=6Vbpo8rJVkpZpWVZR5mduCzzc74T9EE7zKhM-nu4Wxo,14472
+smap_io/grid.py,sha256=vz97x7elkoCKZI_bQywEl59T_sN7K-1bSBHfUT9tgzs,3091
+smap_io/interface.py,sha256=-69E59wfZqhoHHNawLbfDYlVJol9ElFs20UBVSIFxLU,25024
+smap_io/reshuffle.py,sha256=Y9SSgo2JR21un3WYziRVt_TV-6KhAYokHZMBRF-K-1E,10024
+smap_io/grids/ease36land.nc,sha256=bMnyd9ddl4RFcwu2NPS6EMRItNdaAqKGWbDneSlFl8M,101375
+smap_io-0.6.dist-info/licenses/AUTHORS.rst,sha256=nVPBFOo_ZmkCSE12KaZKEkm3MIUWxqI_olap487k12w,150
+smap_io-0.6.dist-info/licenses/LICENSE.txt,sha256=L6Xqbd8VZf5tzD5itWr52ka4jPkcU-aITGqcg0sC5fs,1095
+smap_io-0.6.dist-info/METADATA,sha256=BnwG51_tPJjOXTFZte7bEBzEdlWjMUz3ihskdWrjOCw,4365
+smap_io-0.6.dist-info/WHEEL,sha256=AeO2BvogYWm3eGaHCvhzmUYt8ia7KfURiHzO_1atlys,109
+smap_io-0.6.dist-info/entry_points.txt,sha256=2EGeJCb2KrhoGa4ax9bLREfB1nh5Xu6txGCaZmkuV3o,94
+smap_io-0.6.dist-info/top_level.txt,sha256=IZP16gJGtkxeqX6Vkf3prhQs-MkYAmftOcRvNht-iyg,8
+smap_io-0.6.dist-info/RECORD,,
