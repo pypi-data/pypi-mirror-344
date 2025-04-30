@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/ialog/__init__.py
+src/ialog/__main__.py
+src/ialog/cli.py
+src/ialog.egg-info/PKG-INFO
+src/ialog.egg-info/SOURCES.txt
+src/ialog.egg-info/dependency_links.txt
+src/ialog.egg-info/entry_points.txt
+src/ialog.egg-info/requires.txt
+src/ialog.egg-info/top_level.txt
+src/youcanpay/__init__.py
+src/youcanpay/client.py
