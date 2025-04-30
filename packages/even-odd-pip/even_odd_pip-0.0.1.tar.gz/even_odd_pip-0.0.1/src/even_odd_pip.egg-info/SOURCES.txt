@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/even_odd_pip/__init__.py
+src/even_odd_pip/odd_even_check.py
+src/even_odd_pip/version.py
+src/even_odd_pip.egg-info/PKG-INFO
+src/even_odd_pip.egg-info/SOURCES.txt
+src/even_odd_pip.egg-info/dependency_links.txt
+src/even_odd_pip.egg-info/top_level.txt
