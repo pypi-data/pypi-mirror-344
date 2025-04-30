@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: macrokeyd
+Version: 0.1.4
+Summary: Macro daemon for dedicated keyboards
+Author-email: Nhomar Hernandez <nhomar@gmail.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: evdev
+Requires-Dist: pyautogui
+Dynamic: license-file
