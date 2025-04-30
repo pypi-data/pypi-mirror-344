@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: twsemcp
+Version: 0.1.3
+Author-email: narumi <toucans-cutouts0f@icloud.com>
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: mcp>=1.6.0
+Requires-Dist: twse>=0.4.0
+Description-Content-Type: text/markdown
+
+# TWSE MCP Server
+
+### GitHub
+
+```json
+{
+  "mcpServers": {
+    "twsemcp": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/narumiruna/twse-mcp",
+        "twsemcp"
+      ]
+    }
+  }
+}
+```
+
+### Local
+
+```json
+{
+  "mcpServers": {
+    "twsemcp": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "/home/<user>/workspace/twse-mcp",
+        "twsemcp"
+      ]
+    }
+  }
+}
+```
