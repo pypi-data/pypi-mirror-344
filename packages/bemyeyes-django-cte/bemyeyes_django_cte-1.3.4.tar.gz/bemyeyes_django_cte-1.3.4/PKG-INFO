@@ -1,0 +1,61 @@
+Metadata-Version: 2.4
+Name: bemyeyes-django-cte
+Version: 1.3.4
+Summary: Common Table Expressions (CTE) for Django
+Author-email: Daniel Miller <millerdev@gmail.com>
+Requires-Python: >= 3.9
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5
+Classifier: Framework :: Django :: 5.0
+Classifier: Framework :: Django :: 5.1
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE
+Requires-Dist: django
+Requires-Dist: psycopg2-binary ; extra == "test"
+Requires-Dist: pytest-unmagic ; extra == "test"
+Requires-Dist: ruff ; extra == "test"
+Project-URL: Home, https://github.com/bemyeyes/bemyeyes-django-cte
+Provides-Extra: test
+
+# Common Table Expressions with Django
+
+[![PyPI version](https://badge.fury.io/py/bemyeyes-django-cte.svg)](https://badge.fury.io/py/bemyeyes-django-cte)
+
+## Installation
+
+```
+pip install bemyeyes-django-cte
+```
+
+## Documentation
+
+Fork of [django-cte documentation](https://dimagi.github.io/django-cte/) that doesn't support recursive CTEs
+
+## Publishing a new version to PyPI
+
+```
+[create new tag]
+uv pip install build
+rm -rf dist/ build/ *.egg-info
+uv run python -m build
+uv pip install twine
+uv run twine check dist/*
+uv run twine upload dist/*
+```
+
