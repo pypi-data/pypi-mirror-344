@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+animact/__init__.py
+animact.egg-info/PKG-INFO
+animact.egg-info/SOURCES.txt
+animact.egg-info/dependency_links.txt
+animact.egg-info/requires.txt
+animact.egg-info/top_level.txt
