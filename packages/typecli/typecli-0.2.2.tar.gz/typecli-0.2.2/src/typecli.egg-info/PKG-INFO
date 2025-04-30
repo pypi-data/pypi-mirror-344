@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: typecli
+Version: 0.2.2
+Summary: A declarative CLI Parser
+Author-email: peichenzh <1981336562@qq.com>
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# typecli
+
+A declarative CLI Parser.
