@@ -1,0 +1,2 @@
+[console_scripts]
+dm-jira-validator = dm_jira_validator:validate_ticket
