@@ -1,0 +1,91 @@
+Metadata-Version: 2.4
+Name: mcp-server-moralis-bacar
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: build>=1.2.2.post1
+Requires-Dist: dotenv>=0.9.9
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: moralis>=0.1.49
+Requires-Dist: twine>=6.1.0
+
+# Moralis MCP工具
+
+这个项目封装了Moralis Web3 Data API为MCP (Model Context Protocol) 工具，使得AI助手可以轻松访问区块链数据。
+
+## 功能特点
+
+- 封装了Moralis EVM API的主要功能
+- 提供了简单易用的接口，用于查询区块链数据
+- 支持钱包、代币、NFT、交易等数据的获取
+- 支持域名解析服务
+
+## 安装与配置
+
+1. 克隆此仓库
+2. 安装依赖：
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. 创建`.env`文件并设置Moralis API密钥：
+   ```
+   MORALIS_API_KEY=your_api_key_here
+   ```
+
+## 使用方法
+
+启动MCP服务器：
+
+```bash
+python main.py
+```
+
+## 可用工具
+
+本MCP服务器提供以下工具：
+
+### Wallet API
+- `get_wallet_history`: 获取钱包历史记录
+- `get_wallet_token_balances`: 获取钱包代币余额
+- `get_native_balance`: 获取钱包原生代币余额
+
+### NFT API
+- `get_wallet_nfts`: 获取钱包持有的NFT
+- `get_nft_metadata`: 获取NFT元数据
+
+### Token API
+- `get_token_price`: 获取代币价格
+- `get_token_metadata`: 获取代币元数据
+
+### 区块链API
+- `get_block`: 获取区块信息
+- `get_transaction`: 获取交易信息
+
+### 域名解析API
+- `resolve_domain`: 将域名解析为地址
+- `resolve_address`: 将地址解析为域名
+
+## 示例用法
+
+以下是一些示例用法，展示如何使用AI助手调用这些工具：
+
+```
+# 查询钱包ETH余额
+get_native_balance(address="0x1234...")
+
+# 获取NFT元数据
+get_nft_metadata(address="0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB", token_id="3931")
+
+# 查询ENS域名
+resolve_domain(domain="vitalik.eth")
+```
+
+## 许可证
+
+MIT
+## 开发者
+
+如需更多信息，请联系项目开发者。
+

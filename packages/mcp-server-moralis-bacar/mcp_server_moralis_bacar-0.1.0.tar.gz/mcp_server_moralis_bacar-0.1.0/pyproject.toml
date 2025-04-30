@@ -1,0 +1,28 @@
+[project]
+name = "mcp-server-moralis-bacar"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "build>=1.2.2.post1",
+    "dotenv>=0.9.9",
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.6.0",
+    "moralis>=0.1.49",
+    "twine>=6.1.0",
+]
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+line-length = 100
+
+[project.scripts]
+mcp-server-moralis-bacar = "main:main"
