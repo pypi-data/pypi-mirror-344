@@ -1,0 +1,11 @@
+bemyeyes_django_cte/__init__.py,sha256=t-tYYHiMiG0qZmeWuq6GLeXoNtz1YkHIp-2R139c6Z8,78
+bemyeyes_django_cte/cte.py,sha256=hcjOZW63UbVqKVzo2RaZ8GUl6nJk1JsUmskluvjsVXU,5807
+bemyeyes_django_cte/expressions.py,sha256=taT2trCz4z0YmOGVXzR9XXquPR43OH6xghNWAplc3lM,1930
+bemyeyes_django_cte/join.py,sha256=HrO31WKx3j5RiEWf7dDOXbBfeeUPFEbNLo3gzzt3qbo,3164
+bemyeyes_django_cte/meta.py,sha256=PIu7iW_tu3gBCpiBRfVHvuJKSSND2IsaNhoT01WEEJM,3535
+bemyeyes_django_cte/query.py,sha256=U3OF6lVEctrfz4bIDuoglplCVo4rhbbaLJ719eRkA6Y,8179
+bemyeyes_django_cte/raw.py,sha256=nROVPEVRc3_zKAFcED6KR8Rr6FTTn8jQDFQWfi-X3-A,1077
+bemyeyes_django_cte-1.3.4.dist-info/licenses/LICENSE,sha256=mkLNw_QhpZ40jBEbuAosqH4ciA3KMrwb8aSYbTmy5gc,1508
+bemyeyes_django_cte-1.3.4.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+bemyeyes_django_cte-1.3.4.dist-info/METADATA,sha256=JLViGL2OfwpVMVvNoGsyKhif2W6qpRwrUVmZfAad7zQ,1963
+bemyeyes_django_cte-1.3.4.dist-info/RECORD,,
