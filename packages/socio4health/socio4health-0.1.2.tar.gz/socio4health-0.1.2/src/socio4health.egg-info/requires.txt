@@ -1,0 +1,17 @@
+pandas
+requests
+Scrapy
+tqdm
+pyreadstat
+py7zr
+matplotlib
+numpy
+openpyxl
+dask
+appdirs
+
+[dev]
+check-manifest
+
+[test]
+coverage
