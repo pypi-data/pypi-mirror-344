@@ -1,0 +1,2 @@
+[console_scripts]
+dent = dent.main:main
