@@ -1,0 +1,2 @@
+[console_scripts]
+fastdomaincheck-server = fastdomaincheck_mcp_server.server:run_server

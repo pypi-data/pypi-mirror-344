@@ -1,0 +1,135 @@
+# FastDomainCheck MCP Server (Python)
+
+This is a domain availability check server implemented using Python and the Model Context Protocol (MCP).
+It provides MCP Tools to check if single or multiple domain names are already registered.
+
+This project aims to provide the same functionality as the Go language implementation located in the `go-version` directory.
+
+## Features
+
+*   Check domain registration status via MCP Tool interface.
+*   Supports checking single domains.
+*   Supports batch checking multiple domains.
+*   Uses the `python-whois` library for WHOIS lookups and `socket` for DNS lookups as a fallback/confirmation.
+
+## Dependencies
+
+*   Python 3.8+
+*   `mcp[cli]` (Model Context Protocol SDK and command-line tool)
+*   `python-whois` (For performing WHOIS queries)
+
+## Installation
+
+It is recommended to use a Python virtual environment.
+
+1.  **Clone the repository** (if you haven't already):
+    ```bash
+    git clone <your-repo-url>
+    cd FastDomainCheck-MCP-Server-python
+    ```
+
+2.  **Create and activate a virtual environment** (recommended):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # Linux/macOS
+    # venv\Scripts\activate  # Windows
+    ```
+
+3.  **Install dependencies** (using uv or pip):
+    *Using uv:*
+    ```bash
+    # Ensure uv is installed: pip install uv
+    uv pip install -r requirements.txt
+    # Or, if you don't have requirements.txt yet, add individually:
+    # uv pip install "mcp[cli]" python-whois
+    ```
+    *Using pip:*
+    ```bash
+    pip install -r requirements.txt
+    # Or, if you don't have requirements.txt yet, add individually:
+    # pip install "mcp[cli]" python-whois
+    ```
+    *(Generate `requirements.txt` using `uv pip freeze > requirements.txt` or `pip freeze > requirements.txt` after installing dependencies)*
+
+## Running the Server
+
+There are multiple ways to run the server:
+
+1.  **Using the MCP Runner (Recommended for development):**
+    ```bash
+    mcp run server.py
+    ```
+
+2.  **Directly using Python (if uvicorn is installed):**
+    ```bash
+    python server.py
+    ```
+
+3.  **Using the installed script (After installing the package):**
+    First, install the package locally:
+    ```bash
+    # Using uv
+    uv pip install .
+    # Or using pip
+    # pip install .
+    ```
+    Then, run the command:
+    ```bash
+    fastdomaincheck-server
+    ```
+
+4.  **Using `uvx` (Executes the package in an isolated environment):**
+    ```bash
+    uvx fastdomaincheck-mcp-server
+    ```
+
+The server will listen for MCP connections on `http://127.0.0.1:8000` by default when run with `uvicorn` (methods 2, 3, 4).
+
+## Usage (MCP Tools)
+
+When the server is running, MCP-compatible clients can connect and invoke the following tools:
+
+### 1. `check_domain`
+
+Checks the availability of a single domain.
+
+*   **Arguments**:
+    *   `domain` (str): The domain name to check (e.g., "google.com").
+*   **Returns**: (str)
+    *   `"available"`: The domain is available for registration.
+    *   `"registered"`: The domain is already registered.
+    *   `"error: <reason>"`: An error occurred during the query.
+
+### 2. `check_domains`
+
+Checks the availability of multiple domains in batch.
+
+*   **Arguments**:
+    *   `domains` (list[str]): A list of domain names to check (e.g., `["google.com", "availabledomain123.org"]`).
+*   **Returns**: (dict[str, str])
+    *   A dictionary where keys are domain names and values are their status (`"available"`, `"registered"`, or `"error: <reason>"`).
+    *   Example: `{"google.com": "registered", "availabledomain123.org": "available"}`
+
+## Running Tests
+
+To run the unit tests, execute the following command in the project root directory:
+
+```bash
+python -m unittest discover tests
+```
+Or run the specific test file:
+```bash
+python -m unittest tests/test_checker.py
+```
+
+## Go Version Reference
+
+This project's functionality is intended to match the Go language implementation located in the `go-version` directory.
+
+## Contributing
+
+Feel free to open issues or submit pull requests.
+
+## License
+
+[MIT License](LICENSE) *(You should add a LICENSE file, typically containing the MIT license text)*
