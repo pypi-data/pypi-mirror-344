@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+mcp_agent_connector/__init__.py
+mcp_agent_connector/main.py
+mcp_agent_connector.egg-info/PKG-INFO
+mcp_agent_connector.egg-info/SOURCES.txt
+mcp_agent_connector.egg-info/dependency_links.txt
+mcp_agent_connector.egg-info/top_level.txt
