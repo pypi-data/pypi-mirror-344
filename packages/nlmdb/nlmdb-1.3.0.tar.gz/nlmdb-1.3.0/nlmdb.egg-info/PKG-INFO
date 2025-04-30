@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: nlmdb
+Version: 1.3.0
+Summary: Model Context Protocol Library for database operations
+Author: Rakshith Dharmappa
+Author-email: rakshith.officialmail@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Database
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Requires-Dist: openai>=1.0.0
+Requires-Dist: langchain>=0.1.0
+Requires-Dist: langchain-core>=0.1.0
+Requires-Dist: langchain-community>=0.0.0
+Requires-Dist: langchain-experimental>=0.0.0
+Requires-Dist: langchain-huggingface>=0.0.1
+Requires-Dist: timm
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
