@@ -1,0 +1,10 @@
+game_bot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+game_bot/mouse_control.py,sha256=paf-dQ2PanlkpQgaDz2-JsUakeCoAhui_tZCE9acTl4,12355
+game_bot/picker.py,sha256=B2tZZ_SCRCAwKi2G5wx9QaNmVMUuBnZK824e2P4fDbU,20654
+game_bot/picture.py,sha256=QJ9m0Bg7QflMpz9yyxc5HxBKu_BSIyZUjNS3s4bWKKk,14100
+game_bot/window_control.py,sha256=Z4cp50VdsY2QEMLu81pfzFa2wxSE53McVGGVPrh7W-Q,4977
+game_bot-0.1.1.dist-info/METADATA,sha256=-UjWpZGe9DHJWZtF1UCN6SKMsZmMCn9ErGWo3MlSyWA,363
+game_bot-0.1.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+game_bot-0.1.1.dist-info/entry_points.txt,sha256=_92noYbqJN5_OuUPiM62C4KFh4vqGzmD4zP8sD39Vkk,48
+game_bot-0.1.1.dist-info/top_level.txt,sha256=0Ewu3_rJ5aUIgoz6ImHp3jPPbdoNYlQs60VMbAgYrD8,9
+game_bot-0.1.1.dist-info/RECORD,,
