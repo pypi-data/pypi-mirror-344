@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+adb_mcp.egg-info/PKG-INFO
+adb_mcp.egg-info/SOURCES.txt
+adb_mcp.egg-info/dependency_links.txt
+adb_mcp.egg-info/top_level.txt
