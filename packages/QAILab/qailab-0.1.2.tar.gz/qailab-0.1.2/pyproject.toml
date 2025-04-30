@@ -1,0 +1,28 @@
+[project]
+name = "QAILab"
+version = "0.1.2"
+description = "Library providing easy to use PyTorch compatible Quantum Neural Network Layers for both universal and photonic quantum computers."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "qiskit>=1.4.0,<2.0",
+    "qiskit-machine-learning>=0.8.2",
+    "torch",
+    "tqdm",
+    "scikit-learn",
+    "pandas",
+    "requests",
+    "quantum_launcher"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["qailab*"]
+
+[project.optional-dependencies]
+test = ["pytest", "pylint", "pre-commit"]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
