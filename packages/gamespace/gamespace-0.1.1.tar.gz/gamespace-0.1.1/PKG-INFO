@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: gamespace
+Version: 0.1.1
+Summary: A simpler way to use pygame
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: pygame>=2.6.1

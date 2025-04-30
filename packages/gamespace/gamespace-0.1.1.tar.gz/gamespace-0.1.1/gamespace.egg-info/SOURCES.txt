@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+gamespace.egg-info/PKG-INFO
+gamespace.egg-info/SOURCES.txt
+gamespace.egg-info/dependency_links.txt
+gamespace.egg-info/requires.txt
+gamespace.egg-info/top_level.txt
