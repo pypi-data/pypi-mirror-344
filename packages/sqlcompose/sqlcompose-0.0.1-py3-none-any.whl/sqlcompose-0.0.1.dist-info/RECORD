@@ -1,0 +1,10 @@
+sqlcompose/__init__.py,sha256=yAFSzkLv3bCZ6e4OWvws6aYjwHfLQcxhGVzK12Fs_CQ,89
+sqlcompose/__main__.py,sha256=5TpsgP8V1SC14siCyUcHdEYWm9vDwxaUtqUgCC5f_4w,691
+sqlcompose/core/compat.py,sha256=pIF8Lk-5MhwAlHD4_RCMXYOxiDyTJIA5nlbR5_Dyw0g,819
+sqlcompose/core/functions.py,sha256=eHK_STVYOGDn3dtShTa0xaasYQi220tF12bQH9qEEUI,3693
+sqlcompose/core/include.py,sha256=ejNaz2p2Lq1pUnwMxtBqE4p_hBOtG8OynqRpECLEbNQ,541
+sqlcompose-0.0.1.dist-info/LICENSE,sha256=WtJk2ScYuo_lEP42z3DYU191mO2oU8z00nPsL9KAWCQ,1063
+sqlcompose-0.0.1.dist-info/METADATA,sha256=Q8w60-kDLGxodCMOL7KMClnrrIblWfJlypJ2h2fDNm0,2403
+sqlcompose-0.0.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+sqlcompose-0.0.1.dist-info/entry_points.txt,sha256=N3eGXJzvw5yx5WgFFmX0L6Nw0-ojm90OfhtlC-C6t_4,51
+sqlcompose-0.0.1.dist-info/RECORD,,

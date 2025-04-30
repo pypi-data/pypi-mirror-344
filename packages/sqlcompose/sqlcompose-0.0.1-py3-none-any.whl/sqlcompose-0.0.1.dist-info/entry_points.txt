@@ -1,0 +1,3 @@
+[console_scripts]
+sqlcompose=sqlcompose.main:main
+
