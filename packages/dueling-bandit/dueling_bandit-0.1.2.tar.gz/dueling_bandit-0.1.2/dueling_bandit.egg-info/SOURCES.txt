@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+dueling_bandit/__init__.py
+dueling_bandit/agents.py
+dueling_bandit/datasets.py
+dueling_bandit/environment.py
+dueling_bandit/experiments.py
+dueling_bandit/plotting.py
+dueling_bandit.egg-info/PKG-INFO
+dueling_bandit.egg-info/SOURCES.txt
+dueling_bandit.egg-info/dependency_links.txt
+dueling_bandit.egg-info/requires.txt
+dueling_bandit.egg-info/top_level.txt
+tests/test_environment.py
