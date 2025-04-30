@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scanux"
+version = "1.0.13"
+authors = [
+  { name="Yassir AIT EL AIZZI", email="yassir.Aitelaizzi@gmail.com" },
+]
+description = "System security and performance scanner"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: System Administrators",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "psutil>=5.9.0",
+    "python-nmap>=0.7.1",
+    "netifaces>=0.11.0",
+    "rich>=13.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yassir-aitelaizzi/scanux"
+Issues = "https://github.com/yassir-aitelaizzi/scanux/issues"
+
+[project.scripts]
+scanux = "scanux.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["scanux", "scanux.core", "scanux.modules"]
+
+[project.entry-points.console_scripts]
+scanux = "scanux.cli:main" 
