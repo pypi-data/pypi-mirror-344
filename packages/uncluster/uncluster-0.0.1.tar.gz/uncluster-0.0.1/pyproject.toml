@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "uncluster"
+version = "0.0.1"
+description = "Mirror a remote folder locally via rsync."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Yi Zhang", email = "yizhang.dev@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = ["pexpect", "python-dotenv"]
+
+[project.urls]
+Repository = "https://github.com/imyizhang/uncluster"
+
+[project.optional-dependencies]
+dev = ["ruff"]
+
+[project.scripts]
+uncluster = "uncluster.__main__:main"
