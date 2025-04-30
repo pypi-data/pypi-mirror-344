@@ -1,0 +1,13 @@
+XStatic_jQuery-3.5.1.1-py3.13-nspkg.pth,sha256=dPPL1-j8jZrCgMSdQ85VAIdcjF_uMUCSOXlcXpFomsY,1014
+xstatic/pkg/jquery/__init__.py,sha256=S2ax5YnUgL6Tu2FqMCMLnW6GNWebBjYFmrVZeuYSq6A,3500
+xstatic/pkg/jquery/data/jquery.js,sha256=QWo7LDvxbWT2tbbQ97B53yJnYU3WhH_C8ycbRAkjPDc,287630
+xstatic/pkg/jquery/data/jquery.min.js,sha256=9_aliU8dGd2tb6OSsuzixeV4y_faTqgFtohetphbbj0,89476
+xstatic/pkg/jquery/data/jquery.min.map,sha256=UR1vbT56zseM0lBfBCgrbgEym0wkkx852Rc50NHd7vg,137986
+xstatic/pkg/jquery/data/jquery.slim.js,sha256=DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM,234458
+xstatic/pkg/jquery/data/jquery.slim.min.js,sha256=4-XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs,72380
+xstatic/pkg/jquery/data/jquery.slim.min.map,sha256=5zlV35DZ_uM2-bv3PZuMb6MmfMtu7jv9p-4u3aUaT-k,110382
+xstatic_jquery-3.5.1.1.dist-info/METADATA,sha256=k2YnClk0Rj5fz5bvnkHTuIiZuPARZXrzqgKPzmJailk,888
+xstatic_jquery-3.5.1.1.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+xstatic_jquery-3.5.1.1.dist-info/namespace_packages.txt,sha256=oP6kTUKNrWkfPGcNNMQWOlBu3vuiEsAVYT4dUN1V4Hg,20
+xstatic_jquery-3.5.1.1.dist-info/top_level.txt,sha256=tDpXyaHF81JGnzDNskkXZNoFrs3YW_a1ueuzoAmLNas,8
+xstatic_jquery-3.5.1.1.dist-info/RECORD,,
