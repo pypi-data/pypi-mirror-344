@@ -1,0 +1,35 @@
+---
+- name: Initialize Docker Swarm Cluster
+  hosts: leader
+  gather_facts: no
+  become: yes
+  vars:
+    host_ip: "0.0.0.0"  # 默认值
+    task_name: "vllm-musa"
+    model_path: "/data"
+    musa_develop_arguments: ""
+    disable_kuae_chat: ""
+
+  tasks:
+    - name: Copy stack.yaml to /tmp/
+      command: sudo musa-develop-ansible --generate-stack-yaml {{ musa_develop_arguments }}
+      register: swarm_status
+      changed_when: false
+      ignore_errors: yes
+
+    - name: Copy shell script to /tmp/
+      command: sudo musa-develop-ansible --generate-shell-script
+      register: swarm_status
+      changed_when: false
+      ignore_errors: yes
+
+    - name: generate kuae-chat models.json to /tmp/
+      command: sudo musa-develop-ansible {{ disable_kuae_chat }} --host-leader-ip {{ host_ip }} --task {{ task_name }}
+      register: swarm_status
+      changed_when: false
+      ignore_errors: yes
+
+    - name: Check Swarm status
+      shell: docker stack rm {{ task_name }} && MODEL_PATH={{ model_path }} HOST_IP={{ host_ip }} docker stack deploy -c /tmp/stack_template.yaml {{ task_name }}
+      changed_when: false
+      ignore_errors: yes
