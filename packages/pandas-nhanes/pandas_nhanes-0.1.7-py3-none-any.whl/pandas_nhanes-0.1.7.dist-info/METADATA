@@ -1,0 +1,80 @@
+Metadata-Version: 2.4
+Name: pandas_nhanes
+Version: 0.1.7
+Summary: A Python API for accessing NHANES data
+Home-page: https://github.com/jeromevde/pandas_nhanes
+Author: Jerome
+Author-email: 
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: requests>=2.32.3
+Requires-Dist: tqdm>=4.66.4
+Requires-Dist: itables>=2.3.0
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Pandas-Nhanes
+
+A Python package for accessing a cleaned subset of NHANES 
+*National Health and Nutrition Examination Survey* data for quick prototyping—no API key required.
+
+Caching is implemented to avoid re-downloading datasets.
+
+## Installation
+
+Install from PyPI:
+
+```bash
+pip install pandas_nhanes
+```
+
+Or from source:
+
+```bash
+git clone https://github.com/jeromevde/pandas_nhanes.git
+cd pandas_nhanes
+pip install -e .
+```
+
+## Usage
+
+```python
+from pandas_nhanes import get_variables, get_dataset, explore
+```
+```python
+# Get the full NHANES variable table
+variables = get_variables()
+```
+
+```python
+# Explore the variables table in an interactive HTML table in browser
+explore()
+```
+```python
+# Download a dataset as a pandas DataFrame
+TST_L = get_dataset("TST_L")
+```
+
+## Results
+
+### Cycle 2021-2023 Estradiol
+![estradiol](Examples/estradiol.png)
+
+### Cycle 2021-2023 Testosterone
+![testosterone](Examples/testosterone.png)
