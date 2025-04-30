@@ -1,0 +1,12 @@
+setup.py
+JunoMalacards/__init__.py
+JunoMalacards/core.py
+JunoMalacards/dow_html.py
+JunoMalacards/get_ip.py
+JunoMalacards/get_url.py
+JunoMalacards.egg-info/PKG-INFO
+JunoMalacards.egg-info/SOURCES.txt
+JunoMalacards.egg-info/dependency_links.txt
+JunoMalacards.egg-info/entry_points.txt
+JunoMalacards.egg-info/requires.txt
+JunoMalacards.egg-info/top_level.txt
