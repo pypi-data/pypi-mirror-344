@@ -1,0 +1,3 @@
+[console_scripts]
+i2reg = image2image_reg.cli:main
+iwsireg = image2image_reg.cli:main
