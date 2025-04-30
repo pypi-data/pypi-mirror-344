@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: gadfastcron
+Version: 0.0.1
+Summary: Wrapper around APScheduler for managing scheduled tasks.
+Home-page: https://github.com/AlexDemure/gadfastcron
+Author: Alexander Grishchenko
+Author-email: alexanderdemure@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: apscheduler
+
+<p align="center">
+  <a href="https://github.com/AlexDemure/gadfastcron">
+    <a href="https://ibb.co/24XqKh3"><img src="https://i.ibb.co/rrnky02/logo.png" alt="logo" border="0"></a>
+  </a>
+</p>
+
+<p align="center">
+  Wrapper around APScheduler for managing scheduled tasks
+</p>
+
+---
+
+## Installation
+
+```
+pip install gadfastcron
+```
+
+## Usage
+
+```python
+import contextlib
+
+from fastapi import FastAPI
+
+from gadfastcron import Cron
+from gadfastcron import jobstores, triggers
+
+def func():
+    print('test')
+
+cron = Cron(
+    jobstores.Sqlalchemy(dsn).store,
+    (func, triggers.cron.everyday()), 
+)
+
+@contextlib.asynccontextmanager
+async def lifespan(_: FastAPI):
+    cron.start()
+    yield
+    cron.shutdown()
+
+
+app = FastAPI(lifespan=lifespan)
+```

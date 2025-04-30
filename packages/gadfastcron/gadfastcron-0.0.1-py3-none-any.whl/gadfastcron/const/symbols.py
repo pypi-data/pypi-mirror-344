@@ -1,0 +1,2 @@
+SYMBOL_FORWARD_SLASH = "/"
+SYMBOL_DOT = "."
