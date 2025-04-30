@@ -1,0 +1,7 @@
+numpy
+scipy
+tqdm
+jax
+ultranest
+corner
+matplotlib
