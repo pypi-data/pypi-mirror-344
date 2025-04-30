@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: librosax
+Version: 0.0.4
+Summary: Librosa in JAX
+Home-page: https://github.com/DBraun/librosax
+Author: David Braun
+Author-email: David Braun <braun@ccrma.stanford.edu>
+Project-URL: Homepage, https://github.com/DBraun/librosax
+Project-URL: Issues, https://github.com/DBraun/librosax/issues
+Keywords: audio,machine learning,jax
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: einops
+Requires-Dist: jax-ai-stack>=2025.2.5
+Requires-Dist: librosa>=0.10.1
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: torch; extra == "dev"
+Requires-Dist: torchlibrosa; extra == "dev"
+Dynamic: license-file
+
+# librosax
+
+We implement several functions from [Librosa](https://github.com/librosa/librosa) and [TorchLibrosa](https://github.com/qiuqiangkong/torchlibrosa) in JAX and test them for consistency.
+
+## Installation
+
+```bash
+pip install librosax
+```
+
+## Documentation
+
+Documentation is [here](http://dirt.design/librosax).

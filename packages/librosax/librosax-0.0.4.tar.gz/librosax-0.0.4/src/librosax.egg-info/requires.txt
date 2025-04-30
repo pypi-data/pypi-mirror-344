@@ -1,0 +1,11 @@
+einops
+jax-ai-stack>=2025.2.5
+librosa>=0.10.1
+numpy
+scipy
+
+[dev]
+pytest
+pytest-cov
+torch
+torchlibrosa
