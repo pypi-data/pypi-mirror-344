@@ -1,0 +1,13 @@
+deprecated
+pandas
+pz-rail-base>=1.0.3
+scikit-learn
+minisom
+somoclu
+
+[dev]
+qp-prob[full]
+pytest
+pytest-cov
+pre-commit
+pylint
