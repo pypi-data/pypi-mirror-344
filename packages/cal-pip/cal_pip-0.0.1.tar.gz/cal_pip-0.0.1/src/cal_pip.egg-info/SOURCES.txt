@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/cal_pip/__init__.py
+src/cal_pip/val.py
+src/cal_pip/version.py
+src/cal_pip.egg-info/PKG-INFO
+src/cal_pip.egg-info/SOURCES.txt
+src/cal_pip.egg-info/dependency_links.txt
+src/cal_pip.egg-info/top_level.txt
