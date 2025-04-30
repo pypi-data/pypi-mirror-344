@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: tortillapatata-fibo
+Version: 0.1.1
+Summary: Simple Fibonacci generator
+Author-email: Alper <alper.bingol97@gmail.com>
+License: MIT
+Keywords: fibonacci,cli,math
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# tortillapatata-fibo
+
+A simple Fibonacci CLI tool.
+
+## Usage
+
+Install it:
+
+```bash
+pip install -i https://test.pypi.org/simple/ tortillapatata-fibo==0.1.0
+```
+Run it:
+
+```
+fibo 50 or fibo 50 --print
+
+```
