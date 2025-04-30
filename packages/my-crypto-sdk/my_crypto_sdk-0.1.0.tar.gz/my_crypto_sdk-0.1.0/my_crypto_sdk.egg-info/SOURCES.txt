@@ -1,0 +1,9 @@
+README.md
+setup.py
+crypto_sdk/__init__.py
+crypto_sdk/sentiment.py
+my_crypto_sdk.egg-info/PKG-INFO
+my_crypto_sdk.egg-info/SOURCES.txt
+my_crypto_sdk.egg-info/dependency_links.txt
+my_crypto_sdk.egg-info/requires.txt
+my_crypto_sdk.egg-info/top_level.txt

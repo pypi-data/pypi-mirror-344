@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: my-crypto-sdk
+Version: 0.1.0
+Summary: SDK for MongoDB sentiment access
+Home-page: https://pypi.org/project/my-crypto-sdk/
+Author: afaan
+Author-email: afaan@bayes.global
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pymongo>=3.12
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# crypto-sdk
+
+A simple Python SDK to access sentiment scores from MongoDB.
