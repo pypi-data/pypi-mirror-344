@@ -1,0 +1,8 @@
+setup.py
+game_bot.egg-info/PKG-INFO
+game_bot.egg-info/SOURCES.txt
+game_bot.egg-info/dependency_links.txt
+game_bot.egg-info/entry_points.txt
+game_bot.egg-info/requires.txt
+game_bot.egg-info/top_level.txt
+tests/test_picture.py
