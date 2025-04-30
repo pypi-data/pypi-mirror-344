@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ashredis"
+version = "1.0.3"
+description = "Async Redis ORM for Python"
+readme = "README.md"
+authors = [{name = "Bloodycat", email = "mrblooddycat@gmail.com"}]
+license = "MIT"
+keywords = ["redis", "orm", "async", "asyncio", "hash"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "redis >=5.2.1",
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/MrBloodyCat/ashredis"
+Repository = "https://github.com/MrBloodyCat/ashredis"
+Issues = "https://github.com/MrBloodyCat/ashredis/issues"
+
+[tool.setuptools]
+packages = ["ashredis"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+ashredis = ["py.typed"]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=6.0",
+    "pytest-asyncio>=0.15",
+    "pytest-cov>=2.0",
+    "mypy>=0.910",
+]
+dev = [
+    "black>=21.0",
+    "flake8>=3.9",
+    "isort>=5.0",
+]
