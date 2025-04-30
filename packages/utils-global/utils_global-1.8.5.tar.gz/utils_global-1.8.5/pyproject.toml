@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "utils-global"
+version = "1.8.5"
+description = "Repositório com funções globais utilizadas em projetos com Python, focado em automações com Selenium."
+authors = ["Gabriel Pelizzari <gpelizzari08@gmail.com>", "Gedean Zitkoski <gedezitkoski@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/gabrielpelizzari/utils_global"
+repository = "https://github.com/gabrielpelizzari/utils_global"
+keywords = ["utils", "globals"]
+packages = [
+  { include = "automacao_utils" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+seleniumbase = "^4.37.10"
+watchdog = "^6.0.0"
+requests = "^2.32.3"
+psutil = "^7.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.3.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
