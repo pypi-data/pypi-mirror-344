@@ -1,0 +1,10 @@
+kumori/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kumori/qcloud/__init__.py,sha256=L-k8D8shKRXUEuJYILXHKA2CnAy-Iw998WZR2oMQdSc,72
+kumori/qcloud/core.py,sha256=KrduncV_TCp2n0zvyUbPtIL2E2z3YfFETuP67CwhbSw,5040
+kumori/qcloud/errors.py,sha256=iCMgza7NyopQ7aV0YtWGTCao1uafkD6roskmh_7CN5A,177
+kumori/qcloud/sig_v1.py,sha256=XkMJK3ln66nfvMexxC8cIFrC3xaqbEL4qvakl4mqEYI,1120
+kumori-0.0.4.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+kumori-0.0.4.dist-info/METADATA,sha256=-rbKtfPUN1ZeM7dEO0mwVmgPDBjiMFwBKPgoST7MwN4,1954
+kumori-0.0.4.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+kumori-0.0.4.dist-info/top_level.txt,sha256=mzmRjWzP3158RgWaqgC-TkKIRSQK9XN_WHjrL6dsBBs,7
+kumori-0.0.4.dist-info/RECORD,,
