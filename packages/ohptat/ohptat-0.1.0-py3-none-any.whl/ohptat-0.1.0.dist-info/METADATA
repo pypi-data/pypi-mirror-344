@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: ohptat
+Version: 0.1.0
+Summary: Oddiy matematik amallar kutubxonasi
+Author-email: Jahongir <yusupovj859@example.com>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+I'M Sorry MIT
