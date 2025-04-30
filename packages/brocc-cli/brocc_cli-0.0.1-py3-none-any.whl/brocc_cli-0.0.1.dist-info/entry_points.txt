@@ -1,0 +1,2 @@
+[console_scripts]
+brocc = starfruit.entry_points:start
