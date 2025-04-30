@@ -1,0 +1,7 @@
+requests
+click
+tqdm
+pyyaml
+paramiko
+plotext
+rich
