@@ -1,0 +1,27 @@
+# pyproject.toml
+
+[project]
+name = "tortillapatata-fibo"
+version = "0.1.2"
+description = "Simple Fibonacci generator"
+authors = [
+    { name="Alper", email="alper.bingol97@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = []
+
+license = {text = "MIT"}
+keywords = ["fibonacci", "cli", "math"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+fibo = "fibo.cli:main"

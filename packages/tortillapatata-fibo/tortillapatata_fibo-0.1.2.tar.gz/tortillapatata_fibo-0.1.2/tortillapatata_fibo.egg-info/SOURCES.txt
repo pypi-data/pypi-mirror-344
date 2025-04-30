@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+fibo/__init__.py
+fibo/__main__.py
+fibo/cli.py
+fibo/fibo.py
+tests/test_fibo.py
+tests/test_fibo_v2.py
+tortillapatata_fibo.egg-info/PKG-INFO
+tortillapatata_fibo.egg-info/SOURCES.txt
+tortillapatata_fibo.egg-info/dependency_links.txt
+tortillapatata_fibo.egg-info/entry_points.txt
+tortillapatata_fibo.egg-info/top_level.txt
