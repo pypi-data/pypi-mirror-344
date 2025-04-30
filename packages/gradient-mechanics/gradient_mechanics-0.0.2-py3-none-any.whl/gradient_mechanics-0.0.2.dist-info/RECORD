@@ -1,0 +1,16 @@
+gradient_mechanics/__init__.py,sha256=t7PDnrhKPV22jsr2DyK7515IXy5ydfv_lwTQ_kREelY,64
+gradient_mechanics/benchmarking/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+gradient_mechanics/benchmarking/platform_info.py,sha256=UKDlC9d11o5ncpPBn05XCXBFFmDTU3K_d09O0cLCffE,2674
+gradient_mechanics/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gradient_mechanics/data/episodes.py,sha256=Sm0m-qi6CYxOiDM3cZJZYURRgt31rteVGWZWaVxBWD4,899
+gradient_mechanics/data/gpu_iterator.py,sha256=a6ze22MZzGuklVnBxEg4sq-xNbLFLDq9Qfbm2Ela4rM,3760
+gradient_mechanics/data/torch_loading.py,sha256=ZcNeRc-ToWlWK4BBuIH3ojrBJm2gPPxx3Xx-rxflKRM,3199
+gradient_mechanics/data/torchdata_loading.py,sha256=ulDfW2rarA6GNH-cs-GjdT5RvlIgI8yEgCDgvnDjlfM,4459
+gradient_mechanics/data/transforms.py,sha256=gxnNZy_skzs4uQbb1HYlaFG89DlM9NdMEQKe0WB0G7I,11950
+gradient_mechanics/data/video_demuxing.py,sha256=GmLvc_Qeav2VmdC1-yST4lvj6XF_py6mv7-xz6P8_MI,3193
+gradient_mechanics/data/video_indexing.py,sha256=CQrNlfTTxHnTOQCWbakfSsYGmbyEsNtxEU22F-RiCnY,5422
+gradient_mechanics/data/video_transforms.py,sha256=nlcCCGe68Gd3nnJ_XBi9z8dT2g5MlEHeFV4WAideeQQ,5766
+gradient_mechanics-0.0.2.dist-info/METADATA,sha256=jLUYobLwJfzR5te69CdZpZUpDjY6c15I54yQwCf_1PM,1182
+gradient_mechanics-0.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gradient_mechanics-0.0.2.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+gradient_mechanics-0.0.2.dist-info/RECORD,,
