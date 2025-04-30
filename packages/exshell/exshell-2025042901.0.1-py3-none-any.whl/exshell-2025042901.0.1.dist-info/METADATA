@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: exshell
+Version: 2025042901.0.1
+Summary: A library for creating console applications that use Excel as a display.
+Project-URL: Repository, https://github.com/muzudho/exshell.git
+Author-email: Takahashi Satoshi <muzudho1@gmail.com>
+Maintainer-email: Takahashi Satoshi <muzudho1@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: console application,excel
+Classifier: Programming Language :: Python
+Requires-Python: >=3.11.7
+Requires-Dist: openpyxl>=3.1.5
+Requires-Dist: tomlkit>=0.13.2
+Description-Content-Type: text/markdown
+
+# Exshell
+
+Excel をディスプレイと見立てたコンソール・アプリケーションを作るライブラリー。  
+
+
+## 必須
+
+* Exshell を使うには、デスクトップ・アプリ版の Microsoft Excel がインストールされていることが必要です
+
+
+## 説明
+
+* 📖 [Exshell > 説明書](https://github.com/muzudho/exshell/tree/main/docs)
+* 📖 [Exshell > 実装例](https://github.com/muzudho/create-a-color-palette) - ［Create a color palette］リポジトリー
