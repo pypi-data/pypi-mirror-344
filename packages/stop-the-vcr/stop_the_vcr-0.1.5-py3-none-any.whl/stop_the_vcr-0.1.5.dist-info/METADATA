@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: stop-the-vcr
+Version: 0.1.5
+Summary: A package that contains VCR.py custom request matchers
+License: MIT
+Author: Alex Cornelio
+Author-email: ascornelio@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: vcrpy (>=4.3.1,<8.0.0)
