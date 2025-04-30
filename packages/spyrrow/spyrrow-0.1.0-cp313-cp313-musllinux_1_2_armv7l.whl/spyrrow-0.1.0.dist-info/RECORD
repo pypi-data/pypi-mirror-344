@@ -1,0 +1,10 @@
+spyrrow-0.1.0.dist-info/METADATA,sha256=zXQWcI093rO_fAjlEZqWEwhD3BbZpbF0qI9IsZXY7d4,1467
+spyrrow-0.1.0.dist-info/WHEEL,sha256=L1LTxTT0N8jkJOT9J6FbG_55PIF9vRoknhi4YCWLuMM,107
+spyrrow-0.1.0.dist-info/licenses/LICENSE.txt,sha256=JOcOnGFqH2ZNyuMV3DBGh5kNL_3IqaS5832hwXhZ-Js,1076
+spyrrow.libs/libgcc_s-5b5488a6.so.1,sha256=HGKUsVmTeNAxEdSy7Ua5Vh_I9FN3RCbPWzvZ7H_TrwE,2749061
+spyrrow.libs/libstdc++-59b7fbaf.so.6,sha256=9Gum4fDEEfdT3VSZlwyKeaDD5McS9t5awHAAnvKXlcI,16387357
+spyrrow/__init__.py,sha256=MajlSBAliv8o8SqAqLgJARyi3egmvNIaXKTDXxvIAFY,111
+spyrrow/__init__.pyi,sha256=0veGm83fVV-4JIMjTfALhlUurkT1ysU_CFEc4qP0Yc4,709
+spyrrow/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spyrrow/spyrrow.cpython-313-arm-linux-musleabihf.so,sha256=2Vkvij3rxkwuPDuOPKy90eZ_8uJ34l8-IG_mrfw_x40,1756885
+spyrrow-0.1.0.dist-info/RECORD,,
