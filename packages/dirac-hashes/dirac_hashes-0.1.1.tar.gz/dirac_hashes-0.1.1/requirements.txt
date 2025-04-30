@@ -1,0 +1,9 @@
+# Main package
+dirac-hashes>=0.1.0
+
+# Web interface dependencies
+fastapi>=0.70.0,<1.0.0
+uvicorn>=0.15.0,<1.0.0
+python-multipart>=0.0.5
+
+# For development, see requirements-dev.txt
