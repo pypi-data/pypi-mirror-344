@@ -1,0 +1,6 @@
+src/lib_logging.py,sha256=4JmC4GzDFF2S8qGGzDXsjyxQSmRpPXeB26gIon3mFA0,7788
+src/structlog_support.py,sha256=UmawezW-8tbtaPsWvbD_xMtRQyJhb92pUjEqtuai_R8,477
+py_safelogger-0.1.0.dist-info/METADATA,sha256=whbSZcXEQWDoobUHvwrAVjEgLpJb7fl7M4KNuToYzIw,5763
+py_safelogger-0.1.0.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+py_safelogger-0.1.0.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+py_safelogger-0.1.0.dist-info/RECORD,,
