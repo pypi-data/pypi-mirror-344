@@ -1,0 +1,11 @@
+{
+  "name": "Pratik",
+  "version": "1.3.0",
+  "authors": [
+    {
+      "name": "LassaInora",
+      "email": "contact@lassainora.fr"
+    }
+  ],
+  "description": "A library of various functions and classes helping to program more efficiently and more intuitively."
+}
