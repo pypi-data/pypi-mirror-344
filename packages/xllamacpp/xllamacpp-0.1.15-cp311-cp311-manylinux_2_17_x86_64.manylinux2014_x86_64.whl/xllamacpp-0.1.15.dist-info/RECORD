@@ -1,0 +1,9 @@
+xllamacpp/_version.py,sha256=WAFR_RrlZ6qqzO9v-YOQKSC71TmZ9uZxPZoncNXdrI0,498
+xllamacpp/xllamacpp.cpython-311-x86_64-linux-gnu.so,sha256=N7Y-PsFnbtNSPjTzJbUv1rwXUX9sqwgQDi0s2GXl13g,31875233
+xllamacpp/__init__.py,sha256=eL0E50_fyWx0lnIiXEE7cHPwroi_XWtY4DXabDWYHWE,165
+xllamacpp.libs/libgomp-a34b3233.so.1.0.0,sha256=On6uznIxkRvi-7Gz58tMtcLg-E4MK7c3OUcrWh_uyME,168193
+xllamacpp-0.1.15.dist-info/top_level.txt,sha256=Lu5vLPOlGYHI7Ox8hVqa-ys-gg-cULIAj4bfqNm5SY8,10
+xllamacpp-0.1.15.dist-info/METADATA,sha256=5XDmEVzliLdfva7mAfmfGd-nC52_IyaR8nGHiqgdDfs,4611
+xllamacpp-0.1.15.dist-info/RECORD,,
+xllamacpp-0.1.15.dist-info/WHEEL,sha256=gS1gZS2fhSQKPwqfjHZ0QZ4OVdm-7K3rDXJ4NDoKym4,151
+xllamacpp-0.1.15.dist-info/licenses/LICENSE,sha256=ftv2Kk0HfS22HNtY1g5h2tbH9wR2R8LfTQ27EPCKwpw,1072
