@@ -1,0 +1,528 @@
+Metadata-Version: 2.4
+Name: EvoloPy
+Version: 3.0.0
+Summary: An open source nature-inspired optimization toolbox with parallel processing capabilities
+Home-page: https://github.com/7ossam81/EvoloPy
+Author: EvoloPy Team
+Author-email: Hossam Faris <hossam.faris@ju.edu.jo>
+License: MIT
+Project-URL: Homepage, https://github.com/7ossam81/EvoloPy
+Project-URL: Bug Tracker, https://github.com/7ossam81/EvoloPy/issues
+Project-URL: Source Code, https://github.com/7ossam81/EvoloPy
+Project-URL: Contributors, https://github.com/7ossam81/EvoloPy/graphs/contributors
+Keywords: optimization,meta-heuristic,evolutionary,swarm intelligence,parallel
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: pandas>=1.0.0
+Requires-Dist: scipy>=1.5.0
+Requires-Dist: matplotlib>=3.3.0
+Requires-Dist: scikit-learn>=0.23.0
+Requires-Dist: psutil>=5.8.0
+Provides-Extra: gpu
+Requires-Dist: torch>=1.7.0; extra == "gpu"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+<div align="center">
+<img width="200" alt="EvoloPy-logo" src="https://github.com/user-attachments/assets/496f9a76-1fcc-4e4f-9586-8f327a434134">
+</div>
+
+# EvoloPy: An open source nature-inspired optimization toolbox for global optimization in Python
+
+[![PyPI version](https://badge.fury.io/py/EvoloPy.svg)](https://badge.fury.io/py/EvoloPy)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/release/python-360/)
+
+The EvoloPy toolbox provides classical and recent nature-inspired metaheuristic algorithms for global optimization. The library includes popular algorithms such as Particle Swarm Optimization (PSO), Multi-Verse Optimizer (MVO), Grey Wolf Optimizer (GWO), and many others.
+
+## Features
+- **14 Nature-Inspired Algorithms**: Comprehensive collection of metaheuristic optimizers
+- **High Performance**: Optimized implementation using NumPy vectorization
+- **Easy to Use**: Simple and consistent API across all algorithms
+- **Configurable**: Flexible parameter settings for all algorithms
+- **Comprehensive Benchmarks**: 24 test functions to evaluate algorithms
+- **Visualization Tools**: Built-in plotting for convergence analysis and comparative studies
+- **Command-Line Interface**: Run optimizations directly from the terminal
+
+## Table of Contents
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Package Structure](#package-structure)
+- [Available Optimizers](#available-optimizers)
+- [Benchmark Functions](#benchmark-functions)
+- [API Reference](#api-reference)
+- [Command-Line Interface](#command-line-interface)
+- [Example Projects](#example-projects)
+- [Recent Improvements](#recent-improvements)
+- [Contributing](#contribute)
+- [Publications](#publications)
+- [Cite Us](#cite-us)
+- [License](#license)
+
+## Installation
+
+### Via pip (Recommended)
+```bash
+pip install EvoloPy
+```
+
+### Optional Dependencies
+For GPU-accelerated parallel processing:
+```bash
+pip install EvoloPy[gpu]
+```
+
+### From Source
+```bash
+# Clone the repository
+git clone https://github.com/7ossam81/EvoloPy.git
+
+# Navigate to the directory
+cd EvoloPy
+
+# Install dependencies
+    pip install -r requirements.txt
+
+# Install the package
+pip install -e .
+```
+
+### Requirements
+- Python 3.6+
+- Dependencies:
+  - numpy >= 1.19.0
+  - pandas >= 1.0.0
+  - scipy >= 1.5.0
+  - matplotlib >= 3.3.0
+  - scikit-learn >= 0.23.0
+  - psutil >= 5.8.0
+- Optional:
+  - torch >= 1.7.0 (for GPU acceleration)
+
+## Quick Start
+
+### Basic Example
+```python
+from EvoloPy.optimizer import run
+
+# Select optimizers from the available list
+optimizer = ["PSO", "GWO", "MVO"]
+
+# Select benchmark functions
+objective_functions = ["F1", "F5"]
+
+# Set number of independent runs
+num_runs = 10
+
+# Set general parameters
+params = {"PopulationSize": 30, "Iterations": 50}
+
+# Configure export options
+export_flags = {
+    "Export_avg": True,
+    "Export_details": True,
+    "Export_convergence": True,
+    "Export_boxplot": True
+}
+
+# Run the optimization
+run(optimizer, objective_functions, num_runs, params, export_flags)
+```
+
+### Using the High-Level API
+```python
+import EvoloPy as ep
+
+# List available optimizers
+print("Available optimizers:", ep.available_optimizers())
+
+# Run a single optimizer on a benchmark function
+result = ep.run_optimizer(
+    optimizer="PSO",
+    objective_func="F1",
+    population_size=50,
+    iterations=100
+)
+
+print(f"Best fitness: {result['best_fitness']}")
+print(f"Execution time: {result['execution_time']} seconds")
+```
+
+### Custom Objective Function
+```python
+import numpy as np
+from EvoloPy.optimizers import PSO
+
+# Define your custom objective function
+def my_function(x):
+    return np.sum(x**2) + np.sum(np.sin(x))
+
+# Set boundaries and dimensions
+lb = -10
+ub = 10
+dim = 5
+population_size = 30
+iterations = 100
+
+# Run optimization
+result = PSO.PSO(my_function, lb, ub, dim, population_size, iterations)
+
+# Get the best solution
+best_solution = result.bestIndividual
+best_fitness = my_function(best_solution)
+
+print(f"Best solution: {best_solution}")
+print(f"Best fitness: {best_fitness}")
+print(f"Execution time: {result.executionTime} seconds")
+```
+
+### Using Parallel Processing (New in v3.0)
+```python
+import EvoloPy as ep
+
+# Check available hardware
+hw_info = ep.get_hardware_info()
+print(f"CPU cores: {hw_info['cpu_count']}")
+if hw_info['gpu_available']:
+    print(f"GPU: {hw_info['gpu_names'][0]}")
+
+# Run optimization with parallel processing
+result = ep.run_optimizer(
+    optimizer="PSO",
+    objective_func="F1",
+    population_size=50,
+    iterations=100,
+    num_runs=10,
+    enable_parallel=True,  # Enable parallel processing
+    parallel_backend="auto"  # Automatically select CPU or GPU
+)
+
+print(f"Best fitness: {result['best_fitness']}")
+print(f"Execution time: {result['execution_time']} seconds")
+```
+
+## Package Structure
+
+```
+EvoloPy/
+  __init__.py       # Package entry point 
+  api.py            # High-level API functions
+  optimizer.py      # Core optimization functionalities
+  benchmarks.py     # Test functions
+  solution.py       # Solution data structure
+  cli.py            # Command-line interface
+  optimizers/       # Individual algorithm implementations
+    __init__.py     # Direct imports for all optimizers
+    PSO.py          # Particle Swarm Optimization
+    GWO.py          # Grey Wolf Optimizer
+    MVO.py          # Multi-Verse Optimizer
+    ... (other algorithm implementations)
+```
+
+### Import System
+
+EvoloPy provides multiple ways to import and use its functionality:
+
+1. **Top-level imports**:
+   ```python
+   import EvoloPy as ep
+   
+   # Use high-level API functions
+   result = ep.run_optimizer("PSO", "F1")
+   ```
+
+2. **Direct optimizer imports**:
+   ```python
+   from EvoloPy.optimizers import PSO, GWO
+   
+   # Use specific optimizer directly
+   result_pso = PSO.PSO(objective_function, lb=-10, ub=10, dim=5, PopSize=30, iters=50)
+   ```
+
+3. **Dynamic optimizer selection**:
+   ```python
+   from EvoloPy.optimizers import optimizer_map
+   
+   # Select optimizer dynamically
+   optimizer_func = optimizer_map["PSO"]
+   result = optimizer_func(objective_function, lb=-10, ub=10, dim=5, PopSize=30, iters=50)
+   ```
+
+## Available Optimizers
+
+The following optimizers are implemented in EvoloPy:
+
+| Abbreviation | Algorithm Name | Reference |
+|--------------|---------------|-----------|
+| PSO | Particle Swarm Optimization | Kennedy, J., & Eberhart, R. (1995) |
+| GWO | Grey Wolf Optimizer | Mirjalili, S. et al. (2014) |
+| MVO | Multi-Verse Optimizer | Mirjalili, S. et al. (2015) |
+| MFO | Moth Flame Optimization | Mirjalili, S. (2015) |
+| CS | Cuckoo Search | Yang, X. S., & Deb, S. (2009) |
+| BAT | Bat Algorithm | Yang, X. S. (2010) |
+| WOA | Whale Optimization Algorithm | Mirjalili, S., & Lewis, A. (2016) |
+| FFA | Firefly Algorithm | Yang, X. S. (2009) |
+| SSA | Salp Swarm Algorithm | Mirjalili, S. et al. (2017) |
+| GA | Genetic Algorithm | Holland, J. H. (1975) |
+| HHO | Harris Hawks Optimization | Heidari, A. A. et al. (2019) |
+| SCA | Sine Cosine Algorithm | Mirjalili, S. (2016) |
+| JAYA | JAYA Algorithm | Rao, R. (2016) |
+| DE | Differential Evolution | Storn, R., & Price, K. (1997) |
+
+## Benchmark Functions
+
+EvoloPy includes 24 benchmark functions (F1-F24) commonly used to evaluate optimization algorithms:
+
+- **F1-F4**: Unimodal benchmark functions
+- **F5-F12**: Multimodal benchmark functions
+- **F13-F24**: Composite benchmark functions
+
+Additionally, popular test functions are available:
+- Ackley function
+- Rosenbrock function
+- Rastrigin function
+- Griewank function
+
+You can list all available benchmark functions using:
+```python
+from EvoloPy import available_benchmarks
+print(available_benchmarks())
+```
+
+## API Reference
+
+### High-Level API Functions
+
+#### `available_optimizers()`
+Get a list of all available optimization algorithms.
+
+**Returns:**
+- `List[str]`: List of optimizer names
+
+**Example:**
+```python
+from EvoloPy import available_optimizers
+print(available_optimizers())
+# ['PSO', 'GWO', 'MVO', ...]
+```
+
+#### `available_benchmarks()`
+Get a list of all available benchmark functions.
+
+**Returns:**
+- `List[str]`: List of benchmark function names
+
+**Example:**
+```python
+from EvoloPy import available_benchmarks
+print(available_benchmarks())
+# ['F1', 'F2', 'F3', ...]
+```
+
+#### `run_optimizer(optimizer, objective_func, **kwargs)`
+Run a single optimizer on a specified objective function.
+
+**Parameters:**
+- `optimizer (str)`: Name of the optimizer algorithm
+- `objective_func (str or callable)`: Either a benchmark name (e.g., "F1") or a custom objective function
+- `lb (float)`: Lower bound for variables (default: -100)
+- `ub (float)`: Upper bound for variables (default: 100)
+- `dim (int)`: Problem dimension (default: 30)
+- `population_size (int)`: Size of the population (default: 30)
+- `iterations (int)`: Maximum number of iterations (default: 50)
+- `num_runs (int)`: Number of independent runs (default: 1)
+- `export_results (bool)`: Whether to export average results (default: False)
+- `export_details (bool)`: Whether to export detailed results (default: False)
+- `export_convergence (bool)`: Whether to export convergence plots (default: False)
+- `export_boxplot (bool)`: Whether to export boxplots (default: False)
+- `results_directory (str, optional)`: Directory to save results
+
+**Returns:**
+- `Dict[str, Any]`: Results dictionary containing:
+  - 'best_solution': Best solution found
+  - 'best_fitness': Best fitness value
+  - 'convergence': Convergence history
+  - 'execution_time': Execution time
+
+**Example:**
+```python
+from EvoloPy import run_optimizer
+result = run_optimizer("PSO", "F1", population_size=50, iterations=100)
+print(f"Best fitness: {result['best_fitness']}")
+print(f"Execution time: {result['execution_time']} seconds")
+```
+
+#### `run_multiple_optimizers(optimizers, objective_funcs, **kwargs)`
+Run multiple optimizers on multiple objective functions.
+
+**Parameters:**
+- `optimizers (List[str])`: List of optimizer names
+- `objective_funcs (List[str])`: List of benchmark function names
+- `lb (float)`: Lower bound for variables (default: -100)
+- `ub (float)`: Upper bound for variables (default: 100)
+- `dim (int)`: Problem dimension (default: 30)
+- `population_size (int)`: Size of the population (default: 30)
+- `iterations (int)`: Maximum number of iterations (default: 50)
+- `num_runs (int)`: Number of independent runs (default: 1)
+- `export_results (bool)`: Whether to export average results (default: True)
+- `export_details (bool)`: Whether to export detailed results (default: False)
+- `export_convergence (bool)`: Whether to export convergence plots (default: True)
+- `export_boxplot (bool)`: Whether to export boxplots (default: True)
+- `results_directory (str, optional)`: Directory to save results
+
+**Returns:**
+- `Dict[str, Dict[str, Dict[str, Any]]]`: Nested dictionary of results:
+  - {optimizer_name: {objective_name: {result_data}}}
+
+**Example:**
+```python
+from EvoloPy import run_multiple_optimizers
+results = run_multiple_optimizers(
+    optimizers=["PSO", "GWO"], 
+    objective_funcs=["F1", "F5"],
+    population_size=30,
+    iterations=50
+)
+# Access specific results
+for opt_name, opt_results in results.items():
+    for func_name, func_results in opt_results.items():
+        print(f"{opt_name} on {func_name}: {func_results}")
+```
+
+### Traditional Interface: `optimizer.py`
+
+```python
+from EvoloPy.optimizer import run
+
+run(optimizer, objectivefunc, NumOfRuns, params, export_flags)
+```
+
+**Parameters:**
+- `optimizer`: List of optimizer names to use
+- `objectivefunc`: List of benchmark function names to optimize
+- `NumOfRuns`: Number of independent runs for statistical analysis
+- `params`: Dictionary containing "PopulationSize" and "Iterations"
+- `export_flags`: Dictionary with export configuration flags
+
+### Individual Optimizers
+
+Each optimizer follows the same interface:
+
+```python
+from EvoloPy.optimizers import PSO
+
+result = PSO.PSO(objf, lb, ub, dim, PopSize, iters)
+```
+
+**Parameters:**
+- `objf`: Objective function to minimize
+- `lb`: Lower bounds for variables (scalar or list)
+- `ub`: Upper bounds for variables (scalar or list)
+- `dim`: Problem dimension
+- `PopSize`: Population size
+- `iters`: Maximum iterations
+
+**Returns:**
+- `result`: Solution object containing best solution and metadata
+
+## Command-Line Interface
+
+EvoloPy provides a command-line interface (CLI) for running optimizations without writing Python code.
+
+### Basic Usage
+
+```bash
+# List all available optimizers and benchmark functions
+evolopy-run --list
+
+# Run PSO on F1 benchmark
+evolopy-run --optimizer PSO --function F1 --iterations 100 --pop-size 50
+
+# Run multiple optimizers on multiple benchmarks
+evolopy-run --optimizer PSO,GWO,MVO --function F1,F5 --multi --output results.json
+```
+
+### CLI Options
+
+- `--optimizer`, `-o`: Optimizer to use (comma-separated for multiple)
+- `--function`, `-f`: Objective function to optimize (comma-separated for multiple)
+- `--pop-size`, `-p`: Population size (default: 30)
+- `--iterations`, `-i`: Number of iterations (default: 50)
+- `--dim`, `-d`: Problem dimension (default: 10)
+- `--lb`: Lower bound of search space (default: -100)
+- `--ub`: Upper bound of search space (default: 100)
+- `--runs`, `-r`: Number of independent runs (default: 1)
+- `--output`: Output file to save results (default: results.json)
+- `--list`: List available optimizers and benchmark functions
+- `--multi`: Run multiple optimizers and/or functions (with comma-separated lists)
+
+## Example Projects
+
+- **Hyperparameter Tuning**: Use EvoloPy to optimize machine learning model hyperparameters
+- **Engineering Design**: Solve complex engineering optimization problems
+- **Feature Selection**: Select optimal features for classification tasks
+
+## Recent Improvements
+
+### Version 3.0 - Parallel Processing (2023)
+- **Parallel Execution**: Added support for multi-core CPU and CUDA GPU acceleration
+- **Hardware Detection**: Automatically detects and utilizes available CPU cores and CUDA GPUs
+- **Performance Improvements**: Up to 20x speedup for large-scale optimization problems
+- **Enhanced API**: Added parameters for controlling parallel execution
+- **Extended CLI**: New command-line options for parallel processing
+
+For detailed information about the parallel processing feature, see [changes_v3.md](changes_v3.md).
+
+### Contributors to Version 3.0
+- **Jaber Jaber** (GitHub: [@jaberjaber23](https://github.com/jaberjaber23)) - Implementation of parallel processing feature
+
+## Contributing
+- **Issue Tracker**: https://github.com/7ossam81/EvoloPy/issues  
+- **Source Code**: https://github.com/7ossam81/EvoloPy
+- **Pull Requests**: We welcome contributions! Please follow our contribution guidelines
+
+## Publications
+
+For more information about EvoloPy, please refer to our paper: 
+
+Faris, H., Aljarah, I., Mirjalili, S., Castillo, P. A., & Guervós, J. J. M. (2016). EvoloPy: An Open-source Nature-inspired Optimization Framework in Python. In IJCCI (ECTA) (pp. 171-177).
+https://www.scitepress.org/Papers/2016/60482/60482.pdf
+
+Please include the following related citations:
+
+- Qaddoura, R., Faris, H., Aljarah, I., & Castillo, P. A. (2020). EvoCluster: An Open-Source Nature-Inspired Optimization Clustering Framework in Python. In International Conference on the Applications of Evolutionary Computation (pp. 20-36). Springer, Cham.
+- Abu Khurma, R., Aljarah, I., Sharieh, A., & Mirjalili, S. (2020). Evolopy-fs: An Open-Source Nature-Inspired Optimization Framework in Python for Feature Selection. In Evolutionary Machine Learning Techniques (pp. 131-173). Springer.
+
+## Cite Us
+
+If you use EvoloPy in your research, please cite:
+
+```bibtex
+@inproceedings{faris2016evolopy,
+  title={EvoloPy: An Open-source Nature-inspired Optimization Framework in Python},
+  author={Faris, Hossam and Aljarah, Ibrahim and Mirjalili, Seyedali and Castillo, Pedro A and Guervós, Juan Julián Merelo},
+  booktitle={IJCCI (ECTA)},
+  pages={171--177},
+  year={2016}
+}
+```
+
+## License
+
+EvoloPy is licensed under the Apache License 2.0. See the LICENSE.txt file for details.
+
+
