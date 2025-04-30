@@ -1,0 +1,11 @@
+Third-Party Licenses and Notices
+================================
+
+This project uses third-party components licensed under separate terms.
+
+1. clubcard_crlite
+   - License: Mozilla Public License Version 2.0
+   - Source: https://github.com/example/clubcard_crlite
+   - License text available in LICENSES/MPL-2.0.txt
+
+No modifications were made to these components.
