@@ -1,0 +1,81 @@
+/* @font-face { */
+/*           font-family: 'EB Garamond', serif; */
+/*           font-weight: normal; */
+/*           font-style: normal; */
+
+/*       } */
+
+body {
+    font-family: 'EB Garamond', serif;
+}
+
+h1 {
+text-shadow: 4px 4px 4px #aaa;
+}
+h2 {
+    font-family: 'EB Garamond', serif;
+}
+
+
+.gara {
+    font-family: 'EB Garamond', serif;
+}
+
+ul {
+        font-family: 'Ubuntu Mono', sans-serif;
+}
+
+.attributes{
+}
+
+.attribute {
+padding-left: 10px;
+}
+.attribute:hover{
+    text-decoration:underline;
+
+}
+
+li input.folder {
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    opacity: 0;
+    display: none;
+    z-index: 2;
+    cursor: pointer;
+    height: 1em;
+    width: 1em;
+    top: 0;
+}
+li label.folder {
+    cursor: pointer;
+    display: block;
+}
+
+li label:hover {
+    text-decoration:underline;
+}
+
+
+li input.folder + ul > li {
+    display: none;
+    margin-left: -14px !important;
+    padding-left: 1px;
+}
+
+li input.folder:checked + ul {
+    margin: -1.25em 0 0 -44px; /* 20px */
+    padding: 1.563em 0 0 80px;
+    height: auto;
+}
+
+li input.folder:checked + ul > li { 
+    display: block; 
+    margin: 0 0 0.125em;  /* 2px */
+    
+}
+
+li input.folder:checked + ul > li:last-child { 
+    margin: 0 0 0.063em; /* 1px */ 
+}
