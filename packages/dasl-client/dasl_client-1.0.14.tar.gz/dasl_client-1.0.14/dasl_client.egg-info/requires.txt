@@ -1,0 +1,5 @@
+dasl_api==0.1.17
+databricks-sdk>=0.41.0
+pydantic>=2
+pyspark>=3.5.5
+typing_extensions==4.10.0
