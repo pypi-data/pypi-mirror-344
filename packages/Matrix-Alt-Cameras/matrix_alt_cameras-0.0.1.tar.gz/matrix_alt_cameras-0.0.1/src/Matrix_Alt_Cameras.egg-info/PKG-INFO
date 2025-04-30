@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: Matrix-Alt-Cameras
+Version: 0.0.1
+Summary: Extension for the Matrix-Alt-Core package to add camera functionality
+Home-page: https://github.com/Team488/Alt
+Author: The Matrix 488
+Author-email: 488matrix@gmail.com
+Project-URL: Bug Tracker, https://github.com/Team488/Alt/issues
+Project-URL: repository, https://github.com/Team488/Alt
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: Matrix-Alt-Core==0.0.1
+Requires-Dist: numpy==2.0.2
+Requires-Dist: opencv-python==4.11.0.86
+Requires-Dist: scipy==1.13.1
+Requires-Dist: pycapnp==2.0.0
+Requires-Dist: depthai==2.30.0.0
+Requires-Dist: pyrealsense2==2.55.1.6486
+Dynamic: license-file
+
+# Matrix-Alt-Cameras
+
+**Matrix-Alt-Cameras** is an extension package to the [Matrix-Alt-Core](https://pypi.org/project/Matrix-Alt-Core/) framework, designed to add camera capabilities to your Alt Agents with minimal setup. 
+---
+
+## 🚀 Quick Start
+
+Here's a basic example using an OpenCV-compatible webcam:
+
+```python
+from Alt.Core.Agents import Agent
+from Alt.Cameras.CameraUsingAgent import CameraUsingAgentBase
+from Alt.Cameras.Captures.OpenCVCapture import OpenCVCapture
+import cv2
+
+class CamTest(CameraUsingAgentBase):
+    def __init__(self):
+        super().__init__(capture=OpenCVCapture("test", 0))
+
+    def runPeriodic(self):
+        super().runPeriodic()
+        cv2.putText(self.latestFrameMain, "This test will be displayed on top of the frame", (10, 20), 1, 1, (255, 255, 255), 1)
+
+    def getDescription(self):
+        return "test-read-webcam"
+
+if __name__ == "__main__":
+    from Alt.Core import Neo
+
+    n = Neo()
+    n.wakeAgent(CamTest, isMainThread=True)
+    n.shutDown()
+```
