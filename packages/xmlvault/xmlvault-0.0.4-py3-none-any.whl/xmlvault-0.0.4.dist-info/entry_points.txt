@@ -1,0 +1,3 @@
+[console_scripts]
+xmlvault=app.cli:cli_main()
+
