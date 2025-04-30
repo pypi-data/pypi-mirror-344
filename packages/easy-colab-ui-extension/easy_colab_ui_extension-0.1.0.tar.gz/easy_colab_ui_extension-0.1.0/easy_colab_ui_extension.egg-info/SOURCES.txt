@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+easy_colab_ui_extension.egg-info/PKG-INFO
+easy_colab_ui_extension.egg-info/SOURCES.txt
+easy_colab_ui_extension.egg-info/dependency_links.txt
+easy_colab_ui_extension.egg-info/top_level.txt
