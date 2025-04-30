@@ -1,0 +1,11 @@
+[project]
+name = "mcp-usee-user"
+version = "0.1.0"
+description = "测试服务"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp"
+]
+[project.scripts]
+mcp-usee-user = "main:main"
