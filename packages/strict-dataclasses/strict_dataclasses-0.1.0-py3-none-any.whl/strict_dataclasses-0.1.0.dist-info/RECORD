@@ -1,0 +1,8 @@
+./.gitignore,sha256=wt0muT45pZKsgjZZO9r1BU3ApbaqVZ93nfBvuTRsrmU,131
+./PKG-INFO,sha256=_QAnoNItjV4-2Oxc04lkDnrI8kP33__OHAwiRiVuywE,2805
+./README.md,sha256=zuxZoPgcCbUzMLizTPeocZ8vlwSWcJVqea7fC8zI1pw,2117
+./pyproject.toml,sha256=YeQCPdliX1WyK6lQVy9N29Xjmi0w9eKCJAgw2AaQHFE,1004
+./strict_dataclasses.py,sha256=MvYBtwvPWWNhPN0sNfbBV1j4rnEM2ucFiEcuwdkbauA,9685
+strict_dataclasses-0.1.0.dist-info/METADATA,sha256=_QAnoNItjV4-2Oxc04lkDnrI8kP33__OHAwiRiVuywE,2805
+strict_dataclasses-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+strict_dataclasses-0.1.0.dist-info/RECORD,,
