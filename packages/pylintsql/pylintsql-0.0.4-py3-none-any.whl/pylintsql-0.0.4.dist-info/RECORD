@@ -1,0 +1,12 @@
+pylintsql/__init__.py,sha256=Md0IuMo7HgNcGN7yqhLpTUHNIpFIg2ISMBHQCycEjFg,99
+pylintsql/cli.py,sha256=SUNYLGEvVBc1M3X55j_O1VqOhVqyjWzi8Ersh-qMlgM,1372
+pylintsql/pylintsql.py,sha256=72GCuTNPFZc7oR64tE8YwfUHhL0xiUYUZKJn2SNecpM,1524
+pylintsql/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pylintsql/utils/arg_utils.py,sha256=JzJEWjmYhhPYEj95OSko2M1HFHcgtYBp2aLj5VWqKWo,822
+pylintsql/utils/config_utils.py,sha256=HUd6t9tQ1QzrkzBA2XwCnGGSi2KQf1CeQhgtbRuDIzw,5779
+pylintsql/utils/sql_utils.py,sha256=uIR0SxXK_3Op1bTBN8jNy79b4MpiSBl7mSpyXjfuEn8,7843
+pylintsql-0.0.4.dist-info/METADATA,sha256=AJ-F90bZH1Xiau0H4tHbAnmbQ60pRQuX2mVSlHnVdFg,2291
+pylintsql-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pylintsql-0.0.4.dist-info/entry_points.txt,sha256=2xvxAZeDEB-KjHtpr7UfUt--2mNLiGk1hlGctPPrwKc,49
+pylintsql-0.0.4.dist-info/licenses/LICENSE,sha256=EpNWW9gGVvHBwEb_B7Bz2SEq16PupH_dt_nExAViZVY,1071
+pylintsql-0.0.4.dist-info/RECORD,,
