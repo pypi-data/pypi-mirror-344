@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: amapy-server
+Version: 1.0.2
+Summary: The server-side component of the ama project.
+Author-email: Swarup Mahanti <swarup.mahanti@roche.com>
+Maintainer-email: Swarup Mahanti <swarup.mahanti@roche.com>
+License: Copyright (c) 2024 Roche Diagnostics Computation Science & Informatics
+Requires-Python: ==3.10.*
+Description-Content-Type: text/markdown
+Requires-Dist: Flask-Admin==1.6.0
+Requires-Dist: Flask-Cors==3.0.10
+Requires-Dist: Flask-Dance==7.0.0
+Requires-Dist: Flask-Login==0.6.3
+Requires-Dist: Flask==2.1.1
+Requires-Dist: Jinja2==3.0.*
+Requires-Dist: Werkzeug==2.0.1
+Requires-Dist: aioshutil==1.3
+Requires-Dist: amapy-pluggy==1.0.*
+Requires-Dist: amapy-plugin-gcs==1.0.*
+Requires-Dist: amapy-plugin-s3==1.0.*
+Requires-Dist: amapy-utils==1.0.*
+Requires-Dist: elasticsearch==8.15.1
+Requires-Dist: google-auth-oauthlib==0.5.*
+Requires-Dist: gunicorn==20.1.*
+Requires-Dist: packaging==23.1.*
+Requires-Dist: peewee==3.14.*
+Requires-Dist: psycopg2==2.9.2
+Requires-Dist: sentence-transformers==3.2.1
+Requires-Dist: wtf-peewee==3.0.3
+
+# amapy-server
+
+The server-side component of the ama system that provides
+backend services for managing digital assets. It functions as a
+centralized server that handles asset storage, retrieval, and
+management across different storage backends.
+
+## Installation
+
+The source code is currently hosted on GitHub at:
+https://github.com/Roche-CSI/ama
+
+Binary installers for the latest released version are available at the
+[Python Package Index (PyPI)](https://pypi.org/project/amapy-server/)
+
+You can install using [pip](https://pip.pypa.io/en/stable/):
+
+```sh
+pip install amapy-server
+```
+
+## Usage
+
+### Command Line Interface
+
+```sh
+ama-server --help
+```
+
+## Supported Python Versions
+
+Python == 3.10
+
+## License
+
+MIT License - see [LICENSE](https://github.com/Roche-CSI/ama/blob/main/LICENSE) for details.
