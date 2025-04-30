@@ -1,0 +1,2 @@
+[console_scripts]
+sasori = sasori.main:app

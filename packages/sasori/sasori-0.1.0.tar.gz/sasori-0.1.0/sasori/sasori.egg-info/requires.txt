@@ -1,0 +1,12 @@
+openai
+python-dotenv
+rich
+typer[all]
+boto3
+pyperclip
+
+[dev]
+pytest
+mypy
+black
+flake8
