@@ -1,0 +1,7 @@
+numpy==1.26.4
+scikit-learn
+matplotlib
+Kriging
+typing
+csv
+mpl_toolkits.mplot3d
