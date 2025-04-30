@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: cfun
+Version: 0.1.0
+Summary: 自己的常用函数
+License: MIT
+Author: zoushucai
+Author-email: 1228075512@qq.com
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: cv2
+Provides-Extra: pytest
+Requires-Dist: Pillow (>=11.0.0)
+Requires-Dist: httpx (>=0.28.1,<0.29.0)
+Requires-Dist: onnxruntime (>=1.18.0)
+Requires-Dist: opencv-python (>=4.10.0) ; extra == "cv2"
+Requires-Dist: pandas (>=2.0.0)
+Requires-Dist: pyarrow (>=20.0.0,<21.0.0)
+Requires-Dist: pytest (>=20.0.0) ; extra == "pytest"
+Requires-Dist: requests (>=2.13.0)
+Project-URL: Homepage, https://github.com/zoushucai/cfun
+Project-URL: Repository, https://github.com/zoushucai/cfun
+Description-Content-Type: text/markdown
+
+暂无说明
+暂无说明2
