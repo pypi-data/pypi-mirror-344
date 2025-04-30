@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/llama_prompt_ops/__init__.py
+src/llama_prompt_ops.egg-info/PKG-INFO
+src/llama_prompt_ops.egg-info/SOURCES.txt
+src/llama_prompt_ops.egg-info/dependency_links.txt
+src/llama_prompt_ops.egg-info/entry_points.txt
+src/llama_prompt_ops.egg-info/requires.txt
+src/llama_prompt_ops.egg-info/top_level.txt
+src/llama_prompt_ops/templates/__init__.py
+src/llama_prompt_ops/templates/sample_dataset.json
+src/llama_prompt_ops/templates/sample_prompt.txt
