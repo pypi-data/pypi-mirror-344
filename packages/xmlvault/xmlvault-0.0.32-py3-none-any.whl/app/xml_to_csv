@@ -1,0 +1,170 @@
+import pandas as pd
+from .c_xml_display_elements import f_display_elements
+import xml.etree.ElementTree as ET
+# df = pd.read_xml('samplefile.xml', stylesheet='samplefilestylesheet.xslt', xpath='//user')
+from datetime import datetime
+import os
+
+# xml_t0_csv.py --> xml_display_elements.py
+
+# Retrieve and verify the environment variable 
+file_out = os.getenv('file_out') 
+file_in = os.getenv('file_in') 
+
+def f_xml_2_csv_simple():
+    xml_data2 = f_display_elements()
+    xpat1 = input("f_xml_2_csv: provide xpath details ex - '//food' : ")
+    xpat2 = f"//{xpat1}"
+    df = pd.read_xml(xml_data2, xpath=xpat2)
+    # df = pd.read_xml(xml_data2, xpath=xpath, namespaces={'ns': 'http://its.gov/c2c_icd'})
+    # df = pd.read_xml('samplefile.xml', stylesheet='samplefilestylesheet.xslt', xpath='//user')
+    print("\n f_xml_2_csv: your selected xml dataframe is below : ")
+    print(df)
+
+    # Get the current date and time 
+    current_datetime = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+
+    # Create the CSV filename using xpath and current datetime 
+    csv_filename = f"{xpat1.replace('/', '_')}_{current_datetime}.csv"
+    df.to_csv(csv_filename, index=False)
+    # df.to_csv('xml_to_csv.csv', index=False)
+
+def f_xml_2_csv_namespace():
+    xml_data2 = f_display_elements()
+    root = ET.fromstring(xml_data2)
+    # Extract the namespace 
+    v_namespace = root.tag.split('}')[0].strip('{')
+    namespaces = {'ns': v_namespace}
+    xpat1 = input("f_xml_2_csv: provide xpath details ex - 'tvtStatus' : ")
+    xpat2 = f"//ns:{xpat1}"
+    # xpat2 = {'//ns:':xpat1}
+    df = pd.read_xml(xml_data2, xpath=xpat2, namespaces=namespaces)
+    # df = pd.read_xml(xml_data2, xpath=xpath, namespaces={'ns': 'http://its.gov/c2c_icd'})
+    print("\n f_xml_2_csv: your selected xml dataframe is below : ")
+    
+    print(df.head(3))
+    save_xml_df(xpat1,df)
+
+    # # Get the current date and time 
+    # current_datetime = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    # # Create the CSV filename using xpath and current datetime 
+    # csv_filename = f"{xpat1.replace('/', '_')}_{current_datetime}.csv"
+    # df.to_csv(csv_filename, index=False)
+    # # df.to_csv('xml_to_csv.csv', index=False)
+
+def save_xml_df(xpat1, df):
+
+    # Get the current date and time 
+    timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    
+    # Construct the output filename
+    csv_filename = f"xml_csv_{xpat1}_{timestamp}.txt"
+   
+    # Construct the full file path 
+    full_path = os.path.join(file_out, csv_filename)
+
+    # Save the DataFrame to the specified location 
+    df.to_csv(full_path, index=False)
+    
+    print(f"Output saved to {full_path}")
+
+
+
+if __name__ == "__main__":
+    f_xml_2_csv_namespace()
+    # f_xml_2_csv_simple()
+
+
+
+
+
+
+
+
+
+
+
+# Explanation
+# Namespaces: The XML uses a namespace (xmlns="http://its.gov/c2c_icd"), 
+# so we need to register it with a prefix (ns in this case).
+
+# XPath Expression: Use //ns:tvtStatus to capture all <tvtStatus> elements 
+# regardless of their attributes.
+
+# Namespaces Argument: Pass the namespaces argument to pd.read_xml() to 
+# resolve the prefixed elements in the XPath expression.
+
+# This code will parse the XML and extract the <tvtStatus> elements into a pandas 
+# DataFrame, making it easier to work with and analyze the data. Feel free to run 
+# this code and see the tabular format of your data. If you encounter any issues or 
+# need further assistance, just let me know!
+
+
+
+# Define the XPath to capture the <tvtStatus> elements with any attributes
+# xpath = '//ns:tvtStatus'
+# xpath = '//food'
+
+# Read the XML data into a pandas DataFrame using the XPath expression
+# df = pd.read_xml(xml_data2, xpath=xpath, namespaces={'ns': 'http://its.gov/c2c_icd'})
+# df = pd.read_xml(xml_data2,
+# print(df)
+
+
+# /*
+# import pandas as pd
+
+# # Assuming xml_data2 contains your XML data
+# xml_data2 = '''
+# <status xmlns="http://its.gov/c2c_icd">
+# <tvtStatusData>
+# <net id="NewHampshire" name="NewHampshire">
+# <tvtStatus xmlns="http://its.gov/c2c_icd" id="Exit 9 Dover to Exit 16 Rochester" netId="NewHampshire">
+# <travelTime>1183</travelTime>
+# <delay>39</delay>
+# <timestamp>2024-12-04T18:46:45.5586546-05:00</timestamp>
+# <avgSpeed>67.7</avgSpeed>
+# <description>Exit 9 Dover to Exit 16 Rochester</description>
+# </tvtStatus>
+# <tvtStatus xmlns="http://its.gov/c2c_icd" id="Exit 16 Rochester to Exit 9 Dover" netId="NewHampshire">
+# <travelTime>1145</travelTime>
+# <delay>0</delay>
+# <timestamp>2024-12-04T18:46:45.5586546-05:00</timestamp>
+# <avgSpeed>70</avgSpeed>
+# <description>Exit 16 Rochester to Exit 9 Dover</description>
+# </tvtStatus>
+# <tvtStatus xmlns="http://its.gov/c2c_icd" id="I-93 S From Exit 15 to Bow" netId="NewHampshire">
+# <travelTime>1085</travelTime>
+# <delay>45</delay>
+# <timestamp>2024-12-04T18:46:45.5586546-05:00</timestamp>
+# <avgSpeed>65</avgSpeed>
+# <description>I-93 S From Exit 15 to Bow</description>
+# </tvtStatus>
+# </net>
+# </tvtStatusData>
+# </status>
+# '''
+
+# # Define the XPath to capture the <tvtStatus> elements with any attributes
+# xpath = '//ns:tvtStatus'
+
+# # Read the XML data into a pandas DataFrame using the XPath expression
+# df = pd.read_xml(xml_data2, xpath=xpath, namespaces={'ns': 'http://its.gov/c2c_icd'})
+
+# print(df)
+
+
+
+###########################################################
+
+# #  simple working 
+
+# def f_xml_2_csv():
+#     xml_data2 = f_display_elements()
+#     df = pd.read_xml(xml_data2, xpath='//food')
+#     # df = pd.read_xml('samplefile.xml', stylesheet='samplefilestylesheet.xslt', xpath='//user')
+#     print(df)
+#     # df.to_csv('xml_to_csv.csv', index=False)
+
+# if __name__ == "__main__":
+#     f_xml_2_csv()
