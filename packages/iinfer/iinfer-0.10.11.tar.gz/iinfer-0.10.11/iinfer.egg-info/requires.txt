@@ -1,0 +1,8 @@
+argcomplete
+cmdbox<0.5.5,>=0.5.4
+cryptography
+motpy
+opencv-python
+requests
+urllib3
+wheel
