@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: federated_search
+Version: 0.1.1
+Summary: Federated search module with PGVector and reranking support
+Author: deepan
+Author-email: deepansundaram@ninjacart.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: psycopg2-binary
+Requires-Dist: PyYAML
+Requires-Dist: ollama
+Requires-Dist: sentence-transformers
+Requires-Dist: haystack-ai
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
