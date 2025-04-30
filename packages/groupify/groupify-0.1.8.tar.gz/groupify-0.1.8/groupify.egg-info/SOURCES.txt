@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+groupify/__init__.py
+groupify/make_random_groups.py
+groupify.egg-info/PKG-INFO
+groupify.egg-info/SOURCES.txt
+groupify.egg-info/dependency_links.txt
+groupify.egg-info/requires.txt
+groupify.egg-info/top_level.txt
