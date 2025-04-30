@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: transcribe_everything
+Version: 1.5.34
+Summary: transcribe transcriptions ai whisper
+Home-page: https://github.com/zackees/transcribe-everything
+Maintainer: Zachary Vorhies
+License: BSD 3-Clause License
+Keywords: ai,transcribe,anything,everything,s3,remote,big,data
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: langdetect>=1.0.9
+Requires-Dist: transcribe-anything>=3.0.7
+Requires-Dist: virtual-fs>=1.0.23
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: maintainer
+
+# transcribe-everything
+
+[![Build Docker Image](https://github.com/zackees/transcribe-everything/actions/workflows/build_docker_image.yml/badge.svg)](https://github.com/zackees/transcribe-everything/actions/workflows/build_docker_image.yml)
+
+Transcribes everything! Point this solution to a remote directory and this tool will find all the media files (*.mp3, *.mp4) and if there is no *.txt present, it will be transcribed. Will continue until all files are transcribed.
+
+# Docker
+  * Install
+    * docker pull niteris/transcribe-everything
+
+  * Help
+    * docker run --rm -it niteris/transcribe-everything --help
+
+  * Running
+    * Windows cmd.exe: `docker run --rm -it -v "%cd%\rclone.conf:/app/rclone.conf" --gpus all niteris/transcribe-everything dst:TorrentBooks/podcast/dialogueworks01/youtube`
+    * Macos/Linux: `docker run --rm -it -v "$(pwd)/rclone.conf:/app/rclone.conf" --gpus all niteris/transcribe-everything dst:TorrentBooks/podcast/dialogueworks01/youtube`
