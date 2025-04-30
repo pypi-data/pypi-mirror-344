@@ -1,0 +1,208 @@
+Metadata-Version: 2.4
+Name: charliehr-client
+Version: 1.0.1
+Summary: A lightweight, robust Python client for interacting with the CharlieHR API.
+Home-page: https://github.com/scottmurray2789/charliehr-client
+Author: Scott Murray
+Author-email: scottmurray2789@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.32.3
+Requires-Dist: urllib3>=2.4.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# CharlieHR API Python Client
+
+A lightweight, robust Python client for interacting with the [CharlieHR API](https://charliehr.com/).  
+This client wraps common operations with built-in support for retries, pagination, and token-based authentication.
+
+---
+
+## 📦 Overview
+
+This package provides an easy-to-use Python interface for the CharlieHR platform's v1 API.  
+It allows developers to interact with:
+- Employees
+- Teams
+- Offices
+- Salaries
+- Notes
+- Leave (PTO) requests
+- Bank accounts
+- Company information
+
+The client also handles:
+- HTTP retries with exponential backoff
+- Token-based authentication
+- Automatic pagination over multiple pages of API responses
+
+---
+
+## 🚀 Features
+
+- **Simple API methods** for common CharlieHR objects.
+- **Automatic retrying** of failed requests (e.g., 429, 500, 503 errors).
+- **Built-in pagination** to fetch all results transparently.
+- **POST/GET/PUT/DELETE** request support with payloads.
+- **Rich permissions management** for note types.
+
+---
+
+## 📋 Dependencies
+
+- [requests](https://pypi.org/project/requests/)
+- [urllib3](https://pypi.org/project/urllib3/)
+
+> Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ⚙️ Installation
+
+Install the charliehr-client package from PyPi:
+
+```bash
+pip install charliehr-client
+```
+
+---
+
+## 🛠 Usage
+
+### Instantiate the Client
+
+```python
+from charliehr-client import CharlieHRClient
+
+client_id = "your_client_id"
+client_secret = "your_client_secret"
+
+charlie = CharlieHRClient(client_id=client_id, client_secret=client_secret)
+```
+
+---
+
+### Example Operations
+
+```python
+# Get all employees
+employees = charlie.get_all_employees()
+
+# Get details of a specific employee
+employee_details = charlie.get_employee_details(employee_id="employee_uuid")
+
+# Create a new note type
+new_note_type = charlie.create_note_type(
+    name="Laptop Serial Number",
+    note_type="Text",
+    owners=True,
+    team_leads=True
+)
+
+# Create a note for an employee
+new_note = charlie.create_employee_note(
+    employee_id="employee_uuid",
+    note_id="note_type_uuid",
+    content="Serial Number: ABC12345"
+)
+```
+
+---
+
+## 📚 API Methods
+
+| Method | Description |
+|:-------|:------------|
+| `get_all_bank_accounts()` | List all bank accounts |
+| `get_all_offices()` | List all offices |
+| `get_all_employees()` | List all employees |
+| `get_all_salaries()` | List all salaries |
+| `get_all_note_types()` | List all note types |
+| `get_all_teams()` | List all teams |
+| `get_company_details()` | Fetch company details |
+| `get_office_details(office_id)` | Fetch specific office details |
+| `get_employee_bank_account(user_id)` | Fetch employee's bank account |
+| `get_employee_details(employee_id)` | Fetch employee's details |
+| `get_employee_salary(employee_id)` | Fetch employee's salary |
+| `get_employee_leave_allowance(employee_id)` | Fetch leave allowance |
+| `get_employee_leave_requests(employee_id)` | Fetch leave requests |
+| `get_employee_notes(employee_id)` | Fetch employee notes |
+| `get_note_type_details(note_type_id)` | Fetch specific note type details |
+| `get_team_details(team_id)` | Fetch team details |
+| `create_note_type(...)` | Create a new note type |
+| `create_employee_note(employee_id, note_id, content)` | Create a note for an employee |
+
+---
+
+## 🔐 Authentication
+
+Authentication is handled via an **Authorization** header using your `client_id` and `client_secret`:
+
+```
+Authorization: Token token=client_id:client_secret
+```
+
+You can obtain these credentials from your CharlieHR API dashboard.
+
+---
+
+## 🛡 Error Handling
+
+If an API request fails:
+- Retries are automatically attempted (up to 3 times by default) with exponential backoff (default 0.3s, 0.6s, 1.2s).
+- Exceptions are raised for HTTP errors, timeouts, or network issues with clear error messages.
+
+---
+
+## 📜 License
+
+This client is open-sourced under the MIT License.
+
+---
+
+## Quick Start Example
+
+```python
+from charliehr-client import CharlieHRClient
+
+charlie = CharlieHRClient(
+    client_id="your_client_id",
+    client_secret="your_client_secret"
+)
+
+try:
+    company = charlie.get_company_details()
+    print(company)
+except Exception as e:
+    print(f"Failed to fetch company info: {e}")
+```
+
+---
+
+## 📎 Notes
+
+- Make sure to securely store your API credentials (`client_id` and `client_secret`).
+- Avoid hardcoding credentials in production environments — use environment variables.
+
+---
+
+# 🏁 That's it!
+
+You are now ready to automate your CharlieHR workflows using this client! 🚀
