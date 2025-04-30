@@ -1,0 +1,6 @@
+# Include LICENSE and README (if exists)
+include LICENSE
+include README.md
+
+# Recursively include ALL files in the main package directory
+recursive-include Seizure_TimeFreqROI_Annotator *

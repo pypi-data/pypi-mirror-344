@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: seizure-timefreqroi-annotator
+Version: 0.1.1
+Home-page: https://github.com/nbahador/Seizure_TimeFreqROI_Annotator
+Author: Nooshin Bahador
+Author-email: nooshin.bah@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/nbahador/Seizure_TimeFreqROI_Annotator/issues
+Project-URL: Documentation, https://github.com/nbahador/Seizure_TimeFreqROI_Annotator#readme
+Keywords: seizure,spectrogram,annotation,medical,neuroscience,time-frequency,ROI
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.8
+Description-Content-Type: text/plain
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: Pillow
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: transformers
+Requires-Dist: peft
+Requires-Dist: openpyxl
+Requires-Dist: scipy
+Requires-Dist: tqdm
+Requires-Dist: pyyaml
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+
+A package for annotation of ROIs on seizure spectrograms
