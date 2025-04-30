@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: sensai-labs
+Version: 0.1.2
+Summary: AI Agents for Hardware
+Home-page: https://github.com/sensai-ai
+Author: yudhisteer
+Author-email: yudhisteer@gmail.com
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# sensai
+
+Sensai is a Python library for building AI agents that can interact with hardware.
