@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: wowool-topic-identifier
+Version: 3.1.1.dev4
+Summary: Wowool NLP Toolkit Topic Identifier
+Author: Wowool
+Requires-Python: >=3.11
+Requires-Dist: wowool-sdk
+Dynamic: author
+Dynamic: description
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# The Wowool NLP Toolkit Topic Identifier
