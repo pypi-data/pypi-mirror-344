@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "xmlvault"
+version = "0.0.31"
+description = "xml utility"
+authors = ["Ankit K <ankit48365@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+packages = [ { include = "app", from = "." } ]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts] 
+xmlvault = "app.cli:main"
