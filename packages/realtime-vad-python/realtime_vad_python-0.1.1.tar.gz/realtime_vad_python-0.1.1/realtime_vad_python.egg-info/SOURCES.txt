@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+realtime_vad/__init__.py
+realtime_vad/audio_cache.py
+realtime_vad/detector.py
+realtime_vad/utils.py
+realtime_vad/files/silero_vad.jit
+realtime_vad_python.egg-info/PKG-INFO
+realtime_vad_python.egg-info/SOURCES.txt
+realtime_vad_python.egg-info/dependency_links.txt
+realtime_vad_python.egg-info/requires.txt
+realtime_vad_python.egg-info/top_level.txt
+tests/test_vad_detector.py

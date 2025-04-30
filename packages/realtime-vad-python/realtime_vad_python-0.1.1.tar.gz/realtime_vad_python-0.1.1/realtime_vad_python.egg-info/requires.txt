@@ -1,0 +1,14 @@
+numpy
+torch>=1.13.0
+torchaudio>=0.13.0
+
+[dev]
+pytest
+black
+isort
+flake8
+build
+twine
+
+[examples]
+pyaudio
