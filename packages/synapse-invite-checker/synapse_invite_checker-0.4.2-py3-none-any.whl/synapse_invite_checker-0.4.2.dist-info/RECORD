@@ -1,0 +1,12 @@
+synapse_invite_checker/__init__.py,sha256=l_Dvbqj_VSE7BDS8utfzKKB9F2E3Gi9urDAv2oO4ASU,78
+synapse_invite_checker/config.py,sha256=Rp7VK3lOoe_jNGASUhZV-3nb3bwpD1c9SEVN4EuoTsA,1876
+synapse_invite_checker/invite_checker.py,sha256=27s3YGhcSFQ6-lu7of4_AarAjgk6Xx-ZpZdkr4jzx5Q,45551
+synapse_invite_checker/permissions.py,sha256=YlshIdEmkjAhnuOeu8vJqt_bCK_I5CnC-0gnA-C6drI,4428
+synapse_invite_checker/store.py,sha256=am9oszw2e0KKwM4EhTBn46sAvUkegkXnu6TCUPId37k,1148
+synapse_invite_checker/types.py,sha256=pcuIde7S9QSZPfQWrKWD--z3SipLtu5l0A3WJC49OQM,7731
+synapse_invite_checker/rest/base.py,sha256=WdhHYGP7iLk4Lo5tQnMUn5Ot1Dz0wStKbLJn4vaW7Ok,1101
+synapse_invite_checker/rest/messenger_info.py,sha256=W4Rj2mO70E3lt0dKCSfx-QeQo8ykcPqaQ8hoK1M5v5I,3910
+synapse_invite_checker-0.4.2.dist-info/METADATA,sha256=KIzkg8gMUjNtPjrRE6Gnjpm60d42dy50KDPZSKEBRwI,6741
+synapse_invite_checker-0.4.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+synapse_invite_checker-0.4.2.dist-info/licenses/LICENSE,sha256=TspYfXtoLPb8BlxNaRkUJuQwX3oIxxEU--ARLdYPgLw,34468
+synapse_invite_checker-0.4.2.dist-info/RECORD,,
