@@ -1,0 +1,135 @@
+Metadata-Version: 2.4
+Name: orama-utils
+Version: 0.1.0
+Summary: Utility functions and tools for data processing and analysis
+Home-page: https://github.com/Orama-Solutions/utils
+Author: Orama Solutions
+Author-email: info@orama-solutions.com
+License: MIT License
+        
+        Copyright (c) 2024 Orama Solutions
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/Orama-Solutions/utils
+Project-URL: Bug Tracker, https://github.com/Orama-Solutions/utils/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: numpy>=1.20.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# Orama Utils
+
+A collection of utility functions for data processing and feature engineering.
+
+## Features
+
+- Date feature generation
+- Holiday feature generation (supporting ES and IT countries)
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install orama-utils
+```
+
+For development installation:
+
+```bash
+git clone https://github.com/Orama-Solutions/utils.git
+cd utils
+pip install -e .[dev]
+```
+
+## Usage
+
+### Holiday Features
+
+Add holiday-related features to your DataFrame:
+
+```python
+import pandas as pd
+from orama_utils import add_holiday_features
+
+# Create your DataFrame
+df = pd.DataFrame({
+    'date': ['2023-01-01', '2023-12-25'],
+    'country': ['ES', 'ES'],
+    'county': ['ES-MD', 'ES-CT']
+})
+
+# Add holiday features
+result = add_holiday_features(df)
+```
+
+The function adds three columns:
+- `is_public_holiday`: True for national holidays
+- `is_local_holiday`: True for county-specific holidays
+- `many_counties_holiday`: True when multiple counties celebrate the holiday
+
+You can customize the threshold for many counties:
+```python
+result = add_holiday_features(df, county_threshold=5)
+```
+
+### Date Features
+
+Add date-related features to your DataFrame:
+
+```python
+from orama_utils import add_date_features
+
+result = add_date_features(df, date_column='date')
+```
+
+## Development
+
+### Running Tests
+
+```bash
+pytest tests/
+```
+
+### Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
