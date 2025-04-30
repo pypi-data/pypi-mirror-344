@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: prismatic_noun_secret
+Version: 0.0.1
+Home-page: https://prismaticnoun.xyz
+Author: me
+Author-email: james.jrg@gmail.com
+Classifier: Development Status :: 1 - Planning
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page

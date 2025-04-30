@@ -1,0 +1,5 @@
+setup.py
+prismatic_noun_secret.egg-info/PKG-INFO
+prismatic_noun_secret.egg-info/SOURCES.txt
+prismatic_noun_secret.egg-info/dependency_links.txt
+prismatic_noun_secret.egg-info/top_level.txt
