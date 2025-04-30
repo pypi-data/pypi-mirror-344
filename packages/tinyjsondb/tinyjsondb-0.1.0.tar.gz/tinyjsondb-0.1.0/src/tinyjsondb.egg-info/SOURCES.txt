@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/tinyjsondb/__init__.py
+src/tinyjsondb/core.py
+src/tinyjsondb/errors.py
+src/tinyjsondb/fields.py
+src/tinyjsondb.egg-info/PKG-INFO
+src/tinyjsondb.egg-info/SOURCES.txt
+src/tinyjsondb.egg-info/dependency_links.txt
+src/tinyjsondb.egg-info/requires.txt
+src/tinyjsondb.egg-info/top_level.txt

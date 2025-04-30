@@ -1,0 +1,65 @@
+Metadata-Version: 2.4
+Name: tinyjsondb
+Version: 0.1.0
+Summary: Embedded JSON-based ORM-like database for small Python projects
+Author-email: Waland2 <cool.drakon@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/Waland2/tinyjsondb
+Project-URL: Repository, https://github.com/Waland2/tinyjsondb
+Keywords: json,database,orm,tinydb,embedded
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: portalocker>=2.7
+Dynamic: license-file
+
+# tinyjsondb
+
+tinyjsondb is a tiny, JSON-backed, embedded database with an ORM-like API.  
+It stores each model in a single `.json` file and provides CRUD operations through familiar Django-style managers.
+
+---
+
+## Requirements
+* Python ≥ 3.8  
+* [portalocker](https://pypi.org/project/portalocker/) (for cross-platform file locking)
+
+---
+
+## Installation
+
+install latest commit from GitHub
+```bash
+pip install git+https://github.com/Waland2/tinyjsondb.git
+```
+
+
+## Quick start
+```python
+from tinyjsondb import Model, IntegerField, StringField
+
+class User(Model):
+    path_to_file = "users.json" # store data in users.json
+    age  = IntegerField()
+    name = StringField(default="Anonymous")
+
+User.sync()  # create or migrate the file
+
+# create
+alice = User.objects.create(age=24, name="Alice")
+
+# read
+bob = User.objects.get(age=24)
+
+# update
+bob.update(name="Bob")
+
+# delete
+bob.delete()
+```
+
+License
+MIT © 2025 Waland2
