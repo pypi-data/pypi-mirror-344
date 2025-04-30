@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: omega_aidas
+Version: 1.0.6.post1
+Summary: OMEGA-AIDAS Python package
+Author: Your Name
+Requires-Python: >=3.9
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: transformers
+Requires-Dist: tensorflow
+Requires-Dist: torch
+Requires-Dist: pytest
+Requires-Dist: httpx
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

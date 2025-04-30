@@ -1,0 +1,9 @@
+omega_aidas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+omega_aidas/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+omega_aidas/core/api.py,sha256=KsJ0CghbmNELlgrY-EkDqa5h3ntCBXl6itBz9DNheo0,1648
+omega_aidas/core/impl.py,sha256=3lXY3evNvk9WQkghHtNTT3F5PbN9t1VpAPq5g8rXPek,3138
+omega_aidas/core/ops.py,sha256=bqiTDWuuJHt_50phAl6GZTjxRM9hLwDrd_Gaf9N3MHw,1310
+omega_aidas-1.0.6.post1.dist-info/METADATA,sha256=bNz0DTWqqkr2A9PrQRBKQim2sLfXysRh9HoYQbUrEEs,400
+omega_aidas-1.0.6.post1.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+omega_aidas-1.0.6.post1.dist-info/top_level.txt,sha256=XMhYLwNYijNdZN8KFZvUVSum3iNkKMhS5ZqAsIFrXJo,12
+omega_aidas-1.0.6.post1.dist-info/RECORD,,
