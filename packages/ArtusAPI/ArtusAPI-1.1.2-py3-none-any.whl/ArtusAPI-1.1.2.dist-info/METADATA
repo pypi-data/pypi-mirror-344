@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ArtusAPI
+Version: 1.1.2
+Summary: API to control Artus Family of Robots by Sarcomere Dynamics Inc
+Home-page: UNKNOWN
+Author: Sarcomere Dynamics Inc.
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: esptool
+Requires-Dist: psutil (==5.9.8)
+Requires-Dist: pyserial (==3.5)
+Requires-Dist: pyyaml
+Requires-Dist: tqdm
+
+UNKNOWN
+
