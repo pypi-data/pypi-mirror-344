@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: mcp-jamie-test2
+Version: 0.1.0
+Summary: MCP server 测试使用
+Requires-Python: >=3.13
+Requires-Dist: mcp[cli]>=1.6.0
