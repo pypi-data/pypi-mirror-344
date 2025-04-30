@@ -1,0 +1,11 @@
+textx_gen_coloring/__init__.py,sha256=2WI4NcORvO61l3YNP7tG0QZL9D8pqgEtrh8as5iatmw,1200
+textx_gen_coloring/generators.py,sha256=X6wW_RioDdibQw3eA7UAzGrxDoxOncxwg6mXZfHZ5gM,5604
+textx_gen_coloring/metamodels/__init__.py,sha256=W3kJ_0kWfOK2-uYKOsz40YA_gfBA_h0DT-RgRuQ6ZBc,238
+textx_gen_coloring/metamodels/coloring.tx,sha256=K_Ez9zHrtrY4NkbkEinP0qBN6Rvzzw2ckzjWQ4rR-7s,3891
+textx_gen_coloring/templates/__init__.py,sha256=wN9YbNix5RzOQLHCVU80dhRHR3QhDq1DaVurLYkWnFg,297
+textx_gen_coloring/templates/textmate/language.json.template,sha256=Fyi4zxvPNS0FRNSBqr4PATkL3O_jnTBFCByYCdEzzmY,3870
+textx_gen_coloring-0.2.0.dist-info/entry_points.txt,sha256=Pr3uJvUcEv0s1puXOA0MyUNyXFhN-CC7NvzOTeXN4xk,132
+textx_gen_coloring-0.2.0.dist-info/licenses/LICENSE,sha256=j-2pU84RjOMcRFmBQBabKKuO-eJxuVQ5hqlc0auNDk8,1065
+textx_gen_coloring-0.2.0.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+textx_gen_coloring-0.2.0.dist-info/METADATA,sha256=_0Izwc7X_5xrmLCGcXIg_4YDGf6vQy5kDLiZAjjK0T4,2787
+textx_gen_coloring-0.2.0.dist-info/RECORD,,
