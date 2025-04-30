@@ -1,0 +1,251 @@
+Metadata-Version: 2.4
+Name: hydroland
+Version: 1.1.2
+Summary: Hydroland application package for Climate Change Adaptation Digital Twin | Destination Earth.
+Author-email: Jeisson Leal <jeisson-javier.leal-rojas@ufz.de>, Sebastian Müller <sebastian.mueller@ufz.de>, Stephan Thober <stephan.thober@ufz.de>
+License-Expression: LGPL-3.0
+License-File: COPYING
+License-File: COPYING.LESSER
+License-File: LICENSE.md
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Requires-Dist: crick
+Requires-Dist: fypp
+Requires-Dist: isort
+Requires-Dist: matplotlib
+Requires-Dist: netcdf4
+Requires-Dist: numpy>=1.17.0
+Requires-Dist: pandas
+Requires-Dist: pytest
+Requires-Dist: pytest-mock
+Requires-Dist: ruff
+Requires-Dist: scipy
+Requires-Dist: xarray
+Description-Content-Type: text/markdown
+
+# Hydroland
+
+**Hydroland** is an open‑source, component‑based model coupling framework for environmental simulations. It provides wrappers and workflow automation around the unmodified mHM (mesoscale Hydrologic Model) and mRM (Multiscale Routing Model) codes developed at the Helmholtz Centre for Environmental Research (UFZ) in Germany. Hydroland was developed as part of the Climate Change Adaptation Digital Twin (Destination Earth) project and is it executing using [Autosubmit](https://pypi.org/project/autosubmit/) within this project:
+
+- [ECMWF description of the project](https://destine.ecmwf.int/climate-change-adaptation-digital-twin-climate-dt/)
+- [Project website](https://destination-earth.eu)
+
+---
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Quickstart](#quickstart)
+   - [1. Initialization (`hydroland initialize`)](#1-initialize)
+   - [2. Forcing Preparation (`hydroland prepare_forcings`)](#2-forcing-preparations)
+   - [3. Running mHM (`hydroland run_mhm`)](#3-run-mhm)
+   - [4. Running mRM (`hydroland run_mrm`)](#4-run-mrm)
+   - [5. Cleanup (`hydroland conclude`)](#5-cleanup)
+5. [Command‑Line Interface](#command-line-interface)
+6. [Repository Structure](#repository-structure)
+7. [Output Folder Layout](#output-folder-layout)
+8. [Configuration & Outputs](#configuration--outputs)
+9. [Contributing & Support](#contributing--support)
+10. [License](#license)
+
+---
+
+## Introduction
+
+Hydroland couples the **mHM** and **mRM** hydrological models to run global‑scale simulations at 0.1° or 0.05° spatial resolution, with hourly or daily timesteps. It uses NetCDF restart files to store all state variables (soil moisture, snowpack, etc.) and supports seamless restarts and configurable flux/state outputs.
+
+## Features
+
+- **Unmodified core models**: mHM and mRM binaries are used as provided, wrapped in Python for automation.
+- **Flexible resolution**: 0.1° and 0.05° support.
+- **Hourly & daily outputs** following CF naming conventions.
+- **Automated workflows**: Initialization, preprocessing, model runs, post‑processing, and cleanup.
+- **HPC ready**: Proven on LUMI and MareNostrum 5 via [Autosubmit](https://pypi.org/project/autosubmit/).
+
+## Installation
+
+Hydroland is published on PyPI:
+
+```bash
+pip install hydroland
+```
+
+You will also need:
+
+- Python 3.9+ with dependencies listed in `pyproject.toml` (e.g., `xarray`, `numpy`, `pytest`).
+- mHM and mRM executables on your `$PATH`, or specify custom paths via CLI options.
+
+For compilation of binaries downloas mHM & mRM repositories and source any file of preference in `CI-scripts
+/`, for more information and guidance see documentation:
+- mHM model: https://mhm.pages.ufz.de/mhm/stable/
+
+mRM is part of mHM, but a new branch was detached and modified from mHM to executed global routing at a apropiate speed, the repositories are availabe at:
+- mHM: https://git.ufz.de/mhm/mhm
+- mRM: https://git.ufz.de/destine_cats/mrm
+
+## Quickstart
+
+A minimal end-to-end workflow:
+
+### 1. Initialization (`hydroland initialize`)
+```bash
+hydroland initialize \
+  --ini_date      20210101 \
+  --end_date      20210110 \
+  --previous_date 20201231 \
+  --stat_freq     daily \
+  --init_files    /path/to/init \
+  --app_outpath   /path/to/hydroland_out \
+  --resolution    0.1 \
+  --current_mhm_dir  /path/to/run_mhm \
+  --forcings_dir     /path/to/forcings \
+  --mhm_restart_dir  /path/to/mhm_restart \
+  --current_mrm_dir  /path/to/run_mrm \
+  --mrm_restart_dir  /path/to/mrm_restart
+```
+
+### 2. Forcing Preparation (`hydroland prepare_forcings`)
+```bash
+hydroland prepare_forcings \
+  20210101 20210110 daily tavg pre \
+  /path/to/forcings 360 /path/to/opa
+```
+
+### 3. Running mHM (`hydroland run_mhm`)
+```bash
+hydroland run_mhm \
+  --ini_date        20210101 \
+  --end_date        20210110 \
+  --next_date       20210111 \
+  --current_mhm_dir /path/to/run_mhm \
+  --forcings_dir    /path/to/forcings \
+  --mhm_log_dir     /path/to/logs_mhm \
+  --mhm_fluxes_dir  /path/to/fluxes_mhm \
+  --mhm_restart_dir /path/to/mhm_restart \
+  --hydroland_opa   /path/to/opa \
+  --pre             tp \
+  --stat_freq       daily \
+  --mhm_out_file    mHM_fluxes.nc
+```
+
+### 4. Running mRM (`hydroland run_mrm`)
+```bash
+hydroland run_mrm \
+  --current_mhm_dir /path/to/run_mhm \
+  --current_mrm_dir /path/to/run_mrm \
+  --mrm_restart_dir /path/to/mrm_restart \
+  --mrm_log_dir     /path/to/logs_mrm \
+  --ini_date        20210101 \
+  --end_date        20210110 \
+  --next_date       20210111 \
+  --stat_freq       daily \
+  --init_files      /path/to/init \
+  --forcings_dir    /path/to/forcings \
+  --mhm_fluxes_dir  /path/to/fluxes_mhm \
+  --mrm_fluxes_dir  /path/to/fluxes_mrm \
+  --mhm_out_file    mHM_fluxes.nc \
+  --mrm_out_file    mRM_fluxes.nc \
+  --hydroland_opa   /path/to/opa \
+  --pre             tp \
+  --resolution      0.1
+```
+
+### 5. Cleanup (`hydroland conclude`)
+```bash
+hydroland conclude \
+  2021-01-10 \
+  /path/to/forcings \
+  /path/to/mhm_restart \
+  /path/to/logs_mhm \
+  /path/to/mrm_restart \
+  /path/to/logs_mrm \
+  /path/to/opa \
+  --delete-files
+```
+
+## Command‑Line Interface
+
+Each subcommand has its own `--help`:
+```bash
+hydroland <command> --help
+```
+
+- `initialize`: setup dirs & namelists
+- `prepare_forcings`: build mHM forcing NetCDFs
+- `run_mhm`: execute mHM & post‑process
+- `run_mrm`: execute mRM subdomains & merge
+- `conclude`: cleanup intermediate files
+
+## Repository Structure
+
+```text
+.
+├── AUTHORS.md
+├── CHANGELOG.md
+├── COPYING
+├── COPYING.LESSER
+├── LICENSE.md
+├── pyproject.toml
+├── README.md       ← you are here
+├── src/
+│   └── hydroland/
+│       ├── _cli/             ← CLI entrypoints
+│       ├── completion.py     ← cleanup logic
+│       ├── initialisation.py ← setup logic
+│       ├── data_preparation.py
+│       ├── preprocessing.py  ← mHM forcings driver
+│       ├── mhm_setup.py      ← namelist templates
+│       ├── mhm.py            ← mHM driver
+│       ├── mrm_setup.py      ← routing helpers & mosaic
+│       └── mrm.py            ← mRM driver
+└── tests/                   ← pytest suite
+```
+
+---
+
+## Output Folder Layout
+
+```text
+hydroland/
+├── forcings/
+├── mhm/
+│   ├── current_run/
+│   ├── fluxes/
+│   ├── log_files/
+│   └── restart_files/
+└── mrm/
+    ├── current_run/
+    ├── fluxes/
+    ├── log_files/
+    └── restart_files/
+```
+
+---
+
+## Configuration & Outputs
+
+- Output variables: river discharge, AET/PET, soil moisture, snowpack, interception, runoff, …
+- Enable/disable outputs in `mhm_outputs.nml` by toggling flags.
+- Full namelist reference: https://mhm.pages.ufz.de/mhm/stable/mhm__outputs_8nml_source.html
+
+---
+
+## License
+
+Hydroland is distributed under the **LGPL‑3.0** License. © 2025–2030 Hydroland developers, Helmholtz‑Zentrum für Umweltforschung GmbH – UFZ.

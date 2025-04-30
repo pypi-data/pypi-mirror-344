@@ -1,0 +1,93 @@
+[build-system]
+requires = [
+  "hatchling>=1.8.0",
+  "hatch-vcs",
+]
+build-backend = "hatchling.build"
+
+[project]
+requires-python = ">=3.9"
+name = "hydroland"
+description = "Hydroland application package for Climate Change Adaptation Digital Twin | Destination Earth."
+authors = [
+  { name = "Jeisson Leal",      email = "jeisson-javier.leal-rojas@ufz.de" },
+  { name = "Sebastian Müller",  email = "sebastian.mueller@ufz.de" },
+  { name = "Stephan Thober",    email = "stephan.thober@ufz.de" },
+]
+
+readme = "README.md"
+license = "LGPL-3.0"
+dynamic = ["version"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: End Users/Desktop",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+  "Natural Language :: English",
+  "Operating System :: Unix",
+  "Operating System :: Microsoft",
+  "Operating System :: MacOS",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Software Development",
+  "Topic :: Utilities",
+]
+dependencies = [
+  "numpy>=1.17.0",
+  "xarray",
+  "pandas",
+  "fypp",
+  "scipy",
+  "crick",
+  "netcdf4",
+  "matplotlib",
+  "pytest",
+  "pytest-mock",
+  "ruff",
+  "isort",
+]
+
+[project.scripts]
+initialize = "hydroland._cli:initialize"
+prepare_forcings = "hydroland._cli:prepare_forcings"
+run_mhm = "hydroland._cli:run_mhm"
+run_mrm = "hydroland._cli:run_mrm"
+conclude = "hydroland._cli:conclude"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.version]
+source = "vcs"
+# TODO: TAG VERSION AND PUSH
+fallback_version = "1.1.1"
+
+[tool.hatch.version.raw-options]
+local_scheme = "no-local-version"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/hydroland/_version.py"
+template = "__version__ = '{version}'"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/src",
+  "/tests",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hydroland"]
+
+[tool.black]
+exclude = "_version.py"
+target-version = [
+  "py38",
+  "py39"
+]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
