@@ -1,0 +1,9 @@
+fibo/__init__.py,sha256=JhuB88RNyqS62D4JYDhPRSdSpCNMaeacGjZWaP2YQ0k,51
+fibo/__main__.py,sha256=HCGzdUFFM2o0ax_C1eD-YGlRUYxb6h1YzjvhoxqHeoM,85
+fibo/cli.py,sha256=FZWfx8WFWCs2R3UlWOhqV91VK8fM-240w_XRaP5hjts,488
+fibo/fibo.py,sha256=SxLXbtReRwTSs-YWsQUev_mYOT_4f3rT4uHkYNGia4E,366
+tortillapatata_fibo-0.1.2.dist-info/METADATA,sha256=IvdPitXDr-_9w89QjXa61hAm7YGokqD6xtANSrALB0s,600
+tortillapatata_fibo-0.1.2.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+tortillapatata_fibo-0.1.2.dist-info/entry_points.txt,sha256=2RXR7GKbc7w7zYVIYWLDlAh3Ig01t7r5uhvxUf5P32I,39
+tortillapatata_fibo-0.1.2.dist-info/top_level.txt,sha256=QKaXwcHAiBvWjnWwI35EWP2aAe1fpKIbUBJcJ4OP55M,5
+tortillapatata_fibo-0.1.2.dist-info/RECORD,,
