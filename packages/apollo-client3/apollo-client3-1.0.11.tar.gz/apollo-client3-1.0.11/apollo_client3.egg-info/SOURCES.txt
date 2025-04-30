@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+apollo_client3.egg-info/PKG-INFO
+apollo_client3.egg-info/SOURCES.txt
+apollo_client3.egg-info/dependency_links.txt
+apollo_client3.egg-info/top_level.txt
+pyapollo/__init__.py
+pyapollo/apollo_client.py
+pyapollo/exceptions.py
