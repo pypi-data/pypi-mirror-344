@@ -1,0 +1,8 @@
+searchpubmed/__init__.py,sha256=xKmMQ99CoHdTLjedHVE5wKmVnRz2l0gX9hnHW6WzR_s,1776
+searchpubmed/pubmed.py,sha256=Sbzs0HvYyOWW0ar_118sYLrrrZZl0GQcWm0-wuRYdzs,47035
+searchpubmed/query_builder.py,sha256=ZozcsPN-ULCHk_YgbFsQBH9-dIJ41wBaYX6pjGiBUvc,10172
+searchpubmed-0.3.9.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+searchpubmed-0.3.9.dist-info/METADATA,sha256=EFW8RHYrjyruiH-MKot6MzbMoAFgFf95GzRqmzkZIEQ,16104
+searchpubmed-0.3.9.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+searchpubmed-0.3.9.dist-info/top_level.txt,sha256=W_eiB__yFxQwZHJZQtnJSYNDxbICB3r69VHcK0eYUB0,13
+searchpubmed-0.3.9.dist-info/RECORD,,
