@@ -1,0 +1,9 @@
+easy_logging/__init__.py,sha256=dGc4fHohE0djhBtIqRAQQvEn8edj2J9ZyJpaaLZ3RDs,282
+easy_logging/apps.py,sha256=aIokA3h7mfoiAaYXrzEFY6OeFkklnmBB2i-UPbvpOic,196
+easy_logging/constants.py,sha256=Z467zOHjzha5Pu7w5u33I5qwmrOVwsHuwr5g8oJP-nE,102
+easy_logging/logger_config.py,sha256=RzympFU2q80qzY6XsxH97k2x3r9X1I6S3d329kg6G-8,1264
+easy_logging/utils.py,sha256=Lad4SblZlfaJBgErtf8q5CHTCpcowIimv5ci82JjlqQ,545
+easy_audit_logging-0.1.1.dist-info/LICENSE,sha256=p-VA6Caus8hsLk9jQQd0T6_eSxCVQSMz9jAqa6XcNCs,1065
+easy_audit_logging-0.1.1.dist-info/METADATA,sha256=td5ry31ZGw2l8pvamH5dJg-k1YW9CeBhgjb-G4zTm60,7899
+easy_audit_logging-0.1.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+easy_audit_logging-0.1.1.dist-info/RECORD,,
