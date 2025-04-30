@@ -1,0 +1,2 @@
+[console_scripts]
+guidewd-sitemap-generator = guidewd_sitemap_generator.cli_sitemap_generator:main
