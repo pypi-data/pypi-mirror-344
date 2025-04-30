@@ -1,0 +1,16 @@
+aidge_backend_opencv.libs/libopencv_imgcodecs-4f85778d.so.4.9.0,sha256=TNcCTXK7EDodDE2Cf9yELhOW2UYqWWNqzfhDuGqnW7w,4048057
+aidge_backend_opencv.libs/libopencv_features2d-0e49ee46.so.4.9.0,sha256=HHF1Bcf53M20Mpidqg8fXg8ZoIgm9bmvssvilUExhcQ,1173801
+aidge_backend_opencv.libs/libopencv_core-bfc42885.so.4.9.0,sha256=bZ8Jcw1KszFb3iplK6lxcME0y5VEPsW4S-PVKwpP-YU,15800049
+aidge_backend_opencv.libs/libopencv_photo-ec6d3ea3.so.4.9.0,sha256=pH52n-8cSK-YFrLFPw0q0p1LPOXrvtMUnqH0Wm_9V4A,801073
+aidge_backend_opencv.libs/libopencv_dnn-953caa54.so.4.9.0,sha256=QuCISq7kHXLxzLcQNEWN2Zvtzg8yfSl2y5p8CKjrgmE,8971737
+aidge_backend_opencv.libs/libopencv_ml-58ec7db1.so.4.9.0,sha256=FJKZ4otHDzz5mX2Z9e2YPJ9MTA2nYkFg1dIiBKsUS4k,738145
+aidge_backend_opencv.libs/libopencv_video-834ee753.so.4.9.0,sha256=QfVaS65K85TTSJWH3rBhEAcIZcQ-2eA6KcYXV5qs6hw,768897
+aidge_backend_opencv.libs/libopencv_imgproc-0cdd7eff.so.4.9.0,sha256=EnnmycU5Zblyy7PUFCKW3wUS1rQ7qrhAmYVRVF0fYlU,29690329
+aidge_backend_opencv.libs/libopencv_flann-fb5c0475.so.4.9.0,sha256=Rdn1KAzMOWVbbBdaGASO0UVPPK1uBNdbTOoFuNkrUs0,721073
+aidge_backend_opencv/__init__.py,sha256=xdosK5ExpWovS-LVhLLWvrswcSkzkoRiIJUEqacmmWE,153
+aidge_backend_opencv/aidge_backend_opencv.cpython-313-x86_64-linux-gnu.so,sha256=EyFq03uWUx4WiJllyuEZDmKuqY8QdouINopOEyeGiwQ,2826817
+aidge_backend_opencv-0.1.6.dist-info/RECORD,,
+aidge_backend_opencv-0.1.6.dist-info/top_level.txt,sha256=ViR2kmVO1RrDkmI5NIoLcR5G-4p5peqd6Jd0Zg0_FVI,21
+aidge_backend_opencv-0.1.6.dist-info/METADATA,sha256=3P5E7Q5udF5yYCAO1Dm5e5P_x5_MCTM1-rIggJfhvSk,18091
+aidge_backend_opencv-0.1.6.dist-info/WHEEL,sha256=loWOPwgdwc2UtCtgv_n5GpaC63Z-Fk4TWNDt4A2nUmk,151
+aidge_backend_opencv-0.1.6.dist-info/licenses/LICENSE,sha256=C-zxZWe-t3-iUrdmRjHdF3yPmhiJ5ImVtFN5xxMOUwM,14198
