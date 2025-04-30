@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: itemie
+Version: 0.0.1
+Summary: Object-oriented analysis for surveys and questionnaires.
+Project-URL: Homepage, https://github.com/pythoro/itemie.git
+Project-URL: Repository, https://github.com/pythoro/itemie.git
+Project-URL: Documentation, https://itemie.readthedocs.io/en/latest/
+Author-email: Reuben Rusk <pythoro@mindquip.com>
+Maintainer-email: Reuben Rusk <pythoro@mindquip.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: QUESTIONNAIRE,SURVEY
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: ~=3.9
+Requires-Dist: numpy>=1.23.2
+Requires-Dist: pandas>=2.1.1
+Description-Content-Type: text/markdown
+
+# itemie
+
+A simple package to make analysing survey items more object-oriented.
