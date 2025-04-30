@@ -1,0 +1,10 @@
+LICENCE
+README.md
+pyproject.toml
+my_package/__init__.py
+my_package/odd_checker.py
+my_package/text_utils.py
+utkarsh_odd_vowels.egg-info/PKG-INFO
+utkarsh_odd_vowels.egg-info/SOURCES.txt
+utkarsh_odd_vowels.egg-info/dependency_links.txt
+utkarsh_odd_vowels.egg-info/top_level.txt
