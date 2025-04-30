@@ -1,0 +1,11 @@
+sier2_blocks_datamap/blocks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sier2_blocks_datamap/blocks/thisnotthat.py,sha256=jncudB4XWYwn7Fllilhq9c5O7eKqk_xJrzokkUzCUng,1571
+sier2_blocks_datamap/blocks/umap.py,sha256=9usRGF3RI1knUHDda-v1JL5FMJkYIOtu7gZuM_y5Bik,3408
+sier2_blocks_datamap/dags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sier2_blocks_datamap/dags/datamap.py,sha256=uWqodjXRRoTgQQbnU-PBq8_PgRI_UiFTYda_ivuKuEQ,680
+sier2_blocks_datamap/shelf/__init__.py,sha256=NOn5zw3pAg8sIrVxjcai-UmEo_wnXNNp2JNlPMYsnK0,434
+sier2_blocks_datamap-0.3.dist-info/LICENSE,sha256=kDCW0JUDU_bUE0R5dfiCJQn8P7PljN1JUJ3PMCZhZz4,1069
+sier2_blocks_datamap-0.3.dist-info/METADATA,sha256=RuBPLHYp0r_FCZ0aNbwFZmquXpM0OfwnjqWnMzpQ6BY,710
+sier2_blocks_datamap-0.3.dist-info/WHEEL,sha256=aiTauIPAnqOMBuVimVqk4bevIILHLWXNdkzTocSR-tg,92
+sier2_blocks_datamap-0.3.dist-info/entry_points.txt,sha256=WB5lJRMLJkPqOFmhISC7znWi288u2fG-Jh0OpD89AyU,51
+sier2_blocks_datamap-0.3.dist-info/RECORD,,
