@@ -1,0 +1,25 @@
+version = 1
+revision = 1
+requires-python = ">=3.12"
+
+[manifest]
+members = [
+    "bar",
+    "foo",
+    "kiana",
+]
+
+[[package]]
+name = "bar"
+version = "0.1.0"
+source = { editable = "packages/bar" }
+
+[[package]]
+name = "foo"
+version = "0.1.0"
+source = { editable = "packages/foo" }
+
+[[package]]
+name = "kiana"
+version = "0.2.0"
+source = { editable = "." }
