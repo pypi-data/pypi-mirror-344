@@ -1,0 +1,17 @@
+django_mcp/__init__.py,sha256=_hecDgFhW_G4DF0ZQpsKhkbfKsapIaisdG26fgla7MA,1182
+django_mcp/apps.py,sha256=BfzuwfdGHZ4N45rWYWecYGiAsIUDD7ZqqaFwLjMh4jE,4381
+django_mcp/config.py,sha256=KIeOA_TO2_8HHA1AC9Ijp4-drRhmzzrVtKhG91fm1s4,7747
+django_mcp/discovery.py,sha256=NREjIGOhtMxdUtpukbLBwtQ2Rp0JUMykJTf30a_orU4,42960
+django_mcp/discovery_utils.py,sha256=eDdoBC-TmWd_STIpChyxbaUyOJVKyVZCMU2cHmRIWaY,22425
+django_mcp/http_tools.py,sha256=n-gh3lEFI-KddQu4CcefzUP7bwd4PKrXUQat61SLPzY,5358
+django_mcp/integration.py,sha256=xb2U8BC6e9XpaABzAqxl2vndWEc8kRfbopOotB0rlhI,2951
+django_mcp/management/__init__.py,sha256=JnkHrAsXQWsH4ytkMA4vJLxLHCCXj_4jfPeTv2uoNVk,51
+django_mcp/management/commands/__init__.py,sha256=x_n2IsqdtI3h6VrQ6nnTQCX8HcsV7s7VkakLC7ejXHA,53
+django_mcp/management/commands/mcp_list_tools.py,sha256=LKPA0aXy4V_TQBbJvp7VJvoz0h7Dd__99L7b8hBZ0Us,7151
+django_mcp/mcp_server.py,sha256=DuUZ4_vTCoV3EISu3sUxA2dv-IGR5qkLqqqrwk5fxVI,10103
+django_mcp/urls.py,sha256=NACy_SydEo1NJ1CIn2GrspXKEPoI_Fax8ucxQlRmgKM,911
+django_mcp/utils.py,sha256=bjtfKTKw9S_WO8sMr7xYcNKcMffylFR1ndPBg5IE73Y,3312
+pulse_django_mcp-0.2.0.dist-info/LICENSE.txt,sha256=t9TN1IPbDmCsW5mk7Y87j9vkjpBhEKv12p3TxAB9nJI,1103
+pulse_django_mcp-0.2.0.dist-info/METADATA,sha256=6rZBTtzRq61KO6MQ0b3HIvmy_SfJigVRQ8PTk3jBCVM,3541
+pulse_django_mcp-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pulse_django_mcp-0.2.0.dist-info/RECORD,,
