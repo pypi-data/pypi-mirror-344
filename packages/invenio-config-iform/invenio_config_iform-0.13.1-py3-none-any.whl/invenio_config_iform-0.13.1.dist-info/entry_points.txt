@@ -1,0 +1,4 @@
+[console_scripts]
+test = scripts.test:main
+test-code = pytest:console_main
+test-docs = scripts.test_docs:main
