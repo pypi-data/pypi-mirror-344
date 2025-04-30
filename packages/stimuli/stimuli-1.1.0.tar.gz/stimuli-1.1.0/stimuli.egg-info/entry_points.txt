@@ -1,0 +1,2 @@
+[console_scripts]
+stimuli = stimuli.commands.main:run
