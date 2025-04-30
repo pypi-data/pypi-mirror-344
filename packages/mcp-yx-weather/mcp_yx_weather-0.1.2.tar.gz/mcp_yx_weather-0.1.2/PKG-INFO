@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: mcp-yx-weather
+Version: 0.1.2
+Summary: Add your description here
+Author-email: 御雪 <wb-spf530106@alibaba-inc.com>
+Requires-Python: >=3.10
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: mcp[cli]>=1.6.0
+Description-Content-Type: text/markdown
+
+这是一个通过高德API获取某一城市区域实时天气的serve,版本1.2
