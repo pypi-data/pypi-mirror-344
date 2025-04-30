@@ -1,0 +1,21 @@
+[project]
+name = "shipzo_mult_hun"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "hun0219", email = "gsw98000@gmail.com"},
+]
+dependencies = []
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm]
+distribution = true
+
+[project.urls]
+Homepage = "https://github.com/hun0219/shipzo_mult"
+Issues = "https://github.com/hun0219/shipzo_mult/Issues"
+
+[project.scripts]
+shipzo_mult='shipzo_mult.mult:main'
