@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: stalmarckpy
+Version: 0.1.0
+Summary: Python bindings for StalmarckSAT solver
+Author-Email: StalmarckSAT Team <your.email@example.com>
+License: MIT
+Requires-Python: >=3.8
+Requires-Dist: pybind11>=2.10.0
+Description-Content-Type: text/markdown
+
+# StalmarckPy
+
+A lightweight Python API for the StalmarckSAT solver.
+
+## Installation
+
+```bash
+pip install stalmarckpy
+```
+
+## Usage
+
+```python
+from stalmarckpy import solve
+
+# Solve a DIMACS CNF file
+result = solve("path/to/cnf_file.cnf")
+print("SAT" if result else "UNSAT")
+```

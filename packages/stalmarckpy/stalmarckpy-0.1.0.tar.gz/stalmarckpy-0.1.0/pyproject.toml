@@ -1,0 +1,44 @@
+[build-system]
+requires = [
+    "scikit-build-core>=0.5.0",
+    "pybind11>=2.10.0",
+]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "stalmarckpy"
+version = "0.1.0"
+description = "Python bindings for StalmarckSAT solver"
+authors = [
+    {name = "StalmarckSAT Team", email = "your.email@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+dependencies = ["pybind11>=2.10.0"]
+
+[tool.scikit-build]
+wheel.expand-macos-universal-tags = true
+build-dir = "build/{wheel_tag}"
+install.components = ["python_modules"]
+build.verbose = true
+
+[tool.scikit-build.cmake]
+version = ">=3.15"
+build-type = "Release"
+
+[tool.scikit-build.cmake.define]
+CMAKE_POSITION_INDEPENDENT_CODE = "ON"
+
+[tool.scikit-build.sdist]
+include = [
+    "stalmarckpy/*.py",
+    "stalmarckpy_bindings.cpp",
+    "CMakeLists.txt",
+    "src/core/*.cpp",
+    "src/core/*.hpp",
+    "src/parser/*.cpp",
+    "src/parser/*.hpp",
+    "src/solver/*.cpp",
+    "src/solver/*.hpp"
+]
