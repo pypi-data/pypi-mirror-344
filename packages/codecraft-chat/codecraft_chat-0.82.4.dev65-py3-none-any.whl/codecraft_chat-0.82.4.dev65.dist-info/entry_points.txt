@@ -1,0 +1,2 @@
+[console_scripts]
+codecraft = codecraft.main:main_with_utf8
