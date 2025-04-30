@@ -1,0 +1,58 @@
+[project]
+name = "textflowthon"
+version = "0.1.0"
+description = "A modular Python library for animating text output in the terminal with typewriter and other effects. Supports sync/async, custom fonts, and more."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyfiglet>=1.0.2",
+    "rich"
+]
+authors = [
+    { name = "IAmNo1Special", email = "IVmNo1Special@gmail.com" }
+]
+license = { text = "MIT" }
+keywords = ["text", "animation", "typewriter", "terminal", "console", "effects", "async"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Terminals",
+    "Topic :: Text Processing"
+]
+
+[project.urls]
+Homepage = "https://github.com/IAmNo1Special/textflowthon"
+Documentation = "https://github.com/IAmNo1Special/textflowthon/blob/main/README.md"
+Repository = "https://github.com/IAmNo1Special/textflowthon"
+Issues = "https://github.com/IAmNo1Special/textflowthon/issues"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.26.0",
+    "pytest-cov>=4.1.0"
+]
+docs = [
+    "sphinx>=7.0.0",
+    "sphinx-rtd-theme>=1.3.0",
+    "sphinx-autodoc-typehints>=1.26.0"
+]
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
+addopts = "-v -s --cov=textflowthon --cov-report=term-missing"
+
+[tool.hatch.build.targets.wheel]
+packages = ["textflowthon"]
+
+[tool.hatch.build.targets.sdist]
+include = ["textflowthon"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
