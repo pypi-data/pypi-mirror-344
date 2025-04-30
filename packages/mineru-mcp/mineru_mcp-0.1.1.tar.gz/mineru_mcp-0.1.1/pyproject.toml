@@ -1,0 +1,28 @@
+[project]
+name = "mineru-mcp"
+version = "0.1.1"
+description = "PDF to Markdown conversion MCP service using MinerU API"
+authors = [
+    {name = "AdrianWang",email = "wyz17601402786@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.8.0",
+    "fastmcp>=0.5.0",
+    "python-dotenv>=1.0.0",
+    "charset-normalizer>=3.4.1",
+    "requests>=2.32.0",
+    "urllib3>=2.0.0"
+]
+
+[project.scripts]
+mineru-mcp = "mineru.cli:main"
+
+[tool.poetry]
+packages = [{include = "mineru", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
