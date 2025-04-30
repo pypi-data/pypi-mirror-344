@@ -1,0 +1,101 @@
+Metadata-Version: 2.4
+Name: scanux
+Version: 0.1.5
+Summary: Advanced Linux system scanning and security analysis tool
+Home-page: https://github.com/yassir-aea/scanux
+Author: Yassir AIT EL AIZZI
+Author-email: Yassir AIT EL AIZZI <yassir.aitelaizzi@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yassir-aea/scanux
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Security
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psutil>=5.8.0
+Requires-Dist: rich>=10.0.0
+Requires-Dist: click>=8.0.0
+Requires-Dist: python-dateutil>=2.8.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: cryptography>=41.0.0
+Requires-Dist: netifaces>=0.11.0
+Requires-Dist: python-iptables>=1.0.0
+Requires-Dist: systemd-python>=235
+Requires-Dist: dbus-python>=1.3.2
+Requires-Dist: selinux>=0.2.1
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# scanux
+
+A system scanning tool for Linux and Windows systems that:
+- Scans connected users
+- Identifies suspicious behavior
+- Analyzes command history
+- Generates reports in multiple formats
+
+## Features
+
+- **User Scanning**: Lists all currently connected users with their details
+- **Suspicious Behavior Detection**: Identifies processes with high CPU/memory usage
+- **Command History Analysis**: Analyzes recent command history
+- **Multiple Report Formats**: Supports JSON, Markdown, and HTML output formats
+- **Cross-Platform**: Works on both Linux and Windows systems
+
+## Installation
+
+```bash
+pip install scanux
+```
+
+## Usage
+
+Basic usage:
+```bash
+scanux
+```
+
+Generate a report in a specific format:
+```bash
+scanux --format json
+scanux --format markdown
+scanux --format html
+```
+
+Save report to a file:
+```bash
+scanux --format json --output report.json
+scanux --format markdown --output report.md
+scanux --format html --output report.html
+```
+
+## Report Contents
+
+The generated report includes:
+- System information (platform, release, version, machine)
+- List of connected users
+- Suspicious behavior detection
+- Recent command history
+
+## Requirements
+
+- Python 3.6 or higher
+- psutil
+- rich
+- click
+- python-dateutil
+
+## License
+
+MIT License 
