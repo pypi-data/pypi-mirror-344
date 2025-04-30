@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: yellowdog-airflow-provider
+Version: 1.0.0
+Summary: YellowDog Provider for Apache Airflow.
+Author-email: YellowDog Limited <support@yellowdog.co>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://github.com/yellowdog/airflow-provider
+Project-URL: Source, https://github.com/yellowdog/airflow-provider
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Apache Airflow
+Classifier: Framework :: Apache Airflow :: Provider
+Requires-Python: <3.13,>=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: apache-airflow>=2.7.0
+Requires-Dist: yellowdog-sdk>=9.1.4
+Dynamic: license-file
+
+# YellowDog Provider for Apache Airflow
+
+The YellowDog Provider for Apache Airflow supports seamless integration of the [YellowDog Platform](https://yellowdog.ai) with Apache Airflow.
+
+Documentation is found at: https://docs.yellowdog.ai/airflow-provider/index.html.
