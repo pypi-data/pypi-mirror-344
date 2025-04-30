@@ -1,0 +1,13 @@
+ml_derivatives/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ml_derivatives/mld.py,sha256=2Vo9HRjyFM7-xIHAc7KlHb9UxWOGc6GK2P0A4AxH_qk,17399
+ml_derivatives/data/.DS_Store,sha256=8ddOJ3SWMdFMxhnw5hQaGByaUXX0SBYIvbvPtVPZwPw,8196
+ml_derivatives/data/Ma_0.01_50.pkl,sha256=1cPzyBZf7YmkLANKqT5SIWb81aAH0VjAj3bPzaS0a6M,3937091
+ml_derivatives/data/Ma_0.025_50.pkl,sha256=veW8IlTUALpQMWnEoE5yl9CD1rouc20eWYT1mXhFeP0,3865963
+ml_derivatives/data/Ma_0.05_50.pkl,sha256=9ROZRAH0OGj7FtE6qr87yTqE_VOS1YR97cbB-5gUZ20,3806964
+ml_derivatives/data/Ma_0.08_50.pkl,sha256=eRBKAALdckj1Y3X6m-LkQrgkK9Or_cg_cxyniuB4Kuw,3772211
+ml_derivatives/data/Ma_0.1_50.pkl,sha256=Kb4YxX-twCLOtv9_cL4vdfKj-1YWp5H7LWHSHuHH9aw,3764942
+ml_derivatives-0.0.1.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+ml_derivatives-0.0.1.dist-info/METADATA,sha256=-QnvkZ92SJbznqFIWPqbrL9XVIUoVcv52iKLxou56p8,948
+ml_derivatives-0.0.1.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+ml_derivatives-0.0.1.dist-info/top_level.txt,sha256=HbGJtaT57f9v7xaEKvuwg96SJ9UL3l0gxVADFlxDoHs,15
+ml_derivatives-0.0.1.dist-info/RECORD,,
