@@ -1,0 +1,32 @@
+# An environment to develop, build, test, and document bmi-topography.
+name: topography
+channels:
+  - conda-forge
+dependencies:
+  - python >=3.10
+  - pip
+  - requests
+  - numpy
+  - click
+  - pyyaml
+  - xarray
+  - rioxarray
+  - bmipy
+  - black
+  - flake8
+  - isort
+  - nox
+  - pytest
+  - pytest-cov
+  - pytest-datadir
+  - coverage
+  - coveralls
+  - bmi-tester
+  - sphinx
+  - recommonmark
+  - pandoc
+  - notebook
+  - matplotlib
+  - build
+  - twine
+  - zest.releaser
