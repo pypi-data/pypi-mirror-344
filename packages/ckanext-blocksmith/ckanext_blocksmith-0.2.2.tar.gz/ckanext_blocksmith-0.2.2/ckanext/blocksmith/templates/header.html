@@ -1,0 +1,19 @@
+{% ckan_extends %}
+
+{% block header_account_logged %}
+    {% if g.userobj.sysadmin %}
+        <li>
+            <a href="{{ h.url_for('blocksmith.create') }}" title="Create a new page">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ h.url_for('blocksmith.list') }}" title="List of pages">
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    {% endif %}
+
+    {{ super() }}
+{% endblock %}
