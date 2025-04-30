@@ -1,0 +1,7 @@
+numpy
+
+[all]
+ecospat[extra]
+
+[extra]
+pandas

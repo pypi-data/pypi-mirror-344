@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: ecospat
+Version: 0.0.1
+Summary: A python package to o characterize the range dynamics and shifts of North American tree species.
+Author-email: Alivia Nytko <anytko@vols.utk.edu>
+License: MIT License
+Project-URL: Homepage, https://github.com/anytko/ecospat
+Keywords: ecospat
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: all
+Requires-Dist: ecospat[extra]; extra == "all"
+Provides-Extra: extra
+Requires-Dist: pandas; extra == "extra"
+Dynamic: license-file
+
+# ecospat
+
+
+[![image](https://img.shields.io/pypi/v/ecospat.svg)](https://pypi.python.org/pypi/ecospat)
+[![image](https://img.shields.io/conda/vn/conda-forge/ecospat.svg)](https://anaconda.org/conda-forge/ecospat)
+
+
+**A python package to characterize the range dynamics and shifts of North American tree species.**
+
+
+-   Free software: MIT License
+-   Documentation: https://anytko.github.io/ecospat
+
+
+## Features
+
+-   TODO
