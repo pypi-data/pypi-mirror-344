@@ -1,0 +1,10 @@
+sier2_blocks_geo/blocks/__init__.py,sha256=yfOup8OqX-6ZxGGcjA2IpJuAsI3GGc-fCvomB2KY9cM,59
+sier2_blocks_geo/blocks/geo.py,sha256=C4dDWEK534khcWAXMKhTqfb-g4i7F4FCW0Bx6h4OsLc,5639
+sier2_blocks_geo/dags/__init__.py,sha256=UMSnGJc0fHSxp0BdqSIicydjs-jR5Vuzvd4h01uDHcM,32
+sier2_blocks_geo/dags/geo_dags.py,sha256=Zi81ic16iUdzlZOo2DvKkMk3iUp9pUWWZgY9nUj6Mos,1027
+sier2_blocks_geo/shelf/__init__.py,sha256=AAP7psr3cBceqapW349iO1ULMG7B2zIZSf8ZHdublms,476
+sier2_blocks_geo-0.4.dist-info/LICENSE,sha256=kDCW0JUDU_bUE0R5dfiCJQn8P7PljN1JUJ3PMCZhZz4,1069
+sier2_blocks_geo-0.4.dist-info/METADATA,sha256=6bJpViSKXWnYCNh4L613-lxVy8YruOE5mwDNntwu924,626
+sier2_blocks_geo-0.4.dist-info/WHEEL,sha256=aiTauIPAnqOMBuVimVqk4bevIILHLWXNdkzTocSR-tg,92
+sier2_blocks_geo-0.4.dist-info/entry_points.txt,sha256=1ndqopKKvKsaCo2Y1P04jC_NbthvZrTeo5ugFPjoWn4,47
+sier2_blocks_geo-0.4.dist-info/RECORD,,
