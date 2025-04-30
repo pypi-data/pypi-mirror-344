@@ -1,0 +1,4 @@
+matplotlib>=3.10.1
+numpy
+scipy
+raylib>=5.5.0.0
