@@ -1,0 +1,10 @@
+strictaccess/__init__.py,sha256=w4IyXgx0UigyEeN9fDeonVR8e3QBQFQedvvUt2tEdRY,233
+strictaccess/access_tags.py,sha256=uYZpNbM3magxESDF7ORHXiXdvZXV3QoR0DmBsTDUHvo,225
+strictaccess/core.py,sha256=dT7s3Q6Ip1_raqA5v23amRkX8RyeZPx9funO8d2MCB4,1523
+strictaccess/decorators.py,sha256=M2bWzeKzKLJ6uys2IUZ92oPkjNdpEApsmWTl4Purx4E,340
+strictaccess/exceptions.py,sha256=2d1apRcN0xM9TEvqzC5fkp0S7LV4WW3G8iqrf3R2B5E,365
+strictaccess-0.1.2.dist-info/licenses/LICENSE,sha256=XJcZ9qIrShJBluUa4Mb89VF6-fEqWjdBjjdd4WHP_hw,1087
+strictaccess-0.1.2.dist-info/METADATA,sha256=7n91w3WeHMhhv9THu7YgE3goll738-ji8iQ1ei7IhbI,1901
+strictaccess-0.1.2.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+strictaccess-0.1.2.dist-info/top_level.txt,sha256=29xvGkDmW9pf9XEUYbW1PBiQlXYRomGTBPss56uTLwc,13
+strictaccess-0.1.2.dist-info/RECORD,,
