@@ -1,0 +1,11 @@
+reasonable/__init__.py,sha256=SKsolQYmoNmqJMwyDY7vb1fhkESwaUg86SOUWBHjSBs,180
+reasonable/prompts.py,sha256=SPzjunEGPdddQuoiuDBu8zeyq72k5vnc_FeCtyjrhT4,2520
+reasonable/agents/__init__.py,sha256=MOWeQm08PQedBHp_OUjX6hnvP3m5Jtk5OAPmLbT4zOM,120
+reasonable/agents/chain_of_thought.py,sha256=uIdi6Y6E4qfveX0sEraWteys6AEa985c9CAV4cStcNA,2039
+reasonable/llms/__init__.py,sha256=cr2qQDSlpqkTSV__RydUndK8vPzrKUBtcD1IMMrXF3k,97
+reasonable/llms/base.py,sha256=HRpg43HOxLveLAoSuiuHXu5z91RM8CMtWC71U8EiQuI,254
+reasonable/llms/function.py,sha256=sB-Khynlgv9Dv8F652wtUoPigxQknGvqkIhdLHwm6vk,326
+reasonable_ml-0.3.0.dist-info/METADATA,sha256=M50jkFQAxuI2Ah_qPrESlIPpO3p9aKSkzEAXVoN4bNw,847
+reasonable_ml-0.3.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+reasonable_ml-0.3.0.dist-info/top_level.txt,sha256=LEKjFkXS42LM0OAkII8j_YOoJc01I8sGNU7GM-l5rdY,11
+reasonable_ml-0.3.0.dist-info/RECORD,,
