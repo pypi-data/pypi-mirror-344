@@ -1,0 +1,254 @@
+Metadata-Version: 2.4
+Name: iisy-asr-pipeline
+Version: 1.0.0.post1
+Summary: ASR pipeline for the ASR project
+Author-email: Paul Roloff <paul.roloff@uni-bielefeld.de>, Felix Hostert <felix.hostert@uni-bielefeld.de>, Kai Titgens <kai.titgens@uni-bielefeld.de>
+Requires-Python: ==3.11.10
+Description-Content-Type: text/markdown
+Requires-Dist: speechbrain==1.0.2
+Requires-Dist: mir-eval==0.6
+Requires-Dist: pyroomacoustics>=0.7.3
+Requires-Dist: pyaudio==0.2.14
+Requires-Dist: deepfilternet==0.5.6
+Requires-Dist: faster-whisper==1.1.1
+Requires-Dist: rich==14.0.0
+Requires-Dist: scikit-learn==1.6.1
+Requires-Dist: scipy==1.15.2
+Provides-Extra: cuda
+Requires-Dist: torch>=2.6.0; extra == "cuda"
+Requires-Dist: torchaudio>=2.6.0; extra == "cuda"
+
+# IISY ASR Pipeline
+
+An automated speech recognition (ASR) pipeline with speech enhancement, transcription, and speaker identification capabilities.
+
+## Overview
+
+The IISY ASR Pipeline is a comprehensive solution for processing audio input in real-time. It combines multiple processing stages:
+
+1. **Speech Enhancement** - Using DeepFilterNet to improve audio quality
+2. **Speech Transcription** - Converting speech to text with Faster Whisper
+3. **Speaker Identification** - Identifying speakers using SpeechBrain models
+
+## Installation
+
+### Requirements
+
+- Python 3.11.10
+- CUDA-compatible GPU (recommended for optimal performance)
+
+### Installation
+
+You can install the package directly from PyPI:
+
+```bash
+# For CPU-only installation
+pip install iisy-asr-pipeline
+
+# For GPU support (CUDA)
+pip install iisy-asr-pipeline[cuda]
+```
+
+For GPU support, you'll need to manually install the CUDA-compatible version of PyTorch first:
+
+```bash
+# Install CUDA-compatible PyTorch (example for CUDA 11.8)
+pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# Then install the package with CUDA support
+pip install iisy-asr-pipeline[cuda]
+```
+
+You can adjust the CUDA version (cu117, cu118, cu121, etc.) based on your system's requirements.
+
+## Usage
+
+### Listing Available Audio Devices
+
+Before running the pipeline, you may want to identify the correct audio input device:
+
+```bash
+python -m iisy.run_pipeline --list-devices
+```
+
+### Basic Usage
+
+Run the ASR pipeline with default settings:
+
+```bash
+python -m iisy.run_pipeline --input-device-index 1
+```
+
+### Command Line Options
+
+The pipeline can be customized with various command line arguments:
+
+```bash
+python -m iisy.run_pipeline [OPTIONS]
+```
+
+#### Device Settings
+- `--device` - Device to run models on (`cuda` or `cpu`, default: `cuda` if available, otherwise `cpu`)
+- `--input-device-index` - Input audio device index (default: `1`)
+- `--list-devices` - List all available audio devices and exit
+
+#### Audio Parameters
+- `--chunk-size` - Number of audio frames per buffer (default: `2048`)
+- `--channels` - Number of audio channels (1=mono, 2=stereo, default: `1`)
+- `--buffer-size` - Size of the audio buffer (default: `1000`)
+
+#### Model Parameters
+- `--whisper-model` - Whisper model size (tiny, base, small, medium, large, turbo, default: `medium`)
+- `--speaker-model` - Speaker identification model path (default: `speechbrain/spkrec-resnet-voxceleb`)
+
+#### Silence Detection Parameters
+- `--silence-threshold` - Energy threshold for silence detection (default: `0.01`)
+- `--min-silence-duration` - Minimum duration of silence for sentence boundary in seconds (default: `2.0`)
+
+#### Other Parameters
+- `--speaker-threshold` - Threshold for speaker identification (default: `0.55`)
+- `--verbose` - Enable verbose logging
+
+### Example Commands
+
+Run with a larger Whisper model for better transcription accuracy:
+```bash
+python -m iisy.run_pipeline --whisper-model large
+```
+
+Use a different microphone (device index 2) and enable verbose logging:
+```bash
+python -m iisy.run_pipeline --input-device-index 2 --verbose
+```
+
+Use ECAPA-TDNN model for speaker identification:
+```bash
+python -m iisy.run_pipeline --speaker-model speechbrain/spkrec-ecapa-voxceleb
+```
+
+## Advanced Usage
+
+### Programmatic Integration
+
+You can integrate the ASR pipeline into your own Python applications:
+
+```python
+import threading
+import pyaudio
+import torch
+from iisy.context_window import ContextWindow
+from iisy.pipeline.asr_pipeline import AsrPipeline
+
+# Initialize audio capture
+p = pyaudio.PyAudio()
+in_stream = p.open(
+    format=pyaudio.paInt16,
+    channels=1,
+    rate=16000,
+    input=True,
+    input_device_index=1,
+    frames_per_buffer=2048
+)
+
+# Create audio buffer
+audio_buffer = ContextWindow(1000)
+
+# Configure pipeline
+pipeline_config = {
+    'speaker': {
+        'model': "speechbrain/spkrec-resnet-voxceleb",
+        'savedir': "spkrec-resnet-voxceleb",
+        'speaker_threshold': 0.55
+    },
+    'whisper': {
+        "model_size": "medium",
+        "device_index": 0,
+        "compute_type": "float16"
+    }
+}
+
+# Create pipeline
+pipeline = AsrPipeline(
+    input_sr=16000,
+    device=torch.device("cuda" if torch.cuda.is_available() else "cpu"),
+    min_silence_duration=2.0,
+    verbose=True,
+    **pipeline_config
+)
+
+# Set up audio capture
+def audio_capture():
+    while True:
+        try:
+            audio_data = in_stream.read(2048, exception_on_overflow=False)
+            audio_buffer.add(audio_data)
+        except Exception as e:
+            print(f"Audio capture error: {e}")
+            break
+
+# Start capture thread
+capture_thread = threading.Thread(target=audio_capture, daemon=True)
+capture_thread.start()
+
+# Run pipeline
+try:
+    pipeline.run(audio_buffer)
+finally:
+    in_stream.stop_stream()
+    in_stream.close()
+    p.terminate()
+```
+
+### Custom Processing Steps
+
+You can customize each processing step of the pipeline:
+
+```python
+from iisy.pipeline.speech_enhancement_step import SpeechEnhancementStep
+from iisy.pipeline.speech_transcription_step import SpeechTranscriptionStep
+from iisy.pipeline.speaker_identification_step import SpeakerIdentificationStep
+
+# Create custom steps
+enhancement_step = SpeechEnhancementStep(...)
+transcription_step = SpeechTranscriptionStep(...)
+identification_step = SpeakerIdentificationStep(...)
+
+# Create pipeline with custom steps
+pipeline = AsrPipeline(
+    enhancement_step=enhancement_step,
+    transcription_step=transcription_step,
+    identification_step=identification_step
+)
+```
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Audio device not found**: Verify your input device with `--list-devices` and select the correct index.
+
+2. **CUDA out of memory**: Try using a smaller Whisper model (`--whisper-model small` or `--whisper-model base`).
+
+3. **Poor transcription quality**: Consider the following:
+   - Try a larger Whisper model
+   - Ensure your microphone is positioned correctly
+   - Adjust `--min-silence-duration` for better sentence boundaries
+
+4. **Speaker identification issues**: Try adjusting the `--speaker-threshold` value. Higher values require more confidence for speaker identification.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+
+This project utilizes several open-source libraries:
+- [DeepFilterNet](https://github.com/rikorose/DeepFilterNet) for speech enhancement
+- [Faster-Whisper](https://github.com/guillaumekln/faster-whisper) for speech transcription
+- [SpeechBrain](https://github.com/speechbrain/speechbrain) for speaker identification
+
+## Authors
+
+- Paul Roloff - paul.roloff@uni-bielefeld.de
+- Felix Hostert - felix.hostert@uni-bielefeld.de
+- Kai Titgens - kai.titgens@uni-bielefeld.de
