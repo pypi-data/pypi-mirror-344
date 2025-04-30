@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: matched
+Version: 2025.4.0
+Summary: Python package for matching students to projects.
+Project-URL: Repository, https://github.com/teachnology/matched
+Author-email: Marijan Beg <m.beg@imperial.ac.uk>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: higher education,projects
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13
+Requires-Dist: fakeitmakeit>=2024.11.0
+Requires-Dist: pandas>=2.2.3
+Description-Content-Type: text/markdown
+
+# matched
+Python package for matching students to projects
