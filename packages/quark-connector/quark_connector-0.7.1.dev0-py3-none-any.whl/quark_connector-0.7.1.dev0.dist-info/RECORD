@@ -1,0 +1,16 @@
+TCLIService/TCLIService.py,sha256=omulS57NnFKJ8A3_PVCUoVNoFPOA4JwrhNRF8iN8WJg,179914
+TCLIService/__init__.py,sha256=O2jdtSWwcplllRQF5owrFt64pm7tc2QwII1kK6QmPJI,50
+TCLIService/constants.py,sha256=PJR0hC_C8aqswJ_zU3BLDdidQ-NcOA6uPQEoZf-bj8Q,1547
+TCLIService/ttypes.py,sha256=eIIYTs_Ehaqcq53LQtd-DovYDh4pKUK-TVJGp_8Y9IQ,302402
+pyquark/__init__.py,sha256=ZXcw2D14VyrNTr9AFTdc1_W9wUz95prSpMiFoG8Yaac,104
+pyquark/common.py,sha256=P7YC4v7GYBihZtSiVSTB-R_DwlGibpuZdJ-tnkwNaVA,9610
+pyquark/exc.py,sha256=AOdmI98xaesYdVlj9wzUHhu6OhUgMjnAymhh6vstzfc,2268
+pyquark/quark.py,sha256=jWEzWJpvpxLB8XheoaOlqLLvtKZoJXIHW9KyiJIaWJ0,23708
+pyquark/sasl_compat.py,sha256=ziaycoKL1NTOxTsD-xh9ALcZS4CHDlfgg6JAnjTVnrE,1992
+pyquark/sqlalchemy_quark.py,sha256=4a_6y9-i4WD_4Qhyb1YAYnLstDhmfkfuYUwZ_HXjOK8,13905
+quark_connector-0.7.1.dev0.dist-info/LICENSE,sha256=vkvg5gWgUvBxBYjDmLdmxnSDipevaJZWFDdKIDqFYl8,571
+quark_connector-0.7.1.dev0.dist-info/METADATA,sha256=3ErDZizX7GXtE9nAN_oLQeaafP5iGbQyxAt90ABpefU,1331
+quark_connector-0.7.1.dev0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+quark_connector-0.7.1.dev0.dist-info/entry_points.txt,sha256=ac64eKv4J0mTifJCqgJkAgzv6cRSrszAK1oMuh4hPEo,180
+quark_connector-0.7.1.dev0.dist-info/top_level.txt,sha256=kC5bBpLilujGxpeZPtIeXmIovGGPQag8ixZlH3MuIk4,20
+quark_connector-0.7.1.dev0.dist-info/RECORD,,

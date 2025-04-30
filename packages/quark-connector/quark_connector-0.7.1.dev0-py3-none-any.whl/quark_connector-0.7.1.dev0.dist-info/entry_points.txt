@@ -1,0 +1,4 @@
+[sqlalchemy.dialects]
+quark = pyquark.sqlalchemy_quark:QuarkDialect
+quark.http = pyquark.sqlalchemy_quark:QuarkHTTPDialect
+quark.https = pyquark.sqlalchemy_quark:QuarkHTTPSDialect
