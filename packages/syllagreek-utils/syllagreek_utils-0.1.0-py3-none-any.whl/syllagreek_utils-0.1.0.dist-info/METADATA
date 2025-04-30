@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: syllagreek_utils
+Version: 0.1.0
+Summary: Greek preprocessing and syllabification utilities for SyllaMoBert
+Author: Your Name
+License: MIT
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
