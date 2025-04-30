@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+README.md
+criar_e_publicar_pacote.bat
+pyproject.toml
+ZapContabil.egg-info/PKG-INFO
+ZapContabil.egg-info/SOURCES.txt
+ZapContabil.egg-info/dependency_links.txt
+ZapContabil.egg-info/top_level.txt
+zap_contabil/__init__.py
+zap_contabil/__version__.py
+zap_contabil/api.py
+zap_contabil/zap_contabil.py
