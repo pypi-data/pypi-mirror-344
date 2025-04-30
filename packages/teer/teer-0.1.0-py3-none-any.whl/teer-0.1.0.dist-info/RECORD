@@ -1,0 +1,13 @@
+teer/__about__.py,sha256=OODGMRYwarQrTYGaEuqve2ilwh8knSsMr0YRwHt5Psk,123
+teer/__init__.py,sha256=kopyzCSM50vjF6ZvutnEbCBjeJstQYRjtnG8kPOJb9M,2493
+teer/http.py,sha256=QhcLBjXREuojQsN9th2N05uTEePDV7qis8ue-HRvqsA,2784
+teer/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+teer/resources/__init__.py,sha256=gbmEvcbgITZTL5h1kqA8dKMB9m3i2y4wvP61UWUThVY,207
+teer/resources/base.py,sha256=NqNPlX3wme--00RTtdDNdZDfreYX_l9bxsNyYliMFoo,2812
+teer/resources/billing.py,sha256=hrCqqoTeNsXfZtie0AB4YTAYPx88G2a34UsXzTzAQgI,2663
+teer/resources/ingest.py,sha256=O3334_-YxF9fnd14BjHsW2xMsm5HRAjs4OnB1MDyKGE,1316
+teer-0.1.0.data/data/teer/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+teer-0.1.0.dist-info/METADATA,sha256=aFYhSBf5o4dbmQE8682zqi0g-uF_gX9LZNiWEtOuRg0,5977
+teer-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+teer-0.1.0.dist-info/licenses/LICENSE.txt,sha256=ISfthpAADcFlJHlW3oxCL6Z5bYZUcQYbx7EKq-PSanA,1093
+teer-0.1.0.dist-info/RECORD,,
