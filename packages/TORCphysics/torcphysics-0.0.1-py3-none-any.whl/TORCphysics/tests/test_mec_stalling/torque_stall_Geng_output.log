@@ -1,0 +1,42 @@
+TORCphysics log file 
+
+General information: 
+---------------------------------------------------------------------------------------
+Circuit name: torque_stall_Geng_output
+Size: 6000
+Structure: linear
+Number of sites: 105
+Number of frames: 500
+Simulation time: 250.0
+Simulation timestep: 0.5
+Seed: 8014159789583057620
+ 
+Overall simulation information 
+---------------------------------------------------------------------------------------
+Initial twist: -211.86901
+Final twist: -213.96340
+Initial superhelical density: -0.06001
+Final superhelical density: -0.06093
+ 
+Overall rates 
+---------------------------------------------------------------------------------------
+site type            site name            #binding events      #unbinding events    binding rates        
+ DNA_topoI            DNA_topoI_global                      3.0                  3.0                 0.012 
+DNA_gyrase           DNA_gyrase_global                     1.0                  1.0                 0.004 
+EXT                  EXT                                   0.0                  0.0                   0.0 
+gene                 gene1                                 2.0                  1.0                 0.008 
+NAPOP                NAP1                                  0.0                  0.0                   0.0 
+ 
+Events
+---------------------------------------------------------------------------------------
+frame 11 time 5.5 binding_event at DNA_topoI 13 enzyme topoI with twist -186.70036 superhelical -0.06000 global twist -211.86901 global supercoiling -0.06001
+frame 12 time 6.0 unbinding_event at DNA_topoI 13 enzyme topoI with twist -178.92118 superhelical -0.05725 global twist -207.97942 global supercoiling -0.06013
+frame 20 time 10.0 binding_event at gene gene1 enzyme RNAP with twist -178.92118 superhelical -0.05750 global twist -204.08983 global supercoiling -0.05781
+frame 200 time 100.0 binding_event at gene gene1 enzyme RNAP with twist -69.24194 superhelical -0.03045 global twist -204.08983 global supercoiling -0.05812
+frame 263 time 131.5 unbinding_event at gene gene1 enzyme RNAP with twist -142.16856 superhelical -0.05333 global twist -204.08983 global supercoiling -0.05844
+frame 273 time 136.5 binding_event at DNA_topoI 38 enzyme topoI with twist -142.16856 superhelical -0.11461 global twist -204.08983 global supercoiling -0.05812
+frame 274 time 137.0 unbinding_event at DNA_topoI 38 enzyme topoI with twist -134.38938 superhelical -0.11962 global twist -200.20024 global supercoiling -0.05820
+frame 328 time 164.0 binding_event at DNA_topoI 31 enzyme topoI with twist -134.38938 superhelical -0.12252 global twist -196.31064 global supercoiling -0.05591
+frame 328 time 164.0 unbinding_event at DNA_topoI 31 enzyme topoI with twist -130.49979 superhelical -0.12192 global twist -196.31064 global supercoiling -0.05591
+frame 464 time 232.0 binding_event at DNA_gyrase 12 enzyme gyrase with twist -36.75262 superhelical -0.01817 global twist -192.42105 global supercoiling -0.05480
+frame 471 time 235.5 unbinding_event at DNA_gyrase 12 enzyme gyrase with twist -58.29497 superhelical -0.03133 global twist -211.27061 global supercoiling -0.06142
