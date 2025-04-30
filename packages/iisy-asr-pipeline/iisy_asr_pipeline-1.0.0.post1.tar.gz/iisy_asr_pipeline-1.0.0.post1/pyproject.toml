@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iisy-asr-pipeline"
+authors = [
+    {name = "Paul Roloff", email = "paul.roloff@uni-bielefeld.de"},
+    {name = "Felix Hostert", email = "felix.hostert@uni-bielefeld.de"},
+    {name = "Kai Titgens", email = "kai.titgens@uni-bielefeld.de"}
+]
+readme = "README.md"
+requires-python = "==3.11.10"
+version = "1.0.0-1"
+description = "ASR pipeline for the ASR project"
+
+dependencies = [
+    "speechbrain==1.0.2",
+    "mir-eval==0.6",
+    "pyroomacoustics>=0.7.3",
+    "pyaudio==0.2.14",
+    "deepfilternet==0.5.6",
+    "faster-whisper==1.1.1",
+    "rich==14.0.0",
+    "scikit-learn==1.6.1",
+    "scipy==1.15.2",
+]
+
+[project.optional-dependencies]
+cuda = [
+    "torch>=2.6.0",
+    "torchaudio>=2.6.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
