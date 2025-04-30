@@ -1,0 +1,33 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:z3c="http://namespaces.zope.org/z3c"
+  >
+
+  <adapter factory=".widget.ChoiceWidgetFactory" />
+
+  <z3c:widgetTemplate
+    mode="input"
+    widget=".interfaces.ILargeTextAreaWidget"
+    layer="..interfaces.ITnoFormLayer"
+    template="templates/largetextarea_input.pt"
+    />
+
+  <z3c:widgetTemplate
+    widget="plonetheme.nuplone.z3cform.widget.IWysiwygWidget"
+    template="templates/wysiwyg_input.pt"
+    layer="..interfaces.ITnoFormLayer"
+    mode="input"
+    />
+
+  <browser:page
+      name="index.html"
+      for="zExceptions.Unauthorized"
+      class="plonetheme.nuplone.skin.error.Unauthorized"
+      permission="zope2.Public"
+      layer="tno.euphorie.interfaces.ITnoContentSkinLayer"
+      template="templates/error_unauthorized.pt"
+      />
+
+</configure>
+
