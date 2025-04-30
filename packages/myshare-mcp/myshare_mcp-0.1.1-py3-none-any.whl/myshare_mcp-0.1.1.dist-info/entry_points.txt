@@ -1,0 +1,2 @@
+[console_scripts]
+myshare = src.mcp.server:mcp.run

@@ -1,0 +1,11 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/mcp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/mcp/server.py,sha256=D3yoYtNsMNbehj9cYKWCOIWny0sj1pCfxu1pLs-RtW4,2127
+src/mcp/myshare/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/mcp/myshare/data.py,sha256=229ZvQALinb-_tCT92yJAqgW0rhVW_VG59AXYHBh_JM,7504
+src/mcp/myshare/utils.py,sha256=kdiQKreaV7iU05OTiZkXZ-k1FZPYPcyRqV80_ZQLn18,1755
+src/mcp/myshare/xq.py,sha256=_3RFPt-3PZLxAaYbGj1sQ9udnPMkRyd8cCmxxXkHDaQ,1110
+myshare_mcp-0.1.1.dist-info/METADATA,sha256=owvl3uPBEXXQlcuajf9fcZHyO7SF3r6gedW5Ou09shs,5037
+myshare_mcp-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+myshare_mcp-0.1.1.dist-info/entry_points.txt,sha256=J_pNen_DizneMjEJQBsFRmHFEQ9VkoKnkWkn-lPvea8,51
+myshare_mcp-0.1.1.dist-info/RECORD,,
