@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pundas
+Version: 0.2.0
+Summary: A simple library that does nothing
+Author: emptyness
+Author-email: iwannadie@nature.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
