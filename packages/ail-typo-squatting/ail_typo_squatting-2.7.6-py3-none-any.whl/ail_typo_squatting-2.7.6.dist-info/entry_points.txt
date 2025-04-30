@@ -1,0 +1,3 @@
+[console_scripts]
+ail-typo-squatting=ail_typo_squatting.typo:main
+
