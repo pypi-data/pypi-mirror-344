@@ -1,0 +1,16 @@
+sinapsis>=0.1.1
+
+[all]
+sinapsis-image-transforms[webapp-gradio]
+sinapsis-image-transforms[dev]
+sinapsis-albumentations
+
+[dev]
+ruff>=0.8.3
+pre-commit>=4.0.1
+
+[sinapsis-albumentations]
+sinapsis-albumentations
+
+[webapp-gradio]
+gradio>=5.1.0
