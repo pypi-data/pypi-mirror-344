@@ -1,0 +1,6 @@
+viser>=0.2.1
+
+[dev]
+black
+isort
+ipdb
