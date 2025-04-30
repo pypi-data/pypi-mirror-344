@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+beep_node.egg-info/PKG-INFO
+beep_node.egg-info/SOURCES.txt
+beep_node.egg-info/dependency_links.txt
+beep_node.egg-info/top_level.txt
+jasudh1/__init__.py
+jasudh1/bicode1.py
+jasudh1/bicode2.py
+jasudh1/bicode3.py
