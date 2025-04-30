@@ -1,0 +1,9 @@
+dbfs_spark_cache/__init__.py,sha256=5SRSCwZZpbHnOLdavLg2n72icCVBqmB_dkpFbRAnhC4,303
+dbfs_spark_cache/caching.py,sha256=DQ26HAuSU2xo9XE8M_XtYbxHt21MlMHVjpnjsKphTSY,45413
+dbfs_spark_cache/config.py,sha256=Q2FQ1R1iqnJVeMDeWVhA4uvVPZvVFlu4laK34cpkeKk,1240
+dbfs_spark_cache/query_complexity_estimation.py,sha256=_VDM6z1VZlvwDhEnnXSSKqshUTM8CITBiyauOtspDvI,8166
+dbfs_spark_cache-0.4.9.dist-info/METADATA,sha256=68n2ZWcBrODeARs3oEQz1PqY54uIcLtdeAaWn1kGT2U,10430
+dbfs_spark_cache-0.4.9.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dbfs_spark_cache-0.4.9.dist-info/licenses/LICENSE,sha256=fA001TvLntSZI38cX558APoNiLRQu4LixlfpTRs3KJM,11367
+dbfs_spark_cache-0.4.9.dist-info/licenses/NOTICE,sha256=Y9ePVDQGoyK2nwScrJn3U1sQ_4Y0Qm8xOG_lvK9ztZ4,341
+dbfs_spark_cache-0.4.9.dist-info/RECORD,,
