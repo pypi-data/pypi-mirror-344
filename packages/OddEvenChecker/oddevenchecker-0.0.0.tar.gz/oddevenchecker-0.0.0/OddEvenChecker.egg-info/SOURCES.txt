@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+OddEvenChecker/__init__.py
+OddEvenChecker/checker.py
+OddEvenChecker/version.py
+OddEvenChecker.egg-info/PKG-INFO
+OddEvenChecker.egg-info/SOURCES.txt
+OddEvenChecker.egg-info/dependency_links.txt
+OddEvenChecker.egg-info/top_level.txt
