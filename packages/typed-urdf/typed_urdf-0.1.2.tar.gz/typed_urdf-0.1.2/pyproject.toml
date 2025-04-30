@@ -1,0 +1,10 @@
+[project]
+name = "typed-urdf"
+version = "0.1.2"
+description = "Collection of URDF components, fully-type annotated"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["networkx>=3.1"]
+
+[tool.setuptools.packages.find]
+include = ["typed_urdf", "typed_urdf.*"]
