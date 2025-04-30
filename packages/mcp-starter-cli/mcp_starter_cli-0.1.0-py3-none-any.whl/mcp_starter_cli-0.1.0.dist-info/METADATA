@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: mcp-starter_cli
+Version: 0.1.0
+Summary: CLI tool to scaffold, run, and test MCP servers locally with Node
+Home-page: https://github.com/Sumedh99/mcp_starter_cli
+Author: Sumedh99
+Author-email: Sumedh99@users.noreply.github.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# mcp-starter_cli
+
+CLI tool to scaffold, run, and test MCP servers locally with Node.js or Python, integrated with Claude and OpenAI key injection and auto-link to Claude Desktop.
+
+## Features
+
+- CLI interface for scaffold/run/deploy
+- Injects OpenAI or Claude API keys on demand
+- Server logging and live error display
+- Local Claude agent testing with Claude Desktop
+- Auto-linting and TS transpilation support
+
+## Installation
+
+```bash
+pip install mcp-starter_cli
+```
+
+## Usage
+
+```python
+from mcp_starter_cli import Mcp_starter_cli
+
+# Initialize the library
+mcp_starter_cli_instance = Mcp_starter_cli()
+
+# Use the library functions
+# Example usage will be added in future versions
+```
+
+## License
+
+MIT
