@@ -1,0 +1,14 @@
+almos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+almos/__main__.py,sha256=IFU67I-o_RlVoafJXLgQ28Ek85onjI9AQqjbZG5peq8,616
+almos/al.py,sha256=hQCcsmIivq_Tzx6vQjNcNy0qfCIbEt-1rtE55OK2teo,20739
+almos/al_utils.py,sha256=yaZNjieuEgVOkoL7iD_JQ2ScBp3BRNCz4BPJiNiunvw,43372
+almos/almos.py,sha256=wGSIIwEeBJEHOzCruCKLRnkHDEM4Q4XbcPsbQUecAkM,3217
+almos/argument_parser.py,sha256=SwtGsC5rR5xxJaSAuOix6lNVY5or0_Ku0oiXDTT-czQ,2298
+almos/cluster.py,sha256=5kz-q4dgVdp9SnimL2Gu3yLAqU5uvRlNspnq91aIw1c,35439
+almos/utils.py,sha256=8lRt9NCk6RokPfyjmDQOlAvFJ6TlNttT2-tcFCZlsOU,12420
+almos/icons/almos_logo.png,sha256=ABYNvl1ZhxShDj7lDg6oZu_71HNiXX2UMhpr62jBmn0,50290
+almos_kit-0.1.0.dist-info/licenses/LICENSE,sha256=sDA3tvhGGsCcllegQff_xL-WcYCTPzlkIIOq3MhQR7E,1086
+almos_kit-0.1.0.dist-info/METADATA,sha256=amamIb-tqc86X3me_hMikwDd_9XlWt8oKoCmKJqs_Qk,1596
+almos_kit-0.1.0.dist-info/WHEEL,sha256=XAkygS4h1cf0JYWV13kJhTWht2y9NqKAsZuiTHc2920,109
+almos_kit-0.1.0.dist-info/top_level.txt,sha256=hJF9KgtUNtwELSV-I4B0p6sHEAz-dD8MsW7cFvSyA0I,6
+almos_kit-0.1.0.dist-info/RECORD,,
