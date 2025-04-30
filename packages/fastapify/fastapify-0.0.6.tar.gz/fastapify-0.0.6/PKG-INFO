@@ -1,0 +1,148 @@
+Metadata-Version: 2.4
+Name: fastapify
+Version: 0.0.6
+Summary: A simple FastAPI factory for creating FastAPI applications.
+Home-page: https://github.com/rustamovjavohir/FastApiBuilder
+Author: Rustamov Javohir
+Author-email: rustamovj366@gmail.com
+License: <the license you chose>
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
+Requires-Dist: click==8.1.8
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+# FastAPI Builder
+
+FastAPI Crafter is a command-line tool designed to streamline the creation of well-organized file structures for FastAPI projects. It enables developers to kickstart their projects with best practices in mind, reducing boilerplate and setup time.
+
+## Features
+
+- **Automated File Structure Creation**: Generate a production-ready project structure in seconds.
+- **Customizable Templates**: Define your own templates to suit your development style.
+- **Extensible Commands**: Add custom commands to extend functionality.
+- **User-Friendly Interface**: Simple CLI commands for intuitive usage.
+
+---
+
+## Installation
+
+Install FastAPI Crafter via pip:
+
+```bash
+pip install fastapify
+```
+
+---
+
+## Usage
+
+### Initialize a New Project
+
+To create a new FastAPI project, run:
+
+```bash
+fastapify init my-fastapi-project
+```
+
+This will scaffold a directory structure with the following layout:
+
+```
+my-fastapi-project/
+├── app/
+│   ├── main.py
+│   ├── routers/
+│   │   └── __init__.py
+│   ├── models/
+│   │   └── __init__.py
+│   └── utils/
+│       └── __init__.py
+├── tests/
+│   └── test_main.py
+├── requirements.txt
+└── README.md
+```
+
+### Add a Router
+
+Easily add new routers to your project:
+
+```bash
+fastapify add-router users
+```
+
+This creates `app/routers/users.py` with a basic template.
+
+### Generate Models
+
+To add a new database model:
+
+```bash
+fastapify add-model User
+```
+
+This generates a `User` model in `app/models/user.py`.
+
+---
+
+## Configuration
+
+FastAPI Crafter allows you to customize the project structure and templates. You can create a `.fastapi-crafter.json` file in your project root to define your preferences.
+
+Example configuration:
+
+```json
+{
+  "project_name": "my_fastapi_project",
+  "directories": [
+    "app/routers",
+    "app/models",
+    "app/utils",
+    "tests"
+  ],
+  "files": {
+    "app/main.py": "templates/main.py",
+    "requirements.txt": "templates/requirements.txt"
+  }
+}
+```
+
+---
+
+## Contributing
+
+Contributions are welcome! If you have ideas for new features or improvements, feel free to fork the repository and create a pull request.
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Push to the branch
+5. Open a pull request
+
+---
+
+## License
+
+FastAPI Crafter is open-source software licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgments
+
+- Inspired by the simplicity and power of FastAPI.
+- Thanks to the open-source community for providing valuable resources and inspiration.
+
+---
+
+Get started today with FastAPI Crafter and make your API development fast, efficient, and fun!
