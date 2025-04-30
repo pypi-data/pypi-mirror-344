@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: RonAOVTool
+Version: 0.1.3
+Summary: Một thư viện giúp chuyển đổi chuỗi sang hashcode hoặc thay đường dẫn của AOV
+Author: Ron AOV
+Author-email: ronlatoiday@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+## Cài đặt
+```python
+pip install RonAOVTool
+```
+## Giới thiệu
+- `RonAOVTool.hashcode()` của RonAOVTool giúp chuyển đổi từ chuỗi thành mã băm theo định dạng của AOV.
+- Trong `RonAOVTool` có hỗ trợ `RonAOVTool.load(filename)` để đọc file Assetbundle chưa mã hóa, `filname` sẽ thay bằng đường dẫn tới tệp Assetbundle.
+- Tích hợp `.changePath(original_path, new_path)` để thay đổi đường dẫn đã có sẵn trong AOV thành đường dẫn mới, với các giá trị truyền vào phải là chuỗi và không cần đuôi tệp.
+- Cuối cùng là `.save()` để lưu những thay đổi của tệp Assetbundle.
+## Cách dùng
+```python
+import RonAOVTool as tool
+
+file = tool.load('test.assetbundle')
+file.changePath('test/path/1', 'test/path/2')
+file.save()
+
+print(tool.hashcode("đây là chuỗi sẽ chuyển thành mã băm"))
+```
+## Thông tin tác giả
+© Thư viên do [Ron AOV](https://youtube.com/@ronaov) thực hiện
