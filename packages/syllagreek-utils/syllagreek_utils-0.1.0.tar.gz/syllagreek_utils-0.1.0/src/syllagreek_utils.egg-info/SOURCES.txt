@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/syllagreek_utils/__init__.py
+src/syllagreek_utils/preprocess.py
+src/syllagreek_utils/syllabify.py
+src/syllagreek_utils.egg-info/PKG-INFO
+src/syllagreek_utils.egg-info/SOURCES.txt
+src/syllagreek_utils.egg-info/dependency_links.txt
+src/syllagreek_utils.egg-info/top_level.txt
