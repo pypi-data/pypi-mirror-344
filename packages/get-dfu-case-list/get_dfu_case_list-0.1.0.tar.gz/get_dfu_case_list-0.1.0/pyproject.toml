@@ -1,0 +1,18 @@
+[project]
+name = "get-dfu-case-list"
+version = "0.1.0"
+description = ""
+authors = [{ name = "6vi7ms", email = "6vi7ms@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [{ include = "get_dfu_case_list", from = "src" }]
+
+[tool.poetry.scripts]
+get-dfu-case-list = "get_dfu_case_list.main:main"
