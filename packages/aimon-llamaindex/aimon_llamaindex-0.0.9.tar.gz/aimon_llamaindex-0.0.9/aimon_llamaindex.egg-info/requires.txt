@@ -1,0 +1,2 @@
+aimon==0.10.1
+llama-index-core==0.12.33
