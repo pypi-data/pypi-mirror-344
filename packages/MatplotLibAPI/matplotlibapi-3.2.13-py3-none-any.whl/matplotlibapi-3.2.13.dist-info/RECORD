@@ -1,0 +1,14 @@
+MatplotLibAPI/Bubble.py,sha256=mZx7kdq77BhaayLBBCByRaLuZx3o_ImOMZUdu2CglNc,5380
+MatplotLibAPI/Composite.py,sha256=vPUMkAAL6c_U6I3z2BR-vmUwIKzOQZBbOwgGDQYlvaE,7354
+MatplotLibAPI/Network.py,sha256=7R5u1tUIcino-AnC4qWB6qYRfm7PqItE0zJ_k8OD7xA,18803
+MatplotLibAPI/Pivot.py,sha256=_-IVZnr4tZjAm1GElXLFqhMQKGbrjR8v-hjaN5kBcE8,7162
+MatplotLibAPI/StyleTemplate.py,sha256=UKGCja1_aY5ZklSVgebZ3ir3MT3L4o8OXFPsh6GGyG0,10901
+MatplotLibAPI/Table.py,sha256=2n4wnvtSyEWwoFz27Iwb4XDmrWo2M0xsXxmlBTZHhFo,2822
+MatplotLibAPI/Timeserie.py,sha256=HdvErYyj9XBVpJBKu4G4FMp44kruB1gv8CJ8EyxLgHo,4965
+MatplotLibAPI/Treemap.py,sha256=V_SSYeUGz3nSek9N55UBDnz-XA56arHyZqEcLXDwZyM,3408
+MatplotLibAPI/__init__.py,sha256=x0a0oIgfLMpshmS7B8nsklwqn2IIeo21v3vbhsYSrcA,14058
+matplotlibapi-3.2.13.dist-info/licenses/LICENSE,sha256=hMErKLb6YZR3lRR5zr-vxeFkvY69QAaafgSpZ5-P1dQ,1067
+matplotlibapi-3.2.13.dist-info/METADATA,sha256=hpjDjjfsvbcpwubKzPEwz-PrlSxIqD7RDsKq7jweHKA,485
+matplotlibapi-3.2.13.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+matplotlibapi-3.2.13.dist-info/top_level.txt,sha256=MrzbBjDEW48Vb6YhQIqpFYGOhHzQnEIM5Qy2xy2iqew,14
+matplotlibapi-3.2.13.dist-info/RECORD,,
