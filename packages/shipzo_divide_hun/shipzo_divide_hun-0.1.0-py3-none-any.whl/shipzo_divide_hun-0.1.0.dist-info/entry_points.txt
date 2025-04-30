@@ -1,0 +1,2 @@
+[console_scripts]
+shipzo_divide = shipzo_divide.divide:main
