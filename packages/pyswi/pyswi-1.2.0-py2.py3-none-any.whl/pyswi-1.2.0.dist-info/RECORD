@@ -1,0 +1,14 @@
+pyswi/__init__.py,sha256=YwyxVLH1HZMJgsfMnAgJ2HFniknlUq13mveS9L8rvRc,593
+pyswi/swi_img/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyswi/swi_img/iterative_storage.py,sha256=UrsvJZLDynRKKD0ID773Z7hskhCQXqU9C_nC10oXc8M,8836
+pyswi/swi_img/iterative_swi.py,sha256=EHVpg3stIo09bJcXuOkViJEhXu4Mo6RKBCoGo0As-H8,16874
+pyswi/swi_ts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyswi/swi_ts/swi_calc_routines.c,sha256=8tHP3XqpiUAylTQ2406X0rBQIwOuAR6hGWjdVXi4dzU,428800
+pyswi/swi_ts/swi_calc_routines.pyx,sha256=BfsWM70dYpN57leEmox9Ig8oT7k-IDHQNqfxf5L_hxQ,4902
+pyswi/swi_ts/swi_ts.py,sha256=I6GLka8cXOMdfQOsUFGd_9yMZDMTBAqL_CFnqEa_zds,14670
+pyswi-1.2.0.dist-info/AUTHORS.rst,sha256=xKYX5F7bRnZS3UUzbPhVoZTm5cK3BNiyPeZQehWh2QA,336
+pyswi-1.2.0.dist-info/LICENSE.txt,sha256=p39EUIKusN69jJWskrb7nChqPTgrL2uzcvnWh6g8iPY,1128
+pyswi-1.2.0.dist-info/METADATA,sha256=7sBLKPrASCl5JKmVqWSjDoHYYdnQqoTFqdkHRgQUUr8,2807
+pyswi-1.2.0.dist-info/WHEEL,sha256=9Hm2OB-j1QcCUq9Jguht7ayGIIZBRTdOXD1qg9cCgPM,109
+pyswi-1.2.0.dist-info/top_level.txt,sha256=yBewQYWvmQtyPkq7DWyQpVE7I3gu2MCzG6vtNu_a8Jc,6
+pyswi-1.2.0.dist-info/RECORD,,
