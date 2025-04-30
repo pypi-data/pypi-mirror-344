@@ -1,0 +1,2 @@
+[console_scripts]
+adb-mcp = adb_mcp.cli:main

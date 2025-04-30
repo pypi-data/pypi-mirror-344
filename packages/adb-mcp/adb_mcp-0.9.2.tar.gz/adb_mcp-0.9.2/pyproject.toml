@@ -1,0 +1,11 @@
+[project]
+name = "adb-mcp"
+version = "0.9.2"
+description = "adb command tools with mcp"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+   "mcp>=1.6.0",
+]
+[project.scripts]
+adb-mcp = "adb_mcp.cli:main"  
