@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "uncloud"
+version = "0.0.1"
+description = "Download a public archive file from popular cloud storage services such as Dropbox, Google Drive, and OneDrive."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Yi Zhang", email = "yizhang.dev@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = ["playwright", "requests", "tqdm"]
+
+[project.urls]
+Repository = "https://github.com/imyizhang/uncloud"
+
+[project.optional-dependencies]
+dev = ["ruff"]
+
+[project.scripts]
+uncloud = "uncloud.__main__:main"

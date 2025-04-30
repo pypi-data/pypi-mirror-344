@@ -1,0 +1,56 @@
+# uncloud
+
+[![GitHub][github_badge]][github_link] [![PyPI][pypi_badge]][pypi_link]
+
+uncloud a public archive file from popular cloud storage services such as Dropbox, Google Drive, and OneDrive!
+
+
+
+## Installation
+
+Install uncloud and its dependencies
+
+```bash
+git clone git@github.com:imyizhang/uncloud.git
+pip install -e uncloud
+```
+
+
+
+## Quickstart
+
+Download and extract a public archive file from its share link URL
+
+```bash
+uncloud -x -v <share_link>
+```
+
+
+
+## License
+
+uncloud has a MIT license, as found in the [LICENSE](https://github.com/imyizhang/uncloud/blob/main/LICENSE) file.
+
+
+
+## Contributing
+
+Thanks for your interest in contributing to uncloud! Please feel free to create a pull request.
+
+
+
+## Changelog
+
+**uncloud 0.0.1**
+
+* First release
+
+
+
+[github_badge]: https://badgen.net/badge/icon/GitHub?icon=github&color=black&label
+[github_link]: https://github.com/imyizhang/uncloud
+
+
+
+[pypi_badge]: https://badgen.net/pypi/v/uncloud?icon=pypi&color=black&label
+[pypi_link]: https://www.pypi.org/project/uncloud
