@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: NumRender
+Version: 0.1.0
+Summary: A library to convert numbers to words and vice versa
+Home-page: https://github.com/apih99/NumRender
+Author: Shahrul Hafiz
+Author-email: hafizcr716@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# NumRender Library
+
+A simple Python library to convert numbers to their word representations and vice versa.
+
+## Installation
+
+```bash
+# Installation instructions will be added here once published
+# For now, you can install it locally:
+pip install NumRender
+```
+
+## Usage
+
+```python
+import NumRender
+
+# Convert words to number
+number = NumRender.words_to_number("three hundred and twenty five")
+print(number)  # Output: 325
+
+number = NumRender.words_to_number("five thousand")
+print(number)  # Output: 5000
+
+# Convert number to words
+words = NumRender.number_to_words(1234)
+print(words) # Output: one thousand two hundred and thirty-four (example, actual output might vary slightly based on implementation)
+
+words = NumRender.number_to_words(5000)
+print(words) # Output: five thousand
+```
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details (if added).
