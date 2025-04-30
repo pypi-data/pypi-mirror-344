@@ -1,0 +1,39 @@
+[project]
+name = "utils-repl"
+version = "0.1.0"
+description = "A collection of REPL utilities for Python development."
+authors = [
+    { name = "Robert Portelli" }
+]
+readme = "README.md"
+requires-python = ">=3.13,<4.0"
+license = { text = "MIT" }
+keywords = ["repl", "utilities", "devtools", "interactive", "reload"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "rich >=14.0.0,<15.0.0"
+]
+
+[project.urls]
+homepage = "https://github.com/robertportelli/utils-repl"
+repository = "https://github.com/robertportelli/utils-repl"
+issue_tracker = "https://github.com/robertportelli/utils-repl/issues"
+
+[tool.poetry]
+packages = [{ include = "utils_repl", from = "src" }]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

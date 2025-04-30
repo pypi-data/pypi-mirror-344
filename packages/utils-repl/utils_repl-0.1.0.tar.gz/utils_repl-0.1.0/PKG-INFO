@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: utils-repl
+Version: 0.1.0
+Summary: A collection of REPL utilities for Python development.
+License: MIT
+Keywords: repl,utilities,devtools,interactive,reload
+Author: Robert Portelli
+Requires-Python: >=3.13,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: rich (>=14.0.0,<15.0.0)
+Project-URL: Homepage, https://github.com/robertportelli/utils-repl
+Project-URL: Repository, https://github.com/robertportelli/utils-repl
+Project-URL: issue_tracker, https://github.com/robertportelli/utils-repl/issues
+Description-Content-Type: text/markdown
+
+
