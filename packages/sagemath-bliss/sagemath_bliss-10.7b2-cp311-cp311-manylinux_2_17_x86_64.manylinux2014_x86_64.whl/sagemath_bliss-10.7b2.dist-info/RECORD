@@ -1,0 +1,11 @@
+sagemath_bliss.libs/libbliss-5cd28ec3.so,sha256=vWy6oY3bdH0x6Z6O8XfKJq6TNLVNtLd-Ens78EOXAss,2495641
+sagemath_bliss-10.7b2.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+sagemath_bliss-10.7b2.dist-info/METADATA,sha256=_7CmEwsxjyWNt94HQiflfBcigvCx8bpS_TcAN170JRo,2517
+sagemath_bliss-10.7b2.dist-info/RECORD,,
+sagemath_bliss-10.7b2.dist-info/WHEEL,sha256=gS1gZS2fhSQKPwqfjHZ0QZ4OVdm-7K3rDXJ4NDoKym4,151
+sage/all__sagemath_bliss.py,sha256=2p3JOEnbjaX22LWk6f1yfiAvhMMkcvNXwTp_NcGw6pM,44
+sage/cython_debug/interpreter,sha256=ZdNCLc8J_ztCdI3kDk0QFaEoec9I1vS_Ba_7NRhqYLQ,34
+sage/cython_debug/cython_debug_info_sage.graphs.bliss,sha256=t4a_xQKEu9aUXF2Ibqi05gxB2B5ml5XRPRlX_4TYzgE,126337
+sage/graphs/all__sagemath_bliss.py,sha256=2p3JOEnbjaX22LWk6f1yfiAvhMMkcvNXwTp_NcGw6pM,44
+sage/graphs/bliss.cpython-311-x86_64-linux-gnu.so,sha256=Gxuet-RxdER2C9ucqGOYtxo8G6bRKDhFWSD9LhZHA7M,1471225
+sage/graphs/bliss.pyx,sha256=2hO849gYxWaZ2sujanS6hzUqI4YKIENEMzeDR58RPAw,33387
