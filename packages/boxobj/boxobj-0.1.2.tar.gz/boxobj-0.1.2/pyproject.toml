@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "boxobj"
+version = "0.1.2"
+description = "A simple library to making working with regions of an image (OCR, CV, etc) easier to work with"
+authors = ["dschultz0 <dave@daveschultzconsulting.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
