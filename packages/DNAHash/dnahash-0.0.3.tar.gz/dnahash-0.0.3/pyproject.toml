@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DNAHash"
+description = "A specialized datastructure and tokenization library for counting genetic sequences for use in Machine Learning and Bioinformatics."
+version = "0.0.3"
+requires-python = ">= 3.10"
+dependencies = [
+  "okbloomer>=0.0.3",
+]
+authors = [
+  {name = "Andrew DalPino", email = "support@andrewdalpino.com"},
+]
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+dev = ["mypy", "black", "biopython", "matplotlib"]
+test = ["mypy", "black"]
+
+[project.urls]
+Homepage = "https://github.com/andrewdalpino/DNAHash"
+Documentation = "https://github.com/andrewdalpino/DNAHash/README.md"
+Source = "https://github.com/andrewdalpino/DNAHash"

@@ -1,0 +1,11 @@
+okbloomer>=0.0.3
+
+[dev]
+mypy
+black
+biopython
+matplotlib
+
+[test]
+mypy
+black
