@@ -1,0 +1,69 @@
+Metadata-Version: 2.4
+Name: godzillamididataset
+Version: 25.4.31
+Summary: Enormous, comprehensive, normalized and searchable MIDI dataset for MIR and symbolic music AI purposes
+Home-page: https://github.com/asigalov61/godzillamididataset
+Author: Alex Lev
+Author-email: Alex Lev <alexlev61@proton.me>
+Maintainer-email: Alex Lev <alexlev61@proton.me>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://github.com/asigalov61/godzillamididataset
+Project-URL: SoundCloud, https://soundcloud.com/aleksandr-sigalov-61/
+Project-URL: Samples, https://github.com/asigalov61/godzillamididataset/tree/main/godzillamididataset/midi_samples
+Project-URL: Examples, https://github.com/asigalov61/godzillamididataset/tree/main/godzillamididataset/examples
+Project-URL: Documentation, https://github.com/asigalov61/godzillamididataset
+Project-URL: Issues, https://github.com/asigalov61/godzillamididataset/issues
+Project-URL: Discussions, https://github.com/asigalov61/godzillamididataset/discussions
+Project-URL: Dataset, https://huggingface.co/datasets/projectlosangeles/Godzilla-MIDI-Dataset
+Project-URL: Demo, https://huggingface.co/datasets/projectlosangeles/Godzilla-MIDI-Dataset
+Keywords: MIDI,music,music ai,MIDI dataset,music dataset,MIR
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Multimedia :: Sound/Audio :: MIDI
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tqdm
+Requires-Dist: ipywidgets
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: hf-transfer
+Requires-Dist: huggingface_hub
+Provides-Extra: gpu
+Requires-Dist: cupy-cuda12x; extra == "gpu"
+Requires-Dist: numpy==1.24.6; extra == "gpu"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# [WIP] Godzilla MIDI Dataset
+## Enormous, comprehensive, normalized and searchable MIDI dataset for MIR and symbolic music AI purposes
+
+![Godzilla-MIDI-Dataset-Logo.png](https://cdn-uploads.huggingface.co/production/uploads/64820d166e41cac337e0ccb8/JeZ8t-WwtkFOkqS9yRQ7R.png)
+
+***
+
+## Citation card
+
+```bibtex
+@misc{GodzillaMIDIDataset2025,
+  title        = {Godzilla MIDI Dataset: Enormous, comprehensive, normalized and searchable MIDI dataset for MIR and symbolic music AI purposes},
+  author       = {Alex Lev},
+  publisher    = {Project Los Angeles / Tegridy Code},
+  year         = {2025},
+  url          = {https://huggingface.co/datasets/projectlosangeles/Godzilla-MIDI-Dataset}
+```
+
+***
+
+### Project Los Angeles
+### Tegridy Code 2025
