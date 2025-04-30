@@ -1,0 +1,9 @@
+pyproject.toml
+src/hocine7779_first_package/__init__.py
+src/hocine7779_first_package/main.py
+src/hocine7779_first_package.egg-info/PKG-INFO
+src/hocine7779_first_package.egg-info/SOURCES.txt
+src/hocine7779_first_package.egg-info/dependency_links.txt
+src/hocine7779_first_package.egg-info/entry_points.txt
+src/hocine7779_first_package.egg-info/requires.txt
+src/hocine7779_first_package.egg-info/top_level.txt
