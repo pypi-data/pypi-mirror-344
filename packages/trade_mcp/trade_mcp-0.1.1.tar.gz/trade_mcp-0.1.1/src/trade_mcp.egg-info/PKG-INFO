@@ -1,0 +1,235 @@
+Metadata-Version: 2.4
+Name: trade_mcp
+Version: 0.1.1
+Summary: Axgrad Trade MCP Server: Unified interface for Binance Futures and Aster APIs via MCP.
+Author-email: Axgrad Team <tianyix@saharalabs.ai>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: python-binance==1.0.19
+Requires-Dist: httpx>=0.27.0
+Requires-Dist: uvicorn==0.27.1
+Requires-Dist: starlette==0.37.1
+Requires-Dist: fastmcp==0.1.0
+Requires-Dist: python-dotenv==1.0.1
+
+# Binance & Aster MCP Server
+
+## Description
+
+This project provides a server application that acts as an interface to the Binance Futures API and Aster API using the Multi-Channel Protocol (MCP). It allows clients to connect via Server-Sent Events (SSE) and interact with their Binance Futures (Testnet) or Aster (Mainnet) account, depending on the provider specified.
+
+## Features
+
+* Connects to Binance Futures Testnet API or Aster Mainnet API (selectable via provider parameter).
+* Provides MCP tools for:
+    * Account and position management (balances, positions, margin, leverage, etc.)
+    * Order management (place, query, cancel, and manage futures orders)
+    * Market data (prices, order book, trades, klines, funding rates, etc.)
+* Uses Starlette for the web framework and Uvicorn as the ASGI server.
+* Supports Docker for containerized deployment.
+
+## Provider Selection and Connection Parameters
+
+You can connect to either Binance or Aster by specifying the `provider` and `testnet` query parameters when connecting to the server:
+
+- For **Binance Testnet**:
+  - `provider=binance`
+  - `testnet=true`
+  - Use your Binance Testnet API credentials
+- For **Aster Mainnet**:
+  - `provider=aster`
+  - `testnet=false`
+  - Use your Aster Mainnet API credentials
+
+**Validation:**
+- If `provider=binance`, then `testnet` **must** be `true`.
+- If `provider=aster`, then `testnet` **must** be `false`.
+- Any other combination will result in a connection error.
+
+## Available MCP Tools
+
+The following MCP tools are available for interacting with the Binance Futures or Aster API (see `src/server/mcp_tools.py` for full details):
+
+### Account and Position Management
+* `get_account_info`: Get account information including balances and positions.
+* `get_balance`: Get account balance.
+* `get_position_mode`: Get user's position mode (Hedge Mode or One-way Mode).
+* `change_position_mode`: Change position mode between Hedge Mode and One-way Mode.
+* `get_position_info`: Get current position information.
+* `modify_position_margin`: Modify isolated position margin.
+* `get_position_margin_history`: Get position margin modification history.
+* `change_leverage`: Change initial leverage for a symbol.
+* `change_margin_type`: Change margin type between isolated and cross.
+* `get_commission_rate`: Get user's commission rate for a symbol.
+
+### Order Management
+* `place_order`: Place a futures order of any type (MARKET, LIMIT, STOP, STOP_MARKET, TRAILING_STOP_MARKET, etc).
+* `place_multiple_orders`: Place multiple orders at once.
+* `query_order`: Query a specific order's status.
+* `cancel_order`: Cancel an active order.
+* `cancel_all_orders`: Cancel all open orders for a symbol.
+* `cancel_multiple_orders`: Cancel multiple orders.
+* `auto_cancel_all_orders`: Set up auto-cancellation of all orders after countdown.
+* `get_open_order`: Query current open order by order id.
+* `get_open_orders`: Get all open futures orders for a specific symbol.
+* `get_all_orders`: Get all account orders.
+
+### Market Data
+* `get_order_book`: Get order book for a symbol.
+* `get_recent_trades`: Get recent trades for a symbol.
+* `get_historical_trades`: Get historical trades for a symbol.
+* `get_aggregate_trades`: Get aggregate trades for a symbol.
+* `get_klines`: Get kline/candlestick data for a symbol.
+* `get_continuous_klines`: Get continuous kline/candlestick data for a trading pair.
+* `get_mark_price`: Get mark price and funding rate for a symbol.
+* `get_funding_rate_history`: Get funding rate history for a symbol.
+* `get_24h_ticker`: Get 24-hour price change statistics for a symbol.
+* `get_price_ticker`: Get latest price for a symbol.
+* `get_book_ticker`: Get best price/qty on the order book for a symbol.
+
+### System
+* `ping`: Test connectivity to the Rest API.
+* `get_server_time`: Get current server time.
+* `get_exchange_info`: Get current exchange trading rules and symbol information.
+
+## Setup and Installation
+
+1. **Clone the repository:**
+    ```bash
+    git clone <repository_url>
+    cd aster_mcp
+    ```
+2. **Install dependencies:**
+    It's recommended to use a virtual environment.
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    pip install -r requirements.txt
+    ```
+
+## Running the Server
+
+To run the server locally:
+
+```bash
+python main.py [--host <ip_address>] [--port <port_number>]
+```
+
+* `--host`: The host IP address to bind the server to (default: `0.0.0.0`).
+* `--port`: The port number to listen on (default: `8080`).
+
+Example:
+```bash
+python main.py --port 8888
+```
+
+## Connecting with MCP Clients (e.g., Cursor)
+
+If you are using an MCP client like Cursor, you can configure it to connect directly to the deployed server instance.
+
+**Configure Cursor:**
+  Make sure your machine has `npx` available.
+  Create or update your `~/.cursor/mcp.json` file with the following configuration:
+  ```json
+  {
+    "mcpServers": {
+      "mcp-server-remote": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "supergateway",
+          "--sse",
+          "https://<your-server-url>/sse?api_key=YOUR_API_KEY&api_secret=YOUR_API_SECRET&provider=binance&testnet=true"
+        ]
+      } 
+    }
+  }
+  ```
+  Replace `provider` and `testnet` as needed for your use case (see above), and `YOUR_API_KEY`/`YOUR_API_SECRET` with your credentials.
+
+**Configure Claude Desktop:**
+  Locate or create the configuration file at `~/Library/Application Support/Claude/claude_desktop_config.json` and add the following configuration:
+  ```json
+  {
+    "mcpServers": {
+      "mcp-server-remote": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "supergateway",
+          "--sse",
+          "https://<your-server-url>/sse?api_key=YOUR_API_KEY&api_secret=YOUR_API_SECRET&provider=aster&testnet=false"
+        ]
+      } 
+    }
+  }
+  ```
+  Again, set `provider` and `testnet` as needed, and use the correct credentials for the selected provider.
+
+**Note:** When configuring your client, replace `<your-server-url>` with the actual URL of your deployed server, and `YOUR_API_KEY` / `YOUR_API_SECRET` with your credentials for the selected provider. Including credentials directly in the URL is generally **not recommended for production environments**.
+
+## Connecting to the Server
+
+Clients connect to the server via Server-Sent Events (SSE) at the `/sse` endpoint. You **must** provide your API Key, Secret, `provider`, and `testnet` as query parameters in the connection URL:
+
+```
+http://<server_host>:<server_port>/sse?api_key=YOUR_API_KEY&api_secret=YOUR_API_SECRET&provider=binance&testnet=true
+```
+
+or
+
+```
+http://<server_host>:<server_port>/sse?api_key=YOUR_API_KEY&api_secret=YOUR_API_SECRET&provider=aster&testnet=false
+```
+
+**Important:**
+- For Binance, use your **Testnet** API credentials and set `testnet=true`.
+- For Aster, use your **Mainnet** API credentials and set `testnet=false`.
+- The server will reject invalid provider/testnet combinations.
+
+## Docker Deployment
+
+This project includes files for building and deploying the application using Docker.
+
+1. **Build the Docker image:**
+    ```bash
+    ./image_build.sh
+    ```
+    This script builds the Docker image using the `Dockerfile`.
+
+2. **Deploy the Docker container:**
+    *(Deployment logic might depend on your specific environment. The `image_deploy.sh` script provides a basic example, which you may need to adapt.)*
+    ```bash
+    ./image_deploy.sh
+    ```
+
+## Project Structure
+
+```
+.
+├── Dockerfile              # Docker configuration for the application
+├── image_build.sh          # Script to build the Docker image
+├── image_deploy.sh         # Script to deploy the Docker container (example)
+├── main.py                 # Main entry point for the server application
+├── requirements.txt        # Python package dependencies
+├── src/                    # Source code directory
+│   ├── api/                # API client logic (trading, market data, client, http utils)
+│   └── server/             # Server-specific code (Starlette app, MCP tools setup)
+│       ├── app.py          # Starlette application setup and SSE handling
+│       └── mcp_tools.py    # Setup for MCP server tools
+├── instructions/           # Additional documentation and prompt examples
+├── futures_trading/        # (May contain virtual environment or related files)
+├── test_trading_endpoint.py# Example or test script for trading endpoint
+└── README.md               # This file
+```
+
+## Dependencies
+
+See `requirements.txt` for a list of Python dependencies. The main dependencies are:
+
+- python-binance==1.0.19
+- httpx>=0.27.0
+- uvicorn==0.27.1
+- starlette==0.37.1
+- fastmcp==0.1.0
+- python-dotenv==1.0.1 

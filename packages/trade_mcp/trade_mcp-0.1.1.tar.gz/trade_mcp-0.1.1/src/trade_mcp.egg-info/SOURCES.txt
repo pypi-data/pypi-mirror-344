@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/api/__init__.py
+src/api/client.py
+src/api/http_utils.py
+src/api/market_data.py
+src/api/trading.py
+src/server/__init__.py
+src/server/main.py
+src/server/mcp_tools.py
+src/trade_mcp.egg-info/PKG-INFO
+src/trade_mcp.egg-info/SOURCES.txt
+src/trade_mcp.egg-info/dependency_links.txt
+src/trade_mcp.egg-info/entry_points.txt
+src/trade_mcp.egg-info/requires.txt
+src/trade_mcp.egg-info/top_level.txt
