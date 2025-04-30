@@ -1,0 +1,15 @@
+refactorai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+refactorai/main.py,sha256=bizjyj_ZnP6dR0uzRmQI_rcwTabnPDo2mjRKE5p5PLk,1774
+refactorai/ai/__init__.py,sha256=XcXKL02AyMmTv6NX6fOeDY0ou89Oulvl-HBgwQFN5cs,63
+refactorai/ai/ai_client.py,sha256=QkOat3cZOBUi0YZhRgF49lSd7Hq5K02i-oBD5D7E2uw,1145
+refactorai/ai/prompts.py,sha256=bv8e_bS_XaE1wc6kdFPED8fUomFuwJJmTPU7dM6NMIE,2461
+refactorai/ai/test.py,sha256=UyUwZ2VKUpE9hwPHAMrwPdqwgPuYtcomLgppOt-8umE,3424
+refactorai/core/__init__.py,sha256=74_7QdLrpPNWgvqA_j97PNANcysW_5s7Qb8lXlobjqw,21
+refactorai/core/starts.py,sha256=9Y5yPdU3MuWMmiSXi4ONKjahDUZ8zHKObrhC9umIJ_o,438
+refactorai/helpers/__init__.py,sha256=5uSI6PKolygX46jtmUnZSbdaT4gYIRjCfc8L_9jB2cI,24
+refactorai/helpers/functions.py,sha256=txuHyDt-RG1gG993fsJY-5VOSbiQNjxhqpp_W6riqCE,229
+refactorai-0.0.2.dist-info/METADATA,sha256=ZW8Kvx1t8S_QFuclKyb6762dOLBS5r0vRXoYkRyuP9c,246
+refactorai-0.0.2.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+refactorai-0.0.2.dist-info/entry_points.txt,sha256=F10fuECNnxP9WkozhUXhfzQcMUa9OFJvqMYf5KogByo,52
+refactorai-0.0.2.dist-info/top_level.txt,sha256=bHcI4krSa--XuX3bne4r_sMOfLjh3hHAR1_WfOSAynk,11
+refactorai-0.0.2.dist-info/RECORD,,

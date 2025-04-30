@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: refactorai
+Version: 0.0.2
+Summary: Automated Code Refactoring with AI
+Author-email: nikolaspoczekaj <nikolas.poczekaj@gmail.com>
+Requires-Python: >=3.7
+Requires-Dist: openai>=1.76.0
+Requires-Dist: click==8.1.8
