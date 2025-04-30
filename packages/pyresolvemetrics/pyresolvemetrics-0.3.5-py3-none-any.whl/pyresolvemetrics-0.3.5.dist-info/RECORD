@@ -1,0 +1,8 @@
+pyresolvemetrics/__init__.py,sha256=FrYrePMg2d_ZuLMuM69QYgA-tBU_eZCQ_wcIVNI0zMo,567
+pyresolvemetrics/_algebraic.py,sha256=Xg4FuMr2d7pw8oG3NKnRytvEx3am1fcbqnSwW9SSqYQ,10329
+pyresolvemetrics/_probabilistic.py,sha256=oo-JbgG_EQVwANP7TR1_nLxI16f0P0QpdfdcMRV8dKw,3232
+pyresolvemetrics/_utils.py,sha256=ASM1YL2oPGsNsmIDYQUVacMnWzm3MturCozxYeZ4578,255
+pyresolvemetrics-0.3.5.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+pyresolvemetrics-0.3.5.dist-info/METADATA,sha256=GNZpiGyu8hj8G-2sfefljfmyYauVmD_FnG2AFbhthZo,2234
+pyresolvemetrics-0.3.5.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pyresolvemetrics-0.3.5.dist-info/RECORD,,
