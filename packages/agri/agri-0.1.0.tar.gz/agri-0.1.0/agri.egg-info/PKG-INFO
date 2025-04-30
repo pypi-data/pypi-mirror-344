@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: agri
+Version: 0.1.0
+Summary: Anywhere GitHub Repository Importer
+Home-page: https://github.com/mmaleki92/agri
+Author: Morteza Maleki
+Author-email: Morteza Maleki <maleki.morteza92@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/mmaleki92/agri
+Project-URL: Bug Tracker, https://github.com/mmaleki92/agri/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: gitpython
+Requires-Dist: keyring
+Requires-Dist: tqdm
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+[![Upload Python Package](https://github.com/mmaleki92/pyising/actions/workflows/python-publish.yml/badge.svg)](https://github.com/mmaleki92/agri/actions/workflows/python-publish.yml)
+
+# Anywhere github repository import (Agri)
+
+Happend to you that as a resercher, machine learning practinoiner, run multiple versions of your codes in a different places? like colab, kaggle, your computer. I had the same problem, so I created this package to help me, and maybe us, to overcome this problem by downloading the repository from github (for private you need to provide a token), and work with it. then if you wnat to change something, do it in your computer and push it, then update it to in the code.
+
+# have an idea? face an error?
+raise an ISSUE.
+
+# Import the package
+import agri
+
+
+```python
+agri.authenticate("__token__")
+
+my_repo = agri.import_repo("mmaleki92/test_repo")
+
+print(agri.get_repo_structure("test_repo"))
+
+```
+happy researching.
