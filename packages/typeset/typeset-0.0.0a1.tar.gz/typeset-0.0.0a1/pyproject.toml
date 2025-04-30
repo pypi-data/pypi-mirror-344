@@ -1,0 +1,17 @@
+[project]
+name = "typeset"
+version = "0.0.0a1"
+description = "This project is coming soon."
+readme = "README.md"
+authors = [
+    { name = "Zanie Blue", email = "contact@zanie.dev" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+typeset = "typeset:main"
+
+[build-system]
+requires = ["uv_build>=0.6.0,<0.8"]
+build-backend = "uv_build"
