@@ -1,0 +1,15 @@
+lbm_suite2p_python/VERSION,sha256=n9KGQtOsoZHlx_wjg8_W-rsqrIdD8Cnau4mJrFhOMbw,6
+lbm_suite2p_python/__init__.py,sha256=eKr_A_AMNeX9MeMRsm0-FzDYuupQav9RacyTBQN7-ig,794
+lbm_suite2p_python/__main__.py,sha256=uv7MPJcrAbjTT0cPLLKsBpN3POj_3ZxCBDJvyeWyYVc,2906
+lbm_suite2p_python/default_ops.py,sha256=WS-2VmglXnxqKtbynr-Fg3RuiuKaJz5FDxfwgEewMJo,1527
+lbm_suite2p_python/run_lsp.py,sha256=JB-2ARhhE6wALbx5rw336wJ19gkOv1Q8aE2PEYkZ6o0,17440
+lbm_suite2p_python/s3d.py,sha256=NgoREhE8ES8JWVwjKOGxMkUZdl8ksMmxK_C4LT3nHOQ,12775
+lbm_suite2p_python/utils.py,sha256=d447_9G0SftQL4ry2BvrY3ya1NPbPbNh0zSWtk0q34Q,7210
+lbm_suite2p_python/volume.py,sha256=IyxfYRfQfLbHk8K_RvwplGLB2CVaRwBBTku5kheA8Dc,15115
+lbm_suite2p_python/zplane.py,sha256=5cnoz4RNx-c8ai7Ih6qDHrwEF9jhfCBRFlPKMem24dc,27651
+lbm_suite2p_python-1.0.2.dist-info/licenses/LICENSE.md,sha256=i59JSLM5EYXkA0Pvp1Ou0FtHvNBMCj1xXF1CUHO2OfA,2023
+lbm_suite2p_python-1.0.2.dist-info/METADATA,sha256=tc6_4S-sazbsa5hUfqLMvifNEYtnDheGkW1bhE1TBK4,2933
+lbm_suite2p_python-1.0.2.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+lbm_suite2p_python-1.0.2.dist-info/entry_points.txt,sha256=Zi6s3pErDWXfrnMXLC8Q618Y0GptQn5GeFHEBkjYKc4,57
+lbm_suite2p_python-1.0.2.dist-info/top_level.txt,sha256=WhCsVG68YLKWeTNJVwueG_4H3uuiI22I_TERsF-5mGk,19
+lbm_suite2p_python-1.0.2.dist-info/RECORD,,
