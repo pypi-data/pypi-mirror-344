@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling>=1.12.2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lesscode-database"
+version = "0.0.13"
+description = "lesscode_database是数据库连接工具包"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [
+    { name = "navysummer", email = "navysummer@yeah.net" },
+]
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = []
+
+
+[tool.setuptools]
+packages = ["lesscode_database"]
+package-dir = {"" = "."}
+
+
+# 打包命令：uv build
+# 发布命令： uvx twine upload dist/*
