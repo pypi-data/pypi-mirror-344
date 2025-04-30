@@ -1,0 +1,694 @@
+Metadata-Version: 2.1
+Name: codemie-plugins
+Version: 0.1.13
+Summary: Command-line interface for running CodeMie Plugins toolkits
+Author: CodeMie Team
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (==8.1.8)
+Requires-Dist: gitpython (>=3.1.44,<4.0.0)
+Requires-Dist: langchain (>=0.3.23,<0.4.0)
+Requires-Dist: langchain-community (>=0.3.21,<0.4.0)
+Requires-Dist: langchain-mcp-adapters (>=0.0.7,<0.0.8)
+Requires-Dist: langchain-openai (>=0.3.12,<0.4.0)
+Requires-Dist: langgraph (>=0.3.27,<0.4.0)
+Requires-Dist: mcp (>=1.6.0,<2.0.0)
+Requires-Dist: nats-py (==2.8.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: protobuf (==5.27.3)
+Requires-Dist: pydantic (>=2.11.3,<3.0.0)
+Requires-Dist: pyfiglet (>=1.0.2,<2.0.0)
+Requires-Dist: rich (==14.0.0)
+Description-Content-Type: text/markdown
+
+# CodeMie Plugin Quickstart
+## Table of Contents
+- [Overview](#overview)
+- [Installation](#installation)
+  - [Using DevBox (Recommended)](#using-devbox-recommended)
+    - [MacOS & Linux](#macos--linux)
+    - [Windows](#windows)
+      - [Option 1: Using Windows Subsystem for Linux (WSL)](#option-1-using-windows-subsystem-for-linux-wsl)
+      - [Option 2: Run CodeMie Plugins on Windows without DevBox](#option-2-run-codemie-plugins-on-windows-without-devbox)
+  - [Using CLI (Without DevBox)](#using-cli-without-devbox)
+    - [Using pip](#using-pip)
+    - [From Source](#from-source)
+- [Running AI/Run Development Plugin](#running-airun-development-plugin)
+  - [Using DevBox](#using-devbox)
+  - [Using CLI](#using-cli)
+- [Running MCP Servers](#running-mcp-servers)
+  - [Predefined servers](#predefined-servers)
+    - [List of available servers](#list-of-available-servers)
+    - [Explore available MCP servers](#explore-available-mcp-servers)
+  - [Custom MCP Servers](#custom-mcp-servers)
+  - [Basic Usage](#basic-usage)
+  - [Available Servers](#available-servers)
+    - [Filesystem Server](#filesystem-server)
+    - [CLI MCP Server](#cli-mcp-server)
+    - [Slack Server](#slack-server)
+    - [JetBrains Server](#jetbrains-server)
+    - [OpenAPI Schema Server](#openapi-schema-server)
+- [Configuration](#configuration)
+  - [Setting Up Your Plugin Key](#setting-up-your-plugin-key)
+  - [Configuration File](#configuration-file)
+  - [Environment Variables](#environment-variables)
+    - [NATS Configuration](#nats-configuration)
+- [For Developers](#for-developers)
+- [For Server Developers](#for-server-developers)
+- [Troubleshooting](#troubleshooting)
+
+## Overview
+
+The CodeMie Plugins provides a convenient way to interact with CodeMie toolkits and MCP (Model Context Protocol) servers. It offers a unified interface for:
+
+- Running development toolkits on repositories
+- Managing and running MCP servers
+- Configuring plugin settings
+- Listing available commands and toolkits
+
+There are two ways to use CodeMie Plugins:
+
+1. **Using DevBox (Recommended)** - A containerized environment that provides all necessary dependencies
+2. **Using CLI (Without DevBox)** - A command-line interface that can be installed directly on your system
+
+## Installation
+
+### Using DevBox
+
+#### MacOS & Linux
+
+1. **Install Python 3.12 or higher**
+   - Download from [python.org](https://www.python.org/downloads/)
+   - Or use Homebrew: `brew install python@3.12`
+
+2. **Install [uv](https://docs.astral.sh/uv/) - python package installer**
+   ```bash
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
+   or
+   ```bash
+   brew install uv
+   ```
+
+3. **Install [Node.js](https://nodejs.org/en/download)**
+   ```bash
+   # Download and install nvm:
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+   # in lieu of restarting the shell
+   \. "$HOME/.nvm/nvm.sh"
+   # Download and install Node.js:
+   nvm install 22
+   # Verify the Node.js version:
+   node -v # Should print "v22.14.0".
+   nvm current # Should print "v22.14.0"
+   ```
+   or
+   ```bash
+   # Download and install Node.js:
+   brew install node@22
+   # Verify the Node.js version:
+   node -v # Should print "v22.14.0".
+   ```
+
+4. **Install devbox**
+   ```bash
+   curl -fsSL https://get.jetify.com/devbox | bash
+   ```
+
+5. **Configure Plugin Key**
+   1. Run script to generate plugin key
+   ```bash
+   bash generate_plugin_key.sh
+   ```
+   2. Copy *PLUGIN_KEY* generated during installation
+   3. Navigate to Integrations at [CodeMie platform](https://codemie.lab.epam.com/#/integrations/user/new)
+   4. Choose Plugin type from dropdown
+   5. Enter integration Alias and plugin key
+
+#### Windows
+
+There are two options for running CodeMie Plugins on Windows.
+
+##### Option 1: Using Windows Subsystem for Linux (WSL)
+The first option is to use WSL 2, and then all you need is to activate WSL 2 on your Windows host and then follow the MacOS & Linux installation instructions.
+
+To install WSL2 with the default Ubuntu distribution, open Powershell or Windows Command Prompt as an administrator, and run:
+
+```powershell
+wsl --install
+```
+If WSL2 is already installed, you can install Ubuntu by running
+```powershell
+wsl --install -d Ubuntu
+```
+If you are running an older version of Windows, you may need to follow [the manual installation steps](https://learn.microsoft.com/en-us/windows/wsl/install-manual) to enable virtualization and WSL2 on your system. See the [official docs](https://learn.microsoft.com/en-us/windows/wsl/install) for more details.
+
+##### Option 2: Run CodeMie Plugins on Windows without DevBox
+
+1. **Install Python 3.12 or higher**
+   - Download from [python.org](https://www.python.org/downloads/)
+
+2. **Install [uv](https://docs.astral.sh/uv/getting-started/installation/#__tabbed_1_2) - python package installer**
+   ```powershell
+   powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+   ```
+
+3. **Install [Node.js](https://nodejs.org/en/download)**
+   ```powershell
+   # Download and install fnm:
+   winget install Schniz.fnm
+
+   # Download and install Node.js:
+   fnm install 22
+
+   # Verify the Node.js version:
+   node -v # Should print "v22.14.0".
+
+   # Verify npm version:
+   npm -v # Should print "10.9.2".
+   ```
+   or
+
+   Download and install Node.js MSI package from [nodejs.org](https://nodejs.org/en/download)
+
+4. Create a Python virtual environment and install the required packages. Run the following commands in the `PowerShell` in the `codemie-plugins` project directory:
+   ```powershell
+   python -m venv venv
+   
+   .\venv\Scripts\Activate.ps1
+   
+   pip install poetry==1.8.5
+   
+   poetry install
+   ```
+ 
+5. **Modify the setup-win-env.ps1 script to reference your plugin key.**
+
+### Using CLI (Without DevBox)
+
+The CodeMie Plugins CLI provides a convenient way to interact with CodeMie toolkits and MCP servers without requiring devbox. 
+The CLI can be run from any directory in your terminal and automatically uses the current working directory as the context for operations, 
+making it extremely flexible for working with different projects.
+
+#### Using pip
+
+The easiest way to install the CodeMie Plugins CLI is using pip:
+
+```bash
+pip install codemie-plugins
+```
+
+#### From Source
+
+To install from source:
+
+```bash
+# Clone the repository
+git clone https://github.com/codemie/codemie-plugins.git
+cd codemie-plugins
+
+# Install using pip
+pip install -e .
+
+# Or using poetry
+poetry install
+```
+
+
+## Running AI/Run Development Plugin
+
+You can run the AI/Run Development plugin using either DevBox or the CLI.
+
+### Using DevBox
+
+1. Run your devbox:
+
+    ```bash
+    devbox shell
+    ```
+
+2. Go to *toolkits/development* directory
+    ```bash
+   cd toolkits/development
+   ```
+
+3. Create *process-compose.override.yml* and set *REPO_FILE_PATH* variable.
+
+    ```yaml
+    processes:
+      development:
+        environment:
+          - "REPO_FILE_PATH=Your absolute path to the repository"
+    ```
+   The Plugin will use this directory for local development. So, it should point to actual directory where your repository is located.
+
+4. Execute run development
+
+    ```bash
+    run development
+    ```
+   or for non interactive mode
+
+    ```bash
+    runc development
+    ```    
+
+   NOTE: *REPO_FILE_PATH* can be passed as env var or commandline instead of editing *toolkits/development/process-compose.override.yml*
+
+    ```bash
+    export REPO_FILE_PATH=/absolute/path/to/my/repo && runc development
+    ```
+   To override default command line tool timeout use next env var:
+    ```
+    COMMAND_LINE_TOOL_TIMEOUT=180
+    ```
+
+### Using CLI
+
+Before running the development toolkit with CLI, you need to set up your configuration:
+
+1. Set your plugin key:
+   ```bash
+   codemie-plugins config set PLUGIN_KEY your-plugin-key
+   ```
+
+2. Verify your configuration:
+   ```bash
+   codemie-plugins config show
+   ```
+
+3. Run the development toolkit:
+   ```bash
+   # Run development toolkit on current directory
+   codemie-plugins development run
+
+   # Run development toolkit on a specific repository
+   codemie-plugins development run --repo-path /path/to/repo
+
+   # Run with a custom timeout
+   codemie-plugins development run --timeout 600
+   ```
+
+4. You can also set environment variables for a single run:
+   ```bash
+   REPO_FILE_PATH=/path/to/repo codemie-plugins development run
+   ```
+
+5. For Windows users:
+   ```powershell
+   $env:REPO_FILE_PATH="C:\path\to\repo"
+   codemie-plugins development run
+   ```
+
+## Running MCP Servers
+
+CodeMie provides ability to work with [MCP protocol](https://modelcontextprotocol.io/introduction) and supports various MCP servers. You can run these servers using either DevBox or the CLI.
+
+### Predefined servers
+CodeMie has already list of servers predefined and ready use. Existing list ist stored in `codemie-plugins/toolkits/mcp/servers.json` directory
+#### List of available servers:
+1. [cli-mcp-server](https://github.com/MCP-Mirror/MladenSU_cli-mcp-server)
+2. [filesystem](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem)
+3. [slack](https://github.com/modelcontextprotocol/servers/tree/main/src/slack)
+4. [jetbrains](https://github.com/JetBrains/mcp-jetbrains)
+5. [mcp-openapi-schema](https://github.com/hannesj/mcp-openapi-schema)
+
+Note: the list can be extended by adding more servers to `codemie-plugins/toolkits/mcp/servers.json` from available servers list
+#### Explore available MCP servers
+1. https://modelcontextprotocol.io/examples
+2. https://glama.ai/mcp/servers
+3. https://mcp.so/servers
+
+## Custom MCP Servers
+
+You can define custom MCP servers in your global configuration file (`~/.codemie/config.json`). These servers will be automatically recognized and can be used alongside the predefined servers.
+
+### Configuration Format
+
+Add custom MCP servers to your `~/.codemie/config.json` file using this format:
+
+```json
+{
+  "mcpServers": {
+    "mcp-azure-devops": {
+      "command": "npx",
+      "args": ["-y", "mcp-openapi-schema", "/absolute/path/to/json/openapi.json"],
+      "transport": "stdio"
+    },
+    "my-custom-server": {
+      "command": "node",
+      "args": ["/path/to/server.js"],
+      "transport": "stdio"
+    }
+  }
+}
+```
+
+### Using Custom Servers
+
+Custom servers defined in your global configuration appear in the list of available servers and can be used exactly like predefined servers:
+
+```bash
+# List all available servers including custom ones
+codemie-plugins mcp list
+
+# Run a custom server
+codemie-plugins mcp run -s mcp-azure-devops
+
+# Run multiple servers including custom ones
+codemie-plugins mcp run -s filesystem,mcp-azure-devops
+```
+
+Custom servers from the global configuration take precedence over predefined servers with the same name, allowing you to override default configurations.
+
+## Basic Usage
+##### MacOS with Devbox
+```bash
+# Start devbox shell
+devbox shell
+
+# Run single server
+mcp -s filesystem
+
+# Run multiple servers
+mcp -s filesystem,cli-mcp-server
+
+# Run with environment variables
+mcp -s filesystem,cli-mcp-server -e filesystem=FILE_PATHS -e cli-mcp-server=ALLOWED_DIR
+```
+or run directly
+
+```bash
+# Run single server
+devbox run mcp -s filesystem
+
+# Run multiple servers
+devbox run mcp -s filesystem,cli-mcp-server
+
+# Run with environment variables
+devbox run -e FILE_PATHS=/Users/mac_user/repos/my_repo mcp -s filesystem -e filesystem=FILE_PATHS
+```
+
+> **Note**: You can run the CLI from any directory - it will automatically use your current working directory as the context. This makes it easy to work with MCP servers across different projects without changing your configuration.
+
+#### Using CLI tool (works without devbox)
+```bash
+# List available servers (including custom ones)
+codemie-plugins mcp list
+
+# Run single server
+codemie-plugins mcp run -s filesystem
+
+# Run multiple servers
+codemie-plugins mcp run -s filesystem,cli-mcp-server
+
+# Run with environment variables
+codemie-plugins mcp run -s filesystem -e filesystem=FILE_PATHS
+```
+
+#### Windows
+
+```powershell
+# Run single server
+.\start-on-win.ps1 -s "filesystem"
+
+# Run multiple servers
+.\start-on-win.ps1 -s "filesystem,cli-mcp-server"
+
+# Run with environment variables
+$env:FILE_PATHS="C:\EPAM\cm\codemie,C:\EPAM\cm\codemie-ui"
+$env:ALLOWED_DIR="C:\EPAM\cm\codemie"
+.\start-on-win.ps1 -s "filesystem,cli-mcp-server" -e "filesystem=FILE_PATHS" -e "cli-mcp-server=ALLOWED_DIR"
+```
+
+
+## Available Servers
+### [Filesystem Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem)
+###### MacOS with Devbox
+```bash
+devbox run mcp -s filesystem
+```
+
+###### Windows
+```powershell
+.\start-on-win.ps1 -s "filesystem"
+```
+
+##### Environment variables:
+- `FILE_PATHS`: Comma-separated absolute paths to access (required)
+- `TIMEOUT`: Server timeout (default: 30s) (optional)
+
+##### Example:
+###### MacOS with Devbox
+```bash
+devbox run -e FILE_PATHS=/Users/mac_user/repos/my_repo mcp -s filesystem -e filesystem=FILE_PATHS
+```
+###### Windows
+```powershell
+$env:FILE_PATHS="C:\EPAM\cm\codemie,C:\EPAM\cm\codemie-ui"
+.\start-on-win.ps1 -s "filesystem" -e "filesystem=FILE_PATHS"
+```
+
+### [CLI MCP Server](https://github.com/MCP-Mirror/MladenSU_cli-mcp-server)
+###### MacOS with Devbox
+```bash
+devbox run mcp -s cli-mcp-server
+```
+###### Windows
+```powershell
+.\start-on-win.ps1 -s "cli-mcp-server"
+```
+##### Environment variables:
+- `ALLOWED_DIR`: Folder to allow access (Required)
+- `ALLOWED_COMMANDS`: all
+- `ALLOWED_FLAGS`: all
+- `MAX_COMMAND_LENGTH`: 2048
+- `TIMEOUT`: 300
+- `COMMAND_TIMEOUT`: 300
+
+##### Example:
+###### MacOS with Devbox
+```bash
+devbox run -e ALLOWED_DIR=/Users/mac_user/repos/my_repo mcp -s cli-mcp-server -e cli-mcp-server=ALLOWED_DIR
+```
+###### Windows
+```powershell
+$env:ALLOWED_DIR="C:\EPAM\cm\codemie"
+.\start-on-win.ps1 -s "cli-mcp-server" -e "cli-mcp-server=ALLOWED_DIR"
+```
+### [Slack Server](https://github.com/modelcontextprotocol/servers/tree/main/src/slack)
+###### MacOS with Devbox
+```bash
+devbox run mcp -s slack
+```
+###### Windows
+```powershell
+.\start-on-win.ps1 -s "slack"
+```
+
+##### Environment variables:
+- `SLACK_BOT_TOKEN`
+- `SLACK_TEAM_ID`
+
+### [JetBrains Server](https://github.com/JetBrains/mcp-jetbrains)
+
+**Pre Requisites:** Install [JetBrains MCP Server Plugin](https://plugins.jetbrains.com/plugin/26071-mcp-server)
+
+###### MacOS with Devbox
+```bash
+devbox run mcp -s jetbrains
+```
+###### Windows
+```powershell
+.\start-on-win.ps1 -s "jetbrains"
+```
+##### Environment variables:
+- `LOG_ENABLED`: true/false (optional)
+
+### [OpenAPI Schema Server](https://github.com/hannesj/mcp-openapi-schema)
+**Pre Requisites:** Configure path to openapi.json or openapi.yaml in _toolkits/mcp/server.json_ first
+
+###### MacOS with Devbox
+```bash
+devbox run mcp -s mcp-openapi-schema
+```
+###### Windows
+```powershell
+.\start-on-win.ps1 -s "mcp-openapi-schema"
+```
+
+## Configuration
+
+### DevBox Configuration
+
+#### Setting Up Your Plugin Key in DevBox
+
+1. Generate a plugin key:
+   ```bash
+   bash generate_plugin_key.sh
+   ```
+
+2. Configure your plugin key:
+   1. Copy *PLUGIN_KEY* generated during installation
+   2. Navigate to Integrations at [CodeMie platform](https://codemie.lab.epam.com/#/integrations/user/new)
+   3. Choose Plugin type from dropdown
+   4. Enter integration Alias and plugin key
+
+#### Environment Variables for DevBox
+
+When using DevBox, you can set environment variables in your `process-compose.override.yml` file or pass them directly to the `devbox run` command:
+
+```bash
+# Set environment variables for a single run
+devbox run -e VARIABLE_NAME=value command
+
+# Example
+devbox run -e REPO_FILE_PATH=/path/to/repo -e COMMAND_LINE_TOOL_TIMEOUT=300 mcp -s filesystem
+```
+
+### CLI Configuration
+
+#### Setting Up Your Plugin Key in CLI
+
+1. Set the plugin key in your configuration:
+   ```bash
+   codemie-plugins config set PLUGIN_KEY your-plugin-key
+   ```
+
+2. Alternatively, set it as an environment variable:
+   ```bash
+   export PLUGIN_KEY=your-plugin-key
+   ```
+
+3. For Windows users:
+   ```powershell
+   $env:PLUGIN_KEY="your-plugin-key"
+   ```
+
+#### Configuration File Management
+
+The CLI uses a configuration file located at `~/.codemie/config.json`. You can manage this configuration using the `config` command:
+
+```bash
+# View current configuration
+codemie-plugins config show
+
+# View all configuration including defaults
+codemie-plugins config show --all
+
+# Set a configuration value
+codemie-plugins config set KEY VALUE
+
+# Get a specific configuration value
+codemie-plugins config get KEY
+
+# Reset configuration to defaults
+codemie-plugins config reset
+```
+
+#### CLI Command Help
+
+You can get help for any CLI command using the `--help` flag:
+
+```bash
+# Get general help
+codemie-plugins --help
+
+# Get help for a specific command
+codemie-plugins development --help
+codemie-plugins mcp --help
+```
+
+### Common Environment Variables
+
+The following environment variables can be used to configure both the CLI and DevBox:
+
+- `PLUGIN_KEY`: Authentication key for the plugin engine
+- `PLUGIN_ENGINE_URI`: URI for the plugin engine (typically a NATS server)
+- `COMMAND_LINE_TOOL_TIMEOUT`: Timeout for command line tools (in seconds)
+- `CODEMIE_PLUGINS_ROOT`: Root directory for CodeMie plugins
+- `REPO_FILE_PATH`: Path to the repository for development toolkit
+- `REPO_FILE_PATH`: Path to the repository for development toolkit
+
+#### NATS Configuration
+- `NATS_MAX_PAYLOAD`: Custom maximum payload size in bytes for NATS connections.
+Used by services to override the default NATS payload size limit when processing large tool inputs and responses.
+
+## For Developers
+MCP servers are commonly used by developers and dev teams. 
+
+For development it's recommended to use `jetbrains` (for Jetbrains users) or `filesystem`+`cli-mcp-server` for all other cases.
+
+To run the `cli-mcp-server` and `filesystem` servers:
+###### MacOS with Devbox
+Let's assume scenario that development repository was cloned to `/repos/my_pet_project` directory
+```bash
+devbox run -e FILE_PATHS=/repos/my_pet_project -e ALLOWED_DIR=/repos/my_pet_project mcp -s filesystem,cli-mcp-server -e filesystem=FILE_PATHS -e cli-mcp-server=ALLOWED_DIR
+```
+###### Windows
+ Let's assume scenario that development repository was cloned to `C:\my_pet_project` on Windows.
+```powershell
+$env:FILE_PATHS="C:\my_pet_project"
+$env:ALLOWED_DIR="C:\my_pet_project"
+.\start-on-win.ps1 -s "filesystem,cli-mcp-server" -e "filesystem=FILE_PATHS" -e "cli-mcp-server=ALLOWED_DIR"
+```
+To run `jetbrains` 
+
+(Note: IDE must be opened. Server will work with active IDE, 
+[JetBrains MCP Server Plugin](https://plugins.jetbrains.com/plugin/26071-mcp-server) must be installed)
+###### MacOS with Devbox
+```bash
+devbox run mcp -s jetbrains
+```
+###### Windows
+```powershell
+.\start-on-win.ps1 -s "jetbrains"
+```
+
+## For Server Developers
+Refer to [MCP documentation](https://modelcontextprotocol.io/quickstart/server) for building your own server
+
+## Troubleshooting
+
+If you encounter issues with CodeMie Plugins, try the following:
+
+### DevBox Issues
+
+1. Make sure your DevBox is properly installed and running:
+   ```bash
+   devbox version
+   ```
+
+2. Check if your plugin key is correctly set up:
+   ```bash
+   devbox run env | grep PLUGIN_KEY
+   ```
+
+3. Try reinstalling DevBox if you encounter persistent issues.
+
+### CLI Issues
+
+1. Enable debug mode to get more detailed logs:
+   ```bash
+   codemie-plugins --debug COMMAND
+   ```
+
+2. Check your configuration:
+   ```bash
+   codemie-plugins config show --all
+   ```
+
+3. Ensure your plugin key is correctly set:
+   ```bash
+   codemie-plugins config get PLUGIN_KEY
+   ```
+
+4. Verify that required environment variables are set for specific servers.
+
+5. If you're having issues with a specific command, try running it with the `--help` flag to see available options:
+   ```bash
+   codemie-plugins COMMAND --help
+   ```
+
+6. For installation issues, make sure you have the correct Python version and dependencies installed.
