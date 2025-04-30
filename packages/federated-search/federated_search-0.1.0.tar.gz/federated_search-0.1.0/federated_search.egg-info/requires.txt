@@ -1,0 +1,5 @@
+psycopg2
+PyYAML
+ollama
+sentence-transformers
+haystack-ai

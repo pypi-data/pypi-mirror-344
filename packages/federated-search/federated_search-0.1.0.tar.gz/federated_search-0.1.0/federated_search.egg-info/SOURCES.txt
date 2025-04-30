@@ -1,0 +1,10 @@
+setup.py
+federated_search/__init__.py
+federated_search/contextual_pgvector.py
+federated_search/interfaces.py
+federated_search/reranker.py
+federated_search.egg-info/PKG-INFO
+federated_search.egg-info/SOURCES.txt
+federated_search.egg-info/dependency_links.txt
+federated_search.egg-info/requires.txt
+federated_search.egg-info/top_level.txt
