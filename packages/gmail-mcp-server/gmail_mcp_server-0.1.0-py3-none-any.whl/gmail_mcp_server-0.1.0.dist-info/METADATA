@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: gmail-mcp-server
+Version: 0.1.0
+Summary: An MCP server for Gmail and Google Calendar to summarize emails, send emails, and create calendar events.
+Project-URL: Homepage, https://github.com/yourusername/gmail-mcp-server
+Project-URL: Repository, https://github.com/yourusername/gmail-mcp-server
+Author-email: Aniket <fakeloginpage13@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Aniket
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: google-api-python-client>=2.0.0
+Requires-Dist: google-auth-oauthlib>=0.4.0
+Requires-Dist: mcp>=0.1.0
+Requires-Dist: schedule>=1.1.0
+Description-Content-Type: text/markdown
+
+Gmail MCP Server
+A Python-based MCP server for integrating Gmail and Google Calendar to summarize emails, send emails, and create calendar events from important emails.
+Installation
+pip install gmail-mcp-server
+
+Setup (For Testing)
+
+Ensure gcp-oauth.keys.json is in C:\Users\Aniket\.gmail-mcp\ (Windows).
+Run the server:gmail-mcp-server
+
+
+
+Usage
+Use with Claude Desktop:
+
+Summarize emails: Summarize the last 3 emails in my inbox.
+Send email: Send an email to example@gmail.com with subject "Test" and body "Hello".
+Create calendar event: Create a calendar event for the last important email.
+
+Dependencies
+
+google-api-python-client
+google-auth-oauthlib
+mcp
+schedule
+
+License
+MIT
