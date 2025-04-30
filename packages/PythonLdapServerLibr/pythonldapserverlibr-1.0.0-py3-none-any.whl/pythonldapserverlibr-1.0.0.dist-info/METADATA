@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: PythonLdapServerLibr
+Version: 1.0.0
+Summary: my one and only project!
+Author: grlviv
+Keywords: PythonLdapServerLibr
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/plain
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: summary
+
+* 'sup.
+
+* this project decodes as:
+	p - python
+	l - ldap
+	s - server
+	l - lib
