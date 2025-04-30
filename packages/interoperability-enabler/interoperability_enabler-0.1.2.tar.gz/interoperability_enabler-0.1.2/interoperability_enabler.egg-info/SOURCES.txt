@@ -1,0 +1,16 @@
+README.md
+setup.py
+interoperability_enabler/__init__.py
+interoperability_enabler.egg-info/PKG-INFO
+interoperability_enabler.egg-info/SOURCES.txt
+interoperability_enabler.egg-info/dependency_links.txt
+interoperability_enabler.egg-info/requires.txt
+interoperability_enabler.egg-info/top_level.txt
+interoperability_enabler/utils/__init__.py
+interoperability_enabler/utils/add_metadata.py
+interoperability_enabler/utils/annotation_dataset.py
+interoperability_enabler/utils/data_formatter.py
+interoperability_enabler/utils/data_mapper.py
+interoperability_enabler/utils/extract_data.py
+interoperability_enabler/utils/merge_data.py
+tests/test_basic.py
