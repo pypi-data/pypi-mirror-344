@@ -1,0 +1,7 @@
+opentelemetry/instrumentation/mcp/__init__.py,sha256=OxaikqNBYeTkbCAtKcMC0R6aPhkhLDF-x9jxUM6ngZE,190
+opentelemetry/instrumentation/mcp/instrumentation.py,sha256=n6rR-DsGiKBb8rEbAfbRPZW88ejm0sROjr21rNnkueA,12071
+opentelemetry/instrumentation/mcp/version.py,sha256=lEGeFHqx_76bQTtggP3Cp1g3Verm6bTX-7__1Z7s7gc,23
+opentelemetry_instrumentation_mcp-0.39.4.dist-info/METADATA,sha256=6FhVKu12YqNrWSiXJPkmYWhhtnp4JGIUVsTHa3kkD8c,2079
+opentelemetry_instrumentation_mcp-0.39.4.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+opentelemetry_instrumentation_mcp-0.39.4.dist-info/entry_points.txt,sha256=glT7AHoIilcsoe7QJAnLG68uJDOGVRORXfRyw5jEetU,84
+opentelemetry_instrumentation_mcp-0.39.4.dist-info/RECORD,,
