@@ -1,0 +1,8 @@
+fastapi_plugin/__init__.py,sha256=jg2IGBC6nPOvWTru4KUcccL6WR6Vd_xFOYsQxn9ROWg,69
+fastapi_plugin/fast_api_client.py,sha256=MZvq1HvcHluaskK0AUTWQBOA1lN4Hg8F3Tv1Y8Q31Jw,2718
+fastapi_plugin/test_utils.py,sha256=fujro-q7iyT0tL0ByhJlpkgJOe-fJjRd8rcjo9Beicc,3536
+fastapi_plugin/utils.py,sha256=1phDdFDuIgUcyqfuZtdE5inRvWNl9d00M4qxplpIsrw,1453
+auth0_fastapi_api-1.0.0b3.dist-info/LICENSE,sha256=EEi9tibVAgKdGU1DmXmHjZFOwMfYXDV45mabfEmULkQ,1116
+auth0_fastapi_api-1.0.0b3.dist-info/METADATA,sha256=gDEb1gAuaLV2UekxkZN2O-eRymUQULcwWZ4q0MsuTY8,7332
+auth0_fastapi_api-1.0.0b3.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+auth0_fastapi_api-1.0.0b3.dist-info/RECORD,,
