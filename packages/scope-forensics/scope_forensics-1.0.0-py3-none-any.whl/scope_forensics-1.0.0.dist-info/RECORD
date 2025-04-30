@@ -1,0 +1,15 @@
+scope/__init__.py,sha256=7Y69NLxr7WQiU1KjOqp1UT5EuiiomosKTODpEF9gEKU,82
+scope/cli.py,sha256=0HsJeTVyj9BCrmzqzf_oNiM_zhMnfTIsya54YU7xjB4,15536
+scope/aws/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scope/aws/collector.py,sha256=UTl2KSpgJ_Xp9ASoHzblLG37Q8lI2fe3O8Ftu-IC8Nc,40551
+scope/aws/parser.py,sha256=D85MEO1wDk926BWsXtwe20p9TK94QlUHFbGPkDj_V9Q,11673
+scope/aws/timeline.py,sha256=7dzFxzpI4BNW5TQYoClyPHfd9ThpVDAsQCjGg4Ga2u4,6241
+scope/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scope/common/timeline.py,sha256=yvoKuE94ePTmxymu-oylP0QcS7Vm2PkR-UXKqy6ja58,1196
+scope/common/utils.py,sha256=4gWIKOZNjvehwXsmJrJiQ7Dxl9_fzZVfsT8CYPYSdbs,1813
+scope_forensics-1.0.0.dist-info/licenses/LICENSE,sha256=UOZ1F5fFDe3XXvG4oNnkL1-Ecun7zpHzRxjp-XsMeAo,11324
+scope_forensics-1.0.0.dist-info/METADATA,sha256=N3x0hb09kmwwhwwlzPmVFPanq0W6BibYWqBJnI80uvg,9610
+scope_forensics-1.0.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+scope_forensics-1.0.0.dist-info/entry_points.txt,sha256=XkNIAVDosBsTgtjhDIqijKs2ym7YZYtBye7Fj6ld2xU,41
+scope_forensics-1.0.0.dist-info/top_level.txt,sha256=2CM6KU4wKPVS0iGdr72fQXzMA5Vn0U5FzuzOYCYth_8,6
+scope_forensics-1.0.0.dist-info/RECORD,,
