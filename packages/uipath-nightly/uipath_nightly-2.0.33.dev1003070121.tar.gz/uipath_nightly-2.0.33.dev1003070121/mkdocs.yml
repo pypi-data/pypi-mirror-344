@@ -1,0 +1,110 @@
+site_name: UiPath SDK
+site_url: https://uipath.github.io/uipath-python/
+
+repo_name: UiPath/uipath-python
+repo_url: https://github.com/UiPath/uipath-python
+
+copyright: Copyright &copy; 2025 UiPath
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - content.code.copy
+    - content.footnote.tooltips
+    - content.tabs.link
+    - content.tooltips
+    - navigation.expand
+    - navigation.footer
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.sections
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  logo: assets/uipath-logo.svg
+  favicon: assets/favicon.png
+
+nav:
+  - UiPath Langchain SDK:
+      - langchain/index.md
+      - Getting Started: index.md
+      - Chat Models: langchain/chat_models.md
+      - Context Grounding: langchain/context_grounding.md
+      - Human In The Loop: langchain/human_in_the_loop.md
+  - UiPath SDK:
+      - core/index.md
+      - Getting Started: core/getting_started.md
+      - Services:
+        - Actions: core/actions.md
+        - Assets: core/assets.md
+        - Buckets: core/buckets.md
+        - Context Grounding: core/context_grounding.md
+        - Jobs: core/jobs.md
+        - Queues: core/queues.md
+        - Processes: core/processes.md
+  - How To Contribute: CONTRIBUTING.md
+
+plugins:
+  - search
+  - mkdocstrings
+  - mkdocs-simple-hooks:
+      hooks:
+        on_pre_build: "docs.hooks:redirect_index"
+  - termynal:
+      prompt_literal_start:
+        - "$"
+        - ">"
+  - social
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.blocks.tab:
+      alternate_style: true
+  - pymdownx.blocks.admonition:
+      types:
+        - note
+        - attention
+        - caution
+        - danger
+        - error
+        - tip
+        - hint
+        - warning
+        - info
+        - check
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.snippets
+  - pymdownx.fancylists
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      title: On this page
