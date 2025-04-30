@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "sqlcompose"
+version = "0.0.1"
+description = "Composition of linked SQL files"
+readme = "README.md"
+authors = ["Anders Madsen <anders.madsen@alphavue.com>"]
+license = "MIT"
+repository = "https://github.com/apmadsen/sqlcompose"
+classifiers = [
+    "Operating System :: OS Independent"
+]
+packages = [
+    { include = "sqlcompose", from = "src" }
+]
+
+[tool.poetry.scripts]
+"sqlcompose" = "sqlcompose.main:main"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
