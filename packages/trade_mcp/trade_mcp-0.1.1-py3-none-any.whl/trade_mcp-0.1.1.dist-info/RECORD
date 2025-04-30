@@ -1,0 +1,13 @@
+api/__init__.py,sha256=FXsNqJyaiSiolUPj5m0bUhXH_dLre6tIkfYjpOAjDVQ,233
+api/client.py,sha256=HOKOV6mmlPX8q_nDa_maUIgYUk2n799_REBIUHjEDk0,961
+api/http_utils.py,sha256=MWTCUTlDEpItvbccaHksphFSV7Z7s9n1lkKrY6o3Yqw,4278
+api/market_data.py,sha256=jrBAIF3zHHMkQlu8xeIJRlzUobCjewo28nQsbgrJT9c,11091
+api/trading.py,sha256=a-WxISqEWfOxwSP-h9WOFWTt2WzBBAEhBYy8PTpJCq8,42482
+server/__init__.py,sha256=xPQFV7LLUfs5YKh_HDjrxalhrtKPtLccl8Tbtdc4-M0,118
+server/main.py,sha256=lAY2LV4T8aOKiyk3kurS7aX5qqUW9jSf6jqYLeQRvnY,1121
+server/mcp_tools.py,sha256=xbvJ4JEPRvmrqw2m-_GbCZ4zSEGA89K-WX5WEGFzLyU,10168
+trade_mcp-0.1.1.dist-info/METADATA,sha256=Yfn4KvLWnx5tYOVdgcoHjV6uF1izmlj0WCeq5AV2edg,9223
+trade_mcp-0.1.1.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+trade_mcp-0.1.1.dist-info/entry_points.txt,sha256=Y1_0cUzv0DEQSOYtYjGxD-f3ujY8zWSMrFGLCHu3GwM,53
+trade_mcp-0.1.1.dist-info/top_level.txt,sha256=RXMSl3WvVWvlkKFwAiYANqFeZ_2E0KogJPfj7nFmRdo,11
+trade_mcp-0.1.1.dist-info/RECORD,,
