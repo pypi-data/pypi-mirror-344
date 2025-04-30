@@ -1,0 +1,15 @@
+egasp/__init__.py,sha256=snd-RQReu1s9rv8LIjmisstaJojeEykkI0E2Cvd-xZs,284
+egasp/__main__.py,sha256=x-WBJjjLg7cbqamVSyqXU0T6_KbfNlIv04TDrp5_2JM,9267
+egasp/check_version.py,sha256=X7c5Px4HNx5PLxzahp7F2y8y13TjiQn1tmBOyepesuw,8911
+egasp/egasp_core.py,sha256=r6o_-kgnzfGg7eT6-ztEuSqdI3Jg1JqBD8U91xoijz4,5506
+egasp/language.py,sha256=p3gQgmFFwizM6mAgHdwesqp2DChjNqBm6uQVegL_2nM,2442
+egasp/logger_config.py,sha256=JtIWhtegfLQQ9WQ4NUFPgduE6syeZJ319uwIVHNlbDg,3292
+egasp/validate.py,sha256=NgYfYQCwrhwHHs-neXs0DhUsZAemOSy1PTMVJZfuBTc,3035
+egasp/version.py,sha256=tTGqzkycp3BFUVQaTTW5Msx9TPSkDC-N16Sc9S2ekoo,1910
+egasp/data/data.py,sha256=IgpjjZpu8w4xjhlkggYHh2aPknjsqf43VNc3EUpBnuE,15126
+egasp-0.0.5.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+egasp-0.0.5.dist-info/METADATA,sha256=K6ux8h1q3i39ZwU9bWdC8jhj7aNSEaXRq_774rxEWQU,4483
+egasp-0.0.5.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+egasp-0.0.5.dist-info/entry_points.txt,sha256=RIAcLkz_nedSgRWS_-XhXzaiAOuznjAJ_6tiyelTFQ0,37
+egasp-0.0.5.dist-info/top_level.txt,sha256=3a-YZkAmhJYgjMjXP21Ts6O57OoHN7oDqXEr9BBLipw,6
+egasp-0.0.5.dist-info/RECORD,,
