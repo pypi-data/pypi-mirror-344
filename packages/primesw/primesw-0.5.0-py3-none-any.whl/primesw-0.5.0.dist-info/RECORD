@@ -1,0 +1,14 @@
+primesw/__init__.py,sha256=R1bLLrx5-BWwoTupWn912nHRe3ExRXQ4dFG8H_qncOg,109
+primesw/prime.py,sha256=yKE5BEbESaHw31j1MZdMiqwl0UP5Du3z7bzG_geQhKs,35631
+primesw/prime_v0.1.0.keras,sha256=Yp9B4Ki1l4CHfmeE_94QFegT81kGHpCG9HNlgnnovP0,5688464
+primesw/primeinsc_v0.1.0.pkl,sha256=URe8tNIhNyfJHQLgdKjQNwbkmsfj0l3BAfTY7RdY-zQ,673
+primesw/primesh.py,sha256=RNc18WxuCt4oiWpxYOfbnixLkCPo1BmVrTLvl0Y67XA,15286
+primesw/primesh_v0.1.0.keras,sha256=6yAJVRFWhRbMzda7Q3M-AYdLUvklyxRo8-seXnVvIGE,2834976
+primesw/primeshinsc_v0.1.0.pkl,sha256=FHNTzP46dqCIfLz4lP9CO7RVdRf4PL3lvLg9jX6514M,727
+primesw/primeshlocsc_v0.1.0.pkl,sha256=cnZRgyYmx8Z9Jyzy3EeKW_p961riTUOcRdpph1_jPq8,543
+primesw/primeshtarsc_v0.1.0.pkl,sha256=im4rOb56EiLtSmgFgwC4wKW7UWpBWEAB1AQYbStMD0k,639
+primesw/primetarsc_v0.1.0.pkl,sha256=btSFmEj7l0ZoONTBPpkh1Ow62rMBVzhID94IMStfya4,561
+primesw-0.5.0.dist-info/LICENSE,sha256=V_3GWfUCH2P5jPB-VBXrwCTkzu_o2PqGXDs57GE9_gs,35822
+primesw-0.5.0.dist-info/METADATA,sha256=PzLoyecBIwF5qlN7DUJy-ZHK9r50b5eiiOXnG26QLHc,2502
+primesw-0.5.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+primesw-0.5.0.dist-info/RECORD,,
