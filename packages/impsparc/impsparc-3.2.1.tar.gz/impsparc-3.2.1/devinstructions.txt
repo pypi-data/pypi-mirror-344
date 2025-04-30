@@ -1,0 +1,44 @@
+Client side
+===========
+
+- Activate virtualenv before running the cmds below
+
+- Make sure to update the version in setup.py
+
+- Build the source/build distributions
+
+	$ python setup.py sdist bdist_wheel
+
+- Copy the new distributions to Pypi server:
+
+	$ scp dist/cvapirisk-1.0.2* ubuntu@pypi.cloudvector.net:./pypiserver/packages/
+
+- On the client, install the pkg using:
+
+	$ pip install --extra-index-url http://localhost:8080/ cvapirisk
+	$ pip install --extra-index-url http://3.214.215.217:8182/ --trusted-host 3.214.215.217 cvapirisk==1.0.7
+
+- Run the tool:
+
+	$ cvapirisk -h
+
+-----------------------------------------------------------------------
+
+Server side
+===========
+
+https://pypi.org/project/pypiserver/#quickstart-installation-and-usage
+
+- Add a new user to the passwd file:
+	$ htpasswd -s htpasswd.txt cvuser111
+
+Start the server as:
+
+$ pypi-server -p 8182 -P htpasswd.txt -a update,download,list ./packages
+
+-----------------------------------------------------------------------
+
+Notes
+=====
+
+export PYTHONPATH=.

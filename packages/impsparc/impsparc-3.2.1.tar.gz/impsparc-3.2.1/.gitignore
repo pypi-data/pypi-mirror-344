@@ -1,0 +1,9 @@
+bin/
+lib/
+dist/
+pyvenv.cfg
+impsparc.egg-info/
+share/
+__pycache__
+build/
+*.swp
