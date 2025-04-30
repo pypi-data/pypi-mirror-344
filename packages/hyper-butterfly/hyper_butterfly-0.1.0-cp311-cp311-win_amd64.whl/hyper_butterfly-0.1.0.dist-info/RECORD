@@ -1,0 +1,17 @@
+data/__init__.py,sha256=cvP6Hpo33mRDTueejUVj-P7zgz7pvMBtgH8b7U_H9us,22337
+hyper_butterfly/_C.cp311-win_amd64.pyd,sha256=yZQiKdv9ZQIsppr3KsApR0pJBFS8F3a8Trag8OSFSAU,367616
+hyper_butterfly/__init__.py,sha256=qW9Gt8r6U1XT1GtVlUW7dYl4NiyqgzyCw83qMVau14Q,3937
+hyper_butterfly/hyper_butterfly_py.py,sha256=JFZXxkbfV5yyCy0jgaII_3T-L79KTinBBgZw_z9pa4c,2411
+hyper_butterfly/csrc/butterfly.h,sha256=mREm9oB4vFdWpMOLTdWgZ5K9NPnKmsN1iO4EfXkgUcQ,1966
+hyper_butterfly/csrc/butterfly_backend.h,sha256=3PH0dn0vlTzwDO0lmuqf8kydOBWo4LkFIlswf7dxFl8,257
+hyper_butterfly/csrc/common_defs.h,sha256=xitsEi7ezKQU8PiZZhKcNUgpukSxk1AfM_rEVoQEt5I,977
+hyper_butterfly/csrc/extension.cpp,sha256=MDp8zuU_lD-DS-CJ3MyjwiVlUe4wh1hdCZrBcCmfFrI,963
+hyper_butterfly/csrc/hyper_butterfly.h,sha256=--WPUh5SUyGr7_LiaFIkPyXqaQ2jGKK6tD7fUyvWfms,917
+hyper_butterfly/csrc/hyper_butterfly_cpu.cpp,sha256=uQPXOCHUiTFWAxSfbhCt8AvaCYeDY9SBV_iQLgvD3q8,2572
+hyper_butterfly/csrc/hyper_butterfly_cpu.h,sha256=TbjF34hGoyuQ2HhnfQyCa53c2XeqOR2eTWTkYDZz1K0,361
+hyper_butterfly/csrc/hyper_butterfly_cuda.cu,sha256=-jYqXtrVCE21cQ62OSMUbRToVtW14vGtyym8GuBpSv8,19578
+hyper_butterfly/csrc/maps.h,sha256=KI16Do07S9KqTqxaFRlQTWWMOQ01qHwfMdJ5gDP4r-E,1208
+hyper_butterfly-0.1.0.dist-info/METADATA,sha256=29w1ci0XeK8v8e8gPn1b9vtY1fbWkgugCa0AVHdNGqM,575
+hyper_butterfly-0.1.0.dist-info/WHEEL,sha256=yEpuRje-u1Z_HrXQj-UTAfIAegW_HcP2GJ7Ek8BJkUM,102
+hyper_butterfly-0.1.0.dist-info/top_level.txt,sha256=DAd3lySDCFihhIYwamGlqHL98Z_s3KH9mjKEtI4tINc,21
+hyper_butterfly-0.1.0.dist-info/RECORD,,
