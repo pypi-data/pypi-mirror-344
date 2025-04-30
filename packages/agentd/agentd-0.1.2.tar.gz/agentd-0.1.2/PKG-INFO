@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: agentd
+Version: 0.1.2
+Summary: agent daemon
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: litellm>=1.67.4.post1
+Requires-Dist: mcp-subscribe
+Requires-Dist: openai-agents>=0.0.13
+Requires-Dist: openai>=1.76.0
+Requires-Dist: pyyaml>=6.0.2
+Description-Content-Type: text/markdown
+
+# agentd
+
+View sample configs in the [`config/`](https://github.com/phact/agentd/tree/main/config) directory
+
+### to run:
+
+    uvx agentd config.yaml
+
+Built using [mcp-subscribe](https://github.com/phact/mcp-subscribe) a way for agents to subscribe to any MCP's tools
