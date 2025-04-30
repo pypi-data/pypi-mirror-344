@@ -1,0 +1,10 @@
+date:  "2024-02-06" #if DEBUG else "2024-02-06"
+fao_cfile: "20230404"
+fao_old_cfile: "20221108"
+# version of fao land use data for iLUC - forestry
+fao_fores_land: "20230314"
+#version...
+concito_anim: "20230619"  # version
+concito_crop: "v14"  # version
+intern_max: "0.2"
+BONSAI_VERSION: "BONSAI_VERSION"
