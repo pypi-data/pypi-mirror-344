@@ -1,0 +1,11 @@
+astropy
+numpy
+scipy
+scikit-image
+speclite
+
+[dev]
+coverage
+mypy
+pytest
+ruff
