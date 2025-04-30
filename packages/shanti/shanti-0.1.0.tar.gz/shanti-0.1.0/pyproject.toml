@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shanti"
+version = "0.1.0"
+description = "create SHarable, interactive, stANdalone html dashboard from Tabular proteomIcs data"
+authors = [
+    { name = "Nara Marella" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "GPL-3.0-or-later"
+dependencies = [
+    "pandas",
+    "bokeh",
+    "openpyxl",
+    "scipy",
+    "numpy"
+]
+
+[project.urls]
+Homepage = "https://github.com/n3m4u/shanti"
+Issues = "https://github.com/n3m4u/shanti/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.data-files]
+license-files = ["LICENSE"]

@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+shanti/__init__.py
+shanti/shanti.py
+shanti/version.py
+shanti.egg-info/PKG-INFO
+shanti.egg-info/SOURCES.txt
+shanti.egg-info/dependency_links.txt
+shanti.egg-info/requires.txt
+shanti.egg-info/top_level.txt

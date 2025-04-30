@@ -1,0 +1,3 @@
+recursive-include shanti/data *.xlsx
+include LICENSE
+

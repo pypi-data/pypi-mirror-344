@@ -1,0 +1,5 @@
+pandas
+bokeh
+openpyxl
+scipy
+numpy
