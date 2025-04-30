@@ -1,0 +1,2 @@
+[console_scripts]
+org-mcp = org_mcp.cli:main
