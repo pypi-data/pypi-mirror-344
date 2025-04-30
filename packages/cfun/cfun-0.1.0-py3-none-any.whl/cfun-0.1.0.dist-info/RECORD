@@ -1,0 +1,12 @@
+cfun/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cfun/data/all_frequency.parquet,sha256=RY4hRsIDYvaRAiCxqIOG70d9cFkHLbMBRF47yj6QK1M,44499097
+cfun/data/frequency.parquet,sha256=Mclhgb9VHwDNvTpVIh5g64G86ZqSUDsrNIXdA-Cy15o,4056420
+cfun/freq.py,sha256=Nq3C5U6NbAjMFZxRp13wczGhuCcGSgh1AWbCrsSxQ88,342
+cfun/json.py,sha256=KmumcGBdvChRGnw_3g3gYCLMLS0rQJ1WrV4E1b45xts,1745
+cfun/yolo/classify.py,sha256=OpVbnOrGWbxCr2uirKAJYucF3slne7slxZ-nkqjIhrI,2353
+cfun/yolo/classifycv2.py,sha256=SWcob2gVSGPJP-yndcez9IVvoHNL3ADPAuqFuJfCCtQ,2254
+cfun/yolo/detect.py,sha256=jnVR4kqMQ46WPq_Xw5BbVsrKgya7c28-pIUCuMPUlbk,3147
+cfun/yolo/detectcv2.py,sha256=jKEBto_ZnpxZ0HzPNHcyk_SvAL9Dx0dYQh2dp75N2FE,3210
+cfun-0.1.0.dist-info/METADATA,sha256=w39zmRvkLvJKHMVBwlzeUzR00Z6-e8pkbSPi4R1Sf_I,1026
+cfun-0.1.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+cfun-0.1.0.dist-info/RECORD,,
