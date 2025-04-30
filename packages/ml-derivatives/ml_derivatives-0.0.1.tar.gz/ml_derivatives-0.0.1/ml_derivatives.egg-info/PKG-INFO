@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: ml_derivatives
+Version: 0.0.1
+Summary: A python module for computing high derivatives of noisy time-series
+Author: Mazen Alamir
+Author-email: mazen.alamir@grenoble-inp.fr
+License: MIT
+Keywords: Signal processing,data science,filtering,derivation,de-noising
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: joblib==1.4.2
+Requires-Dist: numpy==2.2.5
+Requires-Dist: pandas==2.2.3
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytz==2025.2
+Requires-Dist: scikit-learn==1.6.1
+Requires-Dist: scipy==1.15.2
+Requires-Dist: six==1.17.0
+Requires-Dist: threadpoolctl==3.6.0
+Requires-Dist: tqdm==4.67.1
+Requires-Dist: tzdata==2025.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
