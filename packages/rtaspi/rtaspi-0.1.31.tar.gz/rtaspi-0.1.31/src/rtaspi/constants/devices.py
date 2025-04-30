@@ -1,0 +1,58 @@
+"""Device type constants."""
+
+from enum import Enum, auto
+
+class DeviceType(Enum):
+    """Device type enumeration."""
+    CAMERA = auto()
+    MICROPHONE = auto()
+    SCREEN = auto()
+    REMOTE_DESKTOP = auto()
+
+# Device types (string constants)
+DEVICE_TYPE_CAMERA = "camera"
+DEVICE_TYPE_MICROPHONE = "microphone"
+DEVICE_TYPE_SCREEN = "screen"
+DEVICE_TYPE_REMOTE_DESKTOP = "remote_desktop"
+
+# Device subtypes
+DEVICE_SUBTYPE_USB = "usb"
+DEVICE_SUBTYPE_IP = "ip"
+DEVICE_SUBTYPE_RDP = "rdp"
+DEVICE_SUBTYPE_VNC = "vnc"
+DEVICE_SUBTYPE_VIRTUAL = "virtual"
+DEVICE_SUBTYPE_PHYSICAL = "physical"
+DEVICE_SUBTYPE_NETWORK = "network"
+
+# Device capabilities
+CAPABILITY_VIDEO = "video"
+CAPABILITY_AUDIO = "audio"
+CAPABILITY_PTZ = "ptz"
+CAPABILITY_MOTION = "motion"
+CAPABILITY_REMOTE_CONTROL = "remote_control"
+CAPABILITY_KEYBOARD = "keyboard"
+CAPABILITY_MOUSE = "mouse"
+
+# Device states
+DEVICE_STATE_UNKNOWN = "unknown"
+DEVICE_STATE_OFFLINE = "offline"
+DEVICE_STATE_ONLINE = "online"
+DEVICE_STATE_STREAMING = "streaming"
+DEVICE_STATE_ERROR = "error"
+DEVICE_STATE_CONNECTING = "connecting"
+DEVICE_STATE_DISCONNECTING = "disconnecting"
+
+# Device protocols
+DEVICE_PROTOCOL_RTSP = "rtsp"
+DEVICE_PROTOCOL_ONVIF = "onvif"
+DEVICE_PROTOCOL_RDP = "rdp"
+DEVICE_PROTOCOL_VNC = "vnc"
+DEVICE_PROTOCOL_WEBRTC = "webrtc"
+DEVICE_PROTOCOL_RTMP = "rtmp"
+DEVICE_PROTOCOL_HLS = "hls"
+DEVICE_PROTOCOL_DASH = "dash"
+
+# Device categories
+DEVICE_CATEGORY_INPUT = "input"
+DEVICE_CATEGORY_OUTPUT = "output"
+DEVICE_CATEGORY_REMOTE = "remote"
