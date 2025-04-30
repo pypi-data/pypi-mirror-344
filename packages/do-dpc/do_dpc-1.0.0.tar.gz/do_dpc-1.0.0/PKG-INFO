@@ -1,0 +1,154 @@
+Metadata-Version: 2.4
+Name: do-dpc
+Version: 1.0.0
+Summary: Framework software package for the Data-Driven Predictive Control (DPC) algorithm with visual examples.
+Home-page: https://github.com/do-dpc/do-dpc
+Author: Sebastian Graf
+Author-email: sebastian.graf@gmx.ch
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pylint~=3.3.3
+Requires-Dist: pytest~=8.3.4
+Requires-Dist: pytest-cov~=6.0.0
+Requires-Dist: numpy~=1.26.4
+Requires-Dist: scipy~=1.15.1
+Requires-Dist: black~=25.1.0
+Requires-Dist: mypy~=1.15.0
+Requires-Dist: pre-commit~=4.1.0
+Requires-Dist: cvxpy~=1.6.0
+Requires-Dist: onnx>=1.13.0
+Requires-Dist: ipykernel~=6.29.5
+Requires-Dist: packaging~=24.2
+Requires-Dist: asyncua~=1.1.5
+Requires-Dist: control~=0.10.1
+Requires-Dist: gymnasium~=1.1.1
+Requires-Dist: pygame~=2.6.1
+Requires-Dist: box2d-py~=2.3.8
+Requires-Dist: moviepy~=2.1.2
+Requires-Dist: matplotlib~=3.10.0
+Requires-Dist: ipython~=8.32.0
+Requires-Dist: PyVirtualDisplay~=3.0
+Requires-Dist: tqdm~=4.67.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Do DPC
+
+![Pipeline Status](https://github.com/do-dpc/do-dpc/actions/workflows/ci.yml/badge.svg)
+[![Documentation Status](https://readthedocs.org/projects/do-dpc/badge/?version=latest)](https://do-dpc.readthedocs.io/en/latest/?badge=latest)
+
+The purpose of this code is to provide a Framework for Data-Driven Predictive Control (DPC) with illustrative examples.
+
+Please visit the extensive [documentation](https://do-dpc.readthedocs.io/en/latest/), kindly hosted on `readthedocs`.
+
+## Citing do-dpc
+
+Please follow the [instructions](https://do-dpc.readthedocs.io/en/latest/getting_started/credit.html)
+if you want to use **do-dpc** for published work.
+
+## Getting Started
+
+This library utilizes the [Mosek Solver](https://www.mosek.com/). While it is possible to use any solver compatible with
+`CVXPY`, it is recommended to use Mosek for optimal performance. Please follow the installation instructions on
+the [Mosek website](https://www.mosek.com/) to set it up.
+
+To ensure a clean and isolated development environment, it is recommended to use Python's virtual environment (`venv`).
+
+Linux / macOS
+
+```sh
+python3.12 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+Windows
+
+```sh
+py -m venv venv
+.\venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### Building the documentation
+
+Navigate to the `docs` Folder:
+
+```shell
+cd docs
+```
+
+Create and activate a virtual environment:
+
+```sh
+python3.12 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+Generate the documentation:
+
+```shell
+make html
+```
+
+Once the HTML files are created, you can serve them locally:
+
+```shell
+python -m http.server --directory build/html 8000
+```
+
+Open your browser and visit:
+
+http://localhost:8000
+
+
+## Folder structure
+
+The code contains the following files and folders:
+
+```
+do-dpc/
+├── do_dpc/                      # Core Python source code for the DPC library
+│   ├── control_utils/            # Utilities for control systems (PID, noise generators, etc.)
+│   ├── dpc/                     # Core DPC algorithms and implementations
+│   │   ├── dpc.py               # Main DPC implementation
+│   │   ├── dpc_structs.py       # Data structures for DPC
+│   ├── utils/                    # General utility modules (logging, path management, etc.)
+├── docs/                         # Documentation files (Sphinx)
+│   ├── build/                    # Build artifacts for generated documentation
+│   ├── source/                   # Source files for documentation
+│   │   ├── _static/              # Static assets (images, CSS, etc.)
+│   │   ├── _templates/           # Templates for documentation structure
+│   │   ├── dpc_methods/         # Documentation for different DPC methods
+│   │   ├── getting_started/      # Guides and introductory documentation
+│   │   ├── conf.py               # Sphinx configuration file
+│   │   ├── index.rst             # Main entry point for documentation
+│   ├── .readthedocs.yaml         # Configuration for Read the Docs
+│   ├── Makefile                  # Makefile for building the documentation
+│   ├── make.bat                  # Windows batch script for building documentation
+├── tests/                        # Test suite for the DPC library
+│   ├── fixtures/                 # Pytest fixtures for setting up test cases
+│   ├── system_tests/             # System-level integration tests
+│   ├── unit_tests/               # Unit tests for individual modules
+├── .gitlab-ci.yml                # CI/CD pipeline configuration for GitLab
+├── .pylintrc                     # Linter configuration for Python code
+├── CITATION.cff                  # Citation file for academic references
+├── confest.py                    # Pytest configuration file
+├── LICENSE.txt                   # Licensing information
+├── README.md
+├── requirements.txt
+└── setup.py                      # Setup script for packaging and installation
+```
