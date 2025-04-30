@@ -1,0 +1,11 @@
+pyproject.toml
+setup.py
+hybrid_utils/__init__.py
+hybrid_utils/all.py
+hybrid_utils/base64.py
+hybrid_utils/textcolor.py
+hybrid_utils/version.py
+hybrid_utils.egg-info/PKG-INFO
+hybrid_utils.egg-info/SOURCES.txt
+hybrid_utils.egg-info/dependency_links.txt
+hybrid_utils.egg-info/top_level.txt
