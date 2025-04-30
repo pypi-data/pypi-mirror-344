@@ -1,0 +1,4 @@
+godaddypy>=2.5.1
+rich>=12.0.0
+pyyaml>=6.0
+configloader>=1.0.1
