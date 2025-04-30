@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+sat_mnist_solver.egg-info/PKG-INFO
+sat_mnist_solver.egg-info/SOURCES.txt
+sat_mnist_solver.egg-info/dependency_links.txt
+sat_mnist_solver.egg-info/entry_points.txt
+sat_mnist_solver.egg-info/requires.txt
+sat_mnist_solver.egg-info/top_level.txt
+satlib/__init__.py
+satlib/core.py
+satlib/utils.py

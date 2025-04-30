@@ -1,0 +1,8 @@
+torch>=2.0.0
+torchvision>=0.10.0
+python-sat>=1.8.0
+pysat>=3.0.0
+
+[dev]
+pytest>=6.0
+unittest
