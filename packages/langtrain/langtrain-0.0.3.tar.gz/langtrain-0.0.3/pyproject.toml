@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langtrain"
+version = "0.0.3"
+description = "Language Model Training Library"
+readme = "README.md"
+authors = [
+    { name = "Sayed Shaun", email = "sayedshaun4@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy==2.2.2",
+    "sentencepiece==0.2.0"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+keywords = ["nlp", "cv", "language model", "model training", "langtrain"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
