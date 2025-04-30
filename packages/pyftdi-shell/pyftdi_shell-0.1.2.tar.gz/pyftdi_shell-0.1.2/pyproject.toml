@@ -1,0 +1,25 @@
+[project]
+name = "pyftdi_shell"
+version = "0.1.2"
+authors = [
+  { name="Alex Fabre", email="m.alexfabre@gmail.com" },
+]
+description = "Shell interface for FTDI functions (I2C/SPI/GPIO)"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = {file = "LICENSE"}
+
+dependencies = [
+  "pyftdi>=0.56.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/AlexFabre/pyftdi-shell"
+Issues = "https://github.com/AlexFabre/pyftdi-shell/issues"
+
+[project.scripts]
+pyftdi-shell = "pyftdi_shell.pyftdi_shell:main"
