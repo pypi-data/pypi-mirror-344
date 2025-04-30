@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tinyjsondb"
+version = "0.1.1"
+description = "Embedded JSON-based ORM-like database for small Python projects"
+authors = [
+    { name="Waland2", email="cool.drakon@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "portalocker>=2.7"
+]
+keywords = ["json", "database", "orm", "tinydb", "embedded"]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Waland2/tinyjsondb"
+Repository = "https://github.com/Waland2/tinyjsondb"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["tinyjsondb"]
+
