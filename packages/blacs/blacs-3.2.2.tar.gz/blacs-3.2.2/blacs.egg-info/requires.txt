@@ -1,0 +1,11 @@
+desktop-app>=0.1.2
+labscript_utils>=3.1.0b1
+runmanager>=3.0.0
+qtutils>=2.2.2
+zprocess>=2.14.1
+
+[docs]
+PyQt5
+Sphinx==7.2.6
+sphinx-rtd-theme==2.0.0
+myst_parser==2.0.0
