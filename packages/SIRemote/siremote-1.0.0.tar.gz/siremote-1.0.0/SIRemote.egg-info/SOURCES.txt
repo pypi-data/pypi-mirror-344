@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+SIRemote/HttpCommunicationUtil.py
+SIRemote/RemoteApi.py
+SIRemote/__init__.py
+SIRemote.egg-info/PKG-INFO
+SIRemote.egg-info/SOURCES.txt
+SIRemote.egg-info/dependency_links.txt
+SIRemote.egg-info/requires.txt
+SIRemote.egg-info/top_level.txt
