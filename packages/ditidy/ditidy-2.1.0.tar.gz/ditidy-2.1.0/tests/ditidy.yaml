@@ -1,0 +1,10 @@
+checks:
+  - "*"
+check-options:
+  file-name:
+    excludes:
+      - .clang-format
+      - CMakeLists.txt
+      - __init__.py
+  extern-c:
+    includes: include/**/*
