@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: funtable
+Version: 1.0.32
+Summary: funtable
+Author-email: 牛哥 <niuliangtao@qq.com>, farfarfun <farfarfun@qq.com>
+Maintainer-email: 牛哥 <niuliangtao@qq.com>, farfarfun <farfarfun@qq.com>
+Project-URL: Organization, https://github.com/farfarfun
+Project-URL: Repository, https://github.com/farfarfun/funtable
+Project-URL: Releases, https://github.com/farfarfun/funtable/releases
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: fundrive>=1.2.18
+Requires-Dist: funutil>=1.0.5
+Requires-Dist: tinydb>=4.8.2
+
+# funtable
