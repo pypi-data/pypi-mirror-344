@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+cq_enclosure/__init__.py
+cq_enclosure/builders.py
+cq_enclosure/enclosure.py
+cq_enclosure/enclosure_parameters.py
+cq_enclosure.egg-info/PKG-INFO
+cq_enclosure.egg-info/SOURCES.txt
+cq_enclosure.egg-info/dependency_links.txt
+cq_enclosure.egg-info/requires.txt
+cq_enclosure.egg-info/top_level.txt
