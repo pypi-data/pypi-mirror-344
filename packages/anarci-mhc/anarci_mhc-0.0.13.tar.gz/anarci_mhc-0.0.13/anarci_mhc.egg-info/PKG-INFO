@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: anarci-mhc
+Version: 0.0.13
+Summary: Antibody Numbering and Receptor ClassIfication
+Home-page: http://opig.stats.ox.ac.uk/webapps/ANARCI
+Author: Dunbar & Quast
+Author-email: opig@stats.ox.ac.uk
+License-File: LICENCE
+License-File: LICENCE_MUSCLE
+Requires-Dist: biopython
+Requires-Dist: pyhmmer
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
