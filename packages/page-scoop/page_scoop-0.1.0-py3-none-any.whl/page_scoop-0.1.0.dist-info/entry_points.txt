@@ -1,0 +1,2 @@
+[console_scripts]
+page-scoop = page_scoop.__main__:app
