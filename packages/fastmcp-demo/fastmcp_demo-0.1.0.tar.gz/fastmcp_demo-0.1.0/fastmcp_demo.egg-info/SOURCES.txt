@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+server.py
+fastmcp_demo.egg-info/PKG-INFO
+fastmcp_demo.egg-info/SOURCES.txt
+fastmcp_demo.egg-info/dependency_links.txt
+fastmcp_demo.egg-info/requires.txt
+fastmcp_demo.egg-info/top_level.txt

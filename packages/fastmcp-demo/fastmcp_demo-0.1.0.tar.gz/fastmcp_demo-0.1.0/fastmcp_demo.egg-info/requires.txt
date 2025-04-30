@@ -1,0 +1,4 @@
+fastmcp>=2.2.1
+mysql-connector-python>=9.3.0
+pandas>=2.2.3
+uvicorn>=0.34.2
