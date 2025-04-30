@@ -1,0 +1,11 @@
+gtec_gds/__init__.py,sha256=7IkbDvC6IJ05WYAa879LXkXAAtW6Rr7M-JRZlRr575A,197
+gtec_gds/__version__.py,sha256=IUTyZkUxoyt_Ofl8k0DDOfOVrLBeNO_0ZTuZdJI-EeU,66
+gtec_gds/g_nautilus.py,sha256=oxkwiJ8Ua7Ivn6qYBN6374pGQJ2-psGAwStMNWCwoRo,3711
+gtec_gds/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gtec_gds/lib/constants.cp38-win_amd64.pyd,sha256=ZIozRQDdAn1XRYfVTm52jSdbS7rUq2jiuFS2A7OJIMs,29696
+gtec_gds/lib/gtec_gds_wrapper.cp38-win_amd64.pyd,sha256=lTk6Kn-IatYQM6qfs1s3cZV-NQB9nzF46UTaEP1vKcY,636928
+gtec_gds-1.0.1.dist-info/LICENSE,sha256=YHes1sT6XLg9IAAG1YGubk9ZwW4aUmln0VHdwUZfML8,1653
+gtec_gds-1.0.1.dist-info/METADATA,sha256=q-hD9BTGmqSgRdVX08HfZ1LA1iK4pXFC3NSHfA-t_50,532
+gtec_gds-1.0.1.dist-info/WHEEL,sha256=2M046GvC9RLU1f1TWyM-2sB7cRKLhAC7ucAFK8l8f24,99
+gtec_gds-1.0.1.dist-info/top_level.txt,sha256=NRQr5ki24pqnRsJebN0H_2Us18pyZfP9jBSudpiA7r8,9
+gtec_gds-1.0.1.dist-info/RECORD,,
