@@ -1,0 +1,3 @@
+[console_scripts]
+get-dfu-case-list=get_dfu_case_list.main:main
+
