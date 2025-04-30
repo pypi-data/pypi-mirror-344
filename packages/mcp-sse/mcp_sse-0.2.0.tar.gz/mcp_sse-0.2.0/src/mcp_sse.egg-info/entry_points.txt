@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-sse = mcpsse.server:main
