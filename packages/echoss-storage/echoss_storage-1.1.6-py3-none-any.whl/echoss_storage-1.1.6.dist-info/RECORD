@@ -1,0 +1,6 @@
+echoss_storage/__init__.py,sha256=zOWgiRBeQThEgznGf1KWnke6ixqohPc9F30UtcDb0As,73
+echoss_storage/s3_handler.py,sha256=jMRTBXoHLIeYwv5jF68oVXX5gOL5IpXGN068Knf96l8,15828
+echoss_storage-1.1.6.dist-info/METADATA,sha256=E5Wu_hmmVokEZ3T1ccnEzXsjJDg6uKH_wBavIwHILlU,5240
+echoss_storage-1.1.6.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+echoss_storage-1.1.6.dist-info/top_level.txt,sha256=uECqMrNrouRMkZNb-IInpQnv0VBT0m1IJrkRE7zKSGM,15
+echoss_storage-1.1.6.dist-info/RECORD,,
