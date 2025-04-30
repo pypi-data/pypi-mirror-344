@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+godaddypy_cli/__init__.py
+godaddypy_cli/__main__.py
+godaddypy_cli/cli.py
+godaddypy_cli.egg-info/PKG-INFO
+godaddypy_cli.egg-info/SOURCES.txt
+godaddypy_cli.egg-info/dependency_links.txt
+godaddypy_cli.egg-info/entry_points.txt
+godaddypy_cli.egg-info/requires.txt
+godaddypy_cli.egg-info/top_level.txt
+tests/test_cli.py
