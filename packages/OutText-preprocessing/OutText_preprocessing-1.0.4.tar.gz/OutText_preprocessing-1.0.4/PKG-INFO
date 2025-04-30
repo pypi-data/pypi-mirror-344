@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: OutText_preprocessing
+Version: 1.0.4
+Summary: ✨ A powerful Python package for outlier removal and text preprocessing
+Home-page: https://github.com/Anurag-raj03/OutText_preprocessing_library
+Author: Anurag Raj
+Author-email: anuragraj4483@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+UNKNOWN
+
