@@ -1,0 +1,202 @@
+Metadata-Version: 2.1
+Name: sinaraml-bentoml
+Version: 0.13.2.2
+Summary: A framework for machine learning model serving
+Home-page: UNKNOWN
+Author: sinaraml
+Author-email: sinaraml.official@gmail.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6.1
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+Requires-Dist: aiohttp-cors (==0.7.0)
+Requires-Dist: alembic
+Requires-Dist: boto3
+Requires-Dist: cerberus
+Requires-Dist: certifi
+Requires-Dist: chardet
+Requires-Dist: click (>=7.0)
+Requires-Dist: configparser
+Requires-Dist: deepmerge
+Requires-Dist: docker
+Requires-Dist: flask
+Requires-Dist: grpcio
+Requires-Dist: gunicorn
+Requires-Dist: humanfriendly
+Requires-Dist: numpy
+Requires-Dist: packaging
+Requires-Dist: prometheus-client
+Requires-Dist: protobuf (<=3.21,>=3.8.0)
+Requires-Dist: psutil
+Requires-Dist: python-dateutil (<3.0.0,>=2.7.3)
+Requires-Dist: python-json-logger
+Requires-Dist: requests
+Requires-Dist: ruamel.yaml (>=0.15.0)
+Requires-Dist: schema
+Requires-Dist: simple-di (==0.1.0)
+Requires-Dist: sqlalchemy-utils (<0.36.8)
+Requires-Dist: sqlalchemy (<1.4.0,>=1.3.0)
+Requires-Dist: tabulate
+Requires-Dist: urllib3
+Requires-Dist: contextvars ; python_version < "3.7"
+Requires-Dist: dataclasses ; python_version < "3.7"
+Provides-Extra: dev
+Requires-Dist: aiohttp ; extra == 'dev'
+Requires-Dist: aiohttp-cors (==0.7.0) ; extra == 'dev'
+Requires-Dist: alembic ; extra == 'dev'
+Requires-Dist: black (==19.10b0) ; extra == 'dev'
+Requires-Dist: boto3 ; extra == 'dev'
+Requires-Dist: cerberus ; extra == 'dev'
+Requires-Dist: certifi ; extra == 'dev'
+Requires-Dist: chardet ; extra == 'dev'
+Requires-Dist: click (>=7.0) ; extra == 'dev'
+Requires-Dist: codecov ; extra == 'dev'
+Requires-Dist: configparser ; extra == 'dev'
+Requires-Dist: coverage (>=4.4) ; extra == 'dev'
+Requires-Dist: deepmerge ; extra == 'dev'
+Requires-Dist: docker ; extra == 'dev'
+Requires-Dist: ecdsa (==0.14) ; extra == 'dev'
+Requires-Dist: flake8 (>=3.8.2) ; extra == 'dev'
+Requires-Dist: flask ; extra == 'dev'
+Requires-Dist: gitpython (>=2.0.2) ; extra == 'dev'
+Requires-Dist: grpc-stubs ; extra == 'dev'
+Requires-Dist: grpcio ; extra == 'dev'
+Requires-Dist: grpcio-reflection (~=1.34.0) ; extra == 'dev'
+Requires-Dist: grpcio-tools (~=1.34.0) ; extra == 'dev'
+Requires-Dist: gunicorn ; extra == 'dev'
+Requires-Dist: humanfriendly ; extra == 'dev'
+Requires-Dist: idna (<=2.8) ; extra == 'dev'
+Requires-Dist: imageio (<=2.9.0,>=2.5.0) ; extra == 'dev'
+Requires-Dist: mock (>=2.0.0) ; extra == 'dev'
+Requires-Dist: moto (==1.3.14) ; extra == 'dev'
+Requires-Dist: mypy-protobuf ; extra == 'dev'
+Requires-Dist: numpy ; extra == 'dev'
+Requires-Dist: packaging ; extra == 'dev'
+Requires-Dist: pandas ; extra == 'dev'
+Requires-Dist: parameterized ; extra == 'dev'
+Requires-Dist: prometheus-client ; extra == 'dev'
+Requires-Dist: protobuf (<=3.21,>=3.8.0) ; extra == 'dev'
+Requires-Dist: psutil ; extra == 'dev'
+Requires-Dist: pyenchant ; extra == 'dev'
+Requires-Dist: pylint (>=2.5.2) ; extra == 'dev'
+Requires-Dist: pylint (>=2.9.3) ; extra == 'dev'
+Requires-Dist: pytest-asyncio ; extra == 'dev'
+Requires-Dist: pytest-cov (>=2.7.1) ; extra == 'dev'
+Requires-Dist: pytest (>=5.4.0) ; extra == 'dev'
+Requires-Dist: python-dateutil (<3.0.0,>=2.7.3) ; extra == 'dev'
+Requires-Dist: python-json-logger ; extra == 'dev'
+Requires-Dist: recommonmark ; extra == 'dev'
+Requires-Dist: requests ; extra == 'dev'
+Requires-Dist: ruamel.yaml (>=0.15.0) ; extra == 'dev'
+Requires-Dist: schema ; extra == 'dev'
+Requires-Dist: scikit-learn ; extra == 'dev'
+Requires-Dist: setuptools ; extra == 'dev'
+Requires-Dist: simple-di (==0.1.0) ; extra == 'dev'
+Requires-Dist: sphinx-click ; extra == 'dev'
+Requires-Dist: sphinx (<=3.5.4) ; extra == 'dev'
+Requires-Dist: sphinx-copybutton ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: sphinxcontrib-fulltoc ; extra == 'dev'
+Requires-Dist: sphinxcontrib-spelling ; extra == 'dev'
+Requires-Dist: sqlalchemy-utils (<0.36.8) ; extra == 'dev'
+Requires-Dist: sqlalchemy (<1.4.0,>=1.3.0) ; extra == 'dev'
+Requires-Dist: tabulate ; extra == 'dev'
+Requires-Dist: tox-conda (>=0.2.0) ; extra == 'dev'
+Requires-Dist: tox (>=3.12.1) ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: types-click ; extra == 'dev'
+Requires-Dist: types-protobuf (>=0.1.14) ; extra == 'dev'
+Requires-Dist: urllib3 ; extra == 'dev'
+Requires-Dist: contextvars ; (python_version < "3.7") and extra == 'dev'
+Requires-Dist: dataclasses ; (python_version < "3.7") and extra == 'dev'
+Provides-Extra: doc_builder
+Requires-Dist: pyenchant ; extra == 'doc_builder'
+Requires-Dist: recommonmark ; extra == 'doc_builder'
+Requires-Dist: sphinx-click ; extra == 'doc_builder'
+Requires-Dist: sphinx (<=3.5.4) ; extra == 'doc_builder'
+Requires-Dist: sphinx-copybutton ; extra == 'doc_builder'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc_builder'
+Requires-Dist: sphinxcontrib-fulltoc ; extra == 'doc_builder'
+Requires-Dist: sphinxcontrib-spelling ; extra == 'doc_builder'
+Provides-Extra: model_server
+Requires-Dist: jaeger-client ; extra == 'model_server'
+Requires-Dist: opentracing ; extra == 'model_server'
+Requires-Dist: py-zipkin ; extra == 'model_server'
+Provides-Extra: test
+Requires-Dist: black (==19.10b0) ; extra == 'test'
+Requires-Dist: codecov ; extra == 'test'
+Requires-Dist: coverage (>=4.4) ; extra == 'test'
+Requires-Dist: ecdsa (==0.14) ; extra == 'test'
+Requires-Dist: flake8 (>=3.8.2) ; extra == 'test'
+Requires-Dist: idna (<=2.8) ; extra == 'test'
+Requires-Dist: imageio (<=2.9.0,>=2.5.0) ; extra == 'test'
+Requires-Dist: mock (>=2.0.0) ; extra == 'test'
+Requires-Dist: moto (==1.3.14) ; extra == 'test'
+Requires-Dist: pandas ; extra == 'test'
+Requires-Dist: parameterized ; extra == 'test'
+Requires-Dist: pylint (>=2.9.3) ; extra == 'test'
+Requires-Dist: pytest-asyncio ; extra == 'test'
+Requires-Dist: pytest-cov (>=2.7.1) ; extra == 'test'
+Requires-Dist: pytest (>=5.4.0) ; extra == 'test'
+Requires-Dist: scikit-learn ; extra == 'test'
+Provides-Extra: types_stub
+Requires-Dist: grpc-stubs ; extra == 'types_stub'
+Requires-Dist: mypy-protobuf ; extra == 'types_stub'
+Requires-Dist: types-click ; extra == 'types_stub'
+Requires-Dist: types-protobuf (>=0.1.14) ; extra == 'types_stub'
+Provides-Extra: yatai_service
+Requires-Dist: aws-sam-cli (==0.33.1) ; extra == 'yatai_service'
+Requires-Dist: azure-cli ; extra == 'yatai_service'
+Requires-Dist: google-cloud-storage ; extra == 'yatai_service'
+Requires-Dist: grpcio (~=1.34.0) ; extra == 'yatai_service'
+Requires-Dist: psycopg2 ; extra == 'yatai_service'
+Requires-Dist: psycopg2-binary ; extra == 'yatai_service'
+
+<p align="center">
+  <img src="https://github.com/4-DS/.github/assets/55787399/edbd76dd-e296-4bde-9cca-c1d902c5504c" height=140 />
+</p>
+
+## SinaraML is a lightweight source available framework that simplifies Data Scientist's work and eliminates pain of accompanying engineering routines
+
+Like many others, SinaraML designed as a full-stack MLOps solution that allows Data Scinentist to focus on machine learning code development and takes care of the engineering tasks associated with scaling, reproducibility, model maintenance, data tracking, and experiment management.
+
+But unlike other similar solutions SinaraML is many more. It is next generation MLOps framework incorporated with ready to use MLOps platforms. From one side to work in platform you don't need to setup servers neither you no need cloud provider - you are fully independent. You can start develop you code [just now](https://github.com/4-DS/sinara-tutorials/wiki/Getting-started) on you Windows or Linix desktop or VM. From the other side SinaraML Framework ready for integration to corporate infra to get full-blown enterprise MLOps platform. SinaraML Framework provides abstractions to connect corporate storage (like S3/HDFS), corporate servers for spark clusters (for PandasOnSpark), corporate Git and CI/СD tools and so on. Once written your ML code is fully transferable beetween all of platforms based on SinaraML. So, you can start development on your desktop and continue in the corporate MLOps platform.
+
+SinaraML doesn't require you to learn its own API for reading/writing data, managing experiments, or logging as previous generation platforms require. You don't have to constantly remember tracking or logging tasks by inserting special strings into your ML code. All you need is to insert cell in the beginning of notebooks with inputs and outputs definitions. So the time from the first acquaintance to the launch of the first ML pipeline takes no more than 15 minutes.
+
+SinaraML is a thin wrapper around the technologies of de facto standards in the field of machine learning and data engineering: Python, Jupyter, PandasOnSpark, CUDA, etc. Plus, SinaraML precisely closes the gaps that arise when integrating these technologies. 
+
+SinaraML brings together the best of different worlds:
+
+- Functionality of experiment management solutions such as MLFlow
+- Flexibility and simplicity of Jupyter Notebooks for data and ML experiments visualization and logging
+- Scalability and power of Spark for data engineering
+- Functionaity ML and data pipelines
+- Out of the box automatic data versioning and traceability (Data Lineage across whole ML Pipeline)
+- Model Serving by Data Scientist. Data scientists build Docker Images with REST interface without special knowledge about Docker, K8s, SinaraML APIs and REST frameworks. The resulting docker images do not require special infrastructure like as K8s or SinaraML servers and can run on any machine with docker installed. Model Versioning does not require special Model Storage
+- Out of the box, up to date, carefully selected Python envs for developing both classic ML and Computer Vision models 
+
+SinaraML is lightweight in all its aspects. The SinaraML framework not only addresses the needs of Data Scientists, but also the needs of MLOps engineers. SinaraML has an architecture with minimal operating costs. The platform relies heavily on the stateless servers, and the corporate MLOps platform can be implemented without relational and NoSQL DBMS
+
+
+To start you off, go to [**Getting started page**](https://github.com/4-DS/sinara-tutorials/wiki/Getting-started) to try **SinaraML Tutorials**
+
+[**SinaraML Book**](https://sinara-definitive-guide.readthedocs.io/en/latest/) allows you to dive deeply into the development of ML products.
+
+# Installation
+It is used as a part of SinaraML Framework. It is derived on Bentoml 0.13 which is no longer supported by their authors.
+To install SinaraML Bentoml into your environment, run:
+```
+pip install sinaraml-bentoml
+```
+
+
