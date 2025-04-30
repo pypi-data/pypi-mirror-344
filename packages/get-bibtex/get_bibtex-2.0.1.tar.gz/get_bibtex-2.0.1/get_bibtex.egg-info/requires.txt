@@ -1,0 +1,9 @@
+black>=23.0
+flake8>=6.0
+google-search-results>=2.4.2
+isort>=5.12
+pytest>=7.0
+pytest-cov>=4.1.0
+pytest-mock>=3.12.0
+requests>=2.32.3
+tqdm>=4.67.1
