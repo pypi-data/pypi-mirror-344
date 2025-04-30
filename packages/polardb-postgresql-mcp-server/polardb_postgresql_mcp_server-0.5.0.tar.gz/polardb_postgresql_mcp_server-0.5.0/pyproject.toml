@@ -1,0 +1,35 @@
+
+[project]
+name = "polardb-postgresql-mcp-server"
+version = "0.5.0"
+description = "mcp server for polardb postgresql"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "fenghua.zzm", email = "fenghua.zzm@alibaba-inc.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+keywords = ["polardb", "postgresql","mcp"]
+
+dependencies = [
+    "mcp[cli]>=1.6.0",
+    "psycopg>=3.1.0",
+    "sqlparse>=0.4.4"
+]
+[project.scripts]
+ run_polardb_postgresql_mcp_server= "polardb_postgresql_mcp_server:main"
+
+
+[project.urls]
+Homepage = "https://github.com/aliyun/alibabacloud-polardb-mcp-server"
+
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
