@@ -1,0 +1,17 @@
+qrcodex/__init__.py,sha256=TKNsqjGsVD83HFiVJAAyJcQkpWiyilSNmbaCoSTNrMg,1274
+qrcodex/capacity.py,sha256=eQNe3Kwrzi8jFH93HNHibZWKRxL3ErdI1q0Gy4MCK8w,6787
+qrcodex/cli.py,sha256=Hr3iB-32ChIUhAynFv5LpYgjyE9rjjURMh7ka0E3fFs,3004
+qrcodex/encoder.py,sha256=Pl0n3oi-uyQPnRhjsnVCFMOk4GLRc717mIngZQdPRvo,9685
+qrcodex/encoding.py,sha256=OpWKEbnBTdu2xsrm66cIerrJt_F6zA1k4FndMP4b6fI,5371
+qrcodex/error_correction.py,sha256=YuvbB4AlSzSaB0DmFeIRTuEzhn3P1kDpXogyanyRodI,7597
+qrcodex/exceptions.py,sha256=skYvrlFZ3ph_i-j9y41bVuoL7m5pqD4gPN-soPZNWic,764
+qrcodex/generator.py,sha256=yyMSfHov9x58VaFAgmabczMj5Fc-jYC6smskdCBDO9k,9336
+qrcodex/matrix.py,sha256=Zl7mESaT8F4LLy6lTBnmikR5E8Njbo2Q4DH6KqTjYL4,7431
+qrcodex/qr_algorithm.py,sha256=nQh4mdAULqV_ovEbUCPh8WWkefJ3UzVSez1sd5kitKA,11536
+qrcodex/reed_solomon.py,sha256=rbHqgG1uX4r4C7WKqZ50slKShvP0nKYs-uX--ie5Mr8,9057
+qrcodex/utils.py,sha256=dnH_-Ipv4L6wcSCmeOxwyBZxIDLqb_LiGusmLC2gueU,4475
+qrcodex-0.1.1.dist-info/licenses/LICENSE,sha256=oaprBZWSt82-QjAMksEIsTAIJ8WuhD6_0t1mGjuiFAc,1087
+qrcodex-0.1.1.dist-info/METADATA,sha256=vLvIQFEWf72yxR6njc9pauk2hONJmvVHhXk9WK3Lngc,5881
+qrcodex-0.1.1.dist-info/WHEEL,sha256=pxyMxgL8-pra_rKaQ4drOZAegBVuX-G_4nRHjjgWbmo,91
+qrcodex-0.1.1.dist-info/top_level.txt,sha256=qP9uxMSOwfhuXD7Z_K-HOfcuNLxJi0cjRh8VXslzN-Y,8
+qrcodex-0.1.1.dist-info/RECORD,,
