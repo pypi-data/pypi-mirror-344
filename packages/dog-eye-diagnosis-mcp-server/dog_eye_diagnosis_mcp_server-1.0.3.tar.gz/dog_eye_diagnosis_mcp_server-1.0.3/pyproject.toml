@@ -1,0 +1,11 @@
+[project]
+name = "dog-eye-diagnosis-mcp-server"
+version = "1.0.3"
+description = "A MCP server for dog eye diagnosis"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
