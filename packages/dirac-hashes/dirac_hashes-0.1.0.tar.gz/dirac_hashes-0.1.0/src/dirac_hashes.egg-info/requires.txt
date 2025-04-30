@@ -1,0 +1,17 @@
+numpy>=1.16.0
+scipy>=1.4.0
+qiskit>=0.20.0
+matplotlib>=3.0.0
+cryptography>=3.0.0
+pydantic>=1.5.1
+python-multipart>=0.0.5
+
+[api]
+fastapi<1.0.0,>=0.70.0
+uvicorn<1.0.0,>=0.15.0
+
+[dev]
+pytest>=6.0.0
+black>=21.5b2
+isort>=5.0.0
+mypy>=0.7
