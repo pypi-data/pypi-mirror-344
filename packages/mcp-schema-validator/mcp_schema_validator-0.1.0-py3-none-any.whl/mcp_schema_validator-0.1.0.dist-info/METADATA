@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: mcp-schema_validator
+Version: 0.1.0
+Summary: Validates the LLM-generated MCP components against official schema definitions from the MCP TypeScript/Python SDKs to ensure compliance
+Home-page: https://github.com/Sumedh99/mcp_schema_validator
+Author: Sumedh99
+Author-email: Sumedh99@users.noreply.github.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# mcp-schema_validator
+
+Validates the LLM-generated MCP components against official schema definitions from the MCP TypeScript/Python SDKs to ensure compliance.
+
+## Features
+
+- Schema validation for tools, resources, prompts
+- Supports MCP TypeScript and Python SDK formats
+- Auto-fix suggestions for invalid schema fields
+- Human-readable error messages
+- Integration with LLM for fixes
+
+## Installation
+
+```bash
+pip install mcp-schema_validator
+```
+
+## Usage
+
+```python
+from mcp_schema_validator import Mcp_schema_validator
+
+# Initialize the library
+mcp_schema_validator_instance = Mcp_schema_validator()
+
+# Use the library functions
+# Example usage will be added in future versions
+```
+
+## License
+
+MIT
