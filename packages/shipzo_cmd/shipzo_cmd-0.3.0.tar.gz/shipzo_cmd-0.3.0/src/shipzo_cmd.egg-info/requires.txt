@@ -1,0 +1,3 @@
+shipzo-plus-hun>=0.1.6
+shipzo-mult-hun>=0.1.0
+shipzo-divide-hun>=0.1.0
