@@ -1,0 +1,10 @@
+llama_prompt_ops/__init__.py,sha256=vUvqRS2CXhASaFzYVspRYa5q8usSCzjKUlZhzNLuiKg,200
+llama_prompt_ops/templates/__init__.py,sha256=2-DqCMcefl7JqB_3gIVNDJNXLDvtmCtIviHWolQONI8,641
+llama_prompt_ops/templates/sample_dataset.json,sha256=0au6sTcvfqZidgOpv9AkjYstf0PX00fKEgJQsqA_hbk,378477
+llama_prompt_ops/templates/sample_prompt.txt,sha256=iW5tvw1DkIxmG-cOSlrKZ6djwQ626HoSJ1OkwVHMDAA,921
+llama_prompt_ops-0.0.2.dist-info/licenses/LICENSE,sha256=R9IuhPXMlkRlFzsegDaGvDVXdiwBJv9l14jXOG9VtE4,1086
+llama_prompt_ops-0.0.2.dist-info/METADATA,sha256=WIKxaB7PCiQKmrhSOLLUrBgrnzOa4mSNkxtu5X1pzV4,10186
+llama_prompt_ops-0.0.2.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+llama_prompt_ops-0.0.2.dist-info/entry_points.txt,sha256=H3vt3D30N1mlhw-vHOFO6X4vpUqdjaBk2XXPq6VTuxI,73
+llama_prompt_ops-0.0.2.dist-info/top_level.txt,sha256=MA_ziFkjbu6GnuntbbNLsq4Bl2wuoznnszn1CYH4jII,17
+llama_prompt_ops-0.0.2.dist-info/RECORD,,
