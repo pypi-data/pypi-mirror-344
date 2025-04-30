@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ml_derivatives/__init__.py
+ml_derivatives/mld.py
+ml_derivatives.egg-info/PKG-INFO
+ml_derivatives.egg-info/SOURCES.txt
+ml_derivatives.egg-info/dependency_links.txt
+ml_derivatives.egg-info/requires.txt
+ml_derivatives.egg-info/top_level.txt
+ml_derivatives/data/.DS_Store
+ml_derivatives/data/Ma_0.01_50.pkl
+ml_derivatives/data/Ma_0.025_50.pkl
+ml_derivatives/data/Ma_0.05_50.pkl
+ml_derivatives/data/Ma_0.08_50.pkl
+ml_derivatives/data/Ma_0.1_50.pkl
