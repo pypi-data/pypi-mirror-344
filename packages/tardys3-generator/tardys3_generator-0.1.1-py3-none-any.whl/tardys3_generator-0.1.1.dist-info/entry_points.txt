@@ -1,0 +1,2 @@
+[console_scripts]
+tardys3-generator = tardys3_generator.gui:main

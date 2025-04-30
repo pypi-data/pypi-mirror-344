@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: tardys3-generator
+Version: 0.1.1
+Summary: A TARDyS3 reservation file generator and validator for CBRS P-DPAs.
+Home-page: https://github.com/yourusername/tardys3-generator
+Author: Masheenist
+Author-email: syll7976@colorado.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: jsonschema>=4.0.0
+Requires-Dist: tkcalendar>=1.6.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# TardyS3 file generator
+
+A simple TardyS3 reservation file generator. The TARDyS3 (Telecommunications Advanced Research and Dynamic Spectrum Sharing System) is an automated scheduling system developed by the U.S. Department of Defense (DoD) to manage spectrum use in the 3.5 GHz band. It replaces the previous manual scheduling portal used to activate Portal-Activated Dynamic Protection Areas (P-DPAs), which protect certain federal operations from interference by Citizens Broadband Radio Service (CBRS) users.
+
+Why is TARDyS3 Important?
+Automation & Efficiency – It allows federal spectrum managers to schedule protected spectrum use autonomously, reducing delays and improving coordination.
+Compatibility – The system is designed to work seamlessly with Spectrum Access Systems (SAS) that manage CBRS spectrum allocations.
+Protection of Military Operations – It ensures military testing and operations in the 3.5 GHz band remain protected from commercial interference.
+Regulatory Compliance – The FCC has mandated that all SAS administrators must transition from the manual system to TARDyS3.
+This system is critical for dynamic spectrum sharing, balancing federal and commercial use of the mid-band spectrum, which is essential for 5G and other wireless services.
+
+## Installation
+```
+pip install tardys3-generator
+```
+
+To run from source
+```python
+python3 tardys3_generator.py
+```
