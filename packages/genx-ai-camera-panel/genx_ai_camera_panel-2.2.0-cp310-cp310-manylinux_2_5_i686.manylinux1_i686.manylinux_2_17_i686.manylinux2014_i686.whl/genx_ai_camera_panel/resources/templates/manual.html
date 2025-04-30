@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manual Stream Management - GenX AI Camera Panel</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/bootstrap-icons.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/dataTables.bootstrap5.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/responsive.bootstrap5.css') }}" rel="stylesheet" />
+    <style>
+        :root {
+            --primary-color: #4e73df;
+            --secondary-color: #858796;
+        }
+
+        body {
+            background-color: #f8f9fc;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), #224abe);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .btn-custom {
+            border-radius: 10px;
+            padding: 8px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .table {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .table thead {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .camera-stream-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            overflow: hidden;
+        }
+
+        .iframe-loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .spinner-border {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid mt-4">
+        <h2 class="d-flex flex-column flex-md-row align-items-md-center justify-content-between mx-2 mb-5">
+            <span class="mb-3 mb-md-0" style="user-select: none">
+                <span class="text-danger h1 fw-bold">GenX</span>
+                <span class="h6">Manual Stream Management</span>
+            </span>
+            <div class="btn-group">
+                <button class="btn btn-primary btn-sm rounded me-2" data-bs-toggle="modal"
+                    data-bs-target="#addStreamModal">
+                    <i class="bi-plus-circle me-1"></i>
+                    Add Stream
+                </button>
+                <a href="/" class="btn btn-secondary btn-sm rounded">
+                    <i class="bi-arrow-left me-1"></i>
+                    Back
+                </a>
+            </div>
+        </h2>
+
+        <table class="table table-hover table-responsive nowrap" id="streamTable" style="width: 100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th searchable>Name</th>
+                    <th searchable>Username</th>
+                    <th searchable>Stream URL</th>
+                    <th searchable>Remote Stream URL</th>
+                    <th searchable>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stream in streams %}
+                {% set local_stream_url = get_rtsp_url(stream, 'local') %}
+                {% set remote_stream_url = stream[ManualStreamTableIndex.REMOTE_STREAM_URL] %}
+                {% set status = ffmpeg_helper.check_stream_status(remote_stream_url) if remote_stream_url else None %}
+                <tr class="align-middle">
+                    <td>{{ stream[ManualStreamTableIndex.ID] }}</td>
+                    <td>{{ stream[ManualStreamTableIndex.NAME] }}</td>
+                    <td>{{ stream[ManualStreamTableIndex.USERNAME] }}</td>
+                    <td>
+                        <a href="{{ stream[ManualStreamTableIndex.STREAM_URL] }}" target="_blank">Link</a>
+                        <i class="p-0 m-0 text-decoration-none bi-clipboard ms-1"
+                            onclick="copyLink('{{ stream[ManualStreamTableIndex.STREAM_URL] }}')"
+                            onkeydown="if(event.key === 'Enter') copyLink('{{ stream[ManualStreamTableIndex.STREAM_URL] }}')"
+                            title="Copy URL" tabindex="" role="button"></i>
+                    </td>
+                    <td>
+                        <a href="{{ stream[ManualStreamTableIndex.REMOTE_STREAM_URL] }}" target="_blank">Link</a>
+                        <i class="p-0 m-0 text-decoration-none bi-clipboard ms-1"
+                            onclick="copyLink('{{ stream[ManualStreamTableIndex.REMOTE_STREAM_URL] }}')"
+                            onkeydown="if(event.key === 'Enter') copyLink('{{ stream[ManualStreamTableIndex.REMOTE_STREAM_URL] }}')"
+                            title="Copy URL" tabindex="" role="button"></i>
+                    </td>
+                    <td>
+                        {% if status in ['running', 'sleeping', 'waking', 'idle'] %}
+                        <span class="badge bg-success">Running</span>
+                        {% else %}
+                        <span class="badge bg-secondary">Stopped</span>
+                        {% endif %}
+                    </td>
+                    <td class="text-center d-flex gap-3 justify-content-center px-3">
+                        <i class="bi-play-btn text-warning cursor-pointer fs-4 btnStreamPreview" data-bs-toggle="modal"
+                            data-bs-target="#previewModal" data-id="{{ stream[ManualStreamTableIndex.ID] }}"></i>
+                        {% if status in ['running', 'sleeping', 'waking', 'idle'] %}
+                        <a href="/manual/unpublish?stream_id={{ stream[ManualStreamTableIndex.ID] }}" title="Stop"
+                            class="text-decoration-none">
+                            <i class="bi-stop-circle text-danger cursor-pointer fs-4"></i>
+                        </a>
+                        {% else %}
+                        <a href="/manual/publish?stream_id={{ stream[ManualStreamTableIndex.ID] }}" title="Start"
+                            class="text-decoration-none">
+                            <i class="bi-play-circle text-success cursor-pointer fs-4"></i>
+                        </a>
+                        {% endif %}
+
+                        <button class="btn p-0 border-0 bg-transparent text-primary fs-4"
+                            onclick="editStream('{{ stream[ManualStreamTableIndex.ID] }}')" title="Edit Stream">
+                            <i class="bi-pencil-square"></i>
+                        </button>
+
+                        <a href="/manual/delete?stream_id={{ stream[ManualStreamTableIndex.ID] }}"
+                            onclick="return confirm('Are you sure you want to delete this stream?')"
+                            class="text-decoration-none" title="Delete Stream">
+                            <i class="bi-trash text-danger cursor-pointer fs-4"></i>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add Stream Modal -->
+    <div class="modal fade" id="addStreamModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow-lg border-0">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="bi bi-plus-circle me-2"></i>Add Manual Stream</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <form action="/manual/add" method="POST">
+                    <div class="modal-body p-4">
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold" for="streamName">Stream Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="bi bi-camera-video"></i></span>
+                                <input id="streamName" type="text" class="form-control" name="name" required
+                                    placeholder="Enter stream name">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold" for="streamURL">Stream URL</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="bi bi-link-45deg"></i></span>
+                                <input id="streamURL" type="text" class="form-control" name="url" required
+                                    placeholder="Enter stream URL">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold" for="username">Username (Optional)</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+                                <input id="username" type="text" class="form-control" name="username"
+                                    placeholder="Enter username">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold" for="password">Password (Optional)</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="bi bi-key"></i></span>
+                                <input id="password" type="password" class="form-control" name="password"
+                                    placeholder="Enter password">
+                                <span class="input-group-text bg-light toggle-password" style="cursor: pointer;">
+                                    <i class="bi bi-eye-slash" data-for="password"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-top">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                            <i class="bi bi-x-circle me-2"></i>Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-plus-circle me-2"></i>Add Stream
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Stream Modal -->
+    <div class="modal fade" id="editStreamModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow-lg border-0">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="bi bi-pencil-square me-2"></i>Edit Stream</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <form action="/manual/update" method="POST">
+                    <input type="hidden" name="stream_id" id="editStreamId">
+                    <div class="modal-body p-4">
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold" for="editStreamName">Stream Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="bi bi-camera-video"></i></span>
+                                <input type="text" class="form-control" name="name" id="editStreamName" required
+                                    placeholder="Enter stream name">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold" for="editStreamUrl">Stream URL</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="bi bi-link-45deg"></i></span>
+                                <input type="text" class="form-control" name="url" id="editStreamUrl" required
+                                    placeholder="Enter stream URL">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold" for="editUsername">Username (Optional)</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+                                <input type="text" class="form-control" name="username" id="editUsername"
+                                    placeholder="Enter username">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold" for="editPassword">Password (Optional)</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="bi bi-key"></i></span>
+                                <input type="password" class="form-control" name="password" id="editPassword"
+                                    placeholder="Enter password">
+                                <span class="input-group-text bg-light toggle-password" style="cursor: pointer;">
+                                    <i class="bi bi-eye-slash" data-for="editPassword"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-top">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                            <i class="bi bi-x-circle me-2"></i>Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-check-circle me-2"></i>Update Stream
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div class="modal fade" id="previewModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Stream Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center align-items-center p-0">
+                    <div id="previewLoader" class="iframe-loader">
+                        <output class="spinner-border text-primary">
+                            <span class="visually-hidden">Loading...</span>
+                        </output>
+                    </div>
+                    <div id="previewContainer" class="position-relative w-100 h-100">
+                        <iframe id="previewFrame" class="camera-stream-container"
+                            onload="document.getElementById('previewLoader').style.display = 'none';"
+                            title="Stream Preview">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.7.1.slim.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dataTables.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dataTables.bootstrap5.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dataTables.responsive.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/responsive.bootstrap5.js') }}"></script>
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %}
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast align-items-center text-white bg-{{ category }} border-0" role="alert" aria-live="assertive"
+            aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i
+                        class="bi {% if category == 'success' %}bi-check-circle{% elif category == 'danger' %}bi-exclamation-triangle{% elif category == 'warning' %}bi-exclamation-circle{% elif category == 'info' %}bi-info-circle{% endif %} me-2"></i>
+                    {{ message }}
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var toastElList = [].slice.call(
+                document.querySelectorAll(".toast")
+            );
+            var toastList = toastElList.map(function (toastEl) {
+                return new bootstrap.Toast(toastEl, {
+                    autohide: true,
+                    delay: 3000,
+                });
+            });
+            toastList.forEach((toast) => toast.show());
+        });
+    </script>
+    {% endfor %} {% endif %} {% endwith %}
+
+    <script>
+        $(document).ready(function () {
+            $('#streamTable').DataTable({
+                responsive: true,
+                order: [[0, 'desc']],
+                columnDefs: [
+                    { responsivePriority: 1, targets: 0 },
+                    { responsivePriority: 2, targets: -1 },
+                    { responsivePriority: 3, targets: 4 }
+                ],
+                initComplete: function () {
+                    this.api().columns().every(function () {
+                        var column = this;
+                        var header = $(column.header());
+
+                        if (header.attr('searchable') !== undefined) {
+                            $('<input type="text" class="form-control form-control-sm mt-1" placeholder="Search ' + header.text() + '" />')
+                                .appendTo(header)
+                                .on('click', function (e) {
+                                    e.stopPropagation();
+                                })
+                                .on('keyup change', function () {
+                                    if (column.search() !== this.value) {
+                                        column.search(this.value).draw();
+                                    }
+                                });
+                        }
+                    });
+                }
+            });
+
+            $('.btnStreamPreview').on('click', function () {
+                const streamId = $(this).data('id');
+                $('#previewLoader').show();
+                $("#previewFrame").attr(
+                    "src",
+                    "/manual/play?stream_id=" + streamId + "&hd=1"
+                );
+            });
+
+            document.querySelectorAll('.toggle-password').forEach(function (toggle) {
+                toggle.addEventListener('click', function () {
+                    const icon = this.querySelector('i');
+                    const passwordField = document.getElementById(icon.getAttribute('data-for'));
+                    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordField.setAttribute('type', type);
+                    icon.classList.toggle('bi-eye');
+                    icon.classList.toggle('bi-eye-slash');
+                });
+            });
+        });
+
+        function copyLink(url) {
+            navigator.clipboard.writeText(url).then(() => {
+                showToast('URL copied to clipboard');
+            });
+        }
+
+        function editStream(id) {
+            fetch('/manual/get/' + id)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('editStreamId').value = data.id;
+                    document.getElementById('editStreamName').value = data.name;
+                    document.getElementById('editStreamUrl').value = data.url;
+                    document.getElementById('editUsername').value = data.username || '';
+                    document.getElementById('editPassword').value = data.password || '';
+                    new bootstrap.Modal(document.getElementById('editStreamModal')).show();
+                });
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'toast position-fixed bottom-0 end-0 m-3 bg-success text-white';
+            toast.innerHTML = `
+                <div class="toast-body">
+                    ${message}
+                </div>
+            `;
+            document.body.appendChild(toast);
+            const bsToast = new bootstrap.Toast(toast);
+            bsToast.show();
+            toast.addEventListener('hidden.bs.toast', () => {
+                toast.remove();
+            });
+        }
+    </script>
+</body>
+
+</html>
