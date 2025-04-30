@@ -1,0 +1,101 @@
+Metadata-Version: 2.4
+Name: opensarlab_lib
+Version: 0.0.13
+Summary: A Python library to support ASF OpenSARlab's Jupyter Notebook repository https://github.com/ASFOpenSARlab/opensarlab-notebooks
+Author-email: ASF OpenSARlab Team <uaf-jupyterhub-asf@alaska.edu>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2021, Alaska Satellite Facility
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        * Redistributions of source code must retain the above copyright notice, this
+          list of conditions and the following disclaimer.
+        
+        * Redistributions in binary form must reproduce the above copyright notice,
+          this list of conditions and the following disclaimer in the documentation
+          and/or other materials provided with the distribution.
+        
+        * Neither the name of the copyright holder nor the names of its
+          contributors may be used to endorse or promote products derived from
+          this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: asf_search
+Requires-Dist: cartopy
+Requires-Dist: contextily
+Requires-Dist: gdal
+Requires-Dist: hyp3_sdk
+Requires-Dist: ipywidgets
+Requires-Dist: IPython
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyproj
+Requires-Dist: requests
+Requires-Dist: shapely
+Requires-Dist: pyshp
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Dynamic: license-file
+
+# The future home of opensarlab-lib
+
+[![PyPI license](https://img.shields.io/pypi/l/opensarlab_lib.svg)](https://pypi.python.org/pypi/opensarlab_lib/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/opensarlab_lib.svg)](https://pypi.python.org/pypi/opensarlab_lib/)
+[![PyPI version](https://img.shields.io/pypi/v/opensarlab_lib.svg)](https://pypi.python.org/pypi/opensarlab_lib/)
+
+[comment]: <> ([![Conda version]&#40;https://img.shields.io/conda/vn/conda-forge/opensarlab_lib&#41;]&#40;https://anaconda.org/conda-forge/opensarlab_lib&#41;)
+
+[comment]: <> ([![Conda platforms]&#40;https://img.shields.io/conda/pn/conda-forge/opensarlab_lib&#41;]&#40;https://anaconda.org/conda-forge/opensarlab_lib&#41;)
+
+A python library to support [ASF OpenSARlab's Jupyter Notebook repository](https://github.com/ASFOpenSARlab/opensarlab-notebooks)
+
+## Install
+
+In order to easily manage dependencies, we recommend using dedicated project environments with
+[Anaconda/Miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html). or
+[Python virtual environments](https://docs.python.org/3/tutorial/venv.html). 
+
+The opensarlab_lib can be installed with 
+
+[comment]: <> (into a conda environment with)
+
+[comment]: <> (```)
+
+[comment]: <> (conda install -c conda-forge opensarlab_lib)
+
+[comment]: <> (```)
+
+[comment]: <> (or into a virtual environment with)
+
+```
+python -m pip install opensarlab_lib
+```
+
+## Contact Us
+
+Found a bug? Want to request a feature?
+[open an issue](https://github.com/ASFOpenSARlab/opensarlab-lib/issues/new)
