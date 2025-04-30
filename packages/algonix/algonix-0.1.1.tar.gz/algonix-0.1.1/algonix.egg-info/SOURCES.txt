@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+algonix/__init__.py
+algonix/metrics.py
+algonix/models.py
+algonix/optimizers.py
+algonix/utils.py
+algonix.egg-info/PKG-INFO
+algonix.egg-info/SOURCES.txt
+algonix.egg-info/dependency_links.txt
+algonix.egg-info/requires.txt
+algonix.egg-info/top_level.txt

@@ -1,0 +1,20 @@
+[project]
+name = "algonix"
+version = "0.1.1"
+description = "A simple machine learning library with custom models, optimizers, and metrics."
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+authors = [
+  { name="Bhushan Zade", email="bhushanzade02@gmail.com" }
+]
+dependencies = [
+  "numpy",
+  "scipy",
+  "matplotlib",
+  "scikit-learn"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
