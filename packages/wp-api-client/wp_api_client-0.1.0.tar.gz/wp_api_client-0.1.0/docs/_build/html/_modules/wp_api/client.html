@@ -1,0 +1,530 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wp_api.client &mdash; WordPress REST API Python Client 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            WordPress REST API Python Client
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deployment.html">Deployment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules/client.html">Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules/auth.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules/exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules/endpoints.html">Endpoints</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">History</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">WordPress REST API Python Client</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wp_api.client</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wp_api.client</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">WordPress REST API Client</span>
+<span class="sd">Core client implementation for making requests to the WordPress REST API</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">urllib.parse</span><span class="w"> </span><span class="kn">import</span> <span class="n">urljoin</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">WPAPIError</span><span class="p">,</span> 
+    <span class="n">WPAPIAuthError</span><span class="p">,</span> 
+    <span class="n">WPAPIRequestError</span><span class="p">,</span> 
+    <span class="n">WPAPIRateLimitError</span><span class="p">,</span> 
+    <span class="n">WPAPINotFoundError</span><span class="p">,</span> 
+    <span class="n">WPAPIPermissionError</span><span class="p">,</span>
+    <span class="n">WPAPIValidationError</span><span class="p">,</span>
+    <span class="n">WPAPIBadRequestError</span><span class="p">,</span>
+    <span class="n">WPAPIServerError</span><span class="p">,</span>
+    <span class="n">WPAPITimeoutError</span><span class="p">,</span>
+    <span class="n">WPAPIConnectionError</span><span class="p">,</span>
+    <span class="n">ERROR_CODE_MAP</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="WPClient">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.client.WPClient">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WPClient</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    WordPress REST API Client</span>
+<span class="sd">    </span>
+<span class="sd">    The main client class for interacting with the WordPress REST API.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+<div class="viewcode-block" id="WPClient.__init__">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.client.WPClient.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> 
+        <span class="n">base_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">auth</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">timeout</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="n">user_agent</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Python WordPress REST API Client&quot;</span><span class="p">,</span>
+        <span class="n">verify_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">retry_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">retry_backoff_factor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the WordPress REST API client</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            base_url (str): The base URL of the WordPress site (e.g., https://example.com)</span>
+<span class="sd">            auth: Authentication method (BasicAuth, OAuth1, or ApplicationPasswordAuth)</span>
+<span class="sd">            timeout (int): Request timeout in seconds</span>
+<span class="sd">            user_agent (str): User agent string for the requests</span>
+<span class="sd">            verify_ssl (bool): Whether to verify SSL certificates</span>
+<span class="sd">            retry_count (int): Number of retries for failed requests</span>
+<span class="sd">            retry_backoff_factor (float): Backoff factor for retries</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">base_url</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">):</span>
+            <span class="n">base_url</span> <span class="o">+=</span> <span class="s1">&#39;/&#39;</span>
+            
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">=</span> <span class="n">urljoin</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="s1">&#39;wp-json/wp/v2/&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">root_url</span> <span class="o">=</span> <span class="n">urljoin</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="s1">&#39;wp-json/&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">auth</span> <span class="o">=</span> <span class="n">auth</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span> <span class="o">=</span> <span class="n">timeout</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">retry_count</span> <span class="o">=</span> <span class="n">retry_count</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">retry_backoff_factor</span> <span class="o">=</span> <span class="n">retry_backoff_factor</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="n">user_agent</span><span class="p">,</span>
+            <span class="s1">&#39;Content-Type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+        <span class="p">})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">verify</span> <span class="o">=</span> <span class="n">verify_ssl</span>
+        
+        <span class="c1"># Cache for discovered endpoints</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_endpoints_cache</span> <span class="o">=</span> <span class="kc">None</span>
+        
+        <span class="c1"># Cache for custom post type handlers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_custom_post_types</span> <span class="o">=</span> <span class="p">{}</span>
+        
+        <span class="c1"># Add authentication if provided</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">auth</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">auth</span><span class="o">.</span><span class="n">authenticate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">WPAPIAuthError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to authenticate: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span></div>
+
+    
+<div class="viewcode-block" id="WPClient.get">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.client.WPClient.get">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Make a GET request to the API</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            endpoint (str): API endpoint (relative to base URL)</span>
+<span class="sd">            params (dict, optional): URL parameters to include</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Response data (dict or list)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="WPClient.post">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.client.WPClient.post">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Make a POST request to the API</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            endpoint (str): API endpoint (relative to base URL)</span>
+<span class="sd">            data (dict): Data to send in the request body</span>
+<span class="sd">            params (dict, optional): URL parameters to include</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Response data (dict)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="WPClient.put">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.client.WPClient.put">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Make a PUT request to the API</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            endpoint (str): API endpoint (relative to base URL)</span>
+<span class="sd">            data (dict): Data to send in the request body</span>
+<span class="sd">            params (dict, optional): URL parameters to include</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Response data (dict)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;PUT&quot;</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="WPClient.delete">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.client.WPClient.delete">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Make a DELETE request to the API</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            endpoint (str): API endpoint (relative to base URL)</span>
+<span class="sd">            params (dict, optional): URL parameters to include</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Response data (dict)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;DELETE&quot;</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span></div>
+
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_request</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> 
+        <span class="n">method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> 
+        <span class="n">endpoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> 
+        <span class="n">data</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> 
+        <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Make a request to the API</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            method (str): HTTP method (GET, POST, PUT, DELETE)</span>
+<span class="sd">            endpoint (str): API endpoint (relative to base URL)</span>
+<span class="sd">            data (dict, optional): Data to send in the request body</span>
+<span class="sd">            params (dict, optional): URL parameters to include</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Response data (dict or list)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">urljoin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">)</span>
+        <span class="n">request_kwargs</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="n">params</span><span class="p">,</span>
+            <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span>
+        <span class="p">}</span>
+        
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">request_kwargs</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            
+        <span class="c1"># Retry logic</span>
+        <span class="n">retries</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">retry_count</span>
+        
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">request_kwargs</span><span class="p">)</span>
+                <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+                
+            <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">HTTPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="c1"># Handle API errors</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_handle_request_error</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+                
+            <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">Timeout</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">retries</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">WPAPITimeoutError</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;Request timed out after </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">,</span>
+                        <span class="n">response</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="s1">&#39;response&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                    <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+                <span class="n">retries</span> <span class="o">-=</span> <span class="mi">1</span>
+                
+            <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">retries</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">WPAPIConnectionError</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;Failed to connect to </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                        <span class="n">response</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="s1">&#39;response&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                    <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+                <span class="n">retries</span> <span class="o">-=</span> <span class="mi">1</span>
+                
+            <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">WPAPIRequestError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Request failed: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="n">response</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="s1">&#39;response&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+                
+            <span class="k">except</span> <span class="n">json</span><span class="o">.</span><span class="n">JSONDecodeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">WPAPIRequestError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to parse response as JSON: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_handle_request_error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error</span><span class="p">:</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">HTTPError</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Handle HTTP errors and raise appropriate exceptions</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            error: The HTTP error</span>
+<span class="sd">            </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            WPAPIRateLimitError: For rate limiting errors (429)</span>
+<span class="sd">            WPAPINotFoundError: For not found errors (404)</span>
+<span class="sd">            WPAPIPermissionError: For permission errors (401, 403)</span>
+<span class="sd">            WPAPIValidationError: For validation errors (400)</span>
+<span class="sd">            WPAPIServerError: For server errors (500+)</span>
+<span class="sd">            WPAPIRequestError: For other HTTP errors</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">error</span><span class="o">.</span><span class="n">response</span>
+        <span class="n">status_code</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span>
+        <span class="n">error_msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;HTTP Error: </span><span class="si">{</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">error_data</span> <span class="o">=</span> <span class="kc">None</span>
+        
+        <span class="c1"># Try to parse error details from response</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">error_data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">error_data</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="k">if</span> <span class="s1">&#39;message&#39;</span> <span class="ow">in</span> <span class="n">error_data</span><span class="p">:</span>
+                    <span class="n">error_msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">error_msg</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">error_data</span><span class="p">[</span><span class="s1">&#39;message&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+                
+                <span class="c1"># Check for WordPress specific error code</span>
+                <span class="k">if</span> <span class="s1">&#39;code&#39;</span> <span class="ow">in</span> <span class="n">error_data</span> <span class="ow">and</span> <span class="n">error_data</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">ERROR_CODE_MAP</span><span class="p">:</span>
+                    <span class="n">exception_class</span> <span class="o">=</span> <span class="n">ERROR_CODE_MAP</span><span class="p">[</span><span class="n">error_data</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">]]</span>
+                    <span class="k">raise</span> <span class="n">exception_class</span><span class="p">(</span>
+                        <span class="n">error_msg</span><span class="p">,</span> 
+                        <span class="n">status_code</span><span class="o">=</span><span class="n">status_code</span><span class="p">,</span>
+                        <span class="n">response</span><span class="o">=</span><span class="n">response</span>
+                    <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">error</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">JSONDecodeError</span><span class="p">):</span>
+            <span class="k">pass</span>
+            
+        <span class="c1"># Handle based on status code if no specific error code was found</span>
+        <span class="k">if</span> <span class="n">status_code</span> <span class="o">==</span> <span class="mi">429</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">WPAPIRateLimitError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">,</span> <span class="n">status_code</span><span class="o">=</span><span class="n">status_code</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="n">response</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">error</span>
+        <span class="k">elif</span> <span class="n">status_code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">WPAPINotFoundError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">,</span> <span class="n">status_code</span><span class="o">=</span><span class="n">status_code</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="n">response</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">error</span>
+        <span class="k">elif</span> <span class="n">status_code</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">401</span><span class="p">,</span> <span class="mi">403</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">WPAPIPermissionError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">,</span> <span class="n">status_code</span><span class="o">=</span><span class="n">status_code</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="n">response</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">error</span>
+        <span class="k">elif</span> <span class="n">status_code</span> <span class="o">==</span> <span class="mi">400</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">WPAPIBadRequestError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">,</span> <span class="n">status_code</span><span class="o">=</span><span class="n">status_code</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="n">response</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">error</span>
+        <span class="k">elif</span> <span class="mi">400</span> <span class="o">&lt;=</span> <span class="n">status_code</span> <span class="o">&lt;</span> <span class="mi">500</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">WPAPIValidationError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">,</span> <span class="n">status_code</span><span class="o">=</span><span class="n">status_code</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="n">response</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">error</span>
+        <span class="k">elif</span> <span class="n">status_code</span> <span class="o">&gt;=</span> <span class="mi">500</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">WPAPIServerError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">,</span> <span class="n">status_code</span><span class="o">=</span><span class="n">status_code</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="n">response</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">error</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">WPAPIRequestError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">,</span> <span class="n">status_code</span><span class="o">=</span><span class="n">status_code</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="n">response</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">error</span>
+    
+<div class="viewcode-block" id="WPClient.discover_endpoints">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.client.WPClient.discover_endpoints">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">discover_endpoints</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Discover available endpoints from the WordPress REST API</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Dictionary of available routes/endpoints</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_endpoints_cache</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">root_url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">)</span>
+                <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_endpoints_cache</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">WPAPIRequestError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Failed to discover endpoints: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="n">response</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="s1">&#39;response&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+            <span class="k">except</span> <span class="n">json</span><span class="o">.</span><span class="n">JSONDecodeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">WPAPIRequestError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to parse response as JSON: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_endpoints_cache</span></div>
+
+    
+<div class="viewcode-block" id="WPClient.get_custom_taxonomy">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.client.WPClient.get_custom_taxonomy">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_custom_taxonomy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">taxonomy</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get a custom taxonomy endpoint handler</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            taxonomy: Taxonomy slug (e.g., &#39;category&#39;, &#39;post_tag&#39;, or custom taxonomy)</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Terms endpoint handler for the specified taxonomy</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.endpoints.taxonomies</span><span class="w"> </span><span class="kn">import</span> <span class="n">Terms</span>
+        <span class="k">return</span> <span class="n">Terms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">taxonomy</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="WPClient.get_custom_fields">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.client.WPClient.get_custom_fields">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_custom_fields</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">post_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;posts&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get a custom fields endpoint handler for a specific post type</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            post_type: Post type (posts, pages, or custom post type)</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            CustomFields endpoint handler for the specified post type</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.endpoints.custom_fields</span><span class="w"> </span><span class="kn">import</span> <span class="n">CustomFields</span>
+        <span class="k">return</span> <span class="n">CustomFields</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">post_type</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="WPClient.get_custom_post_type">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.client.WPClient.get_custom_post_type">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_custom_post_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">post_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get a custom post type endpoint handler</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            post_type: Custom post type slug (e.g., &#39;product&#39;, &#39;portfolio&#39;, etc.)</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            CustomPostType endpoint handler for the specified post type</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Check if we already have a handler for this post type</span>
+        <span class="k">if</span> <span class="n">post_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_custom_post_types</span><span class="p">:</span>
+            <span class="kn">from</span><span class="w"> </span><span class="nn">.endpoints.custom_post_types</span><span class="w"> </span><span class="kn">import</span> <span class="n">CustomPostType</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_custom_post_types</span><span class="p">[</span><span class="n">post_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">CustomPostType</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">post_type</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_custom_post_types</span><span class="p">[</span><span class="n">post_type</span><span class="p">]</span></div>
+
+
+    <span class="c1"># Shortcut properties for common endpoints</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">posts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Access Posts API endpoints&quot;&quot;&quot;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.endpoints.posts</span><span class="w"> </span><span class="kn">import</span> <span class="n">Posts</span>
+        <span class="k">return</span> <span class="n">Posts</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pages</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Access Pages API endpoints&quot;&quot;&quot;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.endpoints.pages</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pages</span>
+        <span class="k">return</span> <span class="n">Pages</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">users</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Access Users API endpoints&quot;&quot;&quot;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.endpoints.users</span><span class="w"> </span><span class="kn">import</span> <span class="n">Users</span>
+        <span class="k">return</span> <span class="n">Users</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">media</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Access Media API endpoints&quot;&quot;&quot;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.endpoints.media</span><span class="w"> </span><span class="kn">import</span> <span class="n">Media</span>
+        <span class="k">return</span> <span class="n">Media</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">categories</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Access Categories API endpoints&quot;&quot;&quot;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.endpoints.categories</span><span class="w"> </span><span class="kn">import</span> <span class="n">Categories</span>
+        <span class="k">return</span> <span class="n">Categories</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tags</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Access Tags API endpoints&quot;&quot;&quot;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.endpoints.tags</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tags</span>
+        <span class="k">return</span> <span class="n">Tags</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">comments</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Access Comments API endpoints&quot;&quot;&quot;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.endpoints.comments</span><span class="w"> </span><span class="kn">import</span> <span class="n">Comments</span>
+        <span class="k">return</span> <span class="n">Comments</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">taxonomies</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Access Taxonomies API endpoints&quot;&quot;&quot;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.endpoints.taxonomies</span><span class="w"> </span><span class="kn">import</span> <span class="n">Taxonomies</span>
+        <span class="k">return</span> <span class="n">Taxonomies</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Access Settings API endpoints&quot;&quot;&quot;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.endpoints.settings</span><span class="w"> </span><span class="kn">import</span> <span class="n">Settings</span>
+        <span class="k">return</span> <span class="n">Settings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">block_patterns</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Access Block Patterns API endpoints (WordPress 5.8+)&quot;&quot;&quot;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.endpoints.block_patterns</span><span class="w"> </span><span class="kn">import</span> <span class="n">BlockPatterns</span>
+        <span class="k">return</span> <span class="n">BlockPatterns</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, innerkore.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exceptions &mdash; WordPress REST API Python Client 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Endpoints" href="endpoints.html" />
+    <link rel="prev" title="Authentication" href="auth.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            WordPress REST API Python Client
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="client.html">Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">Authentication</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Exceptions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#wp_api.exceptions.WPAPIError"><code class="docutils literal notranslate"><span class="pre">WPAPIError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wp_api.exceptions.WPAPIAuthError"><code class="docutils literal notranslate"><span class="pre">WPAPIAuthError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wp_api.exceptions.WPAPIRequestError"><code class="docutils literal notranslate"><span class="pre">WPAPIRequestError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wp_api.exceptions.WPAPIRateLimitError"><code class="docutils literal notranslate"><span class="pre">WPAPIRateLimitError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wp_api.exceptions.WPAPINotFoundError"><code class="docutils literal notranslate"><span class="pre">WPAPINotFoundError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wp_api.exceptions.WPAPIPermissionError"><code class="docutils literal notranslate"><span class="pre">WPAPIPermissionError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wp_api.exceptions.WPAPIValidationError"><code class="docutils literal notranslate"><span class="pre">WPAPIValidationError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wp_api.exceptions.WPAPIBadRequestError"><code class="docutils literal notranslate"><span class="pre">WPAPIBadRequestError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wp_api.exceptions.WPAPIServerError"><code class="docutils literal notranslate"><span class="pre">WPAPIServerError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wp_api.exceptions.WPAPITimeoutError"><code class="docutils literal notranslate"><span class="pre">WPAPITimeoutError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wp_api.exceptions.WPAPIConnectionError"><code class="docutils literal notranslate"><span class="pre">WPAPIConnectionError</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="endpoints.html">Endpoints</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WordPress REST API Python Client</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Exceptions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/modules/exceptions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-wp_api.exceptions">
+<span id="exceptions"></span><h1>Exceptions<a class="headerlink" href="#module-wp_api.exceptions" title="Link to this heading"></a></h1>
+<p>Exceptions for WordPress REST API client</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="wp_api.exceptions.WPAPIError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wp_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">WPAPIError</span></span><a class="reference internal" href="../_modules/wp_api/exceptions.html#WPAPIError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.exceptions.WPAPIError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+<p>Base class for WordPress REST API errors</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="wp_api.exceptions.WPAPIAuthError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wp_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">WPAPIAuthError</span></span><a class="reference internal" href="../_modules/wp_api/exceptions.html#WPAPIAuthError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.exceptions.WPAPIAuthError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../wp_api.html#wp_api.exceptions.WPAPIError" title="wp_api.exceptions.WPAPIError"><code class="xref py py-class docutils literal notranslate"><span class="pre">WPAPIError</span></code></a></p>
+<p>Authentication error with the WordPress REST API</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="wp_api.exceptions.WPAPIRequestError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wp_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">WPAPIRequestError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/exceptions.html#WPAPIRequestError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.exceptions.WPAPIRequestError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../wp_api.html#wp_api.exceptions.WPAPIError" title="wp_api.exceptions.WPAPIError"><code class="xref py py-class docutils literal notranslate"><span class="pre">WPAPIError</span></code></a></p>
+<p>Error making a request to the WordPress REST API</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="wp_api.exceptions.WPAPIRateLimitError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wp_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">WPAPIRateLimitError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/exceptions.html#WPAPIRateLimitError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.exceptions.WPAPIRateLimitError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../wp_api.html#wp_api.exceptions.WPAPIRequestError" title="wp_api.exceptions.WPAPIRequestError"><code class="xref py py-class docutils literal notranslate"><span class="pre">WPAPIRequestError</span></code></a></p>
+<p>Rate limiting error from the WordPress REST API</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="wp_api.exceptions.WPAPINotFoundError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wp_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">WPAPINotFoundError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/exceptions.html#WPAPINotFoundError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.exceptions.WPAPINotFoundError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../wp_api.html#wp_api.exceptions.WPAPIRequestError" title="wp_api.exceptions.WPAPIRequestError"><code class="xref py py-class docutils literal notranslate"><span class="pre">WPAPIRequestError</span></code></a></p>
+<p>Resource not found error from the WordPress REST API</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="wp_api.exceptions.WPAPIPermissionError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wp_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">WPAPIPermissionError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/exceptions.html#WPAPIPermissionError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.exceptions.WPAPIPermissionError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../wp_api.html#wp_api.exceptions.WPAPIRequestError" title="wp_api.exceptions.WPAPIRequestError"><code class="xref py py-class docutils literal notranslate"><span class="pre">WPAPIRequestError</span></code></a></p>
+<p>Permission denied error from the WordPress REST API</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="wp_api.exceptions.WPAPIValidationError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wp_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">WPAPIValidationError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/exceptions.html#WPAPIValidationError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.exceptions.WPAPIValidationError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../wp_api.html#wp_api.exceptions.WPAPIRequestError" title="wp_api.exceptions.WPAPIRequestError"><code class="xref py py-class docutils literal notranslate"><span class="pre">WPAPIRequestError</span></code></a></p>
+<p>Validation error from the WordPress REST API</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="wp_api.exceptions.WPAPIBadRequestError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wp_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">WPAPIBadRequestError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/exceptions.html#WPAPIBadRequestError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.exceptions.WPAPIBadRequestError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../wp_api.html#wp_api.exceptions.WPAPIRequestError" title="wp_api.exceptions.WPAPIRequestError"><code class="xref py py-class docutils literal notranslate"><span class="pre">WPAPIRequestError</span></code></a></p>
+<p>Bad request error from the WordPress REST API</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="wp_api.exceptions.WPAPIServerError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wp_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">WPAPIServerError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/exceptions.html#WPAPIServerError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.exceptions.WPAPIServerError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../wp_api.html#wp_api.exceptions.WPAPIRequestError" title="wp_api.exceptions.WPAPIRequestError"><code class="xref py py-class docutils literal notranslate"><span class="pre">WPAPIRequestError</span></code></a></p>
+<p>Server error from the WordPress REST API</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="wp_api.exceptions.WPAPITimeoutError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wp_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">WPAPITimeoutError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/exceptions.html#WPAPITimeoutError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.exceptions.WPAPITimeoutError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../wp_api.html#wp_api.exceptions.WPAPIRequestError" title="wp_api.exceptions.WPAPIRequestError"><code class="xref py py-class docutils literal notranslate"><span class="pre">WPAPIRequestError</span></code></a></p>
+<p>Timeout error when connecting to the WordPress REST API</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="wp_api.exceptions.WPAPIConnectionError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wp_api.exceptions.</span></span><span class="sig-name descname"><span class="pre">WPAPIConnectionError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/exceptions.html#WPAPIConnectionError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.exceptions.WPAPIConnectionError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../wp_api.html#wp_api.exceptions.WPAPIRequestError" title="wp_api.exceptions.WPAPIRequestError"><code class="xref py py-class docutils literal notranslate"><span class="pre">WPAPIRequestError</span></code></a></p>
+<p>Connection error when connecting to the WordPress REST API</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="auth.html" class="btn btn-neutral float-left" title="Authentication" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="endpoints.html" class="btn btn-neutral float-right" title="Endpoints" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, innerkore.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

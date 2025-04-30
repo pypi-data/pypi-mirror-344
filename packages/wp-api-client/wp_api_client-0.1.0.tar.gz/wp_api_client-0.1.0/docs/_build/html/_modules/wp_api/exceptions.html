@@ -1,0 +1,242 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wp_api.exceptions &mdash; WordPress REST API Python Client 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            WordPress REST API Python Client
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deployment.html">Deployment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules/client.html">Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules/auth.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules/exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules/endpoints.html">Endpoints</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">History</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">WordPress REST API Python Client</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">wp_api.exceptions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for wp_api.exceptions</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Exceptions for WordPress REST API client</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="WPAPIError">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.exceptions.WPAPIError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WPAPIError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Base class for WordPress REST API errors&quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="WPAPIAuthError">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.exceptions.WPAPIAuthError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WPAPIAuthError</span><span class="p">(</span><span class="n">WPAPIError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Authentication error with the WordPress REST API&quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="WPAPIRequestError">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.exceptions.WPAPIRequestError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WPAPIRequestError</span><span class="p">(</span><span class="n">WPAPIError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Error making a request to the WordPress REST API&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">status_code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status_code</span> <span class="o">=</span> <span class="n">status_code</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response</span> <span class="o">=</span> <span class="n">response</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error_data</span> <span class="o">=</span> <span class="kc">None</span>
+        
+        <span class="c1"># Try to parse error details from response</span>
+        <span class="k">if</span> <span class="n">response</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">error_data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">):</span>
+                <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="WPAPIRateLimitError">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.exceptions.WPAPIRateLimitError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WPAPIRateLimitError</span><span class="p">(</span><span class="n">WPAPIRequestError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Rate limiting error from the WordPress REST API&quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="WPAPINotFoundError">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.exceptions.WPAPINotFoundError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WPAPINotFoundError</span><span class="p">(</span><span class="n">WPAPIRequestError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Resource not found error from the WordPress REST API&quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="WPAPIPermissionError">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.exceptions.WPAPIPermissionError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WPAPIPermissionError</span><span class="p">(</span><span class="n">WPAPIRequestError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Permission denied error from the WordPress REST API&quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="WPAPIValidationError">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.exceptions.WPAPIValidationError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WPAPIValidationError</span><span class="p">(</span><span class="n">WPAPIRequestError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Validation error from the WordPress REST API&quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="WPAPIBadRequestError">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.exceptions.WPAPIBadRequestError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WPAPIBadRequestError</span><span class="p">(</span><span class="n">WPAPIRequestError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Bad request error from the WordPress REST API&quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="WPAPIServerError">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.exceptions.WPAPIServerError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WPAPIServerError</span><span class="p">(</span><span class="n">WPAPIRequestError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Server error from the WordPress REST API&quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="WPAPITimeoutError">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.exceptions.WPAPITimeoutError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WPAPITimeoutError</span><span class="p">(</span><span class="n">WPAPIRequestError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Timeout error when connecting to the WordPress REST API&quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="WPAPIConnectionError">
+<a class="viewcode-back" href="../../wp_api.html#wp_api.exceptions.WPAPIConnectionError">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WPAPIConnectionError</span><span class="p">(</span><span class="n">WPAPIRequestError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Connection error when connecting to the WordPress REST API&quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+
+<span class="c1"># Map of WordPress REST API error codes to exception classes</span>
+<span class="c1"># Based on common WordPress REST API error codes</span>
+<span class="n">ERROR_CODE_MAP</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;rest_no_route&quot;</span><span class="p">:</span> <span class="n">WPAPINotFoundError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_post_invalid_id&quot;</span><span class="p">:</span> <span class="n">WPAPINotFoundError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_page_invalid_id&quot;</span><span class="p">:</span> <span class="n">WPAPINotFoundError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_user_invalid_id&quot;</span><span class="p">:</span> <span class="n">WPAPINotFoundError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_comment_invalid_id&quot;</span><span class="p">:</span> <span class="n">WPAPINotFoundError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_media_invalid_id&quot;</span><span class="p">:</span> <span class="n">WPAPINotFoundError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_term_invalid_id&quot;</span><span class="p">:</span> <span class="n">WPAPINotFoundError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_taxonomy_invalid&quot;</span><span class="p">:</span> <span class="n">WPAPINotFoundError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_invalid_param&quot;</span><span class="p">:</span> <span class="n">WPAPIValidationError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_forbidden&quot;</span><span class="p">:</span> <span class="n">WPAPIPermissionError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_cannot_create&quot;</span><span class="p">:</span> <span class="n">WPAPIPermissionError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_cannot_update&quot;</span><span class="p">:</span> <span class="n">WPAPIPermissionError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_cannot_delete&quot;</span><span class="p">:</span> <span class="n">WPAPIPermissionError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_cannot_read&quot;</span><span class="p">:</span> <span class="n">WPAPIPermissionError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_invalid_user&quot;</span><span class="p">:</span> <span class="n">WPAPIAuthError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_cookie_invalid_nonce&quot;</span><span class="p">:</span> <span class="n">WPAPIAuthError</span><span class="p">,</span>
+    <span class="s2">&quot;rest_authentication_required&quot;</span><span class="p">:</span> <span class="n">WPAPIAuthError</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, innerkore.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

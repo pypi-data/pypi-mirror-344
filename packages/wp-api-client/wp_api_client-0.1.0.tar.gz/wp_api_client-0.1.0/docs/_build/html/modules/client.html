@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client &mdash; WordPress REST API Python Client 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Authentication" href="auth.html" />
+    <link rel="prev" title="Deployment" href="../deployment.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            WordPress REST API Python Client
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Client</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#wpclient">WPClient</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wp_api.client.WPClient"><code class="docutils literal notranslate"><span class="pre">WPClient</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.__init__"><code class="docutils literal notranslate"><span class="pre">WPClient.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.get"><code class="docutils literal notranslate"><span class="pre">WPClient.get()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.post"><code class="docutils literal notranslate"><span class="pre">WPClient.post()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.put"><code class="docutils literal notranslate"><span class="pre">WPClient.put()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.delete"><code class="docutils literal notranslate"><span class="pre">WPClient.delete()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.discover_endpoints"><code class="docutils literal notranslate"><span class="pre">WPClient.discover_endpoints()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.get_custom_taxonomy"><code class="docutils literal notranslate"><span class="pre">WPClient.get_custom_taxonomy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.get_custom_fields"><code class="docutils literal notranslate"><span class="pre">WPClient.get_custom_fields()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.get_custom_post_type"><code class="docutils literal notranslate"><span class="pre">WPClient.get_custom_post_type()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.posts"><code class="docutils literal notranslate"><span class="pre">WPClient.posts</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.pages"><code class="docutils literal notranslate"><span class="pre">WPClient.pages</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.users"><code class="docutils literal notranslate"><span class="pre">WPClient.users</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.media"><code class="docutils literal notranslate"><span class="pre">WPClient.media</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.categories"><code class="docutils literal notranslate"><span class="pre">WPClient.categories</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.tags"><code class="docutils literal notranslate"><span class="pre">WPClient.tags</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.comments"><code class="docutils literal notranslate"><span class="pre">WPClient.comments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.taxonomies"><code class="docutils literal notranslate"><span class="pre">WPClient.taxonomies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.settings"><code class="docutils literal notranslate"><span class="pre">WPClient.settings</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wp_api.client.WPClient.block_patterns"><code class="docutils literal notranslate"><span class="pre">WPClient.block_patterns</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="endpoints.html">Endpoints</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WordPress REST API Python Client</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Client</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/modules/client.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="client">
+<h1>Client<a class="headerlink" href="#client" title="Link to this heading"></a></h1>
+<section id="wpclient">
+<h2>WPClient<a class="headerlink" href="#wpclient" title="Link to this heading"></a></h2>
+<p id="module-wp_api.client">WordPress REST API Client
+Core client implementation for making requests to the WordPress REST API</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="wp_api.client.WPClient">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wp_api.client.</span></span><span class="sig-name descname"><span class="pre">WPClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_agent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Python</span> <span class="pre">WordPress</span> <span class="pre">REST</span> <span class="pre">API</span> <span class="pre">Client'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verify_ssl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retry_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retry_backoff_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/client.html#WPClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.client.WPClient" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>WordPress REST API Client</p>
+<p>The main client class for interacting with the WordPress REST API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>)</p></li>
+<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>)</p></li>
+<li><p><strong>user_agent</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>)</p></li>
+<li><p><strong>verify_ssl</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>)</p></li>
+<li><p><strong>retry_count</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>)</p></li>
+<li><p><strong>retry_backoff_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_agent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Python</span> <span class="pre">WordPress</span> <span class="pre">REST</span> <span class="pre">API</span> <span class="pre">Client'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verify_ssl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retry_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retry_backoff_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/client.html#WPClient.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.client.WPClient.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize the WordPress REST API client</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The base URL of the WordPress site (e.g., <a class="reference external" href="https://example.com">https://example.com</a>)</p></li>
+<li><p><strong>auth</strong> – Authentication method (BasicAuth, OAuth1, or ApplicationPasswordAuth)</p></li>
+<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – Request timeout in seconds</p></li>
+<li><p><strong>user_agent</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – User agent string for the requests</p></li>
+<li><p><strong>verify_ssl</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – Whether to verify SSL certificates</p></li>
+<li><p><strong>retry_count</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – Number of retries for failed requests</p></li>
+<li><p><strong>retry_backoff_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Backoff factor for retries</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/client.html#WPClient.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.client.WPClient.get" title="Link to this definition"></a></dt>
+<dd><p>Make a GET request to the API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – API endpoint (relative to base URL)</p></li>
+<li><p><strong>params</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>, </em><em>optional</em>) – URL parameters to include</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.13)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response data (dict or list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.post">
+<span class="sig-name descname"><span class="pre">post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/client.html#WPClient.post"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.client.WPClient.post" title="Link to this definition"></a></dt>
+<dd><p>Make a POST request to the API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – API endpoint (relative to base URL)</p></li>
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – Data to send in the request body</p></li>
+<li><p><strong>params</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>, </em><em>optional</em>) – URL parameters to include</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response data (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/client.html#WPClient.put"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.client.WPClient.put" title="Link to this definition"></a></dt>
+<dd><p>Make a PUT request to the API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – API endpoint (relative to base URL)</p></li>
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – Data to send in the request body</p></li>
+<li><p><strong>params</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>, </em><em>optional</em>) – URL parameters to include</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response data (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/client.html#WPClient.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.client.WPClient.delete" title="Link to this definition"></a></dt>
+<dd><p>Make a DELETE request to the API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – API endpoint (relative to base URL)</p></li>
+<li><p><strong>params</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>, </em><em>optional</em>) – URL parameters to include</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response data (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.discover_endpoints">
+<span class="sig-name descname"><span class="pre">discover_endpoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/client.html#WPClient.discover_endpoints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.client.WPClient.discover_endpoints" title="Link to this definition"></a></dt>
+<dd><p>Discover available endpoints from the WordPress REST API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary of available routes/endpoints</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.get_custom_taxonomy">
+<span class="sig-name descname"><span class="pre">get_custom_taxonomy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taxonomy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/client.html#WPClient.get_custom_taxonomy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.client.WPClient.get_custom_taxonomy" title="Link to this definition"></a></dt>
+<dd><p>Get a custom taxonomy endpoint handler</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>taxonomy</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – Taxonomy slug (e.g., ‘category’, ‘post_tag’, or custom taxonomy)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Terms endpoint handler for the specified taxonomy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.get_custom_fields">
+<span class="sig-name descname"><span class="pre">get_custom_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">post_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'posts'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/client.html#WPClient.get_custom_fields"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.client.WPClient.get_custom_fields" title="Link to this definition"></a></dt>
+<dd><p>Get a custom fields endpoint handler for a specific post type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>post_type</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – Post type (posts, pages, or custom post type)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>CustomFields endpoint handler for the specified post type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.get_custom_post_type">
+<span class="sig-name descname"><span class="pre">get_custom_post_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">post_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/wp_api/client.html#WPClient.get_custom_post_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#wp_api.client.WPClient.get_custom_post_type" title="Link to this definition"></a></dt>
+<dd><p>Get a custom post type endpoint handler</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>post_type</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – Custom post type slug (e.g., ‘product’, ‘portfolio’, etc.)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>CustomPostType endpoint handler for the specified post type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.posts">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">posts</span></span><a class="headerlink" href="#wp_api.client.WPClient.posts" title="Link to this definition"></a></dt>
+<dd><p>Access Posts API endpoints</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.pages">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pages</span></span><a class="headerlink" href="#wp_api.client.WPClient.pages" title="Link to this definition"></a></dt>
+<dd><p>Access Pages API endpoints</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.users">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">users</span></span><a class="headerlink" href="#wp_api.client.WPClient.users" title="Link to this definition"></a></dt>
+<dd><p>Access Users API endpoints</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.media">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#wp_api.client.WPClient.media" title="Link to this definition"></a></dt>
+<dd><p>Access Media API endpoints</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.categories">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">categories</span></span><a class="headerlink" href="#wp_api.client.WPClient.categories" title="Link to this definition"></a></dt>
+<dd><p>Access Categories API endpoints</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.tags">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tags</span></span><a class="headerlink" href="#wp_api.client.WPClient.tags" title="Link to this definition"></a></dt>
+<dd><p>Access Tags API endpoints</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.comments">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">comments</span></span><a class="headerlink" href="#wp_api.client.WPClient.comments" title="Link to this definition"></a></dt>
+<dd><p>Access Comments API endpoints</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.taxonomies">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">taxonomies</span></span><a class="headerlink" href="#wp_api.client.WPClient.taxonomies" title="Link to this definition"></a></dt>
+<dd><p>Access Taxonomies API endpoints</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.settings">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">settings</span></span><a class="headerlink" href="#wp_api.client.WPClient.settings" title="Link to this definition"></a></dt>
+<dd><p>Access Settings API endpoints</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="wp_api.client.WPClient.block_patterns">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">block_patterns</span></span><a class="headerlink" href="#wp_api.client.WPClient.block_patterns" title="Link to this definition"></a></dt>
+<dd><p>Access Block Patterns API endpoints (WordPress 5.8+)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../deployment.html" class="btn btn-neutral float-left" title="Deployment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="auth.html" class="btn btn-neutral float-right" title="Authentication" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, innerkore.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
