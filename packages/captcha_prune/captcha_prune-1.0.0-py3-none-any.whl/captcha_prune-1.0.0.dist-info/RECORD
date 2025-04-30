@@ -1,0 +1,15 @@
+captcha_prune/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+captcha_prune/asgi.py,sha256=wi2rRLFltXOZyve8mAB_E8udaFyONOf5N42WrWIQX8M,403
+captcha_prune/models.py,sha256=3IwEWBl5ykZEivE5FGU0jUZKZGVkhvCuMh1HFehjYFU,1201
+captcha_prune/payloads.py,sha256=PwR48xKg9YEgGgoJmGe7ywwFPCqM4gumomyFunn-Ems,115
+captcha_prune/settings.py,sha256=YEZHEjYYYK-cH3gSLIR3a7g4Bypnuf_5eMTTcm719CE,3395
+captcha_prune/urls.py,sha256=DeCJTjJA0krW27KoHafvh3GBRr7fJ80E2lVHEWYSsW4,271
+captcha_prune/views.py,sha256=BzjQfXLwYx2YSWODrnGpokqU8XeC-9QORivzWKxYofY,1539
+captcha_prune/wsgi.py,sha256=fukA_iiCT4FFzcJ0QX2Zr_HNddqdq-ln3ien2UWcCTA,403
+commons/base_model.py,sha256=q1Q7lgtvN_t6ujhEiSsNNXb_ay0qY6FbfK0Zm2Hdgp0,213
+commons/decorators.py,sha256=nU_3SyxENcWDdxo03VyNYEvoevplC6ig7BFogY8apNs,1306
+captcha_prune-1.0.0.dist-info/METADATA,sha256=fW_0t59iERFSX8xAcAgITabqzHS404NLgwNY5hsslrI,2447
+captcha_prune-1.0.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+captcha_prune-1.0.0.dist-info/entry_points.txt,sha256=SxaXQppsmJaTJuQjThGBLrnV8CSgkz8dMCCyT1sgVHI,52
+captcha_prune-1.0.0.dist-info/top_level.txt,sha256=TJgPYPIxWJk4FBArxIlwxqJOw9lC60JjsPeM3zNNBrU,22
+captcha_prune-1.0.0.dist-info/RECORD,,
