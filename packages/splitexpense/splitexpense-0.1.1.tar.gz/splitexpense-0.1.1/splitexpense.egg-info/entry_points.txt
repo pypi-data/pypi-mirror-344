@@ -1,0 +1,2 @@
+[console_scripts]
+splitexpense = split_expense.app:main
