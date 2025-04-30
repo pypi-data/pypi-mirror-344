@@ -1,0 +1,3 @@
+[console_scripts]
+sendToMattermost=mattermost_messenger.__main__:main
+
