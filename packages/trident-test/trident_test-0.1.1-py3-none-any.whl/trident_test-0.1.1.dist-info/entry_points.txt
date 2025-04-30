@@ -1,0 +1,4 @@
+[console_scripts]
+run_batch_of_slides=run_batch_of_slides:main
+run_single_slide=run_single_slide:main
+

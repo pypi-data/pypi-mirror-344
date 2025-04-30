@@ -1,0 +1,31 @@
+Metadata-Version: 2.3
+Name: trident-test
+Version: 0.1.1
+Summary: A package for preprocessing whole-slide images.
+License: CC BY-NC-ND 4.0
+Author: Andrew Zhang
+Author-email: andrewzh@mit.edu
+Requires-Python: >=3.10,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: Pillow
+Requires-Dist: einops_exts
+Requires-Dist: geopandas
+Requires-Dist: h5py
+Requires-Dist: huggingface_hub
+Requires-Dist: ipywidgets
+Requires-Dist: matplotlib
+Requires-Dist: opencv-python
+Requires-Dist: openslide-bin
+Requires-Dist: openslide-python
+Requires-Dist: scipy
+Requires-Dist: segmentation-models-pytorch
+Requires-Dist: timm (==0.9.16)
+Requires-Dist: torch
+Requires-Dist: tqdm
+Requires-Dist: transformers
+Project-URL: Repository, https://github.com/mahmoodlab/TRIDENT
