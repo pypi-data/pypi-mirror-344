@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+CoT/__init__.py
+CoT/types.py
+CoT/utils.py
+CoT/models/__init__.py
+CoT/models/core.py
+CoT/xml/__init__.py
+PyCoT.egg-info/PKG-INFO
+PyCoT.egg-info/SOURCES.txt
+PyCoT.egg-info/dependency_links.txt
+PyCoT.egg-info/requires.txt
+PyCoT.egg-info/top_level.txt
+tests/test_cot_xml_interopability.py
+tests/test_messages.py

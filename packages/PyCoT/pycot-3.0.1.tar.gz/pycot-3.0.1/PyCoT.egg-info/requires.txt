@@ -1,0 +1,8 @@
+pydantic>=1.10.2
+xmltodict>=0.13.0
+
+[ais]
+pyais
+
+[mitre]
+PyCoT-MITRE
