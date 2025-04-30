@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: XStatic-html5shiv
+Version: 3.6.1
+Summary: html5shiv 3.6 (XStatic packaging standard)
+Home-page: https://github.com/aFarkas/html5shiv/
+Maintainer: Raphael Jasjukaitis
+Maintainer-email: webmaster@raphaa.de
+License: (same as html5shiv)
+Keywords: html5shiv xstatic
+Platform: any
+Requires-Dist: xstatic
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: platform
+Dynamic: requires-dist
+Dynamic: summary
+
+XStatic-html5shiv
+-----------------
+
+html5shiv packaged for setuptools (easy_install) / pip.
+
+This package is intended to be used by **any** project that needs these files.
+
+It intentionally does **not** provide any extra code except some metadata
+**nor** has any extra requirements. You MAY use some minimal support code from
+the XStatic base package, if you like.
+
+You can find more info about the xstatic packaging way in the package `XStatic`.

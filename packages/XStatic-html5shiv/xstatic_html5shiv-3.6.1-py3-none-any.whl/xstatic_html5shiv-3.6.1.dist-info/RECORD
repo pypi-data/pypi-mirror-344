@@ -1,0 +1,11 @@
+xstatic/__init__.py,sha256=G-d438vPx7m_ks5e9XTtM3u7LDRO5dSSukibukWmyPM,56
+xstatic/pkg/__init__.py,sha256=G-d438vPx7m_ks5e9XTtM3u7LDRO5dSSukibukWmyPM,56
+xstatic/pkg/html5shiv/.DS_Store,sha256=GVbg7a-9V02RUTzIKCeVl7CgTomJLQM8WNYeGCdvnp8,6148
+xstatic/pkg/html5shiv/__init__.py,sha256=epoWytlKzeUy9zVDccPOB52elZ4vRX7i52z1fvfVzqg,1378
+xstatic/pkg/html5shiv/data/.DS_Store,sha256=azPFUaidkeyqt2hLu9E0MRSxLFlYuFMGUTqFPTvn5Vo,12292
+xstatic/pkg/html5shiv/data/js/.DS_Store,sha256=pQVMQr8p4c-31fK7FbSmNQvxkPkG4oNXxsxZpWjAYv0,6148
+xstatic/pkg/html5shiv/data/js/html5shiv.min.js,sha256=4dRaCIrEvKGXwm3eoNqQXexzIF3cEETsTGMilq9gU5o,2359
+xstatic_html5shiv-3.6.1.dist-info/METADATA,sha256=qvwh1dkEqPlBH9R-dOBqHUD32wMF3tRG0SYGuzGnLCU,954
+xstatic_html5shiv-3.6.1.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+xstatic_html5shiv-3.6.1.dist-info/top_level.txt,sha256=tDpXyaHF81JGnzDNskkXZNoFrs3YW_a1ueuzoAmLNas,8
+xstatic_html5shiv-3.6.1.dist-info/RECORD,,
