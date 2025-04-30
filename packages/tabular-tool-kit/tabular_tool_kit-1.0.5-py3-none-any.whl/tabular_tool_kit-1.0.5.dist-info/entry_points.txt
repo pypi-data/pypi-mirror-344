@@ -1,0 +1,2 @@
+[console_scripts]
+tabular_tool_kit = tabular_tool_kit.cli:main
