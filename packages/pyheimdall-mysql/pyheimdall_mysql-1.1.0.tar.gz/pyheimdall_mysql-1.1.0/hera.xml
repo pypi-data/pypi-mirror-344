@@ -1,0 +1,286 @@
+<hera xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://gitlab.huma-num.fr/datasphere/hera/schema/schema.xsd">
+  <properties>
+    <property id="person.name">
+      <type>text</type>
+      <name>name</name>
+      <description />
+    </property>
+    <property id="person.sex">
+      <type>text</type>
+      <name>sex</name>
+      <description />
+    </property>
+    <property id="person.birth">
+      <type>datetime</type>
+      <name>birth</name>
+      <description />
+    </property>
+    <property id="person.death">
+      <type>datetime</type>
+      <name>death</name>
+      <description />
+    </property>
+    <property id="pet.name">
+      <type>text</type>
+      <name>name</name>
+      <description>Name of this adorable animal</description>
+    </property>
+    <property id="pet.name_fr">
+      <type>text</type>
+      <name>name_fr</name>
+      <description />
+    </property>
+    <property id="pet.owner">
+      <type>text</type>
+      <name>owner</name>
+      <description>Name of its owner</description>
+    </property>
+    <property id="pet.space">
+      <type>text</type>
+      <name>space</name>
+      <description>Type of animal</description>
+    </property>
+    <property id="pet.sex">
+      <type>text</type>
+      <name>sex</name>
+      <description />
+    </property>
+    <property id="pet.birth">
+      <type>datetime</type>
+      <name>birth</name>
+      <description />
+    </property>
+    <property id="pet.death">
+      <type>datetime</type>
+      <name>death</name>
+      <description />
+    </property>
+    <property id="relationship.id">
+      <type>number</type>
+      <name>id</name>
+      <description />
+    </property>
+    <property id="relationship.owner">
+      <type>text</type>
+      <name>owner</name>
+      <description />
+    </property>
+    <property id="relationship.pet">
+      <type>text</type>
+      <name>pet</name>
+      <description />
+    </property>
+  </properties>
+  <entities>
+    <entity id="person">
+      <name>person</name>
+      <attribute id="name" pid="person.name" min="1" max="1">
+        <type>text</type>
+        <name>name</name>
+      </attribute>
+      <attribute id="sex" pid="person.sex" min="0" max="1">
+        <type>text</type>
+        <name>sex</name>
+      </attribute>
+      <attribute id="birth" pid="person.birth" min="0" max="1">
+        <type>datetime</type>
+        <name>birth</name>
+      </attribute>
+      <attribute id="death" pid="person.death" min="0" max="1">
+        <type>datetime</type>
+        <name>death</name>
+      </attribute>
+    </entity>
+    <entity id="pet">
+      <name>pet</name>
+      <description>Cuteness overload</description>
+      <attribute id="name" pid="pet.name" min="1" max="1">
+        <type>text</type>
+        <name>name</name>
+        <description>Name of this adorable animal</description>
+      </attribute>
+      <attribute id="name_fr" pid="pet.name_fr" min="0" max="1">
+        <type>text</type>
+        <name>name_fr</name>
+      </attribute>
+      <attribute id="owner" pid="pet.owner" min="0" max="1">
+        <type>@person.name</type>
+        <name>owner</name>
+        <description>Name of its owner</description>
+      </attribute>
+      <attribute id="space" pid="pet.space" min="0" max="1">
+        <type>text</type>
+        <name>space</name>
+        <description>Type of animal</description>
+      </attribute>
+      <attribute id="sex" pid="pet.sex" min="0" max="1">
+        <type>text</type>
+        <name>sex</name>
+      </attribute>
+      <attribute id="birth" pid="pet.birth" min="0" max="1">
+        <type>datetime</type>
+        <name>birth</name>
+      </attribute>
+      <attribute id="death" pid="pet.death" min="0" max="1">
+        <type>datetime</type>
+        <name>death</name>
+      </attribute>
+    </entity>
+    <entity id="relationship">
+      <name>relationship</name>
+      <attribute id="id" pid="relationship.id" min="1" max="1">
+        <type>number</type>
+        <name>id</name>
+      </attribute>
+      <attribute id="owner" pid="relationship.owner" min="0" max="1">
+        <type>@person.name</type>
+        <name>owner</name>
+      </attribute>
+      <attribute id="pet" pid="relationship.pet" min="0" max="1">
+        <type>@pet.name</type>
+        <name>pet</name>
+      </attribute>
+    </entity>
+  </entities>
+  <items>
+    <item eid="person">
+      <metadata aid="name" pid="person.name">Benny</metadata>
+      <metadata aid="sex" pid="person.sex">m</metadata>
+      <metadata aid="birth" pid="person.birth">1944-02-29</metadata>
+      <metadata aid="death" pid="person.death">2012-12-24</metadata>
+    </item>
+    <item eid="person">
+      <metadata aid="name" pid="person.name">Diane</metadata>
+      <metadata aid="sex" pid="person.sex">f</metadata>
+      <metadata aid="birth" pid="person.birth">1970-04-04</metadata>
+      <metadata aid="death" pid="person.death">2023-05-13</metadata>
+    </item>
+    <item eid="person">
+      <metadata aid="name" pid="person.name">Gwen</metadata>
+      <metadata aid="sex" pid="person.sex">f</metadata>
+      <metadata aid="birth" pid="person.birth">1982-06-02</metadata>
+    </item>
+    <item eid="person">
+      <metadata aid="name" pid="person.name">Harold</metadata>
+      <metadata aid="sex" pid="person.sex">m</metadata>
+      <metadata aid="birth" pid="person.birth">1986-11-11</metadata>
+    </item>
+    <item eid="pet">
+      <metadata aid="name" pid="pet.name">Bowser</metadata>
+      <metadata aid="name_fr" pid="pet.name_fr">Bowser</metadata>
+      <metadata aid="owner" pid="pet.owner">Diane</metadata>
+      <metadata aid="space" pid="pet.space">dog</metadata>
+      <metadata aid="sex" pid="pet.sex">m</metadata>
+      <metadata aid="birth" pid="pet.birth">1979-08-31</metadata>
+      <metadata aid="death" pid="pet.death">1995-07-29</metadata>
+    </item>
+    <item eid="pet">
+      <metadata aid="name" pid="pet.name">Buffy</metadata>
+      <metadata aid="name_fr" pid="pet.name_fr">Bouffi</metadata>
+      <metadata aid="owner" pid="pet.owner">Harold</metadata>
+      <metadata aid="space" pid="pet.space">dog</metadata>
+      <metadata aid="sex" pid="pet.sex">f</metadata>
+      <metadata aid="birth" pid="pet.birth">1989-05-13</metadata>
+      <metadata aid="death" pid="pet.death">2009-03-03</metadata>
+    </item>
+    <item eid="pet">
+      <metadata aid="name" pid="pet.name">Chirpy</metadata>
+      <metadata aid="name_fr" pid="pet.name_fr">Cui-cui</metadata>
+      <metadata aid="owner" pid="pet.owner">Gwen</metadata>
+      <metadata aid="space" pid="pet.space">bird</metadata>
+      <metadata aid="sex" pid="pet.sex">f</metadata>
+      <metadata aid="birth" pid="pet.birth">1998-09-11</metadata>
+    </item>
+    <item eid="pet">
+      <metadata aid="name" pid="pet.name">Claws</metadata>
+      <metadata aid="name_fr" pid="pet.name_fr">Klaus</metadata>
+      <metadata aid="owner" pid="pet.owner">Gwen</metadata>
+      <metadata aid="space" pid="pet.space">cat</metadata>
+      <metadata aid="sex" pid="pet.sex">m</metadata>
+      <metadata aid="birth" pid="pet.birth">1994-03-17</metadata>
+    </item>
+    <item eid="pet">
+      <metadata aid="name" pid="pet.name">Fang</metadata>
+      <metadata aid="owner" pid="pet.owner">Benny</metadata>
+      <metadata aid="space" pid="pet.space">dog</metadata>
+      <metadata aid="sex" pid="pet.sex">m</metadata>
+      <metadata aid="birth" pid="pet.birth">1990-08-27</metadata>
+    </item>
+    <item eid="pet">
+      <metadata aid="name" pid="pet.name">Fluffy</metadata>
+      <metadata aid="name_fr" pid="pet.name_fr">Touffu</metadata>
+      <metadata aid="owner" pid="pet.owner">Harold</metadata>
+      <metadata aid="space" pid="pet.space">cat</metadata>
+      <metadata aid="sex" pid="pet.sex">f</metadata>
+      <metadata aid="birth" pid="pet.birth">1993-02-04</metadata>
+    </item>
+    <item eid="pet">
+      <metadata aid="name" pid="pet.name">Puffball</metadata>
+      <metadata aid="owner" pid="pet.owner">Diane</metadata>
+      <metadata aid="space" pid="pet.space">hamster</metadata>
+      <metadata aid="sex" pid="pet.sex">f</metadata>
+      <metadata aid="birth" pid="pet.birth">1999-03-30</metadata>
+      <metadata aid="death" pid="pet.death">2003-03-30</metadata>
+    </item>
+    <item eid="pet">
+      <metadata aid="name" pid="pet.name">Slim</metadata>
+      <metadata aid="owner" pid="pet.owner">Benny</metadata>
+      <metadata aid="space" pid="pet.space">snake</metadata>
+      <metadata aid="sex" pid="pet.sex">m</metadata>
+      <metadata aid="birth" pid="pet.birth">1996-04-29</metadata>
+    </item>
+    <item eid="pet">
+      <metadata aid="name" pid="pet.name">Whistler</metadata>
+      <metadata aid="name_fr" pid="pet.name_fr">Siffleur</metadata>
+      <metadata aid="owner" pid="pet.owner">Gwen</metadata>
+      <metadata aid="space" pid="pet.space">bird</metadata>
+      <metadata aid="sex" pid="pet.sex">n</metadata>
+      <metadata aid="birth" pid="pet.birth">1997-12-09</metadata>
+    </item>
+    <item eid="relationship">
+      <metadata aid="id" pid="relationship.id">1</metadata>
+      <metadata aid="owner" pid="relationship.owner">Harold</metadata>
+      <metadata aid="pet" pid="relationship.pet">Buffy</metadata>
+    </item>
+    <item eid="relationship">
+      <metadata aid="id" pid="relationship.id">2</metadata>
+      <metadata aid="owner" pid="relationship.owner">Harold</metadata>
+      <metadata aid="pet" pid="relationship.pet">Fluffy</metadata>
+    </item>
+    <item eid="relationship">
+      <metadata aid="id" pid="relationship.id">3</metadata>
+      <metadata aid="owner" pid="relationship.owner">Gwen</metadata>
+      <metadata aid="pet" pid="relationship.pet">Chirpy</metadata>
+    </item>
+    <item eid="relationship">
+      <metadata aid="id" pid="relationship.id">4</metadata>
+      <metadata aid="owner" pid="relationship.owner">Gwen</metadata>
+      <metadata aid="pet" pid="relationship.pet">Claws</metadata>
+    </item>
+    <item eid="relationship">
+      <metadata aid="id" pid="relationship.id">5</metadata>
+      <metadata aid="owner" pid="relationship.owner">Gwen</metadata>
+      <metadata aid="pet" pid="relationship.pet">Whistler</metadata>
+    </item>
+    <item eid="relationship">
+      <metadata aid="id" pid="relationship.id">6</metadata>
+      <metadata aid="owner" pid="relationship.owner">Diane</metadata>
+      <metadata aid="pet" pid="relationship.pet">Bowser</metadata>
+    </item>
+    <item eid="relationship">
+      <metadata aid="id" pid="relationship.id">7</metadata>
+      <metadata aid="owner" pid="relationship.owner">Diane</metadata>
+      <metadata aid="pet" pid="relationship.pet">Puffball</metadata>
+    </item>
+    <item eid="relationship">
+      <metadata aid="id" pid="relationship.id">8</metadata>
+      <metadata aid="owner" pid="relationship.owner">Benny</metadata>
+      <metadata aid="pet" pid="relationship.pet">Fang</metadata>
+    </item>
+    <item eid="relationship">
+      <metadata aid="id" pid="relationship.id">9</metadata>
+      <metadata aid="owner" pid="relationship.owner">Benny</metadata>
+      <metadata aid="pet" pid="relationship.pet">Slim</metadata>
+    </item>
+  </items>
+</hera>
