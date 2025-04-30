@@ -1,0 +1,7 @@
+rich>=14.0.0
+tenacity>=9.1.0
+openai>=1.70.0
+readchar>=4.2.1
+sqlalchemy>=2.0.40
+pyyaml>=6.0.2
+langdetect>=1.0.9

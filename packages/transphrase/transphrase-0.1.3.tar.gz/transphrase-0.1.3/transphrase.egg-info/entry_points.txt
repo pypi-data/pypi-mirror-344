@@ -1,0 +1,2 @@
+[console_scripts]
+transphrase = transphrase.cli:main
