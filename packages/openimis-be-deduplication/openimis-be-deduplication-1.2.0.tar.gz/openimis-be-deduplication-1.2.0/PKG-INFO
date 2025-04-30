@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: openimis-be-deduplication
+Version: 1.2.0
+Summary: The openIMIS Backend deduplication reference module.
+Home-page: https://openimis.org/
+Author: Seweryn Niedzielski
+Author-email: sniedzielski@soldevelo.com
+License: GNU AGPL v3
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+# openIMIS Backend deduplication reference module
