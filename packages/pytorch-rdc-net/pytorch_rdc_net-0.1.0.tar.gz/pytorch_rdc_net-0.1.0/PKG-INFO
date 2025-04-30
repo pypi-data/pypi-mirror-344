@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: pytorch-rdc-net
+Version: 0.1.0
+Summary: PyTorch implementation of the RDC-Net for 2D and 3D instance segmentation.
+Project-URL: Bug Tracker, https://github.com/fmi-faim/pytorch-rdc-net/issues
+Project-URL: Documentation, https://github.com/fmi-faim/pytorch-rdc-net#README.md
+Project-URL: Homepage, https://github.com/fmi-faim/pytorch-rdc-net.git
+Project-URL: Source Code, https://github.com/fmi-faim/pytorch-rdc-net
+Project-URL: User Support, https://github.com/fmi-faim/pytorch-rdc-net/issues
+Author-email: Tim-Oliver Buchholz <tim-oliver.buchholz@fmi.ch>
+License-Expression: BSD-3-Clause
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.11
+Requires-Dist: lightning
+Requires-Dist: pytorch-ignite
+Requires-Dist: torch
+Requires-Dist: torchist
+Description-Content-Type: text/markdown
+
+# PyTorch RDC-Net
+
+This is a PyTorch implementation of the [RDC-Net](https://github.com/fmi-basel/RDCNet) for instance segmentation of 2D and 3D images. Some demo training scripts can be found [here](https://github.com/fmi-faim/faim_rdcnet).
+
+
+## Citation
+If you find this work useful, please consider citing:
+
+```bibtex
+@inproceedings{ortiz2020,
+  title={RDCNet: Instance segmentation with a minimalist recurrent residual network},
+  author={Ortiz, Raphael and de Medeiros, Gustavo and Peters H.F.M., Antoine and Liberali, Prisca and Rempfler, Markus},
+  booktitle={International Workshop on Machine Learning in Medical Imaging},
+  year={2020},
+}
+```
