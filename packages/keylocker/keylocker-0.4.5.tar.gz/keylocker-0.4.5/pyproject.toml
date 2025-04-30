@@ -1,0 +1,28 @@
+[project]
+name = "keylocker"
+version = "0.4.5" # Убедитесь, что версия актуальна
+description = "Library with the CLI to save the encrypted secrets in the configuration file, but a transparent read and write the new settings in the app."
+readme = "README.md"
+license = { text = "MIT" } 
+authors = [
+    { name = "vpuhoff", email = "vpuhoff@live.ru" }
+]
+requires-python = ">=3.10" # Явно указываем поддержку Python
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta", # Примерный статус
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+dependencies = [] 
+
+# Стандартная секция для определения скриптов/точек входа
+[project.scripts]
+keylocker = "keylocker:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
