@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+mcp_schema_validator/__init__.py
+mcp_schema_validator/main.py
+mcp_schema_validator.egg-info/PKG-INFO
+mcp_schema_validator.egg-info/SOURCES.txt
+mcp_schema_validator.egg-info/dependency_links.txt
+mcp_schema_validator.egg-info/top_level.txt
