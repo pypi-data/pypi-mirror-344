@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+self_code_adk/self_code_adk.egg-info/PKG-INFO
+self_code_adk/self_code_adk.egg-info/SOURCES.txt
+self_code_adk/self_code_adk.egg-info/dependency_links.txt
+self_code_adk/self_code_adk.egg-info/requires.txt
+self_code_adk/self_code_adk.egg-info/top_level.txt
