@@ -1,0 +1,83 @@
+{
+ "imbens.BaseImbalancedEnsemble": [
+  [
+   "plot_torch.py",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\../../examples\\classification",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\auto_examples\\classification",
+   "An example of how to cooperate imbens with deep learning frameworks like PyTorch. In this example, we first define a simple MLP classifier using PyTorch, and pack  it into a scikit-learn-style wrapper class TorchMLPClassifier. We then use it as  the base estimator of imbens.ensemble.SelfPacedEnsembleClassifier and  train the ensemble on a toy imbalanced dataset.",
+   "Classification with PyTorch Neural Network"
+  ]
+ ],
+ "imbens.ImbalancedEnsembleClassifierMixin": [
+  [
+   "plot_torch.py",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\../../examples\\classification",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\auto_examples\\classification",
+   "An example of how to cooperate imbens with deep learning frameworks like PyTorch. In this example, we first define a simple MLP classifier using PyTorch, and pack  it into a scikit-learn-style wrapper class TorchMLPClassifier. We then use it as  the base estimator of imbens.ensemble.SelfPacedEnsembleClassifier and  train the ensemble on a toy imbalanced dataset.",
+   "Classification with PyTorch Neural Network"
+  ]
+ ],
+ "imbens.SelfPacedEnsembleClassifier": [
+  [
+   "plot_torch.py",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\../../examples\\classification",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\auto_examples\\classification",
+   "An example of how to cooperate imbens with deep learning frameworks like PyTorch. In this example, we first define a simple MLP classifier using PyTorch, and pack  it into a scikit-learn-style wrapper class TorchMLPClassifier. We then use it as  the base estimator of imbens.ensemble.SelfPacedEnsembleClassifier and  train the ensemble on a toy imbalanced dataset.",
+   "Classification with PyTorch Neural Network"
+  ]
+ ],
+ "imbens.datasets.make_imbalance": [
+  [
+   "plot_torch.py",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\../../examples\\classification",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\auto_examples\\classification",
+   "An example of how to cooperate imbens with deep learning frameworks like PyTorch. In this example, we first define a simple MLP classifier using PyTorch, and pack  it into a scikit-learn-style wrapper class TorchMLPClassifier. We then use it as  the base estimator of imbens.ensemble.SelfPacedEnsembleClassifier and  train the ensemble on a toy imbalanced dataset.",
+   "Classification with PyTorch Neural Network"
+  ]
+ ],
+ "imbens.ensemble.BaseImbalancedEnsemble": [
+  [
+   "plot_torch.py",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\../../examples\\classification",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\auto_examples\\classification",
+   "An example of how to cooperate imbens with deep learning frameworks like PyTorch. In this example, we first define a simple MLP classifier using PyTorch, and pack  it into a scikit-learn-style wrapper class TorchMLPClassifier. We then use it as  the base estimator of imbens.ensemble.SelfPacedEnsembleClassifier and  train the ensemble on a toy imbalanced dataset.",
+   "Classification with PyTorch Neural Network"
+  ]
+ ],
+ "imbens.ensemble.ImbalancedEnsembleClassifierMixin": [
+  [
+   "plot_torch.py",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\../../examples\\classification",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\auto_examples\\classification",
+   "An example of how to cooperate imbens with deep learning frameworks like PyTorch. In this example, we first define a simple MLP classifier using PyTorch, and pack  it into a scikit-learn-style wrapper class TorchMLPClassifier. We then use it as  the base estimator of imbens.ensemble.SelfPacedEnsembleClassifier and  train the ensemble on a toy imbalanced dataset.",
+   "Classification with PyTorch Neural Network"
+  ]
+ ],
+ "imbens.ensemble.SelfPacedEnsembleClassifier": [
+  [
+   "plot_torch.py",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\../../examples\\classification",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\auto_examples\\classification",
+   "An example of how to cooperate imbens with deep learning frameworks like PyTorch. In this example, we first define a simple MLP classifier using PyTorch, and pack  it into a scikit-learn-style wrapper class TorchMLPClassifier. We then use it as  the base estimator of imbens.ensemble.SelfPacedEnsembleClassifier and  train the ensemble on a toy imbalanced dataset.",
+   "Classification with PyTorch Neural Network"
+  ]
+ ],
+ "imbens.ensemble.base.BaseImbalancedEnsemble": [
+  [
+   "plot_torch.py",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\../../examples\\classification",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\auto_examples\\classification",
+   "An example of how to cooperate imbens with deep learning frameworks like PyTorch. In this example, we first define a simple MLP classifier using PyTorch, and pack  it into a scikit-learn-style wrapper class TorchMLPClassifier. We then use it as  the base estimator of imbens.ensemble.SelfPacedEnsembleClassifier and  train the ensemble on a toy imbalanced dataset.",
+   "Classification with PyTorch Neural Network"
+  ]
+ ],
+ "imbens.ensemble.base.ImbalancedEnsembleClassifierMixin": [
+  [
+   "plot_torch.py",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\../../examples\\classification",
+   "C:\\Users\\Admin\\OneDrive\\_Github\\imbalanced-ensemble\\docs\\source\\auto_examples\\classification",
+   "An example of how to cooperate imbens with deep learning frameworks like PyTorch. In this example, we first define a simple MLP classifier using PyTorch, and pack  it into a scikit-learn-style wrapper class TorchMLPClassifier. We then use it as  the base estimator of imbens.ensemble.SelfPacedEnsembleClassifier and  train the ensemble on a toy imbalanced dataset.",
+   "Classification with PyTorch Neural Network"
+  ]
+ ]
+}

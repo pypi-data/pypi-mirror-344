@@ -1,0 +1,42 @@
+
+
+Examples using ``imbens.datasets.make_imbalance``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. start-sphx-glr-thumbnails
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="An example of how to cooperate imbens with deep learning frameworks like PyTorch. In this example, we first define a simple MLP classifier using PyTorch, and pack  it into a scikit-learn-style wrapper class TorchMLPClassifier. We then use it as  the base estimator of imbens.ensemble.SelfPacedEnsembleClassifier and  train the ensemble on a toy imbalanced dataset.">
+
+.. only:: html
+
+  .. image:: /auto_examples/classification/images/thumb/sphx_glr_plot_torch_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_classification_plot_torch.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Classification with PyTorch Neural Network</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_classification_plot_torch.py`
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
