@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: new-port-checker
+Version: 1.0.4
+Summary: A Python tool for checking port availability
+Home-page: https://github.com/yourusername/new_port_checker
+Author: liuxiaojian
+Author-email: 107773270@qq.com
+License: UNKNOWN
+Description: # new_port_checker
+        
+        `new_port_checker` 是一个用于检查端口可用性的 Python 工具，支持单个端口和批量端口检查。
+        
+        ## 安装
+        ### 从 PyPI 安装
+        ```bash
+        pip install new_port_checker
+        git clone <仓库地址>
+        cd d:\文稿\shiguanghome
+        python port_checker.py 8080 --protocol tcp --host 127.0.0.1
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
