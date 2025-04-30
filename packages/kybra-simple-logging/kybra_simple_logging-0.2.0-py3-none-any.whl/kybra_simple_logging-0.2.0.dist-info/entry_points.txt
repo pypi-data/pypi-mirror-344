@@ -1,0 +1,2 @@
+[console_scripts]
+kslog = kybra_simple_logging.cli:main
