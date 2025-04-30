@@ -1,0 +1,18 @@
+
+{% import 'macros.tex' as m %}
+{% extends 'question_base.tex' %}
+
+% This ensures there is an answers-field.
+{% block question_foot %}
+\begin{choices}
+    {% filter permute_exam_answers(answer_permutation) %}
+        {% block answers %}
+        \item A
+        \item B
+        \item C
+        \item D
+        {% endblock %}
+    {% endfilter %}
+     \choice Don't know.
+\end{choices}
+{% endblock %}
