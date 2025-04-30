@@ -1,0 +1,11 @@
+latexdl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+latexdl/__main__.py,sha256=UzovYfdg_xHRoKc2nNKH9jkH-cDvgOS9Ixcn5_WAkZ4,102
+latexdl/_bibtex.py,sha256=NRLFXwaYdeXwJUboCBLlBalGoywTruczlFLeBpmgj9k,8125
+latexdl/_fix_urls.py,sha256=8TTkwofmxvhVKpltNP5cjUYzgIh6DgkZteblXbKTKyQ,2356
+latexdl/expand.py,sha256=w-tnoLvN0xD7ERoCQRgkfefpq9U0WxX-fieyzmPv4YU,980
+latexdl/main.py,sha256=KVWRZRfDmccNF_xugXG58ynMlIvrBxlFEdKXZO0DeD8,9165
+latexdl/strip.py,sha256=mJJs_R-rn8W2iVBEVXr6ehhxhD-MPBiFtZYItwCvM_Y,1407
+latexdl-1.0.0.dist-info/METADATA,sha256=haEMOmz6n7wy6Ldn5Izivg_46EOncRyAnzyDyxPSiCc,617
+latexdl-1.0.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+latexdl-1.0.0.dist-info/entry_points.txt,sha256=gmu_f8U51tYwGteNe-E1WXjPdIK3Xs-ap3U64hsIChc,45
+latexdl-1.0.0.dist-info/RECORD,,
