@@ -1,0 +1,2 @@
+[console_scripts]
+ansible-scaffold = ansible_scaffold:main
