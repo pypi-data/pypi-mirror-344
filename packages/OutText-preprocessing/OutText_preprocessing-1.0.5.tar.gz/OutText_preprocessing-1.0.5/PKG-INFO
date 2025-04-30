@@ -1,0 +1,179 @@
+Metadata-Version: 2.1
+Name: OutText_preprocessing
+Version: 1.0.5
+Summary: ✨ A powerful Python package for outlier removal and text preprocessing
+Home-page: https://github.com/Anurag-raj03/OutText_preprocessing_library
+Author: Anurag Raj
+Author-email: anuragraj4483@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+```markdown
+# 🎉 **Outlier Remover & Text Preprocessing** 🚀
+
+## 📚 Overview
+Welcome to **Outlier Remover & Text Preprocessing**, a powerful Python package designed to help you **clean data** by detecting and handling **outliers** and performing advanced **text preprocessing**. Whether you're working with numerical data or raw text data, this library provides sophisticated tools to make your data more robust, cleaner, and ready for analysis or machine learning models. ✨
+
+This package features a wide array of **outlier detection techniques**, including methods to handle extreme values, smooth outliers, and adaptively trim them. Additionally, it offers a **text preprocessing** module that helps clean and standardize text data for natural language processing (NLP) tasks. 📝
+
+The methods provided here are unique and go beyond the typical **Z-score** and **IQR methods** you'll find elsewhere, with added features like **adaptive trimming**, **smooth boundary capping**, and **local standardization** for more dynamic and data-friendly cleaning. 🔥
+
+### 🚀 Key Features
+- **Outlier Detection Methods**: Detect and handle outliers using advanced methods like **Yeo-Johnson Transformation**, **Smooth Boundary Capping**, and **Adaptive Trimming**. 🌟
+- **Impact Reduction**: Cap extreme values to prevent them from affecting the rest of your data. 🛑
+- **Advanced Preprocessing for Text Data**: Clean text data by removing stop words, punctuation, and applying stemming or lemmatization for NLP tasks. 🔍
+- **Local Data Standardization**: Apply standardization locally using rolling windows to capture the underlying data trends. 🌀
+
+## 🔥 Why This Library Is Unique
+The **Outlier Remover & Text Preprocessing** library doesn't just remove outliers—it **reduces the impact of extreme values** on your dataset in a way that preserves as much useful information as possible. Traditional methods often clip or discard valuable data, but our techniques, like **Smooth Boundary Capping** and **Adaptive Trimming**, provide more **dynamic handling** of outliers. Moreover, **Local Standardization** helps standardize your data in a more context-sensitive manner, which is especially useful in time series or sequential data. 🧩
+
+In addition, the text preprocessing capabilities are designed for quick and easy integration into any NLP project, with options for stop word removal, punctuation cleaning, and text normalization. 🌍
+
+## ⚡ Installation
+
+Install the package via pip with the following command:
+
+```bash
+pip install outlier-remover
+```
+
+## 🛠️ How to Use the Library
+
+### 1. **Outlier Removal Example** 🎯
+
+Let's start by using the **Outlier Remover** to clean your data. The library supports several methods like **Z-score**, **Yeo-Johnson**, and others to detect outliers.
+
+```python
+from OutText_preprocessing.outlier_removal import OutlierRemover
+import pandas as pd
+
+# Sample data with outliers
+data = pd.DataFrame({
+    'feature1': [10, 20, 30, 1000, 50, 60],
+    'feature2': [5, 15, 20, 200, 25, 30]
+})
+
+# Initialize the OutlierRemover with the desired method ('yeo_johnson', 'zscore', etc.)
+outlier_remover = OutlierRemover(method='yeo_johnson', threshold=2.0)
+
+# Apply outlier removal
+cleaned_data = outlier_remover.fit_transform(data)
+
+print(cleaned_data)
+```
+
+This will clean the outliers using the **Yeo-Johnson** transformation, which works for both positive and negative values. You can also try other methods like **Z-score** or **Impact Reduction**.
+
+### 2. **Handling Multiple Columns** 🔄
+
+You can specify different methods for different columns. This gives you flexibility when cleaning datasets with multiple variables.
+
+```python
+methods_columns_dict = {
+    'zscore': ['feature1'],
+    'yeo_johnson': ['feature2']
+}
+
+cleaned_data = outlier_remover.multi_outlier_multi_columns(data, methods_columns_dict)
+
+print(cleaned_data)
+```
+
+### 3. **Text Preprocessing Example** 📝
+
+For text-based data, this library offers a **Text Preprocessing** module that cleans and normalizes your data for NLP tasks. Here's how to use it:
+
+```python
+from OutText_preprocessing.text_preprocessing import TextPreprocessor
+
+# Sample text data
+texts = ["This is an example sentence!", "Outlier detection is fun!!"]
+
+# Initialize the TextPreprocessor
+text_preprocessor = TextPreprocessor()
+
+# Preprocess the text
+processed_texts = text_preprocessor.clean_texts(texts)
+
+print(processed_texts)
+```
+
+This will clean the text by removing unnecessary punctuation, stop words, and applying stemming or lemmatization.
+
+### 4. **Unique Outlier Removal Methods** 🌟
+
+#### **Smooth Boundary Capping** 🛡️
+
+Instead of hard-clipping outliers, this method gently pulls extreme values towards the boundary, preserving the data's integrity.
+
+```python
+outlier_remover = OutlierRemover(method='smooth_capping', threshold=2.0, smooth_factor=0.9)
+cleaned_data = outlier_remover.fit_transform(data)
+print(cleaned_data)
+```
+
+#### **Adaptive Trimming** 🧩
+
+This method trims outliers using **Interquartile Range (IQR)** and replaces them with the mean of the non-outlier values, thus reducing their impact.
+
+```python
+outlier_remover = OutlierRemover(method='adaptive_trimming', threshold=1.5)
+cleaned_data = outlier_remover.fit_transform(data)
+print(cleaned_data)
+```
+
+#### **Local Standardization** 🌍
+
+Apply standardization within a rolling window of the data, useful for time series or sequential data where local trends need to be preserved.
+
+```python
+outlier_remover = OutlierRemover(method='local_standardization', window_size=5)
+cleaned_data = outlier_remover.fit_transform(data)
+print(cleaned_data)
+```
+
+### 5. **Text Preprocessing Methods** ✨
+
+- **Remove Stop Words**: Automatically removes common words that don't contribute much meaning (e.g., 'the', 'is').
+- **Remove Punctuation**: Cleans text by eliminating all punctuation marks.
+- **Stemming & Lemmatization**: Reduces words to their root forms, making them easier to analyze.
+  
+```python
+processed_texts = text_preprocessor.clean_texts(texts)
+```
+
+### 6. **Other Available Methods** ⚙️
+
+- **Z-score**: Removes rows based on Z-score threshold. 📉
+- **Yeo-Johnson**: A transformation that works for both positive and negative data distributions. 🌈
+- **Impact Reduction**: Caps outliers at a specified threshold to limit their influence. 🛑
+- **Adaptive Trimming**: Uses IQR to trim extreme values and replaces them with the mean. 🔨
+- **Smooth Boundary Capping**: Softly caps extreme values towards a boundary, avoiding hard clipping. 🎯
+- **Local Standardization**: Standardizes values within a local window to account for regional trends. 🔄
+
+## 📑 Documentation
+
+For more detailed documentation, visit [here](https://your-project-docs.example.com). 📚
+
+## 🧑‍💻 Contributing
+
+We welcome contributions to improve this library! If you’d like to add new features or fix bugs, please open an issue or submit a pull request. Contributions are always appreciated! 🙌
+
+## 🔏 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 📜
+
+---
+
+
+
