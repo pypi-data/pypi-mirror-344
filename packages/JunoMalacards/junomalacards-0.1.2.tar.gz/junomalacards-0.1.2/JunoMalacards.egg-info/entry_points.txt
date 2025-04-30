@@ -1,0 +1,2 @@
+[console_scripts]
+JunoMalacards = JunoMalacards.core:main

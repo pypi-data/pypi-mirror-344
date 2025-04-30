@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: JunoMalacards
+Version: 0.1.2
+Summary: crawler the Malacards from Juno
+Author: Juno of China
+Requires-Python: >=3.7
+Requires-Dist: DrissionPage>=3.0
+Requires-Dist: lxml>=4.9.0
+Requires-Dist: requests>=2.28.0
