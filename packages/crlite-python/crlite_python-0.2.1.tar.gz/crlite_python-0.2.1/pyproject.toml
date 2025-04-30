@@ -1,0 +1,32 @@
+[build-system]
+requires = ["maturin>=1.8,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "crlite-python"
+descripition = "CRLite in Python using PyO3"
+authors = [
+    { name = "Teja Juluru", email = "44445080+hawkeyes1094@users.noreply.github.com"}
+]
+readme = "README.md"
+license = { file = "LICENSE.txt" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+version = "0.2.1"
+
+[project.urls]
+repository = "https://github.com/hawkeyes1094/crlite-python"
+
+[project.optional-dependencies]
+tests = [
+    "pytest",
+]
+
+[tool.maturin]
+python-source = "python"
+module-name = "crlite_python._internal"
+features = ["pyo3/extension-module"]
