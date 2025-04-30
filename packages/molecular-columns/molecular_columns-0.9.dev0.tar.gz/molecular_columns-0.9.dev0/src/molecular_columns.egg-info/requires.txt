@@ -1,0 +1,7 @@
+astropy>=5.0
+numpy
+pytest
+pytest-cov
+
+[:python_version < "3.9"]
+importlib-resources
