@@ -1,0 +1,11 @@
+dueling_bandit/__init__.py,sha256=Pru0BlFBASFCFo7McHdohtKkUtgMPDwbGfyUZlE2_Vw,21
+dueling_bandit/agents.py,sha256=k6hBiiMl7zJKPEm0ulvAcIu-Mw0ZygOcZ-ihTrbx5R4,6401
+dueling_bandit/datasets.py,sha256=oqSgG7JySrro6xNMiOHUdCit2DNKEHwZJtCA7gFawXE,1459
+dueling_bandit/environment.py,sha256=oiDwHVdKkO5zBqMEj2_xaNaeEyruKFG8OjW12iI7iPU,3751
+dueling_bandit/experiments.py,sha256=QOCGKG_qgnZdnBQtHAc8I5f-xeszA63QbAMGtCFiERI,4668
+dueling_bandit/plotting.py,sha256=hgLZuqyWyouP8PzRwRRk38ixl9VITBO5phZPC-P9kZQ,3573
+dueling_bandit-0.1.0.dist-info/licenses/LICENSE,sha256=fbLGJDTRl91pcvrt3vhg2QqKP-puyNRlsZDzX5CO8sg,1078
+dueling_bandit-0.1.0.dist-info/METADATA,sha256=zo7ydoKGEV7PCHPIUMdUyMVZz_7hw7VjxSG9qQYsHa0,2974
+dueling_bandit-0.1.0.dist-info/WHEEL,sha256=ck4Vq1_RXyvS4Jt6SI0Vz6fyVs4GWg7AINwpsaGEgPE,91
+dueling_bandit-0.1.0.dist-info/top_level.txt,sha256=yV_5HXoZ_ehY3gYmks93JwksO1JME9Nmij-MOteyRjM,15
+dueling_bandit-0.1.0.dist-info/RECORD,,
