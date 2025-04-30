@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: x-client-transaction-id
+Version: 0.0.1
+Summary: Twitter X-Client-Transaction-Id generator written in python.
+Home-page: https://pypi.python.org/pypi/XClientTransaction
+Author: Sarabjit Dhiman
+Author-email: hello@sarabjitdhiman.com
+License: MIT
+Keywords: XClientTransaction,twitter transaction id,client transaction id twitter,tid generator,x client transaction id generator,xid twitter,tweeterpy
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Unix
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: XClientTransaction
+
+This is a copy of XClientTransaction package. Check more details on [XClientTransaction](https://pypi.python.org/pypi/XClientTransaction).
