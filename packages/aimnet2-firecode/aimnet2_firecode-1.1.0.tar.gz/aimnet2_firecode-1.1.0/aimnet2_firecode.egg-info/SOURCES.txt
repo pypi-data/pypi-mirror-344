@@ -1,0 +1,7 @@
+README.md
+setup.py
+aimnet2_firecode.egg-info/PKG-INFO
+aimnet2_firecode.egg-info/SOURCES.txt
+aimnet2_firecode.egg-info/dependency_links.txt
+aimnet2_firecode.egg-info/requires.txt
+aimnet2_firecode.egg-info/top_level.txt
