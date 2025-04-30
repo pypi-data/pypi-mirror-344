@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: utils_psr1983
+Version: 1.0
+Summary: Contains Git-Utils and Cloud-Utils
+Project-URL: Homepage, https://github.com/pypa/python-demo-utils
+Project-URL: Issues, https://github.com/pypa/python-demo-utils/issues
+Author-email: Shunmuga <psr1983@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+
+# Utils
+
+- Contains the following utils
+  - Git-Utils
+  - Cloud-Utils
+
+## Git-Utils
+
+- Supports the following operations
+  - Download File
+  - Upload file
+
+## Cloud-Utils
+
+- Supports the following operations
+- Listing Cloud Providers
