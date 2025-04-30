@@ -1,0 +1,2 @@
+recursive-include my_packaging/ *.md
+recursive-include my_packaging/ *.json
