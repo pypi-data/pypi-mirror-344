@@ -1,0 +1,10 @@
+realtime_vad/__init__.py,sha256=DtciXg81SkEDqL-_1cKHdLRxzlfxwWDl2N8hdPvqDrY,243
+realtime_vad/audio_cache.py,sha256=NXMqiyz6WHmfr8m45tl6_r7set4QFgUUO4HafDrWHrM,1811
+realtime_vad/detector.py,sha256=2j48psu1Z7VdsYkRIGE3HOghiIjDsWmggxe8mbZAokA,10700
+realtime_vad/utils.py,sha256=R1ZrTj1CNvlqUzhL719w7hOMhoOxf2gAPDZL-9IVAWk,893
+realtime_vad/files/silero_vad.jit,sha256=kpEbKrhyiTTvfCzYF-VKF89uBezpPpU5SFQL_A-TaOE,2270566
+realtime_vad_python-0.1.1.dist-info/licenses/LICENSE,sha256=ddZqWbwZEpDLJDLQQqQQ5_zLOizq1bh5IA3h5CyF218,1064
+realtime_vad_python-0.1.1.dist-info/METADATA,sha256=5DwCkSiktaxNtV1kQo51g2nkQq0ILp6n4zSvGwx5QSY,4518
+realtime_vad_python-0.1.1.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+realtime_vad_python-0.1.1.dist-info/top_level.txt,sha256=w7DhAXiQVrolVVzHxlJXGBY1-fHQeVs0ESpjXbNS1iw,13
+realtime_vad_python-0.1.1.dist-info/RECORD,,
