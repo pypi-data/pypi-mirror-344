@@ -1,0 +1,281 @@
+<div align="center">
+<img width="200" alt="EvoloPy-logo" src="https://github.com/user-attachments/assets/496f9a76-1fcc-4e4f-9586-8f327a434134">
+</div>
+
+# EvoloPy: Nature-Inspired Optimization in Python
+
+[![PyPI version](https://badge.fury.io/py/EvoloPy.svg)](https://badge.fury.io/py/EvoloPy)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/release/python-360/)
+
+EvoloPy is a powerful, easy-to-use optimization library featuring 14 nature-inspired algorithms, performance visualizations, and parallel processing capabilities.
+
+## ✨ Features
+
+- 🔍 **14 Optimizers**: PSO, GWO, MVO, and more
+- 🚀 **Parallel Processing**: Multi-core CPU and GPU acceleration (v3.0+)
+- 📊 **Visualization Tools**: Convergence curves and performance comparisons
+- 🔧 **Simple API**: Consistent interface across all algorithms
+- 📋 **24 Benchmark Functions**: Extensive testing suite
+
+## 📦 Installation
+
+### Basic Installation
+```bash
+pip install EvoloPy
+```
+
+### With GPU Acceleration
+```bash
+pip install EvoloPy[gpu]
+```
+
+## 🚀 Quick Start Guide
+
+### 1. Simple Optimization
+
+```python
+from EvoloPy.api import run_optimizer
+
+# Run PSO on benchmark function F1
+result = run_optimizer(
+    optimizer="PSO",
+    objective_func="F1",
+    dim=30,
+    population_size=50,
+    iterations=100
+)
+
+print(f"Best fitness: {result['best_fitness']}")
+print(f"Best solution: {result['best_solution']}")
+print(f"Execution time: {result['execution_time']} seconds")
+```
+
+### 2. Optimize Your Custom Function
+
+```python
+import numpy as np
+from EvoloPy.optimizers import PSO
+
+# Define your custom objective function
+def my_equation(x):
+    # Example: Minimize f(x) = sum(x^2) + sum(sin(x))
+    return np.sum(x**2) + np.sum(np.sin(x))
+
+# Run optimization on your function
+result = PSO.PSO(
+    objf=my_equation,  # Your custom function
+    lb=-10,            # Lower bound
+    ub=10,             # Upper bound
+    dim=5,             # Dimension
+    PopSize=30,        # Population size
+    iters=100          # Max iterations
+)
+
+# Get results
+best_solution = result.bestIndividual
+best_fitness = my_equation(best_solution)
+
+print(f"Best solution: {best_solution}")
+print(f"Best fitness: {best_fitness}")
+```
+
+### 3. Parallel Processing (v3.0+)
+
+```python
+from EvoloPy.api import run_optimizer, get_hardware_info
+
+# Check available hardware
+hw_info = get_hardware_info()
+print(f"CPU cores: {hw_info['cpu_count']}")
+if hw_info['gpu_available']:
+    print(f"GPU: {hw_info['gpu_names'][0]}")
+
+# Run with parallel processing
+result = run_optimizer(
+    optimizer="PSO",
+    objective_func="F1",
+    dim=30,
+    population_size=50,
+    iterations=100,
+    num_runs=10,                # Number of independent runs
+    enable_parallel=True,       # Enable parallel processing
+    parallel_backend="auto"     # Auto-select CPU or GPU
+)
+```
+
+### 4. Compare Multiple Optimizers
+
+```python
+from EvoloPy.api import run_multiple_optimizers
+
+# Compare PSO, GWO and MVO on F1 and F5
+results = run_multiple_optimizers(
+    optimizers=["PSO", "GWO", "MVO"],
+    objective_funcs=["F1", "F5"],
+    dim=30,
+    population_size=50,
+    iterations=100,
+    export_convergence=True     # Generate convergence plots
+)
+```
+
+### 5. Command Line Usage
+
+```bash
+# List available optimizers and benchmarks
+evolopy --list
+
+# Run PSO on F1
+evolopy --optimizer PSO --function F1 --dim 30 --iterations 100
+
+# Run with parallel processing
+evolopy --optimizer PSO --function F1 --dim 30 --iterations 100 --parallel
+```
+
+## 📋 Available Optimizers
+
+| Abbreviation | Algorithm Name                   |
+|--------------|----------------------------------|
+| PSO          | Particle Swarm Optimization      |
+| GWO          | Grey Wolf Optimizer              |
+| MVO          | Multi-Verse Optimizer            |
+| MFO          | Moth Flame Optimization          |
+| CS           | Cuckoo Search                    |
+| BAT          | Bat Algorithm                    |
+| WOA          | Whale Optimization Algorithm     |
+| FFA          | Firefly Algorithm                |
+| SSA          | Salp Swarm Algorithm             |
+| GA           | Genetic Algorithm                |
+| HHO          | Harris Hawks Optimization        |
+| SCA          | Sine Cosine Algorithm            |
+| JAYA         | JAYA Algorithm                   |
+| DE           | Differential Evolution           |
+
+## 🛠️ How to Optimize Your Own Function
+
+### Simple Custom Functions
+
+```python
+import numpy as np
+from EvoloPy.optimizers import PSO
+
+# Step 1: Define your objective function (minimize this)
+def my_equation(x):
+    # Example: Rosenbrock function
+    sum_value = 0
+    for i in range(len(x) - 1):
+        sum_value += 100 * (x[i + 1] - x[i]**2)**2 + (x[i] - 1)**2
+    return sum_value
+
+# Step 2: Set optimization parameters
+lb = -5             # Lower bound
+ub = 5              # Upper bound
+dim = 10            # Dimension (number of variables)
+population = 40     # Population size
+iterations = 200    # Maximum iterations
+
+# Step 3: Run the optimizer
+result = PSO.PSO(my_equation, lb, ub, dim, population, iterations)
+
+# Step 4: Get and use the results
+best_solution = result.bestIndividual
+best_fitness = my_equation(best_solution)
+print(f"Best solution: {best_solution}")
+print(f"Best fitness: {best_fitness}")
+```
+
+### Complex Functions with Additional Data
+
+```python
+import numpy as np
+from EvoloPy.optimizers import PSO
+
+# For functions that need additional data, use a class-based approach
+class MyOptimizationProblem:
+    def __init__(self, data, weights):
+        self.data = data
+        self.weights = weights
+    
+    def objective_function(self, x):
+        # Example: Weighted sum of squared error
+        error = np.sum(self.weights * (self.data - x)**2)
+        return error
+
+# Create your optimization problem with data
+my_data = np.random.rand(10)
+my_weights = np.random.rand(10)
+problem = MyOptimizationProblem(my_data, my_weights)
+
+# Run optimization
+result = PSO.PSO(
+    problem.objective_function,
+    lb=-10, 
+    ub=10, 
+    dim=10, 
+    PopSize=30, 
+    iters=100
+)
+
+print(f"Best solution: {result.bestIndividual}")
+print(f"Best fitness: {problem.objective_function(result.bestIndividual)}")
+```
+
+## 🚄 Parallel Processing (v3.0+)
+
+Significantly speed up optimization by using multiple CPU cores or GPUs.
+
+```python
+from EvoloPy.api import run_optimizer
+
+# Enable parallel processing
+result = run_optimizer(
+    optimizer="PSO",
+    objective_func="F1",
+    dim=30,
+    population_size=50,
+    iterations=100,
+    num_runs=10,
+    enable_parallel=True,       # Enable parallel processing
+    parallel_backend="auto",    # "auto", "multiprocessing", or "cuda"
+    num_processes=None          # None = auto-detect optimal count
+)
+```
+
+## 👨‍💻 Leadership & Credits
+
+### Parallel Processing System (v3.0)
+
+The parallel processing system in v3.0 was implemented by **Jaber Jaber** ([@jaberjaber23](https://github.com/jaberjaber23)), providing:
+
+- **Dramatic Performance Improvements**: Up to 20x speedup on large tasks
+- **Multi-platform Support**: Utilizes both CPU cores and CUDA GPUs
+- **Smart Hardware Detection**: Automatically configures optimal settings
+- **Improved Scalability**: Handles much larger optimization problems
+- **Excellent Developer Experience**: Simple API with automatic backend selection
+
+For details on Jaber's parallel processing implementation, see [changes_v3.md](changes_v3.md).
+
+### Original EvoloPy Concept
+
+Original library concept and initial algorithms by Faris, Aljarah, Mirjalili, Castillo, and Guervós.
+
+## 📄 Citation
+
+If you use EvoloPy in your research, please cite:
+
+```bibtex
+@inproceedings{faris2016evolopy,
+  title={EvoloPy: An Open-source Nature-inspired Optimization Framework in Python},
+  author={Faris, Hossam and Aljarah, Ibrahim and Mirjalili, Seyedali and Castillo, Pedro A and Guervós, Juan Julián Merelo},
+  booktitle={IJCCI (ECTA)},
+  pages={171--177},
+  year={2016}
+}
+```
+
+## 📜 License
+
+EvoloPy is licensed under the MIT License.
+
+
