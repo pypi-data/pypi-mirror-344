@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+scripts/xnat_tagger.py
+xnattagger/__init__.py
+xnattagger/__version__.py
+xnattagger/config/__init__.py
+xnattagger/config/tagger.yaml
+xnattagger_kkurk.egg-info/PKG-INFO
+xnattagger_kkurk.egg-info/SOURCES.txt
+xnattagger_kkurk.egg-info/dependency_links.txt
+xnattagger_kkurk.egg-info/requires.txt
+xnattagger_kkurk.egg-info/top_level.txt
