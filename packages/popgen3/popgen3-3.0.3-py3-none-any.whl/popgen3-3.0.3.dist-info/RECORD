@@ -1,0 +1,13 @@
+popgen/__init__.py,sha256=S1vITZI6nN57ndS2oUPgFbUrByQSF_5iznTDo0RTRNM,142
+popgen/config.py,sha256=BJrfx5rZC7oEdKjiDrk2ezdy6wPZDmA8wN1oYC4v8bc,2340
+popgen/data.py,sha256=qM0wBVYl8wz1vYIJfQzgQphrUgq7E8UyV95KHqlmTxI,4758
+popgen/draw.py,sha256=17_zBG6qfMIZ4vwGMrHr7hPGMw1w6Va6IoCYUaK7lrc,5738
+popgen/ipf.py,sha256=49HSBczZK9gV3D0q9S2_nhrEWfpy3AfZdIde9Sov8H8,18279
+popgen/output.py,sha256=zqtGYKQ3zCkJFYIYnW5AkoaSu_vu1DgMxaBcNFyoOqo,18436
+popgen/project.py,sha256=oDo-ZOfKeRnkL1GddOzrMcCv2IABhIUeXXDFv0hvdqA,5926
+popgen/reweighting.py,sha256=pVkYve-Kfb6Hask0ekGj8dRcHvNGgx62SiMexhxT6ls,13652
+popgen3-3.0.3.dist-info/METADATA,sha256=RG01iZvKr4nfkRontLoWQtJ9lDr8Q1pT6Kldf6kAALY,3094
+popgen3-3.0.3.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+popgen3-3.0.3.dist-info/entry_points.txt,sha256=KpXiW55r67ObGaPGgM2mTX2SBP0bCqOgkP_GdyitXOc,47
+popgen3-3.0.3.dist-info/top_level.txt,sha256=g6wJC8kpE8h2Uza3bqtVWD0raw8qTFRua8SJ2Xpf6UM,7
+popgen3-3.0.3.dist-info/RECORD,,
