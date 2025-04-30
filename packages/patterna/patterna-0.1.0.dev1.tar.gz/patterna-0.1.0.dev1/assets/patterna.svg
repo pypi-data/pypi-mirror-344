@@ -1,0 +1,30 @@
+<svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+  <style>
+    .shape { stroke: #333; stroke-width: 2; fill: none; }
+    .highlight { stroke: #4CAF50; stroke-width: 3; fill: none; }
+    .glass {
+    stroke: #555;
+    stroke-width: 2;
+    fill: none;
+    transform-origin: 225px 60px;
+    animation: pulse 3s ease-in-out infinite;
+    }
+    .handle { stroke: #555; stroke-width: 4; }
+
+    @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+    }
+  </style>
+
+  <!-- Shapes -->
+  <rect x="80" y="30" width="40" height="40" class="shape" />
+  <circle cx="225" cy="60" r="20" class="highlight" />
+  <polygon points="370,80 390,30 350,30" class="shape" />
+  <rect x="480" y="30" width="40" height="40" class="shape" />
+
+  <!-- Magnifying glass -->
+  <circle cx="225" cy="60" r="30" class="glass" />
+  <line x1="245" y1="80" x2="280" y2="115" class="handle" />
+</svg>
