@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: pymicro-vad2
+Version: 1.0.2
+Summary: Self-contained voice activity detector
+Home-page: https://github.com/Brishen/pymicro-vad
+Author: Michael Hansen
+Author-email: Michael Hansen <mike@rhasspy.org>
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/Brishen/pymicro-vad
+Project-URL: Bug Tracker, https://github.com/Brishen/pymicro-vad/issues
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# microVAD
+
+Self-contained voice activity detector (VAD) that uses the machine learning architecture from [microWakeWord](https://github.com/kahrendt/microWakeWord/).
+
+
+## Installation
+
+``` sh
+pip install pymicro_vad2
+```
+
+
+## Usage
+
+``` python
+from pymicro_vad import MicroVad
+
+vad = MicroVad()
+threshold = 0.5
+
+# Process 10ms chunks of 16-bit mono PCM @16Khz
+while audio := get_10ms_of_audio():
+    assert len(audio) == 160 * 2  # 160 samples
+    speech_prob = vad.Process10ms(audio)
+    if speech_prob < 0:
+        print("Need more audio")
+    elif speech_prob > threshold:
+        print("Speech")
+    else:
+        print("Silence")
+```
+
+
+## Building
+
+Ensure you have `python3-dev` and `build-essential` installed.
+
+Run `script/setup` to create a virtual environment, then `script/build` to build the extension locally.
