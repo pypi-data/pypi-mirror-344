@@ -1,0 +1,10 @@
+uncloud/__init__.py,sha256=XlryHGhkFAD9D3MIWERYYjgjccoH4divqEcDnaSnUOg,125
+uncloud/__main__.py,sha256=mWeO7OAFQgPOTzdoWfvGvIg4nLdwR5sNQKsRZSyt_rY,1938
+uncloud/download.py,sha256=dxDoJgoD6QS0av_9EqgItZlSDw_xWXISKfsoADjqW34,11433
+uncloud/extract.py,sha256=JJFcsDmf8p__RvJ5hR1hLJFap9QA1dWftFq7OHGYjRw,5101
+uncloud/uncloud.py,sha256=4V1Zg5hzm9rbIo5m86fa0ej-2Uc2EHr5sbVsvfRYulQ,3092
+uncloud-0.0.1.dist-info/METADATA,sha256=QskXrtKXK4Lt17xbEhGvv8j79UPw27dKjJcFKCzdRko,1542
+uncloud-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+uncloud-0.0.1.dist-info/entry_points.txt,sha256=Rk_w4KKne2n55igMUCG0clkpTlUl7PhlhGXzCFAVWe4,50
+uncloud-0.0.1.dist-info/licenses/LICENSE,sha256=m2hh_XLiKVx4kNn30_3d2O5A0lm0oTCaTnWPviDqgP0,1064
+uncloud-0.0.1.dist-info/RECORD,,
