@@ -1,0 +1,78 @@
+Metadata-Version: 2.4
+Name: amISelected
+Version: 0.1.2
+Summary: A small repo to check whether you have been selected
+Home-page: https://github.com/leoguignard/amISelected
+Author: Leo Guignard
+Author-email: leo.guignard@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/leoguignard/AmISelected/issues
+Project-URL: Documentation, https://github.com/leoguignard/AmISelected#README.md
+Project-URL: Source Code, https://github.com/leoguignard/AmISelected
+Project-URL: User Support, https://github.com/leoguignard/AmISelected/issues
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Am I Selected?
+
+Well, are you?
+
+## What is that?
+
+This is a small program to automatically check whether you went thourgh the next step of the CNRS concours.
+
+It is using the [webpage](https://www.coudert.name/concours_cnrs_2024.html) that [François-Xavier Coudert](https://twitter.com/fxcoudert) is maintaining (many thanks to him)
+
+The command will check every 10 minutes if you status has changed from the previous time it checked.
+
+If it has changed it will send you an email telling you whether you have progressed or not (it might be a bit sarcastic telling you).
+
+It will always send an email every 4 hours (except at night) so you are sure that the program is still running.
+
+## Installation
+
+The easiest is to install it directly with `pip`:
+
+```shell
+pip install amISelected
+```
+
+## Usage
+
+Once installed, you can run the following command:
+
+```shell
+amISelected --name lastname firstname \
+            --year 2024 \
+            --username your_username \
+            --smtp smtp.your.server.com \
+            --port 465 \
+            --recipient you@mail.com \
+```
+
+Your `smtp` password will be then asked (leave empty if you don't want to recieve emails).
+
+It might look a bit fishy ... But I don't know how to do otherwise.
+The source code is available, you can still have a look at it or just not give your password.
+
+## Troubleshooting
+
+You can use the help of the command:
+
+```shell
+amISelected --help
+```
+
+You might have problem to recieve emails. If so, you can always use a throwaway gmail account and setup a app password as explained [there](https://support.google.com/accounts/answer/185833).

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/amISelected/__init__.py
+src/amISelected/read_html.py
+src/amISelected.egg-info/PKG-INFO
+src/amISelected.egg-info/SOURCES.txt
+src/amISelected.egg-info/dependency_links.txt
+src/amISelected.egg-info/entry_points.txt
+src/amISelected.egg-info/top_level.txt
