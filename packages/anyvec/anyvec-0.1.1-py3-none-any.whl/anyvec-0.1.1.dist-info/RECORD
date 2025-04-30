@@ -1,0 +1,15 @@
+anyvec/client.py,sha256=o35sAQR_CdMWL5CusZBPf0BVEdEPYug8EOrvqQINIBw,2580
+anyvec/exceptions.py,sha256=tkIr1uuxV7PcG65y2YwgsOgLie0xEsXE_lw9M6VfEOI,2709
+anyvec/models.py,sha256=JB3rE8iwZKhB6j1GPCcBPYxd8-ItjoEybNXY2xjNFr8,979
+anyvec/processing/audio.py,sha256=9iocq66UJ6OKQ6tGf5hISKrYHAo9UF-Lblapx0xvh4Y,878
+anyvec/processing/document.py,sha256=0XGxI_GD99BX8aXl2asCFpWQUJJHJK1VsahCQ_HUshQ,10894
+anyvec/processing/filetype_maps.py,sha256=inu2-r5tWPiqn3snHKQiYPugyxfEUzl0KNmL7bcOPo4,5569
+anyvec/processing/processor.py,sha256=RvI7xXb40FSZCR2a1JKs6wRLyxFm1uitz4znCNxxFeA,1466
+anyvec/processing/video.py,sha256=iUWK5L8c7x8JumLf9ucV-V4YKzevLVYVQvBzHqnYFWY,2898
+anyvec/tests.py,sha256=7Zle8EExreD6UzgM6wqoU_YSyk6UxnIVgBsYMhvBGA8,24388
+anyvec/vectorization/utils.py,sha256=d8rt5eEeLGjlWsUZHMqr1qKX6aSttvnMbZ_q5E_Gzs4,399
+anyvec/vectorization/vectorizer.py,sha256=yXGgLzTDHasNMMY30XRVtqKaze6W5Sf2C6Bg57aviNE,1197
+anyvec-0.1.1.dist-info/LICENSE,sha256=6BLF2dPp3G7_gVqo6X-R1vjCaoRbzLLPAwKM_fIrUCE,1068
+anyvec-0.1.1.dist-info/METADATA,sha256=hYdgAekwOprs0RXEBmcgUI0h1bH9NDrcCVFlHp3_x0M,5023
+anyvec-0.1.1.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+anyvec-0.1.1.dist-info/RECORD,,
