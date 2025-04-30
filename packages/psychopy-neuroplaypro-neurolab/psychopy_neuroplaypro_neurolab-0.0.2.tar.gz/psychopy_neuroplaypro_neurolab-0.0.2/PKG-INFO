@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: psychopy-neuroplaypro-neurolab
+Version: 0.0.2
+Summary: NeuroPlay EEG recording plugin for PsychoPy Builder
+Author-email: Enicast <enicaster@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/Enicast/psychopy-neuroplaypro-neurolab
+Project-URL: Repository, https://github.com/Enicast/psychopy-neuroplaypro-neurolab
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psychopy>=2024.2.0
+Dynamic: license-file
+
+# PsychoPy NeuroPlay Plugin
+
+Component for controlling NeuroPlayPro EEG recording from PsychoPy Builder experiments.
+- Start recording when the component starts
+- Stop recording when the component ends
+- Choose folder and filename prefix
+- Auto-add timestamp if needed
