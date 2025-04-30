@@ -1,0 +1,69 @@
+Metadata-Version: 2.4
+Name: labscript-c-extensions
+Version: 1.2.1
+Summary: A module containing C-extensions for the labscript suite
+Author-email: The labscript suite community <labscriptsuite@googlegroups.com>
+License: BSD 2-Clause License
+        
+        Copyright (c) 2020, the labscript suite
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Homepage, http://labscriptsuite.org/
+Project-URL: Documentation, https://docs.labscriptsuite.org/
+Project-URL: Repository, https://github.com/labscript-suite/labscript-c-extension/
+Project-URL: Downloads, https://github.com/labscript-suite/labscript-c-extension/releases/
+Project-URL: Tracker, https://github.com/labscript-suite/labscript-c-extension/issues/
+Keywords: experiment control,automation,visualization
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy>=1.17.3
+Dynamic: license-file
+
+<img src="https://raw.githubusercontent.com/labscript-suite/labscript-suite/master/art/labscript_32nx32n.svg" height="64" alt="the labscript suite" align="right">
+
+# the _labscript suite_ » labscript-c-extensions
+
+### C language extensions used by the _labscript suite_
+
+[![Actions Status](https://github.com/labscript-suite/labscript-c-extensions/workflows/Build%20and%20Release/badge.svg)](https://github.com/labscript-suite/labscript-c-extensions/actions)
+[![License](https://img.shields.io/pypi/l/labscript-c-extensions.svg)](https://github.com/labscript-suite/labscript-c-extensions/raw/master/LICENSE)
+[![Python Version](https://img.shields.io/pypi/pyversions/labscript-c-extensions.svg)](https://python.org)
+[![PyPI](https://img.shields.io/pypi/v/labscript-c-extensions.svg)](https://pypi.org/project/labscript-c-extensions)
+[![Conda Version](https://img.shields.io/conda/v/labscript-suite/labscript-c-extensions)](https://anaconda.org/labscript-suite/labscript-c-extensions)
+[![Conda Platforms](https://img.shields.io/conda/pn/labscript-suite/labscript-c-extensions)](https://anaconda.org/labscript-suite/labscript-c-extensions)
+[![Google Group](https://img.shields.io/badge/Google%20Group-labscriptsuite-blue.svg)](https://groups.google.com/forum/#!forum/labscriptsuite)
+<!-- [![DOI](http://img.shields.io/badge/DOI-10.1063%2F1.4817213-0F79D0.svg)](https://doi.org/10.1063/1.4817213) -->
+
+
+C language extensions used by the [*labscript suite*](https://github.com/labscript-suite/labscript-suite). We provide built distributions for these extensions as conda packages on [Anaconda Cloud](https://anaconda.org/labscript-suite/labscript-c-extensions) and wheels on [PyPI](https://pypi.org/project/labscript-c-extensions/#files) for various platforms.
+
+Bundling these extensions in a separate module ensures that developer installations of other _labscript suite_ components don't depend on build tools, as they can install the prebuilt wheel/conda package containing the extensions. Only developers of these extensions need the build tools (for example, [MSVC++ on Windows](https://wiki.python.org/moin/WindowsCompilers))
+
+
+## Installation
+
+labscript-c-extensions is distributed as a Python package on [PyPI](https://pypi.org/user/labscript-suite) and [Anaconda Cloud](https://anaconda.org/labscript-suite), and should be installed with other components of the _labscript suite_. Please see the [installation guide](https://docs.labscriptsuite.org/en/latest/installation) for details.
