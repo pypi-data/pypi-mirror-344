@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: oc-art-to-ftp
+Version: 1.1.4
+Summary: Artifactory to FTP
+License: Apache2.0
+Requires-Python: >=3.6
+Description-Content-Type: text/plain
+License-File: LICENSE
+Requires-Dist: oc-cdtapi
+Requires-Dist: oc-pyfs
+Requires-Dist: flask
+Requires-Dist: gunicorn
+Requires-Dist: python-gnupg
+Requires-Dist: pytest-localftpserver
+Requires-Dist: fs
+Requires-Dist: oc-logging
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Copies artifact from artifactory to FTP
