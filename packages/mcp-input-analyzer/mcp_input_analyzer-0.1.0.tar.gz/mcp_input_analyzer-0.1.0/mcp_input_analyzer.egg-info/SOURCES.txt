@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+mcp_input_analyzer/__init__.py
+mcp_input_analyzer/main.py
+mcp_input_analyzer.egg-info/PKG-INFO
+mcp_input_analyzer.egg-info/SOURCES.txt
+mcp_input_analyzer.egg-info/dependency_links.txt
+mcp_input_analyzer.egg-info/top_level.txt

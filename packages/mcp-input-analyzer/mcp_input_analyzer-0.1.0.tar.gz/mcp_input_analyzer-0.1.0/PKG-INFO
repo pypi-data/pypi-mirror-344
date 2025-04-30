@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: mcp-input_analyzer
+Version: 0.1.0
+Summary: Analyzes user-described build features (e
+Home-page: https://github.com/Sumedh99/mcp_input_analyzer
+Author: Sumedh99
+Author-email: Sumedh99@users.noreply.github.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# mcp-input_analyzer
+
+Analyzes user-described build features (e.g. database, API integration, tools) and extracts core server requirements like resources, tools, prompts, external systems, and transports needed for MCP.
+
+## Features
+
+- Natural language to structured build feature extraction
+- MCP-compliant input structure generation
+- Validation of supported tools and protocols
+- Claude-readable JSON definition creation
+- Fallback logic for unsupported features
+
+## Installation
+
+```bash
+pip install mcp-input_analyzer
+```
+
+## Usage
+
+```python
+from mcp_input_analyzer import Mcp_input_analyzer
+
+# Initialize the library
+mcp_input_analyzer_instance = Mcp_input_analyzer()
+
+# Use the library functions
+# Example usage will be added in future versions
+```
+
+## License
+
+MIT
