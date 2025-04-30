@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: numpynp-avina02
+Version: 0.2
+Summary: Plant disease detection using CNN
+Author: soham
+Requires-Dist: tensorflow
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: Pillow
