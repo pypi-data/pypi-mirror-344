@@ -1,0 +1,14 @@
+gadsqlalchemy/__init__.py,sha256=gxJih1HCebtzFa2fIU35EL50xWP5Yi5YseNjtoN7FFg,218
+gadsqlalchemy/setup.py,sha256=GvBg2jLgQfcqASHgVP54gQzRp0xe5M1W8eIJEzTQG8I,1751
+gadsqlalchemy/contextmanagers/__init__.py,sha256=Wmeq7fzuDINXCepnb7e7CJ83Ln94JxJVwBlmVPKjANU,74
+gadsqlalchemy/contextmanagers/time.py,sha256=cniEAM4eSSvzGxghZGv-MmUmPhpJAZ2cgOyZ62Ejy00,159
+gadsqlalchemy/enums/__init__.py,sha256=6-JMV8M2O_l4R16hbv4z1xSvnNHwPqQPWWz5IwpvG3g,74
+gadsqlalchemy/enums/engine.py,sha256=4oT15A-XBQRzthasHmOAHZmQ7lf8lMFNyPZP2VTHXYU,231
+gadsqlalchemy/patches/__init__.py,sha256=pPZE8KfdeFAXmtDzMfXmG0MBtMTMg_9mVihTtQYzu7c,75
+gadsqlalchemy/patches/session.py,sha256=kFKlGnwCd6TgFXQtPlbb_paayg6GjoMtWjd0dlGA5bk,716
+gadsqlalchemy/tables/__init__.py,sha256=41X5VkJtGoATu9O7G83ZuOtd04Kg5qDOZKYf0hD6Q4I,173
+gadsqlalchemy-0.0.1.dist-info/LICENSE,sha256=SH0JBGOTQ8tElhDklplwDbsgpxWoycK5p2Db-M64VPM,1078
+gadsqlalchemy-0.0.1.dist-info/METADATA,sha256=-yb5xlVFB6BrIhaH0Qxoz4YhiKM_3rvDeVtmYRY1aYQ,1392
+gadsqlalchemy-0.0.1.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+gadsqlalchemy-0.0.1.dist-info/top_level.txt,sha256=jaN8r2cCIkLoi-LVWzjNWZ75x2rCLVaBYB3sbdCeMjg,14
+gadsqlalchemy-0.0.1.dist-info/RECORD,,
