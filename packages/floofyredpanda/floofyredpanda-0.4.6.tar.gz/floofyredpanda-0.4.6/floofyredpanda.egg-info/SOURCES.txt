@@ -1,0 +1,12 @@
+LICENCE
+README.md
+setup.py
+floofyredpanda/__init__.py
+floofyredpanda/nn.py
+floofyredpanda/rl.py
+floofyredpanda/train.py
+floofyredpanda.egg-info/PKG-INFO
+floofyredpanda.egg-info/SOURCES.txt
+floofyredpanda.egg-info/dependency_links.txt
+floofyredpanda.egg-info/requires.txt
+floofyredpanda.egg-info/top_level.txt
