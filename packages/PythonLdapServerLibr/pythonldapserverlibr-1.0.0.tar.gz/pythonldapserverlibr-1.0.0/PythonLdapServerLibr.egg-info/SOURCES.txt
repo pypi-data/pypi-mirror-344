@@ -1,0 +1,8 @@
+MANIFEST.in
+__init__.py
+pyproject.toml
+setup.py
+PythonLdapServerLibr.egg-info/PKG-INFO
+PythonLdapServerLibr.egg-info/SOURCES.txt
+PythonLdapServerLibr.egg-info/dependency_links.txt
+PythonLdapServerLibr.egg-info/top_level.txt
