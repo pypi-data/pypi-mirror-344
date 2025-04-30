@@ -1,0 +1,24 @@
+[project]
+name = "shipzo_cmd"
+version = "0.3.1"
+description = "통합 project package"
+authors = [
+    {name = "hun0219", email = "gsw98000@gmail.com"},
+]
+dependencies = [
+	"shipzo-plus-hun>=0.1.6",
+	"shipzo-mult-hun>=0.1.0",
+	"shipzo-divide-hun>=0.1.0"
+]
+
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.urls]
+GitHub = "https://github.com/hun0219/shipzo_cmd"
+Homepage = "https://github.com/hun0219/shipzo_cmd"
+Issues = "https://github.com/hun0219/shipzo_cmd/Issues"
+
+[tool.pdm]
+distribution = true
