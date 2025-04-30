@@ -1,0 +1,2 @@
+[pytest11]
+pytest_everyfunc = pytest_everyfunc.plugin
