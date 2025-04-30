@@ -1,0 +1,8 @@
+fakturoid/__init__.py,sha256=2DUZ-9qGRMr5XPt2vP8vkuFs2Uo_3FbIE10uusiPLWM,59
+fakturoid/api.py,sha256=5BgkJo1Btd2Im-bTj74IYeBzBD8wTk9q-gMjr2CLPOM,15976
+fakturoid/model_api.py,sha256=K2rlQH-QvgMaKsPhZ2V5tbvh_B9f_ML7cmL3ye2BdHI,601
+fakturoid/models.py,sha256=QljfalDjsAkJeuz_spEWrodyAYrUm1kYrl6RvyRhsK4,4611
+fakturoid/paging.py,sha256=t3Yq-Qm8Ia7515TrQ_Ipn3NO0ghC6ekBbPuh5Qd4JdA,2288
+fakturoid_v3-0.1.0.dist-info/METADATA,sha256=cX1lAoV_NBcSOWGw0w7X0dm2H6zjO5cgLmgRS1H7wsk,6429
+fakturoid_v3-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fakturoid_v3-0.1.0.dist-info/RECORD,,
