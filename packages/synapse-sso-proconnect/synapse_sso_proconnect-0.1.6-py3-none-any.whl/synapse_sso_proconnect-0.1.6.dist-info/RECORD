@@ -1,0 +1,8 @@
+synapse_sso_proconnect/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+synapse_sso_proconnect/main.py,sha256=YKDkSWDBa3E5x_ook3xC6Pzbgk5O6HVmn_5K93rVG8Q,2911
+synapse_sso_proconnect/trigger.pth,sha256=jR2wxgumDS2yDQBIhYH-CzhKDRz0VVFQjHxKkDoEWZQ,72
+synapse_sso_proconnect-0.1.6.data/data/site-packages/trigger.pth,sha256=jR2wxgumDS2yDQBIhYH-CzhKDRz0VVFQjHxKkDoEWZQ,72
+synapse_sso_proconnect-0.1.6.dist-info/METADATA,sha256=JN9vNeK0wBc9QX3B-MgEi-AgAH-kJdRc6th0tCpD76s,639
+synapse_sso_proconnect-0.1.6.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+synapse_sso_proconnect-0.1.6.dist-info/top_level.txt,sha256=hArBPr0V0RvDEF5242khifzI7WxKx4kXg3Zbcz4EQJI,23
+synapse_sso_proconnect-0.1.6.dist-info/RECORD,,
