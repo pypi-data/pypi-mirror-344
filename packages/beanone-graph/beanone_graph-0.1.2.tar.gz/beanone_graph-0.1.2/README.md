@@ -1,0 +1,136 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/beanone/graph_reader/refs/heads/main/docs/assets/logos/banner.svg" alt="Graph Context Banner" width="100%">
+</p>
+
+This library enables fast graph traversal and lookup from file-based storage with sharded and indexed structure.
+Now includes community exploration.
+
+[![Python Versions](https://img.shields.io/pypi/pyversions/beanone_graph)](https://pypi.org/project/beanone_graph)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/beanone/graph_reader/blob/main/LICENSE)
+[![Tests](https://github.com/beanone/graph_reader/actions/workflows/tests.yml/badge.svg)](https://github.com/beanone/graph_reader/actions?query=workflow%3Atests)
+[![Coverage](https://codecov.io/gh/beanone/graph_reader/branch/main/graph/badge.svg)](https://codecov.io/gh/beanone/graph_reader)
+[![Code Quality](https://img.shields.io/badge/code%20style-ruff-000000)](https://github.com/astral-sh/ruff)
+[![PyPI version](https://img.shields.io/pypi/v/beanone_graph)](https://pypi.org/project/beanone_graph)
+
+
+## Features
+
+- Efficient reading of graph data from JSONL files
+- Support for multiple indexing strategies (SQLite and Memory)
+- Entity caching for improved performance
+- Adjacency list-based neighbor lookup
+- Property-based entity search
+- Community lookup
+- Configurable cache size
+
+## Architecture
+
+The library is organized into the following components:
+
+### Core Components
+
+- `GraphReader`: Main class for reading and querying graph data
+- `GraphReaderConfig`: Configuration class for customizing reader behavior
+
+### Indexers
+
+The library supports multiple indexing strategies through a plugin architecture:
+
+- `BaseIndexer`: Abstract base class for indexers
+- `SQLiteIndexer`: SQLite-based indexing for persistent storage
+- `MemoryIndexer`: In-memory indexing for faster access
+
+### Data Structure
+
+The library expects data to be organized in the following directory structure:
+
+```
+base_dir/
+├── entities/
+│   └── shard_*.jsonl
+├── relations/
+│   └── shard_*.jsonl
+└── adjacency/
+    └── adjacency.jsonl
+```
+
+### Architecture Diagram
+
+```mermaid
+graph TD
+    GR[GraphReader]
+    GC[GraphReaderConfig]
+    BI[BaseIndexer]
+    SI[SQLiteIndexer]
+    MI[MemoryIndexer]
+    EF[Entity Files]
+    RF[Relation Files]
+    AF[Adjacency File]
+    DB[(SQLite DB)]
+
+    GR --> GC
+    GR --> BI
+    SI --> BI
+    MI --> BI
+    GR --> EF
+    GR --> RF
+    GR --> AF
+    SI --> DB
+
+    style GR fill:#e6f3ff,stroke:#000000,stroke-width:2px,color:#000000
+    style GC fill:#e6f3ff,stroke:#000000,stroke-width:2px,color:#000000
+    style BI fill:#fff2e6,stroke:#000000,stroke-width:2px,color:#000000
+    style SI fill:#fff2e6,stroke:#000000,stroke-width:2px,color:#000000
+    style MI fill:#fff2e6,stroke:#000000,stroke-width:2px,color:#000000
+    style EF fill:#f0fff0,stroke:#000000,stroke-width:2px,color:#000000
+    style RF fill:#f0fff0,stroke:#000000,stroke-width:2px,color:#000000
+    style AF fill:#f0fff0,stroke:#000000,stroke-width:2px,color:#000000
+    style DB fill:#f0fff0,stroke:#000000,stroke-width:2px,color:#000000
+```
+
+## Installation
+
+```bash
+pip install beanone-graph
+```
+
+## Usage
+
+```python
+from graph_reader import GraphReader, GraphReaderConfig
+
+config = GraphReaderConfig(base_dir="graph_output")
+reader = GraphReader(config)
+
+# Get an entity
+entity = reader.get_entity(1)
+print("Entity:", entity)
+
+# Get neighbors
+neighbors = reader.get_neighbors(1)
+print("Neighbors:", neighbors)
+
+# Search
+matches = reader.search_by_property("name", "Alice")
+print("Matches:", matches)
+
+# Get entity's community
+community = reader.get_entity_community(1)
+print("Community:", community)
+
+# Get members of a community
+members = reader.get_community_members("team_alpha")
+print("Members:", members)
+```
+
+## Configuration
+
+The `GraphReaderConfig` class supports the following parameters:
+
+- `base_dir`: Base directory containing the graph data
+- `indexer_type`: Type of indexer to use ("sqlite" or "memory")
+- `cache_size`: Maximum number of entities to cache in memory
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
