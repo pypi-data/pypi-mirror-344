@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: game_bot
+Version: 0.1.2
+Platform: Windows
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: pywin32>=305
+Requires-Dist: opencv-python>=4.8.0
+Requires-Dist: pytesseract>=0.3.10
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: mss>=10.0.0
+
