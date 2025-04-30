@@ -1,0 +1,10 @@
+LICENCE
+README.md
+pyproject.toml
+src/aks_pip/__init__.py
+src/aks_pip/cal.py
+src/aks_pip/version.py
+src/aks_pip.egg-info/PKG-INFO
+src/aks_pip.egg-info/SOURCES.txt
+src/aks_pip.egg-info/dependency_links.txt
+src/aks_pip.egg-info/top_level.txt
