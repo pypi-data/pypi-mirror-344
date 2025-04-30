@@ -1,0 +1,12 @@
+{
+  "tokenizer": "wowool/english@dev.tkz",
+  "hmm": "wowool/english@dev.hmm",
+  "morph_chain": [
+    {
+      "file": "wowool/english-medical@dev.morph",
+      "lookup": "plain",
+      "transform": "none"
+    }
+  ],
+  "short_description": "A language module that enriches words with root forms, part of speech and properties for english-medical"
+}

@@ -1,0 +1,17 @@
+{
+  "dependencies": [
+    "wowool/english-entity@dev",
+    "wowool/english-syntax@dev"
+  ],
+  "concepts": [
+    "TopicCandidate"
+  ],
+  "short_description": "Topics for English. The topic domain provides TopicCandidate to the topics app.",
+  "examples": [
+    {
+      "concept": "TopicCandidate",
+      "sample": "green energy, John Travolta",
+      "desc": "Possible topics"
+    }
+  ]
+}

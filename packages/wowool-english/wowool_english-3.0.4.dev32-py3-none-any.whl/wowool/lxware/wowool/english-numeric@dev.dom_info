@@ -1,0 +1,19 @@
+{
+  "dependencies": [
+    "wowool/english-syntax@dev",
+    "wowool/english-entity@dev"
+  ],
+  "concepts": [
+    "Numeric",
+    "NumericNumber",
+    "NumericObject"
+  ],
+  "short_description": "Annotations centered on information about numbers of things",
+  "examples": [
+    {
+      "concept": "Numeric",
+      "sample": "300 tanks",
+      "desc": "Numbers"
+    }
+  ]
+}

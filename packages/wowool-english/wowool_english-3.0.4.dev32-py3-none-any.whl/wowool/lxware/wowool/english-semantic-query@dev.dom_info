@@ -1,0 +1,19 @@
+{
+  "dependencies": [
+    "wowool/english-entity@dev",
+    "wowool/english-business-news@dev"
+  ],
+  "concepts": [
+    "Replace",
+    "ReplaceConcept"
+  ],
+  "short_description": "replace natural language query",
+  "examples": [
+    {
+      "concept": "ReplaceConcept",
+      "sample": "retail company",
+      "desc": "Replace for Company@(sector=retail)."
+    }
+  ],
+  "instances": true
+}
