@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "exshell"
+version = "2025042901.0.1"
+authors = [
+  { name="Takahashi Satoshi", email="muzudho1@gmail.com" },
+]
+description = "A library for creating console applications that use Excel as a display."
+readme = "README.md"
+requires-python = ">=3.11.7"
+dependencies = [
+  "openpyxl>=3.1.5",
+  "tomlkit>=0.13.2",
+]
+maintainers = [
+  { name="Takahashi Satoshi", email="muzudho1@gmail.com" },
+]
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["excel", "console application"]
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Repository = "https://github.com/muzudho/exshell.git"
+
+# ビルドツールの設定
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/docs",          # 説明書は README.md から GitHub の方へリンクするようにしてください
+  "/private",       # 個人用
+  "/temp",
+  "*.log",          # Logging
+  "*.bak",          # WinMerge
+  "*- コピー*",     # Copy file
+  "requirements.txt",
+]
