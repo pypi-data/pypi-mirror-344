@@ -1,0 +1,17 @@
+cltoolbox>=1.0.0
+dateparser
+flopy
+fortranformat
+hspf_reader
+hydrotoolbox>=2.0.12
+pandas[excel]
+pint!=0.21.*
+pint-pandas
+pydantic
+pyemu
+python-dateutil
+tstoolbox>=106.0.0
+xlsxwriter
+
+[:python_version == "3.9"]
+numpy<2.0
