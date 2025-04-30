@@ -1,0 +1,3 @@
+[console_scripts]
+geai = pygeai.cli.__main__:main
+geai-proxy = pygeai.cli.geai_proxy:cli_entry
