@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: steven
+Version: 0.1.0
+Author: Michael Peter Dunne
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: tqdm
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+
+# Steven
+
+Steven (Sample Things EVENly) helps you sample your data in nice easy ways, evenly across the range of the data!
