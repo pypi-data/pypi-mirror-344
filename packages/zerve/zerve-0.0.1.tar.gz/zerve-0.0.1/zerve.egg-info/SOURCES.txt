@@ -1,0 +1,7 @@
+setup.py
+zerve/__init__.py
+zerve.egg-info/PKG-INFO
+zerve.egg-info/SOURCES.txt
+zerve.egg-info/dependency_links.txt
+zerve.egg-info/not-zip-safe
+zerve.egg-info/top_level.txt
