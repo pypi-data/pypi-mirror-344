@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "seal-py"
+version = "0.8.4"
+description = "This lib can cipher your file"
+authors = ["Dmytro <sinica911@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "sealpy"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
