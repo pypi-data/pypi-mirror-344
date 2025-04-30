@@ -1,0 +1,6 @@
+**/__pycache__
+pytrate.egg-info
+.vscode
+dist
+build
+html
