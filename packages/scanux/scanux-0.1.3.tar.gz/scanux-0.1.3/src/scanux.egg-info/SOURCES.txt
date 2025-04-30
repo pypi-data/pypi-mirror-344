@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/scanux/__init__.py
+src/scanux/cli.py
+src/scanux.egg-info/PKG-INFO
+src/scanux.egg-info/SOURCES.txt
+src/scanux.egg-info/dependency_links.txt
+src/scanux.egg-info/entry_points.txt
+src/scanux.egg-info/requires.txt
+src/scanux.egg-info/top_level.txt
+src/youcanpay/__init__.py
+src/youcanpay/client.py
