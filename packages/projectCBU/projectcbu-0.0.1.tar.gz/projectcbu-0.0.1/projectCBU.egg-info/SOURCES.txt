@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+projectCBU.egg-info/PKG-INFO
+projectCBU.egg-info/SOURCES.txt
+projectCBU.egg-info/dependency_links.txt
+projectCBU.egg-info/top_level.txt

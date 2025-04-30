@@ -1,0 +1,26 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools", "wheel"]
+
+[project]
+authors = [
+  {name = "Emirhan Burgaçoğlu", email = "210316052@ogr.cbu.edu.tr"},
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Operating System :: OS Independent",
+]
+description = "This is a test package for the PyPi tutorial."
+keywords = ["projectCBU"]
+license = {text = "MIT"}
+name = "projectCBU"
+readme = "README.md"
+requires-python = ">=3.6"
+version = "0.0.1"
+
+[project.urls]
+Homepage = "https://github.com/emirhanburgacoglu/projectCBU"
