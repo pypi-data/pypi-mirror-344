@@ -1,0 +1,9 @@
+matplotlib
+rich
+PyYAML
+requests
+mkdocs
+nuitka
+tabulate
+ruff
+PyQt5

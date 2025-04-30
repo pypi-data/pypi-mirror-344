@@ -1,0 +1,18 @@
+include LICENSE
+include README.md
+include main.py
+include command.py
+recursive-include sephera *.py
+recursive-include etc *.py
+exclude *.pyc
+exclude __pycache__/*
+exclude dist/*
+exclude docs/*
+exclude site/*
+exclude test/*
+exclude *.yml
+exclude *.json
+exclude *.md
+exclude *.sh
+exclude *.gif
+exclude *.png

@@ -1,0 +1,168 @@
+name: Sephera Workflows
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Check-out repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          architecture: 'x64'
+          cache: 'pip'
+          cache-dependency-path: |
+            **/requirements*.txt
+
+      - name: Install Dependencies
+        shell: bash
+        run: |
+          if [[ "${{runner.os }}" == "Linux" ]]; then
+            sudo apt install clang ccache
+          fi
+
+          if [[ "${{ runner.os }}" == "Windows" ]]; then
+              choco install visualstudio2019buildtools
+          fi
+          pip install -r requirements.txt
+
+      - name: Check syntax
+        run: |
+          ruff check .
+
+      - name: Build CLI for Linux
+        shell: bash
+        run: |
+          if [[ "${{ runner.os }}" == "Linux" ]]; then
+
+             THREADS=$(nproc)
+              python3 -m nuitka main.py \
+              --onefile \
+              --clang \
+              --lto=yes \
+              --jobs="$THREADS" \
+              --show-progress \
+              --static-libpython=yes \
+              --output-dir=build/cli \
+              --output-filename=sephera
+              
+          fi
+
+      - name: Build CLI for macOS
+        shell: bash
+        run: |
+          if [[ "${{ runner.os }}" == "macOS" ]]; then
+
+              THREADS=$(sysctl -n hw.logicalcpu)
+              brew install ccache
+              
+              python3 -m nuitka main.py \
+                --onefile \
+                --clang \
+                --show-progress \
+                --static-libpython=yes \
+                --lto=yes \
+                --jobs="$THREADS" \
+                --output-dir=build/cli \
+                --output-filename=sephera
+
+          fi
+
+      - name: Build CLI for Windows
+        if: runner.os == 'Windows'
+
+        uses: Nuitka/Nuitka-Action@main
+        with:
+          nuitka-version: main
+          script-name: gui/main.py
+          mode: onefile
+          output-file: sephera.exe
+          output-dir: build/cli 
+
+      - name: Build GUI App for Linux
+        shell: bash
+        run: |
+          if [[ "${{ runner.os }}" == "Linux" ]]; then
+            THREADS=$(nproc)
+
+            python3 -m nuitka gui/main.py \
+                       --onefile \
+                       --enable-plugins=pyqt5 \
+                       --lto=yes \
+                       --clang \
+                       --show-progress \
+                       --static-libpython=yes \
+                       --job="$THREADS" \
+                       --output-dir=build/gui \
+                       --output-filename=sephera-gui
+          fi
+
+      - name: Build GUI App  for macOS
+        shell: bash
+        run: |
+          if [[ "${{ runner.os }}" == "macOS" ]]; then
+            THREADS=$(sysctl -n hw.logicalcpu)
+            python3 -m nuitka gui/main.py \
+                      --onefile \
+                      --clang \
+                      --enable-plugins=pyqt5 \
+                      --show-progress \
+                      --static-libpython=yes \
+                      --macos-create-app-bundle \
+                      --lto=yes \
+                      --jobs="$THREADS" \
+                      --output-dir=build/gui \
+                      --output-filename=sephera-gui
+          fi
+
+      - name: Build GUI App for Windows
+        if: runner.os == 'Windows'
+        
+        uses: Nuitka/Nuitka-Action@main
+        with:
+          nuitka-version: main
+          script-name: gui/main.py
+          mode: onefile
+          output-file: sephera-gui.exe
+          output-dir: build/gui 
+      
+      - name: Upload artifacts for Windows
+        if: runner.os == 'Windows'
+
+        uses: actions/upload-artifact@v4
+        with:
+          name: sephera-${{ runner.os }}
+          path: |
+            build/cli/sephera.exe
+            build/gui/sephera-gui.exe
+
+      - name: Upload Artifacts for Linux
+        if: runner.os == 'Linux'
+
+        uses: actions/upload-artifact@v4
+        with:
+          name: sephera-${{ runner.os }}
+          path: |
+            build/cli/sephera
+            build/gui/sephera-gui
+
+      - name: Upload artifacts for macOS
+        if: runner.os == 'macOS'
+
+        uses: actions/upload-artifact@v4
+        with:
+          name: sephera-${{ runner.os }}
+          path: |
+            build/cli/sephera
+            build/gui/sephera-gui
