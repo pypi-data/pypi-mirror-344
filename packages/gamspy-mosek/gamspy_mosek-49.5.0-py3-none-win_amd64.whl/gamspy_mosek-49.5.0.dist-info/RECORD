@@ -1,0 +1,10 @@
+gamspy_mosek/__init__.py,sha256=daD8qDE_nW9viuCxpD27m153dqlFBDc7GWC-VwiC1hQ,403
+gamspy_mosek/mosek64_11_0.dll,sha256=9wuemLDlyBYlI3NlusmR4Tz4tcTVBV9EiT9pHiaFLCE,22933456
+gamspy_mosek/mskcclib64.dll,sha256=4Yekm1P-pKujyijBf7V3IjwrQ0AdpE7zvTyP0B748Us,579584
+gamspy_mosek/optmosek.def,sha256=qzqrx-TCE0BTk4VbNqsht4um2G9F0IteNve4OzmCtZA,48106
+gamspy_mosek/tbb12.dll,sha256=vRp22Zuz6f4IZDqYsR7R7ryytre22mDQGSWlIHfpoAo,319616
+gamspy_mosek/version.py,sha256=L0oF1boRuhTJbCViTvmJTBvQU2K8-sAOPinHzEBswfY,22
+gamspy_mosek-49.5.0.dist-info/METADATA,sha256=s5M_dHCeObeV8P-yoyN2I9bGMtWyuAWw-9evn0tk5Lw,60
+gamspy_mosek-49.5.0.dist-info/WHEEL,sha256=TyM46gpVo4JMN-l7fEGR5q4Qq7EKzhk-uo7296KA1OU,103
+gamspy_mosek-49.5.0.dist-info/top_level.txt,sha256=D_ibqdJHzeK1ovUML42JCi2Bg_SJ_XL0doZuT9jgKzg,13
+gamspy_mosek-49.5.0.dist-info/RECORD,,
