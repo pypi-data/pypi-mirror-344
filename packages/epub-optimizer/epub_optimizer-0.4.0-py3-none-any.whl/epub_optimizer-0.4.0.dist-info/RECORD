@@ -1,0 +1,7 @@
+epub_optimizer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+epub_optimizer/cli.py,sha256=YpQGr_pOtnh1IzgMOuOfIOTVhGmFDkfzFZb8hDlnqlc,6580
+epub_optimizer-0.4.0.dist-info/LICENSE,sha256=7xJ-MHVfPr7mAs4bv81o2DNzoxr6MxZ3QzHyhbeThlk,1075
+epub_optimizer-0.4.0.dist-info/METADATA,sha256=o93rYErHoR7vuP-IFbG0G8RNdqV30CkIbmCuUkb1MCs,1475
+epub_optimizer-0.4.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+epub_optimizer-0.4.0.dist-info/entry_points.txt,sha256=qd9b-Vg7ZkDKYuBQm_9k4I9LcE2aTazrU2k6bMZUTjQ,58
+epub_optimizer-0.4.0.dist-info/RECORD,,
