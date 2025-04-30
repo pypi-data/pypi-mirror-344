@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: reasonable_ml
+Version: 0.3.0
+Summary: Chain‑of‑Thought framework using custom prompt templates
+Author-email: Yaroslav Voropaev <zabojeb@bk.ru>
+Maintainer-email: Yaroslav Voropaev <zabojeb@bk.ru>
+License: MIT
+Project-URL: Homepage, https://github.com/zabojeb/reasonable
+Project-URL: Repository, https://github.com/zabojeb/reasonable
+Keywords: chain-of-thought,prompt,LLM,reasoning
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Reasonable: prompts‑driven chain‑of‑thought framework
