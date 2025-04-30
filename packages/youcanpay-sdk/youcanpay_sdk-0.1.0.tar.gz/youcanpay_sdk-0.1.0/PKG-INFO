@@ -1,0 +1,112 @@
+Metadata-Version: 2.4
+Name: youcanpay-sdk
+Version: 0.1.0
+Summary: SDK for integrating YouCan Pay API with Python
+Home-page: https://github.com/yassir-aea/youcanpay
+Author: Yassir AIT EL AIZZI
+Author-email: yassir.aitelaizzi@gmail.com
+License: MIT
+Project-URL: Homepage, https://github.com/yassir-aea/youcanpay
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# YouCanPay SDK
+
+A Python SDK for integrating with the YouCan Pay payment gateway.
+
+## Installation
+
+```bash
+pip install youcanpay-sdk
+```
+
+## Usage
+
+```python
+from youcanpay import YouCanPay
+
+# Initialize the client
+client = YouCanPay(
+    private_key="pri_your_private_key",
+    public_key="pub_your_public_key",
+    sandbox=True  # Set to False for production
+)
+
+# Create a payment token
+try:
+    token = client.create_payment_token(
+        order_id="order_123",
+        amount=1000,  # 10.00 MAD (in cents)
+        currency="MAD",
+        customer_ip="123.123.123.123",
+        success_url="https://yourdomain.com/success",
+        error_url="https://yourdomain.com/error",
+        customer_info={
+            "name": "John Doe",
+            "email": "john@example.com",
+            "phone": "+212600000000"
+        },
+        metadata={
+            "description": "Test payment"
+        }
+    )
+    print(f"Payment token: {token['id']}")
+    print(f"Redirect URL: {token['redirect_url']}")
+except YouCanPayError as e:
+    print(f"Error: {e}")
+
+# Get transaction details
+try:
+    transaction = client.get_transaction("transaction_id")
+    print(f"Transaction status: {transaction['status']}")
+except YouCanPayError as e:
+    print(f"Error: {e}")
+
+# Refund a transaction
+try:
+    refund = client.refund_transaction("transaction_id", amount=500)  # Partial refund of 5.00 MAD
+    print(f"Refund status: {refund['status']}")
+except YouCanPayError as e:
+    print(f"Error: {e}")
+```
+
+## Features
+
+- Create payment tokens
+- Get transaction details
+- Process refunds
+- Support for sandbox and production environments
+- Type hints for better IDE support
+
+## Requirements
+
+- Python 3.6+
+- requests>=2.25.1
+
+## License
+
+MIT License 

@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/youcanpay/__init__.py
+src/youcanpay/client.py
+src/youcanpay_sdk.egg-info/PKG-INFO
+src/youcanpay_sdk.egg-info/SOURCES.txt
+src/youcanpay_sdk.egg-info/dependency_links.txt
+src/youcanpay_sdk.egg-info/requires.txt
+src/youcanpay_sdk.egg-info/top_level.txt
