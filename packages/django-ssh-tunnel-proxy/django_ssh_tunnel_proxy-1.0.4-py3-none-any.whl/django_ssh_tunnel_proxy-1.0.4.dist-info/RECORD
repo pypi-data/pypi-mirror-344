@@ -1,0 +1,10 @@
+sshtunnelproxy/__init__.py,sha256=B_m_KAo1CKmXAvdkXScejUVTP_6qti3-hWQEnNp-N-Y,65
+sshtunnelproxy/settings.py,sha256=HHXBKfiVTAM8Zw42SvhqFPKpLykAR-89AyLC_oNhe8Q,1093
+sshtunnelproxy/sshtunnelproxy.py,sha256=XxcRJBsPbv0tNIxeCY7xRsglMDkZMx2PcyG7C7-4KuI,956
+sshtunnelproxy/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sshtunnelproxy/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sshtunnelproxy/management/commands/opensshtunnelproxy.py,sha256=TyL59qzdiAnm8EEnF9EjmeWd1DBV2NsehJ8h2gMAcR0,1764
+django_ssh_tunnel_proxy-1.0.4.dist-info/METADATA,sha256=srnUEKuBUuDN2-1_nwfphtJNBEJ4qisg6f_qyML9MKE,2160
+django_ssh_tunnel_proxy-1.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+django_ssh_tunnel_proxy-1.0.4.dist-info/licenses/LICENSE,sha256=Ldeqms1zC8Eec17s3QxhWjn6TOTdLMf6ftNyQIeNu4A,1087
+django_ssh_tunnel_proxy-1.0.4.dist-info/RECORD,,
