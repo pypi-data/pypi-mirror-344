@@ -1,0 +1,17 @@
+examples/default.py,sha256=au8xx__eavSu550rhRx2PzL-y_MhsOJbYKuWW5bUuHM,2869
+examples/example.py,sha256=cxxbCb6Lc4EQo30xCwHwRIsAMicvQI70XQFE1Xw9MYo,7184
+streamlit_chat_prompt/__init__.py,sha256=5SlqJqSpW11Vo33rJhhjxSLpQWFGS1F73s-aDIB-kEI,13103
+streamlit_chat_prompt/frontend/build/asset-manifest.json,sha256=rcn3L-NVgJABMF39JtMJWn6Xxomg7jFyqX87GhskxJk,221
+streamlit_chat_prompt/frontend/build/bootstrap.min.css,sha256=L7EzZr9yvfRPtzVsdnV0AruBPRzCDpeFLiZQBKBq17Y,197413
+streamlit_chat_prompt/frontend/build/index.html,sha256=Sn0Yr3-K2DOCkxoLIP4ptFRBvOyPS7AdIdXHagN2OYc,492
+streamlit_chat_prompt/frontend/build/static/js/main.a1330c68.js,sha256=z9LcT8H1sPqmegUxbDdK15mPUzidMrmql_or5zM2JnM,703091
+streamlit_chat_prompt/frontend/build/static/js/main.a1330c68.js.LICENSE.txt,sha256=kuQvHN-60wfuSBur_FYJ7wa51dF9U6cRR6N6dhP5JVg,1959
+streamlit_chat_prompt/frontend/build/static/js/main.a1330c68.js.map,sha256=b36zQzz3GNDLNTvr23EuGlV3hRCkIeb9gaf0myf-q4g,3033987
+streamlit_chat_prompt/frontend/node_modules/flatted/python/flatted.py,sha256=ke8FuEflns-WlphCcQ9CC0qJqWqX3zEEuak74o6rgE8,3879
+streamlit_chat_prompt/frontend/node_modules/flatted/python/test.py,sha256=uTOn6HJd7KeY_PTRvvufv60dmvON3KWp3nnqACj8IlA,2129
+streamlit_chat_prompt/frontend/node_modules/node/node_modules/node-linux-x64/share/doc/node/lldb_commands.py,sha256=1JdAWgpx70Ur4hKXrAoG2VM8sXk7h-rAhUOfiM4xDbI,7360
+streamlit_chat_prompt-0.4.1.dist-info/licenses/LICENSE,sha256=yYhVbYKWb6iWH__ouagvBFTWREdJILxlIMKW-6IcvEI,11341
+streamlit_chat_prompt-0.4.1.dist-info/METADATA,sha256=na7N9GIBsdYz8Y7cSsaCE7u-JH1ZqbNmsoErPGZHbjQ,7868
+streamlit_chat_prompt-0.4.1.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+streamlit_chat_prompt-0.4.1.dist-info/top_level.txt,sha256=bsHfVSLVu2Lz8iZAalWWg5Sy1JESbw04watxtC9yIbQ,31
+streamlit_chat_prompt-0.4.1.dist-info/RECORD,,
