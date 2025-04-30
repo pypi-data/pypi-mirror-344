@@ -1,0 +1,10 @@
+MDAnalysis>=2.8.0
+numpy
+scipy
+h5py
+
+[analysis]
+dask
+
+[reporters]
+Openmm
