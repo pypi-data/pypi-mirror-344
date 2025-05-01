@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Agentify_Lara.egg-info/PKG-INFO
+Agentify_Lara.egg-info/SOURCES.txt
+Agentify_Lara.egg-info/dependency_links.txt
+Agentify_Lara.egg-info/requires.txt
+Agentify_Lara.egg-info/top_level.txt
+agentify_lara/__init__.py
+tests/test.py
