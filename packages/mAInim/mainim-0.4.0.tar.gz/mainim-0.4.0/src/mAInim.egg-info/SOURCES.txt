@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/mAInim/__init__.py
+src/mAInim/cst_parser.py
+src/mAInim/mvp.py
+src/mAInim.egg-info/PKG-INFO
+src/mAInim.egg-info/SOURCES.txt
+src/mAInim.egg-info/dependency_links.txt
+src/mAInim.egg-info/requires.txt
+src/mAInim.egg-info/top_level.txt
+src/mainim/__init__.py
+src/mainim/cst_parser.py
+src/mainim/mvp.py
