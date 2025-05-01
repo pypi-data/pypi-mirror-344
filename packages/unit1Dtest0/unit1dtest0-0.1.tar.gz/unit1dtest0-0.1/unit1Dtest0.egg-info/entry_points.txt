@@ -1,0 +1,2 @@
+[console_scripts]
+unit1Dtest0 = unit1Dtest0.start:main
