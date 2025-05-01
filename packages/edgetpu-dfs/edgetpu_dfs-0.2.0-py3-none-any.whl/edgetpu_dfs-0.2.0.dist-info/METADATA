@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: edgetpu-dfs
+Version: 0.2.0
+Summary: A utility tool to set the Edge TPU DFS performance
+Author-email: Changhun Han <ehwjs1914@naver.com>
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# edgetpu_dfs
