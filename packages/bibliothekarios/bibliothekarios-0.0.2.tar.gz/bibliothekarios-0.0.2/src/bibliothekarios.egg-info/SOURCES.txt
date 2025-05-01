@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/bibliothekarios/__init__.py
+src/bibliothekarios/entities.py
+src/bibliothekarios.egg-info/PKG-INFO
+src/bibliothekarios.egg-info/SOURCES.txt
+src/bibliothekarios.egg-info/dependency_links.txt
+src/bibliothekarios.egg-info/requires.txt
+src/bibliothekarios.egg-info/top_level.txt

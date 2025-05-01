@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=67.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "bibliothekarios"
+version = "0.0.2"
+authors = [
+    {name="Alexander Fedotov", email="alex.fedotov@aol.com"},
+]
+description = "In the Library of Alexandria, librarians were known as βιβλιοθηκάριοι"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+]
+dependencies = [
+    "PyYAML >= 6.0.0",
+    "pyarrow >= 20.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/bibliothekarios/bibliothekarios"
+"Bug Tracker" = "https://github.com/bibliothekarios/bibliothekarios/issues"
