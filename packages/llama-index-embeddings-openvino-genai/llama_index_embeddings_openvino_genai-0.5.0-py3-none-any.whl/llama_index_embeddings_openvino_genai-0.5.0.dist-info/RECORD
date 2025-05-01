@@ -1,0 +1,6 @@
+llama_index/embeddings/openvino_genai/__init__.py,sha256=1KJYFYeXQZwvrt3lmckNA318JN1yO50udIL1Y3Z3wZM,125
+llama_index/embeddings/openvino_genai/base.py,sha256=IPsItU0jSiTAubZwAKF8Mggo_KdkFbC_AEIKGJq-NnY,5855
+llama_index_embeddings_openvino_genai-0.5.0.dist-info/METADATA,sha256=ZAQoRL4S-SFgSoZZMpn0zpozdhp6wnNN7NzJovO4d3c,518
+llama_index_embeddings_openvino_genai-0.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+llama_index_embeddings_openvino_genai-0.5.0.dist-info/licenses/LICENSE,sha256=JPQLUZD9rKvCTdu192Nk0V5PAwklIg6jANii3UmTyMs,1065
+llama_index_embeddings_openvino_genai-0.5.0.dist-info/RECORD,,
