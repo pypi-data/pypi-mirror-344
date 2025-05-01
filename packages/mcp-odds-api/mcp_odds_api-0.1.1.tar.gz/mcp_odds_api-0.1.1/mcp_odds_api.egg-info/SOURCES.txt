@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+mcp_odds_api/__init__.py
+mcp_odds_api/main.py
+mcp_odds_api/mcp_config.py
+mcp_odds_api/server.py
+mcp_odds_api/utils.py
+mcp_odds_api.egg-info/PKG-INFO
+mcp_odds_api.egg-info/SOURCES.txt
+mcp_odds_api.egg-info/dependency_links.txt
+mcp_odds_api.egg-info/entry_points.txt
+mcp_odds_api.egg-info/requires.txt
+mcp_odds_api.egg-info/top_level.txt

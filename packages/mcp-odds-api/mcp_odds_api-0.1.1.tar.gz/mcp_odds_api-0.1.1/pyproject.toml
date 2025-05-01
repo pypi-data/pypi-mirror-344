@@ -1,0 +1,23 @@
+[project]
+name = "mcp-odds-api"
+version = "0.1.1"
+description = "An MCP server to interact with a the the odds-api API."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "requests>=2.32",
+ "mcp>=1.0.0",
+ "python-dotenv>=1.0.1",
+ "uvicorn>=0.27.0",
+ "starlette>=0.36.0",
+ "typer>=0.15.2",
+ "fastmcp>=0.4.1",
+"httpx",
+]
+
+[project.scripts]
+mcp-odds-api = "mcp_odds_api.main:main"
+
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
