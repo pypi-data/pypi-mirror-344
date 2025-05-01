@@ -1,0 +1,2 @@
+[console_scripts]
+pycodelens = pycodelens.cli:main
