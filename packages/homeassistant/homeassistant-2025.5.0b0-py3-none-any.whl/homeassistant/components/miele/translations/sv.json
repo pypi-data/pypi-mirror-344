@@ -1,0 +1,387 @@
+{
+    "application_credentials": {
+        "description": "Navigera till [\"Engagera dig\" p\u00e5 Mieles utvecklarwebbplats]({register_url}) f\u00f6r att beg\u00e4ra autentiseringsuppgifter och ange dem nedan."
+    },
+    "config": {
+        "abort": {
+            "account_mismatch": "Det anv\u00e4nda kontot matchar inte det ursprungliga kontot",
+            "already_configured": "Kontot \u00e4r redan konfigurerat",
+            "already_in_progress": "Konfigurationsfl\u00f6det p\u00e5g\u00e5r redan",
+            "authorize_url_timeout": "Timeout vid generering av auktoriserings-URL.",
+            "missing_configuration": "Komponenten har inte konfigurerats. F\u00f6lj dokumentationen.",
+            "no_devices_found": "Inga enheter hittades i n\u00e4tverket",
+            "no_url_available": "Ingen webbadress tillg\u00e4nglig. F\u00f6r information om detta fel, [kolla hj\u00e4lpavsnittet]({docs_url})",
+            "oauth_error": "Mottog ogiltiga tokendata.",
+            "oauth_failed": "Fel vid h\u00e4mtning av \u00e5tkomsttoken.",
+            "oauth_timeout": "Timeout vid h\u00e4mtning av OAuth-token.",
+            "oauth_unauthorized": "OAuth-auktoriseringsfel vid h\u00e4mtning av \u00e5tkomsttoken.",
+            "reauth_successful": "\u00c5terautentisering lyckades",
+            "reconfigure_successful": "Omkonfigureringen lyckades",
+            "single_instance_allowed": "Redan konfigurerad. Endast en konfiguration m\u00f6jlig.",
+            "user_rejected_authorize": "Kontol\u00e4nkning avvisades: {error}"
+        },
+        "create_entry": {
+            "default": "Autentisering lyckades"
+        },
+        "step": {
+            "confirm": {
+                "description": "Vill du starta installationen?"
+            },
+            "pick_implementation": {
+                "title": "V\u00e4lj autentiseringsmetod"
+            },
+            "reauth_confirm": {
+                "description": "Miele-integrationen beh\u00f6ver autentisera ditt konto p\u00e5 nytt",
+                "title": "Autentiseringen har upph\u00f6rt att g\u00e4lla f\u00f6r {name}"
+            }
+        }
+    },
+    "device": {
+        "coffee_system": {
+            "name": "Kaffesystem"
+        },
+        "dialog_oven": {
+            "name": "Dialogugn"
+        },
+        "dishwasher": {
+            "name": "Diskmaskin"
+        },
+        "freezer": {
+            "name": "Frys"
+        },
+        "fridge_freezer": {
+            "name": "Kyl och frys"
+        },
+        "hob_extraction": {
+            "name": "H\u00e4ll med extraktion"
+        },
+        "hob_highlight": {
+            "name": "H\u00e4ll h\u00f6jdpunkt"
+        },
+        "hood": {
+            "name": "Huva"
+        },
+        "induction_hob": {
+            "name": "Induktionsh\u00e4ll"
+        },
+        "microwave": {
+            "name": "Mikrov\u00e5gsugn"
+        },
+        "oven": {
+            "name": "Ugn"
+        },
+        "oven_microwave": {
+            "name": "Ugn mikrov\u00e5gsugn"
+        },
+        "refrigerator": {
+            "name": "Kylsk\u00e5p"
+        },
+        "robot_vacuum_cleander": {
+            "name": "Robotdammsugare"
+        },
+        "steam_oven": {
+            "name": "\u00c5ngugn"
+        },
+        "steam_oven_combi": {
+            "name": "\u00c5ngugn kombi"
+        },
+        "steam_oven_microwave": {
+            "name": "\u00c5ngugn mikro"
+        },
+        "tumble_dryer": {
+            "name": "Torktumlare"
+        },
+        "warming_drawer": {
+            "name": "V\u00e4rmel\u00e5da"
+        },
+        "washer_dryer": {
+            "name": "Tv\u00e4tt-torkmaskin"
+        },
+        "washing_machine": {
+            "name": "Tv\u00e4ttmaskin"
+        },
+        "wine_cabinet": {
+            "name": "Vinsk\u00e5p"
+        },
+        "wine_cabinet_freezer": {
+            "name": "Vinkyl"
+        },
+        "wine_conditioning_unit": {
+            "name": "Vinkonditioneringsenhet"
+        },
+        "wine_unit": {
+            "name": "Vinenhet"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "info": {
+                "name": "Info"
+            },
+            "mobile_start": {
+                "name": "Mobil start"
+            },
+            "notification_active": {
+                "name": "Avisering aktiv"
+            },
+            "remote_control": {
+                "name": "Fj\u00e4rrkontroll"
+            },
+            "smart_grid": {
+                "name": "Smart eln\u00e4t"
+            }
+        },
+        "button": {
+            "pause": {
+                "name": "Pausa"
+            },
+            "start": {
+                "name": "Starta"
+            },
+            "stop": {
+                "name": "Stoppa"
+            }
+        },
+        "climate": {
+            "freezer": {
+                "name": "Frys"
+            },
+            "refrigerator": {
+                "name": "Kylsk\u00e5p"
+            },
+            "wine_cabinet": {
+                "name": "Vinsk\u00e5p"
+            },
+            "zone_1": {
+                "name": "Zon 1"
+            },
+            "zone_2": {
+                "name": "Zon 2"
+            },
+            "zone_3": {
+                "name": "Zon 3"
+            }
+        },
+        "fan": {
+            "fan": {
+                "name": "Fl\u00e4kt"
+            }
+        },
+        "light": {
+            "ambient_light": {
+                "name": "Omgivande ljus"
+            },
+            "light": {
+                "name": "Lampa"
+            }
+        },
+        "sensor": {
+            "core_target_temperature": {
+                "name": "K\u00e4rnm\u00e5ltemperatur"
+            },
+            "core_temperature": {
+                "name": "K\u00e4rntemperatur"
+            },
+            "elapsed_time": {
+                "name": "F\u00f6rfluten tid"
+            },
+            "energy_consumption": {
+                "name": "Energif\u00f6rbrukning"
+            },
+            "program_id": {
+                "name": "Program",
+                "state": {
+                    "1_tray": "1 pl\u00e5t",
+                    "2_trays": "2 pl\u00e5tar",
+                    "amaranth": "Amaranth",
+                    "apples_diced": "\u00c4pplen (i t\u00e4rningar)",
+                    "apples_halved": "\u00c4pplen (halverade)",
+                    "apples_quartered": "\u00c4pplen (i fj\u00e4rdedelar)",
+                    "apples_sliced": "\u00c4pplen (skivade)",
+                    "apples_whole": "\u00c4pplen (hela)",
+                    "appliance_settings": "Meny f\u00f6r inst\u00e4llningar",
+                    "apricots_halved_steam_cooking": "Aprikoser (halverade, \u00e5ngkokas)",
+                    "apricots_quartered": "Aprikoser (i fj\u00e4rdedelar)",
+                    "apricots_wedges": "Aprikoser (klyftor)",
+                    "artichokes_large": "Kron\u00e4rtskockor stora",
+                    "auto": "Auto",
+                    "barista_assistant": "BaristaAssistent",
+                    "basmati_rice_rapid_steam_cooking": "Basmatiris (snabb \u00e5ngkokning)",
+                    "basmati_rice_steam_cooking": "Basmatiris (\u00e5ngkokning)",
+                    "bed_linen": "S\u00e4ngkl\u00e4der",
+                    "beluga_lentils": "Belugalinser",
+                    "black_beans": "Svarta b\u00f6nor",
+                    "black_tea": "Svart te",
+                    "blanching": "Blanchering",
+                    "bologna_sausage": "Bolognakorv",
+                    "broccoli_florets_large": "Broccolibuketter (stora)",
+                    "broccoli_florets_medium": "Broccolibuketter (medium)",
+                    "broccoli_florets_small": "Broccolibuketter (sm\u00e5)",
+                    "broccoli_whole_large": "Broccoli (hel, stor)",
+                    "broccoli_whole_medium": "Broccoli (hel, medelstor)",
+                    "broccoli_whole_small": "Broccolibuketter (medium)",
+                    "brown_lentils": "Bruna linser",
+                    "bulgur": "Bulgur",
+                    "cafe_au_lait": "Caf\u00e9 au lait",
+                    "caffe_latte": "Caff\u00e8 latte",
+                    "cappuccino": "Cappuccino",
+                    "carp": "Karp",
+                    "carrots_whole_large": "Mor\u00f6tter (hela, stora)",
+                    "carrots_whole_medium": "Mor\u00f6tter (hela, medelstora)",
+                    "carrots_whole_small": "Mor\u00f6tter (hela, sm\u00e5)",
+                    "cep": "Stensopp",
+                    "check_appliance": "Kontrollera apparaten",
+                    "chick_peas": "Kik\u00e4rter",
+                    "coffee": "Kaffe",
+                    "coffee_pot": "Kaffe kanna",
+                    "conventional_heat": "Konventionell v\u00e4rme",
+                    "cottons": "Bomull",
+                    "cranberries": "Tranb\u00e4r",
+                    "curtains": "Gardiner",
+                    "descale": "Avkalka",
+                    "descaling": "Enheten avkalkas",
+                    "dissolve_gelatine": "L\u00f6s upp gelatin",
+                    "down_duvets": "Dunt\u00e4cken",
+                    "drain_spin": "T\u00f6mning/centrifugering",
+                    "eco": "ECO",
+                    "eco_40_60": "ECO 40-60",
+                    "espresso": "Espresso",
+                    "espresso_macchiato": "Espresso macchiato",
+                    "express": "Express",
+                    "glasses_warm": "V\u00e4rm glas",
+                    "green_asparagus_medium": "Gr\u00f6n sparris (medium)",
+                    "green_asparagus_thick": "Gr\u00f6n sparris (tjock)",
+                    "green_asparagus_thin": "Gr\u00f6n sparris (tunn)",
+                    "halibut_fillet_2_cm": "H\u00e4lleflundra (fil\u00e9, 2 cm)",
+                    "halibut_fillet_3_cm": "H\u00e4lleflundra (fil\u00e9, 3 cm)",
+                    "heat_crockery": "V\u00e4rm porslin",
+                    "herbal_tea": "\u00d6rtte",
+                    "hot_milk": "Varm mj\u00f6lk",
+                    "hygiene": "Hygien",
+                    "intensive": "Intensiv",
+                    "japanese_tea": "Japanskt te",
+                    "kasseler_slice": "Kasseler (skiva)",
+                    "keeping_warm": "Varmh\u00e5llning",
+                    "large_pillows": "Stora kuddar",
+                    "large_shrimps": "Stora r\u00e4kor",
+                    "latte_macchiato": "Latte macchiato",
+                    "leek_pieces": "Purjol\u00f6k (bitar)",
+                    "leek_rings": "Purjol\u00f6k (ringar)",
+                    "maintenance": "Underh\u00e5llsl\u00e4ge"
+                }
+            },
+            "program_phase": {
+                "name": "Programfas",
+                "state": {
+                    "anti_crease": "Skrynkelskydd",
+                    "blocked_brushes": "Borstar blockerade",
+                    "blocked_drive_wheels": "Drivhjul blockerade",
+                    "blocked_front_wheel": "Framhjul blockerat",
+                    "cooling_down": "Kallnar",
+                    "dirty_sensors": "Smutsiga sensorer",
+                    "docked": "Dockad",
+                    "door_open": "D\u00f6rr \u00f6ppen",
+                    "energy_save": "Energibesparing",
+                    "espresso": "Espressokaffe",
+                    "extra_dry": "Extra torrt",
+                    "final_rinse": "Slutsk\u00f6ljning",
+                    "finished": "Avslutat",
+                    "freshen_up_and_moisten": "Fr\u00e4scha upp och fukta",
+                    "going_to_target_area": "G\u00e5r till startpunkten",
+                    "grinding": "Malning",
+                    "heating": "V\u00e4rmer",
+                    "heating_up": "V\u00e4rmer upp",
+                    "heating_up_phase": "Uppv\u00e4rmningsfas",
+                    "hot_milk": "Varm mj\u00f6lk",
+                    "hygiene": "Hygien",
+                    "interim_rinse": "Mellansk\u00f6ljning",
+                    "keep_warm": "Varmh\u00e5llning",
+                    "keeping_warm": "Varmh\u00e5llning",
+                    "main_dishwash": "Diskar",
+                    "main_wash": "Huvudtv\u00e4tt",
+                    "milk_foam": "Mj\u00f6lkskum",
+                    "motor_overload": "Kontrollera dammbeh\u00e5llare och filter",
+                    "normal": "Normal",
+                    "normal_plus": "Normal plus",
+                    "not_running": "Ej aktiv",
+                    "vacuum_cleaning": "Reng\u00f6r",
+                    "vacuum_cleaning_paused": "Reng\u00f6ringen pausad",
+                    "vacuum_internal_fault": "Internt fel - starta om",
+                    "waiting_for_start": "V\u00e4ntar p\u00e5 start",
+                    "warm_air": "Varmluft",
+                    "wheel_lifted": "Hjul upplyft"
+                }
+            },
+            "program_type": {
+                "name": "Programtyp",
+                "state": {
+                    "normal_operation_mode": "Normalt driftl\u00e4ge",
+                    "own_program": "Eget program"
+                }
+            },
+            "remaining_time": {
+                "name": "\u00c5terst\u00e5ende tid"
+            },
+            "spin_speed": {
+                "name": "Centrifugeringshastighet"
+            },
+            "start_time": {
+                "name": "Startar om"
+            },
+            "status": {
+                "name": "Status",
+                "state": {
+                    "autocleaning": "Automatisk reng\u00f6ring",
+                    "failure": "Fel",
+                    "idle": "Inaktiv",
+                    "in_use": "Anv\u00e4nds",
+                    "not_connected": "Ej ansluten",
+                    "off": "Av",
+                    "on": "P\u00e5",
+                    "pause": "Paus",
+                    "program_ended": "Programmet avslutat",
+                    "program_interrupted": "Programmet avbr\u00f6ts",
+                    "programmed": "Programmerad",
+                    "rinse_hold": "Sk\u00f6lj v\u00e4ntande",
+                    "service": "Service",
+                    "supercooling": "Superkylning",
+                    "supercooling_superfreezing": "Superkylning/superfrysning",
+                    "superfreezing": "Superfrysning",
+                    "superheating": "\u00d6verhettning",
+                    "waiting_to_start": "V\u00e4ntar p\u00e5 att b\u00f6rja"
+                }
+            },
+            "temperature_zone_2": {
+                "name": "Temperatur zon 2"
+            },
+            "temperature_zone_3": {
+                "name": "Temperatur zon 3"
+            },
+            "water_consumption": {
+                "name": "Vattenf\u00f6rbrukning"
+            }
+        },
+        "switch": {
+            "power": {
+                "name": "Effekt"
+            },
+            "supercooling": {
+                "name": "Superkylning"
+            },
+            "superfreezing": {
+                "name": "Superfrysning"
+            }
+        }
+    },
+    "exceptions": {
+        "config_entry_auth_failed": {
+            "message": "Autentiseringen misslyckades. Logga in igen."
+        },
+        "config_entry_not_ready": {
+            "message": "Fel n\u00e4r integrationen laddades"
+        },
+        "set_state_error": {
+            "message": "Det gick inte att ange tillst\u00e5nd f\u00f6r {entity}."
+        }
+    }
+}

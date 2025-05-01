@@ -1,0 +1,90 @@
+{
+    "application_credentials": {
+        "description": "Vai a [\"Partecipa\" sul sito per sviluppatori Miele]({register_url}) per richiedere le credenziali, poi inseriscile qui sotto."
+    },
+    "config": {
+        "abort": {
+            "account_mismatch": "L'account utilizzato non corrisponde all'account originale",
+            "already_configured": "L'account \u00e8 gi\u00e0 configurato",
+            "already_in_progress": "Il flusso di configurazione \u00e8 gi\u00e0 in corso",
+            "authorize_url_timeout": "Tempo scaduto nel generare l'URL di autorizzazione.",
+            "missing_configuration": "Il componente non \u00e8 configurato. Segui la documentazione.",
+            "no_devices_found": "Nessun dispositivo trovato sulla rete",
+            "no_url_available": "Nessun URL disponibile. Per informazioni su questo errore, [controlla la sezione della guida]({docs_url})",
+            "oauth_error": "Ricevuti dati token non validi.",
+            "oauth_failed": "Errore durante l'ottenimento del token di accesso.",
+            "oauth_timeout": "Tempo scaduto durante la risoluzione del token OAuth.",
+            "oauth_unauthorized": "Errore di autorizzazione OAuth durante l'ottenimento del token di accesso.",
+            "reauth_successful": "L'autenticazione ha avuto successo",
+            "reconfigure_successful": "La riconfigurazione \u00e8 stata completata con successo",
+            "single_instance_allowed": "Gi\u00e0 configurato. \u00c8 possibile una sola configurazione.",
+            "user_rejected_authorize": "Collegamento account rifiutato: {error}"
+        },
+        "create_entry": {
+            "default": "Autenticazione riuscita"
+        },
+        "step": {
+            "confirm": {
+                "description": "Vuoi avviare la configurazione?"
+            },
+            "pick_implementation": {
+                "title": "Scegli il metodo di autenticazione"
+            }
+        }
+    },
+    "device": {
+        "washer_dryer": {
+            "name": "Lavasciuga"
+        },
+        "washing_machine": {
+            "name": "Lavatrice"
+        },
+        "wine_cabinet": {
+            "name": "Cantinetta per vini"
+        },
+        "wine_cabinet_freezer": {
+            "name": "Cantinetta frigo"
+        },
+        "wine_conditioning_unit": {
+            "name": "Unit\u00e0 di condizionamento del vino"
+        },
+        "wine_unit": {
+            "name": "Unit\u00e0 vino"
+        }
+    },
+    "entity": {
+        "sensor": {
+            "status": {
+                "name": "Stato",
+                "state": {
+                    "autocleaning": "Pulizia automatica",
+                    "failure": "Fallito",
+                    "idle": "Inattivo",
+                    "in_use": "In uso",
+                    "not_connected": "Non connesso",
+                    "off": "Spento/a",
+                    "on": "Acceso/a",
+                    "pause": "Pausa",
+                    "program_ended": "Programma terminato",
+                    "program_interrupted": "Programma interrotto",
+                    "programmed": "Programmato",
+                    "rinse_hold": "Risciacquo in sospeso",
+                    "service": "Servizio",
+                    "supercooling": "Sottoraffreddamento",
+                    "supercooling_superfreezing": "Sottoraffreddamento/congelamento rapido",
+                    "superfreezing": "Congelamento rapido",
+                    "superheating": "Surriscaldamento",
+                    "waiting_to_start": "In attesa di iniziare"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "config_entry_auth_failed": {
+            "message": "Autenticazione fallita. Effettua nuovamente l'accesso."
+        },
+        "config_entry_not_ready": {
+            "message": "Errore durante il caricamento dell'integrazione."
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "entity": {
+        "binary_sensor": {
+            "cellular": {
+                "name": "Ceallach"
+            },
+            "charge_enable_request": {
+                "name": "Iarratas cumasaithe muirir"
+            },
+            "defrost_for_preconditioning": {
+                "name": "D\u00edreoite le haghaidh r\u00e9amhoiri\u00fan\u00fa"
+            },
+            "hvac_auto_mode": {
+                "name": "M\u00f3d uathoibr\u00edoch HVAC"
+            },
+            "hvil": {
+                "name": "Ardvoltais locht l\u00fab interlock"
+            },
+            "lights_high_beams": {
+                "name": "B\u00edoma\u00ed arda"
+            },
+            "remote_start_enabled": {
+                "name": "T\u00fas cianda"
+            },
+            "seat_vent_enabled": {
+                "name": "Cumasa\u00edodh gaothr\u00e1n su\u00edoch\u00e1in"
+            },
+            "speed_limit_mode": {
+                "name": "Luas teoranta"
+            },
+            "wifi": {
+                "name": "Wi-Fi"
+            }
+        },
+        "climate": {
+            "driver_temp": {
+                "state_attributes": {
+                    "fan_mode": {
+                        "state": {
+                            "bioweapon": "Cosaint bith-arm"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
