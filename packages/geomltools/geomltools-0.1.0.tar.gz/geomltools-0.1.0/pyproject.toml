@@ -1,0 +1,10 @@
+[build-system]
+requires = ["numpy",
+        "pandas",
+        "scipy",
+        "geopandas",
+        "shapely",
+        "scikit-learn",
+        "esda",
+        "libpysal"]
+build-backend = "setuptools.build_meta"
