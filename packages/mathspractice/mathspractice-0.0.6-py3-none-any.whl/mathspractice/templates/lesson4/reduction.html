@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1><a class="button" href="{{ url_for('lesson4.index') }}">{% block title %}Lesson 4{% endblock %}</a></h1>
+{% endblock %}
+
+{% block content %}
+
+    <h1><a class="button" href="{{ url_for('lesson4.reduction') }}">Reduced Terms</a></h1>
+    {% set lesson = 'lesson4' %}
+    {% set section = 'reduction' %}
+    {% include 'stats.html' %}
+    <form method="post" action="{{ url_for('lesson4.reduction') }}">
+        <input type="hidden" id="first" name="first" value="{{ first }}">
+        <input type="hidden" id="second" name="second" value="{{ second }}">
+        <input type="hidden" id="now" name="now" value="{{ now }}">
+        <p class="center">
+        Write the following fraction in reduced terms:
+        </p>
+        <table class="compact">
+            <tr>
+                <td class="right">
+                {{ first }}<hr/>{{ second }}
+                </td>
+                <td class="right">=</td>
+                <td class="right">
+                <input class="right" type="number" id="numerator" name="numerator" autocomplete="off" autofocus>
+                <hr/>
+                <input class="right" type="number" id="denominator" name="denominator" autocomplete="off" autofocus>
+                </td>
+            </tr>
+            <tr><td colspan="3" class="center"><input type="submit" id="submit" name="Check" value="Check"></td></tr>
+        </table>
+    </form>
+
+{% endblock %}
