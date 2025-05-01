@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "fastentrypoints"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "datasling"
+version = "0.0.1"
+description = "Convert Markdown (.md) files to PDF ..."
+readme = "README.md"
+requires-python = ">=3.10"
+
+authors = [
+  { name = "Ryan Gerard Wilson", email = "ryan@wilsonfamilyoffice.com" }
+]
+
+dependencies = [
+  "builtins",
+  "colorama",
+  "config",
+  "df_utils",
+  "file_utils",
+  "modules",
+  "pandas",
+  "sqlite3",
+  "ui",
+]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://ryangerardwilson.com"
+Issues   = "https://ryangerardwilson.com/contact"
+
+[project.entry-points."console_scripts"]
+datasling = "main:main"
