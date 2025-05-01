@@ -1,0 +1,2 @@
+[console_scripts]
+scriptic = scriptic:run_cli
