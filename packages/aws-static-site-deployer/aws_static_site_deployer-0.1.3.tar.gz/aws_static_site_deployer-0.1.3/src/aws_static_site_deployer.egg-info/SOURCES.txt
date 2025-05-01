@@ -1,0 +1,17 @@
+pyproject.toml
+setup.py
+src/aws-static-site-deployer/__init__.py
+src/aws-static-site-deployer/cli.py
+src/aws-static-site-deployer/main.py
+src/aws-static-site-deployer/helpers/__init__.py
+src/aws-static-site-deployer/helpers/aws_helpers.py
+src/aws-static-site-deployer/helpers/file_helpers.py
+src/aws-static-site-deployer/helpers/git_helpers.py
+src/aws-static-site-deployer/helpers/logger.py
+src/aws-static-site-deployer/helpers/template_helpers.py
+src/aws_static_site_deployer.egg-info/PKG-INFO
+src/aws_static_site_deployer.egg-info/SOURCES.txt
+src/aws_static_site_deployer.egg-info/dependency_links.txt
+src/aws_static_site_deployer.egg-info/entry_points.txt
+src/aws_static_site_deployer.egg-info/requires.txt
+src/aws_static_site_deployer.egg-info/top_level.txt
