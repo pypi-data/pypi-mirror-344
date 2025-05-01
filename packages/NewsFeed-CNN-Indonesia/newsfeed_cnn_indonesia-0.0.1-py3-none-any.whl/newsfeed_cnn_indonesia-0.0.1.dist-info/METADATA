@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: NewsFeed-CNN-Indonesia
+Version: 0.0.1
+Summary: 6 Popular news from CNN Indonesia
+Author-email: Remote-Idn <rsatriawan@gmail.com>
+License-Expression: GPL-3.0-only
+Project-URL: Homepage, https://github.com/Remote-Idn/News-Feed
+Project-URL: Issues, https://remote-idn.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# News-Feed CNN Indonesia
+This package will get 6 Popular news from CNN Indonesia
+
+## HOW IT WORK?
+This package will scrape from [CNN Indonesia](https://www.cnnindonesia.com/) to get 6 most popular news from it website.
+This package will use Requests and BeautifulSoup4, to produce output in the form of JSON that is ready use in web or mobile applications
