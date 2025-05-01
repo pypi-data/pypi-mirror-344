@@ -1,0 +1,3 @@
+pandas
+rapidfuzz
+importlib-resources>=5.12.0
