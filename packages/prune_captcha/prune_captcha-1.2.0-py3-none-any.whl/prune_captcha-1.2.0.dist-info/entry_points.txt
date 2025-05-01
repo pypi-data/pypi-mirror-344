@@ -1,0 +1,2 @@
+[console_scripts]
+prune_captcha = captcha_prune.start_server:main
