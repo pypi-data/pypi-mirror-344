@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+openAI_original/__init__.py
+openAI_original/main.py
+openAI_original.egg-info/PKG-INFO
+openAI_original.egg-info/SOURCES.txt
+openAI_original.egg-info/dependency_links.txt
+openAI_original.egg-info/top_level.txt
