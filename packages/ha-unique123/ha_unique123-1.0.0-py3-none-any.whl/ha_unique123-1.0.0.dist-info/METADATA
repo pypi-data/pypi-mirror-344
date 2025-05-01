@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: ha_unique123
+Version: 1.0.0
+Summary: A sample package with unique name ha-unique123
+Author: Your Name
+Author-email: Your Name <your@email.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# ha-unique123
+Sample package
