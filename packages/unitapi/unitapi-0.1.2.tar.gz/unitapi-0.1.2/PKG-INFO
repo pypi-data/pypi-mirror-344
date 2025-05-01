@@ -1,0 +1,110 @@
+Metadata-Version: 2.4
+Name: unitapi
+Version: 0.1.2
+Summary: Real-Time Annotation and Stream Processing Interface
+Home-page: https://unitapi.unitapi.com
+Author: Tom Sapletta
+Author-email: info@softreck.dev
+Maintainer: unitapi developers
+Maintainer-email: info@softreck.dev
+License: Apache-2.0
+Project-URL: Repository, https://github.com/unitapi/python
+Project-URL: Changelog, https://github.com/unitapi/python/releases
+Project-URL: Wiki, https://github.com/unitapi/python/wiki
+Project-URL: Issue Tracker, https://github.com/unitapi/python/issues/new
+Keywords: python,unitapi,streaming,real-time,annotation,processing
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: psutil>=5.9.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: urllib3>=1.26.9
+Requires-Dist: websockets>=10.3
+Requires-Dist: aiohttp>=3.8.0
+Requires-Dist: fastapi>=0.110.0
+Requires-Dist: uvicorn>=0.27.0
+Requires-Dist: acme>=4.0.0
+Requires-Dist: cryptography>=42.0.0
+Requires-Dist: certbot>=2.7.0
+Requires-Dist: dnspython>=2.4.0
+Requires-Dist: upnpclient>=1.0.3
+Requires-Dist: zeroconf>=0.38.1
+Requires-Dist: wsdiscovery>=2.0.0
+Requires-Dist: onvif-zeep>=0.2.12
+Requires-Dist: opencv-python>=4.6.0
+Requires-Dist: numpy>=1.22.3
+Requires-Dist: Pillow>=9.1.0
+Requires-Dist: pyaudio>=0.2.13
+Requires-Dist: grpcio>=1.62.0
+Requires-Dist: grpcio-tools>=1.62.0
+Requires-Dist: paho-mqtt>=1.6.0
+Requires-Dist: redis>=4.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.1.2; extra == "dev"
+Requires-Dist: pytest-cov>=2.12.1; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: types-requests>=2.31.0; extra == "dev"
+Requires-Dist: types-PyYAML>=6.0.1; extra == "dev"
+Requires-Dist: types-psutil>=5.9.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+
+ [<span style='font-size:20px;'>&#x270D;</span>](git@github.com:UnitApi/python/edit/main/docs/README.md)
+
+
+ [<span style='font-size:20px;'>&#x270D;</span>](git@github.com:UnitApi/python/edit/main/docs/EXAMPLES.md)
+
+
+ [<span style='font-size:20px;'>&#x270D;</span>](git@github.com:UnitApi/python/edit/main/docs/INSTALL.md)
+
+
+ [<span style='font-size:20px;'>&#x270D;</span>](git@github.com:UnitApi/python/edit/main/docs/CONCEPTS.md)
+
+
+ [<span style='font-size:20px;'>&#x270D;</span>](git@github.com:UnitApi/python/edit/main/docs/CLI.md)
+
+
+ [<span style='font-size:20px;'>&#x270D;</span>](git@github.com:UnitApi/python/edit/main/docs/API.md)
+
+
+ [<span style='font-size:20px;'>&#x270D;</span>](git@github.com:UnitApi/python/edit/main/docs/CONFIGURATION.md)
+
+
+ [<span style='font-size:20px;'>&#x270D;</span>](git@github.com:UnitApi/python/edit/main/docs/DEVELOPMENT.md)
+
+
+ [<span style='font-size:20px;'>&#x270D;</span>](git@github.com:UnitApi/python/edit/main/docs/TREE.md)
+
+
+---
++ Modular Documentation made possible by the [FlatEdit](http://www.flatedit.com) project.
