@@ -1,0 +1,7 @@
+pyproject.toml
+readme.md
+src/anieesh/__init__.py
+src/anieesh.egg-info/PKG-INFO
+src/anieesh.egg-info/SOURCES.txt
+src/anieesh.egg-info/dependency_links.txt
+src/anieesh.egg-info/top_level.txt
