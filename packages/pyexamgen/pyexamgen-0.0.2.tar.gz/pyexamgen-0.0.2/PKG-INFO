@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: pyexamgen
+Version: 0.0.2
+Summary: Generate LaTeX exams using advanced Mako templates
+Home-page: https://github.com/johndoe31415/pyexamgen
+Download-URL: https://github.com/johndoe31415/pyexamgen/archive/v0.0.2.tar.gz
+Author: Johannes Bauer
+Author-email: joe@johannes-bauer.com
+License: GPL-3.0-only
+Keywords: exam,generator,template
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mako
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# pyexamgen
+pyexamgen is a generator which allows easy generation of exams. It uses Mako as
+a templating engine and has functionality that allows randomization of both the
+content of individual tasks as well as automatic, pseudo-random selection of
+specific tasks.  For example, in a quiz you can specify that it should ask k of
+a total of n questions; the specific questions will be randomly selected if you
+wish.
+
+## License
+GNU GPL-3.
