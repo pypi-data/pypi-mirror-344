@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: aws-static-site-deployer
+Version: 0.1.4
+Summary: AWS CloudFront Static Website Deployment Tool
+Author: Syed Danial
+Author-email: your.email@example.com
+Requires-Python: >=3.6
+Requires-Dist: boto3>=1.28.0
+Requires-Dist: botocore>=1.31.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: argparse>=1.4.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
