@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: nettrustscore
+Version: 2.0.4
+Summary: [DEPRECATED] use trustpy-tools instead: trustworthiness metrics and calibration tools predictive models
+Home-page: https://github.com/yaniker/trustpy
+Author: Erim_Yanik
+Author-email: erimyanik@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.20
+Requires-Dist: scikit-learn>=1.0
+Requires-Dist: matplotlib>=3.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# nettrustscore
+
+!!! THIS PACKAGE HAS BEEN DEPRECATED !!!
+
+PLEASE USE THE ACTIVELY MAINTAINED PACKAGE ['trustpy-tools'](https://pypi.org/project/trustpy-tools/) instead.
