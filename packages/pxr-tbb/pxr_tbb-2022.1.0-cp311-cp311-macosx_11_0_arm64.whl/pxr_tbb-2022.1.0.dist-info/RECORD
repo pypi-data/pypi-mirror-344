@@ -1,0 +1,13 @@
+pxr/.libs/libtbb.12.15.dylib,sha256=kxFOYj8rBi-im5RjWWA0mUdHldXwk-oaX_L5VNz1yXs,306528
+pxr/.libs/libtbb.12.dylib,sha256=kxFOYj8rBi-im5RjWWA0mUdHldXwk-oaX_L5VNz1yXs,306528
+pxr/.libs/libtbb.dylib,sha256=kxFOYj8rBi-im5RjWWA0mUdHldXwk-oaX_L5VNz1yXs,306528
+pxr/.libs/libtbbmalloc.2.15.dylib,sha256=3J3W6Xy7Fhp5aaSECa9hrHlrtrBYUyONWb4W4fO_umI,103256
+pxr/.libs/libtbbmalloc.2.dylib,sha256=3J3W6Xy7Fhp5aaSECa9hrHlrtrBYUyONWb4W4fO_umI,103256
+pxr/.libs/libtbbmalloc.dylib,sha256=3J3W6Xy7Fhp5aaSECa9hrHlrtrBYUyONWb4W4fO_umI,103256
+pxr/.libs/libtbbmalloc_proxy.2.15.dylib,sha256=WI3fyOPGx7a2gjVS7Y3cGHKKm9zcDsnYC4oH7FV28ZA,51600
+pxr/.libs/libtbbmalloc_proxy.2.dylib,sha256=WI3fyOPGx7a2gjVS7Y3cGHKKm9zcDsnYC4oH7FV28ZA,51600
+pxr/.libs/libtbbmalloc_proxy.dylib,sha256=WI3fyOPGx7a2gjVS7Y3cGHKKm9zcDsnYC4oH7FV28ZA,51600
+pxr_tbb-2022.1.0.dist-info/METADATA,sha256=tVgKhHpz-7HRBnQvzGrmScQ4lzcMtTDp9JbSM8XixoQ,1250
+pxr_tbb-2022.1.0.dist-info/WHEEL,sha256=7rLDdUct7CQ24UBiUc9sJ7eWcbmgROlMwDZ4Rd3kelE,114
+pxr_tbb-2022.1.0.dist-info/licenses/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pxr_tbb-2022.1.0.dist-info/RECORD,,
