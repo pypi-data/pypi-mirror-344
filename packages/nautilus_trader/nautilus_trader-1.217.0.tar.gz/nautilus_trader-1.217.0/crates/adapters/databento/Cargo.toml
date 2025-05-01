@@ -1,0 +1,69 @@
+[package]
+name = "nautilus-databento"
+readme = "README.md"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+description.workspace = true
+categories.workspace = true
+keywords.workspace = true
+documentation.workspace = true
+repository.workspace = true
+homepage.workspace = true
+
+[lib]
+name = "nautilus_databento"
+crate-type = ["rlib", "cdylib"]
+
+[features]
+default = []
+extension-module = [
+  "pyo3/extension-module",
+  "nautilus-core/extension-module",
+  "nautilus-model/extension-module",
+]
+python = [
+  "pyo3",
+  "pyo3-async-runtimes",
+  "nautilus-core/ffi",  # Temporary as python currently relies on the ffi CVec
+  "nautilus-core/python",
+  "nautilus-model/python",
+]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+nautilus-core = { workspace = true }
+nautilus-model = { workspace = true }
+
+ahash = { workspace = true }
+anyhow = { workspace = true }
+indexmap = { workspace = true }
+itoa = { workspace = true }
+log = { workspace = true }
+pyo3 = { workspace = true, optional = true }
+pyo3-async-runtimes = { workspace = true, optional = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+strum = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+ustr = { workspace = true }
+databento = "0.24.0"
+fallible-streaming-iterator = "0.1.9"
+time = "0.3.41"
+
+[dev-dependencies]
+nautilus-testkit = { workspace = true }
+criterion = { workspace = true }
+rstest = { workspace = true }
+tracing-test = { workspace = true }
+
+[[bin]]
+name = "databento-sandbox"
+path = "bin/sandbox.rs"
+required-features = ["python"]
