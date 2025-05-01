@@ -1,0 +1,16 @@
+taulu/__init__.py,sha256=Nj3dCKPffuOeMSOkTfj0_5bcJ1dT2qxnweEBxuzfROM,382
+taulu/constants.py,sha256=kls_t3PHiJQvum7zHfEXWqjWJ_6t_ZaSSvEg0Zj-BL4,17
+taulu/corner_filter.py,sha256=pieJH7RNBBg56XBwOUqW6vhT0zKu9DatdfPBUlyM9I4,12412
+taulu/error.py,sha256=IqrxmiNQ_IoilIWCJdRVQEV2crg7oy9fcQHatPt4f_g,349
+taulu/header_aligner.py,sha256=Dv4VZYkMkPJqzsr2LuIJT-wJSCoBPVR2TG9c_uRdejU,6778
+taulu/header_template.py,sha256=Ulr486ZIehzY0CeliXkSS-BHtZh9ZoM4XrX8BfJEWaw,12546
+taulu/img_util.py,sha256=pH5m48K5NBWxz1oXydqZ04IdJynd7cH1bitmLs-z-Ew,4677
+taulu/main.py,sha256=QjJXgaAt1XuQMmTcY18M5RJwHv48YZnEDXDRZ34_4DU,39
+taulu/page_cropper.py,sha256=QPR4FU9_UMg98KfJ8fwC4N_P-3IANV_iQJbOilkXp20,4974
+taulu/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taulu/split.py,sha256=VmPZDKwEkEW6ZZfsbEO3EErOpSq8rSoGpKiqWhWJl80,2392
+taulu/table_indexer.py,sha256=2NP6dt6Zf0_d8FyXFsUEGRqukNpeavhmclu8QMZL6WU,3929
+taulu-0.2.0.dist-info/METADATA,sha256=qqeFThprWJX3i3FBRNFXVTAAyWpYn6UD4RM2P6xl19M,6985
+taulu-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+taulu-0.2.0.dist-info/entry_points.txt,sha256=4zhoFSbeiPO9jg5qaE5PjLoz_FxLrRWmi-64MjeCWN4,37
+taulu-0.2.0.dist-info/RECORD,,
