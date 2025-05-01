@@ -1,0 +1,2 @@
+import synapse_sso_proconnect.main; synapse_sso_proconnect.main.main()
+

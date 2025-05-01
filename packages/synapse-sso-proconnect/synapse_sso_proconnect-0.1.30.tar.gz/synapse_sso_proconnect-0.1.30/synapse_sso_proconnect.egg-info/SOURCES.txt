@@ -1,0 +1,10 @@
+README.md
+setup.py
+synapse_sso_proconnect.pth
+synapse_sso_proconnect/__init__.py
+synapse_sso_proconnect/main.py
+synapse_sso_proconnect.egg-info/PKG-INFO
+synapse_sso_proconnect.egg-info/SOURCES.txt
+synapse_sso_proconnect.egg-info/dependency_links.txt
+synapse_sso_proconnect.egg-info/requires.txt
+synapse_sso_proconnect.egg-info/top_level.txt
