@@ -1,0 +1,3 @@
+[console_scripts]
+unitapi = unitapi.main:main
+unitapi-dsl = unitapi.cli:main
