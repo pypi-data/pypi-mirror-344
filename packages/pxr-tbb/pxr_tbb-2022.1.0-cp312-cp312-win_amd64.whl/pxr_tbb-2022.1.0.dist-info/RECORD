@@ -1,0 +1,11 @@
+bin/tbb12.dll,sha256=G5j7mQcxLXbrUS4b0RucUPSlAwoAoPcDCVUMFVuNzDk,336384
+bin/tbbmalloc.dll,sha256=5ikSMkkZpywZumpmk-hsWBdlEd-AaxauBhEbUn45H4Y,107520
+bin/tbbmalloc_proxy.dll,sha256=BDOJxSQE6gLgee6tV-6l5f_zLFMVxnOwxtJbO9zfn6Q,30720
+lib/tbb.lib,sha256=npIEoA7s2b0Eiakm3VAubMi51J6VYW1zmcsmlwRCnq4,46030
+pxr/.libs/tbb12.lib,sha256=npIEoA7s2b0Eiakm3VAubMi51J6VYW1zmcsmlwRCnq4,46030
+pxr/.libs/tbbmalloc.lib,sha256=qjx8lgRYP9MMasWd5QEMHgqT8i7kefPdxjmYXIo-s9I,9616
+pxr/.libs/tbbmalloc_proxy.lib,sha256=B8pj6zOc-pLxf7gwPcjKdc1LdX1Y8Z3qUFsS1IZPTdI,2192
+pxr_tbb-2022.1.0.dist-info/METADATA,sha256=tVgKhHpz-7HRBnQvzGrmScQ4lzcMtTDp9JbSM8XixoQ,1250
+pxr_tbb-2022.1.0.dist-info/WHEEL,sha256=NwgjyrmVpVzZ-osOl_ZcT-QXHLFroWlAkN7IC9J-0Pg,106
+pxr_tbb-2022.1.0.dist-info/licenses/LICENSE.txt,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+pxr_tbb-2022.1.0.dist-info/RECORD,,
