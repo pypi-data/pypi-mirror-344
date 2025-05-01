@@ -1,0 +1,85 @@
+{% extends "hrcentre/base.html" %}
+{% load i18n %}
+{% load hrcentretags %}
+
+{% block hrcentre_page_header %}<h1 class="page-header text-center">{{ group_name }}</h1>{% endblock hrcentre_page_header %}
+
+
+{% block extra_css %}
+    {% include "bundles/datatables-css-bs5.html" %}
+{% endblock extra_css %}
+
+{% block hrcentre_content %}
+    <div class="row">
+        <div class="col-12 px-4">
+            <div class="card mt-2">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-aa">
+                            <thead>
+                                <tr>
+                                    <th scope="col">{% translate "Main" %}</th>
+                                    <th scope="col">{% translate "Number of characters" %}</th>
+                                    <th scope="col">{% translate "Characters" %}</th>
+                                    <th scope="col">{% translate "Last Login (ET)" %}</th>
+                                    <th scope="col">{% translate "Labels" %}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for main in mains %}
+                                    <tr>
+                                        <td>
+                                            <img src="{{ main.character.portrait_url_32 }}" class="rounded me-2">
+                                            <span>{{ main.character.character_name }}</span>
+                                            <a class="btn text-info" href="{% url "hrcentre:user_view" main.character.character_ownership.user.id %}">
+                                                <i class="fa-solid fa-up-right-from-square"></i>
+                                            </a>
+                                        </td>
+                                        <td>{{ main.number_of_chars }}</td>
+                                        <td>
+                                            {% for char in main.character.character_ownership.user.chars %}
+                                                <span class="badge {% if char.character|ct_is_active %}text-bg-primary{% else %}text-bg-danger{% endif %}" data-bs-toggle="tooltip" data-bs-title="Last login (ET): {{ char.last_login|date:"Y/m/d H:i" }}">{{ char.character.character_name }}</span>
+                                            {% endfor %}
+                                        </td>
+                                        <td>
+                                            <span class="badge {% if main.is_updating %}text-bg-primary{% else %}text-bg-danger{% endif %}" data-bs-toggle="tooltip" data-bs-title="Oldest update between all chars: {% if main.oldest_last_update %}{{ main.oldest_last_update|date:"Y/m/d H:i" }}{% else %}Never{% endif %}">
+                                                {% if main.last_login %}
+                                                    {{ main.last_login|date:"Y/m/d H:i" }}
+                                                {% else %}
+                                                    {% translate "Unknown" %}
+                                                {% endif %}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            {% for userlabel in main.character.character_ownership.user.hr_labels.all %}
+                                                <span class="badge {{ userlabel.label.bs_class }}">{{ userlabel.label.name }}</span>
+                                            {% endfor %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mt-3">
+            <div class="d-flex flex-row-reverse">
+                <a href="{% url 'hrcentre:index' %}" class="btn btn-info">{% translate "Back" %}</a>
+            </div>
+        </div>
+    </div>
+{% endblock hrcentre_content %}
+
+{% block extra_javascript %}
+    {% include "bundles/datatables-js-bs5.html" %}
+{% endblock extra_javascript %}
+
+{% block extra_script %}
+    $(document).ready(function() {
+        $('[data-bs-toggle="tooltip"]').tooltip();
+        $('.table-aa').DataTable({
+            "pageLength": 50
+        });
+    });
+{% endblock extra_script %}
