@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openai-gpt-image-1-mcp"
+version = "0.1.0"
+description = "OpenAI Image Generation MCP Server for AI assistant access to OpenAI's image generation capabilities"
+readme = "README.md"
+authors = [
+    {name = "DevRico003", email = "devrico003@gmail.com"}
+]
+license = "MIT"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP",
+]
+keywords = ["openai", "image", "generation", "gpt-image-1", "api", "mcp", "llm", "ai", "assistant"]
+dependencies = [
+    "httpx>=0.27.0",
+    "openai>=1.0.0",
+    "mcp>=0.4.0",
+]
+requires-python = ">=3.8"
+
+[project.urls]
+"Homepage" = "https://github.com/DevRico003/openai-gpt-image-1-mcp"
+"Bug Tracker" = "https://github.com/DevRico003/openai-gpt-image-1-mcp/issues"
+"Source Code" = "https://github.com/DevRico003/openai-gpt-image-1-mcp"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.20.0",
+]
+
+[project.scripts]
+openai-gpt-image-1-mcp = "openai_gpt_image_1_server:main"
+
+[tool.setuptools]
+packages = ["openai_gpt_image_1", "openai_gpt_image_1.resources", "openai_gpt_image_1.tools", "openai_gpt_image_1_server"]
+
+[tool.setuptools.package-data]
+openai_gpt_image_1 = ["**/*.py"]
+
+[tool.setuptools.exclude-package-data]
+"*" = ["*.pyc", "__pycache__"]

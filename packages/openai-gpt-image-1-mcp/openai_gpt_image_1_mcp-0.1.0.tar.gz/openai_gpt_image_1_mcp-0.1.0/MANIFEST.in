@@ -1,0 +1,6 @@
+include LICENSE
+include README.md
+include pyproject.toml
+include setup.py
+recursive-include openai_image *.py
+recursive-include openai_image_server *.py
