@@ -1,0 +1,10 @@
+click
+requests
+
+[code-quality]
+black
+ruff
+
+[testing]
+pytest
+requests-mock
