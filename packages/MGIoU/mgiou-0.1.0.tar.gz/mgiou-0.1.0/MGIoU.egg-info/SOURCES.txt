@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+MGIoU.egg-info/PKG-INFO
+MGIoU.egg-info/SOURCES.txt
+MGIoU.egg-info/dependency_links.txt
+MGIoU.egg-info/top_level.txt
+mgiou/__init__.py
+mgiou/losses.py

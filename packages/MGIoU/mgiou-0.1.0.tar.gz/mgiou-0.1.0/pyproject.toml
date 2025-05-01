@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MGIoU"
+version = "0.1.0"
+description = "Marginalised Generalised IoU (MGIoU) loss for PyTorch"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Duy-Tho Le", email = "ldtho.97@gmail.com"}]
+requires-python = ">=3.8"
+dependencies = []   # adapt if you need CUDA-only etc.
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/ldtho/MGIoU"
