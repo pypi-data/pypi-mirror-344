@@ -1,0 +1,17 @@
+drumterm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+drumterm/main.py,sha256=RYL1s8JdbuOE1Mgi5fbBUcxYlZPzJqx_m12iTzcu-sc,2935
+drumterm/sounds/cowbell.wav,sha256=Z6eU9vIJhuZXRrLIyE3--fcPeMdI8xSpAX5o6ZXyzFM,362964
+drumterm/sounds/crash.wav,sha256=Sx73SgHyckvHbGZurItutWO9R8M5Fw2DG5oeKOCetmM,460844
+drumterm/sounds/hihat_closed.wav,sha256=h2-VvfeIRYDiB-j3Tt7RUzRb2Z3eDFtLn4GkwLPps60,42010
+drumterm/sounds/hihat_open.wav,sha256=egE48MRnE05GHbxvLvn5qFjATOKQb4zHqUSK3hT9b0Y,56286
+drumterm/sounds/kick.wav,sha256=G_GDOWKqxA0M0Hh5FEw-E2SIZZ5kzTSESqeQZS5i6qs,44192
+drumterm/sounds/snare.wav,sha256=mz9q5q4en6MOTnYeom998RbNbZtI82pMwCATxO5UkrA,29534
+drumterm/sounds/tom_high.wav,sha256=NBpe9phRv0T1wfGrHgeAntnGBKbDSpQH0cAhpV95CLU,669399
+drumterm/sounds/tom_low.wav,sha256=wnyTriEPCLaQWxCguLWRSEtU88h_VhLgl9AJ9mA3BAo,145434
+drumterm/sounds/tom_mid.wav,sha256=nYI7-wP_d6FJ6K6hMZg3ScJ1H3u-2FY2Wzfo4lPQMHs,389264
+drumterm-0.1.0.dist-info/licenses/LICENSE,sha256=_Fu0VWIgbpgQbaXqBDkbedMkPp-1OW8ksI0g290dKCw,1069
+drumterm-0.1.0.dist-info/METADATA,sha256=0l_6vDacXQZMzkFzcvfRE29VFGmQbZ8Vm-jyoKRe-QY,1380
+drumterm-0.1.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+drumterm-0.1.0.dist-info/entry_points.txt,sha256=bGgs64va-jW2HAAhIBc_as6xUIJEx0WE9PTYf8CVtV4,47
+drumterm-0.1.0.dist-info/top_level.txt,sha256=in6isLwTE_c8fHdHSuyzfsBM03gF8V1FCV5m_EstGbw,9
+drumterm-0.1.0.dist-info/RECORD,,
