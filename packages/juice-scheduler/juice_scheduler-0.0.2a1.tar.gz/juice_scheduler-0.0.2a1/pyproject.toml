@@ -1,0 +1,129 @@
+[tool.poetry]
+name = "juice-scheduler"
+version = "0.0.2a1"
+description = "JUICE Scheduler is a Python package that provides a library and command line tools to support the JUICE mission science planning."
+authors = [
+    "JUICE SOC Team <juice_soc@cosmos.esa.int>",
+]
+license = "MIT"
+readme = "README.md"
+
+documentation = "https://juicesoc.esac.esa.int/data/juice-scheduler"
+homepage = "https://juicesoc.esac.esa.int/data/juice-scheduler"
+repository = "https://juigitlab.esac.esa.int/core-system/uplink/juice-scheduler"
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+
+packages = [
+    { include = "juice_scheduler", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9.1, <4.0"
+pytz = "^2025.1"
+portion = "^2.6.0"
+click = "^8.1.8"
+requests = "^2.32.3"
+defusedxml = "^0.7.1"
+
+[tool.poetry.group.dev.dependencies]
+mkdocstrings = {version = ">=0.23", extras = ["python"]}
+mkdocs-material = "*"
+mypy = "*"
+pre-commit = "*"
+pymdown-extensions = "*"
+pytest = "*"
+pytest-github-actions-annotate-failures = "*"
+pytest-cov = "*"
+python-kacl = "*"
+ruff = ">=0.2.0"
+
+[tool.poetry.scripts]
+juice-scheduler = "juice_scheduler.cli.juice_scheduler:cli"
+spice-scheduler = "juice_scheduler.cli.spice_scheduler:cli"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+target-version = "py39" # The lowest supported version
+line-length = 120
+
+[tool.ruff.lint]
+# By default, enable all the lint rules.
+# Add to the ignore list below if you don't want some rules.
+# If you need some ignores for certain modules, see tool.ruff.lint.per-file-ignores below.
+# For individual ignore cases, prefer inline `# noqa`s within the code.
+select = ["ALL"]
+ignore = [
+    "ANN",      # Type hints related, let mypy handle these.
+    "D",        # Docstrings related, way too strict to our taste
+    ]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = [
+    "S101",     # "Use of `assert` detected"
+    "ARG",      # "Unused function argument". Fixtures are often unused.
+    "S105",     # "Possible hardcoded password".
+    "PLR2004"
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.pep8-naming]
+classmethod-decorators = [
+    "classmethod",
+    "pydantic.validator",
+    "pydantic.root_validator",
+]
+
+[tool.pytest.ini_options]
+addopts = """\
+    --cov juice_scheduler \
+    --cov-report term-missing \
+    --cov-report xml \
+    --no-cov-on-fail \
+"""
+
+[tool.coverage.report]
+fail_under=80
+exclude_lines = [
+    'if TYPE_CHECKING:',
+    'pragma: no cover'
+]
+
+[tool.mypy]
+# This is the global mypy configuration.
+# Avoid changing this!
+strict = true  # See all the enabled flags `mypy --help | grep -A 10 'Strict mode'`
+disallow_any_unimported = true
+
+# If you need to ignore something for some specific module,
+# add overrides for them. Avoid changing the global config!
+# For example:
+# [[tool.mypy.overrides]]
+# module = [
+#  "my_unpyted_dependency1.*",
+#  "my_unpyted_dependency2.*"
+# ]
+# ignore_missing_imports = true
+
+# [[tool.mypy.overrides]]
+# module = [
+#   "tests/my_thing/test_my_thing",
+# ]
+# disallow_untyped_defs = false

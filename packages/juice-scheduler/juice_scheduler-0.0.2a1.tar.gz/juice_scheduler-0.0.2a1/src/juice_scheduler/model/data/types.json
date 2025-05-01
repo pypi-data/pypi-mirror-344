@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Geophysics",
+        "mnemonic": "GEOPHYSICS",
+        "instrument_set":
+        [
+            "3GM",
+            "GALA",
+            "PRIDE",
+            "RIME"
+        ]
+    },
+    {
+        "name": "Remote Sensing",
+        "mnemonic": "REMOTE_SENSING",
+        "instrument_set":
+        [
+            "JANUS",
+            "MAJIS",
+            "SWI",
+            "UVS"
+        ]
+    },
+    {
+        "name": "In-Situ",
+        "mnemonic": "IN_SITU",
+        "instrument_set":
+        [
+            "JMAG",
+            "PEPHI",
+            "PEPLO",
+            "RADEM",
+            "RPWI"
+        ]
+    },
+    {
+        "name": "Navigation",
+        "mnemonic": "NAVIGATION",
+        "instrument_set":
+        [
+            "JMC",
+            "NAVCAM",
+            "SOC"
+        ]
+    }
+]

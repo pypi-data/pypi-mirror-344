@@ -1,0 +1,96 @@
+# juice-scheduler
+
+[![PyPI](https://img.shields.io/pypi/v/juice-scheduler?style=flat-square)](https://pypi.python.org/pypi/juice-scheduler/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/juice-scheduler?style=flat-square)](https://pypi.python.org/pypi/juice-scheduler/)
+[![PyPI - License](https://img.shields.io/pypi/l/juice-scheduler?style=flat-square)](https://pypi.python.org/pypi/juice-scheduler/)
+[![Coookiecutter - Wolt](https://img.shields.io/badge/cookiecutter-Wolt-00c2e8?style=flat-square&logo=cookiecutter&logoColor=D4AA00&link=https://github.com/woltapp/wolt-python-package-cookiecutter)](https://github.com/woltapp/wolt-python-package-cookiecutter)
+
+
+---
+
+**Documentation**: [https://juicesoc.esac.esa.int/data/juice-scheduler](https://juicesoc.esac.esa.int/data/juice-scheduler)
+
+**Source Code**: [https://juigitlab.esac.esa.int/core-system/uplink/juice-scheduler](https://juigitlab.esac.esa.int/core-system/uplink/juice-scheduler)
+
+**PyPI**: [https://pypi.org/project/juice-scheduler/](https://pypi.org/project/juice-scheduler/)
+
+---
+
+JUICE Scheduler is a Python package that provides a library and command line tools to support the JUICE mission science planning.
+
+## Installation
+
+```sh
+pip install juice-scheduler
+```
+
+## Development
+
+* Clone this repository
+* Requirements:
+  * [Poetry](https://python-poetry.org/)
+  * Python 3.9+
+* Create a virtual environment and install the dependencies
+
+```sh
+poetry install
+```
+
+* Activate the virtual environment
+
+```sh
+poetry shell
+```
+
+### Testing
+
+```sh
+pytest
+```
+
+### Command Line Interfaces
+
+#### spice-scheduler
+
+```
+Usage: spice-scheduler [OPTIONS]
+
+Options:
+  --version                 Show the version and exit.
+  -t, --template            Get the template configuration file
+  -c, --configuration FILE  Configuration json file
+  --help                    Show this message and exit.
+```
+
+##### Get the template configuration file
+
+This option allows the user to get the latest template of the configuration file.
+
+```
+spice-scheduler -t > conf_spice.json
+```
+
+#### Executing the tool
+
+After getting it, the user shall overwrite and complete the following fields:
+
+* "conf_repository_path": The local path to the [configuration repository](https://juigitlab.esac.esa.int/core-system/uplink/conf.git)
+* "crema_id": The identifier in the geopipeline folder e.g."Crema_5_1_150lb_23_a3",
+* "trajectory": The SHT identifier of the trajectory e.g. "CREMA_5_1_150lb_23_1_a3",
+
+This **minimal configuration** allows to generate version of the baseline PTR that does not take into consideration the OPNAV/DL segments, only the inputs obtained from the geopipeline tool.
+
+Once a **segmentation** is available, a new version of the PTR can be generated, inserting the optional 
+
+* "segmentation_file": The local path of the segmentation file including the OPNAV/DL segments.
+
+The usage of the tool in both cases is the same, the content of the configuration file determines the application behaviour.
+
+```
+spice-scheduler -c conf_spice.json
+```
+
+
+---
+
+This project was generated using the [wolt-python-package-cookiecutter](https://github.com/woltapp/wolt-python-package-cookiecutter) template.
