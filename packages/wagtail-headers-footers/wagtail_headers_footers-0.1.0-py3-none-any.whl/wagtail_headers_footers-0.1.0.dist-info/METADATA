@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: wagtail-headers-footers
+Version: 0.1.0
+Summary: Manage header and footer scripts using Wagtail site settings
+Author-email: Dazzy Mlv <23006212+DazzyMlv@users.noreply.github.com>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: wagtail>=6.4.0
+
+# Wagtail Header Footer Scripts
+
+A reusable Wagtail app for managing header and footer scripts across different sites using Wagtail Settings.
+
+![Wagtail Admin Screenshot](https://raw.githubusercontent.com/dazzymlv/wagtail-headers-footers/main/docs/screenshot.png)
+
+## Features
+
+- Add header/footer scripts per site
+- Use Wagtail settings and model clustering
+- Toggle scripts on/off
+
+## Installation
+
+```bash
+pip install wagtail-headers-footers
+```
+
+Add to `INSTALLED_APPS`:
+
+```python
+INSTALLED_APPS = [
+    ...
+    "wagtail_headers_footers",
+]
+```
+
+## Usage
+
+Go to **Settings > Headers & Footers** in the Wagtail Admin to manage your scripts.
+
+## Testing
+
+```bash
+python -m unittest discover tests
+```
+
+## License
+
+MIT
