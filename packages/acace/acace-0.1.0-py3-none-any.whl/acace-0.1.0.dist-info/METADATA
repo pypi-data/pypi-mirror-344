@@ -1,0 +1,180 @@
+Metadata-Version: 2.4
+Name: acace
+Version: 0.1.0
+Summary: Adaptive Context-Aware Content Engine (ACACE): An open-source library for optimizing token usage and ensuring content coherence in AI-driven writing
+Home-page: https://github.com/Sumedh1599/acace
+Author: Sumedh Patil
+Author-email: sumedh1599@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: acace_text_preprocessor>=0.1.0
+Requires-Dist: acace_tokenizer>=0.1.0
+Requires-Dist: acace_token_weightor>=0.1.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: mypy>=0.9.0; extra == "dev"
+Provides-Extra: nlp
+Requires-Dist: spacy>=3.0.0; extra == "nlp"
+Requires-Dist: nltk>=3.6.0; extra == "nlp"
+Provides-Extra: llm
+Requires-Dist: openai>=0.27.0; extra == "llm"
+Provides-Extra: all
+Requires-Dist: spacy>=3.0.0; extra == "all"
+Requires-Dist: nltk>=3.6.0; extra == "all"
+Requires-Dist: openai>=0.27.0; extra == "all"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# ACACE - Adaptive Context-Aware Content Engine
+
+![PyPI](https://img.shields.io/pypi/v/acace)
+![License](https://img.shields.io/github/license/Sumedh1599/acace)
+![GitHub issues](https://img.shields.io/github/issues/Sumedh1599/acace)
+
+## Overview
+
+The **ACACE** package is the main entry point for the Adaptive Context-Aware Content Engine, integrating all the specialized micro-libraries into a comprehensive solution for AI-driven content writing.
+
+This package provides a unified interface to leverage the entire ACACE pipeline, from text preprocessing and semantic compression to context-aware content generation and validation.
+
+## Features
+
+- **Complete Pipeline**: Access the entire ACACE workflow through a single API
+- **Configurable Components**: Customize each step of the pipeline to your specific needs
+- **Simplified Integration**: Easily integrate with various LLMs and content platforms
+- **Performance Monitoring**: Track token savings and content quality metrics
+
+## Installation
+
+```bash
+# Install the complete ACACE package with all components
+pip install acace
+```
+
+## Quick Start
+
+```python
+from acace import ACACE
+
+# Initialize the engine with default settings
+engine = ACACE()
+
+# Compress text for token efficiency
+original_text = "Your long and detailed text that would consume many tokens."
+compressed_text = engine.compress(original_text)
+print(f"Token reduction: {engine.get_compression_ratio(original_text, compressed_text):.1%}")
+
+# Generate content with context awareness
+response = engine.generate(
+    prompt="Continue the story about the haunted lighthouse.",
+    context_id="story-123"  # For maintaining context across sessions
+)
+
+print(response)
+
+# In a later session, continue with the same context
+later_response = engine.generate(
+    prompt="Describe what happened next with the lighthouse keeper.",
+    context_id="story-123"  # Same context ID retrieves previous context
+)
+
+print(later_response)
+```
+
+## Advanced Usage
+
+```python
+from acace import ACACE, CompressionLevel, ContextStrategy
+
+# Configure the engine with specific options
+engine = ACACE(
+    compression_level=CompressionLevel.HIGH,  # Maximum token reduction
+    context_strategy=ContextStrategy.PERSISTENT,  # Long-term context storage
+    use_grammar_correction=True,
+    style_guidance={"tone": "professional", "formality": "high"},
+    llm_adapter="openai"  # Use OpenAI's models
+)
+
+# Process a document with specific requirements
+document_response = engine.process_document(
+    document_path="research_paper.txt",
+    task="summarize",
+    output_format="markdown",
+    max_length=500
+)
+
+print(document_response)
+```
+
+## Core Components
+
+ACACE integrates the following specialized micro-libraries:
+
+1. **Text Preprocessing**: `acace_text_preprocessor`
+2. **Tokenization**: `acace_tokenizer`
+3. **Token Weighting**: `acace_token_weightor`
+4. **Token Filtering**: `acace_token_filter`
+5. **Compression**: `acace_compression_engine`
+6. **Context Management**: Multiple context-related modules
+7. **LLM Integration**: `acace_llm_adapter` and related modules
+8. **Output Processing**: Quality validation and grammar correction modules
+
+## Configuration Options
+
+The `ACACE` class accepts numerous configuration options to customize its behavior:
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `compression_level` | CompressionLevel | `MEDIUM` | Level of token reduction (LOW, MEDIUM, HIGH) |
+| `context_strategy` | ContextStrategy | `SESSION` | How context is maintained (NONE, SESSION, PERSISTENT) |
+| `use_grammar_correction` | bool | `False` | Whether to apply grammar correction to outputs |
+| `use_style_adjustment` | bool | `False` | Whether to adjust output style based on guidance |
+| `max_context_items` | int | `100` | Maximum number of context items to store |
+| `llm_adapter` | str | `"auto"` | LLM provider to use (auto, openai, anthropic, etc.) |
+
+## Development
+
+### Requirements
+
+- Python 3.8+
+- Dependencies for specific functionality (see component documentation)
+
+### Testing
+
+```bash
+# Install development dependencies
+pip install "acace[dev]"
+
+# Run tests
+pytest
+```
+
+## License
+
+MIT License
+
+## Contributors
+
+- Sumedh Patil ([@Sumedh1599](https://github.com/Sumedh1599))
+
+## Acknowledgments
+
+ACACE is inspired by research in natural language processing, particularly in the areas of token optimization and context management.
