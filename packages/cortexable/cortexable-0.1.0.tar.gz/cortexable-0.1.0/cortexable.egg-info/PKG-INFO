@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: cortexable
+Version: 0.1.0
+Summary: this is cortexable library.
+Home-page: https://github.com/cortexable/py
+Author: nemo1866
+Author-email: newkikakika@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# cortexable
+
+`cortexable`은 인공지능과 관련된 다양한 기능을 제공하는 파이썬 라이브러리입니다.
+
+## 설치방법
+
+```bash
+pip install cortexable

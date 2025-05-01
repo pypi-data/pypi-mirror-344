@@ -1,0 +1,8 @@
+README.md
+setup.py
+cortexable/__init__.py
+cortexable/core.py
+cortexable.egg-info/PKG-INFO
+cortexable.egg-info/SOURCES.txt
+cortexable.egg-info/dependency_links.txt
+cortexable.egg-info/top_level.txt
