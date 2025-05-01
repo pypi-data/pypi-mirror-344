@@ -1,0 +1,10 @@
+ipo_premium_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ipo_premium_client/client.py,sha256=cs6Ks_vyziN4NLPTtyXE5pz5SkG0TagETZ5PWbzCHTI,3871
+ipo_premium_client/exceptions.py,sha256=Gani6KYSQqtqSoo9Xs6bkhd72hZnrpKp8VW8GSFDwU0,43
+ipo_premium_client/mapper.py,sha256=BJhX12C_Vsdq9F4-PH9LKCak3Rq-bQfa6v3x3Go4Ylk,2288
+ipo_premium_client/models.py,sha256=8710SiQeiU-nlksz_P2WfdLVH6dKkyIazseCpzfP_Ic,1352
+ipo_premium_client/utils.py,sha256=yWqjgBjQqc9e-XEZ3j7rKijeJZV1NcArktCICWyDJGM,2693
+ipo_premium_client-1.0.6.dist-info/METADATA,sha256=MVHBnnrG1LEMr9T10TcqUvy75Gy7syqDhv7PL7Tm6xo,479
+ipo_premium_client-1.0.6.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+ipo_premium_client-1.0.6.dist-info/top_level.txt,sha256=l4WQfWv77ERy2jglKOU4SViQ9nzn71gE37weoB-xSP8,19
+ipo_premium_client-1.0.6.dist-info/RECORD,,
