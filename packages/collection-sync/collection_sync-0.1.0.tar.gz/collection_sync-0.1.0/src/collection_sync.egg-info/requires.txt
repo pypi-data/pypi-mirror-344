@@ -1,0 +1,15 @@
+
+[all]
+collection-sync[miniflux,yaml]
+
+[dev]
+bumpver
+pre-commit
+pytest
+pytest-cov
+
+[miniflux]
+miniflux
+
+[yaml]
+PyYAML
