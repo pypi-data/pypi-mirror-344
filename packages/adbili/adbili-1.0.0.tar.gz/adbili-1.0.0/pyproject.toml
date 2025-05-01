@@ -1,0 +1,19 @@
+[project]
+name = "adbili"
+version = "1.0.0"
+description = "adb copier for bilibili songs/audios"
+readme = "README.md"
+authors = [
+    { name = "Hugh", email = "hugh.lpd@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "fire>=0.7.0",
+]
+
+[project.scripts]
+adbili = "adbili:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

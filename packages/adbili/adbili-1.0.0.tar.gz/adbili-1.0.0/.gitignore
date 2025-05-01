@@ -1,0 +1,10 @@
+key
+key.pub
+__pycache__
+.venv
+
+# test files
+entry.json
+entry.tmp.json
+index.json
+test.py

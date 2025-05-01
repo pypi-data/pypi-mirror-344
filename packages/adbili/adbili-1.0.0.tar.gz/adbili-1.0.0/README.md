@@ -1,0 +1,56 @@
+# adbili
+
+adb copier for bilibili songs/audios
+
+## usage
+
+```bash
+adbili --app com.bilibili.app.in # 只处理 Play 版本的下载内容
+```
+
+## problems
+
+- 音频文件没有在头部保存如同一般歌曲的缩率图和歌手等歌曲相关信息
+
+## introduction
+
+appId:
+- tv.danmaku.bili : 国内版本
+- com.bilibili.app.in : Play Version
+
+根路径: `/Android/data/`
+
+目录结构
+
+App
+- cache
+- download
+  - <avid> # avid 不唯一时 说明是合集
+    - <cid>
+      - <video_quality> # 音质与视频清晰度正相关 360P与1080P有稍微明显一点的差距
+        - audio.m4s # 实际的 mp3 音频文件
+        - index.json
+        - video.m4s
+      - danmaku.xml
+      - entry.json
+- files
+
+> 版本不同 entry.json 里面的字段有差异
+
+video_quality:
+- 360P -> 16
+- 480P -> 32 (猜测)
+- 720P -> 64
+- 1080P -> 80
+
+某个视频的音频文件在不同清晰度下的文件大小
+- 360P -> 617K
+- 720P -> 2.23M
+
+## test
+
+已测试版本
+- tv.danmaku.bili : 6.40.0
+- com.bilibili.app.in : 3.20.3
+已测试系统
+- HyperOS 1.0.8

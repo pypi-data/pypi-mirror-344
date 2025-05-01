@@ -1,0 +1,31 @@
+version = 1
+requires-python = ">=3.11"
+
+[[package]]
+name = "adbili"
+version = "1.0.0"
+source = { editable = "." }
+dependencies = [
+    { name = "fire" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "fire", specifier = ">=0.7.0" }]
+
+[[package]]
+name = "fire"
+version = "0.7.0"
+source = { registry = "https://mirrors.bfsu.edu.cn/pypi/web/simple" }
+dependencies = [
+    { name = "termcolor" },
+]
+sdist = { url = "https://mirrors.bfsu.edu.cn/pypi/web/packages/6b/b6/82c7e601d6d3c3278c40b7bd35e17e82aa227f050aa9f66cb7b7fce29471/fire-0.7.0.tar.gz", hash = "sha256:961550f07936eaf65ad1dc8360f2b2bf8408fad46abbfa4d2a3794f8d2a95cdf", size = 87189 }
+
+[[package]]
+name = "termcolor"
+version = "3.0.0"
+source = { registry = "https://mirrors.bfsu.edu.cn/pypi/web/simple" }
+sdist = { url = "https://mirrors.bfsu.edu.cn/pypi/web/packages/17/b3/b30506dc4297bb12e209ce455ae53c95f78470b442ae8ef83535cb9493e6/termcolor-3.0.0.tar.gz", hash = "sha256:0cd855c8716383f152ad02bbb39841d6e4694538ff5d424088e56c8b81fde525", size = 12916 }
+wheels = [
+    { url = "https://mirrors.bfsu.edu.cn/pypi/web/packages/f6/38/a85380919a38f24b6f2b9b05b7b6970962351ef8d12d32bfbc34ab05380b/termcolor-3.0.0-py3-none-any.whl", hash = "sha256:fdfdc9f2bdb71c69fbbbaeb7ceae3afef0461076dd2ee265bf7b7c49ddb05ebb", size = 6290 },
+]
