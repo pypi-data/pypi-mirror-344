@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: b2-cleanup
+Version: 0.1.0
+Summary: Cleanup unfinished Backblaze B2 large uploads
+Author-email: Jeroen Verhoeven <jeroen@joentje.org>
+Requires-Dist: click>=8.0
+Requires-Dist: b2sdk>=2.8.1
