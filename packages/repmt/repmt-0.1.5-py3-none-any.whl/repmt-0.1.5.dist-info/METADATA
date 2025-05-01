@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: repmt
+Version: 0.1.5
+Summary: A Streamlit-based CLI tool for testing API endpoints
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: streamlit>=1.30.0
+
+# 🔍 Repmt – Repository Documentation Prompt Generator
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
+
+**GitHub:** Visit the official source and contribute at https://github.com/reprompts/repmt  
+**dev.to:** Read articles and tutorials at https://dev.to/repromptsquest  
+**LinkedIn Group:** Join our community at https://www.linkedin.com/groups/14631875/  
+
+
+Repmt is a lightweight, parsing-based tool that generates **static prompts** and documentation outlines for any Python codebase. It's perfect for open-source contributors, educators, and commercial development teams who need instant insight into unfamiliar or legacy projects.
+
+---
+
+## ✨ Features
+
+- 🚀 **Instant Repository Analysis**  
+  Generate structured summaries of modules, functions, and dependencies in seconds.
+
+- Search for the issues relations with the code modules using proper static prompts easily. 
+
+- 📄 **Multi-Format Output**  
+  Supports Markdown, HTML, and JSON for seamless integration into docs, websites, and tooling.
+
+- 🏗️ **Architecture Visualization**  
+  Prompts for flowcharts, dependency graphs, and module-structure diagrams.
+
+- 🔍 **Smart Code Exploration**  
+  Auto-detects entry points, file roles, and import trees.
+
+- 🤖 **Prompt Sets for Documentation & Debugging**  
+  Ready-to-use GPT-style prompts optimized for onboarding, debugging, and contribution guidance.
+
+---
+
+## 📦 Installation
+
+```bash
+pip install repmt
+
+Or for a one-off session:
+pip install repmt && repmt --temp /path/to/repo && pip uninstall repmt -y
+
+🚀 Usage
+
+From the command line:
+repmt /path/to/your/repo [options]
+
+Or just launch in the current directory:
+repmt
+
+
+
+
+🧾 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+🤝 Contributing
+We welcome open-source contributors and community supporters!
+Please read our Contribution Guidelines and submit pull requests.
+
+🛡️ Security
+To report security issues or vulnerabilities, email:
+repromptsquest@gmail.com
+
+Refer to our Security Policy for more details.
+
