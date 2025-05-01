@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+PyMcPuppeteer.egg-info/PKG-INFO
+PyMcPuppeteer.egg-info/SOURCES.txt
+PyMcPuppeteer.egg-info/dependency_links.txt
+PyMcPuppeteer.egg-info/top_level.txt
+puppet/__init__.py
+puppet/connection.py
+puppet/player.py
