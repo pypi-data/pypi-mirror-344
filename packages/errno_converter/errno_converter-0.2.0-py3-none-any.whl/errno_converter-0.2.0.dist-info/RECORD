@@ -1,0 +1,11 @@
+src/errno_converter.py,sha256=FTbcKRklr6g_dRB4EFkTUT033B-HwtNLOcdJ92fDNPk,635
+src/http_converter.py,sha256=PmYwBNgcVksNyuRzGgZqefm20N4Tj5yqWkugiFa-C3Q,713
+src/signal_converter.py,sha256=bXxxKdCNZnPLEiWsaR6n0HxmMdaaRLRTiJ8zaTAhv1E,708
+src/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/lib/converter.py,sha256=I4tB07oC73H-Q-wA5qI9uFWRKhBqM7QGp-CeZb_jEao,826
+src/lib/parser.py,sha256=nzJ1Vq6w5XOxe2pi9Ea82CEV03YNAfLbUXvf9CsT_7I,5468
+errno_converter-0.2.0.dist-info/METADATA,sha256=8JmU3_8grziqWk1oqQK1ftk-szIV9agcVNdU_4E9yek,11100
+errno_converter-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+errno_converter-0.2.0.dist-info/entry_points.txt,sha256=oMrtUgtd4IA-IE5kxi4v0i9EI9Vpyl0-Myficcx6FWA,135
+errno_converter-0.2.0.dist-info/licenses/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+errno_converter-0.2.0.dist-info/RECORD,,
