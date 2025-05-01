@@ -1,0 +1,2 @@
+[console_scripts]
+guapy = guarani_coti.main:main
