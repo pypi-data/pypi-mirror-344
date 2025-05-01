@@ -1,0 +1,103 @@
+Metadata-Version: 2.4
+Name: KececiLayout
+Version: 0.1.0
+Summary: A deterministic node placement algorithm used in graph visualization. In this layout, nodes are arranged sequentially along a defined primary axis. Each subsequent node is then alternately offset along a secondary, perpendicular axis, typically moving to one side of the primary axis and then the other. Often, the magnitude of this secondary offset increases as nodes progress along the primary axis, creating a characteristic zig-zag or serpentine pattern.
+Home-page: https://github.com/WhiteSymmetry/kececilayout
+Author: Mehmet Keçeci
+Author-email: bilginomi@yaani.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: rustworkx
+Requires-Dist: igraph
+Requires-Dist: networkit
+Requires-Dist: graphillion
+Requires-Dist: pycairo
+Requires-Dist: cairocffi
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+```markdown
+# KececiLayout
+
+KeÃ§eci Layout (Kececi Layout, KeÃ§eci YerleÅŸimi): A deterministic node placement algorithm used in graph visualization. In this layout, nodes are arranged sequentially along a defined primary axis. Each subsequent node is then alternately offset along a secondary, perpendicular axis, typically moving to one side of the primary axis and then the other. Often, the magnitude of this secondary offset increases as nodes progress along the primary axis, creating a characteristic "zig-zag" or "serpentine" pattern.
+
+Python iÃ§in geliÅŸmiÅŸ Ã§izim algoritmasÄ±. Graflar Ã¼zerinde Ã¶zel olarak sÄ±ralÄ± yerleÅŸim yapar.
+
+"KeÃ§eci Layout" iÃ§in TÃ¼rkÃ§e ve Ä°ngilizce tanÄ±mlamalar:
+
+---
+
+# TÃ¼rkÃ§e TanÄ±mlama
+
+## KeÃ§eci YerleÅŸimi (KeÃ§eci Layout):
+
+Graf gÃ¶rselleÅŸtirmede kullanÄ±lan deterministik bir dÃ¼ÄŸÃ¼m yerleÅŸtirme algoritmasÄ±dÄ±r. Bu yÃ¶ntemde dÃ¼ÄŸÃ¼mler, belirlenen birincil (ana) eksen boyunca sÄ±ralÄ± olarak yerleÅŸtirilir. Her bir sonraki dÃ¼ÄŸÃ¼m, ana eksenin bir saÄŸÄ±na bir soluna (veya bir Ã¼stÃ¼ne bir altÄ±na) olmak Ã¼zere, ikincil eksen doÄŸrultusunda dÃ¶nÃ¼ÅŸÃ¼mlÃ¼ olarak kaydÄ±rÄ±lÄ±r. Genellikle, ana eksende ilerledikÃ§e ikincil eksendeki kaydÄ±rma miktarÄ± artar ve bu da karakteristik bir "zÄ±gzag" veya "yÄ±lanvari" desen oluÅŸturur.
+
+### Temel Ã–zellikleri:
+*   **DoÄŸrusal Odak:** Ã–zellikle yollar (paths), zincirler veya sÄ±ralÄ± sÃ¼reÃ§ler gibi doÄŸrusal veya ardÄ±ÅŸÄ±k yapÄ±larÄ± gÃ¶rselleÅŸtirmek iÃ§in kullanÄ±ÅŸlÄ±dÄ±r.
+*   **Deterministik:** AynÄ± graf ve parametrelerle her zaman aynÄ± sonucu Ã¼retir.
+*   **Ã‡akÄ±ÅŸmayÄ± Azaltma:** DÃ¼ÄŸÃ¼mleri ana eksenden uzaÄŸa yayarak Ã§akÄ±ÅŸmalarÄ± Ã¶nlemeye yardÄ±mcÄ± olur.
+*   **Parametrik:** Ana eksenin yÃ¶nÃ¼ (Ã¶rn. yukarÄ±dan aÅŸaÄŸÄ±), ikincil kaydÄ±rmanÄ±n baÅŸlangÄ±Ã§ yÃ¶nÃ¼ (Ã¶rn. saÄŸdan baÅŸla) ve eksenler arasÄ± boÅŸluklar gibi parametrelerle Ã¶zelleÅŸtirilebilir.
+
+---
+
+# English Description
+
+##KeÃ§eci Layout:
+
+A deterministic node placement algorithm used in graph visualization. In this layout, nodes are arranged sequentially along a defined primary axis. Each subsequent node is then alternately offset along a secondary, perpendicular axis, typically moving to one side of the primary axis and then the other. Often, the magnitude of this secondary offset increases as nodes progress along the primary axis, creating a characteristic "zig-zag" or "serpentine" pattern.
+
+###Key Characteristics:
+*   **Linear Focus:** Particularly useful for visualizing linear or sequential structures, such as paths, chains, or ordered processes.
+*   **Deterministic:** Produces the exact same layout for the same graph and parameters every time.
+*   **Overlap Reduction:** Helps prevent node collisions by spreading nodes out away from the primary axis.
+*   **Parametric:** Can be customized using parameters such as the primary direction (e.g., top-down), the starting side for the secondary offset (e.g., start right), and the spacing along both axes.
+
+---
+
+## Kurulum
+
+```bash
+pip install kececilayout
+```
+
+## Ã–rnek KullanÄ±m
+
+```python
+import networkx as nx
+import kececilayout as kl
+
+G = nx.path_graph(10)
+pos = kl.kececi_layout_v4(G)
+nx.draw(G, pos=pos, with_labels=True)
+```
+
+Desteklenen arka uÃ§lar:
+- NetworkX
+- Rustworkx
+- iGraph
+- Networkit
+- Graphillion
+```
+
+
+
+### Lisans (TÃ¼rkÃ§e) / License (English)
+
+```
+This project is licensed under the MIT License.
+```
