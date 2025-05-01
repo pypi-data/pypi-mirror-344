@@ -1,0 +1,13 @@
+CHANGES
+INSTALL
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+jinjasql/__init__.py
+jinjasql/core.py
+jinjasql2.egg-info/PKG-INFO
+jinjasql2.egg-info/SOURCES.txt
+jinjasql2.egg-info/dependency_links.txt
+jinjasql2.egg-info/requires.txt
+jinjasql2.egg-info/top_level.txt
