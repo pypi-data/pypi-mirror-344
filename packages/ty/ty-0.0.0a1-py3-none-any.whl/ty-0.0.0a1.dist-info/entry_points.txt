@@ -1,0 +1,3 @@
+[console_scripts]
+ty = ty:main
+
