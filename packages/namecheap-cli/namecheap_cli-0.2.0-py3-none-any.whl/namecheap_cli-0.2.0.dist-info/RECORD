@@ -1,0 +1,11 @@
+namecheap_cli/__init__.py,sha256=TB9jzVbFqN-9mQtR0-WEzBdKEvPUjTa09sk9wWu_-NE,235
+namecheap_cli/api.py,sha256=-Gp2bgBWoCJeMgK_RgQD_FBTjeTbI9VYGrSik04aViM,11943
+namecheap_cli/cli.py,sha256=0l8pQByK82x1XXA8tLtH46IrS-1S5rsZVrHXzPWHf9M,17360
+namecheap_cli/config.py,sha256=ZYuh_u_Jvqay0fZdCBx2HrE0Re9FnQaiw5-hlPjRVOI,4548
+namecheap_cli/utils.py,sha256=UQws7oTLj54kkdiQjWhHU0B36toetfQVEOqeGOGSUEc,3276
+namecheap_cli-0.2.0.dist-info/licenses/LICENSE,sha256=0B5fj0lbKbXev-06TO63bMlBQFIoBbvrRrMcK42AG5o,1069
+namecheap_cli-0.2.0.dist-info/METADATA,sha256=WC7drdB33Mi1S7AWRoW7R7hqOMPXZMuQQy-jojGN6Tc,3503
+namecheap_cli-0.2.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+namecheap_cli-0.2.0.dist-info/entry_points.txt,sha256=03Bf7QJMIaNaEUJGZBh_QmO_02mKxyD9R9oMY9Ykrgk,53
+namecheap_cli-0.2.0.dist-info/top_level.txt,sha256=Xii1qajekeBno51iXc_e9GWqRO0qh78bmXEgwQJsBjQ,14
+namecheap_cli-0.2.0.dist-info/RECORD,,
