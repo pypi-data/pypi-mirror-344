@@ -1,0 +1,11 @@
+graphfaker/__init__.py,sha256=przVi235BDOufQztq5EIwvZk4sXln6NCKZK3IxR1VVs,194
+graphfaker/cli.py,sha256=Gekf0C62NJU-h_Nvn68CjLpWwTLTpyGmJPiAgoEJCsQ,3163
+graphfaker/core.py,sha256=NkoxNGima2tzwEkji9XQQQBHi_Q2Vnvx4fGDhIc0XEU,10683
+graphfaker/fetchers/flights.py,sha256=_pFfH38-dXqfduO7Ga-a0MFxlLshGHqnpTEI4yAfyiA,11311
+graphfaker/fetchers/osm.py,sha256=SZBNTSEumDmWHYTzAgcUYR0Kt3EbJS32XYuHneanIz0,3595
+graphfaker-0.1.1.dist-info/licenses/AUTHORS.rst,sha256=w8kufqEYRoE0Nia_wAXORgWMSKd1VwJbZfoDz2LGq0I,172
+graphfaker-0.1.1.dist-info/licenses/LICENSE,sha256=uYHQQU7BrK0s2Qq8Vsf-FkYPLOo8_XSRwnSza_1gTtA,1095
+graphfaker-0.1.1.dist-info/METADATA,sha256=yPSuMnlKGg-IezjlthrV4C-DkkMppDeI5eDKRCZvfRc,5972
+graphfaker-0.1.1.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+graphfaker-0.1.1.dist-info/top_level.txt,sha256=l_-JL1osJ-YLWySTZKoyF5C0HAXpi_evL_skyz7d3Q8,11
+graphfaker-0.1.1.dist-info/RECORD,,
