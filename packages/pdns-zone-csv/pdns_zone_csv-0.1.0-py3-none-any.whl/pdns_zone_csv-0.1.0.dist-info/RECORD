@@ -1,0 +1,7 @@
+pdns_zone_csv/.gitignore,sha256=tdL3NSDNj1IQIc3qAWw-KW4wPpKfEnSOfUar1-fwQ2Y,8
+pdns_zone_csv/__init__.py,sha256=GZgN8t28tT_Lx7Li3LI5QjU4dcsc4u60CSfBPa18hGI,31
+pdns_zone_csv/test.py,sha256=x4qutLWma-8OGnnnzmqdvXQdW0RikUZF1Gw9p5hC9nU,3635
+pdns_zone_csv/zone.py,sha256=Dye8eogi9lKnfh7cGfhKtsA9-3arpPUvk8xS1xfQ_y4,1730
+pdns_zone_csv-0.1.0.dist-info/METADATA,sha256=Nni3ObICVcx1Y1sD3rjdoU_knZYFiHO-NY3s8cfj-6Q,1460
+pdns_zone_csv-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pdns_zone_csv-0.1.0.dist-info/RECORD,,
