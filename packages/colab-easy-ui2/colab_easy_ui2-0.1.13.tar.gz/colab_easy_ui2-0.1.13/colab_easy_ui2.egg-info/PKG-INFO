@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: colab-easy-ui2
+Version: 0.1.13
+Author: Wataru Okada, https://github.com/w-okada
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.115.12
+Requires-Dist: fire>=0.7.0
+Requires-Dist: python-multipart>=0.0.20
+Requires-Dist: uvicorn>=0.34.2
+Provides-Extra: dev
+Requires-Dist: nest-asyncio>=1.6.0; extra == "dev"
+Requires-Dist: portpicker>=1.6.0; extra == "dev"
+Requires-Dist: requests>=2.32.3; extra == "dev"
+
+## ビルド＆デプロイ
+
+UI を内包するパッケージとなるなるため、UI を更新したら、ビルドしてこのパッケージにコピー（デプロイ）する必要がある。
+詳細は、UI の README を参照すること。
+
+新 UI を作成する場合は、pyproject.toml で、その UI のファイルもパッケージに取り込むように設定する必要がある。
+
+```
+uv build
+uv publish --token pypi-.....
+```

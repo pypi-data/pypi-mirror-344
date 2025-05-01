@@ -1,0 +1,37 @@
+[project]
+name = "colab-easy-ui2"
+authors = [
+    { name="Wataru Okada, https://github.com/w-okada"}
+]
+version = "0.1.13"
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115.12",
+    "fire>=0.7.0",
+    "python-multipart>=0.0.20",
+    "uvicorn>=0.34.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "nest-asyncio>=1.6.0",
+    "portpicker>=1.6.0",
+    "requests>=2.32.3",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["colab_easy_ui*"]
+
+[tool.setuptools.package-data]
+"colab_easy_ui.frontend" = ["**/*"]
+"colab_easy_ui.frontend_beatrice_trainer_colab" = ["**/*"]
