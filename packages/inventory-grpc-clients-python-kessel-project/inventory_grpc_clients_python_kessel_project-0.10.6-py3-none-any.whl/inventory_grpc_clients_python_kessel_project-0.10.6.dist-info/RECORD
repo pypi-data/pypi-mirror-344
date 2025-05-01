@@ -1,0 +1,10 @@
+buf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+buf/validate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+buf/validate/validate_pb2.py,sha256=d12GL7tdHFVuaNGbJksWRNF-nCEs_REwilEF6GKWZqk,153589
+buf/validate/validate_pb2.pyi,sha256=ZaWkWYECsMBiJzKEc12tUXLXvQAa56FQyl_hAExTuXg,30146
+buf/validate/validate_pb2_grpc.py,sha256=1oboBPFxaTEXt9Aw7EAj8gXHDCNMhZD2VXqocC9l_gk,159
+inventory_grpc_clients_python_kessel_project-0.10.6.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+inventory_grpc_clients_python_kessel_project-0.10.6.dist-info/METADATA,sha256=apW2U898rJtUYuxRgVpWnw3J0KWVCS2rMlvosj7u1S4,1518
+inventory_grpc_clients_python_kessel_project-0.10.6.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+inventory_grpc_clients_python_kessel_project-0.10.6.dist-info/top_level.txt,sha256=IS9Bk6AtIg9tTCkqF0IXRfwPLMpfT5lNjv7taF3lAtM,4
+inventory_grpc_clients_python_kessel_project-0.10.6.dist-info/RECORD,,
