@@ -1,0 +1,18 @@
+[project]
+name = "llama-stack-provider-lmeval"
+version = "0.1.2"
+description = "Llama Stack Remote Eval Provider for TrustyAI LM-Eval"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "llama-stack",
+    "kubernetes",
+    "fastapi",
+    "opentelemetry-api",
+    "opentelemetry-exporter-otlp",
+    "aiosqlite",
+    "uvicorn",
+    "ipykernel"
+]
+[tool.ruff]
+extend-exclude = ["demo*"]
