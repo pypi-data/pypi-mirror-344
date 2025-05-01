@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+bgrid_mail.egg-info/PKG-INFO
+bgrid_mail.egg-info/SOURCES.txt
+bgrid_mail.egg-info/dependency_links.txt
+bgrid_mail.egg-info/top_level.txt
+send__emails/__init__.py
+send__emails/core.py
