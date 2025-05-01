@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+pycodelens/__init__.py
+pycodelens/__main__.py
+pycodelens/analyzer.py
+pycodelens/cli.py
+pycodelens.egg-info/PKG-INFO
+pycodelens.egg-info/SOURCES.txt
+pycodelens.egg-info/dependency_links.txt
+pycodelens.egg-info/entry_points.txt
+pycodelens.egg-info/requires.txt
+pycodelens.egg-info/top_level.txt
