@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/hippo_csv/__init__.py
+src/hippo_csv/csv_utilities.py
+src/hippo_csv.egg-info/PKG-INFO
+src/hippo_csv.egg-info/SOURCES.txt
+src/hippo_csv.egg-info/dependency_links.txt
+src/hippo_csv.egg-info/requires.txt
+src/hippo_csv.egg-info/top_level.txt

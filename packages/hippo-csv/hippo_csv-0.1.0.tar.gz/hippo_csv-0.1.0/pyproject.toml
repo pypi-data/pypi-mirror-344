@@ -1,0 +1,33 @@
+[project]
+name = "hippo_csv"
+version = "0.1.0"
+description = "Professional CSV utilities by King Hippopotamus"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    { name = "King Hippopotamus ", email = "king.hippopotamus@yahoo.com"  }
+]
+keywords = ["csv", "utilities", "pandas", "data", "hippo"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities"
+]
+
+dependencies = [
+    "pandas >= 2.2.0, <3.0.0"
+]
+
+[build-system]
+requires = ["setuptools", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+
