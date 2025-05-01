@@ -1,0 +1,9 @@
+koolbox/__init__.py,sha256=7PWmKr9tA6X3QEapZv8UZUXrVT7o-uVpCpLrYZ_V8NU,360
+koolbox/trainer/base.py,sha256=GranzAgNGjuosMM7AUTnntrI8aPIXjeVeY8y7q9awnI,4807
+koolbox/trainer/trainer.py,sha256=3xm5H114uiyPFFxusiPRFQC6sXs9oGS2shaZk8Sg9VM,4961
+koolbox/trainer/validator.py,sha256=IBXEhzFOTs9F1Z3n9r86pL791-ZPNhaCxq35-7HiBxk,3098
+koolbox-0.1.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+koolbox-0.1.1.dist-info/METADATA,sha256=Spqs_Tj-mE7l6qqQ1O9Oteivz0bGAnj38RbnekNGSNE,2400
+koolbox-0.1.1.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+koolbox-0.1.1.dist-info/top_level.txt,sha256=1mV7m0sd5DUOLUJFBCp9AYA779o763WT_7_03hj0y8E,8
+koolbox-0.1.1.dist-info/RECORD,,
