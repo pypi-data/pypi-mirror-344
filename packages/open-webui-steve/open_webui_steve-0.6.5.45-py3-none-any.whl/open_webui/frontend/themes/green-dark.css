@@ -1,0 +1,85 @@
+/* Green Theme - Dark Mode */
+html.dark .green {
+	--bg-app: #006400; /* Dark Green */
+	--bg-nav: #008000; /* Green */
+	--bg-content: #2e8b57; /* Sea Green */
+	--bg-input: #3cb371; /* Medium Sea Green */
+	--bg-input-container: #2e8b57; /* Sea Green */
+	--bg-button: #8fbc8f; /* Dark Sea Green */
+	--bg-button-hover: #66cdaa; /* Medium Aquamarine */
+	--bg-button-primary: #90ee90; /* Light Green */
+	--bg-button-primary-hover: #98fb98; /* Pale Green */
+	--bg-button-disabled: #556b2f; /* Dark Olive Green */
+	--bg-item: #3cb371; /* Medium Sea Green */
+	--bg-item-hover: #2e8b57; /* Sea Green */
+	--bg-header: #333333; /* Dark Grey */
+	--bg-dropdown: #333333; /* Dark Grey */
+	--bg-dropdown-hover: #556b2f; /* Dark Olive Green */
+	--bg-modal: #2e8b57; /* Sea Green */
+	--bg-textarea: #556b2f; /* Dark Olive Green */
+	--bg-control: #333333; /* Dark Grey */
+	--bg-control-hover: #556b2f; /* Dark Olive Green */
+	--bg-search: #333333; /* Dark Grey */
+
+	--text-color: #ccffcc; /* Very Light Green */
+	--stroke-color: #66ff66; /* Bright Green */
+	--fill-color: #b3e0a2; /* Lighter Yellow Green */
+	--fill-button-icon: #a2cd5a; /* Yellow Green */
+
+	--primary-loader: #32cd32; /* Lime Green */
+	--secondary-loader: #ccffcc; /* Very Light Green */
+	--primary-progress: #a2cd5a; /* Yellow Green */
+	--secondary-progress: #006400; /* Dark Green */
+}
+
+/* Override Tailwind dark classes */
+html.dark .green .bg-white.dark\:bg-gray-800 {
+	background: var(--bg-content);
+}
+
+html.dark .green .bg-gradient-to-t.from-white.dark\:from-gray-800.from-40\%.pb-2 {
+	background: var(--bg-input-container) !important;
+}
+
+html.dark .green .m-auto.rounded-xl.max-w-full.w-\[40rem\].mx-2.bg-gray-50.dark\:bg-gray-900.shadow-3xl {
+	background-color: var(--bg-modal);
+}
+
+html.dark .green
+	.text-white.bg-gray-100.dark\:text-gray-800.dark\:bg-gray-600.disabled.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
+	background-color: var(--bg-button-disabled);
+}
+
+html.dark .green
+	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
+	background-color: var(--bg-button);
+}
+
+html.dark .green
+	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center:hover {
+    background-color: var(--bg-button-hover);
+}
+
+html.dark .green
+	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.bg-gray-200.dark\:bg-gray-700 {
+	background-color: var(--bg-control);
+}
+
+html.dark .green
+	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.hover\:bg-gray-300.dark\:hover\:bg-gray-800:hover {
+	background-color: var(--bg-control-hover);
+}
+
+html.dark .green .text-xs.text-gray-700.uppercase.bg-gray-50.dark\:bg-gray-700.dark\:text-gray-400 {
+	background-color: var(--bg-header);
+}
+
+html.dark .green
+	.w-full.rounded.p-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.resize-none {
+	background-color: var(--bg-textarea);
+}
+
+html.dark .green
+	.w-full.rounded.py-2.px-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.svelte-1vx7r9s {
+	background-color: var(--bg-input);
+}

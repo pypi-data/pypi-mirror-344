@@ -1,0 +1,104 @@
+/* Light Theme - Default */
+
+:root {
+  --text-color: #212529; /* Dark gray for text */
+  --bg-color: #ffffff; /* White background */
+  --surface-color: #f8f9fa; /* Light gray surface */
+  --overlay-color: #e9ecef; /* Slightly darker overlay */
+  --muted-color: #6c757d; /* Muted text/borders */
+  --subtle-color: #dee2e6; /* Subtle borders/backgrounds */
+  --primary-color: #0d6efd; /* Standard blue primary */
+  --secondary-color: #6c757d; /* Standard gray secondary */
+  --highlight-color: #cfe2ff; /* Light blue highlight */
+  --border-color: var(--subtle-color); /* Default border */
+}
+
+.light body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+.light * {
+  border-color: var(--border-color) !important;
+}
+
+/* Add more specific overrides as needed, similar to her.css */
+/* Example: */
+.light #nav {
+  background-color: var(--overlay-color);
+}
+
+.light .message.user {
+  background-color: var(--surface-color);
+}
+
+.light .message.assistant {
+   background-color: var(--bg-color);
+   border: 1px solid var(--border-color);
+}
+
+.light input,
+.light textarea,
+.light select {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+
+}
+
+.light button {
+   color: var(--text-color) !important;
+   background-color: var(--surface-color) !important;
+ 
+}
+.light button:hover {
+   background-color: var(--highlight-color) !important;
+   border-color: var(--primary-color) !important;
+}
+
+.light input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--muted-color);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+  background-color: var(--surface-color);
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.light input[type='checkbox']:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.light input[type='checkbox']:checked::before {
+  content: '';
+  display: block;
+  width: 0.3rem;
+  height: 0.6rem;
+  border: solid var(--bg-color);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 0.25rem;
+  top: 0.05rem;
+}
+
+.light input[type='checkbox']:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 1px;
+}
+
+.light input[type='checkbox']:disabled {
+  background-color: var(--subtle-color);
+  border-color: var(--subtle-color);
+  cursor: not-allowed;
+}
+
+.light input[type='checkbox']:disabled:checked::before {
+  border-color: var(--muted-color);
+}

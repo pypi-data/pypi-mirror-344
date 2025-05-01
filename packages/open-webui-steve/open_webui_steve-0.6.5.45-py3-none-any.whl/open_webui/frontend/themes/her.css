@@ -1,0 +1,247 @@
+/* Her Theme - Warm & Soft Light Theme */
+
+:root {
+  transition: all 0.3s ease-in-out; /* Add smooth transitions to all properties */
+  /* --- Original "Her" Palette (For Reference) --- */
+  --her-text: #5c3a3a;       /* Dark warm brown/red */
+  --her-background: #fff8f5; /* Very light warm off-white */
+  --her-surface: #fff0eb;    /* Slightly darker warm surface */
+  --her-overlay: #fde6e0;    /* Even darker overlay/nav */
+  --her-muted: #a38b83;      /* Muted text/borders */
+  --her-subtle: #d4c2bc;     /* Subtle borders/backgrounds */
+  --her-primary: #e68b7a;    /* Muted coral/red */
+  --her-secondary: #f0a899;   /* Lighter peach/orange */
+  --her-highlight: #f5c7bb;  /* Highlight background */
+
+  /* --- New "Soft Her" Palette --- */
+  /* Goal: Smoother transitions, slightly softer feel */
+
+  /* Text - Slightly softer, less intense red, still good contrast */
+  --her-soft-text: #684a4a;
+
+  /* Backgrounds/Surfaces - Reduced steps between levels */
+  --her-soft-background: #fff9f7; /* Slightly warmer/pinker base, very light */
+  --her-soft-surface: #fff5f0;    /* Closer step from background */
+  --her-soft-overlay: #ffeee8;    /* Closer step from surface */
+
+  /* Muted/Subtle - Adjusted for new base colors, slightly lighter */
+  --her-soft-muted: #b09a93;      /* Lighter, softer muted */
+  --her-soft-subtle: #dbc7c1;     /* Lighter, softer subtle, closer to overlay */
+
+  /* Accents - Slightly lighter and/or less saturated */
+  --her-soft-primary: #e99d8f;    /* Slightly lighter/softer primary */
+  --her-soft-secondary: #f2b3a6;  /* Slightly lighter/softer secondary */
+  --her-soft-highlight: #f8cac0;  /* Slightly lighter/softer highlight */
+}
+
+.her body {
+  background-color: var(--her-background) !important;
+  color: var(--her-text) !important;
+}
+
+.her * {
+  color: var(--her-text) !important;
+  border-color: var(--her-subtle) !important; /* Default border color */
+}
+
+.her .app > * {
+  background-color: var(--her-background) !important;
+}
+
+.her #nav {
+  background-color: var(--her-overlay);
+}
+
+.her .py-2\.5.my-auto.flex.flex-col.justify-between.h-screen { /* Sidebar */
+  background: var(--her-surface);
+}
+
+.her .bg-white.dark\:bg-gray-800 { /* Some backgrounds */
+  background: var(--her-surface);
+}
+
+.her .w-4.h-4 { /* Icons? */
+  fill: var(--her-primary);
+}
+
+.her #chat-input,
+.her #chat-input > *,
+.her #chat-search > * { /* Input areas */
+  background-color: var(--her-surface) !important;
+  color: var(--her-text) !important;
+  border-color: var(--her-subtle) !important;
+}
+.her #chat-input::placeholder {
+  color: var(--her-muted) !important;
+}
+
+
+.her .bg-gradient-to-t.from-white.dark\:from-gray-800.from-40\%.pb-2 { /* Input area gradient */
+   background: linear-gradient(to top, var(--her-background) 40%, transparent) !important;
+}
+
+/* Buttons */
+.her button {
+  color: var(--her-text) !important;
+}
+.her button:hover {
+   background-color: var(--her-highlight) !important;
+}
+.her .text-white.bg-gray-100.dark\:text-gray-800.dark\:bg-gray-600.disabled { /* Disabled button */
+   background-color: var(--her-subtle) !important;
+   color: var(--her-muted) !important;
+}
+.her .bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100 { /* Primary button */
+  background-color: var(--her-primary) !important;
+  color: var(--her-background) !important;
+}
+.her .bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100:hover {
+  background-color: var(--her-secondary) !important;
+}
+.her .px-4.py-2.bg-emerald-600.hover\:bg-emerald-700.text-gray-100 { /* Save button? */
+  background-color: var(--her-primary) !important;
+  color: var(--her-background) !important;
+}
+.her .px-4.py-2.bg-emerald-600.hover\:bg-emerald-700.text-gray-100:hover {
+  background-color: var(--her-secondary) !important;
+}
+
+
+/* Sidebar elements */
+.her .w-full.flex.justify-between.rounded-md.px-3.py-2.hover\:bg-gray-900.bg-gray-900 { /* Selected chat */
+  background-color: var(--her-highlight) !important;
+}
+.her .hover\:bg-gray-900:hover { /* Hover chat */
+  background-color: var(--her-highlight) !important;
+}
+
+/* Settings / Modals */
+.her .text-xs.text-gray-700.uppercase.bg-gray-50.dark\:bg-gray-700.dark\:text-gray-400 { /* Table header */
+  background-color: var(--her-surface);
+  color: var(--her-muted) !important;
+}
+.her .m-auto.rounded-xl.max-w-full.w-\[40rem\].mx-2.bg-gray-50.dark\:bg-gray-900 { /* Modal background */
+  background-color: var(--her-surface);
+}
+.her .w-full.rounded.p-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800, /* Textarea in settings */
+.her .w-full.rounded.py-2.px-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800 { /* Input in settings */
+  background-color: var(--her-background) !important;
+  border: 1px solid var(--her-subtle) !important;
+}
+.her select.dark\:bg-gray-900 { /* Select dropdown */
+   background-color: var(--her-surface) !important;
+}
+
+
+/* Messages */
+.her .message.user { /* User message */
+  background-color: var(--her-surface);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+.her .message.assistant { /* Assistant message */
+  background-color: var(--her-background);
+   border: 1px solid var(--her-subtle);
+   border-radius: 0.75rem;
+   padding: 0.75rem;
+}
+.her .message.svelte-1nauejd { /* General message text color override */
+	color: var(--her-text) !important;
+}
+.her .message.user .prose { /* Ensure prose within user message has correct color */
+    color: var(--her-text) !important;
+}
+.her .message.assistant .prose { /* Ensure prose within assistant message has correct color */
+    color: var(--her-text) !important;
+}
+.her .message.assistant code { /* Code blocks */
+    background-color: var(--her-surface);
+}
+.her .message.assistant pre {
+    background-color: var(--her-surface) !important;
+}
+
+
+/* Other UI Elements */
+.her #dropdownDots { /* Dropdown menu */
+  background-color: var(--her-surface);
+}
+.her .flex.py-2\.5.px-3\.5.w-full.hover\:bg-gray-800.transition:hover { /* Dropdown item hover */
+  background: var(--her-highlight);
+}
+.her .px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.bg-gray-200.dark\:bg-gray-700 { /* Some control background */
+   background-color: var(--her-surface);
+}
+.her .px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.hover\:bg-gray-300.dark\:hover\:bg-gray-800:hover {
+   background-color: var(--her-highlight);
+}
+
+/* Scrollbar maybe? */
+.her ::-webkit-scrollbar-thumb {
+  background-color: var(--her-subtle);
+}
+.her ::-webkit-scrollbar-track {
+  background: var(--her-surface);
+}
+
+/* Ensure primary color is used for sliders/toggles if applicable */
+.her input[type='range'] {
+    accent-color: var(--her-primary);
+}
+/* Checkbox styles for consistency */
+.her input[type='checkbox'] {
+  appearance: none; /* Remove default browser styles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--her-muted); /* Unchecked border */
+  border-radius: 0.25rem;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle; /* Align with text */
+  background-color: var(--her-surface); /* Unchecked background */
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.her input[type='checkbox']:checked {
+  background-color: var(--her-primary); /* Checked background */
+  border-color: var(--her-primary); /* Checked border */
+}
+
+/* Custom checkmark */
+.her input[type='checkbox']:checked::before {
+  content: '';
+  display: block;
+  width: 0.3rem;
+  height: 0.6rem;
+  border: solid var(--her-background); /* Checkmark color (use background for contrast) */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 0.25rem; /* Adjust position */
+  top: 0.05rem; /* Adjust position */
+}
+
+.her input[type='checkbox']:focus {
+  outline: 2px solid var(--her-secondary); /* Focus outline */
+  outline-offset: 1px;
+}
+
+.her input[type='checkbox']:disabled {
+  background-color: var(--her-subtle);
+  border-color: var(--her-subtle);
+  cursor: not-allowed;
+}
+
+.her input[type='checkbox']:disabled:checked::before {
+  border-color: var(--her-muted); /* Disabled checkmark color */
+}
+
+
+.her .svelte-1ee93ns { /* Primary color variable used by some components */
+	--primary: var(--her-primary) !important;
+}
+.her .svelte-11kvm4p { /* Another primary color variable */
+	--primary: var(--her-primary) !important;
+}

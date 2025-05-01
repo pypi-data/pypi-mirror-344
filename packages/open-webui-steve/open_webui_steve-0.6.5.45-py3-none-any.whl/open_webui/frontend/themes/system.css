@@ -1,0 +1,75 @@
+/* System Theme - Adapts to OS preference */
+
+/* Default to light theme */
+@import url('./light.css');
+
+/* Apply dark theme if preferred */
+@media (prefers-color-scheme: dark) {
+  @import url('./dark.css'); /* Assumes dark.css exists */
+}
+
+/* Add any system-specific overrides below if needed */
+
+/* System theme specific checkbox overrides: Rounded with Gradient */
+.system input[type='checkbox'] {
+  border-radius: 50%; /* Make it round */
+  border-width: 1px; /* Ensure border width is consistent */
+  /* Use variables defined in light/dark.css for base colors */
+  background-color: var(--surface-color);
+  border-color: var(--muted-color);
+}
+
+.system input[type='checkbox']:checked {
+  /* Default gradient for light mode */
+  background-image: linear-gradient(to bottom right, var(--primary-color), var(--highlight-color));
+  border-color: transparent; /* Hide border when gradient is shown */
+}
+
+.system input[type='checkbox']:checked::before {
+  /* Adjust checkmark position for round checkbox if needed */
+  /* Checkmark color needs to contrast with gradient */
+  border-color: var(--bg-color); /* Default to light background */
+  left: 0.28rem; /* Slight adjustment for circle */
+  top: 0.08rem;  /* Slight adjustment for circle */
+}
+
+/* Dark mode specific gradient and checkmark color */
+@media (prefers-color-scheme: dark) {
+  .system input[type='checkbox']:checked {
+     /* Use dark theme variables for gradient */
+     background-image: linear-gradient(to bottom right, var(--primary-color), var(--highlight-color));
+     border-color: transparent;
+  }
+   .system input[type='checkbox']:checked::before {
+     /* Ensure checkmark contrasts with dark gradient */
+     border-color: #ffffff; /* Use white or a very light color for dark mode checkmark */
+   }
+   .system input[type='checkbox'] {
+     /* Ensure dark mode base colors are applied */
+     background-color: var(--surface-color);
+     border-color: var(--muted-color);
+   }
+}
+
+/* Focus style for system theme checkbox */
+.system input[type='checkbox']:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px; /* Slightly more offset for round */
+}
+
+/* Disabled style for system theme checkbox */
+.system input[type='checkbox']:disabled {
+  background-image: none; /* Remove gradient when disabled */
+  background-color: var(--subtle-color);
+  border-color: var(--subtle-color);
+}
+
+.system input[type='checkbox']:disabled:checked::before {
+   border-color: var(--muted-color);
+}
+
+
+/* For example, you might want slightly different base styles */
+/* body { */
+/*   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; */
+/* } */

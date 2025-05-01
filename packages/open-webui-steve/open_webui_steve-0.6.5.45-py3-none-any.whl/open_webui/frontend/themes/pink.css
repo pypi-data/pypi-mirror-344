@@ -1,0 +1,185 @@
+/* Pink Theme */
+.pink {
+	/* Light Mode Variables */
+	--bg-app: #ffe4e1; /* Misty Rose */
+	--bg-nav: #ffc0cb; /* Pink */
+	--bg-content: #f08080; /* Light Coral */
+	--bg-input: #dda0dd; /* Plum */
+	--bg-input-container: #f08080; /* Light Coral */
+	--bg-button: #ff6347; /* Tomato */
+	--bg-button-hover: #db7093; /* Pale Violet Red */
+	--bg-button-primary: #ff69b4; /* Hot Pink */
+	--bg-button-primary-hover: #ff1493; /* Deep Pink */
+	--bg-button-disabled: #c0c0c0; /* Silver */
+	--bg-item: #b0c4de; /* Light Steel Blue */
+	--bg-item-hover: #da70d6; /* Orchid */
+	--bg-header: #d3d3d3; /* Light Grey */
+	--bg-dropdown: #d3d3d3; /* Light Grey */
+	--bg-dropdown-hover: #c0c0c0; /* Silver */
+	--bg-modal: #f08080; /* Light Coral */
+	--bg-textarea: #c0c0c0; /* Silver */
+	--bg-control: #d3d3d3; /* Light Grey */
+	--bg-control-hover: #c0c0c0; /* Silver */
+	--bg-search: #d3d3d3; /* Light Grey */
+
+	--text-color: #ffb6c1; /* Light Pink */
+	--stroke-color: #ff69b4; /* Hot Pink */
+	--fill-color: #e6e6fa; /* Lavender */
+	--fill-button-icon: #db7093; /* Pale Violet Red */
+
+	--primary-loader: #ff1493; /* Deep Pink */
+	--secondary-loader: #ffb6c1; /* Light Pink */
+	--primary-progress: #db7093; /* Pale Violet Red */
+	--secondary-progress: #ffe4e1; /* Misty Rose */
+}
+
+
+/* General Styles */
+.pink * {
+	color: var(--text-color) !important;
+	stroke: var(--stroke-color) !important;
+}
+
+/* Backgrounds */
+.pink .app > * {
+	background-color: var(--bg-app) !important;
+}
+
+.pink #nav,
+.pink .py-2\.5.my-auto.flex.flex-col.justify-between.h-screen {
+	background: var(--bg-nav);
+}
+
+.pink .bg-white.dark\:bg-gray-800 { /* Keep this for Tailwind light mode */
+	background: var(--bg-content);
+}
+
+.pink #chat-input {
+	background: var(--bg-input);
+	margin: 0.3rem;
+	padding: 0.5rem;
+}
+
+.pink .bg-gradient-to-t.from-white.dark\:from-gray-800.from-40\%.pb-2 { /* Keep this for Tailwind light mode */
+	background: var(--bg-input-container) !important;
+	padding-top: 0.6rem;
+}
+
+.pink .m-auto.rounded-xl.max-w-full.w-\[40rem\].mx-2.bg-gray-50.dark\:bg-gray-900.shadow-3xl { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-modal);
+}
+
+.pink .base.enter.svelte-ug60r4 {
+	background-color: var(--bg-input); /* Assuming this is related to input/modal */
+}
+
+/* Buttons & Controls */
+.pink
+	.text-white.bg-gray-100.dark\:text-gray-800.dark\:bg-gray-600.disabled.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-button-disabled);
+	transition: background-color 0.2s ease-out linear;
+}
+
+.pink
+	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-button);
+	transition: background-color 0.2s ease-out linear;
+}
+.pink
+	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center:hover {
+    background-color: var(--bg-button-hover);
+}
+
+
+.pink .px-4.py-2.bg-emerald-600.hover\:bg-emerald-700.text-gray-100.transition.rounded {
+	background-color: var(--bg-button-primary);
+}
+.pink .px-4.py-2.bg-emerald-600.hover\:bg-emerald-700.text-gray-100.transition.rounded:hover {
+	background-color: var(--bg-button-primary-hover);
+}
+
+.pink
+	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.bg-gray-200.dark\:bg-gray-700 { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-control);
+}
+
+.pink
+	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.hover\:bg-gray-300.dark\:hover\:bg-gray-800:hover { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-control-hover);
+}
+
+
+/* List Items / Sidebar */
+.pink
+	.w-full.flex.justify-between.rounded-md.px-3.py-2.hover\:bg-gray-900.bg-gray-900.transition.whitespace-nowrap.text-ellipsis {
+	background-color: var(--bg-item);
+	font-weight: bold;
+}
+
+.pink .hover\:bg-gray-900:hover {
+	background-color: var(--bg-item-hover);
+}
+
+/* Table Header */
+.pink .text-xs.text-gray-700.uppercase.bg-gray-50.dark\:bg-gray-700.dark\:text-gray-400 { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-header);
+}
+
+/* Dropdown */
+.pink #dropdownDots {
+	background-color: var(--bg-dropdown);
+}
+
+.pink .flex.py-2\.5.px-3\.5.w-full.hover\:bg-gray-800.transition:hover {
+	background: var(--bg-dropdown-hover);
+}
+
+/* Textarea / Input */
+.pink
+	.w-full.rounded.p-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.resize-none { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-textarea);
+}
+
+.pink
+	.w-full.rounded.py-2.px-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.svelte-1vx7r9s { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-input); /* Reusing input background */
+}
+
+/* Search */
+.pink #chat-search > * {
+	background-color: var(--bg-search) !important;
+}
+
+
+/* Fill Colors */
+.pink .w-4.h-4 {
+	fill: var(--fill-color);
+}
+
+.pink
+	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center
+	> * {
+	fill: var(--fill-button-icon) !important;
+	transition: fill 0.2s ease-out linear;
+}
+
+
+/* Other Specific Components */
+.pink .scrollbar-hidden.relative.overflow-x-auto.whitespace-nowrap.svelte-3g4avz {
+	border-radius: 16px 16px 0 0;
+}
+
+.pink .message.svelte-1nauejd {
+	color: var(--text-color) !important; /* Already handled by general rule, but kept for specificity */
+}
+
+/* Loaders / Progress */
+.pink .svelte-1ee93ns { /* Loader */
+	--primary: var(--primary-loader) !important;
+	--secondary: var(--secondary-loader) !important;
+}
+
+.pink .svelte-11kvm4p { /* Progress Bar? */
+	--primary: var(--primary-progress) !important;
+	--secondary: var(--secondary-progress) !important;
+}
