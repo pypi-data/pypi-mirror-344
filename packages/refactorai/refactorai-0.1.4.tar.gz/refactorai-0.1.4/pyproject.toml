@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "refactorai"
+version = "0.1.4"
+description = "Automated Code Refactoring with AI"
+authors = [
+  { name="nikolaspoczekaj", email="nikolas.poczekaj@gmail.com" }
+]
+dependencies = [
+   "openai>=1.76.0",
+   "click==8.1.8",
+   "rich==14.0.0"
+]
+requires-python = ">=3.7"
+
+[project.urls]
+Homepage = "https://github.com/nikolaspoczekaj/refactorai"
+Issues = "https://github.com/nikolaspoczekaj/refactorai/issues"
+
+[project.scripts]
+refactorai = "refactorai.main:main"
+
+
