@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: py-sudoku-maker
+Version: 1.0.0
+Summary: A Python package that creates a completed Sudoku grid
+Author-email: Timothy Solnyshkin <timothy.solnyshkin@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Timothy Solnyshkin
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/ParallelVoid/py-sudoku
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# py-sudoku-maker
+
+A Python package for generating Sudoku puzzles.
+
+The **py-sudoku-maker** package provides an easy-to-use interface for generating a valid, fully solved Sudoku puzzle board. Whether you're building a Sudoku game or simply need a solved puzzle for testing or educational purposes, this package offers a convenient solution. The generated Sudoku boards follow the standard 9x9 grid layout with numbers ranging from 1 to 9, ensuring that each puzzle is fully solved and meets the rules of the game.
+
+## Key Features:
+
+- **Generates a Fully Solved Sudoku Board**: Quickly create a completed, valid Sudoku grid with no conflicts.
+- **Fast and Efficient**: The package uses an algorithm that first places all numbers onto the board, then shuffles.
+- **No External Dependencies**: Lightweight and easy to install with no complex dependencies.
+
+## How to Use:
+- Import py_sudoku_maker
+- If you just want to generate a matrix for a sudoku board, call the `generate_sudoku()` function
+- If you want to print a complete sudoku board in your command line, call the `print_sudoku()` function

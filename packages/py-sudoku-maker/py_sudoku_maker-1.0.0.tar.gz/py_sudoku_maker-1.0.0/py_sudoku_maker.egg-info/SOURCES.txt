@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+py_sudoku_maker/__init__.py
+py_sudoku_maker/module.py
+py_sudoku_maker.egg-info/PKG-INFO
+py_sudoku_maker.egg-info/SOURCES.txt
+py_sudoku_maker.egg-info/dependency_links.txt
+py_sudoku_maker.egg-info/top_level.txt

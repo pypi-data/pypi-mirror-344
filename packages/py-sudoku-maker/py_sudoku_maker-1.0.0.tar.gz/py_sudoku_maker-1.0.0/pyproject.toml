@@ -1,0 +1,13 @@
+[project]
+name = "py-sudoku-maker"
+version = "1.0.0"
+requires-python = ">=3.7"
+authors = [
+  {name = "Timothy Solnyshkin", email = "timothy.solnyshkin@gmail.com"},
+]
+description = "A Python package that creates a completed Sudoku grid"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[project.urls]
+Homepage = "https://github.com/ParallelVoid/py-sudoku"
