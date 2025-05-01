@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="70eabd73-5357-4a80-a5e1-82ce50320f69" name="Changes" comment="updated licence">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_instance/config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/saved_instance/config/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_instance/config/config_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/saved_instance/config/config_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_instance/db/sqllite_repo.py" beforeDir="false" afterPath="$PROJECT_DIR$/saved_instance/db/sqllite_repo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_instance/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/saved_instance/factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_instance/rich_storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/saved_instance/rich_storage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_instance/secure_storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/saved_instance/secure_storage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_multi_thread_safe_repo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_secure_storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_secure_storage.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLabMergeRequestFiltersHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPENED&quot;,
+    &quot;assignee&quot;: {
+      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue&quot;,
+      &quot;username&quot;: &quot;project_68800274_bot_b5f9ecc1e7346c6d9ae44c1cfe9dde90&quot;,
+      &quot;fullname&quot;: &quot;personal&quot;
+    }
+  }
+}</component>
+  <component name="GitLabMergeRequestsSettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;first&quot;: &quot;https://gitlab.com/manickamdeva62/saved_instance.git&quot;,
+    &quot;second&quot;: &quot;b28b4e61-5527-482e-a5e5-c32b844e7cb5&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2vArqQQ6TWyb6hNKLSWziBs8HBy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_factory.test_rich_storage_factory.executor": "Debug",
+    "Python tests.Python tests for test_factory.test_simple_storage_factory.executor": "Run",
+    "Python tests.Python tests for test_multi_thread_safe_repo.test_multi_thread_safe_repo.executor": "Run",
+    "Python tests.Python tests for test_rich_storage.test_rich_test_storage.executor": "Run",
+    "Python tests.Python tests for test_secure_storage.test_secure_storage.executor": "Run",
+    "Python tests.Python tests for test_shelve_repo.test_get.executor": "Run",
+    "Python tests.Python tests for test_shelve_repo.test_set.executor": "Run",
+    "Python tests.Python tests for test_shelve_repo.test_shelve.executor": "Run",
+    "Python tests.Python tests for test_simple_storage.test_get.executor": "Run",
+    "Python tests.Python tests for test_simple_storage.test_get_set.executor": "Run",
+    "Python tests.Python tests for test_simple_storage.test_set.executor": "Run",
+    "Python tests.Python tests for test_sqlite_repo.test_sqlite_repo.executor": "Run",
+    "Python tests.Python tests for test_util.test_config_load.executor": "Run",
+    "Python tests.Python tests for test_util.test_get_app_storage.executor": "Run",
+    "Python tests.Python tests for test_util.test_get_config_data.executor": "Run",
+    "Python tests.Python tests for test_util.test_search_user_defined_config_file.executor": "Run",
+    "Python tests.Python tests in test_multi_thread_safe_repo.py.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.gitlab.GitLabSettingsConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/saved_instance/config" />
+      <recent name="$PROJECT_DIR$/saved_instance" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="pip install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for test_factory.test_rich_storage_factory">
+    <configuration name="Python tests for test_factory.test_rich_storage_factory" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="SavedInstance" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_factory.test_rich_storage_factory&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_rich_storage.test_rich_test_storage" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="SavedInstance" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_rich_storage.test_rich_test_storage&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_secure_storage.test_secure_storage" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="SavedInstance" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_secure_storage.test_secure_storage&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_sqlite_repo.test_sqlite_repo" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="SavedInstance" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_sqlite_repo.test_sqlite_repo&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_multi_thread_safe_repo.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="SavedInstance" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_multi_thread_safe_repo.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_factory.test_rich_storage_factory" />
+        <item itemvalue="Python tests.Python tests for test_secure_storage.test_secure_storage" />
+        <item itemvalue="Python tests.Python tests for test_rich_storage.test_rich_test_storage" />
+        <item itemvalue="Python tests.Python tests for test_sqlite_repo.test_sqlite_repo" />
+        <item itemvalue="Python tests.Python tests in test_multi_thread_safe_repo.py" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-348a24fa61fa-5312c7369657-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.23774.444" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="70eabd73-5357-4a80-a5e1-82ce50320f69" name="Changes" comment="" />
+      <created>1743598909337</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743598909337</updated>
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1744173278372</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744173278372</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add toml file">
+      <option name="closed" value="true" />
+      <created>1744178658900</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744178658900</updated>
+    </task>
+    <task id="LOCAL-00003" summary="rich storage with mutable object track code update">
+      <option name="closed" value="true" />
+      <created>1744439160869</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744439160869</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updated licence">
+      <option name="closed" value="true" />
+      <created>1744439890962</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744439890962</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="add toml file" />
+    <MESSAGE value="rich storage with mutable object track code update" />
+    <MESSAGE value="updated licence" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated licence" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_factory.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

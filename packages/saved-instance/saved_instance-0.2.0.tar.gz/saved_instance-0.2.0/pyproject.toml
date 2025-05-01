@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "saved-instance"
+version = "0.2.0"
+description = "saved-instance is a persistent Python dictionary."
+authors = [{ name = "manickamdeva62" }]
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "click==8.1.8",
+    "cryptography==44.0.2",
+    "PyYAML==6.0.2",
+    "platformdirs==4.3.7"
+]
+readme = "README.md"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+docs = ["sphinx"]
+
+[project.scripts]
+svd = "saved_instance.cli:cli"
+
+[project.urls]
+"Homepage" = "https://gitlab.com/manickamdeva62/saved_instance"
