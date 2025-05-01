@@ -1,0 +1,3 @@
+[console_scripts]
+check-api-keys=vibescraper.check_api_keys:main
+
