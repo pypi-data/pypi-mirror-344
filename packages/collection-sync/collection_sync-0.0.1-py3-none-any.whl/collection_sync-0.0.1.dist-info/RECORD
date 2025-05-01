@@ -1,0 +1,12 @@
+collection_sync/__init__.py,sha256=Gp3c9dveYsocT3y0jd1SUPvVtYCDllSpmFdHKWBufmA,2910
+collection_sync/util.py,sha256=xAaYPR-f9WFxyYyQO_LtB5TSpEXnDzS7E16wYNfyCFI,72
+collection_sync/collections/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+collection_sync/collections/iproute.py,sha256=7f1hEAFL79LCM_LruOXdijVleHyi9OwcJq3fqC_Q61c,95
+collection_sync/collections/list.py,sha256=H-7kNRUwxspBA5CVNXxGJAoi6ekTadLz-gJSVaE-hZ0,653
+collection_sync/collections/markdown.py,sha256=SC-bIaqx079iM9hub8IQagzqjpbtV4h5O2hMes4cLXY,1099
+collection_sync/collections/miniflux.py,sha256=mdmo-woUceLDxwEIw-F4Bkqa_ZGy0iMxFyRTXVCLzaI,1385
+collection_sync/collections/yaml.py,sha256=j-m84M23_u-HnPGL3MvSj-teRXRJ128ORCbO4fhtTZw,935
+collection_sync-0.0.1.dist-info/METADATA,sha256=rflOwz6rLLZQ4wkEBMfXLpcKKPHjCTUvhM2A1YEJTD8,1085
+collection_sync-0.0.1.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+collection_sync-0.0.1.dist-info/top_level.txt,sha256=Sg3-qkfeVc410JMci8ah3wgIx4SZ5ib0uZva6iiLKK8,16
+collection_sync-0.0.1.dist-info/RECORD,,
