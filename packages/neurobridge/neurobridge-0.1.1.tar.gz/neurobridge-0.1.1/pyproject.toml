@@ -1,0 +1,8 @@
+[project]
+name = "neurobridge"
+version = "0.1.1"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
