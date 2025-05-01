@@ -1,0 +1,112 @@
+name: shllm
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  shllm:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check API key availability
+      run: |
+        if [ -z "${{ secrets.OPENAI_API_KEY }}" ]; then
+          echo "API Key is not set or empty."
+          exit 1
+        else
+          echo "API Key is set."
+        fi
+    
+    - uses: actions/checkout@v2
+
+    - name: Set up Git hooks
+      run: |
+        git config core.hooksPath .githooks
+        chmod +x .githooks/pre-commit
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+
+    - name: Install uv
+      run: |
+        pip install uv
+
+    - name: Create virtual environment
+      run: |
+        uv venv .venv
+        echo "VIRTUAL_ENV=$PWD/.venv" >> $GITHUB_ENV
+        echo "$PWD/.venv/bin" >> $GITHUB_PATH
+
+    - name: Install dependencies with uv
+      run: |
+        uv pip install -e .
+        uv pip install pytest
+
+    - name: Run integration tests
+      env:
+        SHLLM_OPENAI_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: |
+        python -m pytest test_shllm.py
+
+    - name: Install build tools
+      run: |
+        uv pip install build
+
+    - name: Build the project
+      run: |
+        python -m build
+
+    - name: Get version from pyproject.toml
+      id: get_version
+      run: |
+        VERSION=$(grep -m 1 'version' pyproject.toml | cut -d '"' -f 2)
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+    - name: Create GitHub Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v${{ steps.get_version.outputs.version }}
+        release_name: v${{ steps.get_version.outputs.version }}
+        draft: false
+        prerelease: false
+
+    - name: Upload Release Assets (tar.gz)
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./dist/shllm-${{ steps.get_version.outputs.version }}.tar.gz
+        asset_name: shllm-${{ steps.get_version.outputs.version }}.tar.gz
+        asset_content_type: application/gzip
+
+    - name: Upload Wheel Release Asset (whl)
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./dist/shllm-${{ steps.get_version.outputs.version }}-py3-none-any.whl
+        asset_name: shllm-${{ steps.get_version.outputs.version }}.whl
+        asset_content_type: application/zip
+
+    - name: Install publishing tools
+      run: |
+        uv pip install twine
+
+    - name: Publish to PyPI
+      env:
+        TWINE_USERNAME: "__token__"
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+      run: |
+        python -m twine upload dist/*

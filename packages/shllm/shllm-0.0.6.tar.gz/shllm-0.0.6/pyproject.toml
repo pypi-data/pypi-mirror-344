@@ -1,0 +1,23 @@
+[project]
+name = "shllm"
+version = "0.0.6"
+description = "Natural langauge shell commands."
+authors = [
+    {name = "Ryan Hendry", email = "ryanhendry123@gmail.com"},
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.51.0",
+]
+
+[project.optional-dependencies]
+clipboard = ["pyperclip>=1.9.0"]
+dev = ["pytest>=8.3.3"]
+
+[project.scripts]
+shllm = "shllm:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
