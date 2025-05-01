@@ -1,0 +1,11 @@
+fuller/__init__.py,sha256=aJqQsbnzrkuK8eq4dYggVExDwbnOnds8VHWbQvg0OrQ,409
+fuller/generator.py,sha256=jjrJvW0SDelcsdDQVCUCcEW6Nh2tdCepa5c_eNo1CIg,41956
+fuller/metrics.py,sha256=bGg9VjBv8ictL8bPlDVxPs2kiZE3vuB1JmJjfCFhuDk,3367
+fuller/mrfRec.py,sha256=kzS_VA_YMLwEO-jhqYezux6LYR5GGoYN_Emh7Ncf-Io,36808
+fuller/reconstruction_mrf2d.py,sha256=l8jGuTKJdbPdMEIDThwQQRbotxnf9L1H3NUd7pDm8D8,3879
+fuller/utils.py,sha256=ame2PhXHk0DahrTHl_3FtvqNnqxKeiNnID83k3PpBCo,14520
+fuller-2.0.0rc2.dist-info/licenses/LICENSE,sha256=6RxQUM6QOhmrzcNKy1EKUuSEF3ZGmc-nQoR1owXJJ2A,1072
+fuller-2.0.0rc2.dist-info/METADATA,sha256=OtlsMU9RU-g6Iw0Sqw3Hdbq7kg8qLyPtuCuKCGec9i0,6622
+fuller-2.0.0rc2.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+fuller-2.0.0rc2.dist-info/top_level.txt,sha256=IA_Ro1i8fXbvuOCW37IOfTX042BCfsIMokplUf_ftt0,7
+fuller-2.0.0rc2.dist-info/RECORD,,
