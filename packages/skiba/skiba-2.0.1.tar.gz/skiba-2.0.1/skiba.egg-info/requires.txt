@@ -1,0 +1,16 @@
+folium
+geemap
+geopandas
+ipyleaflet
+ipywidgets
+localtileserver
+matplotlib
+numpy
+pandas
+requests
+
+[all]
+skiba[extra]
+
+[extra]
+pandas
