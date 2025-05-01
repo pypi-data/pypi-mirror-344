@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>Dear {{ name }}</header>
+    <main>
+        <p>Thank you for contacting us. This is an automated response to confirm that we have received your message.</p>
+        <p>
+            Your enquiry has been received and assigned the ticket number #{{ ticket_number }}. We will review your enquiry and respond as soon as we can.
+        </p>
+        <p>For further questions or assistance, or if you wish to add details or comments to your enquiry, please reply to this email.</p>
+        <p>
+            Kind regards,
+            <br>
+            {business_name}
+        </p>
+    </main>
+    <hr>
+    <div style="font-style: italic;">
+        <p style="font-weight: bold;">{{ name }}, {{ date_created }}</p>
+        <br>
+        {{ message }}
+    </div>
+    <hr>
+    <footer>
+        E: {{ from_email }}
+        <br>
+        This email has been sent in accordance with the {business_name} Privacy Policy
+        <br>
+        &copy2025 [company]
+    </footer>
+</body>
+</html>
