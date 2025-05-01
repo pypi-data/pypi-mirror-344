@@ -1,0 +1,4 @@
+[console_scripts]
+cif2bcif=bio_datasets_cli.cif2bcif:main
+cifs2bcifs=bio_datasets_cli.cif2bcif:dir_main
+
