@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+primer_extractor/__init__.py
+primer_extractor/__main__.py
+primer_extractor/cli.py
+primer_extractor/core.py
+rereferencer.egg-info/PKG-INFO
+rereferencer.egg-info/SOURCES.txt
+rereferencer.egg-info/dependency_links.txt
+rereferencer.egg-info/entry_points.txt
+rereferencer.egg-info/requires.txt
+rereferencer.egg-info/top_level.txt

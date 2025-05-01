@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rereferencer"
+version = "0.1.0"
+description = "A tool to extract amplified regions from reference sequences using primer pairs"
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+authors = [
+    {name = "SemiQuant", email = "JasonLimberis@ucsf.edu"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "click>=8.0.0",
+    "biopython>=1.81",
+    "pandas>=2.0.0",
+    "rich>=13.0.0",
+    "gffutils>=0.12.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/SemiQuant/"
+
+[project.scripts]
+rereferencer = "primer_extractor.cli:main" 
