@@ -1,0 +1,8 @@
+requests>=2.32
+mcp>=1.0.0
+python-dotenv>=1.0.1
+uvicorn>=0.27.0
+starlette>=0.36.0
+typer>=0.15.2
+fastmcp>=0.4.1
+httpx
