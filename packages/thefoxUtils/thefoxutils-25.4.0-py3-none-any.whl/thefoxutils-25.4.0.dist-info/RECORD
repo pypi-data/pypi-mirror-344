@@ -1,0 +1,15 @@
+thefoxUtils/__init__.py,sha256=QpEAa_kgC4VqwM1zVkVc3SrPYjSt58oHfdKFkZCXnYA,87
+thefoxUtils/charset.py,sha256=czM2_V_p8RFSX5MxnB8HdWE2DHxEeXRhxIuAxtpVUT8,6853
+thefoxUtils/composites.py,sha256=IFkqXMpDc9Wk1TRUgu0KsAYVA14iZA3OItj_RTL69SE,2845
+thefoxUtils/ftml2txt.py,sha256=sxo6lCTJkE8TPtuEakuzp8zBz_Mf0CyFRl4cRar2bkg,8036
+thefoxUtils/glyphdata.py,sha256=dd1vTYYvU_M2CVMAaB5ZBDNC6jfOujncs1RD9ZlcuPw,5401
+thefoxUtils/linespacing.py,sha256=Pg-OtxMwvwyAAKaczPhYkrnxXS2WvR62hNjDGkspYyI,4776
+thefoxUtils/tf.py,sha256=0GPf1GU8d0go2qU68gUT9J7WxegjEprsK4wIbaYxZZA,5449
+thefoxUtils/unidata.py,sha256=tu4y1uHXBpqF-P1Fqnfb6ptkG_HmYsfxMF1qUCkGuwg,1192
+thefoxUtils/unidump.py,sha256=eZbtmt0MuJukqaVXCy83PalC-RGfDUvJdjazIw3p0_Q,7971
+thefoxUtils/unikey.py,sha256=naHC58ABOWwArsRxVltH11cHO5219qP_z3V8a2B0NxE,1469
+thefoxutils-25.4.0.dist-info/entry_points.txt,sha256=mH3S9eptWNZ5Si6QGnqABfl5AAx_2VxqJ1xR2GnO0n4,324
+thefoxutils-25.4.0.dist-info/licenses/LICENSE,sha256=TEukHnIACbDBI2JPtdbMOzVqDknVIE5QvIHBm-z5weI,1252
+thefoxutils-25.4.0.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+thefoxutils-25.4.0.dist-info/METADATA,sha256=TncmGrz_YYIs4gVaqPp8JsYxzMVVIRieXGDo-qLW44I,1285
+thefoxutils-25.4.0.dist-info/RECORD,,
