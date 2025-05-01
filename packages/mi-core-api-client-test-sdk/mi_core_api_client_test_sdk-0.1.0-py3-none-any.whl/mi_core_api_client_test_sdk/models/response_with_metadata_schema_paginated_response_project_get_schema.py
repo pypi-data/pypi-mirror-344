@@ -1,0 +1,91 @@
+from collections.abc import Mapping
+from typing import TYPE_CHECKING, Any, TypeVar
+
+from attrs import define as _attrs_define
+from attrs import field as _attrs_field
+
+if TYPE_CHECKING:
+    from ..models.metadata_schema import MetadataSchema
+    from ..models.paginated_response_project_get_schema import PaginatedResponseProjectGetSchema
+    from ..models.response_with_metadata_schema_paginated_response_project_get_schema_parameters import (
+        ResponseWithMetadataSchemaPaginatedResponseProjectGetSchemaParameters,
+    )
+
+
+T = TypeVar("T", bound="ResponseWithMetadataSchemaPaginatedResponseProjectGetSchema")
+
+
+@_attrs_define
+class ResponseWithMetadataSchemaPaginatedResponseProjectGetSchema:
+    """
+    Attributes:
+        metadata (MetadataSchema):
+        parameters (ResponseWithMetadataSchemaPaginatedResponseProjectGetSchemaParameters):
+        response (PaginatedResponseProjectGetSchema):
+    """
+
+    metadata: "MetadataSchema"
+    parameters: "ResponseWithMetadataSchemaPaginatedResponseProjectGetSchemaParameters"
+    response: "PaginatedResponseProjectGetSchema"
+    additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        metadata = self.metadata.to_dict()
+
+        parameters = self.parameters.to_dict()
+
+        response = self.response.to_dict()
+
+        field_dict: dict[str, Any] = {}
+        field_dict.update(self.additional_properties)
+        field_dict.update(
+            {
+                "metadata": metadata,
+                "parameters": parameters,
+                "response": response,
+            }
+        )
+
+        return field_dict
+
+    @classmethod
+    def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
+        from ..models.metadata_schema import MetadataSchema
+        from ..models.paginated_response_project_get_schema import PaginatedResponseProjectGetSchema
+        from ..models.response_with_metadata_schema_paginated_response_project_get_schema_parameters import (
+            ResponseWithMetadataSchemaPaginatedResponseProjectGetSchemaParameters,
+        )
+
+        d = dict(src_dict)
+        metadata = MetadataSchema.from_dict(d.pop("metadata"))
+
+        parameters = ResponseWithMetadataSchemaPaginatedResponseProjectGetSchemaParameters.from_dict(
+            d.pop("parameters")
+        )
+
+        response = PaginatedResponseProjectGetSchema.from_dict(d.pop("response"))
+
+        response_with_metadata_schema_paginated_response_project_get_schema = cls(
+            metadata=metadata,
+            parameters=parameters,
+            response=response,
+        )
+
+        response_with_metadata_schema_paginated_response_project_get_schema.additional_properties = d
+        return response_with_metadata_schema_paginated_response_project_get_schema
+
+    @property
+    def additional_keys(self) -> list[str]:
+        return list(self.additional_properties.keys())
+
+    def __getitem__(self, key: str) -> Any:
+        return self.additional_properties[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        self.additional_properties[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        del self.additional_properties[key]
+
+    def __contains__(self, key: str) -> bool:
+        return key in self.additional_properties
