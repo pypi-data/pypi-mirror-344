@@ -1,0 +1,6 @@
+typer[all]
+confluent-kafka
+pyarrow
+duckdb
+pandas
+python-dateutil
