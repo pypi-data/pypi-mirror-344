@@ -1,0 +1,92 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 31f6b75..c480eb3 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -7,7 +7,7 @@ project(
+ set(ModuleName "_thermal_comfort")
+ # we can add -ffast-math if we do the checking for NaNs in python
+ set(CMAKE_Fortran_FLAGS
+-    "${CMAKE_Fortran_FLAGS} -Ofast -Wall -march=native -ftree-vectorize -funroll-loops -flto"
++    "${CMAKE_Fortran_FLAGS} -Ofast -Wall -march=native -ftree-vectorize -funroll-loops -flto -fopenmp"
+ )
+ find_package(
+   Python
+diff --git a/src/_thermal_comfort.f90 b/src/_thermal_comfort.f90
+index 2806161..80537db 100644
+--- a/src/_thermal_comfort.f90
++++ b/src/_thermal_comfort.f90
+@@ -91,6 +91,7 @@
+ 
+ MODULE thermal_comfort_mod
+    USE, INTRINSIC :: ieee_arithmetic
++   USE omp_lib
+    IMPLICIT NONE
+ 
+    PRIVATE
+@@ -150,7 +151,6 @@ CONTAINS
+    SUBROUTINE pet_static(ta, rh, v, tmrt, p, tx)
+       !-- Configure sample person (optional)
+       !  age, mbody, ht, work, eta, icl, fcl, pos, sex )
+-
+       IMPLICIT NONE
+       !
+       !  Input arguments:
+@@ -177,9 +177,6 @@ CONTAINS
+       REAL(kind=8) :: vpa(size(ta)), ere(size(ta)), erel(size(ta)), rtv(size(ta)), acl(size(ta)), &
+                       adu(size(ta)), wetsk(size(ta)), vpts(size(ta)), tsk(size(ta)), tcl(size(ta)), &
+                       rdsk(size(ta)), rdcl(size(ta)), feff(size(ta)), facl(size(ta)), esw(size(ta)), aeff(size(ta))
+-      ! REAL(kind=8) :: acl(size(ta)), adu(size(ta)), aeff(size(ta)), ere(size(ta)), erel(size(ta)), esw(size(ta)), facl(size(ta)), feff(size(ta)), rdcl(size(ta)), &
+-      !                 rdsk(size(ta)), rtv(size(ta)), vpts(size(ta)), tsk(size(ta)), tcl(size(ta)), wetsk(size(ta)), vpa(size(ta))
+-      ! REAL(kind=8) :: vpa(size(ta))
+       !  Optional arguments not supported, removed
+       !  REAL(kind=8), INTENT ( in ), optional :: age, mbody, ht, work, eta, icl, fcl
+       !  INTEGER, INTENT ( in ), optional :: pos, sex
+@@ -215,6 +212,7 @@ CONTAINS
+       ! calculate vapor pressure from rh
+       vpa = (rh*es_vectorized_wexler(Ta))/100.0
+ 
++      !$OMP PARALLEL DO
+       do i = 1, size(ta)
+          IF (ieee_is_nan(ta(i)) .OR. ieee_is_nan(rh(i)) .OR. ieee_is_nan(tmrt(i)) .OR. ieee_is_nan(v(i)) .OR. &
+              ieee_is_nan(p(i))) THEN
+@@ -231,6 +229,7 @@ CONTAINS
+          CALL pet_iteration(acl(i), adu(i), aeff(i), esw(i), facl(i), feff(i), p(i), rdcl(i), &
+                             rdsk(i), rtv(i), ta(i), tcl(i), tsk(i), tx(i), vpts(i), wetsk(i))
+       end do
++      !$OMP END PARALLEL DO
+    END SUBROUTINE pet_static
+ 
+ !------------------------------------------------------------------------------!
+diff --git a/src/thermal_comfort/models.py b/src/thermal_comfort/models.py
+index f5c0541..322b7dc 100644
+--- a/src/thermal_comfort/models.py
++++ b/src/thermal_comfort/models.py
+@@ -1,13 +1,14 @@
+ import warnings
+ from typing import Any
+ from typing import TypeVar
++from typing import Union
+ 
+ import numpy as np
+ import numpy.typing as npt
+ 
+ from ._thermal_comfort import thermal_comfort_mod
+ 
+-T = TypeVar('T', bound=np.floating | np.integer)
++T = TypeVar('T', bound=Union[np.floating, np.integer])
+ 
+ 
+ def utci_approx(
+diff --git a/tox.ini b/tox.ini
+index 06869a8..96271e7 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -11,6 +11,8 @@ commands =
+     coverage run -m pytest {posargs:tests}
+     coverage combine
+     coverage report
++env =
++    OMP_NUM_THREADS=1
+ 
+ [testenv:pre-commit]
+ skip_install = true

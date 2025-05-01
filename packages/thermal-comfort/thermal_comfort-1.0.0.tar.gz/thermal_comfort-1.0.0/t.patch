@@ -1,0 +1,19 @@
+commit 087823d1c22cae0f32d3a3842c2d5ac174e01911
+Author: Jonas Kittner <jonas.kittner@rub.de>
+Date:   Wed Mar 19 17:19:41 2025 +0100
+
+    0.3.3
+
+diff --git a/pyproject.toml b/pyproject.toml
+index ff05a22..f2ed6bd 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -4,7 +4,7 @@ build-backend = "scikit_build_core.build"
+ 
+ [project]
+ name = "thermal-comfort"
+-version = "0.3.2"
++version = "0.3.3"
+ dependencies = [
+     "numpy>=2.0.0"
+ ]

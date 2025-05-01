@@ -1,0 +1,12 @@
+covdefaults
+coverage
+furo
+myst_parser
+pandas
+pytest
+pytest-randomly
+sphinx
+sphinx-copybutton
+sphinx-toolbox
+sphinx_autodoc_typehints
+uv

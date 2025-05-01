@@ -1,0 +1,162 @@
+from thermal_comfort import utci_approx, pet_static
+# from pythermalcomfort.models import utci, pet_steady
+import time
+import numpy as np
+import warnings
+
+warnings.filterwarnings("ignore")
+
+# set a numpy seed
+np.random.seed(0)
+
+# generate 2-dimensional random numpy array between two values
+N = (50, 50)
+
+
+ta = np.random.uniform(20, 50, N)
+tmrt = np.random.uniform(3, 80, N)
+va = np.random.uniform(1, 10, N)
+rh = np.random.uniform(10, 100, N)
+
+
+# # # # es performance test
+# # # start = time.monotonic()
+# # # for i in range(len(ta)):
+# # #     es(ta[i])
+# # # print("Elapsed time:", time.monotonic() - start)
+
+# # # # vectorize using numpy
+# # # es_np_vectorized = np.vectorize(es, otypes=[float], signature='(n)->()')
+# # # start = time.monotonic()
+# # # x = es_np_vectorized(ta)
+# # # print("Elapsed time:", time.monotonic() - start)
+
+# # # start = time.monotonic()
+# # # x = es_vectorized(ta)
+# # # print("Elapsed time:", time.monotonic() - start)
+
+# # # start = time.monotonic()
+# # # x = 6.112 * np.exp((17.67 * ta) / (ta + 243.5))
+# # # print("Elapsed time:", time.monotonic() - start)
+
+# print(' UTCI '.center(80, '='))
+
+# timings_vectorized = []
+# for i in range(500):
+#     start = time.monotonic()
+#     # utci_approx_vectorized(ta, tmrt, va, rh).reshape(N, order='F')
+#     utci_approx_vectorized(ta=20, tmrt=50, va=3, rh=50)
+#     end = time.monotonic() - start
+#     timings_vectorized.append(end)
+
+
+# timings_not_vectorized = []
+# for i in range(500):
+#     start = time.monotonic()
+#     utci_approx(ta=20, tmrt=50, va=3, rh=50)
+#     end = time.monotonic() - start
+#     timings_not_vectorized.append(end)
+
+
+# timings_pytherm_scalar = [] 
+# for i in range(500):
+#     start = time.monotonic()
+#     utci(tdb=20, tr=50, v=3, rh=50)
+#     end = time.monotonic() - start
+#     timings_pytherm_scalar.append(end)
+
+# # utci_vectorized = np.vectorize(utci_approx, otypes=[float], cache=True)
+# # start = time.monotonic()
+# # utci_vectorized(ta, tmrt, va, rh)
+# # print("Elapsed time:", time.monotonic() - start)
+
+# # start = time.monotonic()
+# # for i in range(len(ta)):
+# #     utci_approx(ta=ta[i], tmrt=tmrt[i], va=va[i], rh=rh[i])
+# # print("Elapsed time:", time.monotonic() - start)
+
+# timings_pytherm = []
+# for i in range(50):
+#     start = time.monotonic()
+#     utci(tdb=ta, tr=tmrt, v=va, rh=rh)
+#     end = time.monotonic() - start
+#     timings_pytherm.append(end)
+
+
+# start = time.monotonic()
+# utci(tdb=ta, tr=tmrt, v=va, rh=rh)
+# pythermalcomfort_time = time.monotonic() - start
+
+# # print(f"Fortran vectorized: {fortran_vector}")
+# # print(f"Pythermalcomfort: {pythermalcomfort_time}")
+# # print(f"Speedup: {pythermalcomfort_time / fortran_vector}x")
+
+# print(f"Vectorized: {np.mean(timings_vectorized)}")
+# print(f"Not Vectorized: {np.mean(timings_not_vectorized)}")
+
+# print(f"Pythermalcomfort: {np.mean(timings_pytherm)}")
+# print(f"speedup scalar: {np.mean(timings_pytherm_scalar) / np.mean(timings_not_vectorized):.2f}x")
+# print(f"speedup array: {np.mean(timings_pytherm) / np.mean(timings_vectorized):.2f}x")
+
+
+print(' PET '.center(80, '='))
+# PET
+# print('pet_pytherm_scalar: ', end='', flush=True)
+# timings_pet_pytherm = []
+# for i in range(500):
+#     start = time.monotonic()
+#     pet_steady(tdb=20, tr=20, rh=50, v=0.15, met=1.37, clo=0.5)
+#     end = time.monotonic() - start
+#     timings_pet_pytherm.append(end)
+#     print('.', end='', flush=True)
+# print()
+
+print('pet_fortran_scalar: ', end='', flush=True)
+timings_pet_fortran = []
+for i in range(1000):
+    start = time.monotonic()
+    pet_static(ta=20, rh=rh, v=0.15, tmrt=20, p=1013.25)
+    end = time.monotonic() - start
+    timings_pet_fortran.append(end)
+    print('.', end='', flush=True)
+print()
+
+# print('pet_pytherm_vectorized: ', end='', flush=True)
+# f = np.vectorize(pet_steady, otypes=[float], cache=True)
+# timings_pet_pytherm_vectorized = []
+# for i in range(5):
+#     start = time.monotonic()
+#     f(tdb=ta, rh=rh, v=va, tr=tmrt, met=1.37, clo=0.5)
+#     timings_pet_pytherm_vectorized.append(time.monotonic() - start)
+#     print('.', end='', flush=True)
+# print()
+
+print('pet_fortran_vectorized: ', end='', flush=True)
+timings_pet_fortran_vectorized = []
+f = np.vectorize(pet_static, otypes=[float], cache=True)
+for i in range(1000):
+    start = time.monotonic()
+    f(ta=ta, rh=rh, v=va, tmrt=tmrt, p=1013.5)
+    timings_pet_fortran_vectorized.append(time.monotonic() - start)
+    print('.', end='', flush=True)
+
+print()
+
+# print(f'scalar PET Pythermalcomfort: {np.mean(timings_pet_pytherm)}')
+print(f'scalar PET Fortran: {np.mean(timings_pet_fortran)}')
+# print(f"scalar speedup: {np.mean(timings_pet_pytherm) / np.mean(timings_pet_fortran):.2f}x")
+
+# print(f'array PET Pythermalcomfort: {np.mean(timings_pet_pytherm_vectorized)}')
+print(f'array PET Fortran: {np.mean(timings_pet_fortran_vectorized)}')
+# print(f"array speedup: {np.mean(timings_pet_pytherm_vectorized) / np.mean(timings_pet_fortran_vectorized):.2f}x")
+
+# before:
+# scalar PET Fortran: 5.926538020503358e-06
+# array PET Fortran: 0.028652577675995418
+# scalar PET Fortran: 7.826338971426594e-06
+# array PET Fortran: 0.02848267037004007
+# after:
+# scalar PET Fortran: 5.9205280194873925e-06
+# array PET Fortran: 0.028602147727018745
+# scalar PET Fortran: 4.82584899145877e-06
+# array PET Fortran: 0.02873649570203088

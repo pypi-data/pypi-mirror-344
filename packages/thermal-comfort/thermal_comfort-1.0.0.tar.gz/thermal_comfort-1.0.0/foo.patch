@@ -1,0 +1,88 @@
+diff --git a/.github/workflows/wheels.yml b/.github/workflows/wheels.yml
+index c00bf0c..c216097 100644
+--- a/.github/workflows/wheels.yml
++++ b/.github/workflows/wheels.yml
+@@ -2,7 +2,7 @@ name: wheels
+ 
+ on:
+   push:
+-    branches: [main]
++    branches: [windows-wheels]
+   workflow_dispatch:
+ 
+ jobs:
+@@ -13,10 +13,10 @@ jobs:
+       fail-fast: false
+       matrix:
+         include:
+-          - os: ubuntu-latest
+-            py: "cp39*"
+-          # - os: windows-latest
++          # - os: ubuntu-latest
+           #   py: "cp39*"
++          - os: windows-latest
++            py: "cp39*"
+           # - os: macos-latest
+           #   name: macos-x86_64
+           #   macos_arch: "x86_64"
+@@ -35,8 +35,26 @@ jobs:
+         with:
+           platforms: aarch64
+ 
++      # - uses: fortran-lang/setup-fortran@v1
++      #   id: setup-fortran
++      #   with:
++      #     compiler: gcc
++
++      - name: Provide gfortran (Windows)
++        if: runner.os == 'Windows'
++        uses: msys2/setup-msys2@v2
++
+       - name: Build wheels
+         uses: pypa/cibuildwheel@v2.22.0
++        env:
++          CIBW_CONFIG_SETTINGS_WINDOWS: cmake.args="-DCMAKE_Fortran_COMPILER=/c/ProgramData/mingw64/mingw64/bin/gfortran.exe"
++
++      - name: Setup tmate session
++        if: ${{ failure() }}
++        uses: mxschmitt/action-tmate@v3
++        timeout-minutes: 60
++        with:
++          limit-access-to-actor: true
+ 
+       - uses: actions/upload-artifact@v4
+         with:
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 82609a8..9961307 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -14,6 +14,8 @@ find_package(
+   COMPONENTS Interpreter Development.Module NumPy ${SKBUILD_SABI_COMPONENT}
+   REQUIRED)
+ 
++# set(CMAKE_Fortran_COMPILER "/usr/bin/python3")
++
+ # F2PY headers
+ execute_process(
+   COMMAND "${PYTHON_EXECUTABLE}" -c
+diff --git a/pyproject.toml b/pyproject.toml
+index d90dd8e..13fb547 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -66,6 +66,7 @@ module = ["tests.*"]
+ disallow_untyped_defs = false
+ 
+ [tool.cibuildwheel]
++before-all = "pip install -U uv"
+ test-command = "python -c 'import thermal_comfort; thermal_comfort.pet_static(ta=20, rh=50, v=0.15, tmrt=20, p=1013.25)'"
+ build-frontend = "build[uv]"
+ build = "cp39-*"
+@@ -76,7 +77,7 @@ skip = "pp*"
+ archs = ["x86_64"]
+ 
+ [tool.cibuildwheel.windows]
+-archs = ["auto", "ARM64"]
++archs = ["auto"]
+ 
+ [tool.cibuildwheel.macos]
+ archs = ["x86_64", "arm64"]
