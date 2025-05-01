@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: gemini-profanity-filter
+Version: 0.2.0
+Summary: A Python module for detecting and filtering profanity using Google's Gemini API
+Author: Mark
+Author-email: firi8228@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: google-generativeai >=0.3.0
+
+# Gemini Profanity Filter
+
+A Python module for detecting and filtering profanity in text using Google's Gemini API.
+The module can identify standard and obfuscated profanity across multiple languages.
+
+## Features
+
+- Detects standard profanity in multiple languages
+- Identifies obfuscated profanity (character substitutions, leetspeak, etc.)
+- Handles stretched or repeated characters
+- Detects deliberately fragmented words
+- Works with mixed case patterns
+- Processes context-sensitive profanity
+- Language-specific profanity patterns including Cyrillic, Asian scripts, etc.
+
+## Installation
+
+```bash
+pip install gemini-profanity-filter
+```
+
+## Usage
+
+```python
+from gemini_profanity_filter import ProfanityFilter
+
+# Initialize with your API key
+filter = ProfanityFilter(api_key="your_api_key")
+
+# Filter text
+result = filter.filter_text("Text to be filtered")
+
+# Access results
+if result:
+    print(f"Filtered text: {result.filtered_text}")
+    print(f"Detected profanity instances: {result.detected_count}")
+    
+    # Print details about detected instances
+    for instance in result.detected_profanity:
+        print(f"Original form: {instance.original_form}")
+        print(f"Normalized form: {instance.normalized_form}")
+        print(f"Detection method: {instance.detection_method}")
+        print(f"Confidence score: {instance.confidence_score}")
+    
+    # Get detected languages
+    print(f"Languages detected: {', '.join(result.languages_detected)}")
+```
+
+## Requirements
+
+- Python 3.7 or higher
+- Google GenerativeAI Python library
+- A valid Google Gemini API key
+
+## License
+
+MIT
