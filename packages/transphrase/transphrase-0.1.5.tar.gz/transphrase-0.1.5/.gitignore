@@ -1,0 +1,17 @@
+
+/tests/__pycache__
+/transphrase/__pycache__
+/transphrase/cache/__pycache__
+/transphrase/database/__pycache__
+/transphrase/plugins/__pycache__
+/transphrase/rate_limiting/__pycache__
+/transphrase/ui/__pycache__
+/__pycache__
+/transphrase/api/__pycache__
+/transphrase/cli/__pycache__
+/transphrase/core/__pycache__
+transphrase/core/__pycache__/__init__.cpython-313.pyc
+transphrase/core/__pycache__/__init__.cpython-313.pyc
+transphrase/core/__pycache__/config.cpython-313.pyc
+/transphrase/api/__pycache__
+*.pyc

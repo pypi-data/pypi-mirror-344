@@ -1,0 +1,33 @@
+name: Update AUR Package
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  update-aur:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get version
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+
+      - name: Update PKGBUILD
+        run: |
+          sed -i "s/pkgver=.*/pkgver=$VERSION/" PKGBUILD
+          sha256=$(curl -sL https://github.com/shinyPy/TransPhrase/archive/$VERSION.tar.gz | sha256sum | cut -d' ' -f1)
+          sed -i "s/sha256sums=.*/sha256sums=('$sha256')/" PKGBUILD
+
+      - name: Publish to AUR
+        uses: KSXGitHub/github-actions-deploy-aur@v2.7.0
+        with:
+          pkgname: python-transphrase
+          pkgbuild: ./PKGBUILD
+          commit_username: ${{ secrets.AUR_USERNAME }}
+          commit_email: ${{ secrets.AUR_EMAIL }}
+          ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
+          commit_message: "Update to version ${{ env.VERSION }}"
