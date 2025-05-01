@@ -1,0 +1,2 @@
+[console_scripts]
+alist3 = alist3.cli:cli
