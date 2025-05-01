@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+version.txt
+src/omdc/__init__.py
+src/openmetadata_catalog.egg-info/PKG-INFO
+src/openmetadata_catalog.egg-info/SOURCES.txt
+src/openmetadata_catalog.egg-info/dependency_links.txt
+src/openmetadata_catalog.egg-info/requires.txt
+src/openmetadata_catalog.egg-info/top_level.txt
