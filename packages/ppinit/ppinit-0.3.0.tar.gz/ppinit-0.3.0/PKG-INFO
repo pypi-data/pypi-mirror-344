@@ -1,0 +1,126 @@
+Metadata-Version: 2.4
+Name: ppinit
+Version: 0.3.0
+Summary: A Python project initializer.
+Author-email: Ritesh Karmakar <riteshkarmakar7407@gmail.com>
+License-Expression: GPL-3.0
+Project-URL: Homepage, https://github.com/riteshkarmakar/ppinit
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# ppinit - Python Project Initializer ⚡
+
+[![PyPI version](https://img.shields.io/pypi/v/ppinit.svg)](https://pypi.org/project/ppinit/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Python Versions](https://img.shields.io/pypi/pyversions/ppinit.svg)](https://pypi.org/project/ppinit/)
+
+A command-line tool to quickly initialize a new Python project structure with common boilerplate files and optional features like virtual environment creation, Git repository initialization, and license generation.
+
+Developed by: **Ritesh Karmakar** (riteshkarmakar7407@gmail.com)
+
+# Features
+
+* **Project Structure:** Creates a standard project layout (e.g., `src/` directory, `__init__.py`).
+* **Essential Files:** Generates `.gitignore`, `requirements.txt`, and a basic `src/main.py`.
+* **`pyproject.toml`:** Creates a PEP compliant `pyproject.toml` file with project metadata (optional).
+* **Virtual Environment:** Option to create a dedicated virtual environment (`venv`) and install dependencies into it.
+* **Dependency Management:** Installs specified dependencies using `pip`.
+* **License Generation:** Automatically adds a LICENSE file.
+* **Git Integration:** Option to initialize a new Git repository (`git init`).
+* **README Generation:** Creates a basic `README.md` file (optional).
+* **Customizable:** Configure project name, version, description, author details, Python requirement, and more via command-line arguments.
+
+# Installation
+
+**From PyPI (Recommended):**
+
+```bash
+pip install ppinit
+```
+
+**From Source (for development):**
+
+```Bash
+git clone https://github.com/riteshkarmakar/ppinit.git
+cd ppinit
+pip install -e .
+```
+
+# Usage
+
+**The basic command requires only the project name:**
+
+```Bash
+ppinit <your_project_name>
+```
+
+**Example:**
+
+```Bash
+ppinit my_awesome_project
+```
+This will create a directory named my_awesome_project with the default settings.
+
+### Using Options:
+
+You can customize the initialization using various flags:
+
+```Bash
+ppinit my_cool_app \
+    --version "1.0.0" \
+    --desc "A really cool application" \
+    --req-py "3.9" \
+    --author "Ritesh Karmakar" \
+    --email "riteshkarmakar7407@gmail.com" \
+    --license "GPL-3.0" \
+    --deps "requests flask" \
+    --venv \
+    --git
+```
+
+**This command will:**
+
+- Create a project named `my_cool_app`.
+- Set the version to `1.0.0` and add a description in `pyproject.toml`.
+- Specify Python `>=3.9` is required.
+- Set the `author` and `email`.
+- Add a `GPL-3.0` license file.
+- Create a `requirements.txt` with `requests` abd `flask`.
+- Create a virtual environment (`venv/`) and install the dependencies into it.
+- Initialize a Git repository (`.git/`) in the project directory.
+- Create `pyproject.toml` and `README.md` (as these are default unless `--no-toml` or `--no-readme` is specified).
+
+### Command-line Options:
+
+- `name`: (Required) The name of the project directory to create.
+- `--version`: Project version (default: 0.1.0).
+- `--desc`: Project description (default: "").
+- `--req-py`: Minimum required Python version (default: 3.10).
+- `--author`: Author's name (default: "" - uses "Your Name" in LICENSE if not provided).
+- `--email`: Author's email (default: "").
+- `--license`: Choose a license to add: MIT, Apache-2.0, AGPL-3.0, GPL-3.0 (default: None).
+- `--deps`: Space-separated list of dependencies to install (default: "").
+- `--venv`: Create a virtual environment (venv/).
+- `--git`: Initialize a Git repository.
+- `--no-toml`: Skip creating the pyproject.toml file.
+- `--no-readme`: Skip creating the README.md file.
+
+# Contributing
+Contributions are welcome! If you have suggestions or find a bug, please open an issue on the GitHub repository. If you want to contribute code:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature-name`).
+3. Make your changes.   
+4. Commit your changes (`git commit -am 'Add some feature'`).
+5. Push to the branch (`git push origin feature/your-feature-name`).
+6. Open a Pull Request.
+
+# License
+This project is licensed under the `GPL-3.0 License`. See the `LICENSE` file for details.   
+
+---
+Project Link: https://github.com/riteshkarmakar/ppinit
