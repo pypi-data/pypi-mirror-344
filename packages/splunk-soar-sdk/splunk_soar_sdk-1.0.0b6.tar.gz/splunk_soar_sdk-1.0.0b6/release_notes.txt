@@ -1,0 +1,23 @@
+# [1.0.0-beta.6](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.5...1.0.0-beta.6) (2025-04-30)
+
+
+### Bug Fixes
+
+* changes after code review ([819fe95](https://github.com/phantomcyber/splunk-soar-sdk/commit/819fe955db5873529ea9ff03d475958a366e708b))
+* httpx cookies warning and address reviews from refactor ([205a7af](https://github.com/phantomcyber/splunk-soar-sdk/commit/205a7af22ed4aba0b0f1f18126955efbf98ee92e))
+
+
+
+
+
+# [1.0.0-beta.6](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.5...1.0.0-beta.6) (2025-04-30)
+
+
+### Bug Fixes
+
+* changes after code review ([819fe95](https://github.com/phantomcyber/splunk-soar-sdk/commit/819fe955db5873529ea9ff03d475958a366e708b))
+* httpx cookies warning and address reviews from refactor ([205a7af](https://github.com/phantomcyber/splunk-soar-sdk/commit/205a7af22ed4aba0b0f1f18126955efbf98ee92e))
+
+
+
+
