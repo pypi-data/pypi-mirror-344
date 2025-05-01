@@ -1,0 +1,12 @@
+numpy
+
+[dev]
+pandas
+coverage
+black
+pytest
+ruff
+sphinx
+sphinx-autodoc-typehints
+sphinx-rtd-theme
+myst-parser
