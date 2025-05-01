@@ -1,0 +1,9 @@
+ducktools-classbuilder>=0.8.0
+ducktools-pythonfinder>=0.8.3
+ducktools-lazyimporter>=0.7.2
+textual>=3.0
+shellingham~=1.5
+
+[testing]
+pytest
+pytest-cov
