@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fort"
+version = "2025.0"
+description = "The Python database micropackage"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[[project.authors]]
+name = "William Jackson"
+email = "william@subtlecoolness.com"
+
+[project.urls]
+"Homepage" = "https://github.com/williamjacksn/fort"
+"Issues" = "https://github.com/williamjacksn/fort/issues"
