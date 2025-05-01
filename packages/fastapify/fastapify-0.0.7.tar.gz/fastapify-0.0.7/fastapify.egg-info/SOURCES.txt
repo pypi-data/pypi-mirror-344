@@ -1,0 +1,14 @@
+README.md
+main.py
+setup.py
+app/__init__.py
+app/__main__.py
+app/application.py
+app/module_functionality/__init__.py
+app/module_functionality/commands.py
+fastapify.egg-info/PKG-INFO
+fastapify.egg-info/SOURCES.txt
+fastapify.egg-info/dependency_links.txt
+fastapify.egg-info/entry_points.txt
+fastapify.egg-info/requires.txt
+fastapify.egg-info/top_level.txt
