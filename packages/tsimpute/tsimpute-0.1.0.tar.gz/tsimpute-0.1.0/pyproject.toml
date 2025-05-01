@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "tsimpute"
+version = "0.1.0"
+description = "FU Capstone TimeSeries Imputation"
+authors = [
+    "Hongptvn <hongptvn@gmail.com>",
+    "WangDinh <quangdinh2102@gmail.com>",
+    "dnhuy2802 <dnhuy2802@gmail.com>",
+    "Ming-doan <quangminh57dng@gmail.com>",
+    "thultm <mthu030403@gmail.com>"
+]
+readme = "README.md"
+license = "MIT"
+packages = [{ include = "tsimpute" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyyaml = "^6.0.2"
+numpy = "^2.2.3"
+pandas = "^2.2.3"
+pydantic = "^2.10.6"
+scikit-learn = "^1.6.1"
+tqdm = "^4.67.1"
+matplotlib = "^3.10.0"
+minio = "^7.2.15"
+statsmodels = "^0.14.4"
+mlflow = "^2.20.3"
+boto3 = "^1.37.5"
+psutil = "^7.0.0"
+pynvml = "^12.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+docker = "^7.1.0"
+ipykernel = "^6.29.5"
+torch = {version = "^2.6.0+cu124", source = "torch124"}
+
+
+[[tool.poetry.source]]
+name = "torch124"
+url = "https://download.pytorch.org/whl/cu124"
+priority = "supplemental"
+
+
+[tool.poetry.urls]
+"Homepage" = "https://github.com/capstone-fudn-2025/timeseries-imputation"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
