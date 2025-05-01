@@ -1,0 +1,3 @@
+[console_scripts]
+multirtc = multirtc.multirtc:main
+prep_burst = multirtc.prep_burst:main
