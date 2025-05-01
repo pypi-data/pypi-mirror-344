@@ -1,0 +1,9 @@
+dorans/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dorans/death.py,sha256=4kca19JhtWWI7mhUSf57cth2NNZTuc0ZxnvhDtV88Qo,1893
+dorans/xp.py,sha256=Kx08lrLZDQ-7XRjG66euoX4TW2NUyc9DUxQCAGN5pPo,5072
+dorans/tests/test_death_timer.py,sha256=DmiTPYp_fNM0F7DVaW7NtY6mqoZpRJf6huNp172UVKk,651
+dorans/tests/test_xp.py,sha256=O0WWe5C2M78I-IkkYksH3-G1BotkakBAq5-50PXBwJw,1257
+dorans-0.2.3.dist-info/METADATA,sha256=bpjp7hv8_Q45rPwYZUYSlLUSiMXK1bw9fUrqzvNjg5w,24910
+dorans-0.2.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dorans-0.2.3.dist-info/licenses/LICENSE,sha256=NxH5Y8BdC-gNU-WSMwim3uMbID2iNDXJz7fHtuTdXhk,19346
+dorans-0.2.3.dist-info/RECORD,,
