@@ -1,0 +1,172 @@
+Metadata-Version: 2.4
+Name: dimwiddle
+Version: 0.1.1
+Summary: A lightweight dependency injection framework inspired by Symfony
+Author-email: Dimwiddle Contributors <example@example.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/example/dimwiddle
+Project-URL: Bug Tracker, https://github.com/example/dimwiddle/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: requests>=2.25.0
+
+# Dimwiddle
+
+A lightweight dependency injection framework for Python inspired by the Symfony Framework.
+
+## Features
+
+- **YAML Configuration**: Define your services in a clean, readable YAML format
+- **Autowiring**: Automatically inject dependencies into your services
+- **Factories**: Use factory services to create complex service instances
+- **Tagged Services**: Group related services together with tags
+- **Environment Variables**: Inject configuration from environment variables
+- **Clean Architecture**: Organized following clean architecture principles
+
+## Installation
+
+```bash
+pip install dimwiddle
+```
+
+Or install from the repository:
+
+```bash
+git clone https://github.com/example/dimwiddle.git
+cd dimwiddle
+pip install -e .
+```
+
+## Quick Start
+
+### 1. Define your services in YAML
+
+Create a `services.yaml` file:
+
+```yaml
+services:
+  # Basic service
+  greeting:
+    class: myapp.services.greeting_service.GreetingService
+    arguments: ["Hello, %USER_NAME%!"]
+
+  # Service with dependency
+  greeter:
+    class: myapp.services.greeter.Greeter
+    arguments: ["@greeting"]
+```
+
+### 2. Create your service classes
+
+```python
+# myapp/services/greeting_service.py
+class GreetingService:
+    def __init__(self, greeting_format):
+        self.greeting_format = greeting_format
+        
+    def greet(self, name):
+        return self.greeting_format.format(name=name)
+
+# myapp/services/greeter.py
+class Greeter:
+    def __init__(self, greeting_service):
+        self.greeting_service = greeting_service
+        
+    def greet_user(self, user):
+        return self.greeting_service.greet(user)
+```
+
+### 3. Load the container and use your services
+
+```python
+from dimwiddle.application.load_definitions import create_container_from_yaml
+from dimwiddle.infrastructure.config import EnvConfig
+
+# Create a container with environment variables
+config = EnvConfig(dotenv_path=".env")
+container = create_container_from_yaml("services.yaml", config=config)
+
+# Get a service
+greeter = container.get("greeter")
+print(greeter.greet_user("World"))  # Hello, World!
+```
+
+## Service Definition
+
+Services are defined in YAML with the following properties:
+
+- `class`: The fully qualified class name
+- `arguments`: List (positional) or dict (named) of constructor arguments
+- `factory`: A two-element list: service reference and method name
+- `tags`: List of tags to categorize this service
+- `inject_class`: If true, inject the class itself instead of an instance
+
+## Argument References
+
+Dimwiddle supports special syntax in service arguments:
+
+- `@service_name`: Reference to another service
+- `%ENV_VAR%`: Reference to an environment variable
+- `!tagged_iterator { tag: tag_name, index_by: property }`: Collection of services with a tag
+- `~path/to/file.yaml:subpath.to.value`: Reference to a value in another YAML file
+
+## Configuration
+
+The library uses an abstract configuration provider that can be implemented in different ways:
+
+```python
+from dimwiddle.infrastructure.config import EnvConfig, DictConfig
+
+# Load configuration from environment variables and .env file
+config = EnvConfig(dotenv_path=".env")
+
+# Or use a dictionary for configuration
+config = DictConfig({
+    "API_KEY": "my-api-key",
+    "DEBUG": "true"
+})
+```
+
+## Testing
+
+Dimwiddle is designed to be easily testable. You can create test containers with mock services:
+
+```python
+from dimwiddle.domain.container import Container
+from dimwiddle.domain.service_definition import ServiceDefinition
+
+# Create mock services
+definitions = {
+    "mock_service": ServiceDefinition(
+        cls=MockService,
+        pos_args=["test value"]
+    )
+}
+
+# Create container with mocks
+container = Container(definitions)
+```
+
+## Examples
+
+See the `examples` directory for complete working examples, including:
+
+- Basic service definitions
+- Service dependencies
+- Factory-based services
+- Tagged services
+- Configuration injection
+
+## License
+
+MIT
