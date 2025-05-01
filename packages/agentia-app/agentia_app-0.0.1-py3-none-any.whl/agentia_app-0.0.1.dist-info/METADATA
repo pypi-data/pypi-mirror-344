@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: agentia-app
+Version: 0.0.1
+Summary: Agentia Web App and API Server
+Project-URL: Repository, https://github.com/wenyuzhao/agentia
+Author-email: Wenyu Zhao <wenyuzhaox@gmail.com>
+License-Expression: MIT
+Keywords: agent,chatgpt,deepseek,gpt,llm,openai,openrouter,tools
+Requires-Python: >=3.12
+Requires-Dist: agentia>=0.0.10
+Requires-Dist: google-api-python-client>=2.169.0
+Requires-Dist: google-auth-oauthlib>=1.2.2
+Requires-Dist: pymstodo>=0.2.0
+Requires-Dist: streamlit-oauth>=0.1.11
+Requires-Dist: streamlit>=1.45.0
+Description-Content-Type: text/markdown
+
+# agentia-app
+
+Agents app powered by [Agentia](https://github.com/wenyuzhao/agentia).

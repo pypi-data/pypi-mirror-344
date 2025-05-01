@@ -1,0 +1,17 @@
+agentia_app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+agentia_app/api.py,sha256=zKzaljOvNlchXlxIl01YVdH9Fx_uqqCTHThK-65oPaw,5829
+agentia_app/main copy.py,sha256=tMX62_cn-UWkSeOP7E51f_7xU-5qNTL0_nit9LxQlsM,1784
+agentia_app/main.py,sha256=GZ20zX8tJtYWczZAU_4I25fhlxzL5oQ48P79xc7gSW4,2701
+agentia_app/plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+agentia_app/plugins/gmail.py,sha256=iSrnwQMH45OQqgLTCJ50Pa__hMtz4CnB0JsBmcrhJSA,7549
+agentia_app/plugins/mstodo.py,sha256=O7G79yfWQkiVO8WRX5AYNyjMskj2hzZZfOTT4vSggHg,8747
+agentia_app/utils/__init__.py,sha256=_sfWzpXECnFyNNiT5YDM8arSh3YO-GmuMiC2URs6V8k,3888
+agentia_app/utils/chat.py,sha256=42H7SbpT7ygp103tS5YG3OdmM3W8614Ck6c1PHwPHTw,4464
+agentia_app/utils/oauth.py,sha256=xnRBIPh7GkXt5gTW-V96tJUHEnHlqBnV9aQGrIg7V9k,5450
+agentia_app/web/1_chat.py,sha256=MjqOfQ-ZwpACRpOBJ2NmMV0HiUgffRXM_bVfG-mdV2U,8279
+agentia_app/web/2_dashboard.py,sha256=3V1-4BHH9eLgkzke6AeIpt5-rhrC70veExG9Hcp1Z-E,7608
+agentia_app/web/app.py,sha256=KOGksXhc7LuezTQkJFqoLDyuXL112qbQeFepe95qkPE,311
+agentia_app-0.0.1.dist-info/METADATA,sha256=hbPcBLoJtZ_LjjcWqcv8BJkumanFMi0Bj43XRy_K6hE,671
+agentia_app-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+agentia_app-0.0.1.dist-info/entry_points.txt,sha256=BDAdmLiZQMn3dOjTn9LHMmrSJBd-SZMiJeoZQIjj8Ec,54
+agentia_app-0.0.1.dist-info/RECORD,,
