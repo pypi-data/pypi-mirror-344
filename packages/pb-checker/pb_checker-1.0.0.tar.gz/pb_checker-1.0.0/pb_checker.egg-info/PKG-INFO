@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: pb_checker
+Version: 1.0.0
+Summary: Library untuk mengecek akun Point Blank
+Author: Masanto
+Author-email: haninkazugawa@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# ðŸ”« PointBlank Account Checker
+
+A Python library to check PointBlank game accounts' validity, rank, and in-game currency. Built with `requests`, `BeautifulSoup`, and multi-threading support.
+
+---
+
+## âœ¨ Features
+- **Mass account checking** with multi-threading
+- **Proxy support** (rotating proxies)
+- **Extracts account info**:
+  - Rank and EXP
+  - Cash/Gold balance
+  - Login status
+- **Detailed stats** (speed, valid/invalid counts)
+
+---
+
+## ðŸ“¦ Installation
+```bash
+pip install pb_checker
+
