@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: statistics_probability_curve_pb123
+Version: 0.0.1
+Summary: A package to display probabilities on a normal curve.
+Author-email: pb123 <pbirdi901@gmail.com>
+Project-URL: Homepage, https://github.com/pb125-sy/python_prob_curve
+Project-URL: Issues, https://github.com/pb125-sy/python_prob_curve/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Example Package
+
+This is a package to display probabilities on a normal curve. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
