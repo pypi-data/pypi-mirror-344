@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/c/pauli_decomposition.h
+src/c/python_bindings.c
+src/pauli_lcu/__init__.py
+src/pauli_lcu/decomposition.py
+src/pauli_lcu/tools.py
+src/pauli_lcu.egg-info/PKG-INFO
+src/pauli_lcu.egg-info/SOURCES.txt
+src/pauli_lcu.egg-info/dependency_links.txt
+src/pauli_lcu.egg-info/requires.txt
+src/pauli_lcu.egg-info/top_level.txt
+test/test_pauli_lcu.py
