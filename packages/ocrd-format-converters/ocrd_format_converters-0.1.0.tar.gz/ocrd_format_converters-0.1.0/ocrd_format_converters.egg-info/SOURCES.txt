@@ -1,0 +1,11 @@
+LICENSE
+README.md
+page2img.py
+pyproject.toml
+requirements.txt
+ocrd_format_converters.egg-info/PKG-INFO
+ocrd_format_converters.egg-info/SOURCES.txt
+ocrd_format_converters.egg-info/dependency_links.txt
+ocrd_format_converters.egg-info/entry_points.txt
+ocrd_format_converters.egg-info/requires.txt
+ocrd_format_converters.egg-info/top_level.txt

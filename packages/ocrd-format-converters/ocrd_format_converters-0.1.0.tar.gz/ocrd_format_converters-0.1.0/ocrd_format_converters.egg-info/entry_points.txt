@@ -1,0 +1,2 @@
+[console_scripts]
+page2img = page2img:cli
