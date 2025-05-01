@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: mcp-server-biliscribe
+Version: 0.8.4
+Summary: A MCP Server that extracts and formats Bilibili video content into structured text, optimized for LLM processing and analysis.
+License: MIT
+Author: 43EVER
+Requires-Python: >=3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiohttp (>=3.11.18)
+Requires-Dist: boto3 (>=1.38.6)
+Requires-Dist: mcp[cli] (>=1.6.0)
+Project-URL: Homepage, https://github.com/43EVER/biliscribe
+Description-Content-Type: text/markdown
+
+# biliscribe
+A MCP Server that extracts and formats Bilibili video content into structured text, optimized for LLM processing and analysis.
+
+I have only completed testing on macOS. Before running this MCP Server, you need to ensure that BBDown, ffmpeg, and whisperx can be called from zsh.
+
+## Installation
+You can install the `mcp-server-biliscribe` package using `uvx`:
+```bash
+uvx mcp-server-biliscribe
+```
+
