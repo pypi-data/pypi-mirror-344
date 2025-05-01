@@ -1,0 +1,135 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytest-django-ifactory"
+description = "A model instance factory for pytest-django"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "BSD-3-Clause" }
+authors = [
+  { name = "Mattias Jakobsson", email = "mjakob422@gmail.com" },
+]
+keywords = ["pytest", "django", "database", "testing"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Plugins",
+  "Framework :: Django",
+  "Framework :: Pytest",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: BSD License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Testing",
+  "Typing :: Typed",
+]
+dependencies = [
+  "pytest-django",
+]
+dynamic = ["version"]
+
+[project.entry-points.pytest11]
+django-ifactory = "pytest_django_ifactory.plugin"
+
+[project.optional-dependencies]
+dev = [
+  "build",
+  "check-manifest",
+  "django >=4.2,<6",
+  "django-stubs",
+  "mypy",
+  "pillow",
+  "pre-commit",
+  "psycopg2-binary",
+  "pytest-cov",
+  "ruff",
+  "typing_extensions >=4",
+  "twine",
+  "wheel",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/gorilladev/pytest-django-ifactory"
+
+[tool.django-stubs]
+django_settings_module = "djangosettings"
+
+[tool.mypy]
+mypy_path = "$MYPY_CONFIG_FILE_DIR/tests"
+plugins = ["mypy_django_plugin.main"]
+strict = true
+
+[[tool.mypy.overrides]]
+module = [
+  "pytest_django_ifactory.defaults",
+  "pytest_django_ifactory.ifactory",
+  "test_defaults",
+]
+allow_any_generics = true
+
+[[tool.mypy.overrides]]
+module = "test_ifactory_untyped"
+allow_untyped_defs = true
+
+[tool.pytest.ini_options]
+filterwarnings = ["error"]
+
+[tool.ruff.lint]
+select = [
+  "ARG",
+  "B",
+  "BLE",
+  "C4",
+  "C90",
+  "DJ",
+  "FA",
+  "E",
+  "ERA",
+  "F",
+  "FLY",
+  "I",
+  "ICN",
+  "ISC",
+  "N",
+  "PERF",
+  "PGH",
+  "PIE",
+  "PL",
+  "PT",
+  "PTH",
+  "Q",
+  "RET",
+  "RSE",
+  "RUF",
+  "S",
+  "SIM",
+  "SLOT",
+  "T10",
+  "T20",
+  "TD",
+  "TID",
+  "TCH",
+  "TRY",
+  "UP",
+  "YTT",
+  "W",
+]
+ignore = ["F405", "PLR2004", "TRY003"]
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+
+[tool.ruff.lint.per-file-ignores]
+"test_*.py" = ["S101"]
+"*/migrations/*.py" = ["RUF012"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = { attr = "pytest_django_ifactory.__version__" }

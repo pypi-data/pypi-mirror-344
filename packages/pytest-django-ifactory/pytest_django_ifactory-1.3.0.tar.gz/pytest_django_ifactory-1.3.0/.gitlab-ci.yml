@@ -1,0 +1,122 @@
+stages:
+  - test
+  - build
+  - publish
+
+image: python:3.9
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.pip_cache"
+
+cache:
+  key: $CI_JOB_NAME
+  paths:
+    - .pip_cache/
+
+
+check-code:
+  before_script:
+    - pip install check-manifest ruff
+  script:
+    - ruff format --check
+    - ruff check
+    - check-manifest
+
+.test:
+  stage: test
+  variables:
+    SPATIALITE_LIBRARY_PATH: mod_spatialite
+    TEST_DEPENDENCIES: pillow psycopg2-binary pytest-cov
+  before_script:
+    - pip install django~=$DJANGO_VERSION -e .[dev]
+  script:
+    - pytest --cov=pytest_django_ifactory
+
+typing:
+  extends: .test
+  variables:
+    DJANGO_VERSION: 4.2.20
+  image: registry.gitlab.com/gorilladev/pytest-django-ifactory/python:3.9
+  script:
+    - mypy .
+
+test-py39-django42:
+  extends: .test
+  variables:
+    DJANGO_VERSION: 4.2.20
+  image: registry.gitlab.com/gorilladev/pytest-django-ifactory/python:3.9
+
+test-py310-django52:
+  extends: .test
+  variables:
+    DJANGO_VERSION: 5.2
+  image: registry.gitlab.com/gorilladev/pytest-django-ifactory/python:3.10
+
+test-py311-django52:
+  extends: .test
+  variables:
+    DJANGO_VERSION: 5.2
+  image: registry.gitlab.com/gorilladev/pytest-django-ifactory/python:3.11
+  coverage: /(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/
+
+test-py312-django52:
+  extends: .test
+  variables:
+    DJANGO_VERSION: 5.2
+  image: registry.gitlab.com/gorilladev/pytest-django-ifactory/python:3.12
+  coverage: /(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/
+
+test-py313-django52:
+  extends: .test
+  variables:
+    DJANGO_VERSION: 5.2
+  image: registry.gitlab.com/gorilladev/pytest-django-ifactory/python:3.13
+  coverage: /(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/
+
+
+build:
+  stage: build
+  before_script:
+    - pip install build
+  script:
+    - python -m build
+  artifacts:
+    paths:
+      - dist/
+  only:
+    - master
+    - tags
+
+
+.publish:
+  stage: publish
+  variables:
+    GIT_STRATEGY: none
+  id_tokens:
+    PYPI_ID_TOKEN:
+      aud: pypi
+    TESTPYPI_ID_TOKEN:
+      aud: testpypi
+  before_script:
+    - pip install --upgrade twine
+    - twine check dist/*
+
+publish-test-pypi:
+  extends: .publish
+  environment:
+    name: test-pypi
+    url: https://test.pypi.org/project/pytest-django-ifactory/
+  script:
+    - twine upload --repository testpypi dist/*
+  only:
+    - master
+
+publish-pypi:
+  extends: .publish
+  environment:
+    name: pypi
+    url: https://pypi.org/project/pytest-django-ifactory/
+  script:
+    - twine upload dist/*
+  only:
+    - tags
