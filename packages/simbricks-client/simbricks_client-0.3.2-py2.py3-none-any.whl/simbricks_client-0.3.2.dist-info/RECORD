@@ -1,0 +1,9 @@
+simbricks/client/__init__.py,sha256=QoTw5yck7a7Za6VblBccUT3PT7NVuwGsAfFv7T9fbe4,1244
+simbricks/client/auth.py,sha256=vZsPM2ymWnr0NTfTd6J930i-p0Wn2Yd85lsuzDkXy4g,9372
+simbricks/client/client.py,sha256=Rrky0BjkKiIhmdBB_5GulY7G6ZHoh4xf7cA6qXnIz-4,32786
+simbricks/client/opus/base.py,sha256=-d3VpAPSG32tmfhjDHbxAPiZULHQb10YPlSCVnS2Y1s,8597
+simbricks/client/provider.py,sha256=LKlCDYjKx2xD35yN0dBKiKJPDm1D5nVUAG_WVQ2J5DA,3221
+simbricks/client/settings.py,sha256=BtqLezNVCVhXz_TSUw4e2SII1JjRJVZd9uZnx0Zl-XY,1815
+simbricks_client-0.3.2.dist-info/METADATA,sha256=rAOJugn4duD6D4HXherTaB_3ruFO3LjYmGczpi4gu3M,1081
+simbricks_client-0.3.2.dist-info/WHEEL,sha256=iAMR_6Qh95yyjYIwRxyjpiFq4FhDPemrEV-SyWIQB3U,92
+simbricks_client-0.3.2.dist-info/RECORD,,
