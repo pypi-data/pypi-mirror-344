@@ -1,0 +1,9 @@
+mimemapper/__init__.py,sha256=uooJbES7NPhsHcT5JNbtsqWJSOqCI1VtN0kL-giuUxo,19
+mimemapper/ext_to_mime.json,sha256=PLrvLeeTYCYwm3eD7AKpVKidg06449iWsmm2QtHr2V8,57053
+mimemapper/lib.py,sha256=KyNsacYz4Nex2FBtKngAeHzkhr_oZ8K6xPU71a7a80s,959
+mimemapper/mime_to_ext.json,sha256=hCxyjs6Om9BO7yK37NC23puIAF5dkkCTBG7bm5bT0YY,85915
+mimemapper-0.4.0.dist-info/licenses/LICENSE,sha256=AxmiS73miJsMPwluQProsGOfNFZrcscZrXCfQmJHH94,1085
+mimemapper-0.4.0.dist-info/METADATA,sha256=4jbg6M1yX1FbgTDMV1M0j6H8sPJVAvn1w-fl6sspzX4,2017
+mimemapper-0.4.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+mimemapper-0.4.0.dist-info/top_level.txt,sha256=0lfJ3YZoyAe0f2GEsN7jiQ7H-Jpdt9aLkmta5qDioKc,11
+mimemapper-0.4.0.dist-info/RECORD,,
