@@ -1,0 +1,8 @@
+cbot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cbot/__main__.py,sha256=PwS49vl61qb0ZAQvsedA3F9HE_qjKsA1qO_3BQncjzc,115
+cbot/cbot.py,sha256=3EvPAZq5sDkLuAk1TVpkIN3foyFYNFKOXGxrW0wTB_o,9155
+cbot_cli-0.1.1.dist-info/licenses/LICENSE,sha256=XXEm4dWWaT3XwYnanftWWwzDwzxfvKM96Og6MwVUilk,1066
+cbot_cli-0.1.1.dist-info/METADATA,sha256=wVU091u3EuJVpY9jgXyk0CQ6CfrWe089NUKmWhhO8bU,3175
+cbot_cli-0.1.1.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+cbot_cli-0.1.1.dist-info/top_level.txt,sha256=BixomX-fEz6lxqT09kdFeZ3Tv_rZE3YVnUrWOcgCGkA,5
+cbot_cli-0.1.1.dist-info/RECORD,,
