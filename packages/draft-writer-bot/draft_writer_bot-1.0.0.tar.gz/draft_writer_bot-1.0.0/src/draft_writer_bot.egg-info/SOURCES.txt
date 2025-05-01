@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/draft_writer_bot.egg-info/PKG-INFO
+src/draft_writer_bot.egg-info/SOURCES.txt
+src/draft_writer_bot.egg-info/dependency_links.txt
+src/draft_writer_bot.egg-info/entry_points.txt
+src/draft_writer_bot.egg-info/requires.txt
+src/draft_writer_bot.egg-info/top_level.txt
+tests/test_llm_interface.py
