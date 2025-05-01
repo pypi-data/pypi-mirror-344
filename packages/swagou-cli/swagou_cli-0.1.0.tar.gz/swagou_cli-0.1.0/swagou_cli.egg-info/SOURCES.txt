@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+swagou/__init__.py
+swagou/cli.py
+swagou/filter.py
+swagou_cli.egg-info/PKG-INFO
+swagou_cli.egg-info/SOURCES.txt
+swagou_cli.egg-info/dependency_links.txt
+swagou_cli.egg-info/entry_points.txt
+swagou_cli.egg-info/requires.txt
+swagou_cli.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_filter.py
+tests/test_regression.py

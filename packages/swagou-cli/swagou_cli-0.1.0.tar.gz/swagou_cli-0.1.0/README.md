@@ -1,0 +1,153 @@
+# Swagou CLI
+
+[![PyPI](https://img.shields.io/pypi/v/swagou-cli)](https://pypi.org/project/swagou-cli/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Tests](https://github.com/flyudvik/swagou-cli/actions/workflows/tests.yml/badge.svg)](https://github.com/flyudvik/swagou-cli/actions/workflows/tests.yml)
+[![Lint](https://github.com/flyudvik/swagou-cli/actions/workflows/lint.yml/badge.svg)](https://github.com/flyudvik/swagou-cli/actions/workflows/lint.yml)
+
+Swagou ("Swagger Opinionated Utilities") helps you filter OpenAPI specifications to include only what you need. It trims
+down API documentation so your AI agent can focus on specific endpoints without getting overwhelmed by the entire API
+surface.
+
+## Problem
+
+Large API specifications can be overwhelming when you only need to work with specific endpoints. Swagou lets you extract
+only the parts you need, making it easier to:
+
+- Generate targeted code with AI assistants
+- Create focused documentation for specific API features
+- Troubleshoot specific API endpoints
+
+## Features
+
+- Filter OpenAPI specs by endpoint path and HTTP method
+- Support for remote URLs and local YAML files
+- Add authentication headers or cookies for protected specs
+- Filter by tags
+- Output to file or stdout
+
+## Installation
+
+### Using uv (recommended)
+
+```bash
+uv pip install swagou-cli
+```
+
+Or install directly from the repository:
+
+```bash
+uv pip install git+https://github.com/flyudvik/swagou-cli.git
+```
+
+### Using pip
+
+```bash
+pip install swagou-cli
+```
+
+## Usage
+
+### Basic Filtering
+
+Filter specific GET endpoints and all methods for user endpoints:
+
+```bash
+swagou filter --input schema.yaml --get /api/posts/ --get /api/posts/{slug}/ --all /api/users/*
+```
+
+### Remote Schemas with Authentication
+
+```bash
+# With token authentication
+swagou filter --input https://api.example.com/schema/ --header="Authorization: Token abc123" --get /api/posts/
+
+# With session cookie
+swagou filter --input https://api.example.com/schema/ --cookie="sessionid=abc123" --all /api/users/*
+```
+
+### Saving Output
+
+By default, output goes to stdout, but you can specify a file:
+
+```bash
+swagou filter --input schema.yaml --get /api/posts/ --output=filtered_schema.yaml
+```
+
+### Available Options
+
+HTTP Methods:
+
+- `-g`, `--get` - Filter GET requests
+- `-p`, `--post` - Filter POST requests
+- `-u`, `--patch` - Filter PATCH requests
+- `-d`, `--delete` - Filter DELETE requests
+- `--all` - Include all HTTP methods for the specified path
+
+Other Parameters:
+
+- `-i`, `--input` - Input source (URL or file path)
+- `-o`, `--output` - Output destination (default: stdout)
+- `-t`, `--tags` - Filter by tags
+
+## Development
+
+Set up the development environment:
+
+```bash
+# Clone the repository
+git clone https://github.com/flyudvik/swagou-cli.git
+cd swagou-cli
+
+# Create and activate a virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install dependencies with development tools
+uv pip install -e ".[dev]"
+```
+
+### Running Tests
+
+The project includes a comprehensive test suite. To run the tests:
+
+```bash
+# Install pytest if not already installed
+uv pip install pytest
+
+# Run all tests
+python -m pytest tests
+
+# Run specific test files
+python -m pytest tests/test_filter.py
+python -m pytest tests/test_cli.py
+
+# Run with verbose output
+python -m pytest tests -v
+```
+
+The test suite includes:
+- Unit tests for the core filtering functionality
+- Integration tests for the CLI interface
+- Regression tests for specific bug fixes
+
+### Continuous Integration
+
+This project uses GitHub Actions for continuous integration and deployment:
+
+- **Tests**: Automatically runs the test suite on Python 3.11 and 3.12
+- **Lint**: Checks code formatting with Black, import sorting with isort, and type checking with mypy
+- **Publish**: Automatically publishes new releases to PyPI when a GitHub release is created
+
+The workflow configurations can be found in the `.github/workflows` directory.
+
+## License
+
+MIT
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+Happy vibe-coding!~
