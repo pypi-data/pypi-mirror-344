@@ -1,0 +1,32 @@
+Metadata-Version: 2.3
+Name: imuthes-textual
+Version: 0.0.1
+Summary: Additional Widgets and Screen for Textual
+License: LGPL-3.0-or-later
+Keywords: tools
+Author: Bernhard Radermacher
+Author-email: bernhard.radermacher@netlink-consulting.com
+Requires-Python: >=3.13,<4.0.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Dist: setuptools (>=80.1.0)
+Requires-Dist: textual (>=3.1.1,<4.0.0)
+Requires-Dist: textual-dev (>=1.7.0,<2.0.0)
+Description-Content-Type: text/x-rst
+
+imuthes-textual
+===============
+
+.. warning::
+
+   This is currently **ALPHA!**. Use at your own risk!
+
+
+Widgets, Popups, and Screens for Textual
+
+

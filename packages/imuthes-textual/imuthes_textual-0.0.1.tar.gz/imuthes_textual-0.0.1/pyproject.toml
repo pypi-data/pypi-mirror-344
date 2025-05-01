@@ -1,0 +1,34 @@
+[project]
+name = "imuthes-textual"
+version = "0.0.1"
+description = "Additional Widgets and Screen for Textual"
+license = { text = "LGPL-3.0-or-later" }
+authors = [
+    { name = "Bernhard Radermacher", email = "bernhard.radermacher@netlink-consulting.com" }
+]
+keywords = [ "tools", ]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+readme = "README.rst"
+requires-python = ">=3.13,<4.0.0"
+dependencies = [
+    "textual-dev (>=1.7.0,<2.0.0)",
+    "textual (>=3.1.1,<4.0.0)",
+    "setuptools (>=80.1.0)"
+]
+
+[tool.poetry]
+packages = [
+    { include = 'imuthes/textual'}
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
