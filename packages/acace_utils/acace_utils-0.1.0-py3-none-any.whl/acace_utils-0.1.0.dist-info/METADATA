@@ -1,0 +1,44 @@
+Metadata-Version: 2.3
+Name: acace_utils
+Version: 0.1.0
+Summary: Utility functions for ACACE
+Author: ACACE Team
+Author-email: team@acace.ai
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: numpy (>=1.26.3,<2.0.0)
+Description-Content-Type: text/markdown
+
+# ACACE Utils
+
+Utility functions for the Adaptive Context-Aware Content Engine (ACACE).
+
+## Installation
+
+```bash
+pip install acace_utils
+```
+
+## Features
+
+- Common utility functions used across ACACE modules
+- Helper methods for data processing
+- Shared constants and configurations
+
+## Usage
+
+```python
+from acace_utils import some_utility_function
+
+result = some_utility_function()
+```
+
+## License
+
+MIT License 
