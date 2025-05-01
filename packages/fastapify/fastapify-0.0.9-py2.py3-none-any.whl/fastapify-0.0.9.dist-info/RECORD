@@ -1,0 +1,17 @@
+main.py,sha256=LZ-6QNhzoMYFd0dBPGpdTxZ4a4zAlohwHijzJHFZS4E,709
+app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/application.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/module_functionality/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/module_functionality/commands.py,sha256=NsatzZVoW-5SjYZewy5k4_43m-i2hrVKqiGvkdCWQm8,5865
+fastapify/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapify/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapify/application.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapify/main.py,sha256=BzQpuK2Wl-HI5iJlZylhHxgU2j9rFgjwsxez73O7wSw,703
+fastapify/module_functionality/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapify/module_functionality/commands.py,sha256=NsatzZVoW-5SjYZewy5k4_43m-i2hrVKqiGvkdCWQm8,5865
+fastapify-0.0.9.dist-info/METADATA,sha256=kJlrEk4QiyZ_tZh--yT1rmHwGHqooXWh2mIBvgn0IVI,3560
+fastapify-0.0.9.dist-info/WHEEL,sha256=7mLNlhqgufj7fxENZhtzRraBDfDi3AITas5GqZGp0zk,109
+fastapify-0.0.9.dist-info/entry_points.txt,sha256=ET-owtfV1lJBrRObZjVdmlFcnMmne7h7P8YIZaUII2Y,49
+fastapify-0.0.9.dist-info/top_level.txt,sha256=-tIts-sXQDdEXYTvtwZPPDpKI7byZkyGB7W-aKeJA0E,10
+fastapify-0.0.9.dist-info/RECORD,,
