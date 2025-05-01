@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: flagsense
+Version: 0.1.2
+Summary: A simple package for running flag detection models on images
+Home-page: https://github.com/tiloftus/flagsense
+Author: Timothy Loftus
+Author-email: Timothy Loftus <tiloftus.4@gmail.com>
+License-File: LICENSE
+Requires-Dist: ultralytics
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
