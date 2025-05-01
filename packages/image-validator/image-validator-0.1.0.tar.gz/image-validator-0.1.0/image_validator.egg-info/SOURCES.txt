@@ -1,0 +1,12 @@
+README.md
+setup.py
+image_validator/__init__.py
+image_validator/core.py
+image_validator/face_detection.py
+image_validator/image_quality_check.py
+image_validator/text_extraction.py
+image_validator.egg-info/PKG-INFO
+image_validator.egg-info/SOURCES.txt
+image_validator.egg-info/dependency_links.txt
+image_validator.egg-info/requires.txt
+image_validator.egg-info/top_level.txt
