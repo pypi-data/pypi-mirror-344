@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+django_index_optimizer.egg-info/PKG-INFO
+django_index_optimizer.egg-info/SOURCES.txt
+django_index_optimizer.egg-info/dependency_links.txt
+django_index_optimizer.egg-info/requires.txt
+django_index_optimizer.egg-info/top_level.txt
+optimizer/__init__.py
+optimizer/analyzer.py
+optimizer/applier.py
+optimizer/apps.py
+optimizer/recommender.py
+optimizer/management/__init__.py
+optimizer/management/commands/__init__.py
+optimizer/management/commands/optimize_indexes.py
