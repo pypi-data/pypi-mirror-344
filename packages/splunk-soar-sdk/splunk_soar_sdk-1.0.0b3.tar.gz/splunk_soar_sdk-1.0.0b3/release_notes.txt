@@ -1,0 +1,33 @@
+# [1.0.0-beta.3](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.2...1.0.0-beta.3) (2025-04-30)
+
+
+### Features
+
+* change package name to splunk-soar-sdk ([32b9c13](https://github.com/phantomcyber/splunk-soar-sdk/commit/32b9c1328caf3f22f1f8a406ffb14d4da472fd3a))
+
+
+### BREAKING CHANGES
+
+* changed package name from soar_sdk to splunk-soar-sdk.
+Imports are unaffected
+
+
+
+
+
+# [1.0.0-beta.3](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.2...1.0.0-beta.3) (2025-04-30)
+
+
+### Features
+
+* change package name to splunk-soar-sdk ([32b9c13](https://github.com/phantomcyber/splunk-soar-sdk/commit/32b9c1328caf3f22f1f8a406ffb14d4da472fd3a))
+
+
+### BREAKING CHANGES
+
+* changed package name from soar_sdk to splunk-soar-sdk.
+Imports are unaffected
+
+
+
+
