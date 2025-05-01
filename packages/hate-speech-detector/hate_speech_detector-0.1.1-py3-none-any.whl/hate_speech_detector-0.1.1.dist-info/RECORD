@@ -1,0 +1,8 @@
+hate_speech_detector/__init__.py,sha256=tznCFo9qc-teTwYgS0KANP9rQslJsgLEPs1QgM0I4NU,25
+hate_speech_detector/model.py,sha256=KKZ9j0pcrjUvg1RyQJQy2W2feUzK3YxiM76y-Mn_45Q,1284
+hate_speech_detector/preprocessing.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hate_speech_detector-0.1.1.dist-info/LICENSE,sha256=PfTCLCoc_mdh0iuFhymgDE-7c7oNK4ZJE2RkfG9SV28,1110
+hate_speech_detector-0.1.1.dist-info/METADATA,sha256=Ln45VMlUgVSbqKKS40YZrghyIrcF_aDlAsj1A21Y9KE,2414
+hate_speech_detector-0.1.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+hate_speech_detector-0.1.1.dist-info/top_level.txt,sha256=k0QvjVUNajQIZdzcsz92We8mSTw5YRk7Xfom0nI6dng,21
+hate_speech_detector-0.1.1.dist-info/RECORD,,
