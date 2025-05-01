@@ -1,0 +1,11 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pdns-zone-csv"
+version = "0.1.0"
+requires-python = ">= 3.9"
+description = "Convert a PowerDNS Authoritative Server Zone (from JSON) to CSV"
+readme = "README.md"
+keywords = ["powerdns", "pdns", "dns", "zone", "csv"]
