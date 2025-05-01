@@ -1,0 +1,23 @@
+# [1.0.0-beta.7](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.6...1.0.0-beta.7) (2025-04-30)
+
+
+### Bug Fixes
+
+* add a lock to the release job ([2174a68](https://github.com/phantomcyber/splunk-soar-sdk/commit/2174a683d48e7292f5f2b4b2b19477b8c655d47c))
+* make all the badge URLs valid and sane ([580c1e2](https://github.com/phantomcyber/splunk-soar-sdk/commit/580c1e28698a6fb87dc57400f45aadfe19f62dbb))
+
+
+
+
+
+# [1.0.0-beta.7](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.6...1.0.0-beta.7) (2025-04-30)
+
+
+### Bug Fixes
+
+* add a lock to the release job ([2174a68](https://github.com/phantomcyber/splunk-soar-sdk/commit/2174a683d48e7292f5f2b4b2b19477b8c655d47c))
+* make all the badge URLs valid and sane ([580c1e2](https://github.com/phantomcyber/splunk-soar-sdk/commit/580c1e28698a6fb87dc57400f45aadfe19f62dbb))
+
+
+
+
