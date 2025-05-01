@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: pywindowx2
+Version: 2025.4.30.3
+Summary:  A Python package for structural analysis of porous molecules.
+Maintainer-email: Marcin Miklitz <marcin.miklitz@gmail.com>, Andrew Tarzia <andrew.tarzia@gmail.com>
+Project-URL: github, https://github.com/marcinmiklitz/pywindow
+Project-URL: documentation, https://pywindow.readthedocs.io
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: rdkit
+Requires-Dist: matplotlib
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: numpy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: sphinx; extra == "dev"
+Requires-Dist: sphinx-copybutton; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: furo; extra == "dev"
+Dynamic: license-file
