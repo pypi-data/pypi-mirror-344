@@ -1,0 +1,68 @@
+[
+    {
+        "name": "bits per second",
+        "mnemonic": "bps",
+        "category": "DATA_RATE",
+        "ratio": 1.0
+    },
+    {
+        "name": "kilobits per second",
+        "mnemonic": "kbps",
+        "category": "DATA_RATE",
+        "ratio": 1000.0
+    },
+    {
+        "name": "megabits per second",
+        "mnemonic": "mbps",
+        "category": "DATA_RATE",
+        "ratio": 1000000.0
+    },
+    {
+        "name": "bits",
+        "mnemonic": "bits",
+        "category": "DATA_VOLUME",
+        "ratio": 1.0
+    },
+    {
+        "name": "kilobits",
+        "mnemonic": "kbits",
+        "category": "DATA_VOLUME",
+        "ratio": 1000.0
+    },
+    {
+        "name": "megabits",
+        "mnemonic": "mbits",
+        "category": "DATA_VOLUME",
+        "ratio": 1000000.0
+    },
+    {
+        "name": "gigabits",
+        "mnemonic": "gbits",
+        "category": "DATA_VOLUME",
+        "ratio": 1000000000.0
+    },
+    {
+        "name": "Watts",
+        "mnemonic": "W",
+        "category": "POWER",
+        "ratio": 1.0
+    },
+    {
+        "name": "kilo Watts",
+        "mnemonic": "kW",
+        "category": "POWER",
+        "ratio": 1000.0
+    },
+    {
+        "name": "watt hour",
+        "mnemonic": "Wh",
+        "category": "ENERGY",
+        "ratio": 1.0
+    },
+    {
+        "name": "kilowatt hour",
+        "mnemonic": "kWh",
+        "category": "ENERGY",
+        "ratio": 1000.0
+    }
+]

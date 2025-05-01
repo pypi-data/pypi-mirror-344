@@ -1,0 +1,22 @@
+{
+    "conf_repository_path": "<conf_repository_path>",
+    "crema_id": "Crema_5_1_150lb_23_a3",
+    "segmentation_file": "<segmentation_file_path>",
+    "runner_configuration": {
+        "priority_list": [
+            ["OPNAV_.*", "J_FD_TCM", "J_FD_WOL", "J_FD_WOL_FB"],
+            ["DL_", "DL_EXT"],
+            ["SPICE_ATT_GOTOCALLISTO_NOA", "SPICE_ATT_GOTOCALLISTO_NOA_HOT", "SPICE_ATT_GOTOCALLISTO_NPO",
+             "SPICE_ATT_GOTOEARTH_NOA", "SPICE_ATT_GOTOEARTH_NOA_HOT", "SPICE_ATT_GOTOEARTH_NPO",
+             "SPICE_ATT_GOTOEUROPA_NOA", "SPICE_ATT_GOTOEUROPA_NOA_HOT", "SPICE_ATT_GOTOEUROPA_NPO",
+             "SPICE_ATT_GOTOGANYMEDE_NOA", "SPICE_ATT_GOTOGANYMEDE_NOA_HOT", "SPICE_ATT_GOTOGANYMEDE_NPO"],
+            ["SPICE_ATT_GOTOTRANSFER_COLD_SUP_SOL_CONJ", "SPICE_ATT_GOTOJUPITER_TOUR_SUP_SOL_CONJ"],
+            ["SPICE_ATT_GANYMEDE_PHASE", "SPICE_ATT_TRANSFER_COLD", "SPICE_ATT_TRANSFER_HOT", "SPICE_ATT_JUPITER_TOUR"],
+            ["SPICE_ATT_GOTOEARTH_COMMS"]
+        ],
+        "trajectory": "CREMA_5_1_150lb_23_1_a3",
+        "gap_size_limit": 240,
+        "tiny_slot_limit": 240,
+        "dry_run": false
+    }
+}
