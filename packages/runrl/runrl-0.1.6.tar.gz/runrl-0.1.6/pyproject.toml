@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "runrl"
+version = "0.1.6"
+description = "Python client for the RunRL API"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+websockets = "^12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
