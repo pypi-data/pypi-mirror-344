@@ -1,0 +1,15 @@
+ladyrick/__init__.py,sha256=8T6uetUsU9nCfuAklAvtgUroJijbdwygFT_Z974qJp8,19
+ladyrick/pretty_print.py,sha256=t1GDYRQUHDs0kmNhEMXTxdCrlab1Ye2XePd7FMXdeQc,10457
+ladyrick/print_utils.py,sha256=C_Dyw-utLfJbxv9N6R2UlCuHpM19OQGgrCIVPhN5nR8,3669
+ladyrick/tee.py,sha256=NnoiUfJ3xIAwmq5xvp2qjmDN6aD8_TxRmu9luSuudXk,3893
+ladyrick/patch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ladyrick/patch/print.py,sha256=mDh9U1GluzUEnA0TrorgiX2IEzDiK3jywhqCH94Rtxs,889
+ladyrick/patch/rich_print.py,sha256=kD3A-CgWNEuNq-xC1yzkIw1x-fIvG0INn6nqnASASUU,885
+ladyrick/patch/python/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ladyrick/patch/python/__main__.py,sha256=BAGy1phd26WWcGM9TKHbqIpeZliVofopBndtMIPtDQ0,651
+ladyrick/patch/python/usercustomize.py,sha256=l4i8Y96yY2WUS9DNJZaIaFk1QyJ55mViGW6xf4dhMpM,224
+ladyrick-0.2.0.dist-info/licenses/LICENSE,sha256=EeNAFxYAOYEmo2YEM7Zk5Oknq4RI0XMAbk4Rgoem6fs,1065
+ladyrick-0.2.0.dist-info/METADATA,sha256=FCTA0agc4yMVP8eFMXHM9NtFu0na3s2XjDbSjDXFusk,883
+ladyrick-0.2.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+ladyrick-0.2.0.dist-info/top_level.txt,sha256=RIC3-Jty2qzLYXSOr7fOu1loTwlMU9cF6MFeGIROxWU,9
+ladyrick-0.2.0.dist-info/RECORD,,
