@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+app/main.py
+app/datasling.egg-info/PKG-INFO
+app/datasling.egg-info/SOURCES.txt
+app/datasling.egg-info/dependency_links.txt
+app/datasling.egg-info/entry_points.txt
+app/datasling.egg-info/requires.txt
+app/datasling.egg-info/top_level.txt
