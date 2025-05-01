@@ -1,0 +1,8 @@
+circuitpython_displayio_effects-2.0.0.dist-info/licenses/LICENSE,sha256=xNz_N2tXHlLk9-LXRcEnGxUdwNGtQALQre2JJWmL8oY,1110
+displayio_effects/__init__.py,sha256=84cgtrO1gcy2RTp0doLp6Zgu2awkOHQ83e8-o68wezA,871
+displayio_effects/colorwheel_effect.py,sha256=ZVaomBBSqjLzAH71xds515EOTXFDlchH_s9lfduCRUo,2515
+displayio_effects/fluctuation_effect.py,sha256=TNQC4XHB3tALmYts5yOsiS91h2eWEdhEp97Yuj7fBmM,4225
+circuitpython_displayio_effects-2.0.0.dist-info/METADATA,sha256=LMEq1KCUhQrvLLJn4goEGCs04qhmlrPr403RcS8NOVA,4016
+circuitpython_displayio_effects-2.0.0.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+circuitpython_displayio_effects-2.0.0.dist-info/top_level.txt,sha256=I4RTwMrViXnAjKFdg_Q90arg5H2UzQD3-pbjMyrx12s,18
+circuitpython_displayio_effects-2.0.0.dist-info/RECORD,,
