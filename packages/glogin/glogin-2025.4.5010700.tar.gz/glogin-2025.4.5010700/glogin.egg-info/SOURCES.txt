@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+glogin.egg-info/PKG-INFO
+glogin.egg-info/SOURCES.txt
+glogin.egg-info/dependency_links.txt
+glogin.egg-info/requires.txt
+glogin.egg-info/top_level.txt
+gologin/__init__.py
+gologin/gologin.py
+gologin/cookiesManager/__init__.py
+gologin/cookiesManager/cookiesManager.py
+gologin/extensionsManager/__init__.py
+gologin/extensionsManager/extensionsManager.py
