@@ -1,0 +1,68 @@
+[build-system]
+requires = ["flit_core >=3.11,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "deep_chainmap"
+version = "0.1.3"
+description = "A recursive subclass of `collections.ChainMap`"
+authors = [
+    { name = "C.M.T. Robert" },
+]
+license = "MIT"
+license-files = ["LICENSE"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+requires-python = ">=3.9"
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.urls]
+Homepage = "https://github.com/neutrinoceros/deep_chainmap"
+
+[dependency-groups]
+test = [
+    "pytest>=6.0.2",
+]
+covcheck = [
+  {"include-group" = "test"},
+  "coverage[toml] ; python_version < '3.11'",
+  "coverage ; python_version >= '3.11'",
+]
+
+[tool.flit.sdist]
+include = ["tests/"]
+
+[tool.ruff.lint]
+ignore = ["E501"]
+select = [
+    "E",
+    "F",
+    "W",
+    "C4",  # flake8-comprehensions
+    "B",   # flake8-bugbear
+    "YTT", # flake8-2020
+    "I",   # isort
+    "UP",  # pyupgrade
+    "RUF022" # unsorted-dunder-all
+]
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "error",
+]
+addopts = "-ra"
