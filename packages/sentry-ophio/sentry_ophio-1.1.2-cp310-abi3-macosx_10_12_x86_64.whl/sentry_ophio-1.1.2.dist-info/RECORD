@@ -1,0 +1,9 @@
+sentry_ophio-1.1.2.dist-info/METADATA,sha256=SCYKa29QG5mZeRA9MQfO7cE50AgkMazaoiUOINcHGMU,298
+sentry_ophio-1.1.2.dist-info/WHEEL,sha256=eNkHHVQ2ZVf7_h6IXFcTf7nuT468OLJNEY9FQRJLBcc,105
+sentry_ophio-1.1.2.dist-info/licenses/LICENSE,sha256=XHZ_oYr3h8f5DIhMpF2HQRvcD0uSb33DQl9V7TqbwaI,10829
+sentry_ophio/enhancers.py,sha256=douItuGC3_bWv0IrgeM6uNFD_p5zJnkFwOALpE-IRns,203
+sentry_ophio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sentry_ophio/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sentry_ophio/enhancers.pyi,sha256=AUBoG8SLgOZYbFezeKXBZNC6bquLaahru4khisphj8Y,2987
+sentry_ophio/_bindings.abi3.so,sha256=wLivIxw_wAB17fQ3fy8AVY8x_b6tGswjIukC2NUVpdQ,3166672
+sentry_ophio-1.1.2.dist-info/RECORD,,
