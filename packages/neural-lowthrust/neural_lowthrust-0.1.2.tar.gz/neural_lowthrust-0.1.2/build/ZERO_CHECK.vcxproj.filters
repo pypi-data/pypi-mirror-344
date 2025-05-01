@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\Seafile\博士后\论文\小推力拟合论文\Code\CMake_pybind_nn_eigen\build\CMakeFiles\00fb4e2594ddc58d46c9b1b0377f4584\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7687FD01-E892-3645-ACE6-9F68ED10F5FF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

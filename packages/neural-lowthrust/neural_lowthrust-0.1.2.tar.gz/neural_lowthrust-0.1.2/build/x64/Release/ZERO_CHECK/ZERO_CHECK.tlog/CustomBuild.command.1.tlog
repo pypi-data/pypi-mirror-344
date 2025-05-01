@@ -1,0 +1,10 @@
+^E:\SEAFILE\博士后\论文\小推力拟合论文\CODE\CMAKE_PYBIND_NN_EIGEN\BUILD\CMAKEFILES\00FB4E2594DDC58D46C9B1B0377F4584\GENERATE.STAMP.RULE
+setlocal
+C:\Strawberry\c\bin\cmake.exe -SE:/Seafile/博士后/论文/小推力拟合论文/Code/CMake_pybind_nn_eigen -BE:/Seafile/博士后/论文/小推力拟合论文/Code/CMake_pybind_nn_eigen/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/Seafile/博士后/论文/小推力拟合论文/Code/CMake_pybind_nn_eigen/build/nn_lowthrust.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
