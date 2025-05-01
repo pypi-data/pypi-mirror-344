@@ -1,0 +1,14 @@
+vecsync/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vecsync/cli.py,sha256=arW01S669EL_ltpluTGD3olL-U3Q0xO3sMNQwAMw1Yw,3254
+vecsync/settings.py,sha256=qrSCcf6IJXzYaaHSHZ6Yk_z2DSbhOB05K6KYVknmHEM,1490
+vecsync/chat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vecsync/chat/openai.py,sha256=G3vWrlrSyoe64bmj7BLIyOIX03Qv9WvevvIEiJuBWmM,6421
+vecsync/store/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vecsync/store/file.py,sha256=ONSOK4mRzv2cb3L1wNruB1vrLRvnlu8d2uFNCvnIYno,465
+vecsync/store/openai.py,sha256=-EBXRh-BbqYrZ92tJVE3aBt_q7ds8xLh1q1C3ogEwxM,4603
+vecsync/store/zotero.py,sha256=J1p23E44fcRlbwc9dSnPf3YCQdWaFxrxp_qBiY6h4d0,4141
+vecsync-0.4.0.dist-info/METADATA,sha256=9cLEo6Jgb5cxW_LEvBvLOu4PNebRuqjmQP40Cg7A0nU,47065
+vecsync-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+vecsync-0.4.0.dist-info/entry_points.txt,sha256=V3_1hRr0gNA1s2lFXE1sbg2VnfX4bALSs7veA1Yhbzc,39
+vecsync-0.4.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+vecsync-0.4.0.dist-info/RECORD,,
