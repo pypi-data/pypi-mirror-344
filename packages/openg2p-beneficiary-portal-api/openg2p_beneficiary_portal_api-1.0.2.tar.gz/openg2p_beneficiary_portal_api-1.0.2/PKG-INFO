@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: openg2p-beneficiary-portal-api
+Version: 1.0.2
+Project-URL: Homepage, https://openg2p.org
+Project-URL: Documentation, https://docs.openg2p.org/
+Project-URL: Repository, https://github.com/OpenG2P/openg2p-beneficiary-portal-api
+Project-URL: Source, https://github.com/OpenG2P/openg2p-beneficiary-portal-api
+Author-email: OpenG2P <info@openg2p.org>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: asyncpg
+Requires-Dist: boto3
+Requires-Dist: openg2p-fastapi-auth~=1.1.2
+Requires-Dist: openg2p-fastapi-common~=1.1.2
+Requires-Dist: psycopg2
+Requires-Dist: python-slugify>=8.0.0
+Description-Content-Type: text/markdown
+
+# OpenG2P Beneficiary Portal API
+[![Pre-commit Status](https://github.com/OpenG2P/openg2p-beneficiary-portal-api/actions/workflows/pre-commit.yml/badge.svg?branch=1.0)](https://github.com/OpenG2P/openg2p-beneficiary-portal-api/actions/workflows/pre-commit.yml?query=branch%3A1.0)
+[![Build Status](https://github.com/OpenG2P/openg2p-beneficiary-portal-api/actions/workflows/test.yml/badge.svg?branch=1.0)](https://github.com/OpenG2P/openg2p-beneficiary-portal-api/actions/workflows/test.yml?query=branch%3A1.0)
+[![codecov](https://codecov.io/gh/OpenG2P/openg2p-beneficiary-portal-api/branch/1.0/graph/badge.svg)](https://codecov.io/gh/OpenG2P/openg2p-beneficiary-portal-api)
+[![openapi](https://img.shields.io/badge/open--API-swagger-brightgreen)](https://validator.swagger.io/?url=https://raw.githubusercontent.com/OpenG2P/openg2p-beneficiary-portal-api/1.0/api-docs/generated/openapi.json)
+[![PyPI](https://img.shields.io/pypi/v/openg2p-beneficiary-portal-api?label=pypi%20package)](https://pypi.org/project/openg2p-beneficiary-portal-api)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/openg2p-beneficiary-portal-api)](https://pypi.org/project/openg2p-beneficiary-portal-api)
+
+
+## Licenses
+
+This repository is licensed under [MPL-2.0](LICENSE).
