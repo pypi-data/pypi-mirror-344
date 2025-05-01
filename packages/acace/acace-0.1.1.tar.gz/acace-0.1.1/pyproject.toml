@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "acace"
+version = "0.1.1"
+description = "Adaptive Context-Aware Content Engine (ACACE) – Main orchestrator package for optimizing token usage and preserving contextual coherence across LLM content generation workflows."
+authors = ["ACACE Team <team@acace.ai>"]
+readme = "README.md"
+packages = [{include = "acace", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.26.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
