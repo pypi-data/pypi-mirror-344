@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+cbot/__init__.py
+cbot/__main__.py
+cbot/cbot.py
+cbot_cli.egg-info/PKG-INFO
+cbot_cli.egg-info/SOURCES.txt
+cbot_cli.egg-info/dependency_links.txt
+cbot_cli.egg-info/entry_points.txt
+cbot_cli.egg-info/requires.txt
+cbot_cli.egg-info/top_level.txt
