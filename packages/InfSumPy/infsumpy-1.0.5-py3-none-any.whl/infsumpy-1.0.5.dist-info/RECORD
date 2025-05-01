@@ -1,0 +1,13 @@
+infsumpy/__init__.py,sha256=5pVI0SU_lQG0P3FJl8DwqIjxdPrcabSaqJcv7Wvzv_8,67
+infsumpy/infsum.py,sha256=n7d6WR_hh-IApo8gGcqceV1kQ1dztMb_BaKBkNmIzjY,959
+infsumpy/utils.py,sha256=ClYCGs0t-p5MilcIYTH6txMHxl1V7EPC_ZwHAIwCh4w,694
+infsumpy/methods/__init__.py,sha256=8hfuuVmzWfqEOpmYfAX7XuqsEVsDaM-bZ6c_lDFFbYM,247
+infsumpy/methods/fixed_method.py,sha256=e_l3KRMS6wnuONeC1zbdoBfV6C7klyWutbyoizD2TZM,821
+infsumpy/methods/integral_test_method.py,sha256=svFjrhrolAJTqhyrr9cbVkWoSCORIapHyMWXJwcubSk,1425
+infsumpy/methods/ratio_test_method.py,sha256=sAxbUo684myWMsFpreQbm5ssAbTm1JYT_T840vd2YKU,2130
+infsumpy/methods/threshold_method.py,sha256=Yt_LNE-r3TMDejxHuNtJzOVlEt1FifHoohfXnvltn8s,1066
+infsumpy-1.0.5.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+infsumpy-1.0.5.dist-info/METADATA,sha256=ojWgtUPhqLqKLDfDy-eePEMjRJKXFROJIBelveEUl28,3446
+infsumpy-1.0.5.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+infsumpy-1.0.5.dist-info/top_level.txt,sha256=cSfIiQLCGWcwo4FLgwTYY1OJoQyBF97lBnl1a-VB0zA,9
+infsumpy-1.0.5.dist-info/RECORD,,
