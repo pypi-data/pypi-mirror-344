@@ -1,0 +1,15 @@
+manifolds/base.py,sha256=0VC7hBsd7AQ8J_34xWTf25N3T1eRgmUq2MzYYg4RF98,2461
+manifolds/poincare.py,sha256=jQSNR1yekdsVGag_5IKvcBRC4ADuHXio58Bt6rqcC3k,5353
+nn/functional.py,sha256=1ognu_Vgw5bOmDPezqkCPmdvJfBk3Jxqvth0NbW20mI,1154
+nn/layers.py,sha256=Y_gp9APGqvwisvskOSC-bSDt24ZlCirYhuPBKbt2wPo,6485
+nn/modules.py,sha256=5l1lDZHZf7cLseQLuK2ActLvkUBws1JT6H7h44aeu_M,8298
+pmath/__init__.py,sha256=ojF4XsVup_K4R6WI0lvrZAFfxgCn36tun0MyRxqCPx4,373
+pmath/autograd.py,sha256=WQjp4BlIXsdUk7ajJYXsMsiF_QlaJ_q5i2SGCB9bayo,2330
+pmath/distances.py,sha256=Q4N7BaKCrOF31jcPIbS4dSUoMd2g2QkYB3pqIvkj-RM,1389
+pmath/mappings.py,sha256=p3VEZPB6BMea-PmHHBtUQ9L-ogqt1jHhLXzmnqLw0eg,1091
+pmath/poincare.py,sha256=Fh1KyZX9MzoMZkavdvCRpb2a_nkC8VabM_oJN6vAcgM,11720
+utils/numeric.py,sha256=1bD-vVSASSv4IrbX3AcA49sW7MvpcPGlfJH3b_uZDWM,503
+hyptorch-0.1.0.dist-info/METADATA,sha256=rq0KwbdKpQ18_XpVrpEPPI_1EfhlhCQcaHRRBfRcYck,353
+hyptorch-0.1.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+hyptorch-0.1.0.dist-info/top_level.txt,sha256=KJk4jDUzZY5tE5N9ljN2IXLDLaV1cHAslfQgjfezafA,25
+hyptorch-0.1.0.dist-info/RECORD,,
