@@ -1,0 +1,21 @@
+# [1.0.0-beta.9](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.8...1.0.0-beta.9) (2025-04-30)
+
+
+### Bug Fixes
+
+* **asset:** generate sensible default for field descriptions ([0344cf9](https://github.com/phantomcyber/splunk-soar-sdk/commit/0344cf9fa7baff6df604fb2613d03af54d0f2121))
+
+
+
+
+
+# [1.0.0-beta.9](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.8...1.0.0-beta.9) (2025-04-30)
+
+
+### Bug Fixes
+
+* **asset:** generate sensible default for field descriptions ([0344cf9](https://github.com/phantomcyber/splunk-soar-sdk/commit/0344cf9fa7baff6df604fb2613d03af54d0f2121))
+
+
+
+
