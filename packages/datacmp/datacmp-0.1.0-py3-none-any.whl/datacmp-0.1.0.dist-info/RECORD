@@ -1,0 +1,9 @@
+datacmp/__init__.py,sha256=OubFwYC_sBAuw-O79Bfr9mEh75_ral_63L4KTW8Xxmg,162
+datacmp/column_cleaning.py,sha256=8assBX9b7p9xqGLLzR1t2jC5XhRb4Bahw7KqIsMHGIo,539
+datacmp/data_cleaning.py,sha256=sJmcI-8z69hH_bCVA4xOxZQyDJ7FGVd2l8tWUMguWJk,3191
+datacmp/detailed_info.py,sha256=nk8JsYKoCn3GuP1wDoSQ1GMXdvP4wdjPJAIs683h1Tg,908
+datacmp-0.1.0.dist-info/LICENSE,sha256=wn63_MdRgm3LIdzPHN2frmskU9WxOkyWYMv4eGrnvKs,1094
+datacmp-0.1.0.dist-info/METADATA,sha256=W67w4y2Gvw1_9D_HuvsyF-iwuTkwGRv1ShlrLxur42M,3076
+datacmp-0.1.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+datacmp-0.1.0.dist-info/top_level.txt,sha256=LJZm6fRmptSvvW4-_NFaiRprIVHBShIOTFlHMOX9LEg,8
+datacmp-0.1.0.dist-info/RECORD,,
