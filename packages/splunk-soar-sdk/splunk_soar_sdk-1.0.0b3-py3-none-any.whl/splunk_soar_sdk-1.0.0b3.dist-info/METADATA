@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: splunk-soar-sdk
+Version: 1.0.0b3
+Summary: The official framework for developing and testing Splunk SOAR Apps
+Project-URL: Homepage, https://github.com/phantomcyber/splunk-soar-sdk
+Project-URL: Documentation, https://github.com/phantomcyber/splunk-soar-sdk
+Project-URL: Repository, https://github.com/phantomcyber/splunk-soar-sdk
+Author-email: Jacob Davis <jacobd@splunk.com>, Tapish Jain <tapishj@splunk.com>, Janusz Kamieński <jkamienski@splunk.com>, Scott Odle <sodle@splunk.com>, Michał Posłuszny <mposluszny@splunk.com>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Keywords: app,cisco,connector,phantom,sdk,soar,splunk
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: <3.14,>=3.9
+Requires-Dist: beautifulsoup4==4.10.0
+Requires-Dist: distro==1.8.0
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: humanize>=4.12.2
+Requires-Dist: pydantic<2
+Requires-Dist: requests<3
+Requires-Dist: responses==0.22.0
+Requires-Dist: simplejson<4
+Requires-Dist: toml<1,>=0.10.2
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: typer<1,>=0.12.5
+Description-Content-Type: text/markdown
+
+Splunk SOAR Apps SDK - a tool for fast and clean SOAR Apps development
+
+# Requirements
+
+The SDK enables developing, testing and running the Splunk SOAR Apps written in Python. As such
+it has some prerequisites in order to run:
+
+1. Python 3.9 - all SOAR Apps are running in Python 3.9 environment and they should be developed in such.
+  You can provide it in the way that suits you the best. You can use [system installer](https://www.python.org/downloads)
+  or [pyenv](https://github.com/pyenv/pyenv).
+1. Poetry - each app is developed with [poetry tool](https://python-poetry.org/) so you will need to have it installed locally for your python installation.
+1. Splunk SOAR 6.4.0+ - apps built with this SDK are supported by SOAR starting from version 6.4.0.  You can [get your Splunk SOAR from the Splunk website](https://www.splunk.com/en_us/products/splunk-security-orchestration-and-automation.html).
+
+# Installation
+
+Splunk SOAR Apps SDK is available as [a package on PyPI](MISSING_LINK). It should be installed
+as one of the dependencies in your Splunk SOAR App using poetry (see the _Creating the SOAR App_ section below).
+
+# Getting started
+
+In order to start using SDK and build your first SOAR App, follow the [Getting Started guide](/docs/getting_started.md).
