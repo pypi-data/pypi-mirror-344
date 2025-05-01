@@ -1,0 +1,16 @@
+curlifier/__init__.py,sha256=LO8WgA9lehsToU-LYxafL_n7DK6k-Oox405I9D814Lo,64
+curlifier/__version__.py,sha256=9fM_UZ8zeca114x0o70yDNeOv9RBaxF_vAcO_1g1JUc,1813
+curlifier/api.py,sha256=HKJmBbuQfm2rLED7-Ndp8smu3ZJ4xcyu3VClFxEcPkY,2225
+curlifier/builders/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+curlifier/builders/base.py,sha256=NWfqT4sVqZ-dGEAcWshy9P0_ulZIu4mFWchYbr79HFY,406
+curlifier/builders/configurator.py,sha256=1-Xi1osjzXb8NSRR5n_t-o7Pos_CUNrw2OaFzTQ5h7s,3445
+curlifier/builders/curl.py,sha256=urKI3ynDHOS0LGRJs5Rqvk7d7Ei8ARMBivxV-gp3GQc,2213
+curlifier/builders/transmitter.py,sha256=kpVAmwwPYCpuMSUE04nFhmwVTMpwhIAy2_YyZ-CAKl8,6497
+curlifier/structures/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+curlifier/structures/commands.py,sha256=HivCIJ7Em-dvk7FStk3M_KrVOJMI8ptg0LRAIfiVfoM,1922
+curlifier/structures/http_methods.py,sha256=6a_BcmC4-NKywUvc4x7KJkfNJdh4v92IR2u1asqfo7U,934
+curlifier/structures/types.py,sha256=DnhxxEOOo1kqr5LgN-OfyUmRmXmaQ0Cl7DXQmok6It8,699
+curlifier-0.1.4.dist-info/LICENSE,sha256=i-MBEib_-ZDLgLxIfVYVte_TjgScY8lq2RsPbriOw3w,1069
+curlifier-0.1.4.dist-info/METADATA,sha256=pJ4EMwfklC_mD4lFoZSBMXss6Wn6vUmciS2fKeKrqJ8,4420
+curlifier-0.1.4.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+curlifier-0.1.4.dist-info/RECORD,,
