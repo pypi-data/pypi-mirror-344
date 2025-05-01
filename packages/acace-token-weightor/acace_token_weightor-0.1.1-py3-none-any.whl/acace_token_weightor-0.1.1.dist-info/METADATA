@@ -1,0 +1,53 @@
+Metadata-Version: 2.3
+Name: acace_token_weightor
+Version: 0.1.1
+Summary: Assigns importance weights to tokens using NLP heuristics for compression prioritization.
+Author: ACACE Team
+Author-email: team@acace.ai
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: numpy (>=1.26.3,<2.0.0)
+Description-Content-Type: text/markdown
+
+# acace_token_weightor
+
+Assigns importance weights to tokens using NLP heuristics for compression prioritization.
+
+## Installation
+
+```bash
+pip install acace_token_weightor
+```
+
+## Features
+
+- Core functionality for ACACE
+- Integration with other ACACE components
+- Standardized interfaces
+
+## Usage
+
+```python
+from acace_token_weightor import main_function
+
+result = main_function()
+```
+
+## Documentation
+
+Detailed documentation can be found in the [docs](docs/) directory.
+
+## Integration with ACACE
+
+This package is designed to work seamlessly with the main [ACACE](https://github.com/Sumedh1599/acace) library.
+
+## License
+
+MIT License
+
