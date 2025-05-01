@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Flask_Table2.egg-info/PKG-INFO
+Flask_Table2.egg-info/SOURCES.txt
+Flask_Table2.egg-info/dependency_links.txt
+Flask_Table2.egg-info/requires.txt
+Flask_Table2.egg-info/top_level.txt
+flask_table2/__init__.py
+flask_table2/columns.py
+flask_table2/compat.py
+flask_table2/html.py
+flask_table2/table.py
