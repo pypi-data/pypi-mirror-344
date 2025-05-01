@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: guarani-coti
+Version: 0.1.0
+Summary: CLI para cotizaciones del guaraní paraguayo y otras monedas
+Home-page: https://github.com/Piuliss/guarani-coti
+Author: Raul B. Netto
+Author-email: raulbeni@email.com
+Requires-Python: >=3.7
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: python-dotenv
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
