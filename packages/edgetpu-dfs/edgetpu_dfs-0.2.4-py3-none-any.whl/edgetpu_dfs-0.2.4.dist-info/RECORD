@@ -1,0 +1,12 @@
+edgetpu_dfs/__init__.py,sha256=tIDRcuawC2nLh77WyNYAhefxOEapBlYUSQRoEGaYXvY,516
+edgetpu_dfs/dfs_interface.py,sha256=wItqXAar7Z7FC27FTnAe7yUZqc9BINS_YSd_JgIRmdY,1736
+edgetpu_dfs/dfs_utils.py,sha256=ZaZ--ZkvzKGPE48a-Hb7OzknJN7ZpkZQI5NrvdjZDT4,3050
+edgetpu_dfs/pci_dfs_manager.py,sha256=oxg0cV2s7-dslP1stqP5UaOO-L5KTRt6kqpV5UwmdEE,4214
+edgetpu_dfs/pci_dfs_manager_with_trip_point.py,sha256=1sFA2AdLofJ4RATYyDI_JO9YpZlBrTTjfkqp9Kt6Ygg,4341
+edgetpu_dfs/usb_dfs_manager.py,sha256=WfbYRMKjjMwgx-h8aMOPjFtJCcrnqzGmWbPR9D0z2_A,4743
+edgetpu_dfs-0.2.4.dist-info/licenses/LICENSE,sha256=IYFPCV3EAhkj205hVMkXdX-SBRkIOaDUerx_ccb0twg,1161
+third_party/libedgetpu/rename_library.py,sha256=_nwBEWSi-AYnhZ_sZmDyHKG8uwj7CXttdS9CW3IBm-I,2961
+edgetpu_dfs-0.2.4.dist-info/METADATA,sha256=KomC_MqArLSnBmiap-ulCL0YWuiwM6gi0fRzu4Wu2Mw,1771
+edgetpu_dfs-0.2.4.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+edgetpu_dfs-0.2.4.dist-info/top_level.txt,sha256=ZkeTODkAMikMlphCAxF4ruP1AchfO8S5sdN5AKfVh5E,24
+edgetpu_dfs-0.2.4.dist-info/RECORD,,
