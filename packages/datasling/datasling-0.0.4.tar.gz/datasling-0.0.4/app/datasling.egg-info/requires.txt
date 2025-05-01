@@ -1,0 +1,4 @@
+builtins
+colorama
+pandas
+sqlite3
