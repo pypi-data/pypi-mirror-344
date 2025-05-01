@@ -1,0 +1,9 @@
+click
+nicegui
+cookiecutter
+pytest
+ruff
+psycopg2-binary>=2.9.10
+inflect>=7.5.0
+pytest-cov>=6.1.1
+mypy>=1.15.0
