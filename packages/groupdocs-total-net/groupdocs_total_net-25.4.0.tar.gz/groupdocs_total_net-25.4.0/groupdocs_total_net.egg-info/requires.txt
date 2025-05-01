@@ -1,0 +1,6 @@
+groupdocs-comparison-net==24.12
+groupdocs-conversion-net==24.12
+groupdocs-metadata-net==25.4
+groupdocs-signature-net==25.4
+groupdocs-viewer-net==24.9
+groupdocs-watermark-net==25.3
