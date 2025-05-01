@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+edgetpu_dfs/__init__.py
+edgetpu_dfs/dfs_interface.py
+edgetpu_dfs/dfs_utils.py
+edgetpu_dfs/pci_dfs_manager.py
+edgetpu_dfs/pci_dfs_manager_with_trip_point.py
+edgetpu_dfs/usb_dfs_manager.py
+edgetpu_dfs.egg-info/PKG-INFO
+edgetpu_dfs.egg-info/SOURCES.txt
+edgetpu_dfs.egg-info/dependency_links.txt
+edgetpu_dfs.egg-info/top_level.txt
+third_party/libedgetpu/rename_library.py
