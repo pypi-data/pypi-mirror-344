@@ -1,0 +1,2 @@
+[console_scripts]
+linux-do-mcp = linux_do_mcp:main
