@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: Rust_Python_Xepharion_SDK
+Version: 0.1.4
+Author: Gustavo Alejandro Paredes Orozco
+Author-email: gustavoparedes1978@gmail.com
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
