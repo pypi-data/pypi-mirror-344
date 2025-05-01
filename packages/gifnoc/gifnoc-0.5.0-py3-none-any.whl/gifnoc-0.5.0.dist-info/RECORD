@@ -1,0 +1,11 @@
+gifnoc/__init__.py,sha256=ofoQsswNS7LKJs3CTK0r2lTWwS5mmvs7tX2X72EVI_g,1364
+gifnoc/__main__.py,sha256=S9d3jEmPEIg5EFXaEx6h8PfrLOYMoukgdCqAM4VEEkU,3704
+gifnoc/proxy.py,sha256=FKjUP6X-HeDWeU4cTj9_6Nw2MmEBBlFkuOdjXhfuQDY,1663
+gifnoc/registry.py,sha256=B4qkoiP63_ju4SNtd0siejEgdjSaJxzWOiPYIdkbb3w,6822
+gifnoc/version.py,sha256=-beU6vQRolzltfD0fQR6KSzR5yUgbfwYBlKbvzktqbg,18
+gifnoc/std/__init__.py,sha256=MKfA0C2gr2Qb4cGtKC_hUWfLNNtRZm5KrUGRwXnFXxA,267
+gifnoc/std/_time.py,sha256=34OUPYF487eJnbkySX3f4oAaV5IJyFWjMwIK1Lovr0g,863
+gifnoc-0.5.0.dist-info/METADATA,sha256=orPCCNCImQhlSfNkLAO1dzvsKycfk0QdQ8QdkewUcig,3163
+gifnoc-0.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gifnoc-0.5.0.dist-info/entry_points.txt,sha256=URMDjACPzXBS5FGYrcEVSjB2aZwvOn39XfODafQk8uo,48
+gifnoc-0.5.0.dist-info/RECORD,,
