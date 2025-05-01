@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+lumynyx/__init__.py
+lumynyx.egg-info/PKG-INFO
+lumynyx.egg-info/SOURCES.txt
+lumynyx.egg-info/dependency_links.txt
+lumynyx.egg-info/top_level.txt
