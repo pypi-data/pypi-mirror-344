@@ -1,0 +1,21 @@
+# [1.0.0-beta.4](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.3...1.0.0-beta.4) (2025-04-30)
+
+
+### Bug Fixes
+
+* make README.md more presentable for PyPI ([f9b99fe](https://github.com/phantomcyber/splunk-soar-sdk/commit/f9b99fe6ceb8be7d9d202601f0e249162bbfcdcd))
+
+
+
+
+
+# [1.0.0-beta.4](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.3...1.0.0-beta.4) (2025-04-30)
+
+
+### Bug Fixes
+
+* make README.md more presentable for PyPI ([f9b99fe](https://github.com/phantomcyber/splunk-soar-sdk/commit/f9b99fe6ceb8be7d9d202601f0e249162bbfcdcd))
+
+
+
+
