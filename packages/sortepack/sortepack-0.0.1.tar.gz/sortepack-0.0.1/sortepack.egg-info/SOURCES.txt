@@ -1,0 +1,8 @@
+README.md
+setup.py
+sortepack/__init__.py
+sortepack/sorteios.py
+sortepack.egg-info/PKG-INFO
+sortepack.egg-info/SOURCES.txt
+sortepack.egg-info/dependency_links.txt
+sortepack.egg-info/top_level.txt

@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: sortepack
+Version: 0.0.1
+Summary: Pacote para sortear números e itens aleatórios.
+Home-page: https://github.com/andissaura/simple-package-template
+Author: Andi
+Author-email: andissaura@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# sortepack
+
+Description. 
+The package sortepack is used to:
+	Sorteios:
+		- Sortear nÃºmero inteiro aleatÃ³rio
+		- Sortear item aleatÃ³rio de uma lista 
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install package_name
+```
+
+
+## Author
+Andi
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
