@@ -1,0 +1,9 @@
+dbtfinance:
+  outputs:
+    dev:
+      type: duckdb
+      schema: finance
+      path: ./../dev.duckdb
+      threads: 1
+
+  target: dev

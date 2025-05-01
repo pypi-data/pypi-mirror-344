@@ -1,0 +1,15 @@
+name: 'dbtfinance'
+version: '1.0.0'
+
+profile: 'dbtfinance'
+
+# directories to be removed by `dbt clean`
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "logs"
+
+models:
+  # ensure referenced models are used with correct schema
+  dbtcore:
+    schema: "core"

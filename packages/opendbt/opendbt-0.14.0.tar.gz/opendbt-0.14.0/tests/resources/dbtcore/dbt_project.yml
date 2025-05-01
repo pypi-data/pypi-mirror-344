@@ -1,0 +1,22 @@
+name: 'dbtcore'
+version: '1.0.0'
+
+profile: 'dbtcore'
+
+# include opendbt macros
+macro-paths: [ "macros", "../../../opendbt/macros/" ]
+# use opendbt index.html for docs
+docs-paths: [ "../../../opendbt/docs/" ]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "logs"
+
+models:
+  dbtcore:
+    +materialized: table
+
+vars:
+  dbt_custom_adapter: opendbt.examples.DuckDBAdapterV2Custom
+  dbt_callbacks: opendbt.examples.email_dbt_test_callback

@@ -1,0 +1,9 @@
+dbtcore:
+  outputs:
+    dev:
+      type: duckdb
+      schema: core
+      path: ./../dev.duckdb
+      threads: 1
+
+  target: dev
