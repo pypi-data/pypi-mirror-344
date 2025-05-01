@@ -1,0 +1,35 @@
+Metadata-Version: 2.2
+Name: password-toolkit
+Version: 0.1.0
+Summary: Secure password encryption/decryption toolkit
+Home-page: https://github.com/8888888b/password-module
+Author: lzc0331
+Author-email: 898925970@qq.com
+Keywords: password encryption security
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Security :: Cryptography
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cryptography>=3.4.7
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Password Toolkit
+
+Secure password encryption module with multi-language support
+
+Features:
+- AES-256 encryption
+- PBKDF2 key derivation
+- Multi-language error messages
