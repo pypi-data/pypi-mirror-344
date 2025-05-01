@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+gha_deploy/__init__.py
+gha_deploy/cli.py
+gha_deploy/github_api.py
+gha_deploy.egg-info/PKG-INFO
+gha_deploy.egg-info/SOURCES.txt
+gha_deploy.egg-info/dependency_links.txt
+gha_deploy.egg-info/entry_points.txt
+gha_deploy.egg-info/requires.txt
+gha_deploy.egg-info/top_level.txt
+tests/test_cli.py

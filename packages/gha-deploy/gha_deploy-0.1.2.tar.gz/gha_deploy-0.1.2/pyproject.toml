@@ -1,0 +1,23 @@
+[project]
+name = "gha-deploy"
+version = "0.1.2"
+
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+    "click>=8.1",
+    "requests>=2.28",
+    "rich>=13.0",
+    "pylint",
+    "pytest"
+]
+
+[project.urls]
+Homepage = "https://github.com/ktierney15/gha-deploy-cli"
+Repository = "https://github.com/ktierney15/gha-deploy-cli"
+Issues = "https://github.com/ktierney15/gha-deploy-cli/issues"
+
+[project.scripts]
+gha-deploy = "gha_deploy.cli:deploy"
