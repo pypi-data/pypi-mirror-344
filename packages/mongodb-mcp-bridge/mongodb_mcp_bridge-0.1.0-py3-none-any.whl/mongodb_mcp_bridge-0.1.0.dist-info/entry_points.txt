@@ -1,0 +1,2 @@
+[console_scripts]
+mongodb-mcp = mongodb_mcp_bridge:main
