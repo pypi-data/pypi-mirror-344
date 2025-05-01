@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+cookiesManager/__init__.py
+cookiesManager/cookiesManager.py
+extensionsManager/__init__.py
+extensionsManager/extensionsManager.py
+glogin.egg-info/PKG-INFO
+glogin.egg-info/SOURCES.txt
+glogin.egg-info/dependency_links.txt
+glogin.egg-info/requires.txt
+glogin.egg-info/top_level.txt
+tests/test_profiles_api.py
