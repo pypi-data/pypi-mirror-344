@@ -1,0 +1,57 @@
+Metadata-Version: 2.3
+Name: acace_compression_engine
+Version: 0.1.0
+Summary: Text compression utilities for ACACE
+Author: ACACE Team
+Author-email: team@acace.ai
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: nltk (>=3.8.1,<4.0.0)
+Requires-Dist: numpy (>=1.26.3,<2.0.0)
+Requires-Dist: sentence-transformers (>=2.2.2,<3.0.0)
+Requires-Dist: spacy (>=3.7.2,<4.0.0)
+Requires-Dist: transformers (>=4.37.2,<5.0.0)
+Description-Content-Type: text/markdown
+
+# ACACE Compression Engine
+
+A semantic text compression engine for the Adaptive Context-Aware Content Engine (ACACE).
+
+## Features
+
+- Token-based compression
+- Semantic preservation
+- Weight-based token filtering
+- Configurable compression ratios
+
+## Installation
+
+```bash
+pip install acace_compression_engine
+```
+
+## Usage
+
+```python
+from acace_compression_engine import compress_text
+from acace_token_weightor import assign_weights
+from acace_tokenizer import tokenize_text
+
+# Prepare tokens with weights
+tokens = tokenize_text("Your text to compress with important information.")
+weighted_tokens = assign_weights(tokens)
+
+# Compress text while preserving semantics
+compressed_text = compress_text(weighted_tokens, compression_ratio=0.7)
+print(compressed_text)
+```
+
+## License
+
+MIT License 

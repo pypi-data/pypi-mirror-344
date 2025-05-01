@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "acace_compression_engine"
+version = "0.1.0"
+description = "Text compression utilities for ACACE"
+authors = ["ACACE Team <team@acace.ai>"]
+readme = "README.md"
+packages = [{include = "acace_compression_engine", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+nltk = "^3.8.1"
+spacy = "^3.7.2"
+transformers = "^4.37.2"
+sentence-transformers = "^2.2.2"
+numpy = "^1.26.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
