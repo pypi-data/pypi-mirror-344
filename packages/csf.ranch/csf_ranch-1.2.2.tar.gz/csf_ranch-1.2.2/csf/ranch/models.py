@@ -1,0 +1,16 @@
+from django.db import models
+
+
+class LoggedTask(models.Model):
+    id = models.CharField(max_length=255, primary_key=True, unique=True)
+    queue = models.CharField(max_length=128, null=True)
+    task_name = models.CharField(max_length=2056)
+    status = models.CharField(max_length=50)
+    args = models.TextField(default="[]")
+    kwargs = models.TextField(default="{}")
+    stacktrace = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.task_name} - args: {self.args}, kwargs {self.kwargs}"

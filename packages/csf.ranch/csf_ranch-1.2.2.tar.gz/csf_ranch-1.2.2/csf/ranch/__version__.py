@@ -1,0 +1,7 @@
+__author__ = "Evan"
+__author_email__ = "evan.mce;heny@constrafor.com"
+__description__ = "CSF Ranch"
+__license__ = "Apache 2.0"
+__title__ = "csf.ranch"
+__url__ = "https://github.com/Constrafor/csf.ranch/"
+__version__ = "1.2.2"
