@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+server.py
+tws_drex_mcp.egg-info/PKG-INFO
+tws_drex_mcp.egg-info/SOURCES.txt
+tws_drex_mcp.egg-info/dependency_links.txt
+tws_drex_mcp.egg-info/entry_points.txt
+tws_drex_mcp.egg-info/requires.txt
+tws_drex_mcp.egg-info/top_level.txt
