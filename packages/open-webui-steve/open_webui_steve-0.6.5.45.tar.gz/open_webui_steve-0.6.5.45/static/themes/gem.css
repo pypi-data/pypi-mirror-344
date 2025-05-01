@@ -1,0 +1,492 @@
+:root {
+	/* --- Original "Gem" Palette (For Reference) --- */
+	--gem-text-color: #e0b0ff;      /* Light Plum */
+	--gem-stroke-color: #dda0dd;     /* Plum */
+	--gem-bg-color: #2a0040;         /* Dark Indigo */
+	--gem-nav-bg-color: #4b0082;     /* Indigo */
+	--gem-surface-color: #4b0082;    /* Indigo */
+	--gem-muted-color: #800080;      /* Purple */
+	--gem-subtle-color: #ba55d3;     /* Medium Orchid */
+	--gem-primary-color: #da70d6;    /* Orchid */
+	--gem-secondary-color: #c0c0c0;   /* Silver */
+	--gem-highlight-color: #6a0dad;   /* Dark Orchid */
+	--gem-border-color: #80003e;      /* Default border (Pinkish) */
+  
+	/* --- New "Soft Gem" Palette --- */
+	/* Goal: Smoother transitions, less saturated accents, more cohesive feel */
+  
+	/* Text - Still light, perhaps slightly less saturated if needed, but contrast is key */
+	--gem-soft-text-color: #e2c4ff; /* Slightly softer light violet */
+  
+	/* Backgrounds/Surfaces - Smaller steps between deep background and surfaces */
+	--gem-soft-bg-color: #2a0d42;   /* Base: Very dark, slightly less blue */
+	--gem-soft-surface-color: #3c1a58; /* Surface: Darker & less saturated than original, smoother step from bg */
+	--gem-soft-nav-bg-color: #452068;  /* Nav: Slightly lighter than surface for subtle depth */
+  
+	/* Stroke/Border - Adjusted for softness and theme consistency */
+	--gem-soft-stroke-color: #c8a8d8; /* Softer, less saturated plum */
+	--gem-soft-border-color: #5a3a70; /* Border: Desaturated purple, blends better than pink */
+  
+	/* Muted/Subtle - Adjusted to be truly more muted/subtle */
+	--gem-soft-muted-color: #7a5a8f; /* Muted: Darker, significantly desaturated purple */
+	--gem-soft-subtle-color: #987aac; /* Subtle: Lighter than muted, still desaturated */
+  
+	/* Accents - Slightly desaturated or adjusted for harmony */
+	--gem-soft-primary-color: #d088d0; /* Primary: Less intense Orchid */
+	--gem-soft-secondary-color: #b0b0b0; /* Secondary: Slightly darker Silver for less harshness */
+	--gem-soft-highlight-color: #553070; /* Highlight: Darker, less saturated violet/purple, acts as subtle darker accent/bg */
+  
+  }
+
+.gem * {
+	color: var(--gem-text-color);
+	stroke: var(--gem-stroke-color);
+}
+
+.gem .app > * {
+	background-color: var(--gem-bg-color);
+}
+
+.gem #nav {
+	background-color: var(--gem-soft-nav-bg-color); /* Modified for sidebar color */
+}
+
+.gem .py-2\.5.my-auto.flex.flex-col.justify-between.h-screen {
+	background: var(--gem-soft-nav-bg-color); /* Modified for sidebar color */
+}
+
+.gem .bg-white {
+	background: var(--gem-surface-color);
+}
+
+.gem .w-4.h-4 {
+	fill: var(--gem-stroke-color);
+}
+
+.gem #chat-input {
+	background: var(--gem-surface-color); /* Changed to surface color for consistency */
+	margin: 0.3rem;
+	padding: 0.5rem;
+}
+
+.gem .bg-gradient-to-t.from-white.from-40\%.pb-2 {
+	background: var(--gem-surface-color) !important;
+	padding-top: 0.6rem;
+}
+
+.gem
+	.text-white.bg-gray-100.disabled.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
+	background-color: var(--gem-muted-color);
+	transition: background-color 0.2s ease-out linear;
+}
+
+.gem
+	.bg-black.text-white.hover\:bg-gray-900.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
+	background-color: var(--gem-highlight-color);
+	transition: background-color 0.2s ease-out linear;
+}
+
+.gem
+	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center
+	> * {
+	fill: var(--gem-stroke-color);
+	transition: fill 0.2s ease-out linear;
+}
+
+.gem
+	.w-full.flex.justify-between.rounded-md.px-3.py-2.hover\:bg-gray-900.bg-gray-900.transition.whitespace-nowrap.text-ellipsis {
+	background-color: var(--gem-surface-color); /* Using surface color for consistency */
+	font-weight: bold;
+}
+
+.gem .hover\:bg-gray-900:hover {
+	--tw-bg-opacity: 1;
+	background-color: var(--gem-primary-color);
+}
+
+.gem .text-xs.text-gray-700.uppercase.bg-gray-50 {
+}
+
+.gem .scrollbar-hidden.relative.overflow-x-auto.whitespace-nowrap.svelte-3g4avz {
+	border-radius: 16px 16px 0 0;
+}
+
+.gem .base.enter.svelte-ug60r4 {
+	background-color: var(--gem-primary-color);
+}
+
+.gem .message.svelte-1nauejd {
+	color: var(--gem-text-color);
+}
+
+.gem #dropdownDots {
+	background-color: var(--gem-secondary-color);
+}
+
+.gem .flex.py-2\.5.px-3\.5.w-full.hover\:bg-gray-800.transition:hover {
+	background: var(--gem-muted-color);
+}
+
+.gem .m-auto.rounded-xl.max-w-full.w-\[40rem\].mx-2.bg-gray-50.shadow-3xl {
+	background-color: var(--gem-surface-color);
+}
+
+.gem
+	.w-full.rounded.p-4.text-sm.outline-none.resize-none {
+	background-color: var(--gem-muted-color);
+}
+
+.gem
+	.w-full.rounded.py-2.px-4.text-sm.outline-none.svelte-1vx7r9s {
+	background-color: var(--gem-muted-color);
+}
+
+.gem
+	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.bg-gray-200 {
+	background-color: var(--gem-secondary-color);
+}
+
+.gem
+	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.hover\:bg-gray-300:hover {
+	background-color: var(--gem-muted-color);
+}
+
+.gem .px-4.py-2.text-gray-100.transition.rounded {
+	background-color: var(--gem-stroke-color);
+}
+
+.gem #chat-search > * {
+	background-color: var(--gem-surface-color); /* Changed to surface color for consistency */
+}
+
+/* Input, textarea, select styles */
+.gem input,
+.gem textarea,
+.gem select {
+  background-color: var(--gem-surface-color);
+  color: var(--gem-text-color);
+  border: 1px solid var(--gem-border-color);
+}
+
+.gem .flex.items-center.relative select {
+  border: none;
+}
+
+/* Button styles */
+.gem button {
+   color: var(--gem-text-color);
+   background-color: var(--gem-surface-color);
+}
+.gem button:hover {
+   background-color: var(--gem-highlight-color);
+   border-color: var(--gem-primary-color);
+}
+
+/* Select arrow color */
+.gem select {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23e0b0ff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+}
+
+/* Link color */
+.gem a {
+  color: var(--gem-primary-color);
+}
+
+/* Specific text color for elements with font-medium class within gem theme */
+.gem .font-medium {
+  color: var(--gem-text-color) !important;
+}
+
+/* Specific text color for "工作空间" link text */
+.gem a .flex .font-medium {
+  color: var(--gem-text-color) !important;
+}
+
+/* Specific icon color for "工作空间" link icon */
+.gem a svg {
+  color: var(--gem-text-color) !important;
+  fill: var(--gem-stroke-color) !important;
+}
+
+/* Checkbox styles */
+.gem input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--gem-muted-color);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+  background-color: var(--gem-surface-color);
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.gem input[type='checkbox']:checked {
+  background-color: var(--gem-primary-color);
+  border-color: var(--gem-primary-color);
+}
+
+.gem input[type='checkbox']:checked::before {
+  content: '';
+  display: block;
+  width: 0.3rem;
+  height: 0.6rem;
+  border: solid var(--gem-bg-color); /* Use background for checkmark contrast */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 0.25rem;
+  top: 0.05rem;
+}
+
+.gem input[type='checkbox']:focus {
+  outline: 2px solid var(--gem-secondary-color);
+  outline-offset: 1px;
+}
+
+.gem input[type='checkbox']:disabled {
+  background-color: var(--gem-subtle-color); /* Assuming a subtle color variable is needed */
+  border-color: var(--gem-subtle-color);
+  cursor: not-allowed;
+}
+
+.gem input[type='checkbox']:disabled:checked::before {
+  border-color: var(--gem-muted-color);
+}
+
+
+.gem .svelte-1ee93ns {
+	--primary: var(--gem-primary-color) !important;
+	--secondary: var(--gem-secondary-color) !important;
+}
+
+.gem .svelte-11kvm4p {
+	--primary: var(--gem-primary-color) !important;
+	--secondary: var(--gem-secondary-color) !important;
+}
+
+/* Code Highlighting Styles (using gem theme variables) */
+.gem .hljs {
+	color: var(--gem-text-color);
+	background: var(--gem-surface-color);
+}
+
+.gem .hljs-comment,
+.gem .hljs-quote {
+	color: var(--gem-muted-color);
+	font-style: italic;
+}
+
+.gem .hljs-doctag,
+.gem .hljs-keyword,
+.gem .hljs-formula {
+	color: var(--gem-primary-color);
+}
+
+.gem .hljs-section,
+.gem .hljs-name,
+.gem .hljs-selector-tag,
+.gem .hljs-deletion,
+.gem .hljs-subst {
+	color: var(--gem-highlight-color);
+}
+
+.gem .hljs-literal {
+	color: var(--gem-subtle-color);
+}
+
+.gem .hljs-string,
+.gem .hljs-regexp,
+.gem .hljs-addition,
+.gem .hljs-attribute,
+.gem .hljs-meta-string {
+	color: var(--gem-stroke-color);
+}
+
+.gem .hljs-built_in,
+.gem .hljs-class .hljs-title {
+	color: var(--gem-primary-color);
+}
+
+.gem .hljs-attr,
+.gem .hljs-variable,
+.gem .hljs-template-variable,
+.gem .hljs-type,
+.gem .hljs-selector-class,
+.gem .hljs-selector-attr,
+.gem .hljs-selector-pseudo,
+.gem .hljs-number {
+	color: var(--gem-text-color);
+}
+
+.gem .hljs-symbol,
+.gem .hljs-bullet,
+.gem .hljs-link,
+.gem .hljs-meta,
+.gem .hljs-selector-id,
+.gem .hljs-title {
+	color: var(--gem-highlight-color);
+}
+
+.gem .hljs-emphasis {
+	font-style: italic;
+}
+
+.gem .hljs-strong {
+	font-weight: bold;
+}
+
+.gem .hljs-link {
+	text-decoration: underline;
+}
+
+/* Markdown Content Styles (using gem theme variables) */
+.gem .markdown-prose {
+	color: var(--gem-text-color);
+}
+
+.gem .markdown-prose h1,
+.gem .markdown-prose h2,
+.gem .markdown-prose h3,
+.gem .markdown-prose h4,
+.gem .markdown-prose h5,
+.gem .markdown-prose h6 {
+	color: var(--gem-highlight-color);
+}
+
+.gem .markdown-prose code {
+	color: var(--gem-stroke-color);
+	background-color: var(--gem-surface-color);
+	padding: 0.2em 0.4em;
+	border-radius: 0.25rem;
+}
+
+.gem .markdown-prose pre {
+	background-color: var(--gem-surface-color);
+	color: var(--gem-text-color);
+	padding: 1em;
+	border-radius: 0.5rem;
+	overflow-x: auto;
+}
+
+.gem .markdown-prose pre code {
+	background-color: transparent;
+	padding: 0;
+	border-radius: 0;
+}
+
+.gem .markdown-prose blockquote {
+	color: var(--gem-muted-color);
+	border-left: 0.25rem solid var(--gem-muted-color);
+	padding-left: 1em;
+	margin-left: 0;
+}
+
+.gem .markdown-prose table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1em 0;
+}
+
+.gem .markdown-prose table th,
+.gem .markdown-prose table td {
+	border: 1px solid var(--gem-border-color);
+	padding: 0.5em;
+}
+
+.gem .markdown-prose table th {
+	background-color: var(--gem-surface-color);
+	color: var(--gem-highlight-color);
+}
+
+.gem .markdown-prose table tr:nth-child(even) {
+	background-color: var(--gem-surface-color);
+}
+
+/* CodeMirror Editor Styles (using gem theme variables) */
+.gem .cm-editor {
+	border: 1px solid var(--gem-border-color);
+	border-radius: 0.5rem;
+	background-color: var(--gem-surface-color);
+	color: var(--gem-text-color);
+}
+
+.gem .cm-editor.cm-focused {
+	outline: 2px solid var(--gem-primary-color);
+	outline-offset: 1px;
+}
+
+.gem .cm-scroller {
+	/* Adjust scrollbar styles if needed, using gem variables */
+}
+
+.gem .cm-gutters {
+	background-color: var(--gem-surface-color);
+	color: var(--gem-muted-color);
+	border-right: 1px solid var(--gem-border-color);
+}
+
+.gem .cm-activeLine {
+	background-color: var(--gem-nav-bg-color); /* Using nav background for active line */
+}
+
+.gem .cm-gutterElement.cm-activeLineGutter {
+	background-color: var(--gem-nav-bg-color);
+}
+
+.gem .cm-selectionBackground,
+.gem .cm-content ::selection {
+	background-color: var(--gem-primary-color); /* Using primary color for selection */
+	color: var(--gem-text-color); /* Ensure text is readable on selection */
+}
+
+.gem .cm-line.cm-selected {
+	background-color: var(--gem-primary-color);
+}
+
+.gem .cm-selectionMatch {
+	background-color: var(--gem-highlight-color); /* Using highlight for selection match */
+	color: var(--gem-text-color);
+}
+
+/* Specific token colors (adjust based on CodeMirror token classes) */
+.gem .cm-comment { color: var(--gem-muted-color); }
+.gem .cm-property { color: var(--gem-primary-color); }
+.gem .cm-tag { color: var(--gem-highlight-color); }
+.gem .cm-attribute { color: var(--gem-stroke-color); }
+.gem .cm-string { color: var(--gem-stroke-color); }
+.gem .cm-operator { color: var(--gem-text-color); }
+/* Add more token classes as needed based on CodeMirror structure */
+
+/* Tippy.js Tooltip Styles (using gem theme variables) */
+.tippy-box[data-theme~='dark'] {
+	background-color: var(--gem-surface-color);
+	color: var(--gem-text-color);
+	border: 1px solid var(--gem-border-color);
+}
+
+.tippy-box[data-theme~='dark'] .tippy-arrow {
+	color: var(--gem-surface-color);
+}
+
+/* Scrollbar Styles (using gem theme variables) */
+.gem ::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+.gem ::-webkit-scrollbar-track {
+	background: var(--gem-bg-color);
+}
+
+.gem ::-webkit-scrollbar-thumb {
+	background: var(--gem-muted-color);
+	border-radius: 4px;
+}
+
+.gem ::-webkit-scrollbar-thumb:hover {
+	background: var(--gem-primary-color);
+}

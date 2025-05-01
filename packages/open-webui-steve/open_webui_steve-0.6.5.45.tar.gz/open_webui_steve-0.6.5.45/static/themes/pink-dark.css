@@ -1,0 +1,85 @@
+/* Pink Theme - Dark Mode */
+html.dark .pink {
+	--bg-app: #4b0082; /* Indigo */
+	--bg-nav: #800080; /* Purple */
+	--bg-content: #9932cc; /* Dark Orchid */
+	--bg-input: #483d8b; /* Dark Slate Blue */
+	--bg-input-container: #9932cc; /* Dark Orchid */
+	--bg-button: #ba55d3; /* Medium Orchid */
+	--bg-button-hover: #9370db; /* Medium Purple */
+	--bg-button-primary: #c71585; /* Medium Violet Red */
+	--bg-button-primary-hover: #d02090; /* Violet Red */
+	--bg-button-disabled: #696969; /* Dim Gray */
+	--bg-item: #7b68ee; /* Medium Slate Blue */
+	--bg-item-hover: #8a2be2; /* Blue Violet */
+	--bg-header: #555555; /* Darker Grey */
+	--bg-dropdown: #555555; /* Darker Grey */
+	--bg-dropdown-hover: #696969; /* Dim Gray */
+	--bg-modal: #9932cc; /* Dark Orchid */
+	--bg-textarea: #696969; /* Dim Gray */
+	--bg-control: #555555; /* Darker Grey */
+	--bg-control-hover: #696969; /* Dim Gray */
+	--bg-search: #555555; /* Darker Grey */
+
+	--text-color: #ffebf0; /* Lighter Pink */
+	--stroke-color: #ff85c1; /* Lighter Hot Pink */
+	--fill-color: #f0e6ff; /* Lighter Lavender */
+	--fill-button-icon: #e089a7; /* Lighter Pale Violet Red */
+
+	--primary-loader: #ff69b4; /* Hot Pink */
+	--secondary-loader: #ffebf0; /* Lighter Pink */
+	--primary-progress: #e089a7; /* Lighter Pale Violet Red */
+	--secondary-progress: #4b0082; /* Indigo */
+}
+
+/* Override Tailwind dark classes */
+html.dark .pink .bg-white.dark\:bg-gray-800 {
+	background: var(--bg-content);
+}
+
+html.dark .pink .bg-gradient-to-t.from-white.dark\:from-gray-800.from-40\%.pb-2 {
+	background: var(--bg-input-container) !important;
+}
+
+html.dark .pink .m-auto.rounded-xl.max-w-full.w-\[40rem\].mx-2.bg-gray-50.dark\:bg-gray-900.shadow-3xl {
+	background-color: var(--bg-modal);
+}
+
+html.dark .pink
+	.text-white.bg-gray-100.dark\:text-gray-800.dark\:bg-gray-600.disabled.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
+	background-color: var(--bg-button-disabled);
+}
+
+html.dark .pink
+	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
+	background-color: var(--bg-button);
+}
+
+html.dark .pink
+	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center:hover {
+    background-color: var(--bg-button-hover);
+}
+
+html.dark .pink
+	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.bg-gray-200.dark\:bg-gray-700 {
+	background-color: var(--bg-control);
+}
+
+html.dark .pink
+	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.hover\:bg-gray-300.dark\:hover\:bg-gray-800:hover {
+	background-color: var(--bg-control-hover);
+}
+
+html.dark .pink .text-xs.text-gray-700.uppercase.bg-gray-50.dark\:bg-gray-700.dark\:text-gray-400 {
+	background-color: var(--bg-header);
+}
+
+html.dark .pink
+	.w-full.rounded.p-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.resize-none {
+	background-color: var(--bg-textarea);
+}
+
+html.dark .pink
+	.w-full.rounded.py-2.px-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.svelte-1vx7r9s {
+	background-color: var(--bg-input);
+}

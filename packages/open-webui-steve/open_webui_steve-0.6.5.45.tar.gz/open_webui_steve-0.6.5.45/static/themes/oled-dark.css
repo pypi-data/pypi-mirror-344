@@ -1,0 +1,105 @@
+/* OLED Dark Theme - True Black Background */
+
+:root {
+  --text-color: #e0e0e0; /* Slightly lighter gray for text on pure black */
+  --bg-color: #1c1c1c; /* True black background */
+  --surface-color: #1c1c1c; /* Very dark gray surface */
+  --overlay-color: #2d2d2d; /* Slightly lighter overlay */
+  --muted-color: #a0a0a0; /* Muted text/borders */
+  --subtle-color: #555555; /* Subtle borders/backgrounds */
+  --primary-color: #7bb4ff; /* Slightly brighter blue primary */
+  --secondary-color: #a0a0a0; /* Lighter gray secondary */
+  --highlight-color: #2a4a7a; /* Darker blue highlight */
+  --border-color: var(--subtle-color); /* Default border */
+}
+
+.oled-dark body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+.oled-dark * {
+  border-color: var(--border-color) !important;
+}
+
+/* Add more specific overrides as needed */
+.oled-dark #nav {
+  background-color: var(--overlay-color);
+}
+
+.oled-dark .message.user {
+  background-color: var(--surface-color);
+}
+
+.oled-dark .message.assistant {
+   background-color: var(--bg-color); /* Keep assistant messages pure black */
+   border: 1px solid var(--border-color);
+}
+
+.oled-dark input,
+.oled-dark textarea,
+.oled-dark select {
+  background-color: var(--surface-color) !important;
+  color: var(--text-color) !important;
+
+}
+
+.oled-dark button {
+   color: var(--text-color) !important;
+   background-color: var(--surface-color) !important;
+ 
+}
+.oled-dark button:hover {
+   background-color: var(--highlight-color) !important;
+   border-color: var(--primary-color) !important;
+}
+
+/* OLED Dark theme checkbox styles */
+.oled-dark input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--muted-color);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+  background-color: var(--surface-color);
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.oled-dark input[type='checkbox']:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.oled-dark input[type='checkbox']:checked::before {
+  content: '';
+  display: block;
+  width: 0.3rem;
+  height: 0.6rem;
+  /* Use a contrasting color for the checkmark on dark backgrounds */
+  border: solid var(--bg-color); /* Checkmark color (use background for contrast) */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 0.25rem;
+  top: 0.05rem;
+}
+
+.oled-dark input[type='checkbox']:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 1px;
+}
+
+.oled-dark input[type='checkbox']:disabled {
+  background-color: var(--subtle-color);
+  border-color: var(--subtle-color);
+  cursor: not-allowed;
+}
+
+.oled-dark input[type='checkbox']:disabled:checked::before {
+  border-color: var(--muted-color);
+}

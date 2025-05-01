@@ -1,0 +1,85 @@
+/* Blue Theme - Dark Mode */
+html.dark .blue {
+	--bg-app: #00008b; /* Dark Blue */
+	--bg-nav: #0000cd; /* Medium Blue */
+	--bg-content: #4169e1; /* Royal Blue */
+	--bg-input: #6495ed; /* Cornflower Blue */
+	--bg-input-container: #4169e1; /* Royal Blue */
+	--bg-button: #191970; /* Midnight Blue */
+	--bg-button-hover: #000080; /* Navy */
+	--bg-button-primary: #4682b4; /* Steel Blue */
+	--bg-button-primary-hover: #5f9ea0; /* Cadet Blue */
+	--bg-button-disabled: #708090; /* Slate Gray */
+	--bg-item: #483d8b; /* Dark Slate Blue */
+	--bg-item-hover: #6a5acd; /* Slate Blue */
+	--bg-header: #333333; /* Dark Grey */
+	--bg-dropdown: #333333; /* Dark Grey */
+	--bg-dropdown-hover: #708090; /* Slate Gray */
+	--bg-modal: #4169e1; /* Royal Blue */
+	--bg-textarea: #708090; /* Slate Gray */
+	--bg-control: #333333; /* Dark Grey */
+	--bg-control-hover: #708090; /* Slate Gray */
+	--bg-search: #333333; /* Dark Grey */
+
+	--text-color: #b0c4de; /* Light Steel Blue */
+	--stroke-color: #87cefa; /* Light Sky Blue */
+	--fill-color: #778899; /* Light Slate Gray */
+	--fill-button-icon: #b0c4de; /* Light Steel Blue */
+
+	--primary-loader: #00bfff; /* Deep Sky Blue */
+	--secondary-loader: #b0c4de; /* Light Steel Blue */
+	--primary-progress: #778899; /* Light Slate Gray */
+	--secondary-progress: #00008b; /* Dark Blue */
+}
+
+/* Override Tailwind dark classes */
+html.dark .blue .bg-white.dark\:bg-gray-800 {
+	background: var(--bg-content);
+}
+
+html.dark .blue .bg-gradient-to-t.from-white.dark\:from-gray-800.from-40\%.pb-2 {
+	background: var(--bg-input-container) !important;
+}
+
+html.dark .blue .m-auto.rounded-xl.max-w-full.w-\[40rem\].mx-2.bg-gray-50.dark\:bg-gray-900.shadow-3xl {
+	background-color: var(--bg-modal);
+}
+
+html.dark .blue
+	.text-white.bg-gray-100.dark\:text-gray-800.dark\:bg-gray-600.disabled.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
+	background-color: var(--bg-button-disabled);
+}
+
+html.dark .blue
+	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
+	background-color: var(--bg-button);
+}
+
+html.dark .blue
+	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center:hover {
+    background-color: var(--bg-button-hover);
+}
+
+html.dark .blue
+	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.bg-gray-200.dark\:bg-gray-700 {
+	background-color: var(--bg-control);
+}
+
+html.dark .blue
+	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.hover\:bg-gray-300.dark\:hover\:bg-gray-800:hover {
+	background-color: var(--bg-control-hover);
+}
+
+html.dark .blue .text-xs.text-gray-700.uppercase.bg-gray-50.dark\:bg-gray-700.dark\:text-gray-400 {
+	background-color: var(--bg-header);
+}
+
+html.dark .blue
+	.w-full.rounded.p-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.resize-none {
+	background-color: var(--bg-textarea);
+}
+
+html.dark .blue
+	.w-full.rounded.py-2.px-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.svelte-1vx7r9s {
+	background-color: var(--bg-input);
+}

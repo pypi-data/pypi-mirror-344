@@ -1,0 +1,185 @@
+/* Blue Theme */
+.blue {
+	/* Light Mode Variables */
+	--bg-app: #e0ffff; /* Azure */
+	--bg-nav: #87cefa; /* Light Sky Blue */
+	--bg-content: #6495ed; /* Cornflower Blue */
+	--bg-input: #4169e1; /* Royal Blue */
+	--bg-input-container: #6495ed; /* Cornflower Blue */
+	--bg-button: #000080; /* Navy */
+	--bg-button-hover: #4682b4; /* Steel Blue */
+	--bg-button-primary: #00bfff; /* Deep Sky Blue */
+	--bg-button-primary-hover: #1e90ff; /* Dodger Blue */
+	--bg-button-disabled: #a9a9a9; /* Dark Gray */
+	--bg-item: #5f9ea0; /* Cadet Blue */
+	--bg-item-hover: #4682b4; /* Steel Blue */
+	--bg-header: #c0c0c0; /* Silver */
+	--bg-dropdown: #c0c0c0; /* Silver */
+	--bg-dropdown-hover: #a9a9a9; /* Dark Gray */
+	--bg-modal: #6495ed; /* Cornflower Blue */
+	--bg-textarea: #a9a9a9; /* Dark Gray */
+	--bg-control: #c0c0c0; /* Silver */
+	--bg-control-hover: #a9a9a9; /* Dark Gray */
+	--bg-search: #c0c0c0; /* Silver */
+
+	--text-color: #add8e6; /* Light Blue */
+	--stroke-color: #00bfff; /* Deep Sky Blue */
+	--fill-color: #4682b4; /* Steel Blue */
+	--fill-button-icon: #4682b4; /* Steel Blue */
+
+	--primary-loader: #0000ff; /* Blue */
+	--secondary-loader: #add8e6; /* Light Blue */
+	--primary-progress: #4682b4; /* Steel Blue */
+	--secondary-progress: #e0ffff; /* Azure */
+}
+
+
+/* General Styles */
+.blue * {
+	color: var(--text-color) !important;
+	stroke: var(--stroke-color) !important;
+}
+
+/* Backgrounds */
+.blue .app > * {
+	background-color: var(--bg-app) !important;
+}
+
+.blue #nav,
+.blue .py-2\.5.my-auto.flex.flex-col.justify-between.h-screen {
+	background: var(--bg-nav);
+}
+
+.blue .bg-white.dark\:bg-gray-800 { /* Keep this for Tailwind light mode */
+	background: var(--bg-content);
+}
+
+.blue #chat-input {
+	background: var(--bg-input);
+	margin: 0.3rem;
+	padding: 0.5rem;
+}
+
+.blue .bg-gradient-to-t.from-white.dark\:from-gray-800.from-40\%.pb-2 { /* Keep this for Tailwind light mode */
+	background: var(--bg-input-container) !important;
+	padding-top: 0.6rem;
+}
+
+.blue .m-auto.rounded-xl.max-w-full.w-\[40rem\].mx-2.bg-gray-50.dark\:bg-gray-900.shadow-3xl { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-modal);
+}
+
+.blue .base.enter.svelte-ug60r4 {
+	background-color: var(--bg-input); /* Assuming this is related to input/modal */
+}
+
+/* Buttons & Controls */
+.blue
+	.text-white.bg-gray-100.dark\:text-gray-800.dark\:bg-gray-600.disabled.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-button-disabled);
+	transition: background-color 0.2s ease-out linear;
+}
+
+.blue
+	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-button);
+	transition: background-color 0.2s ease-out linear;
+}
+.blue
+	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center:hover {
+    background-color: var(--bg-button-hover);
+}
+
+
+.blue .px-4.py-2.bg-emerald-600.hover\:bg-emerald-700.text-gray-100.transition.rounded {
+	background-color: var(--bg-button-primary);
+}
+.blue .px-4.py-2.bg-emerald-600.hover\:bg-emerald-700.text-gray-100.transition.rounded:hover {
+	background-color: var(--bg-button-primary-hover);
+}
+
+.blue
+	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.bg-gray-200.dark\:bg-gray-700 { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-control);
+}
+
+.blue
+	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.hover\:bg-gray-300.dark\:hover\:bg-gray-800:hover { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-control-hover);
+}
+
+
+/* List Items / Sidebar */
+.blue
+	.w-full.flex.justify-between.rounded-md.px-3.py-2.hover\:bg-gray-900.bg-gray-900.transition.whitespace-nowrap.text-ellipsis {
+	background-color: var(--bg-item);
+	font-weight: bold;
+}
+
+.blue .hover\:bg-gray-900:hover {
+	background-color: var(--bg-item-hover);
+}
+
+/* Table Header */
+.blue .text-xs.text-gray-700.uppercase.bg-gray-50.dark\:bg-gray-700.dark\:text-gray-400 { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-header);
+}
+
+/* Dropdown */
+.blue #dropdownDots {
+	background-color: var(--bg-dropdown);
+}
+
+.blue .flex.py-2\.5.px-3\.5.w-full.hover\:bg-gray-800.transition:hover {
+	background: var(--bg-dropdown-hover);
+}
+
+/* Textarea / Input */
+.blue
+	.w-full.rounded.p-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.resize-none { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-textarea);
+}
+
+.blue
+	.w-full.rounded.py-2.px-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.svelte-1vx7r9s { /* Keep this for Tailwind light mode */
+	background-color: var(--bg-input); /* Reusing input background */
+}
+
+/* Search */
+.blue #chat-search > * {
+	background-color: var(--bg-search) !important;
+}
+
+
+/* Fill Colors */
+.blue .w-4.h-4 {
+	fill: var(--fill-color);
+}
+
+.blue
+	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center
+	> * {
+	fill: var(--fill-button-icon) !important;
+	transition: fill 0.2s ease-out linear;
+}
+
+
+/* Other Specific Components */
+.blue .scrollbar-hidden.relative.overflow-x-auto.whitespace-nowrap.svelte-3g4avz {
+	border-radius: 16px 16px 0 0;
+}
+
+.blue .message.svelte-1nauejd {
+	color: var(--text-color) !important; /* Already handled by general rule, but kept for specificity */
+}
+
+/* Loaders / Progress */
+.blue .svelte-1ee93ns { /* Loader */
+	--primary: var(--primary-loader) !important;
+	--secondary: var(--secondary-loader) !important;
+}
+
+.blue .svelte-11kvm4p { /* Progress Bar? */
+	--primary: var(--primary-progress) !important;
+	--secondary: var(--secondary-progress) !important;
+}
