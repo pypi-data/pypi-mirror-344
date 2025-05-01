@@ -1,0 +1,65 @@
+Metadata-Version: 2.3
+Name: acace_llm_adapter
+Version: 0.1.0
+Summary: LLM adapter utilities for ACACE
+Author: ACACE Team
+Author-email: team@acace.ai
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: anthropic (>=0.18.1,<0.19.0)
+Requires-Dist: numpy (>=1.26.3,<2.0.0)
+Requires-Dist: openai (>=1.12.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# ACACE LLM Adapter
+
+A Language Model adapter module for the Adaptive Context-Aware Content Engine (ACACE).
+
+## Features
+
+- OpenAI API integration
+- Anthropic API integration
+- Unified interface for multiple LLM providers
+- Error handling and retries
+
+## Installation
+
+```bash
+pip install acace_llm_adapter
+```
+
+## Usage
+
+```python
+from acace_llm_adapter import LLMAdapter
+
+# Initialize with your API keys
+adapter = LLMAdapter(
+    openai_api_key="your-openai-key",
+    anthropic_api_key="your-anthropic-key"
+)
+
+# Generate content using OpenAI
+response = adapter.generate(
+    "Write a short story about a robot learning to paint.",
+    provider="openai",
+    model="gpt-4"
+)
+
+# Generate content using Anthropic
+response = adapter.generate(
+    "Write a short story about a robot learning to paint.",
+    provider="anthropic",
+    model="claude-3-opus-20240229"
+)
+```
+
+## License
+
+MIT License 
