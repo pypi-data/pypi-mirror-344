@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: ZAE0N_test
+Version: 0.0.1
+Summary: test file
+Home-page: 
+Author: ZAE0N
+Author-email: jeon020526@gmail.com
+Keywords: test,ZAE0N,python workout 8.2,python tutorial,pypi
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: keywords
+Dynamic: requires-python
+Dynamic: summary
