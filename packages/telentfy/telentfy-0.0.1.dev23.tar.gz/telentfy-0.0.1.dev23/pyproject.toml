@@ -1,0 +1,85 @@
+[build-system]
+requires = ["poetry-core", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[project]
+name = "telentfy"
+dynamic = ["version"]
+
+[tool.poetry]
+name = "telentfy"
+description = "Library for sending simple text notifications to ntfy.sh and Telegram channels."
+authors = ["ljbcloud <206458089+ljbcloud@users.noreply.github.com>"]
+readme = "README.md"
+version = "0.0.1.dev23"
+
+[tool.poetry.dependencies]
+aiohttp = "^3.11.18"
+pydantic-settings = "^2.7.0"
+python = ">=3.9"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+invoke = "^2.2.0"
+isort = "^6.0.1"
+pytest = "^8.3.3"
+ruff = "^0.11.7"
+mypy = "^1.3.0"
+bumpver = "^2024.1130"
+
+[tool.poetry.requires-plugins]
+poetry-dynamic-versioning = { version = ">=1.0.0,<2.0.0", extras = ["plugin"] }
+
+[tool.poetry-dynamic-versioning]
+enable = false
+style = "pep440"
+metadata = false
+bump = true
+fix-shallow-repository = true
+
+[tool.black]
+line-length = 88
+target-version = ['py313']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.bumpver]
+current_version = "0.0.2"
+version_pattern = "MAJOR.MINOR.PATCH"
+# below fields are optional, default value is false
+commit_message = "chore: update version {old_version} -> {new_version}"
+commit = true # creates a new commit for the version update with the above defined messag
+push = true # pushes the commit automatically to github
+
+[tool.bumpver.file_patterns]
+"telentfy/__init__.py" = [
+    '^__version__ = "{version}"$',
+]
+"pyproject.toml" = [
+    '^version = "{version}"$'
+]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 88
+
+[tool.ruff]
+# enable pyflakes `E` and `F` codes by default
+select = ["E", "F"]
+ignore = ["E501", "E741"]
