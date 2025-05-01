@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-opensearch = mcp_server_opensearch:main
