@@ -1,0 +1,9 @@
+README.md
+setup.py
+zeroc/__init__.py
+zeroc/compiler.py
+zeroc/runtime.py
+zeroc.egg-info/PKG-INFO
+zeroc.egg-info/SOURCES.txt
+zeroc.egg-info/dependency_links.txt
+zeroc.egg-info/top_level.txt
