@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/dfs_interface.py
+src/dfs_utils.py
+src/pci_dfs_manager.py
+src/pci_dfs_manager_with_trip_point.py
+src/usb_dfs_manager.py
+src/edgetpu_dfs.egg-info/PKG-INFO
+src/edgetpu_dfs.egg-info/SOURCES.txt
+src/edgetpu_dfs.egg-info/dependency_links.txt
+src/edgetpu_dfs.egg-info/top_level.txt
