@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+togmito.egg-info/PKG-INFO
+togmito.egg-info/SOURCES.txt
+togmito.egg-info/dependency_links.txt
+togmito.egg-info/requires.txt
+togmito.egg-info/top_level.txt
