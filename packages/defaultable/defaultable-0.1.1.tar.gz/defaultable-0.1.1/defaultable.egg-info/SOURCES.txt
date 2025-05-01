@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+defaultable/__init__.py
+defaultable/defaultable.py
+defaultable.egg-info/PKG-INFO
+defaultable.egg-info/SOURCES.txt
+defaultable.egg-info/dependency_links.txt
+defaultable.egg-info/top_level.txt
