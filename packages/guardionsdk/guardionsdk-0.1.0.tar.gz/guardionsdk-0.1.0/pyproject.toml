@@ -1,0 +1,30 @@
+[project]
+name = "guardionsdk"
+version = "0.1.0"
+description = "The Guardion AI SDK"
+homepage = "https://guardion.ai"
+maintainers = [
+    {name = "Guardion.ai", email = "opensource@guardion.ai"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28.1",
+    "requests>=2.32.3",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
+
+[project.optional-dependencies]
+langchain = [
+    "langchain>=0.3.24",
+    "langchain-community>=0.3.23",
+    "langchain-core>=0.3.56",
+    "langchain-openai>=0.3.14",
+]
+openai_agents = [
+    "openai-agents>=0.0.13",
+]
