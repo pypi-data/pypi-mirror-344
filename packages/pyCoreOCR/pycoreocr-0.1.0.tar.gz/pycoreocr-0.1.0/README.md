@@ -1,0 +1,102 @@
+# pyCoreOCR
+
+Python wrapper for the [CoreOCR](https://github.com/LESIM-Co-Ltd/CoreOCR) Swift library, providing easy access to macOS Vision framework's text recognition capabilities from Python.
+
+## Features
+
+*   Recognize text from image files (PNG, JPG, etc.) and PDF documents.
+*   Supports specifying recognition languages or using automatic detection.
+*   Configurable recognition level (`accurate` vs. `fast`).
+*   Option to preserve text order for PDF files.
+
+## Requirements
+
+*   **macOS:** This library relies heavily on Apple's Vision and PDFKit frameworks, which are only available on macOS (10.15 Catalina or later).
+*   **Xcode Command Line Tools or Swift Toolchain:** Required to build the underlying Swift library during installation.
+*   **Python:** >= 3.8 (as specified in `pyproject.toml`)
+
+## Installation
+
+**From PyPI (Recommended once published):**
+
+```bash
+pip install pycoreocr
+```
+
+**From Source (Current method):**
+
+1.  Clone the repository including the submodule:
+    ```bash
+    git clone --recurse-submodules https://github.com/LESIM-Co-Ltd/pyCoreOCR.git
+    cd pyCoreOCR
+    ```
+    (If you cloned without `--recurse-submodules`, run `git submodule update --init --recursive` inside the `pyCoreOCR` directory.)
+
+2.  Install the package. This will build the Swift library first:
+    ```bash
+    pip install .
+    ```
+    *(For development, use `pip install -e .`)*
+
+
+## Usage
+
+```python
+import pyCoreOCR
+
+image_path = "path/to/your/image.png"
+pdf_path = "path/to/your/document.pdf"
+
+try:
+    # Recognize text from an image (specify English and Japanese)
+    image_text = pyCoreOCR.recognize_text(image_path, languages=['en-US', 'ja-JP'])
+    print("--- Image Text ---")
+    print(image_text)
+
+    # Recognize text from a PDF (using default settings: accurate, preserve order)
+    pdf_text = pyCoreOCR.recognize_text(pdf_path)
+    print("\n--- PDF Text (Accurate, Preserved Order) ---")
+    # print(pdf_text) # Potentially very long output
+    print(pdf_text[:500] + "...") # Print first 500 characters
+
+    # Recognize text from PDF faster (but potentially less accurate/stable)
+    # Note: level='fast' might cause issues with some PDFs.
+    # pdf_text_fast = pyCoreOCR.recognize_text(pdf_path, level='fast', preserve_order=False)
+    # print("\n--- PDF Text (Fast, Order Not Preserved) ---")
+    # print(pdf_text_fast[:500] + "...")
+
+except FileNotFoundError:
+    print("Error: Input file not found.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+```
+
+**Parameters for `recognize_text`:**
+
+*   `file_path` (str): Path to the image or PDF file.
+*   `languages` (Optional[List[str]]): List of language codes (e.g., `["en-US", "ja-JP"]`) for recognition. Defaults to `None` (auto-detection).
+*   `level` (str): Recognition level, either `'accurate'` (default) or `'fast'`. `'fast'` might be unstable for some PDFs.
+*   `preserve_order` (bool): For PDF files, whether to process pages sequentially to preserve text order (default: `True`).
+
+
+## Development
+
+1.  Clone the repository with submodules:
+    ```bash
+    git clone --recurse-submodules https://github.com/LESIM-Co-Ltd/pyCoreOCR.git
+    cd pyCoreOCR
+    ```
+2.  Install in editable mode:
+    ```bash
+    pip install -e .
+    ```
+This allows you to modify the Python code and have the changes reflected without reinstalling. If you modify the Swift code in the `CoreOCR` submodule, you need to run `pip install -e .` again to rebuild the Swift library.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+(Contributions are welcome! Please refer to contribution guidelines - if any) 

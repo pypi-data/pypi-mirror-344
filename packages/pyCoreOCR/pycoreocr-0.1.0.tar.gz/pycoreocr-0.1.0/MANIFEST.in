@@ -1,0 +1,13 @@
+# Include the CoreOCR submodule recursively
+graft CoreOCR
+
+# Exclude the submodule's .git directory
+prune CoreOCR/.git
+
+# Include standard files if not already covered
+include pyproject.toml
+include setup.py
+include README.md
+include LICENSE
+global-include pyCoreOCR/*.py
+global-include pyCoreOCR/*.dylib 

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyCoreOCR"
+version = "0.1.0"
+authors = [
+  { name="LESIM Co., Ltd.", email="s.kanagu@le-sim.com" },
+]
+description = "Python wrapper for the LESIM-Co-Ltd/CoreOCR Swift library, enabling macOS Vision OCR from Python."
+readme = "README.md"
+requires-python = ">=3.8"
+# SPDX-License-Identifier: MIT
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: MacOS",
+    # "Framework :: Vision", # Removed invalid classifier
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: General",
+]
+# dependencies = [] # Add any pure Python dependencies here if needed
+
+[project.urls]
+"Homepage" = "https://github.com/LESIM-Co-Ltd/pyCoreOCR"
+"Bug Tracker" = "https://github.com/LESIM-Co-Ltd/pyCoreOCR/issues"
+"Source" = "https://github.com/LESIM-Co-Ltd/pyCoreOCR"
+
+# --- Setuptools package discovery ---
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pyCoreOCR*"]
+exclude = ["CoreOCR*"] 
