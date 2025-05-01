@@ -1,0 +1,15 @@
+cookiesManager/__init__.py,sha256=rLIg9VX-3YdaD49rjhCoOw0EI5gn3eQ9FeTRYOXHWVI,42
+cookiesManager/cookiesManager.py,sha256=VqWd2mbnx8b5vDkcMy8lFu33FvsMyX6dRB7WiZw_3G8,8189
+extensionsManager/__init__.py,sha256=rzk1La6RlKmNWpebEC-MDhL4lSZAq7XwKQQMu16dlq8,48
+extensionsManager/extensionsManager.py,sha256=L2tqlKAQqUazqHgalANYYHNtLK-t_lvDr5W4XOvpPsE,3105
+glogin-2025.5.730.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gologin/__init__.py,sha256=rsku3JHOIob-3KqSYkiNx6yudRYztlDDshZJUXbEND0,63
+gologin/gologin.py,sha256=pWFNbATFA1Oc0GwoWX5Jt-2JwTEnRsAGN2K_Dd5qQII,35588
+gologin/cookiesManager/__init__.py,sha256=rLIg9VX-3YdaD49rjhCoOw0EI5gn3eQ9FeTRYOXHWVI,42
+gologin/cookiesManager/cookiesManager.py,sha256=VqWd2mbnx8b5vDkcMy8lFu33FvsMyX6dRB7WiZw_3G8,8189
+gologin/extensionsManager/__init__.py,sha256=rzk1La6RlKmNWpebEC-MDhL4lSZAq7XwKQQMu16dlq8,48
+gologin/extensionsManager/extensionsManager.py,sha256=L2tqlKAQqUazqHgalANYYHNtLK-t_lvDr5W4XOvpPsE,3105
+glogin-2025.5.730.dist-info/METADATA,sha256=DVm4vTNAFomYpwnWnda7qemiykoNH1yUzuDqDWn1L9g,360
+glogin-2025.5.730.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+glogin-2025.5.730.dist-info/top_level.txt,sha256=7AsMwo8jocJZbwKcslTJAzDtNwIu-c0MpNn91Trq9iM,33
+glogin-2025.5.730.dist-info/RECORD,,
