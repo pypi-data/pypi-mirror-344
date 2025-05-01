@@ -1,0 +1,7 @@
+llama_index/llms/google_genai/__init__.py,sha256=DcPnH8Wf0RD6XUGHVv_1BU0QrhauLbqM5AEDzktXdP8,86
+llama_index/llms/google_genai/base.py,sha256=3CGtTuleSQv0VaIfBQLAC2m7EhSNZyscEuJ6R9LZhJ8,23063
+llama_index/llms/google_genai/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llama_index/llms/google_genai/utils.py,sha256=JvR9nUD2KsdOhXlbUNq09D974tRI4kRdkFnhQa1fa7A,11448
+llama_index_llms_google_genai-0.1.10.dist-info/METADATA,sha256=fNz0msH_A17q2G_RTvn8Dvg8zagEHeJT69-F2aL8d9U,2972
+llama_index_llms_google_genai-0.1.10.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+llama_index_llms_google_genai-0.1.10.dist-info/RECORD,,
