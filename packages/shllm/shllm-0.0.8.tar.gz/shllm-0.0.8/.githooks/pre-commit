@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Get the current version from the local pyproject.toml
+LOCAL_VERSION=$(grep -m 1 'version' pyproject.toml | cut -d '"' -f 2)
+
+# Check if there are any commits yet
+if ! git rev-parse --verify HEAD >/dev/null 2>&1; then
+    # First commit, no version to compare against
+    echo "Initial commit, no version to compare against."
+    exit 0
+fi
+
+# Get the version from the last commit's pyproject.toml
+PREVIOUS_VERSION=$(git show HEAD:pyproject.toml | grep -m 1 'version' | cut -d '"' -f 2)
+
+# Compare versions (we're just checking if they're different)
+if [ "$LOCAL_VERSION" = "$PREVIOUS_VERSION" ] && [ -n "$(git diff --staged --name-only pyproject.toml)" ]; then
+    echo "Error: pyproject.toml modified but version not bumped."
+    echo "Current version: $LOCAL_VERSION"
+    echo "Previous version: $PREVIOUS_VERSION"
+    echo "Please update the version in pyproject.toml before committing."
+    exit 1
+fi
+
+exit 0 
