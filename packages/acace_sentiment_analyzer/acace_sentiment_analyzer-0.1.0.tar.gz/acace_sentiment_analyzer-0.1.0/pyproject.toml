@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "acace_sentiment_analyzer"
+version = "0.1.0"
+description = "Sentiment analysis utilities for ACACE"
+authors = ["ACACE Team <team@acace.ai>"]
+readme = "README.md"
+packages = [{include = "acace_sentiment_analyzer", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+nltk = "^3.8.1"
+spacy = "^3.7.2"
+transformers = "^4.37.2"
+numpy = "^1.26.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
