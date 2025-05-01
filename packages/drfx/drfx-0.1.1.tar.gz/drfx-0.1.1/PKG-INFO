@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: drfx
+Version: 0.1.1
+Summary: Optimized and performance Django Rest Framework Extensions
+Author-email: Dmitrii <you@example.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: djangorestframework>=3.16.0
+Dynamic: license-file
+
+![PyPI](https://img.shields.io/pypi/v/drfx)
+
+# Optimized and performance DRF Extension
+
+### Follow me
+
+👨🏻‍💻[LinkedIn](https://www.linkedin.com/in/dvbashak/) | 📷 [Instagram](https://instagram.com/d.v.bashak)
