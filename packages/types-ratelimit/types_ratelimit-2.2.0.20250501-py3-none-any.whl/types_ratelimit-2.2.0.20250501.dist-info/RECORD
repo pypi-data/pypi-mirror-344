@@ -1,0 +1,10 @@
+ratelimit-stubs/METADATA.toml,sha256=9mdIGtGZw5rZO9oGrdxo2BEvBBypORy-WFxMLbyCgqo,83
+ratelimit-stubs/__init__.pyi,sha256=A2Z83TEuINquFQy-19MQ3Wh22lNTDWdYSPZzMMkJOR8,262
+ratelimit-stubs/decorators.pyi,sha256=8PY0Yl_EeKRe4I4La_KzidWWCBLEVH3SLMZu7tupkWY,465
+ratelimit-stubs/exception.pyi,sha256=IJfBGsXOXVkB6CQ8TvKxKxg9_4npqwHXDn2YPTLHt5o,140
+ratelimit-stubs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+types_ratelimit-2.2.0.20250501.dist-info/licenses/LICENSE,sha256=KV-FOMlK5cMEMwHPfP8chS2ranhqjd7kceBhtA1eyr4,12657
+types_ratelimit-2.2.0.20250501.dist-info/METADATA,sha256=jkHOiUuF9Da3qOBVU99QGh4orTQWTgxizpxEPShhzUo,1835
+types_ratelimit-2.2.0.20250501.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+types_ratelimit-2.2.0.20250501.dist-info/top_level.txt,sha256=eR5iGyQ3sc2eiIJKpbsXKeBDZKZ5dzmDLxCFfBWkOe4,16
+types_ratelimit-2.2.0.20250501.dist-info/RECORD,,
