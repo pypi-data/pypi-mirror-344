@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: mcp-http-proxy
+Version: 0.0.0
+Summary: A stable Model Connection Protocol implementation using HTTP and stdio to eliminate SSE connection reliability issues while maintaining full compatibility with existing MCP clients.
+Project-URL: Homepage, https://github.com/gmr/mcp-http-proxy
+Project-URL: Bug Tracker, https://github.com/gmr/mcp-http-proxy/issues
+Author-email: "Gavin M. Roy" <gavinr@aweber.com>
+License-Expression: BSD-3-Clause
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.12
+Requires-Dist: httpx
+Provides-Extra: dev
+Requires-Dist: build; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Description-Content-Type: text/markdown
+
+mcp-http-proxy
+==============
+A stable Model Connection Protocol implementation using HTTP and stdio to eliminate SSE connection reliability issues while maintaining full compatibility with existing MCP clients.
