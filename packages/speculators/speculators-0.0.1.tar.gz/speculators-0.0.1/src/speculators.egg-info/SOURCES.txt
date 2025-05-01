@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/speculators/__init__.py
+src/speculators/version.py
+src/speculators.egg-info/PKG-INFO
+src/speculators.egg-info/SOURCES.txt
+src/speculators.egg-info/dependency_links.txt
+src/speculators.egg-info/requires.txt
+src/speculators.egg-info/top_level.txt

@@ -1,0 +1,6 @@
+version = "0.0.1"
+build_type = "release"
+build_iteration = "0"
+git_commit = "b1ecb366d13041f73a9de7ecf78443e950778785"
+git_branch = "HEAD"
+git_last_tag = "v0.0.1"
