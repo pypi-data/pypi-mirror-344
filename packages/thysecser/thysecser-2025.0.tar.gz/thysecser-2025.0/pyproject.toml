@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thysecser"
+description = "Thycotic Secret Server API client"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dynamic = ["version"]
+dependencies = [
+    "requests>=2.32.3",
+]
+
+[[project.authors]]
+name = "William Jackson"
+email = "wjackson@informatica.com"
+
+[project.urls]
+"Homepage" = "https://github.com/informatica-na-presales-ops/thycotic-secret-server-api"
+"Issues" = "https://github.com/informatica-na-presales-ops/thycotic-secret-server-api/issues"
+
+[tool.setuptools.dynamic]
+version.attr = "thysecser.__version__"

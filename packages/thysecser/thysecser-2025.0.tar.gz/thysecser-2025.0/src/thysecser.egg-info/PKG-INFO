@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: thysecser
+Version: 2025.0
+Summary: Thycotic Secret Server API client
+Author-email: William Jackson <wjackson@informatica.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/informatica-na-presales-ops/thycotic-secret-server-api
+Project-URL: Issues, https://github.com/informatica-na-presales-ops/thycotic-secret-server-api/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.32.3
+
+# thycotic-secret-server-api
