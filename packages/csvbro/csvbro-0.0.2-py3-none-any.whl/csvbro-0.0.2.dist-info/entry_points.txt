@@ -1,0 +1,2 @@
+[console_scripts]
+csvbro = main:main
