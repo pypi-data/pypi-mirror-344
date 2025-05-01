@@ -1,0 +1,3 @@
+[console_scripts]
+lefttest = left.lefttest:main
+lt = left.lefttest:main
