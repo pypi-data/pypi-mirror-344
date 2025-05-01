@@ -1,0 +1,146 @@
+Metadata-Version: 2.4
+Name: berricake
+Version: 0.1.3
+Summary: a modular simulation software. 
+Author: zhc1993
+Author-email: 
+Keywords: python,simulate,berricake,windows
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: colorama
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: summary
+
+
+# 软件名称
+
+## <u>BerriCake</u>
+
+## 概述
+
+这是一个模块化构建能源系统仿真的实用工具库，计划用来构建光伏、风力发电等系统，后续会补充其他可再生能源模块。
+
+- 简单的光伏模块
+- 简单的风力发电模块
+- 阴影表面组计算模块
+
+本软件依赖于 `scipy` 和 `numpy` 等科学计算库，以下是详细的安装和使用说明。
+
+## 环境要求
+
+- Python 3.12
+- `pip` 包管理工具
+
+```
+colorama==0.4.6
+numpy==2.2.5
+scipy==1.15.2
+setuptools==79.0.0
+```
+
+## 安装程序
+
+```commandline
+pip install barricake
+```
+
+
+
+## 使用示例
+
+首先编辑配置文件示例
+
+```
+!- in.txt
+! 地点信息部分
+Site,
+    Shenyang,          !- 站点名称
+    8,                 !- 时区
+    41.8,              !- 纬度（单位：度）
+    123.43,            !- 经度（单位：度）
+    45;                !- 海拔高度（单位：米）
+
+! 模拟控制相关设置
+SimulationControl,
+    No,                !- 是否针对 sizing periods 运行模拟，No 表示不运行
+    Yes,               !- 是否针对 run periods 运行模拟，Yes 表示运行
+    50;                !- 每个模拟步骤的最大迭代次数
+
+! 时间步长设置
+Timestep,
+    3600.0;            !- 每个时间步长的秒数
+
+! 运行周期设置
+RunPeriod,
+    Annual_Simulation_2025,  !- 运行周期名称
+    2025,               !- 开始年份
+    1,                  !- 开始月份
+    1,                  !- 开始日期（当月的第几天）
+    2025,               !- 结束年份
+    12,                 !- 结束月份
+    31;                 !- 结束日期（当月的第几天）
+
+! EPW 文件读取器设置
+EPWReader,
+    weather_shenyang,                       !- 名称
+    CHN_Liaoning.Shenyang.543420_CSWD.epw;  !- EPW 文件路径
+
+! 风力模块设置
+WindModule,
+    wind,  !- 风力模块名称
+    1,     !- 风力发电容量（单位：千瓦）
+    0;     !- 风速（单位：米/秒）
+
+! 输出设置
+Output,
+    out,                             !- 输出名称
+    C:\Users\29574\Desktop\out.csv,  !- 输出文件路径
+    wind_power;                      !- 输出变量名称
+
+! 链接设置，连接气象数据的风速变量到风力模块的风速变量
+Link,
+    weather_shenyang,      !- 源对象名称（来自气象数据文件读取器）
+    wind_speed,            !- 源对象的变量名称（风速）
+    wind,                  !- 目标对象名称（风力模块）
+    wind_speed;            !- 目标对象的变量名称（风速）
+
+! 链接设置，连接风力模块的功率变量到输出文件的风力功率变量
+Link,
+    wind,                  !- 源对象名称（风力模块）
+    power,                 !- 源对象的变量名称（功率）
+    out,                   !- 目标对象名称（输出模块）
+    wind_power;            !- 目标对象的变量名称（风力功率）
+```
+
+> 上述输入文件配置了3类对象，分别是全局参数、基本组件和链接。
+
+然后创建代码
+
+```python
+# -*- coding: utf-8 -*-
+from core.berricake import BerriCake
+
+if __name__ == "__main__":
+    file_path = 'in.txt'      # 输入文件路径
+    bc = BerriCake(file_path) # 创建 Manager 实例
+    bc.run()                  # 运行
+```
+
+
+
+
+# 更新日志
+
+2025-05-01 `0.1.3`  新增简单的光伏计算模块
+2025-04-28 `0.1.2`  第一个能正常运行的版本 
+2025-04-28 `0.1.0`  第一个发布版本 删除了 
