@@ -1,0 +1,8 @@
+wheel_metadata_injector-0.0.1rc2.dist-info/METADATA,sha256=_yKvdQevAfvr50UXKCkO8yp3xyPdSjN_U_cItTqLFwk,6418
+wheel_metadata_injector-0.0.1rc2.dist-info/WHEEL,sha256=0K3nS5NcvBfwyzD9Fb9yH2bwkQqFXLpvsAYq_MgfaOo,127
+wheel_metadata_injector-0.0.1rc2.dist-info/entry_points.txt,sha256=S-nwMJ_PnmEBcEQEcqsEBahWo91Uz9CYEbg0AvsJetA,176
+wheel_metadata_injector/cli.py,sha256=DMAgi62CFmnI3G0HKAFfAgfc7KytLPc9dErAm9UqGHU,2294
+wheel_metadata_injector/setuptools_plugin.py,sha256=CGyTFPHhZsAzjfhZoXwFtH2bx2ZWioJNuc2G9DPmRWw,3925
+wheel_metadata_injector/__init__.py,sha256=6V8oBB9rYXz1pSDNzy8uZ96E-X57Bo_WYs1CY_wXuuA,535
+wheel_metadata_injector/_wheel_metadata_injector.abi3.so,sha256=2cdgO7RR1affxC2Qn_nM6-x-B2EP92kPJ9-dCwNgNUc,2274880
+wheel_metadata_injector-0.0.1rc2.dist-info/RECORD,,
