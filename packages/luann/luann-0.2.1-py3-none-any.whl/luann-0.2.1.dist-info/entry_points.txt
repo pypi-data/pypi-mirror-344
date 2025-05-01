@@ -1,0 +1,3 @@
+[console_scripts]
+luann=luann.main:app
+

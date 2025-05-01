@@ -1,0 +1,280 @@
+Date : 2025-03-07 17:33:41
+Directory : d:\Luann_Project\luann
+Total : 205 files,  41055 codes, 3679 comments, 5990 blanks, all 50724 lines
+
+Languages
++--------------+------------+------------+------------+------------+------------+
+| language     | files      | code       | comment    | blank      | total      |
++--------------+------------+------------+------------+------------+------------+
+| Python       |        197 |     25,643 |      3,568 |      5,958 |     35,169 |
+| JSON         |          2 |     15,237 |          0 |          0 |     15,237 |
+| JavaScript   |          1 |         96 |        100 |         13 |        209 |
+| Shell Script |          2 |         40 |         11 |         12 |         63 |
+| HTML         |          1 |         36 |          0 |          4 |         40 |
+| Markdown     |          1 |          2 |          0 |          2 |          4 |
+| CSS          |          1 |          1 |          0 |          1 |          2 |
++--------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                       | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                          |        205 |     41,055 |      3,679 |      5,990 |     50,724 |
+| . (Files)                                                                                  |         20 |     18,874 |        667 |        819 |     20,360 |
+| cli                                                                                        |          3 |        316 |        119 |         90 |        525 |
+| client                                                                                     |          4 |      3,052 |        142 |        675 |      3,869 |
+| data_sources                                                                               |          2 |        203 |         10 |         53 |        266 |
+| functions                                                                                  |          8 |      1,120 |        192 |        258 |      1,570 |
+| functions (Files)                                                                          |          4 |        730 |        165 |        151 |      1,046 |
+| functions\function_sets                                                                    |          4 |        390 |         27 |        107 |        524 |
+| helpers                                                                                    |          2 |        107 |          8 |         27 |        142 |
+| humans                                                                                     |          1 |          0 |          0 |          1 |          1 |
+| llm_api                                                                                    |          6 |      1,006 |        252 |        247 |      1,505 |
+| local_llm                                                                                  |         36 |      4,123 |        588 |        823 |      5,534 |
+| local_llm (Files)                                                                          |          7 |        634 |         96 |        142 |        872 |
+| local_llm\grammars                                                                         |          2 |      1,058 |         50 |        217 |      1,325 |
+| local_llm\groq                                                                             |          1 |         56 |         29 |         13 |         98 |
+| local_llm\koboldcpp                                                                        |          2 |         57 |         16 |         14 |         87 |
+| local_llm\llamacpp                                                                         |          2 |         54 |         14 |         14 |         82 |
+| local_llm\llm_chat_completion_wrappers                                                     |          9 |      1,836 |        265 |        331 |      2,432 |
+| local_llm\lmstudio                                                                         |          2 |         83 |         29 |         19 |        131 |
+| local_llm\ollama                                                                           |          2 |         77 |         30 |         16 |        123 |
+| local_llm\settings                                                                         |          4 |        108 |         28 |         15 |        151 |
+| local_llm\vllm                                                                             |          1 |         44 |          6 |         14 |         64 |
+| local_llm\webui                                                                            |          4 |        116 |         25 |         28 |        169 |
+| openai_backcompat                                                                          |          2 |        343 |         37 |         67 |        447 |
+| orm                                                                                        |         27 |      1,434 |        158 |        416 |      2,008 |
+| personas                                                                                   |          1 |          0 |          0 |          1 |          1 |
+| prompts                                                                                    |          3 |         32 |          4 |          7 |         43 |
+| schemas                                                                                    |         33 |      3,104 |        469 |        887 |      4,460 |
+| schemas (Files)                                                                            |         28 |      2,736 |        432 |        736 |      3,904 |
+| schemas\openai                                                                             |          5 |        368 |         37 |        151 |        556 |
+| server                                                                                     |         40 |      4,367 |        742 |      1,060 |      6,169 |
+| server (Files)                                                                             |          6 |      1,033 |        205 |        253 |      1,491 |
+| server\rest_api                                                                            |         26 |      2,854 |        407 |        689 |      3,950 |
+| server\rest_api (Files)                                                                    |          8 |      1,275 |        342 |        330 |      1,947 |
+| server\rest_api\auth                                                                       |          2 |         30 |          0 |         15 |         45 |
+| server\rest_api\routers                                                                    |         16 |      1,549 |         65 |        344 |      1,958 |
+| server\rest_api\routers\openai                                                             |          2 |        122 |         13 |         28 |        163 |
+| server\rest_api\routers\openai\chat_completions                                            |          2 |        122 |         13 |         28 |        163 |
+| server\rest_api\routers\v1                                                                 |         14 |      1,427 |         52 |        316 |      1,795 |
+| server\static_files                                                                        |          3 |        133 |        100 |         18 |        251 |
+| server\static_files (Files)                                                                |          1 |         36 |          0 |          4 |         40 |
+| server\static_files\assets                                                                 |          2 |         97 |        100 |         14 |        211 |
+| server\ws_api                                                                              |          5 |        347 |         30 |        100 |        477 |
+| services                                                                                   |         17 |      2,974 |        291 |        559 |      3,824 |
+| services (Files)                                                                           |         15 |      2,765 |        269 |        512 |      3,546 |
+| services\helpers                                                                           |          2 |        209 |         22 |         47 |        278 |
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------+--------------+------------+------------+------------+------------+
+| filename                                                                                   | language     | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------+--------------+------------+------------+------------+------------+
+| d:\Luann_Project\luann\__init__.py                                                         | Python       |          1 |          0 |          0 |          1 |
+| d:\Luann_Project\luann\__main__.py                                                         | Python       |          2 |          0 |          2 |          4 |
+| d:\Luann_Project\luann\agent.py                                                            | Python       |        850 |        172 |        142 |      1,164 |
+| d:\Luann_Project\luann\chat_only_agent.py                                                  | Python       |         89 |          0 |         13 |        102 |
+| d:\Luann_Project\luann\cli\cli.py                                                          | Python       |         96 |          3 |         25 |        124 |
+| d:\Luann_Project\luann\cli\cli_config.py                                                   | Python       |        173 |        111 |         48 |        332 |
+| d:\Luann_Project\luann\cli\cli_load.py                                                     | Python       |         47 |          5 |         17 |         69 |
+| d:\Luann_Project\luann\client\__init__.py                                                  | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\client\client.py                                                    | Python       |      2,920 |        131 |        649 |      3,700 |
+| d:\Luann_Project\luann\client\streaming.py                                                 | Python       |         66 |         10 |         13 |         89 |
+| d:\Luann_Project\luann\client\utils.py                                                     | Python       |         66 |          1 |         12 |         79 |
+| d:\Luann_Project\luann\config.py                                                           | Python       |        126 |        135 |         50 |        311 |
+| d:\Luann_Project\luann\constants.py                                                        | Python       |        107 |         62 |         22 |        191 |
+| d:\Luann_Project\luann\data_sources\connectors.py                                          | Python       |        128 |          8 |         32 |        168 |
+| d:\Luann_Project\luann\data_sources\connectors_helper.py                                   | Python       |         75 |          2 |         21 |         98 |
+| d:\Luann_Project\luann\embeddings.py                                                       | Python       |        151 |         34 |         54 |        239 |
+| d:\Luann_Project\luann\errors.py                                                           | Python       |         96 |          2 |         56 |        154 |
+| d:\Luann_Project\luann\functions\__init__.py                                               | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\functions\function_sets\ast_parsers.py                              | Python       |         79 |          6 |         21 |        106 |
+| d:\Luann_Project\luann\functions\function_sets\base.py                                     | Python       |        123 |          7 |         35 |        165 |
+| d:\Luann_Project\luann\functions\function_sets\extras.py                                   | Python       |        116 |          7 |         33 |        156 |
+| d:\Luann_Project\luann\functions\function_sets\multi_agent.py                              | Python       |         72 |          7 |         18 |         97 |
+| d:\Luann_Project\luann\functions\functions.py                                              | Python       |        218 |         47 |         41 |        306 |
+| d:\Luann_Project\luann\functions\helpers.py                                                | Python       |        240 |         45 |         50 |        335 |
+| d:\Luann_Project\luann\functions\schema_generator.py                                       | Python       |        272 |         73 |         59 |        404 |
+| d:\Luann_Project\luann\helpers\__init__.py                                                 | Python       |          1 |          0 |          1 |          2 |
+| d:\Luann_Project\luann\helpers\tool_rule_solver.py                                         | Python       |        106 |          8 |         26 |        140 |
+| d:\Luann_Project\luann\humans\__init__.py                                                  | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\interface.py                                                        | Python       |        250 |         23 |         43 |        316 |
+| d:\Luann_Project\luann\llm_api\__init__.py                                                 | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\llm_api\azure_openai.py                                             | Python       |         89 |         31 |         43 |        163 |
+| d:\Luann_Project\luann\llm_api\azure_openai_constants.py                                   | Python       |         12 |          0 |          0 |         12 |
+| d:\Luann_Project\luann\llm_api\helpers.py                                                  | Python       |        263 |         48 |         66 |        377 |
+| d:\Luann_Project\luann\llm_api\llm_api_tools.py                                            | Python       |        229 |        110 |         59 |        398 |
+| d:\Luann_Project\luann\llm_api\openai.py                                                   | Python       |        413 |         63 |         78 |        554 |
+| d:\Luann_Project\luann\local_llm\README.md                                                 | Markdown     |          2 |          0 |          2 |          4 |
+| d:\Luann_Project\luann\local_llm\__init__.py                                               | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\local_llm\chat_completion_proxy.py                                  | Python       |        212 |         46 |         34 |        292 |
+| d:\Luann_Project\luann\local_llm\constants.py                                              | Python       |         24 |          5 |          7 |         36 |
+| d:\Luann_Project\luann\local_llm\function_parser.py                                        | Python       |         48 |          4 |         17 |         69 |
+| d:\Luann_Project\luann\local_llm\grammars\__init__.py                                      | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\local_llm\grammars\gbnf_grammar_generator.py                        | Python       |      1,058 |         50 |        216 |      1,324 |
+| d:\Luann_Project\luann\local_llm\groq\api.py                                               | Python       |         56 |         29 |         13 |         98 |
+| d:\Luann_Project\luann\local_llm\json_parser.py                                            | Python       |        154 |         15 |         34 |        203 |
+| d:\Luann_Project\luann\local_llm\koboldcpp\api.py                                          | Python       |         41 |          9 |         13 |         63 |
+| d:\Luann_Project\luann\local_llm\koboldcpp\settings.py                                     | Python       |         16 |          7 |          1 |         24 |
+| d:\Luann_Project\luann\local_llm\llamacpp\api.py                                           | Python       |         39 |          7 |         13 |         59 |
+| d:\Luann_Project\luann\local_llm\llamacpp\settings.py                                      | Python       |         15 |          7 |          1 |         23 |
+| d:\Luann_Project\luann\local_llm\llm_chat_completion_wrappers\__init__.py                  | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\local_llm\llm_chat_completion_wrappers\airoboros.py                 | Python       |        349 |         41 |         64 |        454 |
+| d:\Luann_Project\luann\local_llm\llm_chat_completion_wrappers\chatml.py                    | Python       |        344 |         64 |         65 |        473 |
+| d:\Luann_Project\luann\local_llm\llm_chat_completion_wrappers\configurable_wrapper.py      | Python       |        329 |         19 |         41 |        389 |
+| d:\Luann_Project\luann\local_llm\llm_chat_completion_wrappers\dolphin.py                   | Python       |        171 |         39 |         38 |        248 |
+| d:\Luann_Project\luann\local_llm\llm_chat_completion_wrappers\llama3.py                    | Python       |        254 |         51 |         45 |        350 |
+| d:\Luann_Project\luann\local_llm\llm_chat_completion_wrappers\simple_summary_wrapper.py    | Python       |        119 |         15 |         24 |        158 |
+| d:\Luann_Project\luann\local_llm\llm_chat_completion_wrappers\wrapper_base.py              | Python       |          8 |          0 |          4 |         12 |
+| d:\Luann_Project\luann\local_llm\llm_chat_completion_wrappers\zephyr.py                    | Python       |        262 |         36 |         49 |        347 |
+| d:\Luann_Project\luann\local_llm\lmstudio\api.py                                           | Python       |         66 |         17 |         18 |        101 |
+| d:\Luann_Project\luann\local_llm\lmstudio\settings.py                                      | Python       |         17 |         12 |          1 |         30 |
+| d:\Luann_Project\luann\local_llm\ollama\api.py                                             | Python       |         56 |         19 |         15 |         90 |
+| d:\Luann_Project\luann\local_llm\ollama\settings.py                                        | Python       |         21 |         11 |          1 |         33 |
+| d:\Luann_Project\luann\local_llm\settings\__init__.py                                      | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\local_llm\settings\deterministic_mirostat.py                        | Python       |         35 |          9 |          2 |         46 |
+| d:\Luann_Project\luann\local_llm\settings\settings.py                                      | Python       |         55 |          9 |         11 |         75 |
+| d:\Luann_Project\luann\local_llm\settings\simple.py                                        | Python       |         18 |         10 |          1 |         29 |
+| d:\Luann_Project\luann\local_llm\utils.py                                                  | Python       |        194 |         26 |         47 |        267 |
+| d:\Luann_Project\luann\local_llm\vllm\api.py                                               | Python       |         44 |          6 |         14 |         64 |
+| d:\Luann_Project\luann\local_llm\webui\api.py                                              | Python       |         43 |          5 |         13 |         61 |
+| d:\Luann_Project\luann\local_llm\webui\legacy_api.py                                       | Python       |         42 |          4 |         13 |         59 |
+| d:\Luann_Project\luann\local_llm\webui\legacy_settings.py                                  | Python       |         16 |          7 |          1 |         24 |
+| d:\Luann_Project\luann\local_llm\webui\settings.py                                         | Python       |         15 |          9 |          1 |         25 |
+| d:\Luann_Project\luann\log.py                                                              | Python       |         69 |         33 |          6 |        108 |
+| d:\Luann_Project\luann\main.py                                                             | Python       |         19 |          3 |         11 |         33 |
+| d:\Luann_Project\luann\memory.py                                                           | Python       |         29 |         36 |         14 |         79 |
+| d:\Luann_Project\luann\offline_memory_agent.py                                             | Python       |        136 |          2 |         36 |        174 |
+| d:\Luann_Project\luann\openai_backcompat\__init__.py                                       | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\openai_backcompat\openai_object.py                                  | Python       |        343 |         37 |         66 |        446 |
+| d:\Luann_Project\luann\openapi_luann.json                                                  | JSON         |     10,461 |          0 |          0 |     10,461 |
+| d:\Luann_Project\luann\openapi_openai.json                                                 | JSON         |      4,776 |          0 |          0 |      4,776 |
+| d:\Luann_Project\luann\orm\__all__.py                                                      | Python       |          1 |         13 |          2 |         16 |
+| d:\Luann_Project\luann\orm\__init__.py                                                     | Python       |         18 |          0 |          1 |         19 |
+| d:\Luann_Project\luann\orm\agent.py                                                        | Python       |        128 |         14 |         20 |        162 |
+| d:\Luann_Project\luann\orm\agents_tags.py                                                  | Python       |          9 |          5 |          9 |         23 |
+| d:\Luann_Project\luann\orm\base.py                                                         | Python       |         71 |          3 |         20 |         94 |
+| d:\Luann_Project\luann\orm\block.py                                                        | Python       |         67 |          4 |         13 |         84 |
+| d:\Luann_Project\luann\orm\blocks_agents.py                                                | Python       |         20 |          1 |          5 |         26 |
+| d:\Luann_Project\luann\orm\custom_columns.py                                               | Python       |        121 |          1 |         35 |        157 |
+| d:\Luann_Project\luann\orm\enums.py                                                        | Python       |         13 |          0 |          6 |         19 |
+| d:\Luann_Project\luann\orm\errors.py                                                       | Python       |         13 |          0 |          7 |         20 |
+| d:\Luann_Project\luann\orm\file.py                                                         | Python       |         23 |          1 |          9 |         33 |
+| d:\Luann_Project\luann\orm\job.py                                                          | Python       |         39 |          4 |          8 |         51 |
+| d:\Luann_Project\luann\orm\job_messages.py                                                 | Python       |         24 |          1 |          9 |         34 |
+| d:\Luann_Project\luann\orm\message.py                                                      | Python       |         43 |          8 |         15 |         66 |
+| d:\Luann_Project\luann\orm\mixins.py                                                       | Python       |         47 |          0 |         33 |         80 |
+| d:\Luann_Project\luann\orm\organization.py                                                 | Python       |         45 |         12 |         12 |         69 |
+| d:\Luann_Project\luann\orm\passage.py                                                      | Python       |         65 |          3 |         23 |         91 |
+| d:\Luann_Project\luann\orm\provider.py                                                     | Python       |         14 |          1 |          9 |         24 |
+| d:\Luann_Project\luann\orm\sandbox_config.py                                               | Python       |         48 |          7 |         18 |         73 |
+| d:\Luann_Project\luann\orm\source.py                                                       | Python       |         32 |         17 |         15 |         64 |
+| d:\Luann_Project\luann\orm\sources_agents.py                                               | Python       |          8 |          0 |          5 |         13 |
+| d:\Luann_Project\luann\orm\sqlalchemy_base.py                                              | Python       |        379 |         34 |         79 |        492 |
+| d:\Luann_Project\luann\orm\sqlite_functions.py                                             | Python       |        106 |          7 |         27 |        140 |
+| d:\Luann_Project\luann\orm\step.py                                                         | Python       |         43 |          2 |         10 |         55 |
+| d:\Luann_Project\luann\orm\tool.py                                                         | Python       |         31 |         10 |         11 |         52 |
+| d:\Luann_Project\luann\orm\tools_agents.py                                                 | Python       |          9 |          1 |          5 |         15 |
+| d:\Luann_Project\luann\orm\user.py                                                         | Python       |         17 |          9 |         10 |         36 |
+| d:\Luann_Project\luann\personas\__init__.py                                                | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\prompts\__init__.py                                                 | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\prompts\gpt_summarize.py                                            | Python       |         14 |          0 |          1 |         15 |
+| d:\Luann_Project\luann\prompts\gpt_system.py                                               | Python       |         18 |          4 |          5 |         27 |
+| d:\Luann_Project\luann\schemas\agent.py                                                    | Python       |        162 |         20 |         41 |        223 |
+| d:\Luann_Project\luann\schemas\block.py                                                    | Python       |         99 |         13 |         48 |        160 |
+| d:\Luann_Project\luann\schemas\embedding_config.py                                         | Python       |         69 |          1 |         10 |         80 |
+| d:\Luann_Project\luann\schemas\embedding_config_overrides.py                               | Python       |          2 |          0 |          2 |          4 |
+| d:\Luann_Project\luann\schemas\enums.py                                                    | Python       |         34 |          1 |         10 |         45 |
+| d:\Luann_Project\luann\schemas\environment_variables.py                                    | Python       |         35 |          3 |         25 |         63 |
+| d:\Luann_Project\luann\schemas\file.py                                                     | Python       |         21 |          1 |         10 |         32 |
+| d:\Luann_Project\luann\schemas\healty.py                                                   | Python       |          7 |          0 |          3 |         10 |
+| d:\Luann_Project\luann\schemas\job.py                                                      | Python       |         43 |          4 |         10 |         57 |
+| d:\Luann_Project\luann\schemas\llm_config.py                                               | Python       |         88 |          6 |          9 |        103 |
+| d:\Luann_Project\luann\schemas\llm_config_overrides.py                                     | Python       |         37 |          0 |          2 |         39 |
+| d:\Luann_Project\luann\schemas\luann_base.py                                               | Python       |         59 |         14 |         15 |         88 |
+| d:\Luann_Project\luann\schemas\luann_message.py                                            | Python       |        181 |         15 |         62 |        258 |
+| d:\Luann_Project\luann\schemas\luann_request.py                                            | Python       |         23 |          1 |          3 |         27 |
+| d:\Luann_Project\luann\schemas\luann_response.py                                           | Python       |        142 |          6 |         15 |        163 |
+| d:\Luann_Project\luann\schemas\memory.py                                                   | Python       |        165 |         18 |         55 |        238 |
+| d:\Luann_Project\luann\schemas\message.py                                                  | Python       |        663 |         88 |         92 |        843 |
+| d:\Luann_Project\luann\schemas\openai\chat_completion_request.py                           | Python       |         78 |         10 |         36 |        124 |
+| d:\Luann_Project\luann\schemas\openai\chat_completion_response.py                          | Python       |         89 |         17 |         33 |        139 |
+| d:\Luann_Project\luann\schemas\openai\chat_completions.py                                  | Python       |         78 |         10 |         35 |        123 |
+| d:\Luann_Project\luann\schemas\openai\embedding_response.py                                | Python       |          7 |          0 |          5 |         12 |
+| d:\Luann_Project\luann\schemas\openai\openai.py                                            | Python       |        116 |          0 |         42 |        158 |
+| d:\Luann_Project\luann\schemas\organization.py                                             | Python       |         12 |          0 |          8 |         20 |
+| d:\Luann_Project\luann\schemas\passage.py                                                  | Python       |         51 |          8 |         24 |         83 |
+| d:\Luann_Project\luann\schemas\providers.py                                                | Python       |        468 |        106 |        139 |        713 |
+| d:\Luann_Project\luann\schemas\run.py                                                      | Python       |         43 |          2 |         17 |         62 |
+| d:\Luann_Project\luann\schemas\sandbox_config.py                                           | Python       |         89 |          6 |         36 |        131 |
+| d:\Luann_Project\luann\schemas\source.py                                                   | Python       |         49 |          4 |         17 |         70 |
+| d:\Luann_Project\luann\schemas\step.py                                                     | Python       |         24 |          0 |          8 |         32 |
+| d:\Luann_Project\luann\schemas\tool.py                                                     | Python       |         95 |        115 |         44 |        254 |
+| d:\Luann_Project\luann\schemas\tool_rule.py                                                | Python       |         33 |          0 |         17 |         50 |
+| d:\Luann_Project\luann\schemas\usage.py                                                    | Python       |         14 |          0 |          4 |         18 |
+| d:\Luann_Project\luann\schemas\user.py                                                     | Python       |         28 |          0 |         10 |         38 |
+| d:\Luann_Project\luann\server\__init__.py                                                  | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\server\constants.py                                                 | Python       |          3 |          2 |          2 |          7 |
+| d:\Luann_Project\luann\server\generate_openapi_schema.sh                                   | Shell Script |          7 |          3 |          2 |         12 |
+| d:\Luann_Project\luann\server\rest_api\__init__.py                                         | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\server\rest_api\app.py                                              | Python       |        124 |         64 |         45 |        233 |
+| d:\Luann_Project\luann\server\rest_api\auth\__init__.py                                    | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\server\rest_api\auth\index.py                                       | Python       |         30 |          0 |         14 |         44 |
+| d:\Luann_Project\luann\server\rest_api\auth_token.py                                       | Python       |         16 |          1 |          6 |         23 |
+| d:\Luann_Project\luann\server\rest_api\chat_completions_interface.py                       | Python       |        204 |         16 |         37 |        257 |
+| d:\Luann_Project\luann\server\rest_api\interface.py                                        | Python       |        656 |        239 |        172 |      1,067 |
+| d:\Luann_Project\luann\server\rest_api\optimistic_json_parser.py                           | Python       |        151 |         10 |         25 |        186 |
+| d:\Luann_Project\luann\server\rest_api\routers\openai\chat_completions\__init__.py         | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\server\rest_api\routers\openai\chat_completions\chat_completions.py | Python       |        122 |         13 |         27 |        162 |
+| d:\Luann_Project\luann\server\rest_api\routers\v1\__init__.py                              | Python       |         24 |          0 |          3 |         27 |
+| d:\Luann_Project\luann\server\rest_api\routers\v1\agents.py                                | Python       |        515 |         18 |         87 |        620 |
+| d:\Luann_Project\luann\server\rest_api\routers\v1\blocks.py                                | Python       |         77 |          1 |         17 |         95 |
+| d:\Luann_Project\luann\server\rest_api\routers\v1\health.py                                | Python       |         13 |          1 |          7 |         21 |
+| d:\Luann_Project\luann\server\rest_api\routers\v1\jobs.py                                  | Python       |         61 |          4 |         17 |         82 |
+| d:\Luann_Project\luann\server\rest_api\routers\v1\llms.py                                  | Python       |         22 |          0 |         11 |         33 |
+| d:\Luann_Project\luann\server\rest_api\routers\v1\organizations.py                         | Python       |         49 |          1 |         12 |         62 |
+| d:\Luann_Project\luann\server\rest_api\routers\v1\providers.py                             | Python       |         60 |          0 |         14 |         74 |
+| d:\Luann_Project\luann\server\rest_api\routers\v1\runs.py                                  | Python       |        128 |          0 |         28 |        156 |
+| d:\Luann_Project\luann\server\rest_api\routers\v1\sandbox_configs.py                       | Python       |         94 |          2 |         29 |        125 |
+| d:\Luann_Project\luann\server\rest_api\routers\v1\sources.py                               | Python       |        160 |         11 |         40 |        211 |
+| d:\Luann_Project\luann\server\rest_api\routers\v1\tags.py                                  | Python       |         20 |          0 |          8 |         28 |
+| d:\Luann_Project\luann\server\rest_api\routers\v1\tools.py                                 | Python       |        144 |         11 |         27 |        182 |
+| d:\Luann_Project\luann\server\rest_api\routers\v1\users.py                                 | Python       |         60 |          3 |         16 |         79 |
+| d:\Luann_Project\luann\server\rest_api\static_files.py                                     | Python       |         46 |          0 |         13 |         59 |
+| d:\Luann_Project\luann\server\rest_api\utils.py                                            | Python       |         78 |         12 |         31 |        121 |
+| d:\Luann_Project\luann\server\server.py                                                    | Python       |        950 |        192 |        231 |      1,373 |
+| d:\Luann_Project\luann\server\startup.sh                                                   | Shell Script |         33 |          8 |         10 |         51 |
+| d:\Luann_Project\luann\server\static_files\assets\index-c99fd5b4.js                        | JavaScript   |         96 |        100 |         13 |        209 |
+| d:\Luann_Project\luann\server\static_files\assets\index-cc4e30b1.css                       | CSS          |          1 |          0 |          1 |          2 |
+| d:\Luann_Project\luann\server\static_files\index.html                                      | HTML         |         36 |          0 |          4 |         40 |
+| d:\Luann_Project\luann\server\utils.py                                                     | Python       |         40 |          0 |          7 |         47 |
+| d:\Luann_Project\luann\server\ws_api\__init__.py                                           | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\server\ws_api\example_client.py                                     | Python       |         74 |         10 |         23 |        107 |
+| d:\Luann_Project\luann\server\ws_api\interface.py                                          | Python       |         79 |          6 |         24 |        109 |
+| d:\Luann_Project\luann\server\ws_api\protocol.py                                           | Python       |         86 |          2 |         25 |        113 |
+| d:\Luann_Project\luann\server\ws_api\server.py                                             | Python       |        108 |         12 |         27 |        147 |
+| d:\Luann_Project\luann\services\__init__.py                                                | Python       |          0 |          0 |          1 |          1 |
+| d:\Luann_Project\luann\services\agent_manager.py                                           | Python       |        875 |        110 |        145 |      1,130 |
+| d:\Luann_Project\luann\services\block_manager.py                                           | Python       |        108 |          6 |         15 |        129 |
+| d:\Luann_Project\luann\services\helpers\__init__.py                                        | Python       |          1 |          0 |          0 |          1 |
+| d:\Luann_Project\luann\services\helpers\agent_manager_helper.py                            | Python       |        208 |         22 |         47 |        277 |
+| d:\Luann_Project\luann\services\job_manager.py                                             | Python       |        284 |         17 |         55 |        356 |
+| d:\Luann_Project\luann\services\message_manager.py                                         | Python       |        182 |         10 |         27 |        219 |
+| d:\Luann_Project\luann\services\organization_manager.py                                    | Python       |         65 |          4 |         13 |         82 |
+| d:\Luann_Project\luann\services\passage_manager.py                                         | Python       |        153 |         13 |         25 |        191 |
+| d:\Luann_Project\luann\services\per_agent_lock_manager.py                                  | Python       |         13 |          0 |          5 |         18 |
+| d:\Luann_Project\luann\services\provider_manager.py                                        | Python       |         53 |          6 |         16 |         75 |
+| d:\Luann_Project\luann\services\sandbox_config_manager.py                                  | Python       |        239 |         10 |         32 |        281 |
+| d:\Luann_Project\luann\services\source_manager.py                                          | Python       |        136 |          9 |         23 |        168 |
+| d:\Luann_Project\luann\services\step_manager.py                                            | Python       |         75 |          0 |         14 |         89 |
+| d:\Luann_Project\luann\services\tool_execution_sandbox.py                                  | Python       |        345 |         52 |         87 |        484 |
+| d:\Luann_Project\luann\services\tool_manager.py                                            | Python       |        155 |         24 |         33 |        212 |
+| d:\Luann_Project\luann\services\user_manager.py                                            | Python       |         82 |          8 |         21 |        111 |
+| d:\Luann_Project\luann\settings.py                                                         | Python       |        101 |         41 |         39 |        181 |
+| d:\Luann_Project\luann\streaming_interface.py                                              | Python       |        284 |         20 |         91 |        395 |
+| d:\Luann_Project\luann\streaming_utils.py                                                  | Python       |        239 |         10 |         28 |        277 |
+| d:\Luann_Project\luann\system.py                                                           | Python       |        171 |         16 |         39 |        226 |
+| d:\Luann_Project\luann\utils.py                                                            | Python       |        917 |         78 |        173 |      1,168 |
+| Total                                                                                      |              |     41,055 |      3,679 |      5,990 |     50,724 |
++--------------------------------------------------------------------------------------------+--------------+------------+------------+------------+------------+
