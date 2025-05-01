@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.cfg
+app/command_parser.py
+app/csv_loader.py
+app/dataframe_viewer.py
+app/json_exporter.py
+app/main.py
+app/pivot_table_creator.py
+app/ui.py
+app/where_clause_handler.py
+app/csvbro.egg-info/PKG-INFO
+app/csvbro.egg-info/SOURCES.txt
+app/csvbro.egg-info/dependency_links.txt
+app/csvbro.egg-info/entry_points.txt
+app/csvbro.egg-info/requires.txt
+app/csvbro.egg-info/top_level.txt
