@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "acace_tokenizer"
+version = "0.1.1"
+description = "Efficient tokenizer tailored for semantic weighting and context-aware transformation pipelines."
+authors = ["ACACE Team <team@acace.ai>"]
+readme = "README.md"
+packages = [{include = "acace_tokenizer", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.26.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

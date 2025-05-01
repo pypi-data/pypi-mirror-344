@@ -1,0 +1,53 @@
+Metadata-Version: 2.3
+Name: acace_tokenizer
+Version: 0.1.1
+Summary: Efficient tokenizer tailored for semantic weighting and context-aware transformation pipelines.
+Author: ACACE Team
+Author-email: team@acace.ai
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: numpy (>=1.26.3,<2.0.0)
+Description-Content-Type: text/markdown
+
+# acace_tokenizer
+
+Efficient tokenizer tailored for semantic weighting and context-aware transformation pipelines.
+
+## Installation
+
+```bash
+pip install acace_tokenizer
+```
+
+## Features
+
+- Core functionality for ACACE
+- Integration with other ACACE components
+- Standardized interfaces
+
+## Usage
+
+```python
+from acace_tokenizer import main_function
+
+result = main_function()
+```
+
+## Documentation
+
+Detailed documentation can be found in the [docs](docs/) directory.
+
+## Integration with ACACE
+
+This package is designed to work seamlessly with the main [ACACE](https://github.com/Sumedh1599/acace) library.
+
+## License
+
+MIT License
+
