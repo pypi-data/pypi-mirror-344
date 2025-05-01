@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/cli.py
+src/core.py
+src/yoloprep.egg-info/PKG-INFO
+src/yoloprep.egg-info/SOURCES.txt
+src/yoloprep.egg-info/dependency_links.txt
+src/yoloprep.egg-info/requires.txt
+src/yoloprep.egg-info/top_level.txt

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "tqdm", "PyYAML", "opencv-python"]
+
+[project]
+name = "yoloprep"
+version = "0.0.1"
+description = "Prepare Your Dataset for YOLO the Right Way"
+readme = "README.md"
+authors = [{ name = "Kalinin Mitko", email = "kalinin.mitko@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["yolo", "dataset", "preparation", "computer vision", "deep learning"]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["pip-tools"]
+
+[project.urls]
+Homepage = "https://github.com/null-none/yoloprep"
+
+[tools.setuptools]
+packages = ["src"]
