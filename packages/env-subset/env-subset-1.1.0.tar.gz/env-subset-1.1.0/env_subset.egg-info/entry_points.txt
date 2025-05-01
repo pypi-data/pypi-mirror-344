@@ -1,0 +1,2 @@
+[console_scripts]
+env-subset = env_subset.main:main
