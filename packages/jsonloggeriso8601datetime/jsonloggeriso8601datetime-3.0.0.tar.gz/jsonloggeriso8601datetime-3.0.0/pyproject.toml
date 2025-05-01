@@ -1,0 +1,35 @@
+[project]
+name = "jsonloggeriso8601datetime"
+version = "3.0.0"
+authors = [
+    {name = "Joel Dodson",email = "joeldodson@gmail.com"}
+]
+readme = "README.md"
+license = "MIT"
+description = "Custom formatter for python-json-logger to iso8601 format timestamps.  includes default console and file logger config"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 6 - Mature",
+    "Topic :: System :: Logging",
+]
+keywords = ["structured", "console", "logging", "json", "iso8601", "configuration"]
+requires-python = ">=3.10"
+dependencies = ["python-json-logger (>=3.3.0)"]
+
+[project.urls]
+repository = "https://github.com/joeldodson/jsonloggeriso8601datetime"
+
+[project.scripts]
+jlidtCli="jsonloggeriso8601datetime.scripts.jlidtCli:run" 
+jlidtQs="jsonloggeriso8601datetime.scripts.jlidtQs:run" 
+
+[tool.poetry]
+packages = [
+    { include = "jsonloggeriso8601datetime", from = "src" },
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
