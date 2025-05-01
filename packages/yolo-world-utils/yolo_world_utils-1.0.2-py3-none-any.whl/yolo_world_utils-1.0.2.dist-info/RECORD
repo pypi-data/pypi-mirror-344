@@ -1,0 +1,9 @@
+yolo_world_utils/__init__.py,sha256=FDBfpV6HLmDo_YfbJId9o5o52Lt_YLOQB18Fif4Dpkk,1119
+yolo_world_utils/__main__.py,sha256=_McXBffR8o3fX09DHRt_xPxbtoJ7b_oa5hYZEESuL7I,3747
+yolo_world_utils/bpe_simple_vocab_16e6.txt,sha256=Z2A8_aLgMq13tfiAivN3idWQ22ZLJt-HBdK_izxVP8g,3194984
+yolo_world_utils/feature_generate.py,sha256=wVibocvo2F6dIjw-M5TysbTmIrkmrFDNExSIDP2ggL8,2063
+yolo_world_utils/simple_tokenizer.py,sha256=f4HuaI880xFfmgvgD0cEHPJDam8l5QV4qutJsu-eFno,6286
+yolo_world_utils-1.0.2.dist-info/METADATA,sha256=CAXDB8yGao0ncbGawFxzxE4PB0L3yb6nix1UBvkL_ZA,268
+yolo_world_utils-1.0.2.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+yolo_world_utils-1.0.2.dist-info/top_level.txt,sha256=WZeHVYYE34gBTZWRmHO-GsB7wCYa_S-mdVkDTASTe8E,17
+yolo_world_utils-1.0.2.dist-info/RECORD,,
