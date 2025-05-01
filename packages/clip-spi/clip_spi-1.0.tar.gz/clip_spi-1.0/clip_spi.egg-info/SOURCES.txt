@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+clip/__init__.py
+clip/bpe_simple_vocab_16e6.txt.gz
+clip/clip.py
+clip/model.py
+clip/simple_tokenizer.py
+clip_spi.egg-info/PKG-INFO
+clip_spi.egg-info/SOURCES.txt
+clip_spi.egg-info/dependency_links.txt
+clip_spi.egg-info/requires.txt
+clip_spi.egg-info/top_level.txt
+tests/test_consistency.py
