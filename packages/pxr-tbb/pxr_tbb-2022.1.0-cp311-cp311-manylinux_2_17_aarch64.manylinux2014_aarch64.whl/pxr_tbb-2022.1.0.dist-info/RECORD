@@ -1,0 +1,13 @@
+pxr/.libs/libtbb.so,sha256=GS87ZM0o7GxnAGfOPKgflfhRPF4_F8qDfLLABfGMv8o,264192
+pxr/.libs/libtbb.so.12,sha256=GS87ZM0o7GxnAGfOPKgflfhRPF4_F8qDfLLABfGMv8o,264192
+pxr/.libs/libtbb.so.12.15,sha256=GS87ZM0o7GxnAGfOPKgflfhRPF4_F8qDfLLABfGMv8o,264192
+pxr/.libs/libtbbmalloc.so,sha256=N7hQC3YtSXR_OAWDWpWplLcElrh58TTLgqksb2-A6IU,133112
+pxr/.libs/libtbbmalloc.so.2,sha256=N7hQC3YtSXR_OAWDWpWplLcElrh58TTLgqksb2-A6IU,133112
+pxr/.libs/libtbbmalloc.so.2.15,sha256=N7hQC3YtSXR_OAWDWpWplLcElrh58TTLgqksb2-A6IU,133112
+pxr/.libs/libtbbmalloc_proxy.so,sha256=8S_7Rt6vLqhh2gjQCJYB9Cx3S3OZ7R9D0QjyteBd8rw,67504
+pxr/.libs/libtbbmalloc_proxy.so.2,sha256=8S_7Rt6vLqhh2gjQCJYB9Cx3S3OZ7R9D0QjyteBd8rw,67504
+pxr/.libs/libtbbmalloc_proxy.so.2.15,sha256=8S_7Rt6vLqhh2gjQCJYB9Cx3S3OZ7R9D0QjyteBd8rw,67504
+pxr_tbb-2022.1.0.dist-info/METADATA,sha256=tVgKhHpz-7HRBnQvzGrmScQ4lzcMtTDp9JbSM8XixoQ,1250
+pxr_tbb-2022.1.0.dist-info/WHEEL,sha256=y-9j-O0F2m0LpOAYvpV8SzsDgNbPf76VMnBNqZR-UVA,158
+pxr_tbb-2022.1.0.dist-info/RECORD,,
+pxr_tbb-2022.1.0.dist-info/licenses/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
