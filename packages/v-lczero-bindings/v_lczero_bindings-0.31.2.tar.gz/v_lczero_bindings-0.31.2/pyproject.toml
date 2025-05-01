@@ -1,0 +1,30 @@
+[build-system]
+requires = ["meson-python"]
+build-backend = "mesonpy"
+
+[project]
+name = "v-lczero-bindings"
+version = "0.31.2"
+description = "Leela Chess Zero Python bindings"
+authors = [{ name = "The LCZero Authors" }]
+license = {file = "COPYING"}
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment :: Board Games",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Environment :: GPU"
+]
+
+[project.urls]
+homepage = "https://github.com/Xmaster6y/v-lczero-bindings"
+
+[tool.meson-python.args]
+dist = []
+setup = ["-Dpython_bindings=true"]
+compile = []
+install = []
