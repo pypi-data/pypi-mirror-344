@@ -1,0 +1,12 @@
+cli/__init__.py,sha256=36vfBztIK_4t79Mu937k81vr9Jbv8zANnmaFdXuGoXc,76
+cli/main.py,sha256=UpXfq1rSZQZC4tzB1WrqZyWIVHSCKl9Ch2LagWRi4Vs,7020
+readability/__init__.py,sha256=bQbah6z6dT_N31ef2jGLIInDo4jR00NITnMEKAwckk4,259
+readability/models.py,sha256=WMpqfOfQki9jSQD2YvMFlK5Fa80GIOIbcIvNOaPLEhM,4411
+readability/parser.py,sha256=U-DkNFRf-1yjm7ylIew9KVpQN6Ss4Jzoj7FWkIByNzY,78451
+readability/regexps.py,sha256=KcwRwZECp-SerWv94e16oTFQf3oYxr5tz3S_3BGK5zo,6526
+readability/utils.py,sha256=-oysBtKE8JogdmWZCEk2qXfGRVneIYp9dcRzOEW3_c4,8458
+readability_python-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+readability_python-0.2.0.dist-info/METADATA,sha256=pIXYZlknEsFp6iUeVjGkpOtls79NDIDsdG-AlPYA5Qo,7335
+readability_python-0.2.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+readability_python-0.2.0.dist-info/entry_points.txt,sha256=waenNfXN4I5zs0k89GIO6XQBI2SfJPfY-TLiTBPyEE0,52
+readability_python-0.2.0.dist-info/RECORD,,
