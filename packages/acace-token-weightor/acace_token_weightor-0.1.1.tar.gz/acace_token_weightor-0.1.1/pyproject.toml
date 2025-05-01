@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "acace_token_weightor"
+version = "0.1.1"
+description = "Assigns importance weights to tokens using NLP heuristics for compression prioritization."
+authors = ["ACACE Team <team@acace.ai>"]
+readme = "README.md"
+packages = [{include = "acace_token_weightor", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.26.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
