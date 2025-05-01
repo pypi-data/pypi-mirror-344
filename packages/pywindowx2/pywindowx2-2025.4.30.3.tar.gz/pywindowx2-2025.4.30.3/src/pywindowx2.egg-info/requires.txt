@@ -1,0 +1,17 @@
+numpy
+scipy
+scikit-learn
+rdkit
+matplotlib
+
+[dev]
+ruff
+mypy
+numpy
+pytest
+pytest-cov
+sphinx
+sphinx-copybutton
+build
+twine
+furo
