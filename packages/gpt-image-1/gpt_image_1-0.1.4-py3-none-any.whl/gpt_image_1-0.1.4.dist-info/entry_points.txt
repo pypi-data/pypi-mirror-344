@@ -1,0 +1,2 @@
+[console_scripts]
+gpt-image-1 = mcp_image_gen.__main__:main
