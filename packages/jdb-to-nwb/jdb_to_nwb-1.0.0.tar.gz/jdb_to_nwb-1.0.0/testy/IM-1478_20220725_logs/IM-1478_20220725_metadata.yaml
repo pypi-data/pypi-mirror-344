@@ -1,0 +1,81 @@
+# Metadata for IM-1478, 07252022
+# Note I guessed on some fields (rat age, etc because this is just an example)
+# Good example for full conversion with LabVIEW + ephys
+
+institution: University of California, San Francisco
+lab: Berke Lab
+experimenter:
+  - Tim Krausz
+  - Stephanie Crater
+
+experiment_description: Hex maze task
+animal_name: IM-1478
+date: '07/25/2022'  # MMDDYYYY or YYYYMMDD
+subject:
+  subject_id: IM-1478
+  species: Rattus norvegicus
+  genotype: Wildtype
+  sex: M
+  age: 6mo
+  date_of_birth: 2024-05-13
+  description: Long Evans Rat
+
+ephys:
+  #openephys_folder_path: "tests/test_data/downloaded/IM-1478/07252022/2022-07-25_15-30-00"
+  #impedance_file_path: "tests/test_data/downloaded/IM-1478/07252022/impedance.csv"
+  electrodes_location: "Hippocampus CA1"
+  reference_skull_screw_location: Medial cerebellum, 1.0 mm posterior to lambda
+  plug_order: "chip_first" # assuming chip first
+
+  mountain_sort_output_file_path: "tests/test_data/downloaded/IM-1478/07252022/mntsort_output/firings.mda"
+  sampling_frequency: 30000
+
+  device:
+    name: "256-ch Silicon Probe, 6mm length, 80um pitch"
+    description: >
+      32 shanks, 8 electrodes per shank. Each shank is 6mm long. 
+      Shanks are 80um apart. There is 30um between electrodes on each shank. 
+      Odd shanks are vertically offset by 1/2 the electrode pitch (15um).
+    manufacturer: "Daniel Egert, Berke Lab"
+
+photometry:
+  #signals_mat_file_path: "/Volumes/Tim/Photometry/IM-1478/07252022/signals.mat"
+  phot_file_path: "tests/test_data/downloaded/IM-1478/07252022/IM-1478_2022-07-25_15-24-22____Tim_Conditioning.phot"
+  box_file_path: "tests/test_data/downloaded/IM-1478/07252022/IM-1478_2022-07-25_15-24-22____Tim_Conditioning.box"
+
+
+behavior:
+  arduino_text_file_path: "tests/test_data/downloaded/IM-1478/07252022/arduinoraw0.txt"
+  arduino_timestamps_file_path: "tests/test_data/downloaded/IM-1478/07252022/ArduinoStamps0.csv"
+  maze_configuration_file_path: "tests/test_data/downloaded/IM-1478/07252022/barriers.txt"
+
+video:
+  video_file_path: "tests/test_data/downloaded/IM-1478/07252022/Behav_Vid0.avi"
+  video_timestamps_file_path: "tests/test_data/downloaded/IM-1478/07252022/testvidtimes0.csv"
+  dlc_path: "tests/test_data/downloaded/IM-1478/07252022/Behav_Vid0DLC_resnet50_Triangle_Maze_EphysDec7shuffle1_800000.h5"
+  #hex_centroids_file_path: "tests/test_data/downloaded/IM-1478/07252022/hex_coordinates_IM-1478_07252022.csv"
+  hex_centroids_file_path: "/Users/steph/berkelab/jdb_to_nwb/testhehe_hex_coordinates.csv"
+
+
+# The following fields are optional but reccomended:
+
+surgery:
+  Bilateral dLight 1.3b and optic fibers. Fiber implant was .2 mm above injection site (DV -6.0)
+
+virus: 
+  AAVDJ-CAG-dLight1.3b (Vigene) at a titer of 2x10^12 at AP +1.7, ML +/-1.7, DV -6.2
+
+notes:
+  Reward used was 15uL sucrose solution (10% sucrose, 0.1% NaCl) at each reward port. 
+  The rat was water deprived before the experiment.
+
+
+keywords:
+  - photometry
+  - ephys
+  - behavior
+  - video
+  - hex maze
+  - dopamine
+  - reward
+  - credit assignment
