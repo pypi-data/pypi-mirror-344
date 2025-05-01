@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+acace_text_preprocessor/__init__.py
+acace_text_preprocessor/preprocessor.py
+acace_text_preprocessor.egg-info/PKG-INFO
+acace_text_preprocessor.egg-info/SOURCES.txt
+acace_text_preprocessor.egg-info/dependency_links.txt
+acace_text_preprocessor.egg-info/top_level.txt
+tests/test_preprocessor.py
