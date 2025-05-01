@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: hathaway_analytics
+Version: 0.1.0
+Summary: Minimal non-blocking data analytics collection for Flask apps
+Author: Isaac Hathaway
+Author-email: isaaczhathaway@gmail.com
+License: GPL-3.0-only
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: Flask
+Requires-Dist: Flask-SQLAlchemy
+Requires-Dist: requests
+Requires-Dist: user-agents
+
