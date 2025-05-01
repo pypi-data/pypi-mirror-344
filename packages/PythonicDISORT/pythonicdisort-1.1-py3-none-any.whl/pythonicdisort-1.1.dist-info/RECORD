@@ -1,0 +1,11 @@
+PythonicDISORT/__init__.py,sha256=V1obNzaFgqInxqYJ5h_r6JHbZRxx4VM5VgzCIS6EEzI,84
+PythonicDISORT/_assemble_intensity_and_fluxes.py,sha256=H7XxaRBHNIxNZsB49onFcU1hAsBIFWCeTBJ4NhoCT4w,29926
+PythonicDISORT/_solve_for_coeffs.py,sha256=Bb-C5OJt355x8_v8WFB2sJutBtSTAFNIX4OxLQJk9-0,16539
+PythonicDISORT/_solve_for_gen_and_part_sols.py,sha256=NVAFve6FNIEiku4xqaXBAI4G2HYIbhjcLC_B0nhGXXM,13131
+PythonicDISORT/pydisort.py,sha256=jiPMLw-zcwRoZQq2IjZhAxiuHlhC3yY72wvAxAepfgg,39113
+PythonicDISORT/subroutines.py,sha256=rf36t8coXQdnMb0NrEfgrOWDWZHkkH6KDIE3COueEbQ,34034
+pythonicdisort-1.1.dist-info/LICENSE.md,sha256=q1i1QVh0OLzK0fj6kaNRNWsM_KZca66JwWgWwbuCPlA,1092
+pythonicdisort-1.1.dist-info/METADATA,sha256=boJu4nE6zzVbJrwuVJWv2M3PTQhJpoS87XeS9M8ki2U,8308
+pythonicdisort-1.1.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+pythonicdisort-1.1.dist-info/top_level.txt,sha256=aX6kCeI1E7naZz3xfw4_mIbWh5KBh9dmF3FIvgP5m3Y,15
+pythonicdisort-1.1.dist-info/RECORD,,
