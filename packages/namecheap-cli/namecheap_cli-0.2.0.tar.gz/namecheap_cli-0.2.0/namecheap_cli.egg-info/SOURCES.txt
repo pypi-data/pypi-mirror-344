@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+namecheap_cli/__init__.py
+namecheap_cli/api.py
+namecheap_cli/cli.py
+namecheap_cli/config.py
+namecheap_cli/utils.py
+namecheap_cli.egg-info/PKG-INFO
+namecheap_cli.egg-info/SOURCES.txt
+namecheap_cli.egg-info/dependency_links.txt
+namecheap_cli.egg-info/entry_points.txt
+namecheap_cli.egg-info/requires.txt
+namecheap_cli.egg-info/top_level.txt
