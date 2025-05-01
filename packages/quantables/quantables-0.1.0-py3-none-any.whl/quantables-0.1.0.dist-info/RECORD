@@ -1,0 +1,13 @@
+quantables/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quantables/csv_importer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quantables/csv_importer/csv_importer.py,sha256=Y0x58r3Hmx-WoxhdxewXMgXxuVHWqWGvJya5DOJT0dA,9243
+quantables/csv_importer/csv_preview.py,sha256=9qX1Wbv5RWQTjp5-QwtN8iUQHPvE4DF8XVzjlsISG5U,11300
+quantables/csv_importer/csv_widgets.py,sha256=LU1joJNHlx4eLwJuK2DmMG_oeO5HbkEJptab6sEDG-4,6224
+quantables/table_model.py,sha256=fdvd3RYJR7HBchVJENzSa9cFoPaeJMU9J7z2xRb2PnM,3249
+quantables/widgets/__init__.py,sha256=vxu1ISO2z-CTfzw5EdF8rd4kZJm5EHlfcUKu_dH3blk,84
+quantables/widgets/quantity_form.py,sha256=v6upVInhOK0RX--qWAmU5Td-Y3iVDXFFLXYeKHE4gUs,3563
+quantables/widgets/quantity_widget.py,sha256=gk8aQD6f8dd36NBUyt620ND3qXfkPYyp9ctG7qelFvU,6760
+quantables-0.1.0.dist-info/LICENSE,sha256=h09c1bzcIpzk-onSiTkkxkoW67nbsgEOCX99WV3Zthg,1091
+quantables-0.1.0.dist-info/METADATA,sha256=sUKKdPXpPdpGrz5m85vj2jHHlu8HQH6yyF_xRvsez98,4659
+quantables-0.1.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+quantables-0.1.0.dist-info/RECORD,,
