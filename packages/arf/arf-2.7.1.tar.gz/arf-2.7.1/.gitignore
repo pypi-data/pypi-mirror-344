@@ -1,0 +1,10 @@
+/.coverage
+*.arf
+*.pyc
+*flymake.py
+*.[oa]
+/arf.egg-info
+/tests/test_arf
+/build
+/MANIFEST
+/dist
