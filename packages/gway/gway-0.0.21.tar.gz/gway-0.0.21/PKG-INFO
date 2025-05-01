@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: gway
+Version: 0.0.21
+Summary: Infrastructure for https://www.gelectriic.com
+Author-email: arthexis <arthexis@gmail.com>
+License-Expression: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE.md
+Requires-Dist: toml
+Requires-Dist: setuptools
+Requires-Dist: twine
+Requires-Dist: build
+Dynamic: license-file
