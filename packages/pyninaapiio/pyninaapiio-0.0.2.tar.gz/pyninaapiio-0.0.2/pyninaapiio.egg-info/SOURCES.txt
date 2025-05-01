@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pyninaapiio/__init__.py
+pyninaapiio/client.py
+pyninaapiio/errors.py
+pyninaapiio/nina.py
+pyninaapiio/py.typed
+pyninaapiio/types.py
+pyninaapiio.egg-info/PKG-INFO
+pyninaapiio.egg-info/SOURCES.txt
+pyninaapiio.egg-info/dependency_links.txt
+pyninaapiio.egg-info/requires.txt
+pyninaapiio.egg-info/top_level.txt
