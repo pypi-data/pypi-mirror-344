@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "theta-cloud-sdk"
+version = "0.1.0"
+description = "A client library for accessing theta-cloud"
+authors = ["Tanmay Sharma <tanmay@thetasoftware.ai>"]
+license = "MIT"
+repository = "https://github.com/Theta-Software-Inc/theta-cloud-sdk"
+homepage = "https://github.com/Theta-Software-Inc/theta-cloud-sdk"
+readme = "README.md"
+packages = [
+    {include = "theta_cloud_client"},
+]
+include = ["CHANGELOG.md", "theta_cloud_client/py.typed"]
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+httpx = ">=0.20.0,<0.28.0"
+attrs = ">=21.3.0"
+python-dateutil = "^2.8.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["F", "I", "UP"]
