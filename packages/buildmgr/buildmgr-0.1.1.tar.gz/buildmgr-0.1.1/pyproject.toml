@@ -1,0 +1,21 @@
+[project]
+name = "buildmgr"
+version = "0.1.1"
+description = "A simple Python-based build system"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+authors = [{name="Noah Blair", email="noahjblair@outlook.com"}]
+
+[dependency-groups]
+dev = [
+    "buildmgr",
+    "twine>=6.1.0",
+]
+
+[tool.uv.sources]
+buildmgr = { workspace = true }
+
+[tool.hatch.build.targets.sdist]
+# ensure py.typed is included in source dists (so wheels built from it include it too)
+include = ["src/buildmgr/py.typed"]
