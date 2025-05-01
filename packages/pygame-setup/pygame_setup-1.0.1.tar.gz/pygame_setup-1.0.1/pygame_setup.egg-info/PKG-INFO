@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: pygame-setup
+Version: 1.0.1
+Summary: A tool for quickly setting up pygame projects.
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: inquirer
+Dynamic: license-file
+
+# 🎮 pygame-setup
+
+A tool for quickly setting up **pygame** projects. It allows users to choose dimensions (2D or 3D), create default folders and files, and install dependencies automatically.  
+
+## 🚀 Installation
+
+```sh
+pip install pygame-setup
+```
+
+## 📌 How to use
+
+```sh
+pygame-setup
+```
+
+## 📂 Project structure generated
+
+```sh
+assets/
+    fonts/
+    images/
+    sounds/
+src/
+    scenes/
+    scripts/
+    ui/
+    main.py
+    settings.py
+    utils.py
+```

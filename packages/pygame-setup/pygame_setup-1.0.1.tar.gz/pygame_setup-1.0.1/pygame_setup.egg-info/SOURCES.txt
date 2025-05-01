@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+pygame_setup/__init__.py
+pygame_setup/main.py
+pygame_setup/utils.py
+pygame_setup.egg-info/PKG-INFO
+pygame_setup.egg-info/SOURCES.txt
+pygame_setup.egg-info/dependency_links.txt
+pygame_setup.egg-info/entry_points.txt
+pygame_setup.egg-info/requires.txt
+pygame_setup.egg-info/top_level.txt
