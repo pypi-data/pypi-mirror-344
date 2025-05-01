@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+memelite/__init__.py
+memelite/fimo.py
+memelite/io.py
+memelite/symmetric_tomtom.py
+memelite/tomtom.py
+memelite.egg-info/PKG-INFO
+memelite.egg-info/SOURCES.txt
+memelite.egg-info/dependency_links.txt
+memelite.egg-info/requires.txt
+memelite.egg-info/top_level.txt
+tests/test_cmd_tomtom.py
+tests/test_fimo.py
+tests/test_tomtom.py
