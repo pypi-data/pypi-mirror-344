@@ -1,0 +1,2 @@
+[console_scripts]
+drumterm = drumterm.main:run
