@@ -1,0 +1,12 @@
+omnidimension/__init__.py,sha256=_5xoxBvqik7-PeMx5hwvFygQoUHpV34lQIJj__e4LaA,26
+omnidimension/client.py,sha256=XIOZE2VFZMpnlCiO7SZa0dA1LsQfpeWsOApcjriKhgI,6281
+omnidimension/Agent/__init__.py,sha256=rIoSfggiyjCzLG_Mt_Q7n6pdE4ASR7nTZEuGaNpPjlM,3132
+omnidimension/Call/__init__.py,sha256=zYWseG--hY7-KIxsc2jI6GD0Ha6Z9o6XhCe1rI9toXA,2265
+omnidimension/Integrations/__init__.py,sha256=fegAVSOWacCEEOSdZ6vf_3w-5vnzC1IZ8u3RtP0SWYg,16648
+omnidimension/KnowledgeBase/__init__.py,sha256=gq3I5fEbvX0HxiJfqxagKACjxuKwo2B6y3ei_1KsC1E,3986
+omnidimension/PhoneNumber/__init__.py,sha256=wzsVUU7Zr5zYTs-T6ljvmUJMhLKijbCvS5Tt5eVVo1I,2372
+omnidimension-0.1.2.dist-info/licenses/LICENSE,sha256=K5KnPgyq0t1FjFxEE-BjqXW1wjZMyT0RHq9tGLiUK6c,1070
+omnidimension-0.1.2.dist-info/METADATA,sha256=xaiceHp4Ac67aifSztvSx7Mr8cji8tSC3m6BQ4uq4sc,827
+omnidimension-0.1.2.dist-info/WHEEL,sha256=CmyFI0kx5cdEMTLiONQRbGQwjIoR1aIYB7eCAQ4KPJ0,91
+omnidimension-0.1.2.dist-info/top_level.txt,sha256=nR1ysk3c3DzKAZmLYM8JdsE-1pnxcOoxhn7vcSJUHdI,14
+omnidimension-0.1.2.dist-info/RECORD,,
