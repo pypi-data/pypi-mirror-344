@@ -1,0 +1,77 @@
+Metadata-Version: 2.4
+Name: asyncio_rpc
+Version: 0.3.2
+Summary: Asyncio RPC client/server with redis/msgpack/dataclasses
+Author-email: Jelle Prins <jelle.prins@nelen-schuurmans.nl>
+License: BSD license
+Project-URL: Homepage, https://github.com/nens/asyncio-rpc
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: msgpack>=1.0.7
+Requires-Dist: lz4>=2.1.6
+Requires-Dist: redis[hiredis]<5.0
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-asyncio; extra == "test"
+Provides-Extra: numpy
+Requires-Dist: numpy==1.26.*; extra == "numpy"
+Provides-Extra: shapely
+Requires-Dist: shapely>=2.0.1; extra == "shapely"
+Provides-Extra: dev
+Requires-Dist: ipdb; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Dynamic: license-file
+
+Asyncio-rpc: Remote procedure calling framework
+===============================================
+
+The Python package for the asyncio remote procedure calling
+
+.. image:: https://github.com/nens/asyncio-rpc/actions/workflows/test.yml/badge.svg?branch=master
+        :target: https://github.com/nens/asyncio-rpc/actions/workflows/test.yml
+
+.. image:: https://readthedocs.org/projects/asyncio-rpc/badge/?version=latest
+        :target: https://asyncio-rpc.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+
+* Free software: BSD license
+* Documentation: https://asyncio-rpc.readthedocs.io.
+
+
+Overview
+========
+
+
+Features
+--------
+ - Asyncio RPC client/server
+ - Msgpack serialization with option to use own dataclasses (Python 3.10)
+ - Redis communication layer
+ - Other serialization methods and communication layers can be added
+
+
+Examples
+--------
+
+The examples can be run from this directory, for the dataclass example 
+(using localhost as redis host):
+
+    >>> python3.8 -m examples.dataclass.server localhost
+    >>> python3.8 -m examples.dataclass.client localhost
+
+
+Testing
+-------
+    >>> docker compose run asyncio_rpc pytest --cov=asyncio_rpc --cov-report=html
