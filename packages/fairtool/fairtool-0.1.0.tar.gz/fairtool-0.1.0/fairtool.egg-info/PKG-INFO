@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: fairtool
+Version: 0.1.0
+Summary: A CLI tool for FAIR processing of computational materials science data.
+Author-email: Ravindra Shinde <r.l.shinde@utwente.nl>
+Project-URL: Homepage, https://github.com/neelravi/fairtool
+Project-URL: Bug Tracker, https://github.com/neelravi/fairtool/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer[all]>=0.9.0
+Requires-Dist: pymatgen>=2023.0.0
+Requires-Dist: pandas>=1.5.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: markdown>=3.4.0
+Requires-Dist: jinja2>=3.1.0
+Dynamic: license-file

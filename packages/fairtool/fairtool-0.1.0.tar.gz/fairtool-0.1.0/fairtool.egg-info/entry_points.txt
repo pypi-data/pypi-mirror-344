@@ -1,0 +1,2 @@
+[console_scripts]
+fair = fairtool.cli:app
