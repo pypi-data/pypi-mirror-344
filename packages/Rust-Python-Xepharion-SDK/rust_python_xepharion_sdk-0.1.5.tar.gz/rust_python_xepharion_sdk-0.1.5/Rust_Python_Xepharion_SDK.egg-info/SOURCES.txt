@@ -1,0 +1,6 @@
+pyproject.toml
+setup.py
+Rust_Python_Xepharion_SDK.egg-info/PKG-INFO
+Rust_Python_Xepharion_SDK.egg-info/SOURCES.txt
+Rust_Python_Xepharion_SDK.egg-info/dependency_links.txt
+Rust_Python_Xepharion_SDK.egg-info/top_level.txt
