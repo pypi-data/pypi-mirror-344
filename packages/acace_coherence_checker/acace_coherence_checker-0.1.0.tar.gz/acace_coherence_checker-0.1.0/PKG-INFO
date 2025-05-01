@@ -1,0 +1,39 @@
+Metadata-Version: 2.3
+Name: acace_coherence_checker
+Version: 0.1.0
+Summary: Text coherence checking utilities for ACACE
+Author: ACACE Team
+Author-email: team@acace.ai
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: nltk (>=3.8.1,<4.0.0)
+Requires-Dist: numpy (>=1.26.3,<2.0.0)
+Requires-Dist: spacy (>=3.7.2,<4.0.0)
+Requires-Dist: transformers (>=4.37.2,<5.0.0)
+Description-Content-Type: text/markdown
+
+# ACACE_COHERENCE_CHECKER
+
+Component of the Adaptive Context-Aware Content Engine (ACACE).
+
+## Installation
+
+```bash
+pip install acace_coherence_checker
+```
+
+## Features
+
+- Core functionality for ACACE
+- Integration with other ACACE components
+
+## License
+
+MIT License
+
