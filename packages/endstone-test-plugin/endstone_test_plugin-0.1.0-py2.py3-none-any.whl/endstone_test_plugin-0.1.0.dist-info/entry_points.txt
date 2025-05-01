@@ -1,0 +1,2 @@
+[endstone]
+test-plugin = endstone_test_plugin:TestPlugin
