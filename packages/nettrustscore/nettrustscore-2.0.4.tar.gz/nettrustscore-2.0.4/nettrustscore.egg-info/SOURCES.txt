@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+nettrustscore.egg-info/PKG-INFO
+nettrustscore.egg-info/SOURCES.txt
+nettrustscore.egg-info/dependency_links.txt
+nettrustscore.egg-info/requires.txt
+nettrustscore.egg-info/top_level.txt
+trustpy/__init__.py
+trustpy/cond_nts.py
+trustpy/nts.py
