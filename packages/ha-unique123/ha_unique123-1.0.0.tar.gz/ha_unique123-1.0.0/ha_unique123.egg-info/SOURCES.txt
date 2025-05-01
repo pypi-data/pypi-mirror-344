@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+ha_unique123/__init__.py
+ha_unique123.egg-info/PKG-INFO
+ha_unique123.egg-info/SOURCES.txt
+ha_unique123.egg-info/dependency_links.txt
+ha_unique123.egg-info/top_level.txt
