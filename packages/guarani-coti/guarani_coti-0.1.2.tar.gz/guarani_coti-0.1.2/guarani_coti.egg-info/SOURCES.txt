@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+VERSION
+pyproject.toml
+setup.py
+guarani_coti/__init__.py
+guarani_coti/main.py
+guarani_coti.egg-info/PKG-INFO
+guarani_coti.egg-info/SOURCES.txt
+guarani_coti.egg-info/dependency_links.txt
+guarani_coti.egg-info/entry_points.txt
+guarani_coti.egg-info/requires.txt
+guarani_coti.egg-info/top_level.txt

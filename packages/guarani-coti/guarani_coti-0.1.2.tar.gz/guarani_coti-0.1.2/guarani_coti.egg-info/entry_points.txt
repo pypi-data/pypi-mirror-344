@@ -1,0 +1,2 @@
+[console_scripts]
+guarani-coti = guarani_coti.main:main
