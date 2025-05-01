@@ -1,0 +1,6 @@
+fastacp_setup.py
+fastacp/__init__.py
+fastacp.egg-info/PKG-INFO
+fastacp.egg-info/SOURCES.txt
+fastacp.egg-info/dependency_links.txt
+fastacp.egg-info/top_level.txt
