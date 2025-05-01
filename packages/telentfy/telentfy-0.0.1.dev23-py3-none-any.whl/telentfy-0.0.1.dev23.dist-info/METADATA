@@ -1,0 +1,25 @@
+Metadata-Version: 2.3
+Name: telentfy
+Version: 0.0.1.dev23
+Summary: Library for sending simple text notifications to ntfy.sh and Telegram channels.
+Author: ljbcloud
+Author-email: 206458089+ljbcloud@users.noreply.github.com
+Requires-Python: >=3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiohttp (>=3.11.18,<4.0.0)
+Requires-Dist: pydantic-settings (>=2.7.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# telentfy
+
+Library for sending simple text notifications to [ntfy.sh][] and [Telegram][] channels.
+
+<!-- References -->
+[ntfy.sh]: <https://ntfy.sh>
+[Telegram]: <https://telegram.org>
+
