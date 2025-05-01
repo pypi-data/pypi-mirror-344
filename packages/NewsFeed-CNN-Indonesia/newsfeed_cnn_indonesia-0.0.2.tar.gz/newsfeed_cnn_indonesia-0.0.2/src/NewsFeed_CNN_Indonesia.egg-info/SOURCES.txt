@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/NewsFeed_CNN_Indonesia.egg-info/PKG-INFO
+src/NewsFeed_CNN_Indonesia.egg-info/SOURCES.txt
+src/NewsFeed_CNN_Indonesia.egg-info/dependency_links.txt
+src/NewsFeed_CNN_Indonesia.egg-info/top_level.txt
+src/berita_terbaru_cnn/__init__.py

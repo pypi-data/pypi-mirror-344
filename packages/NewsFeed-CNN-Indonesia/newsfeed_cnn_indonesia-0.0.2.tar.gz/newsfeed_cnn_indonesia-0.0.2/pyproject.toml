@@ -1,0 +1,20 @@
+[project]
+name = "NewsFeed-CNN-Indonesia"
+version = "0.0.2"
+authors = [
+  { name="Remote-Idn", email="rsatriawan@gmail.com" },
+]
+description = "6 Popular news from CNN Indonesia"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable"
+]
+license = "GPL-3.0-only"
+license-files = ['LICEN[CS]E*', 'COPYING*', 'NOTICE*', 'AUTHORS*']
+
+[project.urls]
+Homepage = "https://github.com/Remote-Idn/News-Feed"
+Issues = "https://remote-idn.com"
