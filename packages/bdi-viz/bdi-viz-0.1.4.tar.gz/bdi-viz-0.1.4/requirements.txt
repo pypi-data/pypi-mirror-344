@@ -1,0 +1,6 @@
+altair==5.5.0
+bdi-kit==0.4.0
+bokeh==3.4.3
+datamart_profiler==0.11
+panel==1.4.5
+torch==2.2.2
