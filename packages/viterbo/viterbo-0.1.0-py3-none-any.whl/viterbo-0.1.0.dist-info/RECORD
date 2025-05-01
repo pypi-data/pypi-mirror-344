@@ -1,0 +1,8 @@
+viterbo/__init__.py,sha256=IkzGgVudZ-UeD0jaFG9IT2gPJ7MZhFbLZC1YSKJ7r8U,83
+viterbo/cli.py,sha256=9u2BMA5DO2EO1eG4W2Rhq0W6OsA2QYVnQ5Xfbfhz-ls,1024
+viterbo/collector.py,sha256=g04OxVOIhqWDypkRaKir3uhTM4EPiozkwmtB4QLBN7o,6875
+viterbo-0.1.0.dist-info/LICENSE,sha256=OphKV48tcMv6ep-7j-8T6nycykPT0g8ZlMJ9zbGvdPs,1066
+viterbo-0.1.0.dist-info/METADATA,sha256=QReZ1RcwEaL3lEKsZQKwnbag4v7gVBaqwBXlSFGQ4Bw,1496
+viterbo-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+viterbo-0.1.0.dist-info/entry_points.txt,sha256=hrh7WZ4FAQcTDw8R7z7Z-jGVyyo4UQXlsS5sUxEAbpA,44
+viterbo-0.1.0.dist-info/RECORD,,
