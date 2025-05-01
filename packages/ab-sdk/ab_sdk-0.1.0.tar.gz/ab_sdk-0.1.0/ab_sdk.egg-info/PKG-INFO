@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: ab-sdk
+Version: 0.1.0
+Summary: Add your description here
+Home-page: https://github.com/abubakarzohaib141/ab_sdk
+Author: Abu Bakar
+Author-email: abubakarbinzohaib@gmail.om
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: google-generativeai>=0.8.5
+Requires-Dist: openai-agents>=0.0.13
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: setuptools>=80.0.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+
+# AB SDK
+
+AB SDK is a beginner-friendly **AI Agent SDK** designed to make creating and running AI-powered agents easier, with built-in tools like **Weather**, **Web Search**, and **Calculator**, powered by Gemini and other APIs.
+
+## Features
+
+- **Easy Setup:** Quick installation with minimal configuration.
+- **Powerful Tools:** Built-in tools for weather, search, and calculations.
+- **Gemini Integration:** Simplifies connecting and using Gemini for AI agents.
+- **Modular & Extensible:** Add your custom tools or integrate with APIs.
+
+## Installation
+
+To install AB SDK, simply run:
+
+```bash
+pip install ab_sdk
