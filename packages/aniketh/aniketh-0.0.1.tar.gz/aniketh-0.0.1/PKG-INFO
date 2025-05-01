@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: aniketh
+Version: 0.0.1
+Summary: Personal sandbox
+Author-email: Anieesh <anieesh.saravanan@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# aniketh
+
+Sandbox package published to PyPI for experimental purposes.
+
+## Usage
+
+```python
+import aniketh
+print(aniketh.joke())

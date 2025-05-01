@@ -1,0 +1,7 @@
+pyproject.toml
+readme.md
+src/aniketh/__init__.py
+src/aniketh.egg-info/PKG-INFO
+src/aniketh.egg-info/SOURCES.txt
+src/aniketh.egg-info/dependency_links.txt
+src/aniketh.egg-info/top_level.txt
