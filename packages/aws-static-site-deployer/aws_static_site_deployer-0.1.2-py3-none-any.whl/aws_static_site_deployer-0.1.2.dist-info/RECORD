@@ -1,0 +1,14 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/cli.py,sha256=W5RM8tJTCcEtq7ixsWYgHJoPS3oEndc1MEoL8zuB9fw,583
+src/main.py,sha256=5LUE3sKRTsPErI1-fCjV9C-zy6NdM9OMo6M9zbxzGzA,4236
+src/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/helpers/aws_helpers.py,sha256=0Jmq9Sqyvpr_Fc3ah7MOUnbsXN9UuwRhcSJIr35nM2M,4815
+src/helpers/file_helpers.py,sha256=mlDZLpVgdmzB9p5tuPEpCpRNcRlIPGm0500oHOevx_k,1498
+src/helpers/git_helpers.py,sha256=c9BGqJQTe4NprI2ryqMKM_OV_4UxDJAIq8QXrUBRdqU,856
+src/helpers/logger.py,sha256=B4s_-FaQdE5HvBylHnVS7dCn-AbvKF_0usK44m61M2c,312
+src/helpers/template_helpers.py,sha256=RH-nKr5hmH_AlD3GUHQHVzxSCr_UTFfR0ejl35nRYVo,22895
+aws_static_site_deployer-0.1.2.dist-info/METADATA,sha256=wni2Nrm0akmFPZtPf6T_GS6egvwOx9JivastukR7org,457
+aws_static_site_deployer-0.1.2.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+aws_static_site_deployer-0.1.2.dist-info/entry_points.txt,sha256=nxTvy-oCBgW7MNsZpasUBQLOd8rWC-n4Ibjqbldy6Ms,58
+aws_static_site_deployer-0.1.2.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+aws_static_site_deployer-0.1.2.dist-info/RECORD,,
