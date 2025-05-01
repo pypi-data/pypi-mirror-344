@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+ask_mydb.egg-info/PKG-INFO
+ask_mydb.egg-info/SOURCES.txt
+ask_mydb.egg-info/dependency_links.txt
+ask_mydb.egg-info/requires.txt
+ask_mydb.egg-info/top_level.txt
+askmydb/__init__.py
+askmydb/askmydb.py
+tests/test_ollama_provider.py

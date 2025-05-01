@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name="ask-mydb"
+version="0.1.0"
+description="A Python package for querying databases using natural language."
+readme="README.md"
+license="MIT"
+dependencies = [
+    "sqlalchemy"
+]
+
+[project.optional-dependencies]
+dev = ["black", "pytest"]
+openai = ["openai"]
+ollama = ["ollama"]
+
+all = [
+    "sqlalchemy",
+    "black",
+    "pytest",
+    "openai",
+    "ollama"
+]
+
+
+[tool.setuptools]
+packages = ["askmydb"]
