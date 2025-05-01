@@ -1,0 +1,16 @@
+fastapify/__init__.py,sha256=go20U3RCVaJ2N55RnX4tO5rinfUCRV0puFyrHCto8yw,23
+fastapify/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapify/application.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapify/main.py,sha256=ZRoEWuTPySzq2fXCyPZRXJ-sZQZE8URCTej6s-nTc_8,595
+fastapify/module_functionality/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapify/module_functionality/commands.py,sha256=28Ie4Wqo3jc3RoUCn6rLow7whbIkfj7k3OGy4Frgb54,6270
+fastapify/module_functionality/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapify/module_functionality/templates/api.py,sha256=MNAbmbSx3DhjOgXVQJov-1Gv2PzZL2iFGUU3_xehzR4,191
+fastapify/module_functionality/templates/config.py,sha256=UMV-XSal_KWzPRl2QOqUkqJ2aw8PltgCOy4cyAEkYpo,1477
+fastapify/module_functionality/templates/database.py,sha256=-oxW3VuZ3j8IcQPSohCabus23LRIGmpucwnwf5nYuj4,916
+fastapify/module_functionality/templates/main.py,sha256=rwse5Ov5DQ_dprYFchx5P53A86740hbl1PfZyvVhSwI,807
+fastapify-0.0.15.dist-info/METADATA,sha256=SWQu4ZaWBGMRBIUWrzkw1rwSzHUKwKpDST-l1x2-ww8,3561
+fastapify-0.0.15.dist-info/WHEEL,sha256=7mLNlhqgufj7fxENZhtzRraBDfDi3AITas5GqZGp0zk,109
+fastapify-0.0.15.dist-info/entry_points.txt,sha256=ET-owtfV1lJBrRObZjVdmlFcnMmne7h7P8YIZaUII2Y,49
+fastapify-0.0.15.dist-info/top_level.txt,sha256=-tIts-sXQDdEXYTvtwZPPDpKI7byZkyGB7W-aKeJA0E,10
+fastapify-0.0.15.dist-info/RECORD,,
