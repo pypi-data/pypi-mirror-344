@@ -1,0 +1,6 @@
+async_stream_processing/__init__.py,sha256=3z35J5yoFYmajGgXpqB_K3Beno0u8anSnAk8pArJFhY,214
+async_stream_processing/processor.py,sha256=0Uqtpn4a456pnL7-zxIp6d6Sku82yk-AwZQkRSkeMls,7468
+async_stream_processing/testing.py,sha256=8d23928OLIn0UkipkpOOgipzVDdk3fZhU92_qsp9etc,927
+async_stream_processing-1.0.0.dist-info/METADATA,sha256=FJmsHYNcCfp7WqT2cMY5U1MzVlmrQRuK_asX-fpKdXU,9468
+async_stream_processing-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+async_stream_processing-1.0.0.dist-info/RECORD,,
