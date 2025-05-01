@@ -1,0 +1,44 @@
+[project]
+name = "pytaku"
+version = "0.8.1"
+description = "Self-hostable web-based manga reader"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "AGPL-3.0-only"
+dependencies = [
+    "apsw>=3.49.1.0",
+    "argon2-cffi>=23.1.0",
+    "bbcode>=1.1.0",
+    "flask>=3.1.0",
+    "goodconf>=6.1.2",
+    "gunicorn>=23.0.0",
+    "requests>=2.32.3",
+]
+
+[dependency-groups]
+dev = [
+    "ipdb",
+    "pytest",
+]
+
+[project.scripts]
+pytaku = "pytaku:serve"
+pytaku-dev = "pytaku:dev"
+pytaku-migrate = "pytaku:migrate"
+pytaku-generate-config = "pytaku:generate_config"
+pytaku-scheduler = "pytaku:scheduler"
+pytaku-collect-static = "pytaku:collect_static"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [
+    { include = "pytaku", from = "src" },
+    { include = "mangoapi", from = "src" },
+]
+# Compiled js bundle dir is in gitignore, which poetry also reads.
+# Therefore, it needs to be specifically whitelisted here:
+include = ["src/pytaku/static/js/*"]
