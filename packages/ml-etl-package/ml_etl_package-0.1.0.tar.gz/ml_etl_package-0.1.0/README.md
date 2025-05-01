@@ -1,0 +1,46 @@
+# README.md
+# ML ETL Package
+
+A lightweight Python package for running a simple Machine Learning ETL pipeline using Scikit-learn.
+
+## Features
+- 📥 Extract: Load data from CSV files
+- 🔧 Transform: Clean and scale data with `StandardScaler`
+- 📤 Load: Save transformed data to CSV
+- 🤖 Model: Train and save a Linear Regression model
+- 🔮 Predict: Make predictions from scaled inputs
+
+## Installation
+```bash
+pip install ml-etl-package
+```
+
+## Usage Example
+```python
+from ml_etl_package.extract import extract_from_csv
+from ml_etl_package.transform import transform
+from ml_etl_package.load import save_to_csv
+from ml_etl_package.model import train_and_save_model, load_model
+from ml_etl_package.predict import predict
+
+# Extract
+df = extract_from_csv("data.csv")
+
+# Transform
+X, y, scaler = transform(df, feature_cols=["sqft", "bedrooms", "bathrooms"], target_col="price")
+
+# Load (save transformed data)
+save_to_csv(X, y, filename="transformed_output.csv")
+
+# Train
+train_and_save_model(X, y)
+model = load_model()
+
+# Predict
+input_data = [1200, 3, 2]  # sqft, bedrooms, bathrooms
+result = predict(model, scaler, input_data)
+print(f"Predicted price: {result:.2f}")
+```
+
+## License
+MIT
