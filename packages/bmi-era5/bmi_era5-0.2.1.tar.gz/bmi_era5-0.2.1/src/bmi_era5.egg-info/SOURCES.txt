@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/bmi_era5/__init__.py
+src/bmi_era5/_version.py
+src/bmi_era5/bmi.py
+src/bmi_era5/utils.py
+src/bmi_era5.egg-info/PKG-INFO
+src/bmi_era5.egg-info/SOURCES.txt
+src/bmi_era5.egg-info/dependency_links.txt
+src/bmi_era5.egg-info/requires.txt
+src/bmi_era5.egg-info/top_level.txt
