@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "acace_metrics_collector"
+version = "0.1.0"
+description = "Metrics collection utilities for ACACE"
+authors = ["ACACE Team <team@acace.ai>"]
+readme = "README.md"
+packages = [{include = "acace_metrics_collector", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+prometheus-client = "^0.19.0"
+numpy = "^1.26.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
