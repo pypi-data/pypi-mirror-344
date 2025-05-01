@@ -1,0 +1,7 @@
+mynotification/__init__.py,sha256=6c8gae6mNB1hnjJwEFTQxY9xXZImLJakPUGfs_MQROE,623
+mynotification/notification_android.py,sha256=6ikK2OoIaoU8dj-R2TIzFhGwjRcUVU6HBl6m_Ha1FzE,686
+mynotification/notification_desktop.py,sha256=8bpnIE3fSdMunc5_n8qhBr6EIJ9o6qMlAn1apz_fCNo,209
+mynotification-0.2.0.dist-info/LICENSE,sha256=BZ8TGRfW9uQF9P7hgbuBUKrTVG2glghpr2lXFiHoP1Q,1063
+mynotification-0.2.0.dist-info/METADATA,sha256=ZfmiHtkopYXrDC_qAIRxUF3CpjzsWgmESg9j8GZ9uf8,303
+mynotification-0.2.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+mynotification-0.2.0.dist-info/RECORD,,
