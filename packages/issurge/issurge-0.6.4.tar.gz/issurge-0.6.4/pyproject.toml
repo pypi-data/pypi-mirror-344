@@ -1,0 +1,29 @@
+[project]
+name = "issurge"
+version = "0.6.4"
+description = "Deal with your client's feedback efficiently by creating a bunch of issues in bulk from a text file."
+authors = [{ name = "Gwenn Le Bihan", email = "gwenn.lebihan7@gmail.com" }]
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = ["rich>=14.0.0,<15", "docopt>=0.6.2,<0.7"]
+
+[project.urls]
+Repository = "https://github.com/gwennlbh/issurge"
+
+[project.scripts]
+issurge = "issurge.main:run"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+ "pytest-cov>=6.1.1",
+]
+
+[tool.uv]
+
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report xml --junitxml=junit.xml -o junit_family=legacy"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
