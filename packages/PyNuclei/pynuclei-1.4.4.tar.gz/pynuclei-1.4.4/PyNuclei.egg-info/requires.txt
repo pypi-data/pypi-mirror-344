@@ -1,0 +1,4 @@
+PyYAML
+requests
+fake_useragent
+Pillow<=10.4.0
