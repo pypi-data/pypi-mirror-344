@@ -1,0 +1,11 @@
+[project]
+name = "adb-mcp-server"
+version = "0.9.17"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp>=1.6.0",
+]
+[project.scripts]
+adb-mcp-server="main:main"
