@@ -1,0 +1,13 @@
+openserv/__init__.py,sha256=NogibsdxJ2a6hc9HEtmwpGAI0hHRKEuKRzC1-fBH534,1301
+openserv/agent.py,sha256=4V_QcR_-UpFaomwIO_2dsijryGzI9xP-_qyHS46Dhn4,38287
+openserv/capability.py,sha256=Ebl_Z7kkq-9jdt2wW6m2yS9ocVI8pulLrF596kou0So,6884
+openserv/client.py,sha256=Nxo_TCrfd2oaJjTZl5YCIoQMQhKmkwg7Qb9nQIYtKWs,15570
+openserv/config.py,sha256=I6j5oXRuYc0OkXjS2k5sih54kF_AeRh7-1HYDbvnsyk,1907
+openserv/exceptions.py,sha256=Aj6uH9B1UKuabFKOGfLfX83N2r6PFm3L9XnMpPfXZ7Q,1179
+openserv/logger.py,sha256=h_kSP6HdUWrCDp5CeucWorZ4J-hDdt5wkKK62pqMK64,795
+openserv/server.py,sha256=Jx4ToX1zoIaNPi7GY1lGSGGrKjuORhS6iYXP-IVQcTM,8564
+openserv/types.py,sha256=-iv2OwfT_U68r26HuoxWAOypG_deKVUx6cjnbTeSAtw,7122
+openserv_sdk-0.1.0.dist-info/METADATA,sha256=_NPqFq1j0lGr-_aRths-6YikHf3wAc07l_rKhrGBos4,19846
+openserv_sdk-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+openserv_sdk-0.1.0.dist-info/licenses/LICENSE,sha256=WU8IOinqt4IWpwnGbhBQNXhDLqK6wA10-JFYavItaho,1070
+openserv_sdk-0.1.0.dist-info/RECORD,,
