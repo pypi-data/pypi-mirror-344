@@ -1,0 +1,53 @@
+Metadata-Version: 2.3
+Name: acace
+Version: 0.1.1
+Summary: Adaptive Context-Aware Content Engine (ACACE) – Main orchestrator package for optimizing token usage and preserving contextual coherence across LLM content generation workflows.
+Author: ACACE Team
+Author-email: team@acace.ai
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: numpy (>=1.26.3,<2.0.0)
+Description-Content-Type: text/markdown
+
+# acace
+
+Adaptive Context-Aware Content Engine (ACACE) – Main orchestrator package for optimizing token usage and preserving contextual coherence across LLM content generation workflows.
+
+## Installation
+
+```bash
+pip install acace
+```
+
+## Features
+
+- Core functionality for ACACE
+- Integration with other ACACE components
+- Standardized interfaces
+
+## Usage
+
+```python
+from acace import main_function
+
+result = main_function()
+```
+
+## Documentation
+
+Detailed documentation can be found in the [docs](docs/) directory.
+
+## Integration with ACACE
+
+This package is designed to work seamlessly with the main [ACACE](https://github.com/Sumedh1599/acace) library.
+
+## License
+
+MIT License
+
