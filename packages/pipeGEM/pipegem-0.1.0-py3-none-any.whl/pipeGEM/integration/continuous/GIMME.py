@@ -1,0 +1,76 @@
+from typing import Dict
+
+from optlang.symbolics import Zero
+import cobra
+from cobra.util import fix_objective_as_constraint
+import numpy as np
+import pandas as pd
+
+from pipeGEM.analysis import add_mod_pfba, GIMMEAnalysis, timing
+
+
+@timing
+def apply_GIMME(model: cobra.Model,
+                rxn_expr_score: Dict[str, float],
+                high_exp: float,
+                protected_rxns = None,
+                obj_frac: float = 0.8,
+                remove_zero_fluxes: bool = False,
+                flux_threshold: float = 1e-6,
+                max_inconsistency_score = 1e3,
+                return_fluxes: bool = True,
+                keep_context: bool = False,
+                rxn_scaling_coefs: dict = None,
+                predefined_threshold=None
+                ):
+    """
+    GIMME implementation
+
+    Parameters
+    ----------
+    model: cobra.Model
+        A model with objective function
+    rxn_expr_score: Dict[str, float]
+        A dict with rxn_ids as keys and expression values as values
+    high_exp: float
+        Expression value higher than this value is defined as high expression
+    obj_frac: float
+
+    Returns
+    -------
+    result: GIMMEAnalysis
+    """
+    protected_rxns = [] if protected_rxns is None else protected_rxns
+    ori_obj = [r.id for r in model.reactions if r.objective_coefficient != 0]
+    rxn_scaling_coefs = {r.id: 1 for r in model.reactions} if rxn_scaling_coefs is None else rxn_scaling_coefs
+    obj_dict = {r_id: (high_exp - r_exp) * rxn_scaling_coefs[r_id]
+                if high_exp - r_exp < max_inconsistency_score else max_inconsistency_score  # for preventing -np.inf values
+                for r_id, r_exp in rxn_expr_score.items() if not np.isnan(r_exp) and
+                r_id not in protected_rxns and r_id not in ori_obj and
+                r_exp < high_exp}
+
+    with model:
+        add_mod_pfba(model, weights=obj_dict, fraction_of_optimum=obj_frac)
+        sol = model.optimize("minimize")
+
+    flux_df = sol.to_frame()
+    print("original obj's optimized value: ", flux_df.loc[ori_obj, "fluxes"])
+
+    new_model = None
+    if remove_zero_fluxes:
+        new_model = model.copy()
+        to_remove = set(flux_df[abs(flux_df["fluxes"]).sort_index() <=
+                                flux_threshold / pd.Series(rxn_scaling_coefs).sort_index()].index.to_list()) - set(protected_rxns)
+        new_model.remove_reactions(list(to_remove), remove_orphans=True)
+
+    if keep_context:
+        rxns_in_model = [r.id for r in model.reactions]
+        add_mod_pfba(model, weights={k: v for k, v in obj_dict.items() if k in rxns_in_model},
+                     fraction_of_optimum=obj_frac) # some are probably removed
+
+    result = GIMMEAnalysis(log={"name": model.name, "high_exp": high_exp, "obj_frac": obj_frac})
+    result.add_result(dict(rxn_coefficents=obj_dict,
+                           rxn_scores=rxn_expr_score,
+                           flux_result=flux_df if return_fluxes else None,
+                           result_model=new_model))
+    return result
