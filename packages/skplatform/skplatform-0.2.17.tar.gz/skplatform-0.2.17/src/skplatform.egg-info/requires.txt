@@ -1,0 +1,7 @@
+numpy
+sktimeutils>=2.0.9
+skconfig>=0.3.5
+sgp4>=2.9
+jplephem
+astropy
+xarray
