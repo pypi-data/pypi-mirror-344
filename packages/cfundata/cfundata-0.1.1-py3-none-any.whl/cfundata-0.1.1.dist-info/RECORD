@@ -1,0 +1,9 @@
+cfundata/__init__.py,sha256=VIDnbo69VYxDTb44xc_k1wud5v13OQI3b9CM77cLIpo,431
+cfundata/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cfundata/data/all_frequency.parquet,sha256=RY4hRsIDYvaRAiCxqIOG70d9cFkHLbMBRF47yj6QK1M,44499097
+cfundata/dx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cfundata/dx/dx_cls.onnx,sha256=gJA3W7w_NZz-jsI7JeJk14BU5561tY4YjFaq-O-mVHg,13069181
+cfundata/dx/dx_det.onnx,sha256=6Wey1Ez6dDeIxQLF4K8JTc1oNTuQYiNVQK5-ZSE4G_o,10469199
+cfundata-0.1.1.dist-info/METADATA,sha256=NryruICtYCktMn9XwpKi9K2nP0liOZ7NU6M56StavHc,592
+cfundata-0.1.1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+cfundata-0.1.1.dist-info/RECORD,,
