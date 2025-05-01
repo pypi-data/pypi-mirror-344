@@ -1,0 +1,35 @@
+[build-system]
+requires = ["scikit-build-core"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "pxr-tbb-dev"
+version = "2022.1.0"
+description = "C++ headers and CMake config for developing with pxr-tbb"
+readme = "README.md"
+requires-python = ">=3.8"
+license-files = ["LICENSE.txt"]
+keywords = ["pixar", "open-usd", "dev"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+]
+
+[project.urls]
+Repository = "https://github.com/untwine/pxr-tbb"
+
+[tool.scikit-build]
+cmake.version = ">=3.21,<4"
+cmake.args = [
+    "-DTBB_TEST=OFF",
+    "-DTBB_EXAMPLES=OFF",
+    "-DBUILD_SHARED_LIBS=ON",
+    "-DCMAKE_INSTALL_LIBDIR=pxr-tbb/lib",
+    "-DCMAKE_INSTALL_INCLUDEDIR=pxr-tbb/include",
+    "-DCMAKE_INSTALL_DATAROOTDIR=pxr-tbb/share",
+]
+wheel.exclude = ["pkgconfig"]
+sdist.exclude = [".github", "doc", "examples", "python", "test"]
