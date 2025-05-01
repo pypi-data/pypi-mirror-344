@@ -1,0 +1,2 @@
+[console_scripts]
+brocc = brocc.entry_points:start
