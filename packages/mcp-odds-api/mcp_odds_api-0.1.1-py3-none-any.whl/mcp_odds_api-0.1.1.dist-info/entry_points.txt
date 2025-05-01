@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-odds-api = mcp_odds_api.main:main

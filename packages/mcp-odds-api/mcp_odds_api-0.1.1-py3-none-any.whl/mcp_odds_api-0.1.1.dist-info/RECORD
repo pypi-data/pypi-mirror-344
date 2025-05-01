@@ -1,0 +1,11 @@
+mcp_odds_api/__init__.py,sha256=J2YeMfgnJtaBNzfwVM_B81sgRQv9v8Tnps6X8q6xK8w,290
+mcp_odds_api/main.py,sha256=TRQ6E25cPL6f1NIRw4dVhfFZVDvCV1g0uUWh_Nvk9gg,2447
+mcp_odds_api/mcp_config.py,sha256=0tpZ6Rs7HKcDffJI7_Dd95xGKZKocV3MkOAOWKMii6Y,1710
+mcp_odds_api/server.py,sha256=vfqLMI21I7bmAaXZvnxRxG6gg85gCmTtwLjFVRgDP-8,11788
+mcp_odds_api/utils.py,sha256=Nk5QySc4NGKFIHJAtj8UHi6NxUBVX9IaTbUHcchTvwk,11325
+mcp_odds_api-0.1.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+mcp_odds_api-0.1.1.dist-info/METADATA,sha256=SSbwL93zClWAqyC2rl_ndbNZvV7TgX8FHbNzj9N7qvk,3594
+mcp_odds_api-0.1.1.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+mcp_odds_api-0.1.1.dist-info/entry_points.txt,sha256=v_5Z7ZOjRlk9cEgaZrtDThsn65yjACehFtzWs2UwSZI,56
+mcp_odds_api-0.1.1.dist-info/top_level.txt,sha256=QPyrZtVGaQ7v2ougOZNk0-o-aVpKrwG5RjkCfCJfR6M,13
+mcp_odds_api-0.1.1.dist-info/RECORD,,
