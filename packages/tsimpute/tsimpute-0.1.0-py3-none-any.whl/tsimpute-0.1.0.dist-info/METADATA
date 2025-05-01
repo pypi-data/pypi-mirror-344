@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: tsimpute
+Version: 0.1.0
+Summary: FU Capstone TimeSeries Imputation
+License: MIT
+Author: Hongptvn
+Author-email: hongptvn@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: boto3 (>=1.37.5,<2.0.0)
+Requires-Dist: matplotlib (>=3.10.0,<4.0.0)
+Requires-Dist: minio (>=7.2.15,<8.0.0)
+Requires-Dist: mlflow (>=2.20.3,<3.0.0)
+Requires-Dist: numpy (>=2.2.3,<3.0.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: psutil (>=7.0.0,<8.0.0)
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Requires-Dist: pynvml (>=12.0.0,<13.0.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: scikit-learn (>=1.6.1,<2.0.0)
+Requires-Dist: statsmodels (>=0.14.4,<0.15.0)
+Requires-Dist: tqdm (>=4.67.1,<5.0.0)
+Project-URL: Homepage, https://github.com/capstone-fudn-2025/timeseries-imputation
+Description-Content-Type: text/markdown
+
+# 📉 Time Series Imputation 📈
+
+Time Series Imputation Capstone Project (FPT University Da Nang).
+
+## 🎓 Authors
+
+- Phan Thị Thu Hồng (Supervisor)
+- Đinh Thiều Quang
+- Đào Ngọc Huy
+- Đoàn Quang Minh - quangminh57dng@gmail.com
+- Lê Thị Minh Thư
+
+## 🚀 Run this code
+
+### Prerequisite
+
+- Install `Python>=3.11`.
+
+- Install project dependencies
+
+```sh
+# Install python package manager
+pip install poetry
+# Install dependencies
+poetry install
+```
+
+- Make sure you have your own data (`.csv` file) in `data` folder.
+
+### Run with manual configs
+
+- Open `notebooks/default.ipynb`.
+
+## 🐳 Docker
+
+- Build image
+
+```sh
+docker build -t mingdoan/tsimpute-runner -f ./docker/runner.Dockerfile .
+```
+
+- Export experiment config
+
+```sh
+python docker/exp.py -f settings/your_config.yml
+```
+
+- Start MLFlow & MinIO
+
+```sh
+docker compose up -d
+```
+
