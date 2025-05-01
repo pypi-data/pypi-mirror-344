@@ -1,0 +1,14 @@
+itensorpy/__init__.py,sha256=I9NtQMyDn8rcXD4-6H0-m8Cm34tz5YQj94BM7z09GEA,1091
+itensorpy/christoffel.py,sha256=AB7AJrGFkb-1FBlH6XALL4yjdUXxjB5W_zUZFGn28cA,13597
+itensorpy/curvature.py,sha256=SyXKHF4VAPndr70z_bBLb57VgpquwyAke6ItrO3XvR4,13939
+itensorpy/einstein.py,sha256=oxEbsKxdGKmKd2SzHOGp3CeA5Fj-Jt_RfB8IV3BnIvA,9437
+itensorpy/metric.py,sha256=b1aESuKGUHeke5DoQ0rU1w9jc579W_oX3k-mlw_pygQ,9232
+itensorpy/ricci.py,sha256=RY_0syZaR5hh9mAkn1H4s55xpcoOl1KqOppzCgE2uPg,8165
+itensorpy/riemann.py,sha256=HLp7WsbPMBY3gzFQlOlgth_VURscykiy9gKFVadq38w,8018
+itensorpy/spacetimes.py,sha256=bvwbnj7G8LIcd_iivx0cA4LbQ3mGAYXA_sZ-EaH07Cw,10581
+itensorpy/utils.py,sha256=vOJXKBD0e1b7G9lyqnZSjBwTBRqSSl8enWnqjBr744A,7333
+itensorpy-0.2.4.dist-info/licenses/LICENSE,sha256=GRzgXnW1t_-fknNQRdcB9ylZHKDO4PzpMzdtaZdq8Pc,1099
+itensorpy-0.2.4.dist-info/METADATA,sha256=nn1gNJldwXi1DLI1VM64ZssbJ5mPmXFwxgsCivXhU80,5723
+itensorpy-0.2.4.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+itensorpy-0.2.4.dist-info/top_level.txt,sha256=C2BkcKBMvmjceMVlsGBiU3c06pDlnfhAEX9IlPrvq38,10
+itensorpy-0.2.4.dist-info/RECORD,,
