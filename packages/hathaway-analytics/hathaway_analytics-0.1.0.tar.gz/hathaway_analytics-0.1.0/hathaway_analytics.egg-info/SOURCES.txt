@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.txt
+hathaway_analytics.cfg
+setup.py
+hathaway_analytics/__init__.py
+hathaway_analytics/core.py
+hathaway_analytics.egg-info/PKG-INFO
+hathaway_analytics.egg-info/SOURCES.txt
+hathaway_analytics.egg-info/dependency_links.txt
+hathaway_analytics.egg-info/requires.txt
+hathaway_analytics.egg-info/top_level.txt

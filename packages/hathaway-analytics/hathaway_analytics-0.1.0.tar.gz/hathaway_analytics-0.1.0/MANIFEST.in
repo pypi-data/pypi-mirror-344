@@ -1,0 +1,4 @@
+include README.txt
+include LICENSE
+include hathaway_analytics.cfg
+recursive-include hathaway_analytics *.py
