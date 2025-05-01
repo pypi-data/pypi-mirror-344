@@ -1,0 +1,2 @@
+[console_scripts]
+swagou = swagou.cli:app
