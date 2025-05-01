@@ -1,0 +1,10 @@
+bvhTools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bvhTools/bvhDataTypes.py,sha256=HjlQe1X-A_iltbYyGyZuXLDCAq3YBqfDcXWRf66zC_c,14528
+bvhTools/bvhIO.py,sha256=iqdtlYAEUw5DTLrSDFi01Y0P_vr0WFB8GwAfPTI-iVE,4808
+bvhTools/bvhManipulation.py,sha256=7eE-U4R24CtZ4jHBlLmO8RMG7iToWZ_DCHG0C-LP-Qk,5519
+bvhTools/bvhSlicer.py,sha256=stXVtXLgiJG96avPIoW9Ofuo17ruqqheB2uSqRO7cu0,1495
+bvhTools/bvhVisualizerSimple.py,sha256=qlLAgHhGWpDr2Qsa_3wCvnnA_N-wnpnnYGSKKwQRiJU,3760
+bvhtools-0.1.1.dist-info/METADATA,sha256=5RlkCc5zIfTsgFSb2V_Nx1LY3J2wF1uAvWBZUG3nPxI,1448
+bvhtools-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bvhtools-0.1.1.dist-info/licenses/LICENSE,sha256=1_jzII07B_DDhIO3jQBSrPeLrS8Fx4wcZs6WN8obiPU,1068
+bvhtools-0.1.1.dist-info/RECORD,,
