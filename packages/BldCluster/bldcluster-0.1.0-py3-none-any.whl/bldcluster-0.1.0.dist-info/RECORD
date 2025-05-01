@@ -1,0 +1,10 @@
+BldCluster/BldCluster.py,sha256=hRXSEACgdE-0fx3Bus73qEaYgLLZX2EpgiOxMap0BqQ,3615
+BldCluster/BldMeta.py,sha256=yDOnFSFl5QG5rf29N5hTWGti8mxqomMaUJvH1wAzJRw,400
+BldCluster/Example 1 Classify buildings.py,sha256=7FL_cyB8EuihZz_-CTPrx5kRmGgBpTTL_dgzV5pUmgU,237
+BldCluster/Tool.py,sha256=ZnMUoQBn8GUMcS15Jd1obtsROGfjoHu8NVMDd9kW4QY,1065
+BldCluster/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+BldCluster/Resources/SanFrancisco_buildings_full.csv,sha256=QCr0rW3PgtfoWYC25MT-krUDSNqVrJFBODdcC-2INxE,10373510
+bldcluster-0.1.0.dist-info/METADATA,sha256=iShp3JpE21904NIK97Y7bCK9COYDfPzgo5EbMJPgFU4,41756
+bldcluster-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bldcluster-0.1.0.dist-info/licenses/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+bldcluster-0.1.0.dist-info/RECORD,,
