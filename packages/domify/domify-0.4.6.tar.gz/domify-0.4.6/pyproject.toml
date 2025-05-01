@@ -1,0 +1,129 @@
+[project]
+name = "domify"
+description = "HTML generator using pure Python"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    {name="Parnassius", email="Parnassius@users.noreply.github.com"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Text Processing :: Markup :: HTML",
+    "Typing :: Typed",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/Parnassius/domify"
+
+[dependency-groups]
+dev = [
+    "darglint==1.8.1",
+    "mypy==1.15.0",
+    "pytest==8.3.5",
+    "pytest-cov==6.1.1",
+    "ruff==0.11.7",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.coverage.report]
+exclude_lines = [
+    "# pragma: no cover",
+    "if TYPE_CHECKING:",
+    "@overload",
+]
+
+[tool.coverage.run]
+relative_files = true
+source = ["src/domify"]
+omit = ["src/domify/__about__.py"]
+
+
+[tool.hatch.build]
+packages = ["src/domify"]
+
+[tool.hatch.version]
+path = "src/domify/__about__.py"
+
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+
+# Disallow dynamic typing
+disallow_any_unimported = true
+disallow_any_expr = true
+disallow_any_decorated = true
+disallow_any_explicit = true
+
+show_error_codes = true
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+# pytest decorators leave functions untyped after transformation
+disallow_any_decorated = false
+disallow_any_explicit = false
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+
+
+[tool.ruff.lint]
+select = [
+    "A",     # flake8-builtins
+    "ARG",   # flake8-unused-arguments
+    "B",     # flake8-bugbear
+    "C4",    # flake8-comprehensions
+    "DTZ",   # flake8-datetimez
+    "E",     # pycodestyle
+    "EM",    # flake8-errmsg
+    "F",     # pyflakes
+    "I",     # isort
+    "ICN",   # flake8-import-conventions
+    "ISC",   # flake8-implicit-str-concat
+    "N",     # pep8-naming
+    "PGH",   # pygrep-hooks
+    "PTH",   # flake8-use-pathlib
+    "RET",   # flake8-return
+    "RUF",   # Ruff-specific rules
+    "T10",   # flake8-debugger
+    "TID",   # flake8-tidy-imports
+    "TRY",   # tryceratops
+    "UP",    # pyupgrade
+    "W",     # pycodestyle
+    "YTT",   # flake8-2020
+]
+ignore = [
+    "A003",  # builtin-attribute-shadowing
+]
+fixable = [
+    "I",     # isort
+    "F401",  # unused-import
+    "TID",   # flake8-tidy-imports
+    "UP",    # pyupgrade
+]
+dummy-variable-rgx = "^_$"
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.isort]
+required-imports = ["from __future__ import annotations"]
+split-on-trailing-comma = false
