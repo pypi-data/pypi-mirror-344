@@ -1,0 +1,9 @@
+sentence_plagiarism/__init__.py,sha256=Ws947xW2TQNwDC3_-zfCIceZLDZoumc1TVPuXPy4P-Y,78
+sentence_plagiarism/cli.py,sha256=zm6mQecDsakHbxIgPmcYsLJd8csL4qruQxL9rifkWBU,1139
+sentence_plagiarism/plagiarism_checker.py,sha256=QuP8o3O84gYxgKHp7AXKNSZ_jm3iS105o96LILjWzjM,3080
+sentence_plagiarism/similarity.py,sha256=G7LDBMuNolug0OtnDObuuC7XANEQfdn92ZybRUgZ3-Y,2185
+sentence_plagiarism-0.4.0.dist-info/LICENSE,sha256=qFOSWcifTq1uMtZZAXTPbHpu83CGxo2lYkAI18b5e90,1072
+sentence_plagiarism-0.4.0.dist-info/METADATA,sha256=U_pKWhewPUxc33gU1VBxEhsfOaa8W_ppnToA1ib38xY,4129
+sentence_plagiarism-0.4.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+sentence_plagiarism-0.4.0.dist-info/entry_points.txt,sha256=Opzv9trDtXZ2jeIIGl0KbpTSZM2seOLN-uj7VqW3W6Q,68
+sentence_plagiarism-0.4.0.dist-info/RECORD,,
