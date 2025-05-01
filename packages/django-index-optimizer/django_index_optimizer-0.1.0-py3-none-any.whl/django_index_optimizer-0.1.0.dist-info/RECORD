@@ -1,0 +1,13 @@
+django_index_optimizer-0.1.0.dist-info/licenses/LICENSE,sha256=oVHMIQnGoZZm6LFEZCQuxhxXA1Py_l4XH-jLC9h_tC4,1328
+optimizer/__init__.py,sha256=R7p40RtmoKACGvG0ZF4WdhwvLTUhDhHLskRBuR9zAyU,54
+optimizer/analyzer.py,sha256=61Bq2_i5oPpcdm3_AREEimUisTTesWJOZkDj7yDyTqs,732
+optimizer/applier.py,sha256=tzeOVOhao5JjR6DzXSp5hl69jQeHYEpqagkwwQ7YEWE,620
+optimizer/apps.py,sha256=ircZnJS8Vip4YtLbG77kSBiPdQPQzbeF_ZoTglR8Heo,132
+optimizer/recommender.py,sha256=U4HnDolqzIzFar6ZlGfLibXAGPyFqRhCM4_UZdxDuZg,209
+optimizer/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+optimizer/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+optimizer/management/commands/optimize_indexes.py,sha256=2AwJPnSb4MC7rIJ1aul6q3kbEdIyXxaw0D0YpcxwL1U,1052
+django_index_optimizer-0.1.0.dist-info/METADATA,sha256=N1qmvqYj5ns9XslSPThciBSjEZxKj3qwZJ8bYeRo8vI,3187
+django_index_optimizer-0.1.0.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+django_index_optimizer-0.1.0.dist-info/top_level.txt,sha256=_aB4Zcqad3s31AIgPNTLzkhM66d56mfWrAvccyltFq4,10
+django_index_optimizer-0.1.0.dist-info/RECORD,,
