@@ -1,0 +1,35 @@
+# [1.0.0-beta.8](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.7...1.0.0-beta.8) (2025-04-30)
+
+
+### Features
+
+* **packaging:** remove '--with-sdk-wheel-from' option from ╭───────────────────────────╮
+│ Building SOAR App Package │
+╰───────────────────────────╯
+App directory: /home/runner/work/splunk-soar-sdk/splunk-soar-sdk ([4f9b02e](https://github.com/phantomcyber/splunk-soar-sdk/commit/4f9b02ea571c543dd5ce1e59d0273d897ce3c83e))
+* **packaging:** sensible defaults for ╭───────────────────────────╮
+│ Building SOAR App Package │
+╰───────────────────────────╯
+App directory: /home/runner/work/splunk-soar-sdk/splunk-soar-sdk args ([27c0cb3](https://github.com/phantomcyber/splunk-soar-sdk/commit/27c0cb34fca46547643becfe5346581b70d71759))
+
+
+
+
+
+# [1.0.0-beta.8](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.7...1.0.0-beta.8) (2025-04-30)
+
+
+### Features
+
+* **packaging:** remove '--with-sdk-wheel-from' option from ╭───────────────────────────╮
+│ Building SOAR App Package │
+╰───────────────────────────╯
+App directory: /home/runner/work/splunk-soar-sdk/splunk-soar-sdk ([4f9b02e](https://github.com/phantomcyber/splunk-soar-sdk/commit/4f9b02ea571c543dd5ce1e59d0273d897ce3c83e))
+* **packaging:** sensible defaults for ╭───────────────────────────╮
+│ Building SOAR App Package │
+╰───────────────────────────╯
+App directory: /home/runner/work/splunk-soar-sdk/splunk-soar-sdk args ([27c0cb3](https://github.com/phantomcyber/splunk-soar-sdk/commit/27c0cb34fca46547643becfe5346581b70d71759))
+
+
+
+
