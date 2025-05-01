@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+rereferencer/__init__.py
+rereferencer/__main__.py
+rereferencer/cli.py
+rereferencer/core.py
+rereferencer.egg-info/PKG-INFO
+rereferencer.egg-info/SOURCES.txt
+rereferencer.egg-info/dependency_links.txt
+rereferencer.egg-info/requires.txt
+rereferencer.egg-info/top_level.txt
