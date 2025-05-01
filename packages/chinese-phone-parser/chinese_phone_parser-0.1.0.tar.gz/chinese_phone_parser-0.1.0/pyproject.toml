@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chinese-phone-parser"
+version = "0.1.0"
+description = "A Python package for cleaning and analyzing Chinese phone numbers."
+readme = "README.md"
+license = "MIT"
+authors = [
+  { name = "Lazur", email = "linche@stu.xmu.edu.cn" }
+]
+dependencies = [
+    "pandas>=1.0.0",
+    "plotly>=4.0.0",
+    "numpy>=1.18.0"
+]
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Operating System :: OS Independent"
+]
