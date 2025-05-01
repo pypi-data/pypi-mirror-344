@@ -1,0 +1,14 @@
+python-dotenv
+requests
+
+[dev]
+pytest
+pytest-mock
+build
+black
+ruff
+pre-commit
+
+[test]
+pytest
+pytest-mock
