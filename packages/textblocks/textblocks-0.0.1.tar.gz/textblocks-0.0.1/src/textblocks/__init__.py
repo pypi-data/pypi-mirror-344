@@ -1,0 +1,35 @@
+"""Utilities for working with block-structured text files
+
+A block is a contiguous sequence of nonempty lines. A block is terminated by
+an empty line, meaning a line that contains only the end-of-line string. The
+terminating empty line is optional at the end of the file. Two or more
+consecutive empty lines mean one or more empty blocks. Blocks are represented
+as lists of lines, with no line-terminating strings.
+"""
+
+
+import sys
+from typing import Iterable, List, TextIO
+
+
+Line = str
+Block = List[Line]
+
+
+def read(io: TextIO=sys.stdin) -> Iterable[Block]:
+    current_block: Block = []
+    for line in io:
+        line, = line.splitlines()
+        if line:
+            current_block.append(line)
+        else:
+            yield current_block
+            current_block = []
+    if current_block:
+        yield current_block
+
+
+def write(block: Block, io: TextIO=sys.stdout):
+    for line in block:
+        print(line, file=io)
+    print(file=io)

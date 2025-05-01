@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: textblocks
+Version: 0.0.1
+Summary: Utilities for working with block-structured text files
+Project-URL: Homepage, https://codeberg.org/texttheater/textblocks
+Project-URL: Issues, https://codeberg.org/texttheater/textblocks/issues
+Author-email: Kilian Evang <kilian.evang@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# textblocks
+
+Utilities for working with block-structured text files

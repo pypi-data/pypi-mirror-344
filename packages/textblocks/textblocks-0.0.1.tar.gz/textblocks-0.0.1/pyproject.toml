@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "textblocks"
+version = "0.0.1"
+authors = [
+  { name="Kilian Evang", email="kilian.evang@gmail.com" },
+]
+description = "Utilities for working with block-structured text files"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://codeberg.org/texttheater/textblocks"
+Issues = "https://codeberg.org/texttheater/textblocks/issues"
