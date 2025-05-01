@@ -1,0 +1,14 @@
+aws-static-site-deployer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws-static-site-deployer/cli.py,sha256=OrgDZXb_GbbR_npnQjXcvFG9lidGlpcVV7d2ymCFR8c,604
+aws-static-site-deployer/main.py,sha256=XlGnloWncJerIVPDODR4ndBFCetdUhXsJxGQ-7WKIYo,4341
+aws-static-site-deployer/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws-static-site-deployer/helpers/aws_helpers.py,sha256=maah151DYXsslEAMraae8V4lmRK1-vX-sVCj4JsRlmQ,4836
+aws-static-site-deployer/helpers/file_helpers.py,sha256=B1hMiIBC5W0xMNLKAjU6xUPluD7G7RHjRbrB1_VTzhA,1519
+aws-static-site-deployer/helpers/git_helpers.py,sha256=822MqWvsPs95jbOTG3QfgrJko1ZlIa31Rj0TxfL3zvY,877
+aws-static-site-deployer/helpers/logger.py,sha256=B4s_-FaQdE5HvBylHnVS7dCn-AbvKF_0usK44m61M2c,312
+aws-static-site-deployer/helpers/template_helpers.py,sha256=9YD_Q99vnXBPzVsjP4fwJvOlQzJcacaxlIqJFfZwmZg,22916
+aws_static_site_deployer-0.1.3.dist-info/METADATA,sha256=3EhmQSqBJOGx32-oJts1lN0Ng77Jbu0kWlAmvcLH9E0,457
+aws_static_site_deployer-0.1.3.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+aws_static_site_deployer-0.1.3.dist-info/entry_points.txt,sha256=hAIeymAM4kRq6kQc1PKsv42_SmHOfcgTzxCSe27c1Eg,79
+aws_static_site_deployer-0.1.3.dist-info/top_level.txt,sha256=W5DWmAWoQCPNeTWcnv-X98bVoC5q9rkL6Fo9m8N0TK8,25
+aws_static_site_deployer-0.1.3.dist-info/RECORD,,
