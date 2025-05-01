@@ -1,0 +1,347 @@
+################################################################################################
+# This is an example service configuration file from another project.
+# It defines various services, workflows, and use cases for an application.
+# The services are organized into different categories such as application use cases, workflows,
+# workflow states, workflow nodes, and infrastructure services.
+# Each service is defined with its class, arguments, and tags for easy identification and registration.
+################################################################################################
+
+services:
+ 
+  ################################################################################################
+  # Application Use Cases
+  ################################################################################################
+  
+  # Use Case: Create a pull request
+  agency.create_changeset_use_case:
+    class: application.agency.use_cases.create_changeset.CreateChangesetUseCase
+    arguments: ['@pyperclip','@agency.workflow.changeset']
+
+  # Use Case: Get Code Advice
+  agency.get_code_advice_use_case:
+    class: application.agency.use_cases.get_code_advice.GetCodeAdviceUseCase
+    arguments: ['@pyperclip','@agency.workflow.code_advice']
+
+  # Use Case: Create Project Plan
+  agency.create_project_plan_use_case:
+    class: application.agency.use_cases.create_project_plan.CreateProjectPlanUseCase
+    arguments: ['@agency.workflow.project_plan']
+
+  # Use Case: Init K
+  init.init_k_use_case:
+    class: application.init.init_k.InitKUseCase
+    arguments: ['@init.k_template_registry']
+
+  # Use Case: Build Troubleshooting Prompt
+  traceback.build_troubleshooting_prompt_use_case:
+    class: application.traceback.use_cases.build_troubleshooting_prompt.BuildTroubleshootingPromptUseCase
+    arguments: ['@traceback.prompt_builder']
+
+  # Use Case: Add Rule
+  agency.add_rule_use_case:
+    class: application.agency.use_cases.add_rule.AddRuleUseCase
+
+  # Use Case: Implement Changeset from Clipboard
+  agency.implement_changeset_use_case:
+    class: application.agency.use_cases.implement_changeset.ImplementChangesetUseCase
+    arguments: ['@pyperclip', '@agency.workflow.implement_changeset']
+
+  # Use Case: Copy Schema to Clipboard
+  agency.copy_schema_use_case:
+    class: application.agency.use_cases.copy_schema.CopySchemaUseCase
+    arguments: ['@pyperclip']
+
+################################################################################################
+# Prompt Adapters
+################################################################################################
+
+  # Registry of all prompts
+  agency.prompt_registry:
+    class: domain.registry.entities.registry.Registry
+    arguments:
+      services: !tagged_iterator { tag: prompt, index_by: alias }
+
+  # Prompt: Pull Request
+  agency.prompt.changeset:
+    class: adapters.prompts.changeset_prompt.ChangesetPrompt
+    tags:
+      - { name: prompt, alias: changeset }
+
+  # Prompt: Code Review
+  agency.prompt.code_review:
+    class: adapters.prompts.code_review_prompt.CodeReviewPrompt
+    tags:
+      - { name: prompt, alias: code_review }
+
+  # Prompt: Code Advice
+  agency.prompt.code_advice:
+    class: adapters.prompts.code_advice_prompt.CodeAdvicePrompt
+    tags:
+      - { name: prompt, alias: code_advice }
+
+  # Prompt: Project Plan
+  agency.prompt.project_plan:
+    class: adapters.prompts.project_plan_prompt.ProjectPlanPrompt
+    tags:
+      - { name: prompt, alias: project_plan }
+
+################################################################################################
+# Workflows
+################################################################################################
+
+  # Workflow Factory
+  agency.workflow_factory:
+    class: infrastructure.agency.workflow_factory.WorkflowFactory
+    arguments: 
+      node_registry: '@agency.node_registry'
+      state_registry: '@agency.state_registry'
+      workflows: '~/workflows.yaml:workflows'
+
+  # Workflow: Generates a changeset for a pull request
+  agency.workflow.changeset:
+    class: infrastructure.agency.workflow.Workflow
+    factory: ['@agency.workflow_factory', 'create']
+    arguments: ['changeset']
+
+  # Workflow: Generates advice for a codebase
+  agency.workflow.code_advice:
+    class: infrastructure.agency.workflow.Workflow
+    factory: ['@agency.workflow_factory', 'create']
+    arguments: ['code_advice']
+  
+  # Workflow: Project Plan
+  agency.workflow.project_plan:
+    class: infrastructure.agency.workflow.Workflow
+    factory: ['@agency.workflow_factory', 'create']
+    arguments: ['project_plan']
+
+  # Workflow: Implement Changeset from Clipboard
+  agency.workflow.implement_changeset:
+    class: infrastructure.agency.workflow.Workflow
+    factory: ['@agency.workflow_factory', 'create']
+    arguments: ['implement']
+
+################################################################################################
+# Workflow States
+################################################################################################
+
+  # Registry of all workflow states
+  agency.state_registry:
+    class: domain.registry.entities.registry.Registry
+    arguments:
+      services: !tagged_iterator { tag: workflow_state, index_by: alias }
+
+  # State: Code Advice
+  agency.workflow_state.code_advice:
+    class: infrastructure.agency.states.code_advice_workflow_state.CodeAdviceWorkflowState
+    inject_class: true
+    tags:
+      - { name: workflow_state, alias: code_advice }
+
+  # State: Pull Request
+  agency.workflow_state.changeset:
+    class: infrastructure.agency.states.changeset_workflow_state.ChangesetWorkflowState
+    inject_class: true
+    tags:
+      - { name: workflow_state, alias: changeset }
+
+  # State: Project Plan
+  agency.workflow_state.project_plan:
+    class: infrastructure.agency.states.project_plan_workflow_state.ProjectPlanWorkflowState
+    inject_class: true
+    tags:
+      - { name: workflow_state, alias: project_plan }
+
+  # State: Implement Changeset from Clipboard
+  agency.workflow_state.implement:
+    class: infrastructure.agency.states.implement_changeset_workflow_state.ImplementChangesetWorkflowState
+    inject_class: true
+    tags:
+      - { name: workflow_state, alias: implement }
+
+################################################################################################
+# Workflow Nodes
+################################################################################################
+
+  # Registry of all workflow nodes
+  agency.node_registry:
+    class: domain.registry.entities.registry.Registry
+    arguments:
+      services: !tagged_iterator { tag: workflow_node, index_by: alias }
+
+  # Node: Get project path
+  agency.node.get_project_path:
+    class: infrastructure.agency.nodes.get_project_path.GetProjectPath
+    tags:
+      - { name: workflow_node, alias: get_project_path }
+
+  # Node: Load include/exclude rules
+  agency.node.load_include_exclude_rules:
+    class: infrastructure.agency.nodes.load_include_exclude_rules.LoadIncludeExcludeRules
+    tags:
+      - { name: workflow_node, alias: load_include_exclude_rules }
+
+  # Node: Load project rules
+  agency.node.load_project_rules:
+    class: infrastructure.agency.nodes.load_project_rules.LoadProjectRules
+    tags:
+      - { name: workflow_node, alias: load_project_rules }
+
+  # Node: Load file collection
+  agency.node.load_file_collection:
+    class: infrastructure.agency.nodes.load_file_collection.LoadFileCollection
+    tags:
+      - { name: workflow_node, alias: load_file_collection }
+
+  # Node: Load source code
+  agency.node.load_source_code:
+    class: infrastructure.agency.nodes.load_source_code.LoadSourceCode
+    tags:
+      - { name: workflow_node, alias: load_source_code }
+
+  # Node: Load directory tree
+  agency.node.load_directory_tree:
+    class: infrastructure.agency.nodes.load_directory_tree.LoadDirectoryTree
+    tags:
+      - { name: workflow_node, alias: load_directory_tree }
+
+  # Node: Git status
+  agency.node.git_status:
+    class: infrastructure.agency.nodes.git_status.GitStatus
+    tags:
+      - { name: workflow_node, alias: git_status }
+
+  # Node: Generate code advice
+  agency.node.generate_code_advice:
+    class: infrastructure.agency.nodes.generate_code_advice.GenerateCodeAdvice
+    arguments:
+      clipboard: '@pyperclip'
+      model_id: 'openai:o4-mini'
+      model_config:
+        reasoning_effort: 'high'
+    tags:
+      - { name: workflow_node, alias: generate_code_advice }
+
+  # Node: Generate changeset
+  agency.node.generate_changeset:
+    class: infrastructure.agency.nodes.generate_changeset.GenerateChangeset
+    arguments:
+      clipboard: '@pyperclip'
+      model_id: 'openai:o4-mini'
+      model_config:
+        reasoning_effort: 'high'
+    tags:
+      - { name: workflow_node, alias: generate_changeset }
+
+  # Node: Record Changeset
+  agency.node.record_changeset:
+    class: infrastructure.agency.nodes.record_changeset.RecordChangeset
+    tags:
+      - { name: workflow_node, alias: record_changeset }
+
+  # Node: Record Advice
+  agency.node.record_advice:
+    class: infrastructure.agency.nodes.record_advice.RecordAdvice
+    tags:
+      - { name: workflow_node, alias: record_advice }
+
+  # Node: Implement changeset
+  agency.node.implement_changeset:
+    class: infrastructure.agency.nodes.implement_changeset.ImplementChangeset
+    tags:
+      - { name: workflow_node, alias: implement_changeset }
+
+  # Node: Run tests
+  agency.node.run_tests:
+    class: infrastructure.agency.nodes.run_tests.RunTests
+    tags:
+      - { name: workflow_node, alias: run_tests }
+
+  # Node: Generate User Stories
+  agency.node.generate_user_stories:
+    class: infrastructure.agency.nodes.generate_user_stories.GenerateUserStories
+    arguments: 
+      clipboard: '@pyperclip'
+      prompt: '@agency.prompt.project_plan'
+      model_id: 'openai:o4-mini'
+      model_config:
+        reasoning_effort: 'high'
+    tags:
+      - { name: workflow_node, alias: generate_user_stories }
+
+  # Node: Parse User Stories
+  agency.node.parse_user_stories:
+    class: infrastructure.agency.nodes.parse_user_stories.ParseUserStories
+    tags:
+      - { name: workflow_node, alias: parse_user_stories }
+
+################################################################################################
+# Infrastructure Services
+################################################################################################
+
+  # Configuration Service
+  config:
+    class: infrastructure.config.services.config.Config
+
+  # Pyperclip
+  pyperclip:
+    class: infrastructure.pyperclip.pyperclip.Pyperclip
+
+  # Traceback Prompt Builder
+  traceback.prompt_builder:
+    class: infrastructure.traceback.prompt_builder.TracebackPromptBuilder
+    arguments: ['@pyperclip']
+
+  # Datetime Service
+  util.datetime:
+    class: infrastructure.util.datetime_service.DatetimeService
+
+  init.k_template_registry:
+    class: domain.registry.entities.registry.Registry
+    arguments:
+      services: !tagged_iterator { tag: k_template, index_by: alias }
+
+  init.template.nodejs:
+    class: infrastructure.init.templates.nodejs.NodeJSTemplate
+    tags:
+      - { name: k_template, alias: nodejs }
+
+  init.template.nextjs:
+    class: infrastructure.init.templates.nextjs.NextJSTemplate
+    tags:
+      - { name: k_template, alias: nextjs }
+
+  init.template.python:
+    class: infrastructure.init.templates.python.PythonTemplate
+    tags:
+      - { name: k_template, alias: python }
+
+  init.template.dotnet:
+    class: infrastructure.init.templates.dotnet.DotNetTemplate
+    tags:
+      - { name: k_template, alias: dotnet }
+
+  init.template.terraform:
+    class: infrastructure.init.templates.terraform.TerraformTemplate
+    tags:
+      - { name: k_template, alias: terraform }
+
+  init.template.wiki:
+    class: infrastructure.init.templates.wiki.WikiTemplate
+    tags:
+      - { name: k_template, alias: wiki }
+
+  openai.client:
+    class: infrastructure.openai.client.OpenAIClient
+    arguments:
+      api_key: '%OPENAI_API_KEY%'
+      
+  anthropic.client:
+    class: infrastructure.anthropic.client.AnthropicClient
+    arguments:
+      api_key: '%ANTHROPIC_API_KEY%'
+      
+  google.client:
+    class: infrastructure.google.client.GoogleClient
+    arguments:
+      api_key: '%GOOGLE_API_KEY%'

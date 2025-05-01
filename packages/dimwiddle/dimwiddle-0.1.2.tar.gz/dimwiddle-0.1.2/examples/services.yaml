@@ -1,0 +1,63 @@
+################################################################################################
+# This is an example service configuration file for the dimwiddle dependency injection library.
+# It demonstrates various features of the library including:
+# - Basic service definitions
+# - Service dependencies
+# - Factory services
+# - Tagged services
+# - Configuration values
+################################################################################################
+
+services:
+  # Basic service - a simple greeting service
+  greeting:
+    class: examples.services.greeting_service.GreetingService
+    arguments: ["Hello, %NAME%!"]
+
+  # Service with dependency - a service that uses another service
+  greeter:
+    class: examples.services.greeter.Greeter
+    arguments: ["@greeting"]
+  
+  # Factory-based service - created by a factory method
+  complex_service:
+    class: examples.services.complex_service.ComplexService
+    factory: ["@complex_service_factory", "create"]
+    arguments: ["%API_KEY%", {"option1": true, "option2": "value2"}]
+  
+  # Factory for creating complex services
+  complex_service_factory:
+    class: examples.services.complex_service_factory.ComplexServiceFactory
+  
+  # Tagged services - multiple services with the same tag
+  validator.email:
+    class: examples.services.validators.email_validator.EmailValidator
+    tags:
+      - { name: validator, alias: email }
+  
+  validator.url:
+    class: examples.services.validators.url_validator.URLValidator
+    tags:
+      - { name: validator, alias: url }
+  
+  # A service that collects all validators
+  validation_service:
+    class: examples.services.validation_service.ValidationService
+    arguments:
+      validators: !tagged_iterator { tag: validator, index_by: alias }
+  
+  # Configuration service - environment variables and .env file
+  config:
+    class: dimwiddle.infrastructure.config.EnvConfig
+    arguments:
+      dotenv_path: ".env"
+  
+  # Example service that depends on configuration
+  api_client:
+    class: examples.services.api_client.APIClient
+    arguments: ["%API_URL%", "%API_KEY%", "@logger"]
+  
+  # Logger service
+  logger:
+    class: examples.services.logger.Logger
+    arguments: ["%LOG_LEVEL%"]
