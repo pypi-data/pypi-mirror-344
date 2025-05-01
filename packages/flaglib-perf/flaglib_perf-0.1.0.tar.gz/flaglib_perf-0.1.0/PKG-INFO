@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: flaglib-perf
+Version: 0.1.0
+Summary: CLI options library for Linux's perf tool
+Author-email: Yingchi Long <longyingchi24s@ict.ac.cn>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# flaglib-perf
+
+This is CLI options library for Linux's perf tool.
+Translate CLI "--arg" style language to python's function call.
