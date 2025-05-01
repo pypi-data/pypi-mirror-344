@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+fran_calculator/__init__.py
+fran_calculator/franCalc.py
+fran_calculator/modules.py
+francalculator.egg-info/PKG-INFO
+francalculator.egg-info/SOURCES.txt
+francalculator.egg-info/dependency_links.txt
+francalculator.egg-info/requires.txt
+francalculator.egg-info/top_level.txt
