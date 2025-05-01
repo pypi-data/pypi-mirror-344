@@ -1,0 +1,15 @@
+[project]
+name = "octutils"
+version = "0.0.1"
+authors = [
+  { name="Vamshi Krishna", email="vamshikrishna.r@sonata-software.com" },
+]
+description = "Extracting the metadata & source lineage items used in the Semantic Models in Microsoft Fabric"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
