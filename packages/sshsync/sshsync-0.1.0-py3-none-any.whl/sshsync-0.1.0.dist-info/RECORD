@@ -1,0 +1,10 @@
+sshsync/__init__.py,sha256=KHKOzqtemSpCbStnD67M2PIPRktAREc76rmFuT2eMM8,100
+sshsync/cli.py,sha256=Li2xZFC52E62XLNYxm5vQAQ52o4Nwf8U5G9btG6L1hk,2669
+sshsync/client.py,sha256=37ItNhptyjvpwDg4RvdVkxOEVBDV5xivy-t31lFKLR4,3292
+sshsync/config.py,sha256=nvNCmLiOGDfiDya5zKumtDx2VjCV00rx4FlFr_x_tu4,3628
+sshsync/schemas.py,sha256=MGOrop8a9ZkrTGk_0pLFfSZo3k81MQTq4eKKlcVA7Cg,1812
+sshsync/utils.py,sha256=46hoelJ47y36iuM2NEsYeLXBFZcN1MZX4BzaGvW7ii8,5986
+sshsync-0.1.0.dist-info/METADATA,sha256=6HnraoyZr_Cp1nCJHw7utYJqQ9ug48J3gkCftSwP55c,280
+sshsync-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sshsync-0.1.0.dist-info/entry_points.txt,sha256=2Y7JZCo7HBXsUsjuVx48JLgjBKyQHOq_1_VLLC6eVVs,41
+sshsync-0.1.0.dist-info/RECORD,,
