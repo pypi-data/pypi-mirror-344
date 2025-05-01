@@ -1,0 +1,11 @@
+acace_text_preprocessor>=0.1.0
+
+[all]
+nltk>=3.6.0
+spacy>=3.0.0
+
+[nltk]
+nltk>=3.6.0
+
+[spacy]
+spacy>=3.0.0

@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+acace_tokenizer/__init__.py
+acace_tokenizer/tokenizer.py
+acace_tokenizer.egg-info/PKG-INFO
+acace_tokenizer.egg-info/SOURCES.txt
+acace_tokenizer.egg-info/dependency_links.txt
+acace_tokenizer.egg-info/requires.txt
+acace_tokenizer.egg-info/top_level.txt
+tests/test_tokenizer.py
