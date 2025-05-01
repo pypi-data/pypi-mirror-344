@@ -1,0 +1,7 @@
+{
+    "exceptions": {
+        "failed_to_connect_mqtt": {
+            "message": "Theip ar MQTT a cheangal: {error}"
+        }
+    }
+}

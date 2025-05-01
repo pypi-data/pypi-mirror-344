@@ -1,0 +1,45 @@
+{
+    "entity": {
+        "binary_sensor": {
+            "water_leak": {
+                "name": "Sceitheadh uisce"
+            },
+            "water_supply": {
+                "name": "Sol\u00e1thar uisce"
+            }
+        },
+        "number": {
+            "calibration_rotation_run_time_down": {
+                "name": "Am rith rothlaithe calabr\u00fach\u00e1in s\u00edos"
+            },
+            "calibration_rotation_run_time_up": {
+                "name": "Am rith rothlaithe calabr\u00fach\u00e1in suas"
+            },
+            "calibration_vertical_run_time_down": {
+                "name": "Am rith ingearach calabr\u00fach\u00e1in s\u00edos"
+            },
+            "calibration_vertical_run_time_up": {
+                "name": "Am rith ingearach calabr\u00fach\u00e1in suas"
+            },
+            "impulse_mode_duration": {
+                "name": "Fad an mhodha impulse"
+            },
+            "water_duration": {
+                "name": "Fad an uisce"
+            },
+            "water_interval": {
+                "name": "Eatramh uisce"
+            }
+        },
+        "select": {
+            "speed": {
+                "name": "Luas"
+            }
+        },
+        "sensor": {
+            "device_status": {
+                "name": "St\u00e1das na gl\u00e9is"
+            }
+        }
+    }
+}

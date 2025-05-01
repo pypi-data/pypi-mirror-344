@@ -1,0 +1,78 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Poloha je ji\u017e nastavena",
+            "reconfigure_successful": "P\u0159enastaven\u00ed bylo \u00fasp\u011b\u0161n\u00e9"
+        },
+        "error": {
+            "cannot_connect": "Nepoda\u0159ilo se p\u0159ipojit",
+            "invalid_auth": "Neplatn\u00e9 ov\u011b\u0159en\u00ed",
+            "timeout_connect": "Vypr\u0161el \u010dasov\u00fd limit pro nav\u00e1z\u00e1n\u00ed spojen\u00ed"
+        },
+        "step": {
+            "reconfigure": {
+                "data": {
+                    "api_key": "Kl\u00ed\u010d API",
+                    "destination": "C\u00edl",
+                    "origin": "P\u016fvod"
+                },
+                "description": "Po\u010d\u00e1tek a c\u00edl m\u016f\u017eete zadat ve form\u011b adresy, sou\u0159adnic zem\u011bpisn\u00e9 \u0161\u00ed\u0159ky a d\u00e9lky nebo ID m\u00edsta Google. P\u0159i zad\u00e1v\u00e1n\u00ed m\u00edsta pomoc\u00ed ID m\u00edsta Google mus\u00ed b\u00fdt ID s p\u0159edponou \"place_id:\"."
+            },
+            "user": {
+                "data": {
+                    "api_key": "Kl\u00ed\u010d API",
+                    "destination": "C\u00edl",
+                    "name": "N\u00e1zev",
+                    "origin": "P\u016fvod"
+                }
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "avoid": "Vyhnout se",
+                    "language": "Jazyk",
+                    "time": "\u010cas",
+                    "units": "Jednotky"
+                }
+            }
+        }
+    },
+    "selector": {
+        "avoid": {
+            "options": {
+                "ferries": "Trajekty",
+                "highways": "D\u00e1lnice",
+                "indoor": "Uvnit\u0159",
+                "none": "Nevyh\u00fdbat se ni\u010demu",
+                "tolls": "M\u00fdtn\u00e9"
+            }
+        },
+        "mode": {
+            "options": {
+                "bicycling": "J\u00edzda na kole",
+                "driving": "\u0158\u00edzen\u00ed",
+                "transit": "Tranzit",
+                "walking": "Ch\u016fze"
+            }
+        },
+        "traffic_model": {
+            "options": {
+                "optimistic": "Optimistick\u00fd",
+                "pessimistic": "Pesimistick\u00fd"
+            }
+        },
+        "transit_mode": {
+            "options": {
+                "bus": "Autobus",
+                "rail": "\u017deleznice",
+                "subway": "Metro",
+                "train": "Vlak",
+                "tram": "Tramvaj"
+            }
+        }
+    },
+    "title": "Doba cesty v Map\u00e1ch Google"
+}
