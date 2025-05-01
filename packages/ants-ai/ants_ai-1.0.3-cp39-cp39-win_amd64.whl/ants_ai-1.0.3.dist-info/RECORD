@@ -1,0 +1,16 @@
+ants_ai-1.0.3.dist-info/METADATA,sha256=hrru9evHtKB_6_UoVA0v7xqO-RwVQlmGzba4gf3Zs50,6458
+ants_ai-1.0.3.dist-info/WHEEL,sha256=mDFV3bKFgwlxLHvOsPqpR9up9dUKYzsUQNKBdkW5c08,94
+ants_ai-1.0.3.dist-info/licenses/LICENSE,sha256=_vTYU945Ti7C073tQqfWlaZyod4MX7p7Nn3OMTQF2Yc,1089
+ants_ai/agents/agent.py,sha256=3OqItumAB5wJGSDKy6A1eM5hQU6eKP1Qmvk2S_gJslw,1715
+ants_ai/agents/random.py,sha256=Q5GT-kC31HIwJZgOCkK3tguemE1divaUScoHN12epE4,2069
+ants_ai/agents/__init__.py,sha256=JNIsXp8DSHWjmQ_n24MjceZq74nEiirclEP1WZY9HlQ,97
+ants_ai/ants_ai.pyi,sha256=qrtd1oXdGusBRJ6RP3Le6dcA3XwvdgVYG6I66ZG_oag,8531
+ants_ai/assets/hill.png,sha256=q8rjDPrb04dxK3Eo-XewmkM2JsCIbHReeG7XRpPsz4k,19372
+ants_ai/assets/RobotoMono-Regular.ttf,sha256=jZofpN_lpd7qeA9lE5lhQUJe94LXzFZl1NRZFG_Tpxw,87236
+ants_ai/assets/water.png,sha256=yHgaGmi7IMvCuylnnAeXHKfDmaqTs4Cjg-JsblzPA-k,2292
+ants_ai/env.py,sha256=WOO3pMZoTtx1H5_p4ghaYJr6y7wrpwlCF-aDnWPHGCI,15163
+ants_ai/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ants_ai/visualizer.py,sha256=kU4OFEp5Hxk7Qs07z33ORjJ9iW7xo4IX2v-JwK4fO44,32923
+ants_ai/__init__.py,sha256=At2vUrE70qqmoGkvu7mJ8Iec6V0y52r147p5iZJxtvc,374
+ants_ai/ants_ai.cp39-win_amd64.pyd,sha256=UbpziRUfF3XqWLYxTYdv3OTXmhoZ2F16MInNKO1vs14,2210304
+ants_ai-1.0.3.dist-info/RECORD,,
