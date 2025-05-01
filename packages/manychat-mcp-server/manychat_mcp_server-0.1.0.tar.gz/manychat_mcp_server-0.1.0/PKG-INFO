@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: manychat-mcp-server
+Version: 0.1.0
+Summary: MCP server for sending personalized message to a specific ManyChat subscriber using the ManyChat API
+Author-email: Venkatesh M <venkateshvenki404224@gmail.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.6.0
+Requires-Dist: requests

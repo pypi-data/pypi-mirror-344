@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-web-extractor = manychat_mcpserver.server:main
