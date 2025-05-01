@@ -1,0 +1,67 @@
+[tool.poetry]
+name = "lslock"
+version = "3.0.2"
+description = "resource locking system"
+authors = ["IT <it@electronic-shop.lu>"]
+exclude = ["**/lslock/server/router"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+lsexceptions = "^1.0.1"
+lsmeta-pydantic = "^1.0.1"
+lsfastapi = "^4.1.4"
+lstools = "^3.2.1"
+am-auth-functions = "^5.0.10"
+lscentrallog = "^3.0.8"
+lsrestclient = "^1.7.2"
+lsidentity = "^1.0.0"
+supervisor = "^4.2.5"
+
+
+[tool.poetry.scripts]
+
+[tool.poetry.group.dev.dependencies]
+lsmeta-pytest = "^1.0.0"
+semantic-version = "^2.10.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.extras]
+server = [
+    "lsfastapi",
+    "lsmongoengine",
+    "am-auth-functions",
+    "lscentrallog"
+]
+
+
+[[tool.poetry.source]]
+name = "lsoft"
+url = "http://esbuild1.e-s.intern:8001/simple"
+secondary = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q -s -v"
+testpaths = [
+    "tests",
+]
+lsoft-mongo-stop = false
+lsoft-cleanup-db = false
+lsoft-docker-pull-images = false
+
+
+filterwarnings = [
+    #    "error",
+    "ignore::DeprecationWarning",
+    # note the use of single quote below to denote "raw" strings in TOML
+    #    'ignore:function ham\(\) is deprecated:DeprecationWarning',
+]
+
+log_cli = true
+#log_cli_level = "INFO"
+log_cli_level = "DEBUG"
+log_cli_format = "[%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+
