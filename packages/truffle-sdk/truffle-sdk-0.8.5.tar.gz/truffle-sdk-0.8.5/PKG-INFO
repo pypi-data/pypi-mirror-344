@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: truffle-sdk
+Version: 0.8.5
+Summary: The SDK for TruffleOS cloud/hardware agents
+Author: Deepshard
+Author-email: accounts@deepshard.org
+License: MIT
+Requires-Python: >=3.10
