@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dimwiddle"
+version = "0.1.1"
+description = "A lightweight dependency injection framework inspired by Symfony"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+    {name = "Dimwiddle Contributors", email = "example@example.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+dependencies = [
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.25.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/example/dimwiddle"
+"Bug Tracker" = "https://github.com/example/dimwiddle/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["dimwiddle*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
