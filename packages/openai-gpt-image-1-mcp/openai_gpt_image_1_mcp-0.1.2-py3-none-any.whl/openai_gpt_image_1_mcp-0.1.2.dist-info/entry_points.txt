@@ -1,0 +1,2 @@
+[console_scripts]
+openai-gpt-image-1-mcp = openai_gpt_image_1_server:main
