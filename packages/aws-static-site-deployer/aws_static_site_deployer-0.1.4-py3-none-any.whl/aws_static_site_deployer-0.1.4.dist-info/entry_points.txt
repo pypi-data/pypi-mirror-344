@@ -1,0 +1,2 @@
+[console_scripts]
+aws-static-site-deployer = aws_static_site_deployer.cli:main
