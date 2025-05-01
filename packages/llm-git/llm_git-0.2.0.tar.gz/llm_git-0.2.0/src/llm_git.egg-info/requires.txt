@@ -1,0 +1,12 @@
+llm
+click
+pyyaml
+rich
+pygments
+
+[dev]
+ruff
+
+[test]
+pytest
+pytest-cov
