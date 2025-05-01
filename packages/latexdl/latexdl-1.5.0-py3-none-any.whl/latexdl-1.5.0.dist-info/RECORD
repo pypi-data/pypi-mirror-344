@@ -1,0 +1,12 @@
+latexdl/__init__.py,sha256=SBXd19-1byAt8tf5MJB2xaUcWTC-gOTrLT_GiFutdTE,788
+latexdl/__main__.py,sha256=UzovYfdg_xHRoKc2nNKH9jkH-cDvgOS9Ixcn5_WAkZ4,102
+latexdl/_bibtex.py,sha256=NRLFXwaYdeXwJUboCBLlBalGoywTruczlFLeBpmgj9k,8125
+latexdl/_fix_urls.py,sha256=8TTkwofmxvhVKpltNP5cjUYzgIh6DgkZteblXbKTKyQ,2356
+latexdl/_metadata.py,sha256=3OIbav7u_fLijl3FR1_e5pVSUS4dFe0edyq8sRFJVC8,3763
+latexdl/expand.py,sha256=w-tnoLvN0xD7ERoCQRgkfefpq9U0WxX-fieyzmPv4YU,980
+latexdl/main.py,sha256=69PtDOSJrPQuJuvEiekb9nlwR5Dyff6zwAPT1vyoeC8,10944
+latexdl/strip.py,sha256=mJJs_R-rn8W2iVBEVXr6ehhxhD-MPBiFtZYItwCvM_Y,1407
+latexdl-1.5.0.dist-info/METADATA,sha256=FvQSWu1MybQTxOQiL9GmXeXLSnywnrBK7EsX8azazHU,638
+latexdl-1.5.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+latexdl-1.5.0.dist-info/entry_points.txt,sha256=gmu_f8U51tYwGteNe-E1WXjPdIK3Xs-ap3U64hsIChc,45
+latexdl-1.5.0.dist-info/RECORD,,
