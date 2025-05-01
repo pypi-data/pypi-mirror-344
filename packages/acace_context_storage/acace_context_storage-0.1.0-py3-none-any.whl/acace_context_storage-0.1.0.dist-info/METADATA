@@ -1,0 +1,59 @@
+Metadata-Version: 2.3
+Name: acace_context_storage
+Version: 0.1.0
+Summary: Context storage utilities for ACACE
+Author: ACACE Team
+Author-email: team@acace.ai
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: numpy (>=1.26.3,<2.0.0)
+Requires-Dist: pymongo (>=4.6.1,<5.0.0)
+Requires-Dist: redis (>=5.0.1,<6.0.0)
+Requires-Dist: sqlalchemy (>=2.0.25,<3.0.0)
+Description-Content-Type: text/markdown
+
+# ACACE Context Storage
+
+A context storage module for the Adaptive Context-Aware Content Engine (ACACE).
+
+## Features
+
+- Session-based context storage
+- Context retrieval and updates
+- Memory-efficient storage
+- Simple API
+
+## Installation
+
+```bash
+pip install acace_context_storage
+```
+
+## Usage
+
+```python
+from acace_context_storage import ContextStorage
+
+# Initialize context storage
+storage = ContextStorage()
+
+# Store context for a session
+storage.store_context("session1", "This is the context for session 1")
+
+# Retrieve context
+context = storage.get_context("session1")
+print(context)  # Output: "This is the context for session 1"
+
+# Update context
+storage.store_context("session1", "Updated context for session 1")
+```
+
+## License
+
+MIT License 
