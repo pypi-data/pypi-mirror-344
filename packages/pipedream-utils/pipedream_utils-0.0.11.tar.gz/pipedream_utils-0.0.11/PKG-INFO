@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: pipedream-utils
+Version: 0.0.11
+Summary: Pipedream Utils
+Home-page: https://github.com/dhaval-mehta/pipedream-utils
+Author: Dhaval Mehta
+Requires-Python: >=3.7, <4
+Requires-Dist: prettytable
+Requires-Dist: telebot
+Dynamic: author
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Pipedream Utils
