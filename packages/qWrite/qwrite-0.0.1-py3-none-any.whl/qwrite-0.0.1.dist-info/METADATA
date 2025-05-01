@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: qWrite
+Version: 0.0.1
+Summary: Module for better printing. Don't use default function print()
+Author: Quantung
+Author-email: quantungplayer@gmail.com
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: license-file
+Dynamic: summary
