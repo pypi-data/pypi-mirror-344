@@ -1,0 +1,39 @@
+# https://docs.pypi.org/trusted-publishers/using-a-publisher/#gitlab-cicd
+image: python:3-slim
+
+workflow:
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: always
+    - when: never
+
+stages:
+  - build
+  - deploy
+
+variables:
+  PIP_ROOT_USER_ACTION: "ignore"
+
+build:
+  stage: build
+  script:
+    - python --version
+    - python -m pip install -U pip
+    - python -m pip install -U wheel setuptools build
+    - python -m build
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 day
+
+deploy:
+  stage: deploy
+  dependencies:
+    - build
+  id_tokens:
+    PYPI_ID_TOKEN:
+      aud: pypi
+  script:
+    - python -m pip install -U pip
+    - python -m pip install -U twine>=6.1
+    - python -m twine --no-color upload dist/* --disable-progress-bar
