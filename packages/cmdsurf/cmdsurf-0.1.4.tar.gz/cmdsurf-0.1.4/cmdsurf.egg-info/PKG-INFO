@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: cmdsurf
+Version: 0.1.4
+Summary: Ride the wave of your past commands
+Author: Jet-Logic
+Project-URL: Homepage, https://github.com/jet-logic/cmdsurf
+Project-URL: Documentation, https://github.com/jet-logic/cmdsurf#readme
+Project-URL: Repository, https://github.com/jet-logic/cmdsurf
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Classifier: Topic :: Terminals :: Terminal Emulators/X Terminals
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: prompt-toolkit>=3.0.0
+Dynamic: license-file
+
+# 🏄 CmdSurf
+
+**Ride the wave of your past commands**
+
+`cmdsurf` is a fun and lightweight terminal UI that lets you scroll through, run, or delete your Bash history interactively.
+
+## 🌀 Features
+
+- Scroll your command history with ↑/↓
+- Highlight current selection with `>`
+- Hit `Enter` to run the selected command
+- Hit `Delete` to remove it from your history
+- `q` or `Ctrl+C` to exit anytime
+- Fully supports `$HISTFILE` (default `~/.bash_history`)
+
+## 🚀 Installation
+
+```bash
+pip install cmdsurf
+```
+
+## 🧪 Usage
+
+```bash
+cmdsurf
+```
