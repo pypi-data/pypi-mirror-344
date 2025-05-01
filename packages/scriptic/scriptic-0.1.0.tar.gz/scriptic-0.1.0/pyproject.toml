@@ -1,0 +1,51 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scriptic"
+version = "0.1.0"
+description = "A minimalist embeddable Python REPL / Script Runner."
+readme = "README.md"
+requires-python = ">=3.6"
+license = "MIT"
+authors = [
+    { name = "Ryan O'Boyle", email = "layerdynamics@proton.me" },
+]
+keywords = [
+    "repl",
+    "terminal",
+    "interactive",
+    "embed",
+    "console",
+    "script",
+    "runner",
+    "python",
+    "cli",
+    "shell",
+    "script runner",
+    "interactive shell",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: User Interfaces",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/layerdynamics/scriptic"
+"Bug Tracker" = "https://github.com/layerdynamics/scriptic/issues"
+
+[project.scripts]
+scriptic = "scriptic:run_cli"
