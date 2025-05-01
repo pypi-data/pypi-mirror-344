@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pritty_logger/__init__.py
+pritty_logger.egg-info/PKG-INFO
+pritty_logger.egg-info/SOURCES.txt
+pritty_logger.egg-info/dependency_links.txt
+pritty_logger.egg-info/requires.txt
+pritty_logger.egg-info/top_level.txt
+tests/test_pritty_logger.py

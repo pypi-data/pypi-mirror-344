@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: pritty_logger
+Version: 0.3.4
+Summary: A logger with rich formatting
+Home-page: https://github.com/leon-gorissen/pritty_logger
+Author: Leon Gorißen
+Author-email: leon.gorissen@gmx.de
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich
+
+[![Tests](https://github.com/leon-gorissen/pritty_logger/actions/workflows/test.yml/badge.svg)](https://github.com/leon-gorissen/pritty_logger/actions/workflows/test.yml)
+[![Build](https://github.com/leon-gorissen/pritty_logger/actions/workflows/build.yml/badge.svg)](https://github.com/leon-gorissen/pritty_logger/actions/workflows/build.yml)
+[![Python package](https://github.com/leon-gorissen/pritty_logger/actions/workflows/publish.yml/badge.svg)](https://github.com/leon-gorissen/pritty_logger/actions/workflows/publish.yml)
+
+# Pritty logger
+
+A simple logger that logs to console using the rich library and to file in /var/log/ or to ~/.log/. Created to simplify setting up logging in containerized development and deployment.
+
+## Installation 
+
+```bash
+pip install pritty_logger
+``` 
+
+## Usage
+
+```python
+from pritty_logger import RichLogger
+
+logger = RichLogger("example")
+logger.log("This is an info message")
+logger.log({"key": "value"}, level="debug")
+```
+
+Supports levels "debug", "info", "warning", "error", "critical". Defaults to "info".
