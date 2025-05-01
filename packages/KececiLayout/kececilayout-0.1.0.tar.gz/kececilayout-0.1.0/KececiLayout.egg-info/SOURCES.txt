@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+KececiLayout.egg-info/PKG-INFO
+KececiLayout.egg-info/SOURCES.txt
+KececiLayout.egg-info/dependency_links.txt
+KececiLayout.egg-info/requires.txt
+KececiLayout.egg-info/top_level.txt
+kececilayout/__init__.py
+kececilayout/_version.py
+kececilayout/kececi_layout.py
+tests/test_sample.py
