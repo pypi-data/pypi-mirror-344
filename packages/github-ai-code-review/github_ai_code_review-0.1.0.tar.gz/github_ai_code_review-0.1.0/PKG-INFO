@@ -1,0 +1,32 @@
+Metadata-Version: 2.3
+Name: github-ai-code-review
+Version: 0.1.0
+Summary: LLM-agnostic GitHub AI Code Review Tool with integration to GitHub actions
+License: MIT
+Keywords: ai,coding,assistant,llm,code review,github,automation,devops,developer tools,github actions,workflows
+Author: Nayjest
+Author-email: mail@vitaliy.in
+Requires-Python: >=3.11,<4.0
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development
+Requires-Dist: ai-microcore (>=4.0.0.dev3,<5.0.0)
+Requires-Dist: anthropic (>=0.49.0,<0.50.0)
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: google-generativeai (>=0.8.5,<0.9.0)
+Requires-Dist: openai (>=1.75.0,<2.0.0)
+Project-URL: Homepage, https://github.com/Nayjest/github-ai-code-review
+Project-URL: Repository, https://github.com/Nayjest/github-ai-code-review
+Description-Content-Type: text/markdown
+
+# 🤖 AI Code Review Tool for GitHub
+
+## 📝 License
+
+Licensed under the [MIT License](https://github.com/Nayjest/github-ai-code-review/blob/main/LICENSE)
+© 2025 [Vitalii Stepanenko](mailto:mail@vitaliy.in)
