@@ -1,0 +1,60 @@
+name: builds
+
+on:
+  push:
+    branches: [develop, main]
+    tags:
+      - "v\\d+\\.\\d+\\.\\d+[ab]?"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", 3.11, 3.12, 3.13]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - uses: yezz123/setup-uv@v4
+      - name: Run unit tests
+        run: uv run pytest
+      - name: Upload coverage
+        uses: codecov/codecov-action@v5
+        if: ${{ matrix.python-version == '3.13' }}
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage.xml
+          fail_ci_if_error: true
+      - name: Upload test results to Codecov
+        if: ${{ !cancelled() }} && ${{ matrix.python-version == '3.13' }}
+        uses: codecov/test-results-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+
+
+  upload-package:
+    runs-on: ubuntu-latest
+    if: github.ref_type == 'tag'
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13.3"
+      - uses: yezz123/setup-uv@v4
+      - name: Run unit tests
+        run: uv run pytest
+      - name: Build Python package
+        run: uv build
+      - name: Publish to PyPI
+        run: uv publish
+      - name: Create github release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*
