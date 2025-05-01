@@ -1,0 +1,11 @@
+candle_api/__init__.py,sha256=Us0by5GKuecKZbBPDYPR1w26cGkx9i5v2OWxwpeDgJw,35
+candle_api/candle_api.cp38-win_amd64.pyd,sha256=5Z6A6xZPuc0NJxymniF3QVMxFpeMg6S-2FwO9zCi8to,286720
+candle_api/candle_api.pyi,sha256=3BzRQYkPwg4BAzqU0ZtyFiLSS2rkox5-lISKcK2rW6Q,5426
+candle_api/candle_bus.py,sha256=qplQV68jp4a7KAiEv3kV7OfJHFqSyUctYRn4irm9QBo,6086
+candle_api/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+candle_api-0.0.3.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+candle_api-0.0.3.dist-info/METADATA,sha256=qDTOmoP9kBdVHj8UTz11V_SWZdYHjGl02Uv41HXz5V0,171
+candle_api-0.0.3.dist-info/WHEEL,sha256=2M046GvC9RLU1f1TWyM-2sB7cRKLhAC7ucAFK8l8f24,99
+candle_api-0.0.3.dist-info/entry_points.txt,sha256=OCX3X7njthGXyTVow1dpCHTT1dsQ5a9-X7R6T80A98s,61
+candle_api-0.0.3.dist-info/top_level.txt,sha256=NdBN0zZzI4_igS_mPylPKv_O7Oi9KlKzM9ESEBDt22k,11
+candle_api-0.0.3.dist-info/RECORD,,
