@@ -1,0 +1,12 @@
+jsonloggeriso8601datetime/__init__.py,sha256=eKJi_QYjr6bHrlvYx8GaWRwC2dOvkpFUzK3orr4Va7M,736
+jsonloggeriso8601datetime/__main__.py,sha256=vYJsfyS5qtd76igHjNpBB-0XG2n-qum4nj2wHgkNnBo,259
+jsonloggeriso8601datetime/jlidt.py,sha256=d0kvIHEBqn-UiAupckRCzlZNBhXr_KqYUbu1LdPjM7s,453
+jsonloggeriso8601datetime/jsonloggerdictconfig.py,sha256=DeTkKkru-NK3zI_uY8fSbd2l-facgHgcLTIlogqOfxU,1685
+jsonloggeriso8601datetime/scripts/jlidtCli.py,sha256=Botw4h7hOQguGRsfPaHSOPEPXIpBojMJhqD2I8t3SeE,2079
+jsonloggeriso8601datetime/scripts/jlidtQs.py,sha256=sLxNAJXcMq7XnBWMa-M-uL1Ow5v862rgS7wAGDuoFv0,7799
+jsonloggeriso8601datetime/wrappers.py,sha256=JRdpBOBYe2l3yDK9YU7wMlSCR120yOty2CjaIzRZPsk,1270
+jsonloggeriso8601datetime-3.0.0.dist-info/entry_points.txt,sha256=s4RpYRACrxBkTcyQRC9sSUoJmCvckeKcTIMccpHnrUc,129
+jsonloggeriso8601datetime-3.0.0.dist-info/LICENSE,sha256=TcmmtdYAhePNxAXDAH1IGuW-2bRImaMUruLoZqGILDg,1091
+jsonloggeriso8601datetime-3.0.0.dist-info/METADATA,sha256=Ry8IbyY0lI1AS6EKKKojxFDFHxI9_bWnN1Ya25MYBbE,7632
+jsonloggeriso8601datetime-3.0.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+jsonloggeriso8601datetime-3.0.0.dist-info/RECORD,,

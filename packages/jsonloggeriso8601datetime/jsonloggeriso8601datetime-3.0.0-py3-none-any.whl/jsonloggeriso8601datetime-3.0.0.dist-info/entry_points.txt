@@ -1,0 +1,4 @@
+[console_scripts]
+jlidtCli=jsonloggeriso8601datetime.scripts.jlidtCli:run
+jlidtQs=jsonloggeriso8601datetime.scripts.jlidtQs:run
+
