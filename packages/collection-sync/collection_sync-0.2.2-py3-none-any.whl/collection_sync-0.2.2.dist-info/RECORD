@@ -1,0 +1,12 @@
+collection_sync/__init__.py,sha256=ytyBmMvmzXDPVgeURHJz4CsBRSAurQSraV73oLdPV1M,4184
+collection_sync/util.py,sha256=xAaYPR-f9WFxyYyQO_LtB5TSpEXnDzS7E16wYNfyCFI,72
+collection_sync/collections/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+collection_sync/collections/iproute.py,sha256=fzTvliUWFUKsNTiO2igiGxq1rMsHuweXEYt2COCcVBA,2190
+collection_sync/collections/list.py,sha256=N2xFW-6iAZHLfF_fJTXHeHMImyfAKqHGbZuXgqdsYLE,636
+collection_sync/collections/markdown.py,sha256=hU-jOdIaw68F8LpMHAWdYXx69PssiV5RCDCX8dktJx4,1079
+collection_sync/collections/miniflux.py,sha256=WXaxclibAYPHeP18_w68hZBeidaSi37mY4aw0JoRtC4,1340
+collection_sync/collections/yaml.py,sha256=nCmy_eMJIjz-zVRvbsPPviw6R5UP5zDyinDUkgIXEw8,925
+collection_sync-0.2.2.dist-info/METADATA,sha256=V0Cx_hQfj8UMxXS64yiG6BRpjDQ5dgaIgOOcXVRVrZI,1085
+collection_sync-0.2.2.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+collection_sync-0.2.2.dist-info/top_level.txt,sha256=Sg3-qkfeVc410JMci8ah3wgIx4SZ5ib0uZva6iiLKK8,16
+collection_sync-0.2.2.dist-info/RECORD,,
