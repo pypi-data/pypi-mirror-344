@@ -1,0 +1,3 @@
+[console_scripts]
+autodan = autodan.core:AutoDAN.run
+masterkey = masterkey.main:masterkey_cli
