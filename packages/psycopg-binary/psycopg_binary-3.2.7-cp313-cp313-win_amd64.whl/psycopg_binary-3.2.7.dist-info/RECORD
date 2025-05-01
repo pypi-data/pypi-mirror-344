@@ -1,0 +1,16 @@
+psycopg_binary/pq.cp313-win_amd64.pyd,sha256=B4VkOhCbV4GBTlDWm_oGbRuu6ufcaVn2FBDUFscLP_g,285696
+psycopg_binary/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+psycopg_binary/version.py,sha256=K_wT8GlZNR5_XxaeCzavlI4pZhs90InDwJ3tnoT25jE,248
+psycopg_binary/_psycopg.cp313-win_amd64.pyd,sha256=D0kXx0LCORQT2mEllAedrmK2WDHy-YnEXa_O_muxzgs,688128
+psycopg_binary/_psycopg.pyi,sha256=fW8H3zJkoH_i8Qw0wyYtZgmddsXr_n-ltu5bY6R-zMM,3323
+psycopg_binary/_uuid.py,sha256=wD9pKUO3E4B67RJ1z7uNup5_UeJdZJqd_EbU4zBOiFs,793
+psycopg_binary/__init__.py,sha256=Z1FxAFvVv6Y_p-yuy6DkCXpRXiWJRPlUU8JZ7xPkfUs,745
+psycopg_binary-3.2.7.dist-info/DELVEWHEEL,sha256=lyF7DuRtNXtQkToLlDrK9esPPURdIvn2jeHWO1scfrM,460
+psycopg_binary-3.2.7.dist-info/METADATA,sha256=3qCHlPReY10WDy9vOaXMFhIA4D_IJ8q-VRn8zzFEZ2o,2926
+psycopg_binary-3.2.7.dist-info/RECORD,,
+psycopg_binary-3.2.7.dist-info/top_level.txt,sha256=8OM_PsAa5oKkzVvRu8kDESihBQo_LXqwG_nrlecubIk,15
+psycopg_binary-3.2.7.dist-info/WHEEL,sha256=tlMmjt4OoB3ekhbOo0Ti9Tu8u4-cjzU50yg_2bzT1bw,101
+psycopg_binary-3.2.7.dist-info/licenses/LICENSE.txt,sha256=fTqV5eBpeAZO0_jit8j4Ref9ikBSlHJ8xwj5TLg7gFk,7817
+psycopg_binary.libs/libcrypto-3-x64-58a75a86191644586f5c3bf60a59ff94.dll,sha256=qBodwfgkRaOZMrzPrHBQPS8KL74Z89n2NtOjesTjKtc,5244928
+psycopg_binary.libs/libpq-1ae816a95c5dce3eb90b0ef84802cadb.dll,sha256=oGJBFLc0qnqwct0AvQm8OYYMz2GpRXlkx7ZLWGN_acc,307712
+psycopg_binary.libs/libssl-3-x64-b6437aee3b0cca183916a55528f649a8.dll,sha256=v0xSXv9l8JATYe9vN75tm3o2mhU-tiusnWpXAid1q8s,865280
