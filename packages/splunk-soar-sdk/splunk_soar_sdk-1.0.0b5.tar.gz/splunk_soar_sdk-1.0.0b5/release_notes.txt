@@ -1,0 +1,21 @@
+# [1.0.0-beta.5](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.4...1.0.0-beta.5) (2025-04-30)
+
+
+### Bug Fixes
+
+* mark the project as typed on PyPI ([35e2282](https://github.com/phantomcyber/splunk-soar-sdk/commit/35e228208defc5b382fbfe5306903af818b8abf6))
+
+
+
+
+
+# [1.0.0-beta.5](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.4...1.0.0-beta.5) (2025-04-30)
+
+
+### Bug Fixes
+
+* mark the project as typed on PyPI ([35e2282](https://github.com/phantomcyber/splunk-soar-sdk/commit/35e228208defc5b382fbfe5306903af818b8abf6))
+
+
+
+
