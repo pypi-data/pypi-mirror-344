@@ -1,0 +1,7 @@
+README.md
+setup.py
+eonconsoleui/__init__.py
+guiphyton.egg-info/PKG-INFO
+guiphyton.egg-info/SOURCES.txt
+guiphyton.egg-info/dependency_links.txt
+guiphyton.egg-info/top_level.txt

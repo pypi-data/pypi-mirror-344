@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: guiphyton
+Version: 1.0.0
+Summary: A fully custom console UI toolkit without tkinter or graphics!
+Author: Ruzgar
+Author-email: ruzgartvtr@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-python
+Dynamic: summary
+
+# GuiPhyton
+
+Simple and customizable console-based UI library â€” no Tkinter, no graphics, just Python!
+
+## Install
+
+```bash
+pip install guiphyton
+```
+
+## Example
+
+```python
+from guiphyton import GuiPhyton
+
+ui = GuiPhyton("Example")
+ui.header("Welcome")
+ui.label("This is a full console UI")
+
+name = ui.input_box("Enter your name")
+
+def hello():
+    print(f"\nHello {name}!")
+    exit()
+
+btns = [ui.button("Say Hello", hello)]
+ui.run(btns)
+```
