@@ -1,0 +1,4 @@
+build
+dist
+external
+pigeon_config
