@@ -1,0 +1,7 @@
+setup.py
+src/investments_python_module.egg-info/PKG-INFO
+src/investments_python_module.egg-info/SOURCES.txt
+src/investments_python_module.egg-info/dependency_links.txt
+src/investments_python_module.egg-info/requires.txt
+src/investments_python_module.egg-info/top_level.txt
+tests/test_investments.py
