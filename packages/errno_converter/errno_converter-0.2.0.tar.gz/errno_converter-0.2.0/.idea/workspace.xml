@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="80427f68-aaaa-49ca-815b-de2d2485ddf5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="onto" value="0a4fd99dc8026fac3369fde3d782e2be7108b30a" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/.cache/JetBrains/PyCharmCE2023.1/python_stubs/213781586/errno.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="22sXJ0px3gouf4v8UoAxR2THIYh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.errno.executor": "Run",
+    "Python.twine publish.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.github.patou.gitmoji.display-icon": "icon",
+    "com.github.patou.gitmoji.insert-in-cursor-position": "true",
+    "com.github.patou.gitmoji.text-after-unicode": " ",
+    "com.github.patou.gitmoji.use-unicode": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/poku/dev/python/errno_converter",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.build">
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+    <configuration name="build" type="PythonConfigurationType" factoryName="Python">
+      <module name="errno_converter" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/venv/build/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="build" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="errno" type="PythonConfigurationType" factoryName="Python">
+      <module name="errno_converter" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="src.errno_converter" />
+      <option name="PARAMETERS" value="-v list" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="twine publish" type="PythonConfigurationType" factoryName="Python">
+      <module name="errno_converter" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/venv/build/bin/python" />
+      <option name="SDK_NAME" value="Python 3.13" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="twine" />
+      <option name="PARAMETERS" value="upload --repository pypi dist/errno_converter-*" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.build" />
+      <item itemvalue="Python.errno" />
+      <item itemvalue="Python.twine publish" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80427f68-aaaa-49ca-815b-de2d2485ddf5" name="Changes" comment="" />
+      <created>1640627192970</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640627192970</updated>
+      <workItem from="1640627195351" duration="730000" />
+      <workItem from="1643447453348" duration="39000" />
+    </task>
+    <task id="LOCAL-00001" summary="🎨 run black formatter on whole code base and configure it as pre-commit-hook">
+      <option name="closed" value="true" />
+      <created>1688501307118</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688501307118</updated>
+    </task>
+    <task id="LOCAL-00002" summary="🔖 bump version 0.1.4 because I forgot to raise it in pyproject.toml">
+      <option name="closed" value="true" />
+      <created>1688503314691</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688503314691</updated>
+    </task>
+    <task id="LOCAL-00003" summary="🏷️ added python3 typing and replaced NotImplementedError by abc.abstractmethod decorators&#10;&#10;🔥 🔥 remove some old imports and unicode encoding declarations, which are not needed in python3 anymore&#10;🔥  remove venv hashbang since scripts are not invocable anymore, they are referenced as scripts&#10;  in pyproject.toml instead">
+      <option name="closed" value="true" />
+      <created>1689974675591</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689974675591</updated>
+    </task>
+    <task id="LOCAL-00004" summary="🎨  split Parser (cli arg parsing and printing) form Converter (strategy interface)&#10;&#10;* there is a single Parser implementation, that works with multiple Converter&#10;  strategy Implementations. Now the converters don't inherit any implementation.">
+      <option name="closed" value="true" />
+      <created>1689976903933</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689976903933</updated>
+    </task>
+    <task id="LOCAL-00005" summary="🎨  add mypy to pre-commit hooks and upgrade black hook">
+      <option name="closed" value="true" />
+      <created>1689981571178</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1689981571178</updated>
+    </task>
+    <task id="LOCAL-00006" summary="🐛  use importlib-metadata vor version number printing instead of requiring git&#10;🚚  move Converter interface to a separate file in lib module and Parser into lib module">
+      <option name="closed" value="true" />
+      <created>1689981601007</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689981601007</updated>
+    </task>
+    <task id="LOCAL-00007" summary="🔖  bump version to 0.1.6">
+      <option name="closed" value="true" />
+      <created>1689981680757</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689981680757</updated>
+    </task>
+    <task id="LOCAL-00008" summary="⬆️ upgrade minimum python version to python 3.9&#10;&#10;* as python 3.8 is EOL since 2024-10-07&#10;🐛 fixes typing issue with python 3.8&#10;   introduced with commit e691d5a510e9bfe2bc1ba6e06550befbdbe14bc3,&#10;   see https://github.com/pokulo/errno_converter/issues/2&#10;🔖 bump version to 0.2.0">
+      <option name="closed" value="true" />
+      <created>1746044208009</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1746044208009</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=" run black formatter on whole code base and configure it as pre-commit-hook" />
+    <MESSAGE value=" bump version 0.1.4 because I forgot to raise it in pyproject.toml" />
+    <MESSAGE value="️ added python3 typing and replaced NotImplementedError by abc.abstractmethod decorators&#10;&#10;  remove some old imports and unicode encoding declarations, which are not needed in python3 anymore&#10;  remove venv hashbang since scripts are not invocable anymore, they are referenced as scripts&#10;  in pyproject.toml instead" />
+    <MESSAGE value="  split Parser (cli arg parsing and printing) form Converter (strategy interface)&#10;&#10;* there is a single Parser implementation, that works with multiple Converter&#10;  strategy Implementations. Now the converters don't inherit any implementation." />
+    <MESSAGE value="  add mypy to pre-commit hooks and upgrade black hook" />
+    <MESSAGE value="  use importlib-metadata vor version number printing instead of requiring git&#10;  move Converter interface to a separate file in lib module and Parser into lib module" />
+    <MESSAGE value="  bump version to 0.1.6" />
+    <MESSAGE value="⬆️ upgrade minimum python version to python 3.9&#10;&#10; &#10; bump version to 0.2.0" />
+    <MESSAGE value="⬆️ upgrade minimum python version to python 3.9&#10;&#10;* as python 3.8 is EOL since 2024-10-07&#10; fixes typing issue with python 3.8,&#10;   see https://github.com/pokulo/errno_converter/issues/2&#10; bump version to 0.2.0" />
+    <MESSAGE value="⬆️ upgrade minimum python version to python 3.9&#10;&#10;* as python 3.8 is EOL since 2024-10-07&#10; fixes typing issue with python 3.8&#10;   introduced with commit e691d5a510e9bfe2bc1ba6e06550befbdbe14bc3,&#10;   see https://github.com/pokulo/errno_converter/issues/2&#10; bump version to 0.2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="⬆️ upgrade minimum python version to python 3.9&#10;&#10;* as python 3.8 is EOL since 2024-10-07&#10; fixes typing issue with python 3.8&#10;   introduced with commit e691d5a510e9bfe2bc1ba6e06550befbdbe14bc3,&#10;   see https://github.com/pokulo/errno_converter/issues/2&#10; bump version to 0.2.0" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/http_converter.py</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
