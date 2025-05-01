@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: pb_checker
+Version: 1.0.1
+License-File: LICENSE
+Requires-Dist: requests>=2.26.0
+Requires-Dist: beautifulsoup4>=4.9.3
+Requires-Dist: colorama>=0.4.4
+Dynamic: license-file
+Dynamic: requires-dist
