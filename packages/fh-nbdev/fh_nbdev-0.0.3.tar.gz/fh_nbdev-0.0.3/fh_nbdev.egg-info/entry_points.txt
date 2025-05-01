@@ -1,0 +1,2 @@
+[nbdev]
+fh_nbdev = fh_nbdev._modidx:d

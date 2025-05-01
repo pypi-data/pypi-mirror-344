@@ -1,0 +1,9 @@
+fastcore
+execnb
+nbdev
+monsterui
+python-fasthtml
+beautifulsoup4
+mistletoe
+
+[dev]
