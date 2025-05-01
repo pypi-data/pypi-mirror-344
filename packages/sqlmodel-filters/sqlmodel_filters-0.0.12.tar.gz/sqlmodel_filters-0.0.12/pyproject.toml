@@ -1,0 +1,58 @@
+[project]
+name = "sqlmodel-filters"
+dynamic = ["version"]
+description = "A Lucene query like filtering for SQLModel"
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+license = "MIT"
+authors = [{ name = "Manabu Niseki", email = "manabu.niseki@gmail.com" }]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = ["luqum~=1.0", "sqlmodel>=0.0.16,<1.0"]
+
+[project.urls]
+Repository = "https://github.com/ninoseki/sqlmodel-filters"
+Homepage = "https://github.com/ninoseki/sqlmodel-filters"
+
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning~=0.8"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+[tool.uv]
+dev-dependencies = [
+  "mypy~=1.15.0",
+  "pre-commit>=4.2.0",
+  "pytest~=8.3.5",
+  "pytest-pretty>=1.2,<2.0",
+  "pytest-profiling>=1.8.1",
+  "pytest-randomly>=3.16.0",
+  "ruff>=0.11.7",
+]
+
+[tool.poetry-dynamic-versioning]
+enable = true
+
+[tool.ruff.lint]
+select = [
+  "B",   # flake8-bugbear
+  "C",   # flake8-comprehensions
+  "E",   # pycodestyle errors
+  "F",   # pyflakes
+  "I",   # isort
+  "N",   # pep8-naming
+  "PT",  # flake8-pytest-style
+  "RET", # flake8-return
+  "RUF", # Ruff-specific rules
+  "SIM", # flake8-simplify
+  "T20", # flake8-print
+  "W",   # pycodestyle warnings
+]
+ignore = ["E501"]
