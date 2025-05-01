@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: anieesh
+Version: 0.0.1
+Summary: Personal utilities
+Author-email: Anieesh <anieesh.saravanan@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# anieesh
+
+Temporary package published to PyPI for testing purposes.
+
+## Usage
+
+```python
+import anieesh
+print(anieesh.heartbeat())
