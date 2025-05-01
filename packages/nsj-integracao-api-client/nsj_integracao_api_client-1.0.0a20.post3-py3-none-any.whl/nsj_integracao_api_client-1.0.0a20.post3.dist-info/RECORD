@@ -1,0 +1,21 @@
+nsj_integracao_api_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/client_console copy.py,sha256=j_Lz-H0UiRqPY54pGAzsyfAggyIB-aTpH_9gL0kl6zQ,7445
+nsj_integracao_api_client/client_console.py,sha256=xu1OIFzbIXFutk9Ij9VFGXjH-ZLo5ynkakn7lNBGA-o,28146
+nsj_integracao_api_client/dao/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/dao/integracao.py,sha256=cCypSrSolqIp_IqOZnWBuqWAFXCoPbryXvxO8R08oAE,7019
+nsj_integracao_api_client/dao/job.py,sha256=1EnHlIAwK1Y0txBewsequSyiOTzIQk-q-JHs9A08enM,4764
+nsj_integracao_api_client/dto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/entity/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/infra/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/infra/api_client.py,sha256=9tgWI-L4V6AbU02tsftkVGkAvAFGTgUomlsAaN5IoXk,8561
+nsj_integracao_api_client/infra/debug_utils.py,sha256=n_ztGhuPySq2JrkHC2h30q-7FMGwzPFI0HX-iaSLwRk,2019
+nsj_integracao_api_client/infra/injector_factory.py,sha256=-PZr9b8cQem6V1C_chtcLWrElioMQeajCcY4NYFKoWw,4266
+nsj_integracao_api_client/infra/token_service.py,sha256=pjuKHQY3UmgFm8rdxuoTzIbrVy_2AhAHb-k1vqj4RZg,306
+nsj_integracao_api_client/infra/transform.py,sha256=HPTLo_nHfo0O34WPKa086i57ay91e0KQ5zz7dbANSsA,2989
+nsj_integracao_api_client/service/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_integracao_api_client/service/integrador.py,sha256=Fr30wqqe24Lp7EgMs81RakpvYioi52oQ1KD9n_c3t-g,33071
+nsj_integracao_api_client/service/integrador_cfg.py,sha256=k5iUpVHO2Vg0cZF0Uh-EpPh7Zr6LRJgFt_cqfoJEFRA,20012
+nsj_integracao_api_client-1.0.0a20.post3.dist-info/METADATA,sha256=P8W3XUEx50sIwpZ5IeH6-an2CZ3Mzr3KZ1xsP--7De8,9566
+nsj_integracao_api_client-1.0.0a20.post3.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+nsj_integracao_api_client-1.0.0a20.post3.dist-info/top_level.txt,sha256=FjWIgsVfsw17Fyk-F7-LI0BVSwxNx4Q7lqjGXQvN2C8,26
+nsj_integracao_api_client-1.0.0a20.post3.dist-info/RECORD,,
