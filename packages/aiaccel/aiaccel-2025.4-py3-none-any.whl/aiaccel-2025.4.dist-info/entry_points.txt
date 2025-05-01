@@ -1,0 +1,4 @@
+[console_scripts]
+aiaccel-optimize=aiaccel.hpo.apps.optimize:main
+aiaccel-train=aiaccel.torch.apps.train:main
+
