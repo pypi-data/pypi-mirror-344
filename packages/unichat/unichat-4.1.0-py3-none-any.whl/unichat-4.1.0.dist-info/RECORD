@@ -1,0 +1,10 @@
+unichat/__init__.py,sha256=dMlq7ximEwP6E4cV3oS2jhgvkHFn0-Rc0jg_Cr1mNns,67
+unichat/api_helper.py,sha256=iNb00YTGlEe9ABKQ-tPF4UXX9OARvUJA6OrFWvPTXto,29558
+unichat/chat_helper.py,sha256=3t4ZrA0EuI84-9RjCanlLyeyvH9S9llQbyiXxB_SnvU,7562
+unichat/models.py,sha256=0klTvwee6yoOM4dSKhrqNAXSU2JXRILc91mMW5K0iHA,2440
+unichat/unichat.py,sha256=Q6QQ1dKMUrHyQvlln1S961x6f7vtEEmXqs-nFSu1X9I,3094
+unichat-4.1.0.dist-info/licenses/LICENSE,sha256=LXnbGHmuQXisK0D9gCGvvzZei0m-pt50Rcj2L9cBZQk,1063
+unichat-4.1.0.dist-info/METADATA,sha256=9oXg2G1RyaXuqrss0_DXncUr9FOuGB2iuycj3159cwM,1108
+unichat-4.1.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+unichat-4.1.0.dist-info/top_level.txt,sha256=p3e4iV4E0SWHrqc0xdrUujElIhLF0QdBiRFNfhyWIh0,8
+unichat-4.1.0.dist-info/RECORD,,
