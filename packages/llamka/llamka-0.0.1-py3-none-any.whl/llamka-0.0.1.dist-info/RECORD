@@ -1,0 +1,16 @@
+llamka/__init__.py,sha256=3TODS5nsIIvnNKr0n1GB5FzIDOR1StPet7T3SnWove4,5817
+llamka/app.py,sha256=WQhasUmLA06kX7nVsv-G2kt7RSBFY8A7yvdS_cbAFyQ,41
+llamka/periodic.py,sha256=geHb55vxGQWfM_PVfWrLUH0iD0Aw37cpRFTpj03YggE,9554
+llamka/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamka/service.py,sha256=3cxnZVfehYw_gw_FYcyBE6N8mzZ8RAXxQILiwcUQAWI,7823
+llamka/llore/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llamka/llore/config.py,sha256=BpfmjBaIEe-Z0l7IjSyJpx5zexD8PdAHNIobpvDJizI,1045
+llamka/llore/server.py,sha256=mp3nXrnyTEcJf065YLpAtU--2eRQhVz1PCjNYyXzQf8,1117
+llamka/llore/vector.py,sha256=E_9jwKolFIjm_rXDv3Y7xD60RFvMyPch95wvuRrgzxI,3621
+llamka/llore/state/__init__.py,sha256=4Dh0n-E2Fk09G8z4IRKTpWXPunRjwTVkpuP9672U_5M,7726
+llamka/llore/state/schema.py,sha256=KVCn5hKbw84vcYuulhgPf9qqqtnfMX9r_G-eL4Fw0S0,1281
+llamka-0.0.1.dist-info/METADATA,sha256=oNqY0RU1Sq_C1m0gM-dQEbuYwuX_rCvJh1Nw3ftIteA,3147
+llamka-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+llamka-0.0.1.dist-info/entry_points.txt,sha256=WE81EJ31BhNARb0lxwWm2PQO4loXJDAhZpa1iMPYKKA,58
+llamka-0.0.1.dist-info/licenses/LICENSE,sha256=kyHJlHUDeFDzj3Sz1i0j7mvbHX7gmj0s2xlOQkAoM_I,1068
+llamka-0.0.1.dist-info/RECORD,,
