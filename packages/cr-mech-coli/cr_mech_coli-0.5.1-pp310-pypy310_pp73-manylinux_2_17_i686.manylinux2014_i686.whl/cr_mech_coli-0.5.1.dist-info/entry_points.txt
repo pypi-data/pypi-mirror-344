@@ -1,0 +1,3 @@
+[console_scripts]
+crm_fit=cr_mech_coli:crm_fit.crm_fit_main
+crm_multilayer=cr_mech_coli:crm_multilayer.crm_multilayer_main
