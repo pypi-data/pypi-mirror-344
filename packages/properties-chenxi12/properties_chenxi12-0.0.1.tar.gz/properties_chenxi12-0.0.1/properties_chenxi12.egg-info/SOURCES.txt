@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+properties_chenxi12.egg-info/PKG-INFO
+properties_chenxi12.egg-info/SOURCES.txt
+properties_chenxi12.egg-info/dependency_links.txt
+properties_chenxi12.egg-info/top_level.txt
+propertiesio/__init__.py
+propertiesio/propertiesIO.py
