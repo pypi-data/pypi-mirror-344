@@ -1,0 +1,2 @@
+[console_scripts]
+surun_install = surun_tools.install:main2
