@@ -1,0 +1,11 @@
+.idea
+pkg/__pycache__/
+pkg/tool/__pycache__/
+
+env/
+venv/
+ENV/
+
+build/
+dist/
+lesscode_tool.egg-info/
