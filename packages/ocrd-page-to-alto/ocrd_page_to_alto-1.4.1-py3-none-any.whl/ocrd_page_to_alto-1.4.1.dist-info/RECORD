@@ -1,0 +1,14 @@
+ocrd_page_to_alto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ocrd_page_to_alto/cli.py,sha256=fNohi8ODYQ69SGvIevIx-na0EnKg6r5ZwV7UMeaLUYg,3653
+ocrd_page_to_alto/convert.py,sha256=F9ZdbOaFY0O3rUavlowdzPjZ5mWY69gojZK5SAiEvho,21759
+ocrd_page_to_alto/ocrd-tool.json,sha256=7L-Q870dMKUimW8Jb9h2bdjY0GTJ60QsFyMbJw7IghA,3094
+ocrd_page_to_alto/ocrd_cli.py,sha256=ioagCHQLKbF5_z_mocQqAZBUZKUvf1AtGwe5GC68GsE,311
+ocrd_page_to_alto/ocrd_processor.py,sha256=ac74Uewc0mq5P-qesOciR8zOpcpW1gnDKobj4m_NDX0,2976
+ocrd_page_to_alto/styles.py,sha256=jF_2nvENCaOX0LQ8ekwH4eEdzCxlPJTRoFwXs69MdU8,5823
+ocrd_page_to_alto/utils.py,sha256=mTtk62ujpKwxjFmlnMQUVDqunx4eHWfkCHd4nNjEmig,2524
+ocrd_page_to_alto-1.4.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ocrd_page_to_alto-1.4.1.dist-info/METADATA,sha256=cFlSexilYe1vAM2YqQD_lquBRuivkFEKiQnOxRoJ_3k,4708
+ocrd_page_to_alto-1.4.1.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+ocrd_page_to_alto-1.4.1.dist-info/entry_points.txt,sha256=jVjmRlDzsTx9oqf0K9bH7uCq0DLM0x5yI6xhHJTlvjQ,119
+ocrd_page_to_alto-1.4.1.dist-info/top_level.txt,sha256=18fENAnwn3BbHr6oC3dIIlw84QxsBk1us06vJ6X2Atc,18
+ocrd_page_to_alto-1.4.1.dist-info/RECORD,,
