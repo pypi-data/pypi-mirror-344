@@ -1,0 +1,11 @@
+main.py,sha256=LZ-6QNhzoMYFd0dBPGpdTxZ4a4zAlohwHijzJHFZS4E,709
+app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/application.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/module_functionality/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app/module_functionality/commands.py,sha256=NsatzZVoW-5SjYZewy5k4_43m-i2hrVKqiGvkdCWQm8,5865
+fastapify-0.0.8.dist-info/METADATA,sha256=yk7wfPjhv84IC-I69cMOzCSk-mMh5FiVWisMLpIXDD8,3560
+fastapify-0.0.8.dist-info/WHEEL,sha256=7mLNlhqgufj7fxENZhtzRraBDfDi3AITas5GqZGp0zk,109
+fastapify-0.0.8.dist-info/entry_points.txt,sha256=4Dbn8hYtJEtFflX-vEJj0P_TcyEX3xJelQdou1PEUuQ,39
+fastapify-0.0.8.dist-info/top_level.txt,sha256=io9g7LCbfmTG1SFKgEOGXmCFB9uMP2H5lerm0HiHWQE,4
+fastapify-0.0.8.dist-info/RECORD,,
