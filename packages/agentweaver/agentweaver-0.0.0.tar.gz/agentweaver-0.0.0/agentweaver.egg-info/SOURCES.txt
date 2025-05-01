@@ -1,0 +1,7 @@
+README.md
+setup.py
+agentweaver/__init__.py
+agentweaver.egg-info/PKG-INFO
+agentweaver.egg-info/SOURCES.txt
+agentweaver.egg-info/dependency_links.txt
+agentweaver.egg-info/top_level.txt
