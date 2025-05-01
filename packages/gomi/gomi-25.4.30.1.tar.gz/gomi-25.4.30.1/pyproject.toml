@@ -1,0 +1,87 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = [
+  "hatchling",
+  "hatch-vcs",
+]
+
+[project]
+name = "gomi"
+dynamic = ["version"]
+description = 'Package to store and manage Note Types for Anki in a git repository.'
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+keywords = []
+authors = [
+  {name = "Ajatt-Tools and contributors"},
+]
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/Ajatt-Tools/gomi#readme"
+Issues = "https://github.com/Ajatt-Tools/gomi/issues"
+Source = "https://github.com/Ajatt-Tools/gomi"
+
+[project.scripts]
+gomi = "gomi.__main__:main"
+
+[tool.hatch.version]
+source = "vcs"
+path = "gomi/__about__.py"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "gomi/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/gomi tests}"
+
+[tool.coverage.run]
+source_pkgs = ["gomi", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/gomi/__about__.py",
+]
+
+[tool.coverage.paths]
+gomi = ["src/gomi", "*/gomi/src/gomi"]
+tests = ["tests", "*/gomi/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[tool.black]
+line-length = 120
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+
+[tool.hatch.envs.dev]
+dependencies = [
+  "mypy>=1.0.0",
+  "isort",
+  "pytest",
+  "black",
+]
+
+[tool.hatch.envs.dev.scripts]
+# run as `hatch run dev:scriptname`
+format = "black ."
+test = "pytest"
