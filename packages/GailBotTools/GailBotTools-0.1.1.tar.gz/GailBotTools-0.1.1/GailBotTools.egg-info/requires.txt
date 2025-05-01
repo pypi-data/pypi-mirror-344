@@ -1,0 +1,7 @@
+lxml
+toml
+six
+dict-to-dataclass
+
+[whisperx]
+whisperx
