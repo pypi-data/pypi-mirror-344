@@ -1,0 +1,13 @@
+optimus_prompt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+optimus_prompt/core/__init__.py,sha256=2kxUqDieY4sStfgapJwurqzY12T_S0O4e4qkpiEHLNo,139
+optimus_prompt/core/prompt.py,sha256=RM_vttJiWcXkisJO51CxVp2uV2cQRCPkqoOyd2cAo_s,1884
+optimus_prompt/core/response.py,sha256=BrKYxiFbLOFJOnK_4KaKZbvHhgu0XZUN2taTqroiKKQ,2782
+optimus_prompt/core/writer.py,sha256=XRnCFYm5ecHIkMn076DBQfjtcHbbnZxDzEBjrJAtI3U,3512
+optimus_prompt/output/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+optimus_prompt/providers/__init__.py,sha256=TYEYRlDxSefO4xKkTnurIGBgk0ACVFLFB-mROtt5Cg0,192
+optimus_prompt/providers/anthropic_provider.py,sha256=In8L1iigWot6xTBjgizulwg8pGMOazlrAzdSNBP02LQ,5180
+optimus_prompt/providers/base_provider.py,sha256=S6iN7xXKKR3j1arnFT5YsytSJgNxALxHAG3boiFPskk,1912
+optimus_prompt/providers/openai_provider.py,sha256=KEBEbHb7TbeOWcOTH7Z74Et22QQdzK9zoeuc6Iz985U,5027
+optimus_prompt-0.1.0.dist-info/METADATA,sha256=2YDOC3a8lK-vti64apwL4jc3aTjyom1s5_To9bqlQKY,2551
+optimus_prompt-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+optimus_prompt-0.1.0.dist-info/RECORD,,
