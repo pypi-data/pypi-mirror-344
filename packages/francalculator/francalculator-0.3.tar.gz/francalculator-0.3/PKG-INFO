@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: francalculator
+Version: 0.3
+Summary: Biblioteca para cálculos matemáticos e engenharia
+Author: Lukydnomo
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: pathlib
+Requires-Dist: re
+Requires-Dist: math
+Requires-Dist: sys
+Requires-Dist: random
+Requires-Dist: datetime
+Requires-Dist: ast
+Requires-Dist: operator
+Requires-Dist: logging
+Requires-Dist: traceback
+Requires-Dist: colorama
+Requires-Dist: shutil
+Dynamic: author
+Dynamic: classifier
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
