@@ -1,0 +1,20 @@
+[project]
+name = "statistics_probability_curve_pb123"
+version = "0.0.1"
+authors = [
+  { name="pb123", email="pbirdi901@gmail.com" },
+]
+description = "A package to display probabilities on a normal curve."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = { file = "LICENSE" }
+[tool.setuptools]
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/pb125-sy/python_prob_curve"
+Issues = "https://github.com/pb125-sy/python_prob_curve/issues"
