@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+utils/__init__.py
+utils/manychat.py
+utils/server.py
+utils/manychat_mcp_server.egg-info/PKG-INFO
+utils/manychat_mcp_server.egg-info/SOURCES.txt
+utils/manychat_mcp_server.egg-info/dependency_links.txt
+utils/manychat_mcp_server.egg-info/entry_points.txt
+utils/manychat_mcp_server.egg-info/requires.txt
+utils/manychat_mcp_server.egg-info/top_level.txt
