@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: neural_lowthrust
+Version: 0.1.0
+Summary: Eigen-based low-thrust trajectory predictor
+Author-Email: Zhong Zhang <zhongzhang.astro@gmail.com>
+License-Expression: MPL-2.0
+Requires-Python: >=3.9
+Requires-Dist: numpy
+
