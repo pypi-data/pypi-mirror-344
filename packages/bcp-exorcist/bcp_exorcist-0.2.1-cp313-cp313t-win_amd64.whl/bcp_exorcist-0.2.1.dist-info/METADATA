@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: bcp_exorcist
+Version: 0.2.1
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Rust
+License-File: LICENSE
+Summary: Cleans up SQL Server's bcp Export
+Keywords: bcp,csv
+Author-email: Vasilis Bardakos <vasilisbardakos@gmail.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Repository, https://github.com/vbardakos/bcp-exorcist
+
+# 🧹 bcp-exorcist
+
+**Fix malformed CSVs exported with broken delimiters and newlines from legacy systems.**
+
+`bcp-exorcist` is a Python extension written in Rust that "exorcises" broken CSV files using uncommon delimiters and newline characters. It processes files in memory-efficient batches and transforms them into proper, escaped CSV files ready for analysis or ingestion.
+
+## ✨ Features
+
+- Efficient batch processing of large CSV files.
+- Handles broken CSVs with custom delimiters (e.g. `\x1E`) and newlines (e.g. `\x1D`).
+- Recovers valid CSV structure with correct escaping.
+- Rust-powered speed with Python simplicity.
+
+## 📦 Installation
+
+```bash
+pip install bcp-exorcist
+```
+
+## ☦️ Example
+
+```python
+from bcp_exorcist import exorcize_csv
+
+try:
+    exorcize_csv("path/to/broken.csv", delim=b'\x1E', newline=b'\x1D', chunk_size=1024 * 1024)
+    print("Exorcism completed successfully!")
+
+except TypeError:
+    print("`delim` and `newline` must be single-byte values.")
+except FileNotFoundError:
+    print("Check that the filepath is correct.")
+except RuntimeError as e:
+    print(f"Exorcism failed: {e}")
+```
+
