@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "md2ltx"
+version = "0.0.49"
+description = "Convert Markdown (.md) files to PDF ..."
+readme = "README.md"
+requires-python = ">=3.10"
+
+authors = [
+  { name = "Ryan Gerard Wilson", email = "ryan@wilsonfamilyoffice.com" }
+]
+
+dependencies = [
+  "numpy",
+  "pandas",
+]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://ryangerardwilson.com"
+Issues   = "https://ryangerardwilson.com/contact"
+
+[project.entry-points."console_scripts"]
+md2ltx = "app.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+  "app",
+  "app.*"
+]
