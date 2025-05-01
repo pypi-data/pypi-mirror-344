@@ -1,0 +1,10 @@
+slurm_longrun/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slurm_longrun/cli.py,sha256=dG88nt4VYih5boIKof32snq-JGFJOo9dlJMFmzMiBUk,1609
+slurm_longrun/common.py,sha256=hnzWO636G0rhiM-7goihhpye5r_nN6djpr_big8BjSA,1532
+slurm_longrun/logger.py,sha256=2GTGfi6WeAxZexiSFd4S5a847GUnMiNBkHWt-P9lntk,598
+slurm_longrun/runner.py,sha256=pUs8qnYV-P9VOqyKgIsPu2m-PvTvP5ai5NQO0D8t0Zw,4231
+slurm_longrun/utils.py,sha256=GMEOrf4mIfISxAv9Nl1KbtIIz_a8Pef0vlhQdBMJFL8,4250
+slurm_longrun-0.1.2.dist-info/METADATA,sha256=gSMbgKVCn0CckDeYeQVP_2xpfd3zMR2ftW8WHlnD0P8,4327
+slurm_longrun-0.1.2.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+slurm_longrun-0.1.2.dist-info/entry_points.txt,sha256=tQbPvkAygm_F7WezzafiBDbP5OmeMB_zf3iGfeYU1Xg,57
+slurm_longrun-0.1.2.dist-info/RECORD,,
