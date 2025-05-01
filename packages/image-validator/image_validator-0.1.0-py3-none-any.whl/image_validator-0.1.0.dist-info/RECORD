@@ -1,0 +1,9 @@
+image_validator/__init__.py,sha256=mdrQOlv8-Ac1Gw-qLVT4wUks2Vq-9HI9ucVpVGgK_BY,62
+image_validator/core.py,sha256=1ETSwkrhLm2a4NGII-JwFr_L8BNyj5H_3wtuaE5a6Wc,917
+image_validator/face_detection.py,sha256=1SAwOoRNJ7kf0TphqAiuCur5d90xdiSQRFaXedwtM_0,413
+image_validator/image_quality_check.py,sha256=lu_XF642bOWDWbYstYH3nudgpgoefvURLW5GvKrC4l0,537
+image_validator/text_extraction.py,sha256=sEmpftTY0FDSSucFB0URF2bsaO0uQDtQz55oa-k2J9s,1536
+image_validator-0.1.0.dist-info/METADATA,sha256=Os8tkFGWL_3W-U6LxX44kXzFUF8S6yRC0eSwwtNJXZs,1047
+image_validator-0.1.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+image_validator-0.1.0.dist-info/top_level.txt,sha256=vB9qynDXQBmMrTe9sK4sOcovm-MRkDOFWzb2QpAh_Fw,16
+image_validator-0.1.0.dist-info/RECORD,,
