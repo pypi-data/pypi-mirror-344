@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+acace_token_weightor/__init__.py
+acace_token_weightor/weightor.py
+acace_token_weightor.egg-info/PKG-INFO
+acace_token_weightor.egg-info/SOURCES.txt
+acace_token_weightor.egg-info/dependency_links.txt
+acace_token_weightor.egg-info/requires.txt
+acace_token_weightor.egg-info/top_level.txt
+tests/test_weightor.py
