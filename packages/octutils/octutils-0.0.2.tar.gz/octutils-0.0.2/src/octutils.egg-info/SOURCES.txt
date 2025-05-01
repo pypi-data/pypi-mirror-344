@@ -1,0 +1,9 @@
+License.txt
+README.md
+pyproject.toml
+src/octutils/__init__.py
+src/octutils/functions.py
+src/octutils.egg-info/PKG-INFO
+src/octutils.egg-info/SOURCES.txt
+src/octutils.egg-info/dependency_links.txt
+src/octutils.egg-info/top_level.txt
