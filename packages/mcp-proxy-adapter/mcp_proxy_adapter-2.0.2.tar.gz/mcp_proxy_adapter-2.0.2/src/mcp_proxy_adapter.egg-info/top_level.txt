@@ -1,0 +1,2 @@
+mcp_proxy_adapter
+registry
