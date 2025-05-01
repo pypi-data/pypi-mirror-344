@@ -1,0 +1,4 @@
+[console_scripts]
+juice-scheduler=juice_scheduler.cli.juice_scheduler:cli
+spice-scheduler=juice_scheduler.cli.spice_scheduler:cli
+
