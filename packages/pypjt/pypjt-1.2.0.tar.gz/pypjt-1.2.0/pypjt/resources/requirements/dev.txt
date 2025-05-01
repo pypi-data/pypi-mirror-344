@@ -1,0 +1,19 @@
+-r prod.txt
+build
+twine
+
+coverage
+pytest
+tox
+mypy
+ruff
+pre-commit
+
+jinja2
+python-dotenv
+rtoml
+click
+beautifulsoup4
+
+sphinx
+sphinx-autobuild
