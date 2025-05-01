@@ -1,0 +1,11 @@
+togai_my_package-0.0.8.dist-info/licenses/LICENSE.txt,sha256=ceC9ZJOV9H6CtQDcYmHOS46NA3dHJ_WD4J9blH513pc,1081
+togai_my_packaging/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+togai_my_packaging/my_file.py,sha256=lC9jdmhPUOW6BtqnALE-6uEerNyGc6FprnDG8sERnrQ,72
+togai_my_packaging/my_other_file.py,sha256=z6X5jci1sJm8YnosccwgfxACLyC1_zXGnKTV1B52XoI,27
+togai_my_packaging/states_info.py,sha256=DLmC6hyaBmOdgxlcVecJPmey1Pmm_dgQOcc6UQfGmLo,802
+togai_my_packaging/my_folder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+togai_my_packaging/my_folder/my_nested_file.py,sha256=zy3VLyL-B-tlIDB0a2MlKKVFQdfafN14HMOtqIhh6nc,71
+togai_my_package-0.0.8.dist-info/METADATA,sha256=EwVE7RpdoS1s0eYN2zX5A-YZI86WysV0BxfAp4cHBVE,12308
+togai_my_package-0.0.8.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+togai_my_package-0.0.8.dist-info/top_level.txt,sha256=psq6iV6qtOL6uRdrMFb5GPzE4NEJiUGH55wY-h-vLi8,19
+togai_my_package-0.0.8.dist-info/RECORD,,
