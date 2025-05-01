@@ -1,0 +1,13 @@
+factly/__init__.py,sha256=kxmauFsobC87p4xnR0BJIKPEuJxBDKDDTIHDIZ4-bSs,355
+factly/__main__.py,sha256=ruXxf5ouqKFTVnvWc54-DJXo5o-RL4CpGPzziGHeJss,519
+factly/benchmarks.py,sha256=suhsmLJQPtjD6ImAJZ8WsVIUnznzbUCxrbIW9DDZb8g,14756
+factly/cli.py,sha256=knMA6ctpNpiZ4bsgFXnJwD-K1fN5kfpNIyERiS453g4,6287
+factly/models.py,sha256=q1HzxASfUDCl1h1RZw57ebbhVBAMgBdOtXsElciq6ns,4606
+factly/plots.py,sha256=i4tSSj1u12UbGddbacvuxoBoc9JlWneH6Nlg6k3BfL0,6742
+factly/resources.py,sha256=2-95tBY5v4Ko3OLmYYp_0uYgQg_qJh-OYQC2zlepGAc,1630
+factly/tasks.py,sha256=uqiH2dLetmjUZEekXXpkn87U0Z_8675orvNayiJ1-Ok,14266
+factly_eval-1.0.1.dist-info/METADATA,sha256=h9ah_aR5zfvUDvrEUlbbDf-eq-NEw0AwqgLhSnWni7E,4876
+factly_eval-1.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+factly_eval-1.0.1.dist-info/entry_points.txt,sha256=Wxu4WLvzIZD1jkSeWGZZmoDI0t_BPAjAEgqc5bmF2y8,42
+factly_eval-1.0.1.dist-info/licenses/LICENSE,sha256=KOPBxidv0k-4UFQx2ZRLiOASprbW1cefht5jNsp_BFA,1084
+factly_eval-1.0.1.dist-info/RECORD,,
