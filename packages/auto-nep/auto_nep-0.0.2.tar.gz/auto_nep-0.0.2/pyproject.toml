@@ -1,0 +1,16 @@
+[project]
+name = "auto_nep"                    #package 名字，必填
+version = "0.0.2"                      #package 版本号  ，必填
+description = "Auto train nep"       #package 描述  ，必填
+authors = [
+    {name = "RongYi", email = "2071914258@qq.com"}
+] #package 作者，必填
+
+dependencies = [
+    "colorama==0.4.6",
+    "PyYAML==6.0.2",
+    "tqdm==4.67.1",
+]
+
+[tool.poetry.scripts]
+auto-nep = "cli.cli:main"
