@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/buildmgr/__init__.py
+src/buildmgr/core.py
+src/buildmgr.egg-info/PKG-INFO
+src/buildmgr.egg-info/SOURCES.txt
+src/buildmgr.egg-info/dependency_links.txt
+src/buildmgr.egg-info/top_level.txt
