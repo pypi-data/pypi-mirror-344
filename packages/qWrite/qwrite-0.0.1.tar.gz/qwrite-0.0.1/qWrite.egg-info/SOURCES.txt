@@ -1,0 +1,4 @@
+qWrite.egg-info/PKG-INFO
+qWrite.egg-info/SOURCES.txt
+qWrite.egg-info/dependency_links.txt
+qWrite.egg-info/top_level.txt

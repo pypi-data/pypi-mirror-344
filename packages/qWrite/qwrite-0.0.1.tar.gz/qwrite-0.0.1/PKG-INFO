@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: qWrite
+Version: 0.0.1
+Summary: Module for better printing. Don't use default funcion print()
+Author: Quantung
+Dynamic: author
+Dynamic: summary
