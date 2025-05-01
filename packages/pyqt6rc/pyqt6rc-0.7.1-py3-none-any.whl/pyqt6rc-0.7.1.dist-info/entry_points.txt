@@ -1,0 +1,5 @@
+[console_scripts]
+pyqt6rc=pyqt6rc.scripts.pyqt6rc:run
+pyqt6sp=pyqt6rc.scripts.pyqt6sp:run
+pyside6rc=pyqt6rc.scripts.pyside6rc:run
+
