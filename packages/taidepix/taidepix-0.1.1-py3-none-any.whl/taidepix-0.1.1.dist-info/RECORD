@@ -1,0 +1,13 @@
+taidepix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taidepix/cli.py,sha256=Q__Xz3xGK6cED4BT8RRp-fH436lXgYH_IozFqOgQV7Y,2500
+taidepix/algorithms/__init__.py,sha256=ZgGKjCBf7h-lkiKT8C0zdADWotyYQh7XJuXJjjonFkc,52
+taidepix/algorithms/dither_algorithms.py,sha256=5gS8pILK291YnXpzcsmPeo-BybKTP9GPrgqivDOJ6Rk,6857
+taidepix/utils/__init__.py,sha256=p_rXRmSHwStVL7Kyc3eAyKxIcpm8KZbWM99uNIhT0uM,45
+taidepix/utils/image_display.py,sha256=nFYRvej1ktaDCj_uj44UT9C0Mweyu4mwcdwynRpDAYM,2519
+taidepix/utils/image_loader.py,sha256=IZn27sceBcNtBK4KV5cZTu-9UiTRzsYZrcePtgfLaY4,453
+taidepix-0.1.1.dist-info/licenses/LICENSE,sha256=BLeppPeILx4IveCNrHPrJ9hiFBu5ZG8qzv_FZo5gUSo,1073
+taidepix-0.1.1.dist-info/METADATA,sha256=otyN8sIgWU96Tb2S2VJLyUGGTP4QEqPR09tcGeGjFbY,4496
+taidepix-0.1.1.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+taidepix-0.1.1.dist-info/entry_points.txt,sha256=26bYjr6-BEI5_1owfhUrshKn07hw2f5OUB_cdZMngQ0,47
+taidepix-0.1.1.dist-info/top_level.txt,sha256=94PfDynkUBXgomRe6Akqp6PW0SIBTv19a0_QMgQMZe0,9
+taidepix-0.1.1.dist-info/RECORD,,
