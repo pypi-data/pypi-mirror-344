@@ -1,0 +1,10 @@
+sversion/__init__.py,sha256=gXMqyeK9e0daKUbVj0BvCa_typV7ITwkyReBBJ9OR9A,234
+sversion/CHANGELOG.md,sha256=vvqb0aTjZ4OPJNbOkn7ZUFGl0Skuz4I-4Cm9omys3OQ,526
+sversion/contracts.py,sha256=PIc0Ok5qGd1J7imeLNKj5DysGqChc-wikBzKb_OOHSk,99
+sversion/error_handling.py,sha256=_tAMCnMnvQYk2NpJMLbK7qoV2Hp_Upc7PSIrfqVQgwI,169
+sversion/pyproject_toml_based.py,sha256=xY-vHeWapitvPr1Eg25-KICnsOH6X0XSOVz4hm7XQIk,1225
+sversion/version_file_based.py,sha256=intRqP6G-oltKEK2ijC6I_Bndgigx3VWEX_Uad3VMvU,985
+sversion-2.2.0.dist-info/LICENSE,sha256=JIANvUp-NSsBDSTIDCVKDUzwfFO9Jrviv3FuG4quXz8,1097
+sversion-2.2.0.dist-info/METADATA,sha256=P4TOtbqA1Gdl55YkZCc079muAFDRFbPQsCEXTQ2Yjho,640
+sversion-2.2.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+sversion-2.2.0.dist-info/RECORD,,
