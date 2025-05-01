@@ -1,0 +1,3 @@
+
+class DatmatMaterializeError(Exception):
+    pass
