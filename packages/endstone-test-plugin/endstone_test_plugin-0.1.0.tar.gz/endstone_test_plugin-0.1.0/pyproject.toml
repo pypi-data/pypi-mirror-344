@@ -1,0 +1,11 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "endstone-test-plugin"
+version = "0.1.0"
+description = "Example plugin for testing purposes"
+
+[project.entry-points."endstone"]
+test-plugin = "endstone_test_plugin:TestPlugin"
