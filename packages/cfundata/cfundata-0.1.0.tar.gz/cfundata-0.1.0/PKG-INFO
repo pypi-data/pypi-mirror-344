@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: cfundata
+Version: 0.1.0
+Summary: Data file utilized by the cfun package
+Author: zoushucai
+Author-email: 1228075512@qq.com
+Requires-Python: >=3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+
