@@ -1,0 +1,8 @@
+dgraph_flex/__init__.py,sha256=eSHOSOCMDNA9Ua9MVwneyiLt26WmCXeOsD-gBeoBtH0,66
+dgraph_flex/dgraph_flex.py,sha256=z9XwiB9HAUMEWakXGZ1L_hLG-LfoHivCNhU2B_Ovmns,15337
+dgraph_flex/modify_graph.py,sha256=AhiAzC9B3pV11B4C3HRpU-9F-B4j9rIghWU6yoqmbKI,608
+dgraph_flex-0.1.5.dist-info/licenses/LICENSE,sha256=ODYZfsol95LsdE8oetDplmT53-mpZ42Cbg5wIGMYpm0,1069
+dgraph_flex-0.1.5.dist-info/METADATA,sha256=cdGwXrbUOnQ6bHdmH8XOYKTdhOATBkqf4ZSr4YVcOvk,3438
+dgraph_flex-0.1.5.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+dgraph_flex-0.1.5.dist-info/top_level.txt,sha256=P0o3hBJQevidvMJDvLOxjSwXiqC_sXJ7ntqRCOZpEaY,12
+dgraph_flex-0.1.5.dist-info/RECORD,,
