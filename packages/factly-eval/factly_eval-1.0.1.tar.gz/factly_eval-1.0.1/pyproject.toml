@@ -1,0 +1,165 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["factly"]
+
+[project]
+name = "factly-eval"
+description = "CLI tool to evaluate ChatGPT factuality on MMLU benchmark."
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "README.rst"
+version = "1.0.1"
+requires-python = ">=3.12,<4"
+authors = [{ name = "Serghei Iakovlev", email = "oss@serghei.pl" }]
+dependencies = [
+    "click",
+    "datasets>=3.5.1",
+    "deepeval>=2.8.1,<3.0.0",
+    "matplotlib>=3.10.1",
+    "pandas>=2.2.3",
+    "psutil>=7.0.0",
+    "python-dotenv>=1.1.0",
+    "pyyaml>=6.0.2",
+    "transformers>=4.51.3",
+]
+keywords = [
+    "llm",
+    "factuality",
+    "evaluation",
+    "benchmark",
+    "mmlu",
+    "chatgpt",
+    "openai",
+    "prompt-engineering",
+    "ai-evaluation",
+    "cli",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+
+    "Environment :: Console",
+
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+
+    "Operating System :: OS Independent",
+
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Utilities",
+
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://factly.readthedocs.io"
+Repository = "https://github.com/sergeyklay/factly"
+Documentation = "https://factly.readthedocs.io/en/latest/index.html"
+Changelog = "https://factly.readthedocs.io/en/latest/changelog.html"
+Issues = "https://github.com/sergeyklay/factly/issues"
+Download = "https://github.com/sergeyklay/factly/releases"
+
+[project.scripts]
+factly = "factly.cli:cli"
+
+[dependency-groups]
+dev = ["pre-commit>=4.2.0", "ruff>=0.11.6"]
+testing = [
+    "coverage[toml]>=7.7.1,<8.0",
+    "pytest>=8.3.5,<9.0",
+    "pytest-mock>=3.14.0,<4.0",
+    "pytest-asyncio>=0.26.0,<1.0",
+]
+docs = ["sphinx>=8.2.3,<9.0", "sphinx-rtd-theme>=3.0.2,<4.0"]
+
+[tool.uv.sources]
+# Mostly due to https://github.com/pallets/click/pull/2365
+click = { git = "https://github.com/pallets/click.git", rev = "release-8.2.0" }
+
+[tool.uv]
+default-groups = ["dev", "testing"]
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint]
+extend-select = [
+    "I", # All imports
+    "E", # All errors
+    "W", # All warnings
+    "F", # All false positives
+    "C", # All complexity
+    "Q", # All quality
+]
+
+ignore = [
+    "E402", # module level import not at top of file
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["factly"]
+
+[tool.pytest.ini_options]
+addopts = "--verbose --durations=25 --no-header"
+asyncio_mode = "strict"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.coverage.report]
+# Set the number of decimal places in coverage percentage
+precision = 2
+
+# Show lines that were not executed
+show_missing = true
+
+# Skip empty files
+skip_empty = true
+
+# Exclude lines from coverage report
+exclude_lines = ["pragma: no cover", "if TYPE_CHECKING:"]
+
+[tool.coverage.html]
+# Directory for the HTML format report
+directory = "coverage/html"
+
+[tool.coverage.lcov]
+# Filename for the LCOV format report
+output = "coverage/lcov/coverage.lcov"
+
+[tool.coverage.xml]
+# Filename for the XML format report
+output = "coverage/xml/coverage.xml"
+
+[tool.coverage.run]
+# Enable branch coverage (default: False)
+branch = true
+
+# Run tests in parallel (useful when using CI/CD)
+parallel = true
+
+# Filename for storing coverage data
+data_file = "coverage/.coverage"
+
+# Source code directories to include in the coverage report
+source = ["factly"]
+
+# Omit specified files or directories from the report
+omit = [
+    "__init__.py",
+    "*/__pycache__/*",
+    "*/.venv/*",
+    "*/build/*",
+    "*/coverage/*",
+    "*/pytest_cache/*",
+    "*/tests/*",
+]
