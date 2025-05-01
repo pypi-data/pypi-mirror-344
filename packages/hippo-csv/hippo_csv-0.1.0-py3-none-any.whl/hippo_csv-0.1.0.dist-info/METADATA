@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: hippo_csv
+Version: 0.1.0
+Summary: Professional CSV utilities by King Hippopotamus
+Author-email: King Hippopotamus  <king.hippopotamus@yahoo.com>
+License: MIT
+Keywords: csv,utilities,pandas,data,hippo
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pandas<3.0.0,>=2.2.0
+
+# hippo_csv
+
+אוסף פונקציות CSV מתקדמות שנבנו לשימוש מקצועי בעבודה עם נתונים טבלאיים.
+
+- קריאה בטוחה של קבצי CSV
+- טיפול בשגיאות קידוד
+- מבוסס pandas 2.2.x
