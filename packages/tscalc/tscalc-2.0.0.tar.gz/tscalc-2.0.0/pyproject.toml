@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tscalc"
+version = "2.0.0"
+authors = [
+  { name = "Craig Michael Dsouza", email = "dsouzacraigmichael@gmail.com" },
+]
+description = "A comprehensive assessment tool to evaluate personal attributes related to toughness, success potential, and personality type."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.urls]
+Homepage = "https://github.com/CraigMLdsouza/tscalc"
+Issues = "https://github.com/CraigMLdsouza/tscalc/issues"
