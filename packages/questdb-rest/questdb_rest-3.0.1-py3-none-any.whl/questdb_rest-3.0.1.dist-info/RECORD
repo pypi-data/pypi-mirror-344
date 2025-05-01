@@ -1,0 +1,12 @@
+questdb_rest/__init__.py,sha256=LMdQInwmr9gJvEA-DcSac1GnIwxoZNRGS6Lqyf1Yfpo,26735
+questdb_rest/cli.py,sha256=W97-M7EUvsJ4-KEn_Sb-wYRfcQ7OaIwa1S0Rn1ENhLA,136439
+questdb_rest-3.0.1.data/scripts/qdb-drop-tables-by-regex,sha256=2VXGM_PAXYIQiRgg6UMvm0l1sfSOttOq0SfxaVSOyJ4,1588
+questdb_rest-3.0.1.data/scripts/questdb-drop-tables-by-regex,sha256=2VXGM_PAXYIQiRgg6UMvm0l1sfSOttOq0SfxaVSOyJ4,1588
+questdb_rest-3.0.1.data/scripts/qdb-imp-from-stdin,sha256=bmMmzqnr13Fvs5Tvr-aBhtVzKrPztVm6dJflk0p3sDc,3143
+questdb_rest-3.0.1.data/scripts/questdb-imp-from-stdin,sha256=bmMmzqnr13Fvs5Tvr-aBhtVzKrPztVm6dJflk0p3sDc,3143
+questdb_rest-3.0.1.data/scripts/qdb-copy-single-col-values-from-query,sha256=CLtoYRlXcIgC4fN6RCIGZ58YoJtkQHR6Fb0CesoqeYQ,1053
+questdb_rest-3.0.1.dist-info/LICENSE,sha256=LB8eNJVIiCiQEt0mw4nH-ClNTAlBPKvKWhZGo7aNnl4,1106
+questdb_rest-3.0.1.dist-info/METADATA,sha256=SUAuuSVr1mV1j6pJ-gRZfHiN7cRqFUT44mCqQADgLH8,27716
+questdb_rest-3.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+questdb_rest-3.0.1.dist-info/entry_points.txt,sha256=pmnoPpX9L5VquvlPY5fm5iZjeX76s1zAqVlqD8GjkGk,83
+questdb_rest-3.0.1.dist-info/RECORD,,
