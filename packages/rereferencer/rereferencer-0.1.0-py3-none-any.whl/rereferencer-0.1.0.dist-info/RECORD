@@ -1,0 +1,10 @@
+primer_extractor/__init__.py,sha256=KotSZizdWDwtP54VCm89A6FBXv6ce7bS9MtPbbq8VMI,113
+primer_extractor/__main__.py,sha256=FdJ-sqql5SQ0wfmb1-MRwRnPDRzGyI4n3AxzzGgRlg0,259
+primer_extractor/cli.py,sha256=PUXPtxGRMSCIgJdBmxlzAdFYwLHarXGzIgk_Ie-QMm4,2132
+primer_extractor/core.py,sha256=_kxg8kfzTXMNdFoBSM8XNoAWQK6ASDylDSeBV9f8V28,9111
+rereferencer-0.1.0.dist-info/licenses/LICENSE,sha256=daPMWEiO4Ws4d0oY03H6GcFYnjgn8iD8FPBvRySN_r4,1066
+rereferencer-0.1.0.dist-info/METADATA,sha256=uop7m1y9F1bIJvfnlupDm0_9R4BZVTog_R-0t9Iv0CQ,3187
+rereferencer-0.1.0.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+rereferencer-0.1.0.dist-info/entry_points.txt,sha256=oSEMjSyuuLf5KOE_AuAsuUbnBQWmVeQFdFqORI-hcNs,59
+rereferencer-0.1.0.dist-info/top_level.txt,sha256=aKXs8_fALdGEOViG-5xxvFaQIEdJyhoMBubRR2OZiOM,17
+rereferencer-0.1.0.dist-info/RECORD,,

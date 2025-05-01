@@ -1,0 +1,2 @@
+[console_scripts]
+rereferencer = primer_extractor.cli:main
