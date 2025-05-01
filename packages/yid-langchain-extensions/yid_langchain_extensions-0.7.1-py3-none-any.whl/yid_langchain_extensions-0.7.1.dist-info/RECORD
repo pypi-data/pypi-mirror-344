@@ -1,0 +1,16 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_batches_client.py,sha256=RFhWBa1F2jiQXkyWHiUns0zfk2UG3mQy8OFvsfUZ5WI,3608
+tests/test_tools_in_prompt_llm.py,sha256=o1lK_yS2wX-wo1h2T-_zunvHmcTLptQLBrsu3pkvPQo,8646
+tests/test_tools_llm_with_thought.py,sha256=yri7lyVhszvpMVofk51xkp39pjcD1FOk_t5NdMIRnpk,1353
+tests/test_utils.py,sha256=HM_50Gpsoe4NijTZK_nGv5qau8hZit6hARZGLBJCkw8,981
+yid_langchain_extensions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yid_langchain_extensions/utils.py,sha256=NVkOlSWn2oBZ5g2sWOgq5scx2V9RGH3W6aZjqUuRXC8,2885
+yid_langchain_extensions/llm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yid_langchain_extensions/llm/batches_openai_client.py,sha256=PvElpXEuTQQq3T2GY5zXpWLUvkMcHalkq_U0MBQFv2E,6380
+yid_langchain_extensions/llm/tools_in_prompt_llm.py,sha256=bFbwFQ3w90L3rrBvYxD4IdDDg0JxfKApyu0eKHC-dtA,8215
+yid_langchain_extensions/llm/tools_llm_with_thought.py,sha256=87rp75jYoEvT3Aqx6vGDNMSzVjTdvxo7Z5gobyqmJlw,3269
+yid_langchain_extensions-0.7.1.dist-info/licenses/LICENSE,sha256=QfxDSfbPaqth8hUgIzvEEcgiTywEs5ZoYz6rIwOmwqU,1075
+yid_langchain_extensions-0.7.1.dist-info/METADATA,sha256=_5kJWZ2hV-Y0A9K0Y2voJRBfBJpO48O6AYfTsnEhDIg,1291
+yid_langchain_extensions-0.7.1.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+yid_langchain_extensions-0.7.1.dist-info/top_level.txt,sha256=jVV7mMj45u5n5j_bmTvejO2sDjOpYttEYbIHGsE5Sg0,31
+yid_langchain_extensions-0.7.1.dist-info/RECORD,,
