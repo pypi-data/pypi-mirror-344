@@ -1,0 +1,8 @@
+LICENSE
+README.rst
+pyproject.toml
+sausage_links.py
+sausage_links.egg-info/PKG-INFO
+sausage_links.egg-info/SOURCES.txt
+sausage_links.egg-info/dependency_links.txt
+sausage_links.egg-info/top_level.txt
