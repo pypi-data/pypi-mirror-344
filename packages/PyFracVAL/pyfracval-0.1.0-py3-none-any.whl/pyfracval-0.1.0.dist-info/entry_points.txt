@@ -1,0 +1,2 @@
+[console_scripts]
+pyfracval = pyfracval.cli:cli
