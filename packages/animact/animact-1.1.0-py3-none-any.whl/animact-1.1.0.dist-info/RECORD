@@ -1,0 +1,9 @@
+animact/__init__.py,sha256=9nuIInkL6moqBL5hjj9yyl6GZdBd70p07P-nNpfd-X0,617
+animact/async_api.py,sha256=HWSJiBypNqThltZaXgOycXG8zwNSuQ8ltHcTMsb0qak,906
+animact/base.py,sha256=ZgkkZTl6NZ1-_ID32ySK3WGAcgWUVgx9_x6B3HREXZU,4883
+animact/sync.py,sha256=YQ5GIUTo71414int7CXgaWGu7lDNjDTG8A4cNO_-KzM,803
+animact-1.1.0.dist-info/licenses/LICENSE,sha256=p2dLqzIxw-BUrt4xVa9FyPXa_Ns8GuF3UpuM9fDY9Pg,1072
+animact-1.1.0.dist-info/METADATA,sha256=DrzCJsRCyEBsTYVmnEs4JFDpM6psmYt5p1TAnEvKoRE,5685
+animact-1.1.0.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+animact-1.1.0.dist-info/top_level.txt,sha256=AnPojnvoktVERxddO35zmURuhsAgx-3c9LMIJn8Edvk,8
+animact-1.1.0.dist-info/RECORD,,
