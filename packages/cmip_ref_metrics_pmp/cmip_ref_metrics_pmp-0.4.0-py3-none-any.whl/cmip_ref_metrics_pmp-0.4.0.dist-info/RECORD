@@ -1,0 +1,14 @@
+cmip_ref_metrics_pmp/__init__.py,sha256=h45at7RojELfG4Ce5KKy2i3F6OKRnTYx5fmyvJnKXPc,1111
+cmip_ref_metrics_pmp/pmp_driver.py,sha256=aH-IL9-Mhpd3TQMRXzMKtKBFINkCKBKKgpUqysnnwkY,7466
+cmip_ref_metrics_pmp/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cmip_ref_metrics_pmp/variability_modes.py,sha256=briGuWTq2oma6GFIAPAV2tddoPfh3KRuZObSpoZoCJM,6809
+cmip_ref_metrics_pmp/dataset_registry/pmp_climatology.txt,sha256=lruldzyr8fS79Tdg5RsIo_nzPGaQDjwpUE00t9S2QTM,3488
+cmip_ref_metrics_pmp/params/pmp_param_MoV-psl.py,sha256=cpQyro0UdVWxe7jREidEQdirjksIXc7lm3CIfefcz5I,2268
+cmip_ref_metrics_pmp/params/pmp_param_MoV-ts.py,sha256=yfKs8qgsoaCmdRwDJWSZ3sy0GM_WsQrOde9d__iOo7I,2547
+cmip_ref_metrics_pmp/requirements/conda-lock.yml,sha256=kJL154DWMuheufoO0BlEqLaXejTGkeYeTe96DiEE3MA,346796
+cmip_ref_metrics_pmp/requirements/environment.yml,sha256=XfB06UWPMyaHXu_rIGr8_wZdEBFdjSfsWtNg24xAXrs,105
+cmip_ref_metrics_pmp-0.4.0.dist-info/METADATA,sha256=NjVSlZIvcGC_QmNowIlmWNFVZwJAg7dGDkkIZR2pWVA,1226
+cmip_ref_metrics_pmp-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cmip_ref_metrics_pmp-0.4.0.dist-info/licenses/LICENCE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cmip_ref_metrics_pmp-0.4.0.dist-info/licenses/NOTICE,sha256=0yUcJt0oJt3CGJUI-rTmqTRpX91fR_n2zyPowEBr9WQ,111
+cmip_ref_metrics_pmp-0.4.0.dist-info/RECORD,,
