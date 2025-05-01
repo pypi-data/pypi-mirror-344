@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: sshsync
+Version: 0.1.0
+Summary: Add your description here
+Author-email: Blackmamoth <blackmamoth83@gmail.com>
+Requires-Python: >=3.12
+Requires-Dist: asyncssh>=2.20.0
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: rich>=14.0.0
+Requires-Dist: typer>=0.15.3
