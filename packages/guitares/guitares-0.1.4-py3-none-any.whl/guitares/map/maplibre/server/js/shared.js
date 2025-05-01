@@ -1,0 +1,13 @@
+window.map  = 'main';
+window.mapA = 'A';
+window.mapB = 'B';
+window.featureClicked = null;
+window.layerAdded = null;
+window.layers = {};
+window.currentCursor = null;
+window.draw = null;
+window.featureDrawn = null;
+window.featureSelected = null;
+window.featureModified = null;
+window.featureAdded = null;
+window.featureDeselected = null;
