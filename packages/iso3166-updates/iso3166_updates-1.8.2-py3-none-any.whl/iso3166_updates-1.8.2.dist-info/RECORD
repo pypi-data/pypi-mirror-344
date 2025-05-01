@@ -1,0 +1,8 @@
+iso3166_updates/README.md,sha256=1n96uSAIFm7r7qvGo6x9XWvaCHbl8jfgEdOAQ6yFYaI,5025
+iso3166_updates/__init__.py,sha256=JjaneTIcIdlZd_LjBO6MO2eBiQDO3jUmP5xOrJqBwb8,803
+iso3166_updates/iso3166-updates.json,sha256=pPHX8FIVvo0Jg6s_7S6V7hZZlvae--bu94RkKXrHyU8,344102
+iso3166_updates/iso3166_updates.py,sha256=D-mYhVCnvuLtNyHODNy49EYrxzKw407iL4aSfGG21TI,57415
+iso3166_updates-1.8.2.dist-info/LICENSE,sha256=JEQFVNgso661PkV6sBQy1JQ0KahoDmBlmjcQMWNMQLI,1059
+iso3166_updates-1.8.2.dist-info/METADATA,sha256=y41wOr46YgaCdLTg5nMXUDE6YSUIQYVbcggK0mtJl4Q,33249
+iso3166_updates-1.8.2.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+iso3166_updates-1.8.2.dist-info/RECORD,,
