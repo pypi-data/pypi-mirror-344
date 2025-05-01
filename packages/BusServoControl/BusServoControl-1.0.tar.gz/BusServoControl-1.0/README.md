@@ -1,0 +1,533 @@
+# 1、协议讲解
+
+|  协议头   |       舵机ID        | 数据长度 |  指令值  | 检验值 |
+| :-------: | :-----------------: | :------: | :------: | :----: |
+| 0x55 0x55 | 1 byte（0x01~0xFD） |  1 byte  | servo_id | 1 byte |
+
+**帧头**：连续收到两个0x55,表示有数据包到达。
+**ID**:每个舵机都有一个ID号。ID号范围0~253, 转换为十六进制0x00~0xFD。
+**广播ID**:ID号254(0xFE)为广播ID,若控制器发出的ID号为254(0xFE)，所有的舵机均接收指令，但都不返回应答信息，(读取舵机ID号除外，具体说明参见下面指令介绍)以防总线冲突。
+**数据长度**：等于待发送的数据(包含本身一个字节)长度，即数据长度Length加3等于这一包指令的长度，从帧头到校验和。
+**指令**：控制舵机的各种指令，如位置、速度控制等。
+**参数**：除指令外需要补充的控制信息。
+**校验和**：校验和Checksum，计算方法如下：Checksum = ~ (ID + Length + Cmd+ Prm1 + ... PrmN)若括号内的计算和超出255,则取最低的一个字节，“~”表示取反。
+
+# 2、实例化 BusServoControl
+
+舵机是由串口控制的所以需要先创建一个串口实例化对象，然后在创建总线舵机控制实例化对象
+
+```Python
+def __init__(self, _serial):
+    self.__serial__ = _serial
+    self.header = "5555"
+```
+
+**例如：**
+
+```Python
+# 示例使用
+my_serial = MySerial(port="COM6", baud_rate=115200)
+my_servo = BusServoControl(my_serial)
+```
+
+# 3、控制舵机运动
+
+控制舵机运动需要指定舵机`ID`号、运动的**角度**、运动到目标角度的**时间**，具体函数如下：
+
+```Python
+def move_time_write(self, servo_id, angle, time)
+    """
+    设置目标角度和时间并立即执行
+    :param servo_id: 舵机ID (int 或 str)
+    :param angle: 角度 0~1000 (对应 0~240°)
+    :param time: 时间 0~30000ms
+    """
+    if isinstance(servo_id, int):
+    	# 如果是整数，尝试转换为整数字符串
+    	servo_id = hex(servo_id)[2:].zfill(2)
+    param = split_hex(angle) + split_hex(time)
+    self.__build_55_packet(servo_id, SERVO_MOVE_TIME1WRITE, param)
+```
+
+**例如：**
+
+```python
+# 控制1号舵机运动到1000的位置，时间为1000ms
+my_servo.move_time_write("01", 1000, 2000)
+
+# 或
+my_servo.move_time_write(1, 1000, 2000)
+```
+
+# 4、读取指定舵机的目标角度、运行时间
+
+读取当前舵机的目标信息需要指定舵机`ID`号，具体函数如下：
+
+```Python
+def move_time_read(self, servo_id):
+    """
+    读取当前设置的目标角度和时间
+    舵机会返回上条控制指令设置的目标角度和时间
+    :param servo_id: 舵机ID (int 或 str)
+    """
+    if isinstance(servo_id, int):
+    	# 如果是整数，尝试转换为整数字符串
+    	servo_id = hex(servo_id)[2:].zfill(2)
+    self.__build_55_packet(servo_id, SERVO_MOVE_TIME_READ, "")
+```
+
+**例如：**
+
+```python
+# 读取01号舵机的目标信息
+my_servo.move_time_read("01")
+```
+
+**需要注意的是：**该条指令返回的时上一条舵机控制指令设置的目标信息，并不是舵机当前的角度信息
+
+# 5、预设指定舵机目标角度和时间
+
+预设舵机运动的信息需要指定舵机`ID`号、运动的**角度**、运动到目标角度的**时间**，具体函数如下：
+
+```Python
+def move_time_wait_write(self, servo_id, angle, time):
+    """
+    预设目标角度和时间，配合 move_start 使用
+    :param servo_id: 舵机ID (int 或 str)
+    :param angle: 角度 0~1000 (对应 0~240°)
+    :param time: 时间 0~30000ms
+    """
+    if isinstance(servo_id, int):
+    	# 如果是整数，尝试转换为整数字符串
+    	servo_id = hex(servo_id)[2:].zfill(2)
+    self.__build_55_packet(servo_id, SERVO_MOVE_TIME_WAIT_WRITE, param)
+```
+
+**例如：**
+
+```python
+# 预设舵机1的目标信息，间隔2秒后在运行
+my_servo.move_time_wait_write("01", 1000, 2000)
+sleep(2)
+my_servo.move_start("01")
+```
+
+# 6、启动指定舵机等待中的动作
+
+预设舵机的动作信息后，使用此命令会立刻开始按照预设的信息运动，该函数需要指定ID， 具体函数如下：
+
+```Python
+def move_start(self, servo_id):
+    """
+    启动等待中的动作
+    :param servo_id: 舵机ID (int 或 str)
+    """
+    # 55 55 id 03 0B crc
+    if isinstance(servo_id, int):
+    	# 如果是整数，尝试转换为整数字符串
+    	servo_id = hex(servo_id)[2:].zfill(2)
+    self.__build_55_packet(servo_id, SERVO_MOVE_START, "")
+```
+
+**例如：**
+
+```python
+# 预设舵机1的目标信息，间隔2秒后在运行
+my_servo.move_time_wait_write("01", 1000, 2000)
+sleep(2)
+my_servo.move_start("01")
+```
+
+# 7、停止指定舵机当前动作
+
+停止舵机正在运行的动作，需要指定舵机`ID`号，具体函数如下：
+
+```Python
+def move_stop(self, servo_id):
+    """
+    停止当前动作
+    :param servo_id: 舵机ID (int 或 str)
+    """
+    # 55 55 id 03 0C crc
+    if isinstance(servo_id, int):
+    	# 如果是整数，尝试转换为整数字符串
+    	servo_id = hex(servo_id)[2:].zfill(2)
+    self.__build_55_packet(servo_id, SERVO_MOVE_STOP, "")
+```
+
+**例如：**
+
+```python
+# 控制舵机1运行，间隔2秒后停止
+my_servo.move_time_write("01", 0, 5000)
+sleep(2)
+my_servo.move_stop("01")
+```
+
+
+
+# 8、设置舵机的ID
+
+设置指定舵机的ID，具体函数如下：
+
+```Python
+def set_servo_id(self, servo_id, new_id):
+    """
+    修改舵机ID，支持掉电保存
+    :param servo_id: 目标舵机ID (int 或 str)
+    :param new_id: 新舵机ID (int 或 str)
+    """
+    if isinstance(servo_id, int):
+        # 如果是整数，尝试转换为整数字符串
+        servo_id = hex(servo_id)[2:].zfill(2)
+    if isinstance(new_id, int):
+        # 如果是整数，尝试转换为整数字符串
+        new_id = hex(new_id)[2:].zfill(2)
+    # 55 55 servo_id 04 0D new_id crc
+    self.__build_55_packet(servo_id, SERVO_ID_WRITE, new_id)
+```
+
+**例如：**
+
+```python
+# 设置舵机1的ID为2
+my_servo.set_servo_id(1, 2)
+```
+
+
+
+# 9、读取当前连接舵机ID
+
+读取未知舵机的ID，具体函数如下：
+
+```Python
+def read_servo_id(self):
+    """
+    读取当前连接舵机ID
+    """
+    # 55 55 id 03 0C crc
+    self.__build_55_packet(self.__broadcast_id, SERVO_ID_READ, "")
+```
+
+**例如：**
+
+```python
+# 调用函数
+my_servo.set_servo_id()
+# 返回值
+# 55 55 01 04 0e 01 eb
+```
+
+**注意：**在读取未知舵机ID的时候，保证开发板只连接一个舵机，否则会出现数据混乱的情况
+
+
+
+# 10、设置舵机角度偏差（offset）
+
+设置舵机偏差需要指定舵机ID、偏差值offset，具体函数如下：
+
+```python
+def angle_offset_adjust(self, servo_id, offset: int):
+    """
+    临时调整角度偏差（不掉电保存）
+    :param servo_id: 舵机ID (int 或 str)
+    :param offset: (int) -125 ~ 125，代表 -30° ~ 30°
+    """
+    if isinstance(servo_id, int):
+        # 如果是整数，尝试转换为整数字符串
+        servo_id = hex(servo_id)[2:].zfill(2)
+    # 55 55 servo_id 04 11 offset crc
+    offset = max(-125, min(125, offset))
+    offset = (hex(offset & 0xFF)[2:] if offset < 0 else hex(offset)[2:]).zfill(2)
+    self.__build_55_packet(servo_id, SERVO_ANGLE_OFFSET_ADJUST, offset)
+```
+
+**注意：**该方法设置的舵机偏差并不会掉电保存，是**临时性**的，如果需要保存需要调用函数`angle_offset_save()`进行偏差的保存
+
+**例如：**
+
+```Python
+# 设置舵机1的角度偏差
+my_servo.angle_offset_adjust(1, 0)
+my_servo.angle_offset_save(1)
+```
+
+
+
+# 11、舵机偏差的保存
+
+保存舵机的偏差值offset，具体函数如下：
+
+```python
+def angle_offset_save(self, servo_id):
+    """
+    保存当前角度偏移量设置（掉电保存）
+    """
+    if isinstance(servo_id, int):
+        # 如果是整数，尝试转换为整数字符串
+        servo_id = hex(servo_id)[2:].zfill(2)
+    self.__build_55_packet(servo_id, SERVO_ANGLE_OFFSET_WRITE, "")
+```
+
+该函数与`angle_offset_adjust()`配合使用
+
+**例如：**
+
+```Python
+# 设置舵机1的角度偏差
+my_servo.angle_offset_adjust(1, 0)
+my_servo.angle_offset_save(1)
+```
+
+
+
+# 12、读取舵机角度偏差
+
+读取舵机角度偏差，需要指定舵机ID，具体函数定义如下：
+
+```Python
+def read_angle_offset(self, servo_id):
+    """
+    读取当前角度偏移量
+    :param servo_id: 舵机ID (int 或 str)
+    """
+    if isinstance(servo_id, int):
+        # 如果是整数，尝试转换为整数字符串
+        servo_id = hex(servo_id)[2:].zfill(2)
+    self.__build_55_packet(servo_id, SERVO_ANGLE_OFFSET_READ, "")
+```
+
+**例如：**
+
+```Python
+# 读取舵机1的角度偏差
+my_servo.read_angle_offset(1)
+```
+
+**返回值：**
+
+```bash
+# 默认偏差为0 舵机返回0x00
+55 55 01 04 13 00 e7
+# 设置舵机偏差为100 舵机返回0x64
+55 55 01 04 13 64 83
+# 设置舵机偏差为-100 舵机返回0x9c
+55 55 01 04 13 9c 4b
+```
+
+
+
+# 13、舵机角度限制
+
+舵机角度限制需要指定舵机ID、最大角度、最小角度，具体函数如下：
+
+```Python
+def set_angle_limit(self, servo_id, min_angle: int, max_angle: int):
+    """
+    设置舵机转动角度范围（支持掉电保存）
+    :param servo_id: 舵机ID (类型: int 或 str)
+    :param min_angle: 最小角度(范围: 0~1000)
+    :param max_angle: 最大角度(范围: 0~1000)
+    """
+    if min_angle > max_angle:
+        print("最小角度不能大于最大角度")
+        return
+    if isinstance(servo_id, int):
+        # 如果是整数，尝试转换为整数字符串
+        servo_id = hex(servo_id)[2:].zfill(2)
+    param = split_hex(min_angle) + split_hex(max_angle)
+    self.__build_55_packet(servo_id, SERVO_ANGLE_LIMIT_WRITE, param)
+```
+
+**注意：**设置立即生效，且支持掉电保存，设置完成后，如果控制舵机运动的角度不在设置的范围内，会被限制在这个范围内，即超过最大值为最大值，低于最小值为最小值。
+
+**例如：**
+
+```Python 
+# 设置舵机1的角度范围为100~500
+my_servo.set_angle_limit(1, 100, 500)
+```
+
+
+
+# 14、读取舵机角度限制
+
+读取舵机角度限制需要指定舵机ID，具体函数如下：
+
+```Python
+def read_angle_limit(self, servo_id):
+    """读取当前角度限制"""
+    if isinstance(servo_id, int):
+        # 如果是整数，尝试转换为整数字符串
+        servo_id = hex(servo_id)[2:].zfill(2)
+    self.__build_55_packet(servo_id, SERVO_ANGLE_LIMIT_READ, "")
+```
+
+**例如：**
+
+```Python
+my_servo.read_angle_limit(1)
+```
+
+**返回数据：**
+
+```Python
+# 默认返回，默认范围为0~1000
+# 55 55 01 07 15 00 00 e8 03 f7
+# 设置舵机1的角度范围为100~500
+# 55 55 01 07 15 64 00 f4 01 89
+```
+
+
+
+# 15、设置舵机限制电压
+
+设置舵机限制电压需要指定舵机ID、最大电压、最小电压，具体函数如下：
+
+```Python
+def set_voltage_limit(self, servo_id, min_volt, max_volt):
+    """
+    设置输入电压限制（单位: mV，4500~14000）
+    :param servo_id: 舵机ID (类型: int 或 str)
+    :param min_volt: 最小电压 (范围: 4500~14000)
+    :param max_volt: 最大电压 (范围: 4500~14000)
+    """
+    if min_volt >= max_volt:
+        print("最小角度不能大于等于最大角度")
+        return
+    if isinstance(servo_id, int):
+        # 如果是整数，尝试转换为整数字符串
+        servo_id = hex(servo_id)[2:].zfill(2)
+    param = split_hex(min_volt) + split_hex(max_volt)
+    self.__build_55_packet(servo_id, SERVO_VIN_LIMIT_WRITE, param)
+```
+
+**注意：**设置立即生效，且支持掉电保存，设置完成后，如果控制舵机运动的角度不在设置的范围内，会被限制在这个范围内，即超过最大值为最大值，低于最小值为最小值。
+
+**例如：**
+
+```Python
+# 设置舵机电压为4.5V~5V
+my_servo.set_voltage_limit(1, 4500, 7000)
+```
+
+
+
+# 16、读取舵机电压限制范围
+
+读取舵机电压限制范围需要指定舵机ID，具体函数如下：
+
+```Python
+def read_voltage_limit(self, servo_id):
+    """
+    读取电压限制值
+    :param servo_id: 舵机ID (类型: int 或 str)
+    """
+    if isinstance(servo_id, int):
+        # 如果是整数，尝试转换为整数字符串
+        servo_id = hex(servo_id)[2:].zfill(2)
+    self.__build_55_packet(servo_id, SERVO_VIN_LIMIT_READ, "")
+```
+
+**例如：**
+
+```Python
+my_servo.read_voltage_limit(1)
+```
+
+**返回数据：**
+
+```Python
+# 默认舵机返回4500(1194)~14000(36b0)
+# 55 55 01 07 17 94 11 b0 36 55
+# 设置舵机电压为4.5V~7V
+# 55 55 01 07 17 94 11 58 1b c8
+```
+
+
+
+# 17、设置舵机最大温度
+
+设置舵机最大温度需要指定舵机ID、最大温度限制值，具体函数如下：
+
+```Python
+def set_max_temperature(self, servo_id, temp):
+    """
+    设置舵机最高允许温度（50~100℃）
+    :param servo_id: 舵机ID (类型: int 或 str)
+    :param temp: 最高温度 (范围: 50~100)
+    """
+    if isinstance(servo_id, int):
+        # 如果是整数，尝试转换为整数字符串
+        servo_id = hex(servo_id)[2:].zfill(2)
+    param = hex(temp)[2:].zfill(2)
+    self.__build_55_packet(servo_id, SERVO_TEMP_MAX_LIMIT_WRITE, param)
+```
+
+**例如：**
+
+```Python
+# 设置舵机1最高温度为80℃
+my_servo.set_max_temperature(1, 50)
+```
+
+
+
+# 18、读取当前最高温度限制
+
+```Python
+def read_max_temperature(self, servo_id):
+    """
+    读取当前最高温度限制
+    :param servo_id: 舵机ID (类型: int 或 str)
+    """
+    if isinstance(servo_id, int):
+        # 如果是整数，尝试转换为整数字符串
+        servo_id = hex(servo_id)[2:].zfill(2)
+    self.__build_55_packet(servo_id, SERVO_TEMP_MAX_LIMIT_READ, "")
+```
+
+
+
+# 19、读取当前舵机内部温度
+
+```Python
+ def read_current_temperature(self, servo_id):
+     """
+     读取当前舵机内部温度
+     :param servo_id: 舵机ID (类型: int 或 str)
+     """
+     if isinstance(servo_id, int):
+         # 如果是整数，尝试转换为整数字符串
+         servo_id = hex(servo_id)[2:].zfill(2)
+     self.__build_55_packet(servo_id, SERVO_TEMP_READ, "")
+```
+
+# 20、读取当前输入电压
+
+```Python
+def read_current_voltage(self, servo_id):
+    """
+    读取当前输入电压
+    :param servo_id: 舵机ID (类型: int 或 str)
+    """
+    if isinstance(servo_id, int):
+        # 如果是整数，尝试转换为整数字符串
+        servo_id = hex(servo_id)[2:].zfill(2)
+    self.__build_55_packet(servo_id, SERVO_VIN_READ, "")
+```
+
+# 21、读取当前角度位置
+
+```Python
+def read_current_position(self, servo_id):
+    """
+    读取当前角度位置
+    :param servo_id: 舵机ID (类型: int 或 str)
+    """
+    if isinstance(servo_id, int):
+        # 如果是整数，尝试转换为整数字符串
+        servo_id = hex(servo_id)[2:].zfill(2)
+    self.__build_55_packet(servo_id, SERVO_POS_READ, "")
+```
+
