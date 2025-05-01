@@ -1,0 +1,15 @@
+igwn_robot_auth/__init__.py,sha256=nD8wewQ0tve8cQD9pZdvrQpPA2gsT6OGfZYNBP8ZRh8,583
+igwn_robot_auth/__main__.py,sha256=v7yQhtClEjqE1SEYG8d9jTrTq-P8u7fIoGTzBeQCJaM,279
+igwn_robot_auth/_version.py,sha256=iB5DfB5V6YB5Wo4JmvS-txT42QtmGaWcWp3udRT7zCI,511
+igwn_robot_auth/htcondor.py,sha256=8CmFb6WG0lGb2GvVcauRy8N7j4Wb9KvQ-Dc9Dqgst_g,3188
+igwn_robot_auth/tests/__init__.py,sha256=N7PrOX5wE6AUo3QFbY_bCcTVj6dfOH41qj7ya-NPPCo,164
+igwn_robot_auth/tests/test_htcondor.py,sha256=5StbJ55GJIlwpTiLqR9eNbBHobV3d4SokrqwJidPscA,1482
+igwn_robot_auth/tools/__init__.py,sha256=ASKkksWRU4vkMy2FNYLw43oDnJwZButHjI2vblUAOWE,171
+igwn_robot_auth/tools/core.py,sha256=-5NoNuyLchkpxtCOVXoiwpZ3dFpHpCK5glHtZycvSio,2613
+igwn_robot_auth/tools/get.py,sha256=cLvu2XG1WaN7T-kPd8TXVKCGgdzsIzeS0ZmXJv8yEeE,10834
+igwn_robot_auth-0.2.0.dist-info/licenses/LICENSE,sha256=Unyy7xTmHpbs_EMSU-yr62udyocqZwwfbxmhNY8a8lk,1075
+igwn_robot_auth-0.2.0.dist-info/METADATA,sha256=jdut0Wa51jJj5MN38NFpMAmMqTOSiSVP_IdF-Fsf65A,2183
+igwn_robot_auth-0.2.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+igwn_robot_auth-0.2.0.dist-info/entry_points.txt,sha256=28IFBAP-xU9L7972KHWLLahaJPXDQbkUp0Pd4zOzWug,66
+igwn_robot_auth-0.2.0.dist-info/top_level.txt,sha256=234HO3bZt2Eyad_xLAwPr2aOb1HaK_HKM0BCDeZ6e0I,16
+igwn_robot_auth-0.2.0.dist-info/RECORD,,
