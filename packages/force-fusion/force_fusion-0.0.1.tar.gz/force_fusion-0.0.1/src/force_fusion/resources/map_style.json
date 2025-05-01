@@ -1,0 +1,203 @@
+{
+  "version": 8,
+  "name": "Force-Fusion Map Style",
+  "metadata": {
+    "mapbox:autocomposite": true,
+    "mapbox:type": "template"
+  },
+  "center": [0, 0],
+  "zoom": 1,
+  "bearing": 0,
+  "pitch": 0,
+  "sources": {
+    "mapbox": {
+      "url": "mapbox://mapbox.mapbox-streets-v8",
+      "type": "vector"
+    },
+    "mapbox-terrain": {
+      "url": "mapbox://mapbox.mapbox-terrain-v2",
+      "type": "vector"
+    }
+  },
+  "sprite": "mapbox://sprites/mapbox/dark-v10",
+  "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#111111"
+      }
+    },
+    {
+      "id": "landuse",
+      "type": "fill",
+      "source": "mapbox",
+      "source-layer": "landuse",
+      "paint": {
+        "fill-color": {
+          "stops": [
+            [0, "#1c1c1c"],
+            [13, "#1e1e1e"],
+            [16, "#222222"]
+          ]
+        }
+      }
+    },
+    {
+      "id": "water",
+      "type": "fill",
+      "source": "mapbox",
+      "source-layer": "water",
+      "paint": {
+        "fill-color": "#0c0c33"
+      }
+    },
+    {
+      "id": "waterway",
+      "type": "line",
+      "source": "mapbox",
+      "source-layer": "waterway",
+      "paint": {
+        "line-color": "#0c0c33",
+        "line-width": {
+          "base": 1.4,
+          "stops": [
+            [8, 0.5],
+            [20, 15]
+          ]
+        }
+      }
+    },
+    {
+      "id": "hillshade",
+      "type": "fill",
+      "source": "mapbox-terrain",
+      "source-layer": "hillshade",
+      "paint": {
+        "fill-color": "#111111",
+        "fill-opacity": {
+          "stops": [
+            [14, 0.15],
+            [18, 0.05]
+          ]
+        }
+      }
+    },
+    {
+      "id": "road",
+      "type": "line",
+      "source": "mapbox",
+      "source-layer": "road",
+      "filter": ["!in", "type", "service", "track"],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#333333",
+        "line-width": {
+          "base": 1.5,
+          "stops": [
+            [8, 0.5],
+            [13, 2],
+            [18, 20]
+          ]
+        }
+      }
+    },
+    {
+      "id": "highway",
+      "type": "line",
+      "source": "mapbox",
+      "source-layer": "road",
+      "filter": ["in", "class", "motorway", "trunk", "primary"],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#444444",
+        "line-width": {
+          "base": 1.5,
+          "stops": [
+            [8, 1],
+            [13, 4],
+            [18, 30]
+          ]
+        }
+      }
+    },
+    {
+      "id": "building",
+      "type": "fill-extrusion",
+      "source": "mapbox",
+      "source-layer": "building",
+      "minzoom": 14,
+      "paint": {
+        "fill-extrusion-color": "#222222",
+        "fill-extrusion-height": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          14, 0,
+          16, ["get", "height", ["coalesce", ["get", "building:levels"], 1]]
+        ],
+        "fill-extrusion-base": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          14, 0,
+          16, ["get", "min_height", 0]
+        ],
+        "fill-extrusion-opacity": 0.8
+      }
+    },
+    {
+      "id": "place-label-city",
+      "type": "symbol",
+      "source": "mapbox",
+      "source-layer": "place_label",
+      "filter": ["==", "type", "city"],
+      "layout": {
+        "text-field": ["get", "name_en"],
+        "text-font": ["Open Sans Semibold"],
+        "text-max-width": 10,
+        "text-size": {
+          "stops": [
+            [8, 14],
+            [15, 20]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "#999999",
+        "text-halo-color": "#111111",
+        "text-halo-width": 1.2
+      }
+    },
+    {
+      "id": "road-label",
+      "type": "symbol",
+      "source": "mapbox",
+      "source-layer": "road_label",
+      "layout": {
+        "text-field": ["get", "name_en"],
+        "text-font": ["Open Sans Regular"],
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [13, 10],
+            [18, 16]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#999999",
+        "text-halo-color": "#111111",
+        "text-halo-width": 1
+      }
+    }
+  ]
+} 
