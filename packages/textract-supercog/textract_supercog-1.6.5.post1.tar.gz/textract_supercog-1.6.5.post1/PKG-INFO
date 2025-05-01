@@ -1,0 +1,81 @@
+Metadata-Version: 2.4
+Name: textract-supercog
+Version: 1.6.5.post1
+Summary: extract text from any document. no muss. no fuss.
+Home-page: https://github.com/supercog-ai/textract
+Download-URL: https://github.com/supercog-ai/textract/archives/master
+Author: SuperCog AI (fork), Original author: Dean Malmgren
+Author-email: your.email@example.com
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: argcomplete~=3.5
+Requires-Dist: beautifulsoup4~=4.8
+Requires-Dist: chardet~=5.2
+Requires-Dist: docx2txt~=0.8
+Requires-Dist: extract-msg<=0.29.0
+Requires-Dist: pdfminer.six==20191110
+Requires-Dist: python-pptx~=1.0
+Requires-Dist: six~=1.17
+Requires-Dist: SpeechRecognition~=3.11
+Requires-Dist: xlrd~=2.0
+Requires-Dist: openpyxl~=3.1
+Provides-Extra: pocketsphinx
+Requires-Dist: pocketsphinx==0.1.15; extra == "pocketsphinx"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# textract-supercog
+
+Extract text from any document. No muss. No fuss.
+
+This is a fork of the [original textract](https://github.com/deanmalmgren/textract) maintained by Supercog AI to ensure continued compatibility and support.
+
+[Full documentation](http://textract.readthedocs.org)
+
+## Credits
+
+Originally written by [@deanmalmgren](https://github.com/deanmalmgren). Previously maintained by the good people at [@jazzband](https://github.com/jazzband).
+
+[![Jazz Band](https://jazzband.co/static/img/badge.svg)](https://jazzband.co/)
+[![Build Status](https://travis-ci.org/deanmalmgren/textract.svg?branch=master)](https://travis-ci.org/deanmalmgren/textract)
+[![Version](https://img.shields.io/pypi/v/textract.svg)](https://warehouse.python.org/project/textract/)
+[![Downloads](https://img.shields.io/pypi/dm/textract.svg)](https://warehouse.python.org/project/textract/)
+[![Test Coverage](https://coveralls.io/repos/github/deanmalmgren/textract/badge.svg?branch=master)](https://coveralls.io/github/deanmalmgren/textract?branch=master)
+[![Documentation Status](https://readthedocs.org/projects/textract/badge/?version=latest)](https://readthedocs.org/projects/textract/?badge=latest)
+[![Updates](https://pyup.io/repos/github/deanmalmgren/textract/shield.svg)](https://pyup.io/repos/github/deanmalmgren/textract/)
+[![Stars](https://img.shields.io/github/stars/deanmalmgren/textract.svg)](https://github.com/deanmalmgren/textract/stargazers)
+[![Forks](https://img.shields.io/github/forks/deanmalmgren/textract.svg)](https://github.com/deanmalmgren/textract/network)
+
+## Why this fork?
+
+This fork was created to:
+1. Fix compatibility issues with recent Python versions
+2. Update dependencies to maintain security and performance
+3. Enable usage in modern Python projects that require PyPI-compatible dependencies
+4. Provide ongoing maintenance for a critical text extraction library
+
+## Installation
+
+```bash
+pip install textract-supercog
+```
