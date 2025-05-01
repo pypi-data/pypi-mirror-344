@@ -1,0 +1,2 @@
+[console_scripts]
+reed = reed.__main__:main

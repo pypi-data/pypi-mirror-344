@@ -1,0 +1,14 @@
+LICENSE
+pyproject.toml
+reed/__init__.py
+reed/__main__.py
+reed/content.py
+reed/web.py
+reeder.egg-info/PKG-INFO
+reeder.egg-info/SOURCES.txt
+reeder.egg-info/dependency_links.txt
+reeder.egg-info/entry_points.txt
+reeder.egg-info/requires.txt
+reeder.egg-info/top_level.txt
+tests/test_content.py
+tests/test_web.py
