@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: winiscraper
+Version: 2.0
+Summary: Un scraper rapide basé sur httpx et selectolax
+Author: soldat205
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx
+Requires-Dist: selectolax
+
+# WiniScraper
+
+**WiniScraper** est un module de scraping rapide et ultra performant 
+
+## Installation
+
+```bash
+pip install winiscraper
+```
+
+## Exemple d'utilisation
+
+```python
+from winiscraper import WiniScraper
+
+scraper = WiniScraper("https://example.com")
+scraper.fetch()
+
+titre = scraper.select_one("title")
+paragraphes = scraper.select("p")
+
+print("Titre :", titre)
+print("Paragraphes :", paragraphes)
+```
+
+## Fonctionnalités
+- User-Agent intégré
+- Rapide et léger
+- Supporte les sélecteurs CSS

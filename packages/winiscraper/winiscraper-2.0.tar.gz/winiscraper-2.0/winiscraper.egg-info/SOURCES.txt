@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+winiscraper/__init__.py
+winiscraper.egg-info/PKG-INFO
+winiscraper.egg-info/SOURCES.txt
+winiscraper.egg-info/dependency_links.txt
+winiscraper.egg-info/requires.txt
+winiscraper.egg-info/top_level.txt
