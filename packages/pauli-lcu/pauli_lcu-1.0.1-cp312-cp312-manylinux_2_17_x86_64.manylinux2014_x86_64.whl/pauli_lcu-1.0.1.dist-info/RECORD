@@ -1,0 +1,9 @@
+pauli_lcu_module.cpython-312-x86_64-linux-gnu.so,sha256=wQ1w8RlhVw5CFFAz9TBWMA7huF0251SVKI_MSFVcJHo,66208
+pauli_lcu/tools.py,sha256=yOp7u8gZ2gMsODNCn3zB0z7LAmcpuvL0PSAIOuvy5RE,2640
+pauli_lcu/decomposition.py,sha256=nskrxDy-Hp-yZ2zUfx5pQngIcvQb5VL9vV22Ucaq-Ps,4340
+pauli_lcu/__init__.py,sha256=IHuRTABi9tgV0-iB9K7oJC9eRToLSLs1-pqthr28cmA,1641
+pauli_lcu-1.0.1.dist-info/top_level.txt,sha256=-JEbXjNW94XT-Asl9mPbrgX7DXtXO9ijvT12ZtncX10,21
+pauli_lcu-1.0.1.dist-info/METADATA,sha256=la7m7kVGpU3IORyUwahD4uP9ohlvoVvAZT7iU2-BGjU,4349
+pauli_lcu-1.0.1.dist-info/RECORD,,
+pauli_lcu-1.0.1.dist-info/WHEEL,sha256=escAp0nQBKBkW_DNq5usPAJtWAtnzdSwKaeRcFbdm08,151
+pauli_lcu-1.0.1.dist-info/licenses/LICENSE,sha256=boGBzsexxoNF7QfKbO-gIujAL8aVBh1D5QVJd1AZ3yI,1989
