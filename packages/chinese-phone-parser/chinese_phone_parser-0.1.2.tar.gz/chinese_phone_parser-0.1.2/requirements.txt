@@ -1,0 +1,14 @@
+# Runtime dependencies
+pandas>=1.0.0
+plotly>=4.0.0
+numpy>=1.18.0
+regex>=2021.4.4
+folium>=0.12.0
+geopandas>=0.9.0
+
+# Development dependencies
+pytest>=6.0.0
+pytest-cov>=2.0.0
+black>=21.0.0
+isort>=5.0.0
+flake8>=3.9.0
