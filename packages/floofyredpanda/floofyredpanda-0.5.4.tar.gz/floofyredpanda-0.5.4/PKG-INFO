@@ -1,0 +1,156 @@
+Metadata-Version: 2.4
+Name: floofyredpanda
+Version: 0.5.4
+Summary: load & train .pt models on any inputs/files, emit any outputs. As well as Reinforcement Learning
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: torch>=1.7.0
+Requires-Dist: soundfile>=0.10.0
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# floofyredpanda
+
+a joyful little wrapper that lets you feed a PyTorch `.pt` model any kind of input, from numbers and text files to wavs and raw bytes—and get back exactly the output you asked for and none of the tantrums... hopefully
+
+# update 0.5.4
+- fully updated rl and it should still work for old scripts
+- added frp.PrioritizedReplayBuffer
+- added working RL demo
+- added issue reporting (github)
+
+# Disclaimer 
+### The package will be updated alot until 1.0.0 
+- this will be to fix errors, or add new things
+- after 1.0.0 I will still continue to release updates just not on a daily basis maybe more weekly
+- if you encounter any issues please say so [here](https://github.com/shadowdragonns/floofyredpanda/issues)
+
+## Features
+
+- infinite positional inputs: numbers, lists, file-paths, bytes, you name it  
+
+- output converters for `int`, `float`, `str`, `binary` (and any custom type you fancy)  
+- wav file support out of the box (requires `soundfile`)  
+- easy to extend: register your own converters for images, midi, pickles
+## Installation
+# Linux
+```bash
+ pip install floofyredpanda
+```
+# Windows
+###  should be the same
+```cmd
+pip install floofyredpanda
+```
+## Uses
+# Simple numeric inference
+```python
+import floofyredpanda as frp
+
+# model expects a couple of floats, returns a float
+result = frp.infer(0.1, 0.2, 'models/simple.pt')
+print("prediction:", result)   # e.g. [0.305]
+```
+# Lists → list output
+```python
+from pathlib import Path
+import floofyredpanda as frp
+
+# vector inputs, default output as Python list
+vector1 = [1.0, 2.0, 3.0]
+vector2 = [0.5, 0.4, 0.1]
+model_path = Path('models/vector_model.pt')
+
+out = frp.infer(vector1, vector2, str(model_path))
+print("vector output:", out)    # e.g. [[0.1, 0.2, 0.3], [0.4, 0.5, 0.6]]
+
+```
+# File input & custom converter
+```python
+import floofyredpanda as frp
+import soundfile as sf
+
+# register a WAV writer so we can get a .wav back
+def wav_writer(tensor):
+    data = tensor.cpu().numpy()
+    sf.write('out.wav', data, samplerate=22050)
+    return 'out.wav'
+
+frp.register_output_converter('wav', wav_writer)
+
+# feed in a .wav, ask for .wav out
+output_file = frp.infer('input.wav', 'models/audio.pt', output_type='wav')
+print("saved processed audio at", output_file)
+
+```
+)
+
+
+# Training a tiny net
+```python
+import torch
+import floofyredpanda as frp
+
+# toy data: learn y = 2x
+inputs  = [1.0, 2.0, 3.0, 4.0]
+outputs = [2.0, 4.0, 6.0, 8.0]
+
+model = frp.train(
+    raw_inputs  = inputs,
+    raw_outputs = outputs,
+    layers      = [8, 4],          # two hidden layers
+    activation  = 'relu',
+    lr          = 0.01,
+    epochs      = 50,
+    batch_size  = 2,
+)
+
+# save & test
+torch.save(model, 'models/x2net.pt')
+print("saved to models/x2net.pt")
+
+# run inference on unseen x
+print("predict 5→", frp.infer(5, 'models/x2net.pt'))
+
+```
+# RL
+
+[RL Demo](https://github.com/shadowdragonns/floofyredpanda/blob/shadowdragonns-patch-1/rldemo.py) this is 0.5.4 for older (0.4.3 to 0.5.2) see [legacy Demo](https://github.com/shadowdragonns/floofyredpanda/blob/main/rldemo.py)
+
+
+
+# License
+
+MIT License
+
+Copyright (c) 2025 [shadow113323]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
