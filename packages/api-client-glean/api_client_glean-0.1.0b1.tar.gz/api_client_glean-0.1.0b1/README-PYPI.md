@@ -1,0 +1,804 @@
+# Glean Python API Client
+
+The Glean Python SDK provides convenient access to the Glean REST API from any Python 3.8+ application. It includes type hints for all request parameters and response fields, and supports both synchronous and asynchronous usage via [httpx](https://www.python-httpx.org/).
+<!-- No Summary [summary] -->
+
+<!-- Start Table of Contents [toc] -->
+## Table of Contents
+<!-- $toc-max-depth=2 -->
+* [Glean Python API Client](https://github.com/gleanwork/api-client-python/blob/master/#glean-python-api-client)
+  * [SDK Installation](https://github.com/gleanwork/api-client-python/blob/master/#sdk-installation)
+  * [IDE Support](https://github.com/gleanwork/api-client-python/blob/master/#ide-support)
+  * [SDK Example Usage](https://github.com/gleanwork/api-client-python/blob/master/#sdk-example-usage)
+  * [Authentication](https://github.com/gleanwork/api-client-python/blob/master/#authentication)
+  * [Available Resources and Operations](https://github.com/gleanwork/api-client-python/blob/master/#available-resources-and-operations)
+  * [Retries](https://github.com/gleanwork/api-client-python/blob/master/#retries)
+  * [Error Handling](https://github.com/gleanwork/api-client-python/blob/master/#error-handling)
+  * [Server Selection](https://github.com/gleanwork/api-client-python/blob/master/#server-selection)
+  * [Custom HTTP Client](https://github.com/gleanwork/api-client-python/blob/master/#custom-http-client)
+  * [Resource Management](https://github.com/gleanwork/api-client-python/blob/master/#resource-management)
+  * [Debugging](https://github.com/gleanwork/api-client-python/blob/master/#debugging)
+* [Development](https://github.com/gleanwork/api-client-python/blob/master/#development)
+  * [Maturity](https://github.com/gleanwork/api-client-python/blob/master/#maturity)
+  * [Contributions](https://github.com/gleanwork/api-client-python/blob/master/#contributions)
+
+<!-- End Table of Contents [toc] -->
+
+## SDK Installation
+
+> [!NOTE]
+> **Python version upgrade policy**
+>
+> Once a Python version reaches its [official end of life date](https://devguide.python.org/versions/), a 3-month grace period is provided for users to upgrade. Following this grace period, the minimum python version supported in the SDK will be updated.
+
+The SDK can be installed with either *pip* or *poetry* package managers.
+
+### PIP
+
+*PIP* is the default package installer for Python, enabling easy installation and management of packages from PyPI via the command line.
+
+```bash
+pip install api-client-glean
+```
+
+### Poetry
+
+*Poetry* is a modern tool that simplifies dependency management and package publishing by using a single `pyproject.toml` file to handle project metadata and dependencies.
+
+```bash
+poetry add api-client-glean
+```
+
+### Shell and script usage with `uv`
+
+You can use this SDK in a Python shell with [uv](https://docs.astral.sh/uv/) and the `uvx` command that comes with it like so:
+
+```shell
+uvx --from api-client-glean python
+```
+
+It's also possible to write a standalone Python script without needing to set up a whole project like so:
+
+```python
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#     "api-client-glean",
+# ]
+# ///
+
+from glean import Glean
+
+sdk = Glean(
+  # SDK arguments
+)
+
+# Rest of script here...
+```
+
+Once that is saved to a file, you can run it with `uv run script.py` where
+`script.py` can be replaced with the actual file name.
+<!-- No SDK Installation [installation] -->
+
+<!-- Start IDE Support [idesupport] -->
+## IDE Support
+
+### PyCharm
+
+Generally, the SDK will work well with most IDEs out of the box. However, when using PyCharm, you can enjoy much better integration with Pydantic by installing an additional plugin.
+
+- [PyCharm Pydantic Plugin](https://docs.pydantic.dev/latest/integrations/pycharm/)
+<!-- End IDE Support [idesupport] -->
+
+<!-- Start SDK Example Usage [usage] -->
+## SDK Example Usage
+
+### Example
+
+```python
+# Synchronous Example
+from glean import Glean, models
+import os
+
+
+with Glean(
+    bearer_auth=os.getenv("GLEAN_BEARER_AUTH", ""),
+) as g_client:
+
+    res = g_client.client.chat.start(messages=[
+        {
+            "fragments": [
+                models.ChatMessageFragment(
+                    text="What are the company holidays this year?",
+                ),
+            ],
+        },
+    ], timeout_millis=30000)
+
+    # Handle response
+    print(res)
+```
+
+</br>
+
+The same SDK client can also be used to make asychronous requests by importing asyncio.
+```python
+# Asynchronous Example
+import asyncio
+from glean import Glean, models
+import os
+
+async def main():
+
+    async with Glean(
+        bearer_auth=os.getenv("GLEAN_BEARER_AUTH", ""),
+    ) as g_client:
+
+        res = await g_client.client.chat.start_async(messages=[
+            {
+                "fragments": [
+                    models.ChatMessageFragment(
+                        text="What are the company holidays this year?",
+                    ),
+                ],
+            },
+        ], timeout_millis=30000)
+
+        # Handle response
+        print(res)
+
+asyncio.run(main())
+```
+<!-- End SDK Example Usage [usage] -->
+
+<!-- Start Authentication [security] -->
+## Authentication
+
+### Per-Client Security Schemes
+
+This SDK supports the following security scheme globally:
+
+| Name          | Type | Scheme      | Environment Variable |
+| ------------- | ---- | ----------- | -------------------- |
+| `bearer_auth` | http | HTTP Bearer | `GLEAN_BEARER_AUTH`  |
+
+To authenticate with the API the `bearer_auth` parameter must be set when initializing the SDK client instance. For example:
+```python
+from glean import Glean, models
+from glean.utils import parse_datetime
+import os
+
+
+with Glean(
+    bearer_auth=os.getenv("GLEAN_BEARER_AUTH", ""),
+) as g_client:
+
+    g_client.client.activity.report(events=[
+        {
+            "action": models.ActivityEventAction.HISTORICAL_VIEW,
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/",
+        },
+        {
+            "action": models.ActivityEventAction.SEARCH,
+            "params": {
+                "query": "query",
+            },
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/search?q=query",
+        },
+        {
+            "action": models.ActivityEventAction.VIEW,
+            "params": {
+                "duration": 20,
+                "referrer": "https://example.com/document",
+            },
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/",
+        },
+    ])
+
+    # Use the SDK ...
+
+```
+<!-- End Authentication [security] -->
+
+<!-- Start Available Resources and Operations [operations] -->
+## Available Resources and Operations
+
+<details open>
+<summary>Available methods</summary>
+
+### [agents](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/agents/README.md)
+
+* [runagent](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/agents/README.md#runagent) - Runs an Agent.
+* [listagents](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/agents/README.md#listagents) - Lists all agents.
+* [getagentinputs](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/agents/README.md#getagentinputs) - Gets the inputs to an agent.
+
+### [client](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/client/README.md)
+
+
+#### [client.activities](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/activities/README.md)
+
+* [report_activity](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/activities/README.md#report_activity) - Report client activity
+
+#### [client.activity](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientactivity/README.md)
+
+* [report](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientactivity/README.md#report) - Report document activity
+
+#### [client.announcements](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/announcements/README.md)
+
+* [create](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/announcements/README.md#create) - Create Announcement
+* [delete](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/announcements/README.md#delete) - Delete Announcement
+* [update](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/announcements/README.md#update) - Update Announcement
+
+#### [client.answers](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/answers/README.md)
+
+* [create](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/answers/README.md#create) - Create Answer
+* [delete](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/answers/README.md#delete) - Delete Answer
+* [edit](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/answers/README.md#edit) - Update Answer
+* [get](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/answers/README.md#get) - Read Answer
+* [list](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/answers/README.md#list) - List Answers
+
+#### [client.authentication](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientauthentication/README.md)
+
+* [create_token](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientauthentication/README.md#create_token) - Create authentication token
+
+#### [client.chat](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientchat/README.md)
+
+* [start](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientchat/README.md#start) - Chat
+* [delete_all](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientchat/README.md#delete_all) - Deletes all saved Chats owned by a user
+* [delete](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientchat/README.md#delete) - Deletes saved Chats
+* [get](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientchat/README.md#get) - Retrieves a Chat
+* [list](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientchat/README.md#list) - Retrieves all saved Chats
+* [get_application](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientchat/README.md#get_application) - Gets the metadata for a custom Chat application
+* [upload_files](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientchat/README.md#upload_files) - Upload files for Chat.
+* [get_files](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientchat/README.md#get_files) - Get files uploaded by a user for Chat.
+* [delete_files](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientchat/README.md#delete_files) - Delete files uploaded by a user for chat.
+
+#### [client.collections](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/collections/README.md)
+
+* [add_items](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/collections/README.md#add_items) - Add Collection item
+* [create](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/collections/README.md#create) - Create Collection
+* [delete](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/collections/README.md#delete) - Delete Collection
+* [delete_item](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/collections/README.md#delete_item) - Delete Collection item
+* [update](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/collections/README.md#update) - Update Collection
+* [edit_item](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/collections/README.md#edit_item) - Update Collection item
+* [get](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/collections/README.md#get) - Read Collection
+* [list](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/collections/README.md#list) - List Collections
+
+#### [client.documents](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientdocuments/README.md)
+
+* [get_permissions](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientdocuments/README.md#get_permissions) - Read document permissions
+* [get](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientdocuments/README.md#get) - Read documents
+* [get_by_facets](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientdocuments/README.md#get_by_facets) - Read documents by facets
+
+#### [client.entities](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/entities/README.md)
+
+* [list](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/entities/README.md#list) - List entities
+* [read_people](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/entities/README.md#read_people) - Read people
+
+#### [client.insights](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/insights/README.md)
+
+* [get](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/insights/README.md#get) - Read insights
+
+#### [client.messages](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/messages/README.md)
+
+* [get](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/messages/README.md#get) - Read messages
+
+#### [client.pins](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/pins/README.md)
+
+* [edit](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/pins/README.md#edit) - Update pin
+* [get](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/pins/README.md#get) - Read pin
+* [list](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/pins/README.md#list) - List pins
+* [create](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/pins/README.md#create) - Create pin
+* [remove](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/pins/README.md#remove) - Delete pin
+
+#### [client.search](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/search/README.md)
+
+* [admin](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/search/README.md#admin) - Search the index (admin)
+* [autocomplete](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/search/README.md#autocomplete) - Autocomplete
+* [get_feed](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/search/README.md#get_feed) - Feed of documents and events
+* [recommendations](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/search/README.md#recommendations) - Recommend documents
+* [execute](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/search/README.md#execute) - Search
+
+#### [client.shortcuts](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientshortcuts/README.md)
+
+* [create](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientshortcuts/README.md#create) - Create shortcut
+* [delete](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientshortcuts/README.md#delete) - Delete shortcut
+* [get](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientshortcuts/README.md#get) - Read shortcut
+* [list](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientshortcuts/README.md#list) - List shortcuts
+* [update](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientshortcuts/README.md#update) - Update shortcut
+* [upload](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientshortcuts/README.md#upload) - Upload shortcuts
+
+#### [client.summarize](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/summarize/README.md)
+
+* [generate](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/summarize/README.md#generate) - Summarize documents
+
+#### [client.verification](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientverification/README.md)
+
+* [add_reminder](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientverification/README.md#add_reminder) - Create verification
+* [list](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientverification/README.md#list) - List verifications
+* [verify](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/clientverification/README.md#verify) - Update verification
+
+
+### [indexing](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexing/README.md)
+
+
+#### [indexing.authentication](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingauthentication/README.md)
+
+* [rotate_token](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingauthentication/README.md#rotate_token) - Rotate token
+
+#### [indexing.datasources](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/datasources/README.md)
+
+* [add](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/datasources/README.md#add) - Add or update datasource
+* [get_config](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/datasources/README.md#get_config) - Get datasource config
+
+#### [indexing.documents](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingdocuments/README.md)
+
+* [add_or_update](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingdocuments/README.md#add_or_update) - Index document
+* [index](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingdocuments/README.md#index) - Index documents
+* [bulk_index](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingdocuments/README.md#bulk_index) - Bulk index documents
+* [process_all](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingdocuments/README.md#process_all) - Schedules the processing of uploaded documents
+* [delete](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingdocuments/README.md#delete) - Delete document
+
+#### [indexing.people](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/people/README.md)
+
+* [index](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/people/README.md#index) - Index employee
+* [bulk_index_employees](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/people/README.md#bulk_index_employees) - Bulk index employees
+* [~~bulk_index~~](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/people/README.md#bulk_index) - Bulk index employees :warning: **Deprecated**
+* [process_all_employees_and_teams](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/people/README.md#process_all_employees_and_teams) - Schedules the processing of uploaded employees and teams
+* [delete](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/people/README.md#delete) - Delete employee
+* [index_team](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/people/README.md#index_team) - Index team
+* [delete_team](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/people/README.md#delete_team) - Delete team
+* [bulk_index_teams](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/people/README.md#bulk_index_teams) - Bulk index teams
+
+#### [indexing.permissions](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingpermissions/README.md)
+
+* [update_permissions](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingpermissions/README.md#update_permissions) - Update document permissions
+* [index_user](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingpermissions/README.md#index_user) - Index user
+* [bulk_index_users](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingpermissions/README.md#bulk_index_users) - Bulk index users
+* [index_group](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingpermissions/README.md#index_group) - Index group
+* [bulk_index_groups](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingpermissions/README.md#bulk_index_groups) - Bulk index groups
+* [index_membership](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingpermissions/README.md#index_membership) - Index membership
+* [bulk_index_memberships](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingpermissions/README.md#bulk_index_memberships) - Bulk index memberships for a group
+* [process_memberships](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingpermissions/README.md#process_memberships) - Schedules the processing of group memberships
+* [delete_user](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingpermissions/README.md#delete_user) - Delete user
+* [delete_group](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingpermissions/README.md#delete_group) - Delete group
+* [delete_membership](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingpermissions/README.md#delete_membership) - Delete membership
+* [authorize_beta_users](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingpermissions/README.md#authorize_beta_users) - Beta users
+
+#### [indexing.shortcuts](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingshortcuts/README.md)
+
+* [bulk_index](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/indexingshortcuts/README.md#bulk_index) - Bulk index external shortcuts
+
+#### [indexing.troubleshooting](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/troubleshooting/README.md)
+
+* [get_datasource_status](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/troubleshooting/README.md#get_datasource_status) - Beta: Get datasource status
+
+* [post_document_debug](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/troubleshooting/README.md#post_document_debug) - Beta: Get document information
+
+* [post_documents_debug](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/troubleshooting/README.md#post_documents_debug) - Beta: Get information of a batch of documents
+
+* [debug_user](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/troubleshooting/README.md#debug_user) - Beta: Get user information
+
+* [check_access](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/troubleshooting/README.md#check_access) - Check document access
+* [~~get_status~~](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/troubleshooting/README.md#get_status) - Get document upload and indexing status :warning: **Deprecated**
+* [~~get_document_count~~](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/troubleshooting/README.md#get_document_count) - Get document count :warning: **Deprecated**
+* [~~get_user_count~~](https://github.com/gleanwork/api-client-python/blob/master/docs/sdks/troubleshooting/README.md#get_user_count) - Get user count :warning: **Deprecated**
+
+</details>
+<!-- End Available Resources and Operations [operations] -->
+
+<!-- Start Retries [retries] -->
+## Retries
+
+Some of the endpoints in this SDK support retries. If you use the SDK without any configuration, it will fall back to the default retry strategy provided by the API. However, the default retry strategy can be overridden on a per-operation basis, or across the entire SDK.
+
+To change the default retry strategy for a single API call, simply provide a `RetryConfig` object to the call:
+```python
+from glean import Glean, models
+from glean.utils import BackoffStrategy, RetryConfig, parse_datetime
+import os
+
+
+with Glean(
+    bearer_auth=os.getenv("GLEAN_BEARER_AUTH", ""),
+) as g_client:
+
+    g_client.client.activity.report(events=[
+        {
+            "action": models.ActivityEventAction.HISTORICAL_VIEW,
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/",
+        },
+        {
+            "action": models.ActivityEventAction.SEARCH,
+            "params": {
+                "query": "query",
+            },
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/search?q=query",
+        },
+        {
+            "action": models.ActivityEventAction.VIEW,
+            "params": {
+                "duration": 20,
+                "referrer": "https://example.com/document",
+            },
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/",
+        },
+    ],
+        RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
+
+    # Use the SDK ...
+
+```
+
+If you'd like to override the default retry strategy for all operations that support retries, you can use the `retry_config` optional parameter when initializing the SDK:
+```python
+from glean import Glean, models
+from glean.utils import BackoffStrategy, RetryConfig, parse_datetime
+import os
+
+
+with Glean(
+    retry_config=RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False),
+    bearer_auth=os.getenv("GLEAN_BEARER_AUTH", ""),
+) as g_client:
+
+    g_client.client.activity.report(events=[
+        {
+            "action": models.ActivityEventAction.HISTORICAL_VIEW,
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/",
+        },
+        {
+            "action": models.ActivityEventAction.SEARCH,
+            "params": {
+                "query": "query",
+            },
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/search?q=query",
+        },
+        {
+            "action": models.ActivityEventAction.VIEW,
+            "params": {
+                "duration": 20,
+                "referrer": "https://example.com/document",
+            },
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/",
+        },
+    ])
+
+    # Use the SDK ...
+
+```
+<!-- End Retries [retries] -->
+
+## Error Handling
+
+All operations return a response object or raise an exception:
+
+| Status Code | Description             | Error Type             | Content Type     |
+| ----------- | ----------------------- | ---------------------- | ---------------- |
+| 400         | Invalid Request         | errors.GleanError      | \*/\*            |
+| 401         | Not Authorized          | errors.GleanError      | \*/\*            |
+| 403         | Permission Denied       | errors.GleanDataError  | application/json |
+| 408         | Request Timeout         | errors.GleanError      | \*/\*            |
+| 422         | Invalid Query           | errors.GleanDataError  | application/json |
+| 429         | Too Many Requests       | errors.GleanError      | \*/\*            |
+| 4XX         | Other Client Errors     | errors.GleanError      | \*/\*            |
+| 5XX         | Internal Server Errors  | errors.GleanError      | \*/\*            |
+
+
+### Example
+
+```python
+from glean import Glean, errors, models
+import os
+
+
+with Glean(
+    bearer_auth=os.getenv("GLEAN_BEARER_AUTH", ""),
+) as g_client:
+    try:
+        res = g_client.client.search.execute(search_request=models.SearchRequest(
+            tracking_token="trackingToken",
+            page_size=10,
+            query="vacation policy",
+            request_options=models.SearchRequestOptions(
+                facet_filters=[
+                    models.FacetFilter(
+                        field_name="type",
+                        values=[
+                            models.FacetFilterValue(
+                                value="article",
+                                relation_type=models.RelationType.EQUALS,
+                            ),
+                            models.FacetFilterValue(
+                                value="document",
+                                relation_type=models.RelationType.EQUALS,
+                            ),
+                        ],
+                    ),
+                    models.FacetFilter(
+                        field_name="department",
+                        values=[
+                            models.FacetFilterValue(
+                                value="engineering",
+                                relation_type=models.RelationType.EQUALS,
+                            ),
+                        ],
+                    ),
+                ],
+                facet_bucket_size=246815,
+            ),
+        ))
+        
+        # Handle response
+        print(res)
+    except errors.GleanError as e:
+        print(e.message)
+        print(e.status_code)
+        print(e.raw_response)
+        print(e.body)
+     # If the server returned structured data
+    except errors.GleanDataError as e:
+        print(e.data)
+        print(e.data.errorMessage)
+```
+
+By default, an API error will raise a errors.GleanError exception, which has the following properties:
+
+| Property             | Type             | Description           |
+|----------------------|------------------|-----------------------|
+| `error.status_code`  | *int*            | The HTTP status code  |
+| `error.message`      | *str*            | The error message     |
+| `error.raw_response` | *httpx.Response* | The raw HTTP response |
+| `error.body`         | *str*            | The response content  |
+
+<!-- No Error Handling [errors] -->
+
+<!-- Start Server Selection [server] -->
+## Server Selection
+
+### Server Variables
+
+The default server `https://{domain}-be.glean.com` contains variables and is set to `https://domain-be.glean.com` by default. To override default values, the following parameters are available when initializing the SDK client instance:
+
+| Variable | Parameter     | Default    | Description                                                              |
+| -------- | ------------- | ---------- | ------------------------------------------------------------------------ |
+| `domain` | `domain: str` | `"domain"` | Email domain (without extension) that determines the deployment backend. |
+
+#### Example
+
+```python
+from glean import Glean, models
+from glean.utils import parse_datetime
+import os
+
+
+with Glean(
+    domain="scared-pearl.biz"
+    bearer_auth=os.getenv("GLEAN_BEARER_AUTH", ""),
+) as g_client:
+
+    g_client.client.activity.report(events=[
+        {
+            "action": models.ActivityEventAction.HISTORICAL_VIEW,
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/",
+        },
+        {
+            "action": models.ActivityEventAction.SEARCH,
+            "params": {
+                "query": "query",
+            },
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/search?q=query",
+        },
+        {
+            "action": models.ActivityEventAction.VIEW,
+            "params": {
+                "duration": 20,
+                "referrer": "https://example.com/document",
+            },
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/",
+        },
+    ])
+
+    # Use the SDK ...
+
+```
+
+### Override Server URL Per-Client
+
+The default server can be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
+```python
+from glean import Glean, models
+from glean.utils import parse_datetime
+import os
+
+
+with Glean(
+    server_url="https://domain-be.glean.com",
+    bearer_auth=os.getenv("GLEAN_BEARER_AUTH", ""),
+) as g_client:
+
+    g_client.client.activity.report(events=[
+        {
+            "action": models.ActivityEventAction.HISTORICAL_VIEW,
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/",
+        },
+        {
+            "action": models.ActivityEventAction.SEARCH,
+            "params": {
+                "query": "query",
+            },
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/search?q=query",
+        },
+        {
+            "action": models.ActivityEventAction.VIEW,
+            "params": {
+                "duration": 20,
+                "referrer": "https://example.com/document",
+            },
+            "timestamp": parse_datetime("2000-01-23T04:56:07.000Z"),
+            "url": "https://example.com/",
+        },
+    ])
+
+    # Use the SDK ...
+
+```
+<!-- End Server Selection [server] -->
+
+<!-- Start Custom HTTP Client [http-client] -->
+## Custom HTTP Client
+
+The Python SDK makes API calls using the [httpx](https://www.python-httpx.org/) HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with your own HTTP client instance.
+Depending on whether you are using the sync or async version of the SDK, you can pass an instance of `HttpClient` or `AsyncHttpClient` respectively, which are Protocol's ensuring that the client has the necessary methods to make API calls.
+This allows you to wrap the client with your own custom logic, such as adding custom headers, logging, or error handling, or you can just pass an instance of `httpx.Client` or `httpx.AsyncClient` directly.
+
+For example, you could specify a header for every request that this sdk makes as follows:
+```python
+from glean import Glean
+import httpx
+
+http_client = httpx.Client(headers={"x-custom-header": "someValue"})
+s = Glean(client=http_client)
+```
+
+or you could wrap the client with your own custom logic:
+```python
+from glean import Glean
+from glean.httpclient import AsyncHttpClient
+import httpx
+
+class CustomClient(AsyncHttpClient):
+    client: AsyncHttpClient
+
+    def __init__(self, client: AsyncHttpClient):
+        self.client = client
+
+    async def send(
+        self,
+        request: httpx.Request,
+        *,
+        stream: bool = False,
+        auth: Union[
+            httpx._types.AuthTypes, httpx._client.UseClientDefault, None
+        ] = httpx.USE_CLIENT_DEFAULT,
+        follow_redirects: Union[
+            bool, httpx._client.UseClientDefault
+        ] = httpx.USE_CLIENT_DEFAULT,
+    ) -> httpx.Response:
+        request.headers["Client-Level-Header"] = "added by client"
+
+        return await self.client.send(
+            request, stream=stream, auth=auth, follow_redirects=follow_redirects
+        )
+
+    def build_request(
+        self,
+        method: str,
+        url: httpx._types.URLTypes,
+        *,
+        content: Optional[httpx._types.RequestContent] = None,
+        data: Optional[httpx._types.RequestData] = None,
+        files: Optional[httpx._types.RequestFiles] = None,
+        json: Optional[Any] = None,
+        params: Optional[httpx._types.QueryParamTypes] = None,
+        headers: Optional[httpx._types.HeaderTypes] = None,
+        cookies: Optional[httpx._types.CookieTypes] = None,
+        timeout: Union[
+            httpx._types.TimeoutTypes, httpx._client.UseClientDefault
+        ] = httpx.USE_CLIENT_DEFAULT,
+        extensions: Optional[httpx._types.RequestExtensions] = None,
+    ) -> httpx.Request:
+        return self.client.build_request(
+            method,
+            url,
+            content=content,
+            data=data,
+            files=files,
+            json=json,
+            params=params,
+            headers=headers,
+            cookies=cookies,
+            timeout=timeout,
+            extensions=extensions,
+        )
+
+s = Glean(async_client=CustomClient(httpx.AsyncClient()))
+```
+<!-- End Custom HTTP Client [http-client] -->
+
+<!-- Start Resource Management [resource-management] -->
+## Resource Management
+
+The `Glean` class implements the context manager protocol and registers a finalizer function to close the underlying sync and async HTTPX clients it uses under the hood. This will close HTTP connections, release memory and free up other resources held by the SDK. In short-lived Python programs and notebooks that make a few SDK method calls, resource management may not be a concern. However, in longer-lived programs, it is beneficial to create a single SDK instance via a [context manager][context-manager] and reuse it across the application.
+
+[context-manager]: https://docs.python.org/3/reference/datamodel.html#context-managers
+
+```python
+from glean import Glean
+import os
+def main():
+
+    with Glean(
+        bearer_auth=os.getenv("GLEAN_BEARER_AUTH", ""),
+    ) as g_client:
+        # Rest of application here...
+
+
+# Or when using async:
+async def amain():
+
+    async with Glean(
+        bearer_auth=os.getenv("GLEAN_BEARER_AUTH", ""),
+    ) as g_client:
+        # Rest of application here...
+```
+<!-- End Resource Management [resource-management] -->
+
+<!-- Start Debugging [debug] -->
+## Debugging
+
+You can setup your SDK to emit debug logs for SDK requests and responses.
+
+You can pass your own logger class directly into your SDK.
+```python
+from glean import Glean
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+s = Glean(debug_logger=logging.getLogger("glean"))
+```
+
+You can also enable a default debug logger by setting an environment variable `GLEAN_DEBUG` to true.
+<!-- End Debugging [debug] -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+# Development
+
+## Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
+looking for the latest version.
+
+## Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. Any manual changes added to internal files will be overwritten on the next generation. 
+We look forward to hearing your feedback. Feel free to open a PR or an issue with a proof of concept and we'll do our best to include it in a future release. 
+
+### SDK Created by [Speakeasy](https://www.speakeasy.com/?utm_source=glean&utm_campaign=python)
