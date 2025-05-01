@@ -1,0 +1,9 @@
+advection/__init__.py,sha256=BaJxUTB53_ipzm-aB_4Q-HiA4abFpY0dXAXY1t_EWd0,200
+advection/advect_detect.py,sha256=stfrVy8VvTH89U5SvrzpzrOn_dvJkSmxv479Go8T6eI,17141
+advection/advection.py,sha256=vqI9DJgMrKyMmUuJMx2sIsr2xdrBDEIiqe1aZzAth3c,7509
+advection-0.1.0.dist-info/licenses/AUTHORS.rst,sha256=UFVGjQL76iYg9trrghXmMX70PL7phbzEnd0XSwpN69M,179
+advection-0.1.0.dist-info/licenses/LICENSE,sha256=INAJ0bxCkOdOz3mqsC4_9a7dcVNdi9uU_fLZIUEp7Yk,1097
+advection-0.1.0.dist-info/METADATA,sha256=QzmPbBVmPoFM9K32CdMBzl2jz7o50cp4kSgZEcp-OnE,2672
+advection-0.1.0.dist-info/WHEEL,sha256=ooBFpIzZCPdw3uqIQsOo4qqbA4ZRPxHnOH7peeONza0,91
+advection-0.1.0.dist-info/top_level.txt,sha256=ZMHcV-NIDBhQHjNzCEw_ZoR7iPxAKVNcBjZNwCTAowY,10
+advection-0.1.0.dist-info/RECORD,,
