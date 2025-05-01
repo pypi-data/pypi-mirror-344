@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: wrmodes
+Version: 0.0.4
+Summary: Calculate modes and mode-conversion losses in rectangular waveguides
+Project-URL: Homepage, https://github.com/Europium-152/rectangular-waveguide-modes
+Project-URL: Issues, https://github.com/Europium-152/rectangular-waveguide-modes/issues
+Author-email: Daniel Hachmeister <daniel.hachmeister@tecnico.ulisboa.pt>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: typer
+Description-Content-Type: text/markdown
+
+# Rectangular Waveguide Modes
+Calculate all rectangular modes below a given frequency and for a given waveguide size.
+Calculate mode-conversion losses in curved rectangular waveguides.
