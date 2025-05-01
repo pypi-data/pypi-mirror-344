@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "acace_logger"
+version = "0.1.0"
+description = "Logging utilities for ACACE"
+authors = ["ACACE Team <team@acace.ai>"]
+readme = "README.md"
+packages = [{include = "acace_logger", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.26.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
