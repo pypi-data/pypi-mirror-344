@@ -1,0 +1,13 @@
+comparators/Comparator.py,sha256=dthkDtK-W_uJInZgm_iA7QcrfqQyIRbuxPjFYsXiu_o,1303
+comparators/PearsonsCorrelation.py,sha256=Y6t6Lqp4I5kJQcnZgCMVyc4lZlYE4AMso3Jsyz9yzm4,1840
+comparators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+comparison_tools/.jukit/.jukit_info.json,sha256=IcaTTy8SL6kNHtNOsRGf2OyZro82pZByEJs6LEyGpsw,90
+comparison_tools/.jukit/temp_outhist.json,sha256=bW1V3urD70Wru5rNCstvCApWAR7vY37p96jxBEwhHyY,741
+comparison_tools/PairwiseCompare.py,sha256=J0Kpfnh42OMtM4ZeOzKlaQeOtjonQLorLRH1KUwHG9o,12385
+comparison_tools/PairwiseCompare.py.bac,sha256=J0Kpfnh42OMtM4ZeOzKlaQeOtjonQLorLRH1KUwHG9o,12385
+comparison_tools/PairwiseCompareManager.py,sha256=qERstsDtt93gVPYW017F9nHrCMcPKGn5_HXbiaJMffQ,3350
+comparison_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pairwise_compare-0.1.1.dist-info/LICENSE,sha256=-uCMwKlaoMayPusHF4ApQ777pwOb1ZpAUokftYwHVKc,1532
+pairwise_compare-0.1.1.dist-info/METADATA,sha256=VI7Wl64h1c_IVFTWCjTuKS9sbKgv6ArW2DCNpjfq6V0,4320
+pairwise_compare-0.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pairwise_compare-0.1.1.dist-info/RECORD,,
