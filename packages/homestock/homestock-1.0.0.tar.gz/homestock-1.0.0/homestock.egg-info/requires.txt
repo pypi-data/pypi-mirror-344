@@ -1,0 +1,7 @@
+numpy
+
+[all]
+homestock[extra]
+
+[extra]
+pandas
