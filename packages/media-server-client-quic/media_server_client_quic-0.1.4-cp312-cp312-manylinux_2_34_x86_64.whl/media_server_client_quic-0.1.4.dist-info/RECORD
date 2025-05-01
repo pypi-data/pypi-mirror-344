@@ -1,0 +1,5 @@
+media_server_client_quic-0.1.4.dist-info/METADATA,sha256=OH-jRoCgoPfVjVUuJYz8FXvZHth5UwWwYHWsFn51dJY,2955
+media_server_client_quic-0.1.4.dist-info/WHEEL,sha256=7FgAcpQES0h1xhfN9Ugve9FTUilU6sRAr1WJ5ph2cuw,108
+media_server_client/__init__.py,sha256=d00HYs3wf_jNly9vsBqARJ25ncdNNhRv4Vj08ft1PUw,159
+media_server_client/media_server_client.cpython-312-x86_64-linux-gnu.so,sha256=3Vmqrh_InbUq4L6CMQAP_zfxeP3Qoj7-KSILMsKB6IQ,4717096
+media_server_client_quic-0.1.4.dist-info/RECORD,,
