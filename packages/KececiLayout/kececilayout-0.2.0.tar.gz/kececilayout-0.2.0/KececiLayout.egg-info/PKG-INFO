@@ -1,0 +1,182 @@
+Metadata-Version: 2.4
+Name: KececiLayout
+Version: 0.2.0
+Summary: A deterministic node placement algorithm used in graph visualization. In this layout, nodes are arranged sequentially along a defined primary axis. Each subsequent node is then alternately offset along a secondary, perpendicular axis, typically moving to one side of the primary axis and then the other. Often, the magnitude of this secondary offset increases as nodes progress along the primary axis, creating a characteristic zig-zag or serpentine pattern.
+Home-page: https://github.com/WhiteSymmetry/kececilayout
+Author: Mehmet Keçeci
+Author-email: bilginomi@yaani.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: rustworkx
+Requires-Dist: igraph
+Requires-Dist: networkit
+Requires-Dist: graphillion
+Requires-Dist: pycairo
+Requires-Dist: cairocffi
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# KececiLayout
+
+[![PyPI version](https://badge.fury.io/py/kececilayout.svg)](https://badge.fury.io/py/kececilayout) <!-- Opsiyonel: EÄŸer PyPI'daysa -->
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) <!-- Opsiyonel: Lisans rozeti -->
+
+**Kececi Layout (KeÃ§eci YerleÅŸimi)**: A deterministic graph layout algorithm designed for visualizing linear or sequential structures with a characteristic "zig-zag" or "serpentine" pattern.
+
+*Python implementation of the KeÃ§eci layout algorithm for graph visualization.*
+
+---
+
+## Description / AÃ§Ä±klama
+
+This algorithm arranges nodes sequentially along a primary axis and offsets them alternately along a secondary axis. It's particularly useful for path graphs, chains, or showing progression.
+
+*Bu algoritma, dÃ¼ÄŸÃ¼mleri birincil eksen boyunca sÄ±ralÄ± olarak yerleÅŸtirir ve ikincil eksen boyunca dÃ¶nÃ¼ÅŸÃ¼mlÃ¼ olarak kaydÄ±rÄ±r. Yol graflarÄ±, zincirler veya ilerlemeyi gÃ¶stermek iÃ§in Ã¶zellikle kullanÄ±ÅŸlÄ±dÄ±r.*
+
+---
+
+### English Description
+
+**KeÃ§eci Layout:**
+
+A deterministic node placement algorithm used in graph visualization. In this layout, nodes are arranged sequentially along a defined primary axis. Each subsequent node is then alternately offset along a secondary, perpendicular axis, typically moving to one side of the primary axis and then the other. Often, the magnitude of this secondary offset increases as nodes progress along the primary axis, creating a characteristic "zig-zag" or "serpentine" pattern.
+
+**Key Characteristics:**
+*   **Linear Focus:** Particularly useful for visualizing linear or sequential structures, such as paths, chains, or ordered processes.
+*   **Deterministic:** Produces the exact same layout for the same graph and parameters every time.
+*   **Overlap Reduction:** Helps prevent node collisions by spreading nodes out away from the primary axis.
+*   **Parametric:** Can be customized using parameters such as the primary direction (e.g., `top-down`), the starting side for the secondary offset (e.g., `start_right`), and the spacing along both axes (`primary_spacing`, `secondary_spacing`).
+
+---
+
+### TÃ¼rkÃ§e TanÄ±mlama
+
+**KeÃ§eci YerleÅŸimi (KeÃ§eci Layout):**
+
+Graf gÃ¶rselleÅŸtirmede kullanÄ±lan deterministik bir dÃ¼ÄŸÃ¼m yerleÅŸtirme algoritmasÄ±dÄ±r. Bu yÃ¶ntemde dÃ¼ÄŸÃ¼mler, belirlenen birincil (ana) eksen boyunca sÄ±ralÄ± olarak yerleÅŸtirilir. Her bir sonraki dÃ¼ÄŸÃ¼m, ana eksenin bir saÄŸÄ±na bir soluna (veya bir Ã¼stÃ¼ne bir altÄ±na) olmak Ã¼zere, ikincil eksen doÄŸrultusunda dÃ¶nÃ¼ÅŸÃ¼mlÃ¼ olarak kaydÄ±rÄ±lÄ±r. Genellikle, ana eksende ilerledikÃ§e ikincil eksendeki kaydÄ±rma miktarÄ± artar ve bu da karakteristik bir "zÄ±gzag" veya "yÄ±lanvari" desen oluÅŸturur.
+
+**Temel Ã–zellikleri:**
+*   **DoÄŸrusal Odak:** Ã–zellikle yollar (paths), zincirler veya sÄ±ralÄ± sÃ¼reÃ§ler gibi doÄŸrusal veya ardÄ±ÅŸÄ±k yapÄ±larÄ± gÃ¶rselleÅŸtirmek iÃ§in kullanÄ±ÅŸlÄ±dÄ±r.
+*   **Deterministik:** AynÄ± graf ve parametrelerle her zaman aynÄ± sonucu Ã¼retir.
+*   **Ã‡akÄ±ÅŸmayÄ± Azaltma:** DÃ¼ÄŸÃ¼mleri ana eksenden uzaÄŸa yayarak Ã§akÄ±ÅŸmalarÄ± Ã¶nlemeye yardÄ±mcÄ± olur.
+*   **Parametrik:** Ana eksenin yÃ¶nÃ¼ (Ã¶rn. `top-down`), ikincil kaydÄ±rmanÄ±n baÅŸlangÄ±Ã§ yÃ¶nÃ¼ (Ã¶rn. `start_right`) ve eksenler arasÄ± boÅŸluklar (`primary_spacing`, `secondary_spacing`) gibi parametrelerle Ã¶zelleÅŸtirilebilir.
+
+---
+
+## Installation / Kurulum
+
+```bash
+pip install kececilayout
+```
+
+---
+
+## Usage / KullanÄ±m
+
+The layout function generally accepts a graph object and returns positions.
+
+### Example with NetworkX
+
+```python
+import networkx as nx
+import matplotlib.pyplot as plt
+import kececilayout as kl # Assuming the main function is imported like this
+
+# Create a graph
+G = nx.path_graph(10)
+
+# Calculate layout positions using the generic function
+# (Assuming kl.kececi_layout_v4 is the main/generic function)
+pos = kl.kececi_layout_v4(G,
+                           primary_spacing=1.0,
+                           secondary_spacing=0.5,
+                           primary_direction='top-down',
+                           secondary_start='right')
+
+# Draw the graph
+plt.figure(figsize=(6, 8))
+nx.draw(G, pos=pos, with_labels=True, node_color='skyblue', node_size=500, font_size=10)
+plt.title("KeÃ§eci Layout with NetworkX")
+plt.axis('equal') # Ensure aspect ratio is equal
+plt.show()
+```
+
+### Example with iGraph
+
+```python
+import igraph as ig
+import matplotlib.pyplot as plt
+# Assuming a specific function for igraph exists or the generic one handles it
+from kececilayout import kececi_layout_v4_igraph # Adjust import if needed
+
+# Create a graph
+G = ig.Graph.Ring(10, circular=False) # Path graph equivalent
+for i in range(G.vcount()):
+     G.vs[i]["name"] = f"N{i}"
+
+# Calculate layout positions (returns a list of coords)
+pos_list = kececi_layout_v4_igraph(G,
+                                    primary_spacing=1.5,
+                                    secondary_spacing=1.0,
+                                    primary_direction='left-to-right',
+                                    secondary_start='up')
+layout = ig.Layout(coords=pos_list)
+
+# Draw the graph
+fig, ax = plt.subplots(figsize=(8, 6))
+ig.plot(
+    G,
+    target=ax,
+    layout=layout,
+    vertex_label=G.vs["name"],
+    vertex_color="lightblue",
+    vertex_size=30
+)
+ax.set_title("KeÃ§eci Layout with iGraph")
+ax.set_aspect('equal', adjustable='box')
+plt.show()
+```
+
+---
+
+## Supported Backends / Desteklenen KÃ¼tÃ¼phaneler
+
+The layout functions are designed to work with graph objects from the following libraries:
+
+*   **NetworkX:** (`networkx.Graph`, `networkx.DiGraph`, etc.)
+*   **igraph:** (`igraph.Graph`)
+*   **Rustworkx:** (Requires appropriate conversion or adapter function)
+*   **Networkit:** (Requires appropriate conversion or adapter function)
+*   **Graphillion:** (Requires appropriate conversion or adapter function)
+
+*Note: Direct support might vary. Check specific function documentation for compatibility details.*
+
+---
+
+## License / Lisans
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+```
+
+**Ek Notlar:**
+
+*   **Rozetler (Badges):** BaÅŸlangÄ±Ã§ta PyPI ve Lisans rozetleri ekledim (yorum satÄ±rÄ± iÃ§inde). EÄŸer projeniz PyPI'da yayÄ±nlandÄ±ysa veya bir CI/CD sÃ¼reci varsa, ilgili rozetleri eklemek iyi bir pratiktir.
+*   **LICENSE DosyasÄ±:** `LICENSE` bÃ¶lÃ¼mÃ¼nde bir `LICENSE` dosyasÄ±na referans verdim. Projenizin kÃ¶k dizininde MIT lisans metnini iÃ§eren bir `LICENSE` dosyasÄ± oluÅŸturduÄŸunuzdan emin olun.
+*   **Ä°Ã§e Aktarma YollarÄ±:** Ã–rneklerde `import kececilayout as kl` veya `from kececilayout import kececi_layout_v4_igraph` gibi varsayÄ±msal iÃ§e aktarma yollarÄ± kullandÄ±m. Kendi paket yapÄ±nÄ±za gÃ¶re bunlarÄ± ayarlamanÄ±z gerekebilir.
+*   **Fonksiyon AdlarÄ±:** Ã–rneklerde `kececi_layout_v4` ve `kececi_layout_v4_igraph` gibi fonksiyon adlarÄ±nÄ± kullandÄ±m. GerÃ§ek fonksiyon adlarÄ±nÄ±z farklÄ±ysa bunlarÄ± gÃ¼ncelleyin.
+*   **GÃ¶rselleÅŸtirme:** Ã–rneklere `matplotlib.pyplot` kullanarak temel gÃ¶rselleÅŸtirme adÄ±mlarÄ±nÄ± ekledim, bu da kullanÄ±cÄ±larÄ±n sonucu nasÄ±l gÃ¶rebileceÄŸini gÃ¶sterir. Eksen oranlarÄ±nÄ± eÅŸitlemek (`axis('equal')` veya `set_aspect('equal')`) layout'un doÄŸru gÃ¶rÃ¼nmesi iÃ§in Ã¶nemlidir.
