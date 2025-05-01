@@ -1,0 +1,22 @@
+# Sensitive files
+gcp-oauth.keys.json
+token.json
+
+# Python cache and build files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Logs
+*.log
+
+# IDE files
+.idea/
+.vscode/

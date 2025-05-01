@@ -1,0 +1,30 @@
+[project]
+name = "gmail-mcp-server"  # Change to "aniket-gmail-mcp-server" if you used a different name
+version = "0.1.1"  # Incremented from 0.1.0
+description = "A Python MCP server for Gmail and Google Calendar integration with Claude Desktop"
+readme = "README.md"
+authors = [{name = "Aniket", email = "aniketraskar932@gmail.com"}]
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+dependencies = [
+    "google-api-python-client>=2.0.0",
+    "google-auth-oauthlib>=0.4.0",
+    "mcp>=0.1.0",
+    "schedule>=1.1.0"
+]
+keywords = ["gmail", "google-calendar", "mcp", "claude", "email", "calendar", "automation"]
+
+[project.scripts]
+gmail-mcp-server = "gmail_mcp_server.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.urls]
+Homepage = "https://github.com/aniket-raskar1/my-gmail-mcp-server"
+Repository = "https://github.com/aniket-raskar1/my-gmail-mcp-server"
+Documentation = "https://github.com/aniket-raskar1/my-gmail-mcp-server/blob/main/README.md"
+Issues = "https://github.com/aniket-raskar1/my-gmail-mcp-server/issues"
+
+
