@@ -1,0 +1,116 @@
+Metadata-Version: 2.1
+Name: pandas-pretty-display
+Version: 0.3.2
+Summary: A package to make pandas DataFrames display beautifully in Jupyter notebooks
+Home-page: https://github.com/bala-srm/pandas-pretty-display-.git
+Author: Balaji
+Author-email: bala@python4u.in
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Pandas Pretty Display
+
+A simple Python package to make your pandas DataFrames look beautiful in Jupyter notebooks with alternating colors and improved formatting. Now with support for styled markdown headers!
+
+## Installation
+
+You can install the package via pip:
+
+```bash
+pip install pandas-pretty-display
+```
+
+## Usage
+
+### DataFrame Styling
+
+```python
+from pandas_pretty_display import style_dataframe
+import pandas as pd
+
+# Create or load your DataFrame
+df = pd.DataFrame(...)
+
+# Apply the styling
+style_dataframe()
+
+# Display your DataFrame - it will now have the pretty styling
+display(df)
+```
+
+### Markdown Header Styling
+
+```python
+from pandas_pretty_display import style_notebook
+
+# Apply all styling at once (DataFrame + header styling)
+style_notebook()
+
+# Now you can use regular markdown headers in markdown cells:
+# # Level 1 Header
+# ## Level 2 Header
+# ### Level 3 Header
+```
+
+All markdown headers in your notebook will automatically be styled with red borders, gold backgrounds, and dark blue text.
+
+### Individual Styling Functions
+
+You can also apply just the header styling without the DataFrame styling:
+
+```python
+from pandas_pretty_display import style_headers
+
+# Apply only header styling
+style_headers()
+```
+
+For backward compatibility, the package still includes functions to create headers directly in code cells:
+
+```python
+from pandas_pretty_display import header1, header2, header3
+
+# Create headers in code cells
+header1("This is a Level 1 Header")
+header2("This is a Level 2 Header")
+header3("This is a Level 3 Header")
+```
+
+## Features
+
+### DataFrame Styling
+- Alternating gold and light blue row colors
+- Black text in table cells
+- Red text in table headers
+- Black borders around cells
+- 18px font size
+- Full-width container
+- Scrollable output up to 1000px height
+
+### Header Styling
+- Level 1, 2, and 3 headers with consistent styling
+- Red border (thickness varies by level)
+- Gold background (#ffcc00)
+- Dark blue text (#000080)
+- Responsive sizing based on header level
+- Rounded corners for modern appearance
+
+## Requirements
+
+- Python >= 3.6
+- pandas >= 1.0.0
+- IPython >= 7.0.0
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
