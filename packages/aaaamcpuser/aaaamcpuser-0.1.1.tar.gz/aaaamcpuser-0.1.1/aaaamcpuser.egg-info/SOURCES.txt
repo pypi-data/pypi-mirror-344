@@ -1,0 +1,9 @@
+README.md
+main.py
+pyproject.toml
+aaaamcpuser.egg-info/PKG-INFO
+aaaamcpuser.egg-info/SOURCES.txt
+aaaamcpuser.egg-info/dependency_links.txt
+aaaamcpuser.egg-info/entry_points.txt
+aaaamcpuser.egg-info/requires.txt
+aaaamcpuser.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+aaaamcpuser = main:main
