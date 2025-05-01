@@ -1,0 +1,352 @@
+Metadata-Version: 2.4
+Name: spykio-client
+Version: 1.2.0
+Summary: A client library for interacting with the Spykio API.
+Author: Turtle Tech BV
+License: MIT
+Project-URL: Homepage, https://spyk.io/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Dynamic: license-file
+
+# Spykio Client
+
+A Python client library for interacting with the [Spykio](https://spyk.io/) API.
+
+## Installation
+
+```bash
+pip install spykio-client
+```
+
+## API Keys
+To use this client, you'll need an API key from Spykio. Visit the Spykio website to sign up and obtain your API key.
+
+## Usage
+
+### Initializing the Client
+
+```python
+from spykio import SpykioClient
+
+client = SpykioClient(api_key="your-api-key")
+```
+
+### Searching in an Index
+
+Use the `query.search` method to search for information in a specific index:
+
+```python
+def search_example():
+    try:
+        result = client.query.search(
+            index="your-index-name",
+            user_query="What hotel did I stay at in Warsaw?",
+            accurate_match=False,  # Optional, defaults to False
+            get_relevant_info=False  # Optional, defaults to False
+        )
+        
+        print("Search results:", result)
+    except Exception as error:
+        print("Error searching:", error)
+```
+
+#### Search for Complete Documents (Default Behavior)
+
+By default (`accurate_match=False, get_relevant_info=False`), the API returns complete documents:
+
+```python
+# Using default parameters (accurate_match=False, get_relevant_info=False)
+result = client.query.search(
+    index="your-index-name",
+    user_query="What hotel did I stay at in Warsaw?"
+)
+
+# Sample response:
+# {
+#   "documents": [
+#     {
+#       "id": "abc123-example-id",
+#       "summary": "This document is a booking confirmation for a hotel in Warsaw, Poland.",
+#       "content": "# Hotel Booking Confirmation\n\n**Hotel Name: Warsaw Central Hotel**\n\n* Address: Example Street 123, Warsaw, Poland\n...",
+#       "created_at": "2023-04-09T17:40:43.122Z"
+#     }
+#   ],
+#   "metrics": {
+#     "totalTime": 433,
+#     "resultCount": 1,
+#     "usedExtraction": False
+#   }
+# }
+```
+
+#### Search with Relevant Sections
+
+When `accurate_match` and `get_relevant_info` are set to `True`, the API returns focused relevant sections of content:
+
+```python
+result = client.query.search(
+    index="your-index-name",
+    user_query="What hotel did I stay at in Warsaw?",
+    accurate_match=True,
+    get_relevant_info=True
+)
+
+# Sample response:
+# {
+#   "documents": [],
+#   "relevantSections": [
+#     {
+#       "text": "Hotel Name: Warsaw Central Hotel\n\n* Address: Example Street 123, Warsaw, Poland",
+#       "relevanceScore": 0.95,
+#       "explanation": "This section provides the location of the hotel in Warsaw, Poland.",
+#       "documentId": "abc123-example-id"
+#     },
+#     {
+#       "text": "| CHECK-IN | CHECK-OUT | ROOMS | NIGHTS |\n| -------- | --------- | ----- | ------ |\n| June 15 | June 16 | 1 | 1 |",
+#       "relevanceScore": 0.85,
+#       "explanation": "This section confirms the dates of the hotel stay.",
+#       "documentId": "abc123-example-id"
+#     }
+#   ],
+#   "metrics": {
+#     "totalTime": 2513,
+#     "resultCount": 1,
+#     "extractionCount": 1,
+#     "sectionsCount": 2,
+#     "usedExtraction": True
+#   }
+# }
+```
+
+### Listing Documents
+
+You can retrieve a paginated list of all documents in an index using the `documents.list` method:
+
+```python
+def list_documents_example():
+    try:
+        result = client.documents.list(
+            index="your-index-name",
+            region="EU",      # Optional, defaults to "EU"
+            limit=20,         # Optional, defaults to 100
+            offset=0          # Optional, defaults to 0
+        )
+        
+        print("Documents:", result.get("documents"))
+        print("Pagination info:", result.get("pagination"))
+        
+        # Sample response:
+        # {
+        #   "success": True,
+        #   "documents": [
+        #     {
+        #       "id": "abc123-example-id",
+        #       "summary": "Document summary text",
+        #       "content": "Full document content...",
+        #       "created_at": "2023-04-09T17:40:43.122Z"
+        #     },
+        #     # More documents...
+        #   ],
+        #   "pagination": {
+        #     "total": 42,
+        #     "limit": 20,
+        #     "offset": 0,
+        #     "hasMore": True
+        #   }
+        # }
+    except Exception as error:
+        print("Error listing documents:", error)
+```
+
+### Extracting Information from a Specific Document
+
+You can extract specific information from a document using the `documents.extract` method:
+
+```python
+def extract_information_example():
+    try:
+        result = client.documents.extract(
+            index="your-index-name",
+            document_id="abc123-example-id",
+            user_query="What is the hotel address?",
+            region="EU"       # Optional, defaults to "EU"
+        )
+        
+        print("Document summary:", result.get("documentSummary"))
+        print("Relevant sections:", result.get("relevantSections"))
+        
+        # Sample response:
+        # {
+        #   "documentId": "abc123-example-id",
+        #   "documentSummary": "This document is a booking confirmation for a hotel in Warsaw, Poland.",
+        #   "relevantSections": [
+        #     {
+        #       "text": "Hotel Name: Warsaw Central Hotel\n\n* Address: Example Street 123, Warsaw, Poland",
+        #       "relevanceScore": 0.95,
+        #       "explanation": "This section contains the hotel address information.",
+        #       "documentId": "abc123-example-id"
+        #     }
+        #   ],
+        #   "metrics": {
+        #     "totalTime": 1256,
+        #     "extractionTime": 950,
+        #     "sectionsCount": 1
+        #   }
+        # }
+    except Exception as error:
+        print("Error extracting information:", error)
+```
+
+### Uploading Files
+
+You can upload files to an index using the `files.upload` method:
+
+#### Upload using base64 string
+
+```python
+def upload_file_example():
+    try:
+        result = client.files.upload(
+            index="your-index-name",
+            mime_type="application/pdf",  # MIME type of the file
+            base64_string="base64EncodedString"  # Base64 encoded file content
+        )
+        
+        print("Upload result:", result)
+        # Sample response:
+        # {
+        #   "success": True,
+        #   "id": "abc123-example-id",
+        #   "fileName": "uploaded-document.pdf"
+        # }
+    except Exception as error:
+        print("Error uploading file:", error)
+```
+
+#### Upload using text content
+
+```python
+def upload_content_example():
+    try:
+        result = client.files.upload(
+            index="your-index-name",
+            content="This is the text content to be uploaded."
+        )
+        
+        print("Upload result:", result)
+        # Sample response:
+        # {
+        #   "success": True,
+        #   "id": "def456-example-id",
+        #   "fileName": "text-content.txt"
+        # }
+    except Exception as error:
+        print("Error uploading content:", error)
+```
+
+### Removing Documents
+
+You can remove documents from an index using the `files.remove` method:
+
+```python
+def remove_document_example():
+    try:
+        result = client.files.remove(
+            index="your-index-name",
+            document_id="abc123-example-id",  # The ID of the document to remove
+            region="EU"  # Optional, defaults to "EU"
+        )
+        
+        print("Removal result:", result)
+        # Sample response:
+        # {
+        #   "success": True,
+        #   "message": "Document successfully removed"
+        # }
+    except Exception as error:
+        print("Error removing document:", error)
+```
+
+## API Reference
+
+### `SpykioClient(api_key, base_url="https://api.spyk.io")`
+
+Creates a new Spykio client instance.
+
+**Parameters:**
+- `api_key` (required): Your Spykio API key
+- `base_url` (optional): API base URL. Defaults to "https://api.spyk.io"
+
+### `client.query.search(index, user_query, accurate_match=False, get_relevant_info=False)`
+
+Searches for information in a specific index.
+
+**Parameters:**
+- `index` (required): The name of the index to search in
+- `user_query` (required): The search query
+- `accurate_match` (optional): When True, performs more precise matching. Defaults to False
+- `get_relevant_info` (optional): When True, returns specific relevant sections rather than full documents. Defaults to False
+
+**Returns:** Dict containing search results with either:
+- Full documents with only id, content, summary, and created_at properties (when `accurate_match` and `get_relevant_info` are False)
+- Relevant sections with explanations (when both parameters are True)
+- Metrics information (with tokenUsage removed)
+
+### `client.documents.list(index, region="EU", limit=100, offset=0)`
+
+Retrieves a paginated list of all documents in an index.
+
+**Parameters:**
+- `index` (required): The name of the index to list documents from
+- `region` (optional): The region where the index is located. Defaults to "EU"
+- `limit` (optional): Maximum number of documents to return. Defaults to 100
+- `offset` (optional): Number of documents to skip for pagination. Defaults to 0
+
+**Returns:** Dict containing:
+- `success`: Boolean indicating whether the operation was successful
+- `documents`: List of document dicts with id, content, summary, and created_at properties
+- `pagination`: Dict with pagination details (total, limit, offset, hasMore)
+
+### `client.documents.extract(index, document_id, user_query, region="EU")`
+
+Extracts specific information from a document based on a query.
+
+**Parameters:**
+- `index` (required): The name of the index containing the document
+- `document_id` (required): The ID of the document to extract information from
+- `user_query` (required): The query to extract specific information from the document
+- `region` (optional): The region where the index is located. Defaults to "EU"
+
+**Returns:** Dict containing:
+- `documentId`: The ID of the document
+- `documentSummary`: A summary of the document
+- `relevantSections`: List of extracted sections relevant to the query, each with text, relevanceScore, explanation, and documentId
+- `metrics`: Dict with performance metrics (with tokenUsage removed)
+
+### `client.files.upload(index, mime_type=None, base64_string=None, content=None)`
+
+Uploads a file or content to a specific index.
+
+**Parameters:**
+- `index` (required): The name of the index to upload to
+- For file uploads: `mime_type` and `base64_string` required
+- For text uploads: `content` required
+
+**Returns:** Dict containing upload result with categorization and metrics information removed
+
+### `client.files.remove(index, document_id, region="EU")`
+
+Removes a document from an index.
+
+**Parameters:**
+- `index` (required): The name of the index containing the document
+- `document_id` (required): The ID of the document to remove
+- `region` (optional): The region where the index is located. Defaults to "EU"
+
+**Returns:** Dict containing removal result with metrics information removed
