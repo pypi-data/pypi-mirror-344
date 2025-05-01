@@ -1,0 +1,2 @@
+[console_scripts]
+svd = saved_instance.cli:cli
