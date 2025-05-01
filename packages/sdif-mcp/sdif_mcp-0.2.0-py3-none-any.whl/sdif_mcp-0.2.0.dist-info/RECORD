@@ -1,0 +1,8 @@
+sdif_mcp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdif_mcp/prompt.py,sha256=VKkawZxmQQqefDAZqrccoxLiX0iRSofzrwjzTlNBEeg,3614
+sdif_mcp/server.py,sha256=y1eiJwm0kiwg-XfXSQNHOxZAQwHnPZ_SKSM1XxMPdnc,3352
+sdif_mcp-0.2.0.dist-info/LICENSE,sha256=kS8EN6yAaGZd7V5z6GKSn_x3ozcZltrfRky4vMPRCw8,1072
+sdif_mcp-0.2.0.dist-info/METADATA,sha256=rh_U6TRMH8pxxyDCAFsDAhp-SaEM10LLd3f24dCajVQ,602
+sdif_mcp-0.2.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+sdif_mcp-0.2.0.dist-info/entry_points.txt,sha256=_8RP7sSos2cwqYblhwHOK3hhRkLbP6XkbAju3vHWft8,40
+sdif_mcp-0.2.0.dist-info/RECORD,,
