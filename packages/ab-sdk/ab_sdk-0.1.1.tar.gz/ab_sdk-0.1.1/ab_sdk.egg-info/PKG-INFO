@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: ab-sdk
+Version: 0.1.1
+Summary: Fastest way to build AI Agents
+Author: Abu Bakar
+Author-email: abubakarbinzohaib@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai-agents>=0.0.14
+Requires-Dist: python-dotenv>=1.1.0
+Requires-Dist: setuptools>=80.1.0
+Requires-Dist: twine>=6.1.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: license-file
+Dynamic: requires-python
