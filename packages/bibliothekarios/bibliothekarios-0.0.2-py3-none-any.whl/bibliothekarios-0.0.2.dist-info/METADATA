@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: bibliothekarios
+Version: 0.0.2
+Summary: In the Library of Alexandria, librarians were known as βιβλιοθηκάριοι
+Author-email: Alexander Fedotov <alex.fedotov@aol.com>
+Project-URL: Homepage, https://github.com/bibliothekarios/bibliothekarios
+Project-URL: Bug Tracker, https://github.com/bibliothekarios/bibliothekarios/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyYAML>=6.0.0
+Requires-Dist: pyarrow>=20.0.0
+Dynamic: license-file
+
+# Bibliothekarios
+In the Library of Alexandria, librarians were known as "βιβλιοθηκάριοι".
