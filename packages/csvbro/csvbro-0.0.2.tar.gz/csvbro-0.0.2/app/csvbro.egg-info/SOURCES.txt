@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+app/main.py
+app/csvbro.egg-info/PKG-INFO
+app/csvbro.egg-info/SOURCES.txt
+app/csvbro.egg-info/dependency_links.txt
+app/csvbro.egg-info/entry_points.txt
+app/csvbro.egg-info/requires.txt
+app/csvbro.egg-info/top_level.txt
