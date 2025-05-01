@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-logseq = mcp_server_logseq.__main__:main
