@@ -1,0 +1,14 @@
+liblzcore.so,sha256=mIiT5-zukpWRfE7C4TUWZeLjvlyeVb9-h6RNX7ej6K0,1007609
+liblzcore.so.0,sha256=mIiT5-zukpWRfE7C4TUWZeLjvlyeVb9-h6RNX7ej6K0,1007609
+liblzcore.so.0.9,sha256=mIiT5-zukpWRfE7C4TUWZeLjvlyeVb9-h6RNX7ej6K0,1007609
+lzcomplexity.cpython-311-x86_64-linux-gnu.so,sha256=kf13wxfIZ6_TAp_T37wefGK2OcZv31MSSpF3JlI9wbM,476905
+inc/PyLempelZiv.hpp,sha256=sUYUdGdueJrfu-UjPUW_cvaw64_m-F8GGf7J7gCaD-Y,16380
+inc/PySequence.hpp,sha256=DIKJgPWYTMcN7IMfeTGiVvAyivyrZ9iI236MFyDGfCA,1615
+inc/utils.hpp,sha256=MYCPPS5oa5kAErpPcXE5evSOZms3tO8LZ38-K1qIFx8,1340
+lzcomplexity.libs/liblzcore-457ff098.so.0.9,sha256=Sz5kqOZCK4PmqMSdadgK5nFMfhK1LokN3rvvw7dTyKw,1076641
+lzcomplexity.libs/libtbb-f9c65376.so.12.10,sha256=qN8Lm-eZJmKE7degxvqZwT1lK-Up1GTCZK5qOCIs12U,436089
+lzcomplexity-0.9.5.dist-info/METADATA,sha256=YkcgcdZHtCD39d9KsYM3biAbSfUsDSFs5gQlYF4MZLc,5130
+lzcomplexity-0.9.5.dist-info/WHEEL,sha256=aUCIQo2UHrlsgT8NqbuglETtwsA8vOVe2JpnBY-_j7o,151
+lzcomplexity-0.9.5.dist-info/top_level.txt,sha256=LgIts_8R8M-Qo9P34DO70Eopo1mTEVwbKu7HtuAdcuo,5
+lzcomplexity-0.9.5.dist-info/RECORD,,
+lzcomplexity-0.9.5.dist-info/licenses/LICENSE,sha256=kE4G5tFqOiCTDH3hKH3buqjEROv5co_7hmw_f-OmB6E,1075
