@@ -1,0 +1,10 @@
+[project]
+name = "ex97-error-invalid-optional-deps"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+plot = 123
