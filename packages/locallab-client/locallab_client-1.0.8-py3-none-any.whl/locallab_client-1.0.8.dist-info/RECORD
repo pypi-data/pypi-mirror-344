@@ -1,0 +1,7 @@
+locallab_client/__init__.py,sha256=uodKVVqzn1QqwlTPSemR6bLk7HOeq7p8aBdabVPmRtg,774
+locallab_client/client.py,sha256=ZA_RNELm5zxxelfKW2qR-5H7jb18ovbcJvDGMnMyz34,34073
+locallab_client/sync_client.py,sha256=6jbrTVPKrfUUs58tFDn0QQGURZR8GHqRU6s9aQpihXU,19214
+locallab_client-1.0.8.dist-info/METADATA,sha256=ZKysvBYKGG-hcVwCQ132Eor3SNvAt2JuWmwWI3KYwIY,6111
+locallab_client-1.0.8.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+locallab_client-1.0.8.dist-info/top_level.txt,sha256=NuonxjPc7jnLVnzaTR61_bEfbp8JkXdizC12QyG_jjM,16
+locallab_client-1.0.8.dist-info/RECORD,,
