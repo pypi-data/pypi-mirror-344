@@ -1,0 +1,10 @@
+llm>=0.23
+httpx
+ijson
+azure-identity>=1.10.1
+
+[test]
+pytest
+pytest-recording
+pytest-asyncio
+nest-asyncio
