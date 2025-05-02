@@ -1,0 +1,16 @@
+abs_repository_core/__init__.py,sha256=jS4KKW-E6pSjAwSraFqOOEbJnRibqOr-1NF9c71NuZA,71
+abs_repository_core/exceptions/__init__.py,sha256=XHRbTaJWvVZJDzHUKpo9_f564TeDn2jXLpQ6o8zu3i0,304
+abs_repository_core/exceptions/exceptions.py,sha256=7RBzsICwkvSfqJ_HF8YYBDc4F9Akg6WwmYP4Vhm6NDk,1397
+abs_repository_core/models/__init__.py,sha256=K8T57lLthjQA4KqdrXkiuz-51Pvy7aZJyWXq6DlFWd8,92
+abs_repository_core/models/base_model.py,sha256=uci0Dbv_LBbPBmzga9CN9qvJeS5K5LpPxbjzdrcyPls,843
+abs_repository_core/repository/__init__.py,sha256=AQ3H1NWay99bQXjFDAiu9_GRH07r8C0-tlW-9F3BqEI,73
+abs_repository_core/repository/base_repository.py,sha256=4Ti0p1qJno08i1lYBfFu2b02rwwAntdTThoAoXb9X38,17763
+abs_repository_core/schemas/__init__.py,sha256=_4qcXvTiRlFvtRtuPpxL8zxBKv4w06ax-B-cThx2lPY,381
+abs_repository_core/schemas/base_schema.py,sha256=LeErGkKQZi-KcIOTanbeyLhykbRRJx6prUq4MJuJQuo,2165
+abs_repository_core/services/__init__.py,sha256=sc42UNoSzWDdxLNTEXufXwWeqLHqjGTgaxbUodU6jZY,64
+abs_repository_core/services/base_service.py,sha256=KCk5Z3DHUZm0cOLzc5HpA9b1Np7a6LeZfsZUs8Z6zr8,1991
+abs_repository_core/utils/__init__.py,sha256=mwpX_L3DrbRHqBAMsWa7Dxv8nhFqFy7_EjKfTaqw7Zo,68
+abs_repository_core/utils/schema.py,sha256=fTm0CYOEslQQL-95uXUVci7KIVsJ6hkBydCVVOCk23w,1613
+abs_repository_core-0.2.0.dist-info/METADATA,sha256=GFzUOpwdIBlW8n9KaIj3Bqa9yI33OuVLQKrvARynVGg,2865
+abs_repository_core-0.2.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+abs_repository_core-0.2.0.dist-info/RECORD,,
