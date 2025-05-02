@@ -1,0 +1,21 @@
+# [1.0.0-beta.11](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.10...1.0.0-beta.11) (2025-05-01)
+
+
+### Bug Fixes
+
+* **docs:** absolute url in readme ([ecaa3eb](https://github.com/phantomcyber/splunk-soar-sdk/commit/ecaa3eb2a517b00aa547e4064a0f46fc263a074d))
+
+
+
+
+
+# [1.0.0-beta.11](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.10...1.0.0-beta.11) (2025-05-01)
+
+
+### Bug Fixes
+
+* **docs:** absolute url in readme ([ecaa3eb](https://github.com/phantomcyber/splunk-soar-sdk/commit/ecaa3eb2a517b00aa547e4064a0f46fc263a074d))
+
+
+
+
