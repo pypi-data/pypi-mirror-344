@@ -1,0 +1,13 @@
+cogitator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cogitator/auto_cot.py,sha256=dFmG0yo3mOqsalz7YkVk_sXE8vUSfQc3_5x5nKOV_EM,6220
+cogitator/cdw_cot.py,sha256=A4silxpPKcdL3SFRoI_SQzl59a043250vFj0ZQjKDKI,20759
+cogitator/graph_of_thoughts.py,sha256=kOMaCUZO_bRf3Q3cfjhvfacAWUuO6MXjQBvyv636p4o,17827
+cogitator/least_to_most.py,sha256=LQ-jljCdYdSNS7nYR2pTWiV9T9gT4BcFXSTDY-ArYhs,12274
+cogitator/model.py,sha256=VGbki74_rIGESN5-k6mnUxoEaeyRJp1ed769JKL6k2k,11180
+cogitator/sc_cot.py,sha256=9NsmRlagYs4c4PM_Qq3HLDKMXDkefnkHvjjMDHIWu5c,9221
+cogitator/tree_of_thoughts.py,sha256=dLklWGMdPHbB8mjyuy3xMhYWz6UBpLGTVMT3db59adk,12060
+cogitator/utils.py,sha256=0prv4ioZiON0b7vJxHWU0Nvys55LiiRDLvaLMfwqTzY,1740
+cogitator-0.1.0a1.dist-info/LICENSE,sha256=3EkVXD2ekoSlGjktuxMKZthz_iJ5yHDM4zEcFqizQzA,1069
+cogitator-0.1.0a1.dist-info/METADATA,sha256=hXoJaM5KupYfTF4RGOeBCeh8uemcKgKL34ncLlV5LKE,5643
+cogitator-0.1.0a1.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+cogitator-0.1.0a1.dist-info/RECORD,,
