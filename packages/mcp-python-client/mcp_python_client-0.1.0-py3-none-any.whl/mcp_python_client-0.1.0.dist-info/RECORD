@@ -1,0 +1,8 @@
+mcp_python_client/__init__.py,sha256=VihMZ-jcCk2IRGHtl6qaukJgqN1V8w9HOjVwnisqwrM,155
+mcp_python_client/config.py,sha256=vT67Alq_ZxnFKepM1esE9Q5jjdfZE3ArHwOY8CYkjls,3352
+mcp_python_client/client/__init__.py,sha256=5A4Bvgi6S34Gw1JasCbcJq_wtClDQXWDCS4nq03pEfo,103
+mcp_python_client/client/mcp_client.py,sha256=rtEA9EA88kKeR3v2ZG8Fp7cm3cP78M2zOvf0qxf9Q2o,26575
+mcp_python_client-0.1.0.dist-info/METADATA,sha256=Nk06nyR9KwDI_U149ilUwGcqCxivq6216VtEctcAOPE,2942
+mcp_python_client-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_python_client-0.1.0.dist-info/licenses/LICENSE,sha256=qBmTritiUMBFVSZORgCkUC7UDxSNe50ERFugmQGgVcM,1072
+mcp_python_client-0.1.0.dist-info/RECORD,,
