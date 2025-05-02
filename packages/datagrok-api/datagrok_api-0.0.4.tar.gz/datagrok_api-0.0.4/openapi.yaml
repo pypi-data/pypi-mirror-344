@@ -1,0 +1,524 @@
+openapi: 3.0.0
+info:
+  title: Datagrok API
+  description: API for interacting with Datagrok platform
+  version: 1.0.0
+  contact:
+    name: Datagrok Team
+    url: https://datagrok.ai
+
+servers:
+  - url: https://public.datagrok.ai/api
+    description: Production server
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Table:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the table
+        name:
+          type: string
+          description: Name of the table
+        description:
+          type: string
+          description: Description of the table
+
+    Group:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the group
+        name:
+          type: string
+          description: Name of the group
+        friendlyName:
+          type: string
+          description: Friendly name of the group
+        description:
+          type: string
+          description: Description of the group
+        createdOn:
+          type: string
+          format: date-time
+          description: Creation timestamp
+        updatedOn:
+          type: string
+          format: date-time
+          description: Last update timestamp
+        personal:
+          type: boolean
+          description: Whether this is a personal group
+        hidden:
+          type: boolean
+          description: Whether this group is hidden
+        parents:
+          type: array
+          items:
+            $ref: '#/components/schemas/GroupRelation'
+        children:
+          type: array
+          items:
+            $ref: '#/components/schemas/GroupRelation'
+
+    GroupRelation:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the relation
+        isAdmin:
+          type: boolean
+          description: Whether the member is an admin
+        parent:
+          $ref: '#/components/schemas/Group'
+        child:
+          $ref: '#/components/schemas/Group'
+
+    GroupMembershipRequest:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the request
+        approved:
+          type: boolean
+          nullable: true
+          description: Whether the request was approved
+        createdOn:
+          type: string
+          format: date-time
+          description: Creation timestamp
+        updatedOn:
+          type: string
+          format: date-time
+          description: Last update timestamp
+        resolutionDate:
+          type: string
+          format: date-time
+          nullable: true
+          description: Date when the request was resolved
+        from:
+          $ref: '#/components/schemas/Group'
+        to:
+          $ref: '#/components/schemas/Group'
+
+security:
+  - BearerAuth: []
+
+paths:
+  /public/v1/tables/{name}:
+    get:
+      summary: Download a table
+      description: Downloads a table from Datagrok
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Identifier of a table (UUID or Grok name)
+      responses:
+        '200':
+          description: Table data in CSV format
+          content:
+            text/plain:
+              schema:
+                type: string
+                format: binary
+    post:
+      summary: Upload a table
+      description: Uploads a table to Datagrok
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Name for the new table
+      requestBody:
+        required: true
+        content:
+          text/csv:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: Table identifiers
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Table'
+
+  /public/v1/files/{connector}/{path}:
+    get:
+      summary: Download a file
+      description: Download a file from a connector
+      parameters:
+        - name: connector
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Identifier of a connector
+        - name: path
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Path to file in the connector
+      responses:
+        '200':
+          description: File content
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+    post:
+      summary: Upload a file
+      description: Uploads a file to a connector
+      parameters:
+        - name: connector
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Identifier of a connector
+        - name: path
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Path to file in the connector
+      requestBody:
+        required: true
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: File uploaded successfully
+
+  /public/v1/dashboards/{id}/shares:
+    get:
+      summary: Share a dashboard
+      description: Shares a dashboard with specified groups
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Identifier of the dashboard
+        - name: groups
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Comma-separated list of group/user names
+        - name: access
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: [View, Edit]
+          description: Access level for the groups
+      responses:
+        '200':
+          description: Dashboard shared successfully
+
+  /public/v1/dashboards/{name}/{table_ids}:
+    post:
+      summary: Create a dashboard
+      description: Creates a new dashboard
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Name for the new dashboard
+        - name: table_ids
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Comma-separated list of table ids
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Dashboard layout configuration
+      responses:
+        '200':
+          description: Dashboard created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+
+  /public/v1/{name}/call:
+    post:
+      summary: Call a function
+      description: Performs a call of a Datagrok function
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Function name
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Function parameters
+      responses:
+        '200':
+          description: Function call result
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /public/v1/groups:
+    get:
+      summary: List groups
+      description: Lists user groups from Datagrok
+      parameters:
+        - name: text
+          in: query
+          schema:
+            type: string
+          description: Smart search filter
+        - name: include
+          in: query
+          schema:
+            type: string
+          description: Comma-separated list of relations to include
+      responses:
+        '200':
+          description: List of groups
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Group'
+    post:
+      summary: Save group
+      description: Saves or updates a group
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Group'
+      parameters:
+        - name: saveRelations
+          in: query
+          schema:
+            type: boolean
+          description: Whether to save group relations
+      responses:
+        '200':
+          description: Saved group
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Group'
+
+  /public/v1/groups/lookup:
+    get:
+      summary: Lookup groups
+      description: Looks up groups by name
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Query string to match groups by name
+      responses:
+        '200':
+          description: List of matching groups
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Group'
+
+  /public/v1/groups/{group_id}:
+    get:
+      summary: Get group
+      description: Retrieves the details of a specific group
+      parameters:
+        - name: group_id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID of the group
+      responses:
+        '200':
+          description: Group details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Group'
+
+  /public/v1/groups/{group_id}/members:
+    get:
+      summary: Get group members
+      description: Retrieves the members of a specific group
+      parameters:
+        - name: group_id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID of the group
+        - name: admin
+          in: query
+          schema:
+            type: boolean
+          description: Filter by admin status
+      responses:
+        '200':
+          description: List of group members
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Group'
+
+  /public/v1/groups/{group_id}/memberships:
+    get:
+      summary: Get group memberships
+      description: Retrieves the memberships of a specific group
+      parameters:
+        - name: group_id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID of the group
+        - name: admin
+          in: query
+          schema:
+            type: boolean
+          description: Filter by admin status
+      responses:
+        '200':
+          description: List of group memberships
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Group'
+
+  /public/v1/groups/{group_id}/request:
+    post:
+      summary: Request group membership
+      description: Submits a request to join a specific group
+      parameters:
+        - name: group_id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID of the group
+      responses:
+        '200':
+          description: Created membership request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupMembershipRequest'
+
+  /public/v1/groups/{group_id}/requests:
+    get:
+      summary: Get group membership requests
+      description: Retrieves a list of membership requests for a specific group
+      parameters:
+        - name: group_id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID of the group
+      responses:
+        '200':
+          description: List of membership requests
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroupMembershipRequest'
+
+  /public/v1/groups/requests/{request_id}/approve:
+    post:
+      summary: Approve membership request
+      description: Approves a membership request for a group
+      parameters:
+        - name: request_id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID of the membership request
+      responses:
+        '200':
+          description: Request approved successfully
+
+  /public/v1/groups/requests/{request_id}/deny:
+    post:
+      summary: Deny membership request
+      description: Denies a membership request for a group
+      parameters:
+        - name: request_id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID of the membership request
+      responses:
+        '200':
+          description: Request denied successfully
+
+  /public/v1/user/group:
+    get:
+      summary: Get current user group
+      description: Gets the current user's group
+      responses:
+        '200':
+          description: Current user's group
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Group' 
