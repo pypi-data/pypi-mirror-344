@@ -1,0 +1,15 @@
+torch<2.3,>=2.2
+torchvision<0.18,>=0.17
+PennyLane<0.30,>=0.29
+PennyLane-SF<0.30,>=0.29
+numpy<1.24,>=1.23
+scipy<1.11,>=1.10
+sympy>=1.10
+
+[dev]
+pytest
+black
+flake8
+mypy
+pre-commit
+pytest-cov

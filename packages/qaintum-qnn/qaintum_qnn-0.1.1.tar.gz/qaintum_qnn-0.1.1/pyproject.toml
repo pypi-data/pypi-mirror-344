@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qaintum_qnn"
+version = "0.1.1"
+description = "Quantum Neural Networks (QNN) framework for quantum-enhanced machine learning."
+authors = [
+    {name = "Sophie Choe", email = "sophie.choe@qaintum.ai"},
+    {name = "Alex Olivas", email = "alex.r.olivas@gmail.com"},
+    {name = "Max Ivry", email = "maxssivry@gmail.com"},
+    {name = "B R Nikilesh", email = "brnikilesh7@gmail.com"},
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+dependencies = [
+    "torch>=2.2,<2.3",
+    "torchvision>=0.17,<0.18",
+    "PennyLane>=0.29,<0.30",
+    "PennyLane-SF>=0.29,<0.30",
+    "numpy>=1.23,<1.24",
+    "scipy>=1.10,<1.11",
+    "sympy>=1.10",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+    "mypy",
+    "pre-commit",
+    "pytest-cov",
+]
+
+[tool.setuptools]
+packages = {find = {}}
+
+[tool.black]
+line-length = 88
+
+[tool.flake8]
+max-line-length = 88
+exclude = [".git", "__pycache__", "build", "dist"]
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+addopts = "--cov=qnn --cov-report=term-missing"  # Enable coverage reporting
+testpaths = ["tests"]  # Specify the directory containing tests
+filterwarnings = [
+    "ignore::DeprecationWarning",  # Suppress all DeprecationWarnings
+]
+
+[project.urls]
+Homepage = "https://github.com/qaintumai/qaintum-ai/tree/main/qnn-container"
+Documentation = "https://github.com/qaintumai/qaintum-ai/tree/main/qnn-container/docs"
+Repository = "https://github.com/qaintumai/qaintum-ai/tree/main/qnn-container"

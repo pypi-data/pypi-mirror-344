@@ -1,0 +1,5 @@
+dist
+docs
+qaintum_qnn
+qnn_examples
+tests
