@@ -1,0 +1,12 @@
+asreview_dory-1.0rc1.dist-info/licenses/LICENSE,sha256=woyyC0BqdSA4gqlv-6eOqPBVbbWk8VegGgUWJHgW3_s,1077
+asreviewcontrib/dory/_version.py,sha256=LrTU4dU0kcI--Tf8-xlaI8gLkT5GE48vda1lP62Lcrc,516
+asreviewcontrib/dory/entrypoint.py,sha256=ahsD5G_BC_Q1XmS_goFP1zY8CQzKZ21JOurm6madQTw,2592
+asreviewcontrib/dory/classifiers/adaboost.py,sha256=TY8ukve0dq8zwzID22T53ToJAvMngloJhh9pHYZKsgs,1123
+asreviewcontrib/dory/classifiers/neural_networks.py,sha256=tHy5s4X46at1jEnEQrpMqStdel37D_amPWWxZW2P-c4,5467
+asreviewcontrib/dory/classifiers/xgboost.py,sha256=tjkxrqvNM5-WzyflImZdgUon2pXAGaQsKWUwFWskdII,1710
+asreviewcontrib/dory/feature_extractors/sentence_transformers.py,sha256=LiiTzGdJcpf32AXDujC03eOj9huFAdoX9BjrqKbghsE,7636
+asreview_dory-1.0rc1.dist-info/METADATA,sha256=1Yt3ZHil9KOyHAV_ghpRQvyD_NpzQ8WDkQu4wKmk1yg,3465
+asreview_dory-1.0rc1.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+asreview_dory-1.0rc1.dist-info/entry_points.txt,sha256=9FCDqY_xLA2w5lWAI0tUbUz-DYLiJEHNEtV2VtIeKdw,932
+asreview_dory-1.0rc1.dist-info/top_level.txt,sha256=-csz-bYFHwIuinKUJ9gUZ_RbXwYqB80-4MPymSjd_Tg,16
+asreview_dory-1.0rc1.dist-info/RECORD,,
