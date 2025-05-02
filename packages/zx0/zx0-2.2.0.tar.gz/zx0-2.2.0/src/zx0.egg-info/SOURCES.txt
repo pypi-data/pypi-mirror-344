@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/zx0/__init__.py
+src/zx0/compress.py
+src/zx0/optimize.py
+src/zx0/zx0.py
+src/zx0/zx0_common.py
+src/zx0.egg-info/PKG-INFO
+src/zx0.egg-info/SOURCES.txt
+src/zx0.egg-info/dependency_links.txt
+src/zx0.egg-info/entry_points.txt
+src/zx0.egg-info/top_level.txt
