@@ -1,0 +1,140 @@
+name: Build and upload to PyPI
+
+# Build on every branch push, tag push, and pull request change:
+# on: [push, pull_request]
+# Alternatively, to publish when a (published) GitHub Release is created, use the following:
+on:
+  pull_request:
+      branches:
+        - master
+  release:
+    types:
+      - published
+
+jobs:
+  build_wheels:
+    name: Build wheels on ${{ matrix.os }} for ${{ matrix.pyver }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-13, macos-14]
+        pyver: ['cp39', 'cp310', 'cp311', 'cp312', 'cp313']
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Miniconda
+        if: runner.os == 'Windows'
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: openblas
+          auto-activate-base: false
+          channels: conda-forge
+          conda-remove-defaults: true
+
+      - uses: actions/setup-python@v5
+        name: Install Python
+        with:
+          python-version: '3.10'
+
+      - name: Mac os deployment target
+        if: runner.os == 'macOS'
+        run: |
+          if [[ ${{ matrix.os }} == "macos-13" ]]; then
+            {
+              echo "MACOSX_DEPLOYMENT_TARGET=13.0"
+            } >> "$GITHUB_ENV"
+          fi
+
+          if [[ ${{ matrix.os}} == "macos-14" ]]; then
+            {
+              echo "MACOSX_DEPLOYMENT_TARGET=14.0"
+            } >> "$GITHUB_ENV"
+          fi
+
+      - name: Build wheels
+        uses: pypa/cibuildwheel@v2.21.3
+
+        env:
+          CIBW_BUILD_FRONTEND: "build"
+          CIBW_BUILD: ${{matrix.pyver}}-*
+          CIBW_MANYLINUX_X86_64_IMAGE: manylinux_2_28
+          CIBW_SKIP: "pp* *-musllinux_*"
+          CIBW_ARCHS: auto64
+
+          CIBW_REPAIR_WHEEL_COMMAND_WINDOWS: delvewheel repair -w {dest_dir} {wheel} --add-path C:\Miniconda\envs\openblas\Library\lib\bin
+          CIBW_REPAIR_WHEEL_COMMAND_MACOS: DYLD_LIBRARY_PATH=/usr/local/lib/ delocate-wheel --require-archs {delocate_archs} -w {dest_dir} -v {wheel}
+          CIBW_BEFORE_BUILD_WINDOWS: >
+                                    pip install delvewheel &&
+                                    conda install libblas=*=*openblas blas=*=*openblas pkgconfig
+          CIBW_ENVIRONMENT_WINDOWS: PKG_CONFIG_PATH="C:\Miniconda\envs\openblas\Library\\lib\\pkgconfig;$PKG_CONFIG_PATH"
+          CIBW_BEFORE_BUILD_LINUX: dnf install openblas-devel -y
+          CIBW_BEFORE_BUILD_MACOS: brew install libomp
+          CIBW_BEFORE_TEST: pip install pytest
+          CIBW_TEST_EXTRAS: test
+          CIBW_TEST_COMMAND: pytest {package} --verbose
+
+      - name: Test against oldest supported numpy version
+        if: ${{ matrix.pyver == 'cp310' }}
+        shell: bash
+        run: |
+            python -m pip install ./wheelhouse/*${{matrix.pyver}}*.whl
+            python -m pip install numpy==1.21.3 scipy==1.8 pillow==9.0 pytest
+            pytest .
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cibw-${{ matrix.os }}-${{ matrix.pyver }}
+          path: ./wheelhouse/*.whl
+
+  build_sdist:
+    name: Build source distribution
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        name: Install Python
+        with:
+          python-version: '3.10'
+
+      - name: Build sdist
+        run: |
+          python -m pip install build
+          sudo apt install libopenblas-dev
+          python -m build --sdist
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cibw-sdist
+          path: dist/*.tar.gz
+
+  merge:
+    needs: [build_wheels, build_sdist]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge Artifacts
+        uses: actions/upload-artifact/merge@v4
+        with:
+          name: artifacts
+          pattern: cibw-*
+
+  upload_pypi:
+    needs: [build_wheels, build_sdist]
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
+
+    # upload to PyPI on every tag starting with 'v'
+    # if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags/v')
+    # alternatively, to publish when a GitHub Release is created, use the following rule:
+    if: github.event_name == 'release' && github.event.action == 'published'
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          pattern: cibw-*
+          merge-multiple: true
+
+      - uses: pypa/gh-action-pypi-publish@release/v1
