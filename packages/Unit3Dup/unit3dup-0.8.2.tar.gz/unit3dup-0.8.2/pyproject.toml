@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["dependencies"]
+name = "Unit3Dup"
+version = "0.8.2"
+description = "An uploader for the Unit3D torrent tracker"
+readme = "README.rst"
+requires-python = ">=3.10"
+license =  "MIT"
+
+authors = [
+  { name = "Parzival" }
+]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["view*", "common*", "unit3dup*"]
+
+[project.urls]
+Homepage = "https://github.com/31December99/Unit3Dup"
+
+[project.scripts]
+unit3Dup = "start:main"
