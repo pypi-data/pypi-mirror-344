@@ -1,0 +1,201 @@
+test_find_visible_residues:
+  -
+    id: origin-in
+    grid:
+      center_A: [0.0, 0.0, 0.0]
+      length_A: 8.1
+    sphere:
+      center_A: [0.0, 0.0, 0.0]
+      radius_A: 4
+    expected: True
+  -
+    id: origin-out
+    grid:
+      center_A: [0.0, 0.0, 0.0]
+      length_A: 7.9
+    sphere:
+      center_A: [0.0, 0.0, 0.0]
+      radius_A: 4
+    expected: False
+  -
+    id: origin-out
+    grid:
+      center_A: [0.2, 0.0, 0.0]
+      length_A: 8.1
+    sphere:
+      center_A: [0.0, 0.0, 0.0]
+      radius_A: 4
+    expected: False
+  -
+    id: origin-out
+    grid:
+      center_A: [0.0, 0.2, 0.0]
+      length_A: 8.1
+    sphere:
+      center_A: [0.0, 0.0, 0.0]
+      radius_A: 4
+    expected: False
+  -
+    id: origin-out
+    grid:
+      center_A: [0.0, 0.0, 0.2]
+      length_A: 8.1
+    sphere:
+      center_A: [0.0, 0.0, 0.0]
+      radius_A: 4
+    expected: False
+  -
+    id: x-axis-in
+    grid:
+      center_A: [1.0, 0.0, 0.0]
+      length_A: 8.1
+    sphere:
+      center_A: [1.0, 0.0, 0.0]
+      radius_A: 4
+    expected: True
+  -
+    id: x-axis-out
+    grid:
+      center_A: [1.0, 0.0, 0.0]
+      length_A: 7.9
+    sphere:
+      center_A: [1.0, 0.0, 0.0]
+      radius_A: 4
+    expected: False
+  -
+    id: x-axis-out
+    grid:
+      center_A: [1.2, 0.0, 0.0]
+      length_A: 8.1
+    sphere:
+      center_A: [1.0, 0.0, 0.0]
+      radius_A: 4
+    expected: False
+  -
+    id: x-axis-out
+    grid:
+      center_A: [1.0, 0.2, 0.0]
+      length_A: 8.1
+    sphere:
+      center_A: [1.0, 0.0, 0.0]
+      radius_A: 4
+    expected: False
+  -
+    id: x-axis-out
+    grid:
+      center_A: [1.0, 0.0, 0.2]
+      length_A: 8.1
+    sphere:
+      center_A: [1.0, 0.0, 0.0]
+      radius_A: 4
+    expected: False
+  -
+    id: y-axis-in
+    grid:
+      center_A: [0.0, 1.0, 0.0]
+      length_A: 8.1
+    sphere:
+      center_A: [0.0, 1.0, 0.0]
+      radius_A: 4
+    expected: True
+  -
+    id: y-axis-out
+    grid:
+      center_A: [0.0, 1.0, 0.0]
+      length_A: 7.9
+    sphere:
+      center_A: [0.0, 1.0, 0.0]
+      radius_A: 4
+    expected: False
+  -
+    id: y-axis-out
+    grid:
+      center_A: [0.2, 1.0, 0.0]
+      length_A: 8.1
+    sphere:
+      center_A: [0.0, 1.0, 0.0]
+      radius_A: 4
+    expected: False
+  -
+    id: y-axis-out
+    grid:
+      center_A: [0.0, 1.2, 0.0]
+      length_A: 8.1
+    sphere:
+      center_A: [0.0, 1.0, 0.0]
+      radius_A: 4
+    expected: False
+  -
+    id: y-axis-out
+    grid:
+      center_A: [0.0, 1.0, 0.2]
+      length_A: 8.1
+    sphere:
+      center_A: [0.0, 1.0, 0.0]
+      radius_A: 4
+    expected: False
+  -
+    id: z-axis-in
+    grid:
+      center_A: [0.0, 0.0, 1.0]
+      length_A: 8.1
+    sphere:
+      center_A: [0.0, 0.0, 1.0]
+      radius_A: 4
+    expected: True
+  -
+    id: z-axis-out
+    grid:
+      center_A: [0.0, 0.0, 1.0]
+      length_A: 7.9
+    sphere:
+      center_A: [0.0, 0.0, 1.0]
+      radius_A: 4
+    expected: False
+  -
+    id: z-axis-out
+    grid:
+      center_A: [0.2, 0.0, 1.0]
+      length_A: 8.1
+    sphere:
+      center_A: [0.0, 0.0, 1.0]
+      radius_A: 4
+    expected: False
+  -
+    id: z-axis-out
+    grid:
+      center_A: [0.0, 0.2, 1.0]
+      length_A: 8.1
+    sphere:
+      center_A: [0.0, 0.0, 1.0]
+      radius_A: 4
+    expected: False
+  -
+    id: z-axis-out
+    grid:
+      center_A: [0.0, 0.0, 1.2]
+      length_A: 8.1
+    sphere:
+      center_A: [0.0, 0.0, 1.0]
+      radius_A: 4
+    expected: False
+  -
+    id: visible-rule-any-in
+    grid:
+      center_A: [0.0, 0.0, 0.0]
+      length_A: 8
+    sphere:
+      center_A: [0.0, 0.0, 6.0]
+      radius_A: 2.1
+    visible_rule: any
+    expected: True
+  -
+    id: visible-rule-any-out
+    grid:
+      center_A: [0.0, 0.0, 0.0]
+      length_A: 8
+    sphere:
+      center_A: [0.0, 0.0, 6.0]
+      radius_A: 1.9
+    visible_rule: any
+    expected: False
