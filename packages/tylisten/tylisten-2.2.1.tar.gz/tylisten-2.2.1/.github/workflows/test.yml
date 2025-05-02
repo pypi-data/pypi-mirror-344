@@ -1,0 +1,36 @@
+name: Test
+
+on:
+  pull_request:
+    types:
+      - review_requested
+    branches:
+      - beta
+      - release
+
+concurrency:
+  group: test-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.13", "3.9"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+          enable-cache: true
+
+      - name: Install and Test
+        run: |
+          echo "::group::Install Dependencies"
+          uv sync --all-extras --group test
+          echo "::endgroup::"
+
+          echo "::group::pytest outputs"
+          uv run pytest tests
+          echo "::endgroup::"
