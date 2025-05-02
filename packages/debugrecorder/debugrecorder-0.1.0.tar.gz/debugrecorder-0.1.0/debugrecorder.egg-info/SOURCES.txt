@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+debugrecorder/__init__.py
+debugrecorder/debug_recorder.py
+debugrecorder/test.py
+debugrecorder.egg-info/PKG-INFO
+debugrecorder.egg-info/SOURCES.txt
+debugrecorder.egg-info/dependency_links.txt
+debugrecorder.egg-info/top_level.txt
