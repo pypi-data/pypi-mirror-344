@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mymtools
+Version: 0.0.1
+Summary: This is my Python Package.
+Home-page: 
+Author: PARK SOON WON
+Author-email: pswonf@gmail.com
+License: MIT
+Keywords: mtools
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
