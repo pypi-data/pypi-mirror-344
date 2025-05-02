@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+AiSnake.egg-info/PKG-INFO
+AiSnake.egg-info/SOURCES.txt
+AiSnake.egg-info/dependency_links.txt
+AiSnake.egg-info/entry_points.txt
+AiSnake.egg-info/requires.txt
+AiSnake.egg-info/top_level.txt
+ai_snake/__init__.py
+ai_snake/interpreter.py
+ai_snake/parser.py
