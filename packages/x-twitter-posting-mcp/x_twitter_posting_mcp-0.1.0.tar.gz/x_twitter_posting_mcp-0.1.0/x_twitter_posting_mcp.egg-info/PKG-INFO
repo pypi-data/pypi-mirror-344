@@ -1,0 +1,147 @@
+Metadata-Version: 2.4
+Name: x-twitter-posting-mcp
+Version: 0.1.0
+Summary: An MCP server for posting tweets and threads to X (Twitter).
+Author-email: DevRico003 <devrico003@example.com>
+Project-URL: Homepage, https://github.com/DevRico003/x-twitter-posting-mcp
+Project-URL: Bug Tracker, https://github.com/DevRico003/x-twitter-posting-mcp/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Internet
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.5.0
+Requires-Dist: tweepy>=4.14.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: httpx>=0.27.0
+Dynamic: license-file
+
+# X Twitter Posting MCP Server
+
+An MCP (Model Context Protocol) server that allows language models to post tweets and threads to X (formerly Twitter).
+
+## Features
+
+*   **Post Single Tweet**: Provides a tool (`post_tweet`) to post a single status update.
+*   **Post Thread**: Provides a tool (`post_thread`) to post a sequence of tweets as a thread.
+
+## Prerequisites
+
+*   Python 3.10+
+*   An X Developer account with API v2 access (Essential access or higher).
+*   API Key, API Key Secret, Access Token, and Access Token Secret from your X Developer App dashboard.
+
+## Installation
+
+```bash
+pip install x-twitter-posting-mcp
+```
+
+*(Note: This package is not yet published on PyPI. This is the intended installation command once published.)*
+
+Alternatively, install directly from source:
+
+```bash
+git clone https://github.com/DevRico003/x-twitter-posting-mcp.git
+cd x-twitter-posting-mcp
+pip install .
+```
+
+## Configuration
+
+This server requires X API credentials to function. Set the following environment variables:
+
+*   `TWITTER_API_KEY`: Your X App's API Key
+*   `TWITTER_API_KEY_SECRET`: Your X App's API Key Secret
+*   `TWITTER_ACCESS_TOKEN`: Your X App's Access Token
+*   `TWITTER_ACCESS_TOKEN_SECRET`: Your X App's Access Token Secret
+
+You can set these directly in your environment or place them in a `.env` file in the directory where you run the server. See `.env.example` for a template.
+
+## Usage
+
+### Running the Server Standalone
+
+You can run the server directly using the installed script:
+
+```bash
+x-twitter-posting-mcp
+```
+
+This will start the server using the default `stdio` transport.
+
+### Integrating with MCP Clients (e.g., Claude Desktop)
+
+Configure your MCP client to launch the server. Add an entry similar to this in your client's configuration (e.g., `claude_desktop_config.json`).
+
+**Method 1: Using the installed script (if in PATH)**
+
+This assumes `x-twitter-posting-mcp` is installed in a location accessible by your system's PATH and you have configured credentials via a `.env` file or system environment variables.
+
+```json
+{
+  "mcpServers": {
+    "x-twitter-posting": {
+      "command": "x-twitter-posting-mcp"
+      // Optional: Specify absolute path if needed
+      // "command": "/path/to/your/virtualenv/bin/x-twitter-posting-mcp"
+    }
+  }
+}
+```
+
+**Method 2: Using `uv run` and passing credentials directly (Recommended for Claude Desktop)**
+
+This method uses `uv` to run the server directly from the source directory and passes credentials securely within the configuration, avoiding the need for a separate `.env` file for the client environment.
+
+```json
+{
+  "mcpServers": {
+    "x-twitter-posting": {
+      "command": "uv", 
+      "args": [
+        "run",
+        "x-twitter-posting-mcp"
+      ],
+      "env": {
+        "TWITTER_API_KEY": "YOUR_API_KEY_HERE",
+        "TWITTER_API_KEY_SECRET": "YOUR_API_KEY_SECRET_HERE",
+        "TWITTER_ACCESS_TOKEN": "YOUR_ACCESS_TOKEN_HERE",
+        "TWITTER_ACCESS_TOKEN_SECRET": "YOUR_ACCESS_TOKEN_SECRET_HERE"
+      }
+    }
+  }
+}
+```
+
+After adding the configuration, restart your MCP client. The `post_tweet` and `post_thread` tools should now be available to the language model.
+
+## Tools Provided
+
+*   **`post_tweet(text: str)`**: Posts a single tweet.
+    *   `text`: The content of the tweet (max 280 characters).
+    *   Returns: Confirmation message with Tweet ID or an error message.
+*   **`post_thread(tweets: List[str])`**: Posts a thread.
+    *   `tweets`: A list of strings, each representing a tweet in the thread. The first tweet is the head, subsequent tweets are replies.
+    *   Returns: Confirmation message with all Tweet IDs or an error message (may indicate partial posting).
+
+## Development
+
+1.  Clone the repository.
+2.  Create and activate a virtual environment: `python -m venv .venv && source .venv/bin/activate` (or `.venv\Scripts\activate` on Windows).
+3.  Install dependencies: `pip install -e ".[dev]"` (You might need to define a `[dev]` extra in `pyproject.toml` for development dependencies like `pytest`).
+4.  Create a `.env` file with your credentials.
+5.  Run tests (TODO: Add tests).
+6.  Run the server: `python -m x_twitter_posting_mcp.server`
+
+## License
+
+TODO: Specify License (e.g., MIT License). See `LICENSE` file.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request. (TODO: Add contribution guidelines).

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "x-twitter-posting-mcp"
+version = "0.1.0"
+authors = [
+  { name="DevRico003", email="devrico003@example.com" },
+]
+description = "An MCP server for posting tweets and threads to X (Twitter)."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Communications :: Chat",
+    "Topic :: Internet",
+    "Development Status :: 3 - Alpha", # Initial development stage
+]
+dependencies = [
+    "mcp>=1.5.0", # Or the latest compatible version of the MCP SDK
+    "tweepy>=4.14.0", # Or the latest compatible version of Tweepy
+    "python-dotenv>=1.0.0", # For handling environment variables (API keys)
+    "httpx>=0.27.0", # Required by MCP SDK or Tweepy potentially
+]
+
+[project.urls]
+"Homepage" = "https://github.com/DevRico003/x-twitter-posting-mcp"
+"Bug Tracker" = "https://github.com/DevRico003/x-twitter-posting-mcp/issues"
+
+[project.scripts]
+x-twitter-posting-mcp = "x_twitter_posting_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["x_twitter_posting_mcp*"]
+exclude = ["tests*"]
