@@ -1,0 +1,9 @@
+numpy>=1.21.0
+pandas>=1.3.0
+xarray>=0.20.0
+netCDF4>=1.6.0
+matplotlib>=3.5.0
+cartopy>=0.20.0
+filewise>=3.7.0
+pygenutils>=15.10.0
+paramlib>=3.4.0
