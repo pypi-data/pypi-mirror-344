@@ -1,0 +1,10 @@
+LICENCE
+README.md
+setup.py
+rifgenerator/__init__.py
+rifgenerator/qrcode.py
+rifgenerator.egg-info/PKG-INFO
+rifgenerator.egg-info/SOURCES.txt
+rifgenerator.egg-info/dependency_links.txt
+rifgenerator.egg-info/requires.txt
+rifgenerator.egg-info/top_level.txt

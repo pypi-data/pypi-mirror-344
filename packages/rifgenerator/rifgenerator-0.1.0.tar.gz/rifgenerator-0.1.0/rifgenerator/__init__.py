@@ -1,0 +1,1 @@
+from rifgenerator.qrcode import qrcode
