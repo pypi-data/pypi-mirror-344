@@ -1,0 +1,7 @@
+README.md
+setup.py
+zamzar_sdk.egg-info/PKG-INFO
+zamzar_sdk.egg-info/SOURCES.txt
+zamzar_sdk.egg-info/dependency_links.txt
+zamzar_sdk.egg-info/requires.txt
+zamzar_sdk.egg-info/top_level.txt
