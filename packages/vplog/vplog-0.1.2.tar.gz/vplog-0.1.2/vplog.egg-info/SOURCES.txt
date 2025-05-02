@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+vplog/__init__.py
+vplog.egg-info/PKG-INFO
+vplog.egg-info/SOURCES.txt
+vplog.egg-info/dependency_links.txt
+vplog.egg-info/requires.txt
+vplog.egg-info/top_level.txt

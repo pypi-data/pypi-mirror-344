@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name            = "vplog"         # 首次发布可用，同名不可与现有包冲突
+version         = "0.1.2"         # 发布后必须递增
+description     = "Redirects print() to timestamped log files."
+readme          = "README.md"
+authors         = [{ name="vofen", email="vofen430181@gmail.com" }]
+license         = { file = "LICENSE" }
+requires-python = ">=3.8"
+dependencies    = ["loguru>=0.7"]
