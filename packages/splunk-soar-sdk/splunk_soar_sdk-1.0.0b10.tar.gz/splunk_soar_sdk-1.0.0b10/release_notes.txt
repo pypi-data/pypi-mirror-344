@@ -1,0 +1,23 @@
+# [1.0.0-beta.10](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.9...1.0.0-beta.10) (2025-05-01)
+
+
+### Bug Fixes
+
+* **ci:** generate release notes inside of a heredoc ([2509dbf](https://github.com/phantomcyber/splunk-soar-sdk/commit/2509dbfbef389f271568dfa87208eca9ee566843))
+* **docs:** make README links absolute, fix .md lint warnings ([f509a8d](https://github.com/phantomcyber/splunk-soar-sdk/commit/f509a8d392b291c05ca02a1b63e5e2888a9a3e37))
+
+
+
+
+
+# [1.0.0-beta.10](https://github.com/phantomcyber/splunk-soar-sdk/compare/1.0.0-beta.9...1.0.0-beta.10) (2025-05-01)
+
+
+### Bug Fixes
+
+* **ci:** generate release notes inside of a heredoc ([2509dbf](https://github.com/phantomcyber/splunk-soar-sdk/commit/2509dbfbef389f271568dfa87208eca9ee566843))
+* **docs:** make README links absolute, fix .md lint warnings ([f509a8d](https://github.com/phantomcyber/splunk-soar-sdk/commit/f509a8d392b291c05ca02a1b63e5e2888a9a3e37))
+
+
+
+
