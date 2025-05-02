@@ -1,0 +1,3 @@
+[console_scripts]
+unitmcp = unitmcp.main:main
+unitmcp-dsl = unitmcp.cli:main
