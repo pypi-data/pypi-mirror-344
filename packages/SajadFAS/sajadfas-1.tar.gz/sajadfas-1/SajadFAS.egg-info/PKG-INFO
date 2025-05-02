@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: SajadFAS
+Version: 1
+Summary: Lib Sajad SxTeam
+Author: SajadFAS
+Classifier: Programming Language :: Python :: 3
+Dynamic: author
+Dynamic: classifier
+Dynamic: summary
