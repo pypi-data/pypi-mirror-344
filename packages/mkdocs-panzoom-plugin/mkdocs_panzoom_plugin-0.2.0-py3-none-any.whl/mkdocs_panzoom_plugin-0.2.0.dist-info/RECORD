@@ -1,0 +1,15 @@
+mkdocs_panzoom_plugin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkdocs_panzoom_plugin/exclude.py,sha256=5UCiA_yH2sZP5SWeIy1P59JHqG2o0GFuCcwKj0UYLF4,2157
+mkdocs_panzoom_plugin/html_page.py,sha256=BWjxxWeOgBudO664Optvl0m8t0F9JT-6o_xrtmdYXsM,2879
+mkdocs_panzoom_plugin/panzoom_box.py,sha256=agugkoxvkWvgonruwD3eFiISyyLXdcgFoO_C5ZBPd9U,6842
+mkdocs_panzoom_plugin/plugin.py,sha256=dLh08806oadYUVadkD8F_q4rU91eR-g7KlBBpeX6pyU,2869
+mkdocs_panzoom_plugin/custom/panzoom.css,sha256=j-UEJblrBxTX_3VNKePx3L-1DQQ_31x-F2PkAi5TdYw,1790
+mkdocs_panzoom_plugin/custom/zoompan.js,sha256=3uPXk0kkAazeVFKzgKkVHr22ybKXwGRu_VjG_42RD8I,4040
+mkdocs_panzoom_plugin/panzoom/LICENCE,sha256=DLyGOLv2GmUMq_YmY0vDlHJia6OstGO285yXgJjogbo,1088
+mkdocs_panzoom_plugin/panzoom/panzoom.min.js,sha256=MljljUDFuasJ3aidHO2VyLQqvNotFC3VpkmYCOEQ6QQ,33750
+mkdocs_panzoom_plugin-0.2.0.dist-info/licenses/LICENSE,sha256=INvKq2dMHCaKg7_1_JG28tf1rQFBMBOaO9w3pO5z7VE,1064
+mkdocs_panzoom_plugin-0.2.0.dist-info/METADATA,sha256=uuCcF2yPJB9UB0ynzTdLWjJEYHgHpOiAQ2fkl7hCgsA,3068
+mkdocs_panzoom_plugin-0.2.0.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+mkdocs_panzoom_plugin-0.2.0.dist-info/entry_points.txt,sha256=XaIYL_nkRdpJX67ZJLmodfhnw4p4-ibrd09FwBY-D4o,70
+mkdocs_panzoom_plugin-0.2.0.dist-info/top_level.txt,sha256=iwlbOl53-KnpOCunD0m_T04DbKggs9JOzea6EdAJFkY,22
+mkdocs_panzoom_plugin-0.2.0.dist-info/RECORD,,
