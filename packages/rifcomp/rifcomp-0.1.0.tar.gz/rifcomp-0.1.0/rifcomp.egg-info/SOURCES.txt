@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.py
+rifcomp/__init__ — копия.py
+rifcomp/__init__.py
+rifcomp/utils — копия.py
+rifcomp/utils.py
+rifcomp.egg-info/PKG-INFO
+rifcomp.egg-info/SOURCES.txt
+rifcomp.egg-info/dependency_links.txt
+rifcomp.egg-info/requires.txt
+rifcomp.egg-info/top_level.txt
