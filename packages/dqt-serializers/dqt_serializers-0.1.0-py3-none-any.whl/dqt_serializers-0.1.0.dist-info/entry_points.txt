@@ -1,0 +1,3 @@
+[dqt.serializers]
+csv = dqt_serializers.csv_serializer:CsvSerializer
+json = dqt_serializers.json_serializer:JsonSerializer

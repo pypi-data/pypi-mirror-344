@@ -1,0 +1,9 @@
+dqt_serializers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dqt_serializers/base.py,sha256=UiaORGlfr8GwWl_Sf9mTI6bQKvyAUfkO8Gyg6t1mDjo,197
+dqt_serializers/csv_serializer.py,sha256=805G_Q3L4Pz6DyNP9tmbLwk9poSmSe-l1O9W5Vyk2jw,658
+dqt_serializers/json_serializer.py,sha256=IH-ndtEvZcJINk8CV7l9qURXzodrLLy0lv5LK9lbJDk,633
+dqt_serializers-0.1.0.dist-info/METADATA,sha256=cXsDDIto1r-z0pywLWEVG18dqLlGvsUDg-IIBA3rEJg,141
+dqt_serializers-0.1.0.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+dqt_serializers-0.1.0.dist-info/entry_points.txt,sha256=68eSrEmtqROqjE6L_iJbLGOWfLAAMzx9jPWS7HB9hR4,123
+dqt_serializers-0.1.0.dist-info/top_level.txt,sha256=k5TcloHGOK8NWcKuquZHnhgREEGaRJK3hKycMF4WUZ4,16
+dqt_serializers-0.1.0.dist-info/RECORD,,
