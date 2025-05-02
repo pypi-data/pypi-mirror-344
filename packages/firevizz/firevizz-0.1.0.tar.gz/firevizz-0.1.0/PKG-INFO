@@ -1,0 +1,127 @@
+Metadata-Version: 2.4
+Name: firevizz
+Version: 0.1.0
+Summary: A Python library for visualizing and analyzing fire detection data
+Home-page: https://github.com/RipunjayS109/firevizz
+Author: Ripunjay Singh
+Author-email: ripunjaysingh2104114@dei.ac.in
+Keywords: fire detection,visualization,mapping,sensor data
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: folium>=0.12.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: joblib>=1.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+![](https://raw.githubusercontent.com/RipunjayS109/firevizz/main/bannerFV.png.jpg)
+
+# 🔥 FireVizz
+
+
+A Python library for **visualizing** and **analyzing fire detection data** from sensor networks.  
+
+---
+
+## ✨ Features
+
+- 🗺️ **Interactive map** visualization of fire sensor data  
+- 🤖 **Real-time fire prediction** using machine learning models  
+- 🌡️ **Heatmap** visualization for various sensor parameters  
+- 📤 Export of fire prediction coordinates and sensor data  
+- 🔌 Support for multiple sensor types (CO, air quality, temperature, etc.)  
+
+---
+
+## 📦 Installation
+
+```bash
+pip install firevizz
+```
+
+---
+
+## 🚀 Usage
+
+```python
+from firevizz import FireVizz
+
+# Initialize the visualizer
+visualizer = FireVizz(
+    data_path="sensor_data.csv",
+    model_path="fire_detection_model.pkl"  # Optional
+)
+
+# Create an interactive map
+visualizer.create_map("fire_map.html")
+
+# Export fire predictions to CSV
+visualizer.export_fire_predictions("fire_locations.csv")
+```
+
+---
+
+## 🧾 Input Data Format
+
+The input CSV file should contain the following columns:
+- 📍 `latitude`
+- 📍 `longitude`
+- 🧪 `co_level`
+- 🌫️ `air_quality`
+- 🌡️ `temperature`
+- 💧 `humidity`
+- ⚖️ `pressure`
+- 🧴 `voc_level`
+
+---
+
+## 📊 Output
+
+1. **Interactive HTML map** showing:
+   - 📍 Sensor locations  
+   - 🔥 Fire predictions  
+   - 🌡️ Heatmaps for various parameters  
+   - 🧭 Layer controls for toggling different visualizations  
+
+2. **CSV file** containing:
+   - 🌍 GPS coordinates of predicted fire locations  
+   - 📋 Associated sensor readings  
+
+---
+
+## 🖼️ Example
+
+Here’s a preview of the generated interactive fire map:
+
+![FireVizz Output Map](https://raw.githubusercontent.com/RipunjayS109/firevizz/main/Output_Map_exp.png)  
+*Example fire prediction and sensor overlay map.*
+
+> ℹ️ Don't forget to open `fire_map.html` in your browser to explore the interactive features!
+
+---
+
+## 📄 License
+
+📝 MIT License  
+

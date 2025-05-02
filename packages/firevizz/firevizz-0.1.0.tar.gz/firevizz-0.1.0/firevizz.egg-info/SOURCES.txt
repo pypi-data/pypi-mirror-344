@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+firevizz/__init__.py
+firevizz/firevizz.py
+firevizz.egg-info/PKG-INFO
+firevizz.egg-info/SOURCES.txt
+firevizz.egg-info/dependency_links.txt
+firevizz.egg-info/requires.txt
+firevizz.egg-info/top_level.txt
