@@ -1,0 +1,2 @@
+[console_scripts]
+x-twitter-posting-mcp = x_twitter_posting_mcp.server:main
