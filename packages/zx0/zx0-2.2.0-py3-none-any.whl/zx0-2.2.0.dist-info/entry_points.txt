@@ -1,0 +1,2 @@
+[console_scripts]
+zx0 = zx0.zx0:main
