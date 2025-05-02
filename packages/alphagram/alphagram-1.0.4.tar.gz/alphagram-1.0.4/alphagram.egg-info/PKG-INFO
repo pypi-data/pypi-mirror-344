@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: alphagram
+Version: 1.0.4
+Summary: Easier access and Less Waits library for pyrogram
+Home-page: https://t.me/North_Yankton
+Author: Alpha
+Author-email: imr@outlook.in
+License: MIT
+Project-URL: Tracker, https://github.com/Alpha-Like/alphagram/issues
+Project-URL: Community, https://t.me/SpLBots
+Project-URL: Source, https://github.com/Alpha-Like/alphagram
+Project-URL: Documentation, https://t.me/SpLBots
+Keywords: alphagram library pyrogram tgcrypto telegram telethon python-telegram-bot
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: tgcrypto
+Requires-Dist: pyaes==1.6.1
+Requires-Dist: pysocks==1.7.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# alphagram <= advanced pyrogram
+
+## Less FloodWaits
+## Faster API Calls
+## Callables Made Easy 
