@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+definitions/__init__.py
+definitions/__main__.py
+definitions/config.py
+definitions_lib.egg-info/PKG-INFO
+definitions_lib.egg-info/SOURCES.txt
+definitions_lib.egg-info/dependency_links.txt
+definitions_lib.egg-info/requires.txt
+definitions_lib.egg-info/top_level.txt
+tests/test_generate.py
+tests/test_init.py
+tests/test_migrations.py
