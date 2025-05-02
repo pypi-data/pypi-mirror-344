@@ -1,0 +1,15 @@
+# forbid all
+
+**/*.*
+
+# allow subdirectories with a dot
+!**/*.*/
+!*.py
+!.gitignore
+!.python-version
+!pyproject.toml
+!uv.lock
+!*.template
+
+# forbid .venv
+.venv
