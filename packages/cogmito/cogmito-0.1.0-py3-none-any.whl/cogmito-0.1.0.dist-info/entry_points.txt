@@ -1,0 +1,3 @@
+[console_scripts]
+cogmito = cogmito.main:baslat
+
