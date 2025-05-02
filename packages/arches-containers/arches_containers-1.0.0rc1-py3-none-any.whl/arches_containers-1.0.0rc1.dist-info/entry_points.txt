@@ -1,0 +1,3 @@
+[console_scripts]
+act = arches_containers.main:main
+arches-containers = arches_containers.main:main
