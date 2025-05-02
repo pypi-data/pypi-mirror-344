@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+cfractions/__init__.py
+cfractions/_fractions.py
+cfractions/py.typed
+cfractions.egg-info/PKG-INFO
+cfractions.egg-info/SOURCES.txt
+cfractions.egg-info/dependency_links.txt
+cfractions.egg-info/not-zip-safe
+cfractions.egg-info/requires.txt
+cfractions.egg-info/top_level.txt
+src/cfractions.c
