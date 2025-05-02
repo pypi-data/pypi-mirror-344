@@ -1,0 +1,13 @@
+setup.py
+dqt_serializers/__init__.py
+dqt_serializers/base.py
+dqt_serializers/csv_serializer.py
+dqt_serializers/json_serializer.py
+dqt_serializers.egg-info/PKG-INFO
+dqt_serializers.egg-info/SOURCES.txt
+dqt_serializers.egg-info/dependency_links.txt
+dqt_serializers.egg-info/entry_points.txt
+dqt_serializers.egg-info/requires.txt
+dqt_serializers.egg-info/top_level.txt
+tests/test_csv_serializer.py
+tests/test_json_serializer.py
