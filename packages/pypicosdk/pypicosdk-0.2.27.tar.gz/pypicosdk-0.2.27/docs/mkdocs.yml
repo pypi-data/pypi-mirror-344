@@ -1,0 +1,35 @@
+site_name: pyPicoSDK
+
+theme:
+  name: readthedocs
+
+nav:
+  - Home: index.md
+  - Reference: 
+    - Introduction: ref/introduction.md
+    - PicoScope 6000 (A) Specific Functions: ref/ps6000a.md
+    - PicoScope 5000 (A) Specific Functions: ref/ps5000a.md
+    - General Conversions: ref/conversions.md
+    - General Constants: ref/constants.md
+  - Development: 
+    - Changelog: dev/changelog.md
+    - Current Support: dev/current.md
+    - Upcoming Roadmap: dev/roadmap.md
+
+
+plugins:
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [..]
+        options:
+          allow_inspection: true
+          docstring_style: google
+          show_bases: true
+          show_source: false
+          inherited_members: true
+          members_order: alphabetical
+          separate_signature: false
+          
+extra_css:
+- css/mkdocstrings.css
