@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+requestgo/__init__.py
+requestgo/core.py
+requestgo/response.py
+requestgo/utils.py
+requestgo.egg-info/PKG-INFO
+requestgo.egg-info/SOURCES.txt
+requestgo.egg-info/dependency_links.txt
+requestgo.egg-info/top_level.txt
+tests/test_basic.py
