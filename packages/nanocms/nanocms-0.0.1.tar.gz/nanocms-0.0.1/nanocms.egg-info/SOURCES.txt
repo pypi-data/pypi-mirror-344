@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+nanocms/__init__.py
+nanocms.egg-info/PKG-INFO
+nanocms.egg-info/SOURCES.txt
+nanocms.egg-info/dependency_links.txt
+nanocms.egg-info/top_level.txt

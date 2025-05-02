@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: nanocms
+Version: 0.0.1
+Summary: 🌈 A lightweight color management system written in Python - placeholder
+License-Expression: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
