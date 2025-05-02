@@ -1,0 +1,7 @@
+pyqrcode/__init__.py,sha256=B8GQhR2Nw-bM19rV-Nn6y7OWf8QpfUN2iSJfcgpG6Gk,29502
+pyqrcode/builder.py,sha256=xFhuhAko9yxi5ImWFAjVI140hitkHkEIJK1Sq918Am4,56292
+pyqrcode/tables.py,sha256=IJg6EexdyB_XRinZum86mnN9ikEMzjkLThC_XC2-9Yg,31446
+pyqrcode_binary-1.1.1.dist-info/METADATA,sha256=5cIEzL4Amym7EbWb1pQ1H_Jxm6YiwytIV2_zVwq9Lms,1084
+pyqrcode_binary-1.1.1.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+pyqrcode_binary-1.1.1.dist-info/top_level.txt,sha256=QV1Fwa868aKJ1IV0XBfjh81JTFdo0Of7vn1Do6uHF0c,9
+pyqrcode_binary-1.1.1.dist-info/RECORD,,
