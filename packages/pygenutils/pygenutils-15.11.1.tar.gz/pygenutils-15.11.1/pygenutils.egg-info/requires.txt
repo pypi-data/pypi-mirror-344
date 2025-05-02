@@ -1,0 +1,6 @@
+more_itertools>=10.0.0
+numpy<2.0.0,>=1.21.0
+pandas<2.0.0,>=1.3.0
+xarray>=0.20.0
+filewise>=3.7.0
+paramlib>=3.4.0
