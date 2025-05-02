@@ -1,0 +1,1 @@
+# ai_snake/__init__.py\n# (Empty file — marks ai_snake as a Python package)
