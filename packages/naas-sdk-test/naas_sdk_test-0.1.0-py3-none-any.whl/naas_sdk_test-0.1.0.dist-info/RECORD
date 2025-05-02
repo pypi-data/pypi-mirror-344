@@ -1,0 +1,6 @@
+naas_sdk_test/__init__.py,sha256=PUFwuhkV5vLcz90LpwNQWA_HGObTWU1NZuSqKuBPm-4,547
+naas_sdk_test/get_roaming_status.py,sha256=gB_ZgCYzR03PzIhNxTMBMMEEac30YZMQ1PSnCDIfJFo,2119
+naas_sdk_test/qod_create_session.py,sha256=2ldKIZv5aL9e_lj867Mrm_QhC1Ma_6QYunAw1ysXNCk,2131
+naas_sdk_test-0.1.0.dist-info/METADATA,sha256=D34PI6JPaZo6_HptXqXXLfKe5JNlM9unLHeQLETeD0Y,446
+naas_sdk_test-0.1.0.dist-info/WHEEL,sha256=fGIA9gx4Qxk2KDKeNJCbOEwSrmLtjWCwzBz351GyrPQ,88
+naas_sdk_test-0.1.0.dist-info/RECORD,,
