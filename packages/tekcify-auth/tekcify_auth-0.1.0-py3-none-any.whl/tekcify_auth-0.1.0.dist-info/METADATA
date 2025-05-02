@@ -1,0 +1,177 @@
+Metadata-Version: 2.4
+Name: tekcify-auth
+Version: 0.1.0
+Summary: Authentication library for Tekcify services
+Home-page: https://github.com/tekcify/tekcify-auth-python-library
+Author: Agboola Olamidipupo Favour
+Author-email: dipoagboola2019@campux.io
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Tekcify Auth Python Library
+
+An authentication library for Tekcify services that provides OAuth integration and authentication tools for Python applications.
+
+## Installation
+
+```bash
+pip install tekcify-auth
+```
+
+## Features
+
+- OAuth 2.0 authentication flow with Tekcify services
+- Token management and refresh
+- Framework-agnostic authentication decorator
+- Authentication caching to reduce API calls
+- Support for Flask, Django, FastAPI, and other web frameworks
+
+## Basic Usage
+
+### Initialize the Client
+
+```python
+from tekcify_auth import Tekcify
+
+# Initialize the SDK with your client credentials
+sdk = Tekcify(CLIENT_ID, CLIENT_SECRET)
+```
+
+### Generate Login URL
+
+```python
+from tekcify_auth.core.constants import SCOPES, RESPONSE_TYPES
+
+# Generate a login URL
+login_response = sdk.initialize_login(
+    scope=[SCOPES.EMAIL], 
+    response_type=RESPONSE_TYPES.CODE,
+    state="your-state",
+    redirect_url="http://localhost:3000/callback"
+)
+
+# Get the login URL to redirect the user
+login_url = login_response.json()["login_url"]
+```
+
+### Verify Authentication Code
+
+```python
+# After callback with code, verify authentication
+auth_result = sdk.verify_auth(authorization_code)
+
+# Get user information
+user_info = sdk.get_user_info()
+```
+
+## Authentication Decorator
+
+The library includes a versatile authentication decorator that works across web frameworks (Flask, Django, FastAPI) and features token caching to minimize API requests.
+
+### Features
+
+- **Framework Agnostic**: Works with Flask, Django, FastAPI, and other web frameworks
+- **Performance Optimized**: Caches authentication results to reduce API calls
+- **Flexible Auth Sources**: Extracts tokens from headers, query parameters, and cookies
+- **Scope Verification**: Optional scope-based authorization
+- **Async Support**: Works with both synchronous and asynchronous route handlers
+
+### Flask Example
+
+```python
+from flask import Flask, request, jsonify
+from tekcify_auth_decorator import tekcify_auth_required, TekcifyAuthError
+from tekcify import Tekcify
+
+app = Flask(__name__)
+tekcify_client = Tekcify("YOUR_CLIENT_ID", "YOUR_CLIENT_SECRET")
+
+@app.route('/protected')
+@tekcify_auth_required(tekcify_client=tekcify_client)
+def protected_route(user_info):
+    return jsonify({"message": "Authenticated", "user": user_info})
+
+@app.errorhandler(TekcifyAuthError)
+def handle_auth_error(e):
+    return jsonify({"error": str(e)}), 401
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+#### FastAPI Example
+
+```python
+from fastapi import FastAPI, Request, HTTPException
+from tekcify_auth_decorator import tekcify_auth_required, TekcifyAuthError
+from tekcify import Tekcify
+
+app = FastAPI()
+tekcify_client = Tekcify("YOUR_CLIENT_ID", "YOUR_CLIENT_SECRET")
+
+@app.get('/protected')
+@tekcify_auth_required(tekcify_client=tekcify_client)
+async def protected_route(request: Request, user_info: dict):
+    return {"message": "Authenticated", "user": user_info}
+
+# Exception handler
+@app.exception_handler(TekcifyAuthError)
+async def auth_exception_handler(request, exc):
+    return {"error": str(exc)}, 401
+```
+
+#### Django Example
+
+```python
+from django.http import JsonResponse
+from tekcify_auth_decorator import tekcify_auth_required, TekcifyAuthError
+from tekcify import Tekcify
+
+tekcify_client = Tekcify("YOUR_CLIENT_ID", "YOUR_CLIENT_SECRET")
+
+@tekcify_auth_required(tekcify_client=tekcify_client)
+def protected_view(request, user_info):
+    return JsonResponse({"message": "Authenticated", "user": user_info})
+```
+
+### Advanced Configuration
+
+The decorator accepts several configuration options:
+
+```python
+@tekcify_auth_required(
+    tekcify_client=client,      # Tekcify client instance or function returning one
+    cache_expiry=300,           # Token cache expiry in seconds (default: 5 minutes)
+    scopes=["email", "profile"] # Required scopes for the route
+)
+def protected_route(request, user_info):
+    # user_info contains the authenticated user's information
+    pass
+```
+
+### Error Handling
+
+The decorator raises `TekcifyAuthError` when authentication fails, which you can catch and handle appropriately in your application.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the terms of the MIT license.
