@@ -1,0 +1,9 @@
+cfractions/__init__.py,sha256=WrPQeYTO2g4SY1Q5PhKwlm-uhdSALT0oPGnG4AzR7TE,8852
+cfractions/_cfractions.cpython-310-aarch64-linux-gnu.so,sha256=b1f4fNeEPnfpwYzqVb14uS7q0QeOnMpTxsbIQ1uWzsk,352952
+cfractions/_fractions.py,sha256=MoOHYBtd5wi7o-0rrV1k_DQz7UO2eitIkjkB9_LMQEE,12516
+cfractions/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cfractions-2.4.1.dist-info/METADATA,sha256=Jycfc8hwhKxbSgiZFke2RL2FNKAlZhweRALtpP41TJ4,5889
+cfractions-2.4.1.dist-info/WHEEL,sha256=k76zMFIWBpmHvE1K5YBo8iYwk2V0o53XgLFieVmHi4c,153
+cfractions-2.4.1.dist-info/top_level.txt,sha256=-0o7heTWnRNqbvWo9xB3az4Pwry5jtc8epWfpx2fJxE,11
+cfractions-2.4.1.dist-info/RECORD,,
+cfractions-2.4.1.dist-info/licenses/LICENSE,sha256=lWjxwFgbsaMrk5XFafo8HW46FTrVNInUDMMQzbd_zD4,1069
