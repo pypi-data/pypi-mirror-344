@@ -1,0 +1,7 @@
+README.md
+setup.py
+mycli_toolvk.egg-info/PKG-INFO
+mycli_toolvk.egg-info/SOURCES.txt
+mycli_toolvk.egg-info/dependency_links.txt
+mycli_toolvk.egg-info/entry_points.txt
+mycli_toolvk.egg-info/top_level.txt
