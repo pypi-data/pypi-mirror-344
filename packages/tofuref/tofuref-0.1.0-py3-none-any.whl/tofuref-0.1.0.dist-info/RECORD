@@ -1,0 +1,12 @@
+tofuref/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+tofuref/main.py,sha256=5ukM2d6WJdomQoKXUnJyjv5ImkfUErLK8ojhMBL2klw,4946
+tofuref/tofuref.tcss,sha256=iiDVxS2cCb4pF4UKfWpHi9o2nAx8egxRRgZqezRIa0Y,455
+tofuref/widgets.py,sha256=N2onxMi-XKQcQuyt7TVGf2IuOXrEbeIl_K9PV9EkH6I,2260
+tofuref/data/helpers.py,sha256=Nc8sBvlNPve9jc4JlhDFSRVat93zKpF5LPzUiCvwxsw,1127
+tofuref/data/providers.py,sha256=y_fS7V95V16qjs8qM12MVcvBaVP4iy7s8MG-u68yGxg,5843
+tofuref/data/registry.py,sha256=FDdBYd4WdgFQmBZ3VgKmaMNZLIBxtjd-_1SiHc9wguE,1169
+tofuref/data/resources.py,sha256=q_84sPJp857QbN3vksVU5AGxXhUiba-9qmo8pzeHdQw,623
+tofuref-0.1.0.dist-info/METADATA,sha256=nnF9kqp3FtrQDLGw7UgbCeNRAf5yCJ9rSWQZKutuXE4,2253
+tofuref-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tofuref-0.1.0.dist-info/entry_points.txt,sha256=pDaYiKbYbetWgelVTXg154W_2U6oLUnAytr4lU_IucI,46
+tofuref-0.1.0.dist-info/RECORD,,
