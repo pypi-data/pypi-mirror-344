@@ -1,0 +1,12 @@
+taxonlib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taxonlib/canonical_name.py,sha256=dPgBNigZrHCPB8fWhC0H36OQKjgr5sjNgsvKRW5Eg7I,5290
+taxonlib/types.py,sha256=SQqPz_w_yFULy_bhoEV39_rSzdm5jZ5DVrPPXMoTMOQ,3650
+taxonlib/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taxonlib/tools/io.py,sha256=DgzIcuHTsGcbE9ukFiUmmFAJL0pTiTr9qI9RwWZb-2E,3777
+taxonlib/tools/sources.py,sha256=xCzmP-uD5Tca6-RLVNpwAYGO_jlnhbe-XZPZY6u483A,417
+taxonlib/tools/taxa.py,sha256=J_Ip7PSSXusd7qo1ooNQz8f9nphrSETgdcLr6AWm32g,3140
+taxonlib-0.0.6.dist-info/licenses/LICENCE.txt,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+taxonlib-0.0.6.dist-info/METADATA,sha256=lfVHkP5OC4gBWYAiE0v1hoD9fuzaSBEM8PyfWwmjg88,1336
+taxonlib-0.0.6.dist-info/WHEEL,sha256=wXxTzcEDnjrTwFYjLPcsW_7_XihufBwmpiBeiXNBGEA,91
+taxonlib-0.0.6.dist-info/top_level.txt,sha256=boaWhasBidPtRrT4GYB88DfLwBEWNeLTUhbX5kn4iO4,9
+taxonlib-0.0.6.dist-info/RECORD,,
