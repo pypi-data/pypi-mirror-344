@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: cogmito
+Version: 0.1.6
+Summary: AI destekli yayın ve otomasyon botu
+Home-page: UNKNOWN
+Author: Aytunç
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9,<3.10
+Requires-Dist: certifi
+Requires-Dist: soundcard
+Requires-Dist: soundfile
+Requires-Dist: mtranslate
+Requires-Dist: ollama
+Requires-Dist: selenium
+Requires-Dist: undetected-chromedriver
+Requires-Dist: SpeechRecognition
+Requires-Dist: python-telegram-bot
+
+UNKNOWN
+
+
