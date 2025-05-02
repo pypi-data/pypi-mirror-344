@@ -1,0 +1,37 @@
+site_name: Django-Flags
+repo_url: https://github.com/cfpb/django-flags/
+edit_uri: edit/main/docs
+nav:
+    - Getting started: index.md
+    - Usage guide: usage.md
+    - Debugging: debugging.md
+    - Testing: testing.md
+    - Settings: settings.md
+    - Conditions: conditions.md
+    - Management commands: management_commands.md
+    - API Reference:
+        - Flag sources: api/sources.md
+        - Flag state: api/state.md
+        - Flag decorators: api/decorators.md 
+        - Flagged URL patterns: api/urls.md
+        - Class-based views : api/views.md
+        - Django templates: api/django.md
+        - Jinja2 templates: api/jinja2.md
+        - Conditions: api/conditions.md
+    - Release notes:
+        - Release notes: releasenotes.md
+theme:
+  name: 'readthedocs'
+  custom_dir: docs/theme-overrides/
+extra_css:
+    - css/overrides.css
+markdown_extensions:
+    - admonition
+    - tables
+    - markdown.extensions.tables
+    - pymdownx.magiclink
+    - pymdownx.betterem
+    - pymdownx.tilde
+    - pymdownx.superfences
+    - toc:
+        permalink: "¶"

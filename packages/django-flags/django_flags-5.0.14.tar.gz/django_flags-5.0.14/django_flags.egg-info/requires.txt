@@ -1,0 +1,11 @@
+django>=4.2
+
+[docs]
+mkdocs>=0.17
+mkdocs-rtd-dropdown>=0.0.11
+pymdown-extensions>=4.11
+
+[testing]
+coverage[toml]
+django-debug-toolbar
+jinja2
