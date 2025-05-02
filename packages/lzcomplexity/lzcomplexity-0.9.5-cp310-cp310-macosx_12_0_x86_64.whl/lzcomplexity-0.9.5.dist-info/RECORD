@@ -1,0 +1,14 @@
+liblzcore.dylib,sha256=fYh_mXgIMx-XdJHOb-b7cn2xHGvTK1xMEl_Y1Qlta0Q,919856
+liblzcore.0.9.dylib,sha256=a56-4jla37eUA2BmK85ppVwjt_NRQz3hbAbiBb2Vicg,919808
+lzcomplexity.cpython-313-darwin.so,sha256=gWR1v3aCnpFutBQnK0gtx2y5-2NLB8s3R70xc26RZIo,468304
+liblzcore.0.dylib,sha256=a56-4jla37eUA2BmK85ppVwjt_NRQz3hbAbiBb2Vicg,919808
+lzcomplexity-0.9.5.dist-info/RECORD,,
+lzcomplexity-0.9.5.dist-info/WHEEL,sha256=73mgdd7dqC07iH6z1_Ups8C3U-2fTVTvBkmCit__h3w,137
+lzcomplexity-0.9.5.dist-info/top_level.txt,sha256=LgIts_8R8M-Qo9P34DO70Eopo1mTEVwbKu7HtuAdcuo,5
+lzcomplexity-0.9.5.dist-info/METADATA,sha256=YkcgcdZHtCD39d9KsYM3biAbSfUsDSFs5gQlYF4MZLc,5130
+lzcomplexity-0.9.5.dist-info/licenses/LICENSE,sha256=kE4G5tFqOiCTDH3hKH3buqjEROv5co_7hmw_f-OmB6E,1075
+inc/PyLempelZiv.hpp,sha256=sUYUdGdueJrfu-UjPUW_cvaw64_m-F8GGf7J7gCaD-Y,16380
+inc/PySequence.hpp,sha256=DIKJgPWYTMcN7IMfeTGiVvAyivyrZ9iI236MFyDGfCA,1615
+inc/utils.hpp,sha256=MYCPPS5oa5kAErpPcXE5evSOZms3tO8LZ38-K1qIFx8,1340
+lzcomplexity.dylibs/liblzcore.0.9.dylib,sha256=jN23e65xCBTA7MtkFDNgPZvO-JrlgWuUiZmyUn4Rn10,919808
+lzcomplexity.dylibs/libtbb.12.10.dylib,sha256=nxAVMpBE2RB2fdnOqxsDed53ISSjtz418dkV1PqbSj8,462816
