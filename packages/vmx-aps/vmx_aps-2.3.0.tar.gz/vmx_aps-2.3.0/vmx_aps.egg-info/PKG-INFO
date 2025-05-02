@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: vmx-aps
+Version: 2.3.0
+Summary: APS command line wrapper
+Author: Verimatrix Inc.
+Author-email: blackhole@verimatrix.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: python-dateutil
+Requires-Dist: requests
+Requires-Dist: pyaxmlparser
+Requires-Dist: backoff
+Requires-Dist: coloredlogs
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+APS command line wrapper
