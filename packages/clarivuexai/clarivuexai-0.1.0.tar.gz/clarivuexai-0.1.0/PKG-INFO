@@ -1,0 +1,128 @@
+Metadata-Version: 2.4
+Name: clarivuexai
+Version: 0.1.0
+Summary: A unified framework for explainable AI
+Home-page: https://github.com/yourusername/clarivuexai
+Author: wizcodes
+Author-email: wizcodes <wizcodes12@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/wizcodes12/clarivuexai
+Project-URL: Bug Tracker, https://github.com/wizcodes12/clarivuexai/issues
+Project-URL: Documentation, https://clarivuexai.readthedocs.io/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: pandas>=1.1.0
+Requires-Dist: scikit-learn>=0.24.0
+Requires-Dist: matplotlib>=3.3.0
+Requires-Dist: seaborn>=0.11.0
+Requires-Dist: plotly>=5.0.0
+Requires-Dist: shap>=0.39.0
+Requires-Dist: lime>=0.2.0
+Provides-Extra: tensorflow
+Requires-Dist: tensorflow>=2.4.0; extra == "tensorflow"
+Provides-Extra: torch
+Requires-Dist: torch>=1.8.0; extra == "torch"
+Requires-Dist: torchvision>=0.9.0; extra == "torch"
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.12.0; extra == "dev"
+Requires-Dist: sphinx>=4.0.0; extra == "dev"
+Requires-Dist: sphinx-rtd-theme>=0.5.0; extra == "dev"
+Requires-Dist: black>=21.5b2; extra == "dev"
+Requires-Dist: isort>=5.9.0; extra == "dev"
+Requires-Dist: flake8>=3.9.0; extra == "dev"
+Provides-Extra: all
+Requires-Dist: tensorflow>=2.4.0; extra == "all"
+Requires-Dist: torch>=1.8.0; extra == "all"
+Requires-Dist: torchvision>=0.9.0; extra == "all"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+ClarivueXAI: Unified Explainable AI Framework
+
+ClarivueXAI is a Python library for explainable AI, providing a unified API to explain models across frameworks (scikit-learn, TensorFlow, PyTorch, custom) and data types (tabular, text, images, time series).
+Problem
+Explainable AI is fragmented, with different tools for different models and data types, leading to inconsistent APIs and slower workflows for data scientists and ML engineers.
+Solution
+ClarivueXAI unifies XAI with:
+
+A consistent API for all model types and explanation methods.
+Support for multiple frameworks and data types.
+Global and local explanations using methods like SHAP, LIME, and Integrated Gradients.
+Advanced visualization tools, including interactive plots.
+
+See Examples for detailed demonstrations.
+Key Features
+
+Unified API: Consistent interface for all models.
+Multi-modal Support: Handles tabular, text, image, and time series data.
+Framework Agnostic: Supports scikit-learn, TensorFlow, PyTorch, and custom models.
+Global & Local Explanations: Model-level and instance-level insights.
+Advanced Visualization: Static and interactive plots, as shown in Wine Classification.
+
+Installation
+# Base installation
+pip install clarivuexai
+
+# TensorFlow support
+pip install clarivuexai[tensorflow]
+
+# PyTorch support
+pip install clarivuexai[torch]
+
+# All dependencies
+pip install clarivuexai[all]
+
+Quick Example
+This example, inspired by Random Forest Example, shows how to explain a scikit-learn model:
+from clarivuexai import Model, Explainer
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import load_iris
+import matplotlib.pyplot as plt
+
+# Load data
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Train model
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(X, y)
+
+# Wrap with ClarivueXAI
+cxai_model = Model.from_sklearn(model, feature_names=iris.feature_names)
+
+# Create explainer
+explainer = Explainer(cxai_model)
+
+# Get explanations
+global_exp = explainer.explain_global(X, method='shap')
+local_exp = explainer.explain_local(X[0:1], method='shap')
+
+# Visualize
+plt.figure(figsize=(10, 6))
+global_exp.plot()
+plt.title("Global SHAP Feature Importance")
+plt.tight_layout()
+plt.savefig("global_shap.png")
+
+Documentation
+Full documentation is available at clarivuexai.readthedocs.io. Key sections:
+
+Quickstart Guide: Basic setup.
+API Reference: Detailed API docs.
+Examples: Use cases for tabular, text, image, and time series data.
+
+Contributing
+Contributions are welcome! Submit a Pull Request on GitHub.
+License
+Licensed under the MIT License. See the LICENSE file.
