@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: skincare_routine
+Version: 1.0.0
+Summary: Urutan skincare untuk jadi cantik by viona
+Author: Viona Aziz Syahputri
+Author-email: syahputriviona@gmail.com
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
