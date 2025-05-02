@@ -1,0 +1,9 @@
+pyflange/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyflange/bolts.py,sha256=EK5oC8gXhKCaYFOs--nXYs1ZPUrvrGYEWk454ifW6XU,20241
+pyflange/flangesegments.py,sha256=BBEABPhpSwODoLvMQvuigT4TH7D5PyCPtO6whZo9z0Q,58160
+pyflange/gap.py,sha256=yzB9_gxQJoSKcGD9QTwAZBi7eiJY8bOEC0TYG-P0JaI,3105
+pyflange/logger.py,sha256=0ForHk0aAAFuxyfqncSEtgrQm07UBMWzjdyUTZQk-ts,439
+pyflange-0.4.0.dist-info/METADATA,sha256=Gcqa5aKSDgIn59_7tW9F6AW2yZGoSSeEsasb3AppWe8,6283
+pyflange-0.4.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pyflange-0.4.0.dist-info/licenses/LICENSE,sha256=4jgjK83TEPy38fLcUegKJ2adn6yhemHtC-nMhog3tk4,33044
+pyflange-0.4.0.dist-info/RECORD,,
