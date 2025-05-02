@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: requestgo
+Version: 0.1.0
+Summary: A no-dependency HTTP request library
+Author: Cansila
+License-Expression: MIT
+Requires-Python: >=3.6
+License-File: LICENSE
+Dynamic: license-file
+Dynamic: requires-python
