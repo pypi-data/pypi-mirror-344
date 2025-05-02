@@ -1,0 +1,10 @@
+maptide-0.4.0.dist-info/METADATA,sha256=j6Vd7MjFSfxWeiAUtGJ-LpT4hv2hWC6KtcWEVxyhXAo,3609
+maptide-0.4.0.dist-info/WHEEL,sha256=ZdoLgH9lcmexTAgYo3b2XEYu0Xl03VpVm_oICj2wvZ8,108
+maptide-0.4.0.dist-info/entry_points.txt,sha256=Z6u5k9dphRd0EKC3OQuZhUblbmmSdY2YLTscAwGTFrk,42
+maptide-0.4.0.dist-info/licenses/LICENSE,sha256=3pYJHw34GDlA0vQ4YAZQEEkU2nixP_p4ozxsTtfoJUY,1069
+maptide.libs/libgcc_s-5b5488a6.so.1,sha256=HGKUsVmTeNAxEdSy7Ua5Vh_I9FN3RCbPWzvZ7H_TrwE,2749061
+maptide/cli.py,sha256=kDItzhEb1UUbRMi2e4ZUGSskcGkwrrkr2N0qfiPpFjs,3871
+maptide/api.py,sha256=Va9jbF-md90Uoe6WNkNLswFc61SorpvBQ9Zy8QRuvYg,2122
+maptide/__init__.py,sha256=D6DYwuupDRilLz1Q4Xb9uHWjUG6XyXhoC-5-2iNqKqU,158
+maptide/maptide.cpython-313t-arm-linux-musleabihf.so,sha256=d7mD1XEaANB8BZU98Fffm1PldpvIYbXXHM6s_sPiT-g,895525
+maptide-0.4.0.dist-info/RECORD,,
