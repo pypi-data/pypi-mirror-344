@@ -1,0 +1,8 @@
+README.md
+setup.py
+jsonix/__init__.py
+jsonix/jsonix.py
+jsonix.egg-info/PKG-INFO
+jsonix.egg-info/SOURCES.txt
+jsonix.egg-info/dependency_links.txt
+jsonix.egg-info/top_level.txt
