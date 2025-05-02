@@ -1,0 +1,13 @@
+google==3.0.0
+protobuf==4.25.2
+cel-python==0.1.5
+tqdm==4.67.1
+typing_extensions==4.12.2
+
+[dev]
+build
+protovalidate==0.6.0
+pydantic==2.10.4
+
+[pydantic]
+pydantic==2.10.4
