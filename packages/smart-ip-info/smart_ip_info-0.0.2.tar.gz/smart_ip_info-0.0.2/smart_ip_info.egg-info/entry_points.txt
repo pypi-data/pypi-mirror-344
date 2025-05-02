@@ -1,0 +1,2 @@
+[console_scripts]
+ipinfo = smart_ip_info.cli:main
