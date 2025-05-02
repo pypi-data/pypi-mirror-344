@@ -1,0 +1,11 @@
+numpy
+vispy>=0.14.3
+PySide6
+pyopengl
+opencv-python
+scipy
+importlib-metadata
+
+[dev]
+pytest
+pyinstaller
