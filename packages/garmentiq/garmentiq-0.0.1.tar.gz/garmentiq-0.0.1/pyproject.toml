@@ -1,0 +1,20 @@
+[project]
+name = "garmentiq"
+version = "0.0.1"
+authors = [
+  { name="Li Yuan", email="lyuan@gd.edu.kg" },
+]
+maintainers = [
+  { name="Li Yuan", email="lyuan@gd.edu.kg" },
+]
+description = "Automated Garment Measurement for Fashion Retail"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+]
+
+[project.urls]
+Homepage = "https://github.com/lygitdata/GarmentIQ/"
+Issues = "https://github.com/lygitdata/GarmentIQ/issues"
