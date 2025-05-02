@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8813cb3a-6209-4d5d-b3a0-7390a11db15a" name="Changes" comment="feat(pay): 微信支付新增条码支付功能&#10;&#10;- 在 CommonApi 类中添加了 micropay 方法，实现微信支付的条码支付功能&#10;- 新增了 dict_to_xml_custom 方法，用于将字典数据转换为 XML 格式&#10;- 更新了项目的依赖，增加了 xmltodict 库用于 XML 数据的解析">
+      <change beforePath="$PROJECT_DIR$/lesscode_pay/wx/v2/common_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesscode_pay/wx/v2/common_api.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2wTsk9bkSGClmRzZpuhSz31TUVt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "develop",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/navy/Desktop/work",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lesscode_pay/wx/v3" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PY-251.23774.444" />
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8813cb3a-6209-4d5d-b3a0-7390a11db15a" name="Changes" comment="" />
+      <created>1746077039348</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746077039348</updated>
+      <workItem from="1746077040673" duration="24690000" />
+    </task>
+    <task id="LOCAL-00001" summary="docs(项目): 初始化项目结构和文档&#10;&#10;- 新增 pyproject.toml 文件，配置项目信息和依赖&#10;- 更新 README.md 和 README.en.md 文件，添加项目介绍&#10;- 更新 LICENSE 文件，使用 MIT License替代 Apache License&#10;- 新增 uv.lock 文件，记录项目依赖版本&#10;- 删除无关内容，精简代码和文档">
+      <option name="closed" value="true" />
+      <created>1746078173573</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746078173573</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(wxpay): 新增微信支付v3接口支持&#10;&#10;- 添加AppApi类，实现APP下单和合单下单功能&#10;- 新增CommonApi类，提供签名生成和基础请求方法&#10;- 增加CommonCombineApi类，支持合单订单查询和关闭&#10;- 完善了订单查询、关闭、退款等相关接口">
+      <option name="closed" value="true" />
+      <created>1746094346513</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746094346513</updated>
+    </task>
+    <task id="LOCAL-00003" summary="refactor(wx): 重构微信支付接口&#10;&#10;- 移除冗余参数：删除了多个接口中重复的 cert_private_key、cert_serial_no 和 mchid 参数&#10;-优化签名生成：将签名生成逻辑移至 CommonApi 类中，减少重复代码&#10;- 统一请求发送：统一请求发送逻辑，简化接口实现&#10;- 新增 v2 接口支持：添加了 v2 版本的 common_api.py 文件，支持更多微信支付功能">
+      <option name="closed" value="true" />
+      <created>1746099708960</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746099708960</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat(pay): 微信支付新增条码支付功能&#10;&#10;- 在 CommonApi 类中添加了 micropay 方法，实现微信支付的条码支付功能&#10;- 新增了 dict_to_xml_custom 方法，用于将字典数据转换为 XML 格式&#10;- 更新了项目的依赖，增加了 xmltodict 库用于 XML 数据的解析">
+      <option name="closed" value="true" />
+      <created>1746100511922</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746100511922</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="docs(项目): 初始化项目结构和文档&#10;&#10;- 新增 pyproject.toml 文件，配置项目信息和依赖&#10;- 更新 README.md 和 README.en.md 文件，添加项目介绍&#10;- 更新 LICENSE 文件，使用 MIT License替代 Apache License&#10;- 新增 uv.lock 文件，记录项目依赖版本&#10;- 删除无关内容，精简代码和文档" />
+    <MESSAGE value="feat(wxpay): 新增微信支付v3接口支持&#10;&#10;- 添加AppApi类，实现APP下单和合单下单功能&#10;- 新增CommonApi类，提供签名生成和基础请求方法&#10;- 增加CommonCombineApi类，支持合单订单查询和关闭&#10;- 完善了订单查询、关闭、退款等相关接口" />
+    <MESSAGE value="refactor(wx): 重构微信支付接口&#10;&#10;- 移除冗余参数：删除了多个接口中重复的 cert_private_key、cert_serial_no 和 mchid 参数&#10;-优化签名生成：将签名生成逻辑移至 CommonApi 类中，减少重复代码&#10;- 统一请求发送：统一请求发送逻辑，简化接口实现&#10;- 新增 v2 接口支持：添加了 v2 版本的 common_api.py 文件，支持更多微信支付功能" />
+    <MESSAGE value="feat(pay): 微信支付新增条码支付功能&#10;&#10;- 在 CommonApi 类中添加了 micropay 方法，实现微信支付的条码支付功能&#10;- 新增了 dict_to_xml_custom 方法，用于将字典数据转换为 XML 格式&#10;- 更新了项目的依赖，增加了 xmltodict 库用于 XML 数据的解析" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(pay): 微信支付新增条码支付功能&#10;&#10;- 在 CommonApi 类中添加了 micropay 方法，实现微信支付的条码支付功能&#10;- 新增了 dict_to_xml_custom 方法，用于将字典数据转换为 XML 格式&#10;- 更新了项目的依赖，增加了 xmltodict 库用于 XML 数据的解析" />
+  </component>
+</project>
