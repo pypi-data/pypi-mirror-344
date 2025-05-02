@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: AiSnake
+Version: 0.1
+Summary: A beginner-friendly programming language focused on AI.
+Home-page: https://github.com/yourusername/AiSnake
+Author: K. Mohammed Imran
+Author-email: your_email@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+Requires-Dist: joblib
+
+# Ai Snake Programming Language
+
+Ai Snake is a beginner-friendly programming language for creating AI models easily.
+
+## Installation
+
+To install Ai Snake, simply run:
+
+```bash
+pip install AiSnake
+```
+
+## Usage
+
+After installation, you can run Ai Snake scripts or start an interactive REPL:
+
+### Create and train an AI model:
+
+```plaintext
+ai_model m1 linear_regression
+ai_train m1 [1, 2, 3, 4, 5] [2, 4, 6, 8, 10]
+ai_predict m1 [6]
+```
+
+### Start REPL (Interactive Mode):
+
+```bash
+python -m ai_snake.interpreter
+```
+
+### Save and Load Models:
+
+```plaintext
+ai_save m1 "model1.joblib"
+ai_load m2 "model1.joblib"
+```
+
+## Features
+- Simple print statement support
+- Easy project structure to extend further
+
+## Project Structure
+
+```
+AiSnakeLanguage/
+â”œâ”€â”€ ai_snake/
+â”œâ”€â”€ examples/
+â””â”€â”€ tests/
+```
+
+## Run Example
+
+```bash
+python -m ai_snake.interpreter examples/hello_world.aisnake
+```
+
+## Output
+
+```
+Hello, Ai Snake!
+```
+
+## License
+
+Ai Snake is open-source, released under the MIT license.
+
