@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+colorchecker/__init__.py
+colorchecker.egg-info/PKG-INFO
+colorchecker.egg-info/SOURCES.txt
+colorchecker.egg-info/dependency_links.txt
+colorchecker.egg-info/top_level.txt
