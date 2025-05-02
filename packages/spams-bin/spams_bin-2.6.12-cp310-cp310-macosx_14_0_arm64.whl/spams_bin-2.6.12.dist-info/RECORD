@@ -1,0 +1,15 @@
+spams/__init__.py,sha256=xHcMde31B_Zgi9MrSloYNaeuMyQBh9yrXGWijCauIo4,60
+spams/spams.py,sha256=Oz_7pO8yB-Ga-nPlIQM9zqntQgVmFbAuz3vaOomNUi0,28693
+spams/.dylibs/libomp.dylib,sha256=hPIhAvDCC_0mmbi0MmWpDIyW2K94BD1N6I1In1-Nt14,735616
+test/boat.png,sha256=GL6k3hY0RW9XkdFjAYY_yXRAHRRM1q-4bwmmvkYg_lQ,177762
+test/test_linalg.py,sha256=-FR1zLwt3U35Lwr0aqjmj2iqRF20Of6FzIv7EnN1jC0,3609
+test/lena.png,sha256=nLsdCHTZfTj42pHsP3rvVhKsfrEO6nzyLF29brb4wlU,151199
+test/test_decomp.py,sha256=QMxtfpnluf3YK9t__0CE9s_0H9AWVt_imvVn_vSyqcI,11834
+test/test_dictLearn.py,sha256=Rk5WhkTK0IgvktTNKi8obN30a5X2WNk8U4usARpBUtQ,16836
+test/test_prox.py,sha256=UlgbpaJVjYMuqBg8nXLlujQlpp2Yd9gYnpx1V9ug_-Y,37393
+spams_wrap/__init__.py,sha256=YIHCmH1R55dbX1L6wKGc-mLQwkKnCyWDT0zkxpRX3c0,65
+spams_wrap/_spams_wrap.cpython-310-darwin.so,sha256=8uDDduLYUPNQ2rIhkyIu1mv-RpPpj0CkdAeW1nxeVnk,1750400
+spams_wrap/spams_wrap.py,sha256=0weMm8nAKk6fmNgGpIoGYGJW-D_OAbc1sIkCjbtsLxU,627
+spams_bin-2.6.12.dist-info/RECORD,,
+spams_bin-2.6.12.dist-info/WHEEL,sha256=_cS6fEsxLUIcIdoA6Si0dddGONVIRpHlSl13K8j9MME,93
+spams_bin-2.6.12.dist-info/METADATA,sha256=wMcZ0MhbgArcQGUVOO7ZBU_BhziUWfWIRhl7IFvQqwM,1371
