@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: aiorp
+Version: 0.1.0a1
+Summary: A simple reverse proxy library based on aiohttp.
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: aiohttp>=3.11.12
+Description-Content-Type: text/markdown
+
+# aiorp
+
+> [!WARNING]
+> Package is still in development
+
+This is a reverse-proxy package built on top of `aiohttp`, designed to be lightweight,
+but also offering a simple interface to create a reverse-proxy with complex functionality.
+
+Check out the docs:
+
+- [Stable](https://aiorp.ktonino.com/stable/)
+- [Unstable](https://aiorp.ktonino.com/unstable/)
