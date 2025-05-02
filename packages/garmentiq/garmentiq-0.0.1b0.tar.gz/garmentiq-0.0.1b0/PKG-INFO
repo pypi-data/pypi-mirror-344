@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: garmentiq
+Version: 0.0.1b0
+Summary: Automated Garment Measurement for Fashion Retail
+Author-email: Li Yuan <lyuan@gd.edu.kg>
+Maintainer-email: Li Yuan <lyuan@gd.edu.kg>
+Project-URL: Homepage, https://github.com/lygitdata/GarmentIQ/
+Project-URL: Issues, https://github.com/lygitdata/GarmentIQ/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: tqdm==4.67.1
+Requires-Dist: pandas==2.2.2
+Requires-Dist: numpy==2.0.0
+Requires-Dist: torch==2.7.0
+Requires-Dist: torchvision==0.22.0
+Requires-Dist: scikit-learn==1.6.1
+Requires-Dist: scipy==1.15.2
+Requires-Dist: Pillow==11.1.0
+Requires-Dist: matplotlib==3.10.0
+Requires-Dist: transformers==4.50.3
+Requires-Dist: kornia==0.8.0
+Requires-Dist: timm==1.0.15
+Requires-Dist: einops==0.8.1
+
+# GarmentIQ: Automated Garment Measurement for Fashion Retail
+
+Underdevelopment
