@@ -1,0 +1,198 @@
+Metadata-Version: 2.4
+Name: iwasborninbali
+Version: 0.1.5
+Summary: AI Assistant for software development tasks, guided by o3.
+Author-email: Platform AI <iwasborninbali@platformai.solutions>
+Project-URL: Homepage, https://github.com/platform-ai/assistant
+Project-URL: Bug Tracker, https://github.com/platform-ai/assistant/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: openai>=1.3.0
+Requires-Dist: requests>=2.20.0
+Requires-Dist: google-generativeai>=0.4.0
+Requires-Dist: click>=8
+Requires-Dist: python-dotenv>=1.0
+Provides-Extra: ui
+Requires-Dist: rich>=13; extra == "ui"
+Requires-Dist: prompt_toolkit>=3.0; extra == "ui"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4; extra == "dev"
+
+# Platform AI Assistant
+
+Персональный AI-ассистент разработчика, работающий в командной строке и использующий LLM (OpenAI, Google Gemini) для помощи с кодом.
+
+## Installation
+
+```bash
+# Recommended: Install via PyPI (includes UI enhancements)
+pip install iwasborninbali[ui]
+
+# Or for development from source:
+pip install -e .[ui]
+```
+
+После установки просто запустите:
+
+```bash
+iwasborninbali
+```
+
+из любой директории. Для взаимодействия с ассистентом требуются API-ключи (см. ниже).
+
+## Конфигурация (.env) / Configuration
+
+Для работы ассистента требуются API-ключи и, опционально, можно указать предпочитаемые модели. Конфигурация загружается из следующих источников по порядку **приоритета** (первый найденный валидный источник используется, значения с более высоким приоритетом переопределяют значения с низким):
+
+1.  **Переменные окружения системы:** Значения, установленные напрямую в системе (например, `OPENAI_API_KEY=...`). Имеют **наивысший** приоритет.
+2.  **Переменная окружения `PLATFORM_AI_CONFIG`:** Путь к файлу `.env`.
+3.  **Файл `.env` в текущей рабочей директории (CWD):** Директория, из которой вы запускаете `iwasborninbali`.
+4.  **Файл `.env` в директории пользователя:** `~/.config/iwasborninbali/.env`.
+
+Рекомендуемый способ — создать файл `.env` либо в корне вашего проекта (CWD), либо в `~/.config/iwasborninbali/` для глобальной конфигурации.
+
+1.  **Скопируйте пример:**
+    ```bash
+    # Для CWD
+    cp .env.example .env
+    # ИЛИ для глобальной конфигурации
+    mkdir -p ~/.config/iwasborninbali
+    cp .env.example ~/.config/iwasborninbali/.env
+    ```
+2.  **Отредактируйте выбранный `.env`:**
+    ```dotenv
+    # --- Обязательные API Ключи ---
+    OPENAI_API_KEY="sk-..."
+    GEMINI_API_KEY="AIza..."
+    PERPLEXITY_API_KEY="pplx-..."
+
+    # --- Модели (опционально, по умолчанию используются рекомендованные) ---
+    # MODEL_MAIN="gpt-4-turbo-preview"
+    # MODEL_ASK="gemini-1.5-pro-latest"    # Модель для инструмента Ask (Google)
+    # MODEL_REWRITE="gemini-1.5-flash-latest" # Модель для инструментов редактирования (Google)
+    # MODEL_PPLX="llama-3-sonar-large-32k-online" # Модель для Perplexity
+
+    # --- Другие настройки ---
+    # LOG_LEVEL="DEBUG" # Уровень логирования (INFO, DEBUG, WARNING, ERROR)
+    ```
+
+### Модели (Model Configuration)
+
+Ассистент использует разные модели для различных задач. Вы можете переопределить модели по умолчанию, задав соответствующие переменные в `.env` файле или через переменные окружения.
+
+- **`MODEL_MAIN`**
+  - *Назначение:* Зарезервировано для будущего использования или управления верхнего уровня.
+  - *По умолчанию:* `o3`
+- **`MODEL_ASK`**
+  - *Назначение:* Используется инструментом `ask` для общих запросов, анализа кода и ревью. Требует высоких способностей к рассуждению.
+  - *По умолчанию:* `gemini-2.5-pro-preview-03-25`
+- **`MODEL_REWRITE`**
+  - *Назначение:* Используется инструментами создания (`create_file`) и модификации (`apply_diff`) файлов. Должна быть эффективной и хорошо следовать инструкциям.
+  - *По умолчанию:* `gemini-2.5-flash-preview-04-17`
+- **`MODEL_PPLX`**
+  - *Назначение:* Используется инструментом `perplexity` для веб-поиска и извлечения внешней информации.
+  - *По умолчанию:* `sonar-reasoning-pro`
+
+Пример переопределения в `.env`:
+```dotenv
+MODEL_ASK="gemini-1.5-pro-latest"
+MODEL_REWRITE="text-bison-001" # Пример другой модели
+```
+
+### Дополнительные настройки
+```bash
+# Настройки суммаризации истории
+export SUMMARY_THRESHOLD=20    # Порог сообщений для запуска суммаризации
+export SUMMARY_BATCH=10        # Количество старых сообщений для суммирования
+export KEEP_RECENT=10          # Количество последних сообщений для сохранения
+```
+
+### Конфигурация API Ключей (API Key Configuration)
+
+Ассистенту требуются API ключи для взаимодействия с моделями OpenAI, Google и Perplexity.
+
+- **Обязательные:**
+  - `OPENAI_API_KEY`
+  - `GEMINI_API_KEY`
+  - `PERPLEXITY_API_KEY`
+
+Ключи **должны** быть заданы одним из способов, описанных выше. Ассистент ищет эти ключи в соответствии с указанным порядком приоритета (1 > 2 > 3 > 4).
+
+**Важно:** Если **любой** из трех обязательных ключей (`OPENAI_API_KEY`, `GEMINI_API_KEY`, `PERPLEXITY_API_KEY`) не найден ни в одном из источников конфигурации при запуске, ассистент выведет сообщение об ошибке с указанием недостающих ключей и **завершит работу** (`sys.exit(1)`).
+
+## Что создаётся в рабочей директории
+
+При запуске `iwasborninbali` в текущей директории создаются:
+
+- `data/thread_history/` — история чата с ассистентом (JSON)
+- `logs/` — технические логи работы инструментов
+
+Каждый проект хранит свою историю и логи отдельно.
+
+## Установка / Обновление
+
+### Через PyPI (Рекомендуется)
+
+```bash
+# Установка / Обновление
+pip install --upgrade iwasborninbali[ui]
+
+# Удаление
+pip uninstall iwasborninbali
+```
+
+### Из исходников (Для разработки)
+
+```bash
+# Установка с UI и Dev зависимостями (для тестов)
+pip install -e .[ui,dev]
+
+# Обновление
+cd /путь/к/репозиторию
+git pull
+pip install -e .[ui,dev]
+
+# Удаление
+pip uninstall iwasborninbali
+```
+
+## Пример рабочего цикла
+
+```bash
+# Перейдите в директорию проекта
+cd ~/projects/my_new_project
+
+# Запустите ассистента
+iwasborninbali
+
+# Примеры запросов:
+# - "Создай простой HTTP-сервер на Flask"
+# - "Добавь эндпоинт для загрузки файлов"
+# - "Оптимизируй функцию X в файле Y"
+# - "Позови perplexity и спроси о лучших практиках для FastAPI"
+```
+
+При достижении 20+ сообщений в истории старые сообщения будут автоматически суммированы для экономии контекста.
+
+## Расширенные возможности CLI
+
+### Многострочный ввод
+
+Для ввода длинных запросов или запросов, состоящих из нескольких строк (например, при вставке кода), используйте режим многострочного ввода. 
+
+- Если установлена опциональная зависимость `prompt_toolkit` (см. ниже), ввод будет осуществляться через продвинутый редактор. Для завершения ввода нажмите `Ctrl+D` или введите `/end` на новой строке и нажмите Enter.
+- В противном случае (или при использовании флага `--plain`) используется простой режим: начните вводить текст как обычно, для перехода на новую строку нажмите Enter. Чтобы завершить ввод, нажмите Enter на пустой строке или введите `/end` и нажмите Enter.
+
+Пример (простой режим):
+```
+>>> print("Hello,")
+... print("World!")
+... /end
+```
+
+### Отключение форматирования (Rich) и продвинутого ввода
+
+По умолчанию ассистент использует библиотеку `rich`
