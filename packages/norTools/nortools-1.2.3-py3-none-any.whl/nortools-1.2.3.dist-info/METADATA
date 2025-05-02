@@ -1,0 +1,234 @@
+Metadata-Version: 2.4
+Name: norTools
+Version: 1.2.3
+Summary: A Python package for Dam, Dictor, and ScreenOpp and more utilities 
+Author: Syed
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: flet
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Dampy
+
+`Dampy` is a Python project that provides utilities for handling operations with arguments, dictionaries, `.Ntps` files, and displaying data in a graphical shell-like interface using Flet.
+
+---
+
+## Features
+
+- **Dam Class**: Perform operations with arguments and extra values.
+- **Dictor Class**: A dynamic dictionary-like structure with nested capabilities.
+- **ScreenOpp Class**: Display data in a graphical shell-like interface.
+- **Ntps_ Class**: Handle `.Ntps` files and display their data.
+- **Ntps_exec Class**: Execute the contents of `.Ntps` files.
+- **alg Class**: Create and manage algorithms in `.Ntps` files.
+- **shell Class**: Simulate a shell-like interface for displaying file content.
+
+---
+
+## Installation
+
+### Prerequisites
+- Python 3.8 or higher
+- Install required dependencies:
+  ```bash
+  pip install flet
+  ```
+
+---
+
+## Usage
+
+### 1. Dam Class
+The `Dam` class provides methods for performing operations with arguments and extra values.
+
+#### Methods:
+- **`opp(args, extra=0)`**:
+  - Performs an operation with `args` and `extra`.
+  - **Args**:
+    - `args (str)`: The main argument.
+    - `extra (int)`: An additional value.
+  - **Returns**: `extra` if `args` is provided, otherwise `args`.
+
+- **`write(value)`**:
+  - Compares a value with stored `args` or `extra`.
+  - **Args**:
+    - `value (str)`: The value to compare.
+  - **Returns**: The matching value or `0` if no match.
+
+- **`conv(value)`**:
+  - Converts a value to binary.
+  - **Args**:
+    - `value (int)`: The value to convert.
+  - **Returns**: The binary representation of the value.
+
+#### Example:
+```python
+from testNor import Dam
+
+dam_instance = Dam()
+result = dam_instance.opp("example", extra=42)
+print(result)  # Output: 42
+```
+
+---
+
+### 2. Dictor Class
+The `Dictor` class is a dynamic dictionary-like structure with nested capabilities.
+
+#### Methods:
+- **`__call__()`**:
+  - Returns the dictionary contents.
+
+- **`__setitem__(key, value)`**:
+  - Adds a key-value pair to the dictionary.
+
+- **`__getitem__(key)`**:
+  - Retrieves a value by key. Creates a nested `Dictor` if the key doesn't exist.
+
+#### Example:
+```python
+from testNor import Dictor
+
+dictor_instance = Dictor()
+dictor_instance["key"] = "value"
+nested_dictor = dictor_instance["nested"]
+nested_dictor["nested_key"] = "nested_value"
+print(dictor_instance())  # Output: {'key': 'value', 'nested': {'nested_key': 'nested_value'}}
+```
+
+---
+
+### 3. ScreenOpp Class
+The `ScreenOpp` class displays data in a graphical shell-like interface.
+
+#### Methods:
+- **`__init__(name, datas_, page)`**:
+  - Initializes the screen with a name, data, and page.
+  - **Args**:
+    - `name (str)`: The name to display.
+    - `datas_ (str)`: The data to display.
+    - `page (str)`: The page to display.
+
+- **`display()`**:
+  - Displays the screen using Flet.
+
+#### Example:
+```python
+from testNor import ScreenOpp
+
+screen = ScreenOpp(name="Example Name", datas_="Example Data", page="Example Page")
+screen.display()
+```
+
+---
+
+### 4. Ntps_ Class
+The `Ntps_` class handles `.Ntps` files and displays their data.
+
+#### Methods:
+- **`Ntps(data_file_creation)`**:
+  - Creates or reads an `.Ntps` file.
+  - **Args**:
+    - `data_file_creation (str)`: The name of the `.Ntps` file to create or read.
+
+- **`data_screen(Name_of_Ntps_file)`**:
+  - Displays data from an `.Ntps` file on a graphical screen.
+  - **Args**:
+    - `Name_of_Ntps_file (str)`: The name of the `.Ntps` file to read.
+
+#### Example:
+```python
+from testNor import Ntps_
+
+Ntps_.Ntps("example_file")  # Creates or reads an .Ntps file
+Ntps_.data_screen("example_file")  # Displays data from an .Ntps file
+```
+
+---
+
+### 5. Ntps_exec Class
+The `Ntps_exec` class extends `Ntps_` and executes the contents of `.Ntps` files.
+
+#### Methods:
+- **`execute_(file)`**:
+  - Executes the contents of an `.Ntps` file by generating a Python script and running it.
+  - **Args**:
+    - `file (str)`: The name of the `.Ntps` file to execute.
+
+#### Example:
+```python
+from testNor import Ntps_exec
+
+ntps_exec_instance = Ntps_exec()
+ntps_exec_instance.execute_("example_file")  # Executes the contents of an .Ntps file
+```
+
+---
+
+### 6. alg Class
+The `alg` class creates and manages algorithms in `.Ntps` files.
+
+#### Methods:
+- **`create(algs)`**:
+  - Writes the raw input string to an `.Ntps` file.
+  - **Args**:
+    - `algs (str)`: The algorithm to write.
+
+#### Example:
+```python
+from testNor import alg
+
+alg.create("1+2+3")  # Writes "1+2+3" to algorithms.Ntps
+```
+
+---
+
+### 7. shell Class
+The `shell` class simulates a shell-like interface for displaying file content.
+
+#### Methods:
+- **`window()`**:
+  - Displays the content of `shell.py` in a graphical shell-like interface.
+
+#### Example:
+```python
+from testNor import shell
+
+shell.window()  # Displays the content of shell.py
+```
+
+---
+
+## Dependencies
+
+- **Flet**: Used for graphical screen rendering.
+- **Python 3.8 or higher**
+
+Install dependencies using:
+```bash
+pip install flet
+```
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Author
+
+**Syed**
+
+Feel free to contribute to this project by submitting issues or pull requests!
