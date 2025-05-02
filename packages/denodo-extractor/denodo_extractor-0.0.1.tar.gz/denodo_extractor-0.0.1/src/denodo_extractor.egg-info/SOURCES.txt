@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/denodo_extractor/__init__.py
+src/denodo_extractor/__main__.py
+src/denodo_extractor/connector.py
+src/denodo_extractor/extractor.py
+src/denodo_extractor.egg-info/PKG-INFO
+src/denodo_extractor.egg-info/SOURCES.txt
+src/denodo_extractor.egg-info/dependency_links.txt
+src/denodo_extractor.egg-info/top_level.txt
