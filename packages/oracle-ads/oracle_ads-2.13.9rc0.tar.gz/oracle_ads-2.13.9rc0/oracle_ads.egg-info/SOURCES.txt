@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+THIRD_PARTY_LICENSES.txt
+pyproject.toml
+ads/__init__.py
+ads/cli.py
+ads/config.py
+oracle_ads.egg-info/PKG-INFO
+oracle_ads.egg-info/SOURCES.txt
+oracle_ads.egg-info/dependency_links.txt
+oracle_ads.egg-info/entry_points.txt
+oracle_ads.egg-info/requires.txt
+oracle_ads.egg-info/top_level.txt
