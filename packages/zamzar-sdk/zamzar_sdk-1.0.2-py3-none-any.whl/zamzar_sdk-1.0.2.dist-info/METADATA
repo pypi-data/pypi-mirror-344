@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: zamzar-sdk
+Version: 1.0.2
+Summary: Deprecated: please use the zamzar package instead
+Description-Content-Type: text/markdown
+Requires-Dist: zamzar
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
+
+# zamzar-sdk
+
+The `zamzar-sdk` package is **deprecated**.
+
+The official Python SDK for the [Zamzar API](https://developers.zamzar.com) is available via the [zamzar](https://pypi.org/project/zamzar/) package.
