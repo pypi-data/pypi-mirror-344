@@ -1,0 +1,28 @@
+include *.rst
+include *.txt
+include tox.ini
+include LICENSE
+include .flake8
+
+recursive-include docs *.bat
+recursive-include docs *.py
+recursive-include docs *.rst
+recursive-include docs Makefile
+
+recursive-include src *.h
+recursive-include src *.c
+recursive-include src *.py
+recursive-include src py.typed
+
+recursive-include tests *.csv
+recursive-include tests *.ppmd
+recursive-include tests *.py
+
+recursive-include utils *.py
+recursive-include utils *.txt
+
+exclude .gitignore
+exclude .gitattributes
+exclude .woodpecker.yml
+prune ci
+prune issue_template
