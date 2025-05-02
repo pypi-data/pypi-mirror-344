@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: financial_tracker
+Version: 0.1.0
+Summary: A personal finance tracking system
+Author: Jiawang Liu
+Author-email: rainingalltheday@163.com
+License: MIT
+Keywords: finance,personal finance,expense tracker
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: black; extra == "dev"

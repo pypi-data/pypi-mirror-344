@@ -1,0 +1,7 @@
+setup.py
+financial_tracker.egg-info/PKG-INFO
+financial_tracker.egg-info/SOURCES.txt
+financial_tracker.egg-info/dependency_links.txt
+financial_tracker.egg-info/entry_points.txt
+financial_tracker.egg-info/requires.txt
+financial_tracker.egg-info/top_level.txt
